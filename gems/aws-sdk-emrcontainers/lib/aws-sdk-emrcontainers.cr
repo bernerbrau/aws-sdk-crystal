@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-emrcontainers/types'
-require_relative 'aws-sdk-emrcontainers/client_api'
-require_relative 'aws-sdk-emrcontainers/client'
-require_relative 'aws-sdk-emrcontainers/errors'
-require_relative 'aws-sdk-emrcontainers/resource'
-require_relative 'aws-sdk-emrcontainers/customizations'
+require_relative "aws-sdk-emrcontainers/types"
+require_relative "aws-sdk-emrcontainers/client_api"
+require_relative "aws-sdk-emrcontainers/client"
+require_relative "aws-sdk-emrcontainers/errors"
+require_relative "aws-sdk-emrcontainers/resource"
+require_relative "aws-sdk-emrcontainers/customizations"
 
 # This module provides support for Amazon EMR Containers. This module is available in the
 # `aws-sdk-emrcontainers` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-emrcontainers/customizations'
 # @!group service
 module Aws::EMRContainers
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

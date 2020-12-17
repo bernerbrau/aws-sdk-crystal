@@ -8,11 +8,11 @@
 Feature: Smoke tests for ConfigService
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @configservice @smoke
   Scenario: Call Aws::ConfigService::Client#describe_configuration_recorders and expect it to succeed
-  When I call the operation 'describe_configuration_recorders' with params:
+  When I call the operation "describe_configuration_recorders" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @configservice @smoke
   Scenario: Call Aws::Aws::ConfigService::Client#get_resource_config_history and expect it to fail
-  When I call the operation 'get_resource_config_history' with params:
+  When I call the operation "get_resource_config_history" with params:
     """
 {"resource_type":"fake-type","resource_id":"fake-id"}
     """

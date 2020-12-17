@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mediastore)
 
@@ -290,7 +290,7 @@ module Aws::MediaStore
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -387,9 +387,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/CreateContainer AWS API Documentation
     #
-    # @overload create_container(params = {})
+    # @overload create_container(**params)
     # @param [Hash] params ({})
-    def create_container(params = {}, options = {})
+    def create_container(params = {}, **options)
       req = build_request(:create_container, params)
       req.send_request(options)
     end
@@ -411,9 +411,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/DeleteContainer AWS API Documentation
     #
-    # @overload delete_container(params = {})
+    # @overload delete_container(**params)
     # @param [Hash] params ({})
-    def delete_container(params = {}, options = {})
+    def delete_container(params = {}, **options)
       req = build_request(:delete_container, params)
       req.send_request(options)
     end
@@ -434,9 +434,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/DeleteContainerPolicy AWS API Documentation
     #
-    # @overload delete_container_policy(params = {})
+    # @overload delete_container_policy(**params)
     # @param [Hash] params ({})
-    def delete_container_policy(params = {}, options = {})
+    def delete_container_policy(params = {}, **options)
       req = build_request(:delete_container_policy, params)
       req.send_request(options)
     end
@@ -461,9 +461,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/DeleteCorsPolicy AWS API Documentation
     #
-    # @overload delete_cors_policy(params = {})
+    # @overload delete_cors_policy(**params)
     # @param [Hash] params ({})
-    def delete_cors_policy(params = {}, options = {})
+    def delete_cors_policy(params = {}, **options)
       req = build_request(:delete_cors_policy, params)
       req.send_request(options)
     end
@@ -484,9 +484,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/DeleteLifecyclePolicy AWS API Documentation
     #
-    # @overload delete_lifecycle_policy(params = {})
+    # @overload delete_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_policy(params = {}, options = {})
+    def delete_lifecycle_policy(params = {}, **options)
       req = build_request(:delete_lifecycle_policy, params)
       req.send_request(options)
     end
@@ -509,9 +509,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/DeleteMetricPolicy AWS API Documentation
     #
-    # @overload delete_metric_policy(params = {})
+    # @overload delete_metric_policy(**params)
     # @param [Hash] params ({})
-    def delete_metric_policy(params = {}, options = {})
+    def delete_metric_policy(params = {}, **options)
       req = build_request(:delete_metric_policy, params)
       req.send_request(options)
     end
@@ -548,9 +548,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/DescribeContainer AWS API Documentation
     #
-    # @overload describe_container(params = {})
+    # @overload describe_container(**params)
     # @param [Hash] params ({})
-    def describe_container(params = {}, options = {})
+    def describe_container(params = {}, **options)
       req = build_request(:describe_container, params)
       req.send_request(options)
     end
@@ -582,9 +582,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/GetContainerPolicy AWS API Documentation
     #
-    # @overload get_container_policy(params = {})
+    # @overload get_container_policy(**params)
     # @param [Hash] params ({})
-    def get_container_policy(params = {}, options = {})
+    def get_container_policy(params = {}, **options)
       req = build_request(:get_container_policy, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/GetCorsPolicy AWS API Documentation
     #
-    # @overload get_cors_policy(params = {})
+    # @overload get_cors_policy(**params)
     # @param [Hash] params ({})
-    def get_cors_policy(params = {}, options = {})
+    def get_cors_policy(params = {}, **options)
       req = build_request(:get_cors_policy, params)
       req.send_request(options)
     end
@@ -653,9 +653,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/GetLifecyclePolicy AWS API Documentation
     #
-    # @overload get_lifecycle_policy(params = {})
+    # @overload get_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy(params = {}, options = {})
+    def get_lifecycle_policy(params = {}, **options)
       req = build_request(:get_lifecycle_policy, params)
       req.send_request(options)
     end
@@ -684,9 +684,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/GetMetricPolicy AWS API Documentation
     #
-    # @overload get_metric_policy(params = {})
+    # @overload get_metric_policy(**params)
     # @param [Hash] params ({})
-    def get_metric_policy(params = {}, options = {})
+    def get_metric_policy(params = {}, **options)
       req = build_request(:get_metric_policy, params)
       req.send_request(options)
     end
@@ -741,9 +741,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/ListContainers AWS API Documentation
     #
-    # @overload list_containers(params = {})
+    # @overload list_containers(**params)
     # @param [Hash] params ({})
-    def list_containers(params = {}, options = {})
+    def list_containers(params = {}, **options)
       req = build_request(:list_containers, params)
       req.send_request(options)
     end
@@ -771,9 +771,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -812,9 +812,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/PutContainerPolicy AWS API Documentation
     #
-    # @overload put_container_policy(params = {})
+    # @overload put_container_policy(**params)
     # @param [Hash] params ({})
-    def put_container_policy(params = {}, options = {})
+    def put_container_policy(params = {}, **options)
       req = build_request(:put_container_policy, params)
       req.send_request(options)
     end
@@ -865,9 +865,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/PutCorsPolicy AWS API Documentation
     #
-    # @overload put_cors_policy(params = {})
+    # @overload put_cors_policy(**params)
     # @param [Hash] params ({})
-    def put_cors_policy(params = {}, options = {})
+    def put_cors_policy(params = {}, **options)
       req = build_request(:put_cors_policy, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/PutLifecyclePolicy AWS API Documentation
     #
-    # @overload put_lifecycle_policy(params = {})
+    # @overload put_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_policy(params = {}, options = {})
+    def put_lifecycle_policy(params = {}, **options)
       req = build_request(:put_lifecycle_policy, params)
       req.send_request(options)
     end
@@ -955,9 +955,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/PutMetricPolicy AWS API Documentation
     #
-    # @overload put_metric_policy(params = {})
+    # @overload put_metric_policy(**params)
     # @param [Hash] params ({})
-    def put_metric_policy(params = {}, options = {})
+    def put_metric_policy(params = {}, **options)
       req = build_request(:put_metric_policy, params)
       req.send_request(options)
     end
@@ -979,9 +979,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/StartAccessLogging AWS API Documentation
     #
-    # @overload start_access_logging(params = {})
+    # @overload start_access_logging(**params)
     # @param [Hash] params ({})
-    def start_access_logging(params = {}, options = {})
+    def start_access_logging(params = {}, **options)
       req = build_request(:start_access_logging, params)
       req.send_request(options)
     end
@@ -1004,9 +1004,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/StopAccessLogging AWS API Documentation
     #
-    # @overload stop_access_logging(params = {})
+    # @overload stop_access_logging(**params)
     # @param [Hash] params ({})
-    def stop_access_logging(params = {}, options = {})
+    def stop_access_logging(params = {}, **options)
       req = build_request(:stop_access_logging, params)
       req.send_request(options)
     end
@@ -1052,9 +1052,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1083,9 +1083,9 @@ module Aws::MediaStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-2017-09-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1094,7 +1094,7 @@ module Aws::MediaStore
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1102,15 +1102,15 @@ module Aws::MediaStore
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mediastore'
-      context[:gem_version] = '1.30.0'
+      context[:gem_name] = "aws-sdk-mediastore"
+      context[:gem_version] = "1.30.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

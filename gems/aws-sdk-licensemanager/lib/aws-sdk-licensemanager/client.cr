@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:licensemanager)
 
@@ -290,7 +290,7 @@ module Aws::LicenseManager
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -362,9 +362,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/AcceptGrant AWS API Documentation
     #
-    # @overload accept_grant(params = {})
+    # @overload accept_grant(**params)
     # @param [Hash] params ({})
-    def accept_grant(params = {}, options = {})
+    def accept_grant(params = {}, **options)
       req = build_request(:accept_grant, params)
       req.send_request(options)
     end
@@ -389,9 +389,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CheckInLicense AWS API Documentation
     #
-    # @overload check_in_license(params = {})
+    # @overload check_in_license(**params)
     # @param [Hash] params ({})
-    def check_in_license(params = {}, options = {})
+    def check_in_license(params = {}, **options)
       req = build_request(:check_in_license, params)
       req.send_request(options)
     end
@@ -475,9 +475,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CheckoutBorrowLicense AWS API Documentation
     #
-    # @overload checkout_borrow_license(params = {})
+    # @overload checkout_borrow_license(**params)
     # @param [Hash] params ({})
-    def checkout_borrow_license(params = {}, options = {})
+    def checkout_borrow_license(params = {}, **options)
       req = build_request(:checkout_borrow_license, params)
       req.send_request(options)
     end
@@ -549,9 +549,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CheckoutLicense AWS API Documentation
     #
-    # @overload checkout_license(params = {})
+    # @overload checkout_license(**params)
     # @param [Hash] params ({})
-    def checkout_license(params = {}, options = {})
+    def checkout_license(params = {}, **options)
       req = build_request(:checkout_license, params)
       req.send_request(options)
     end
@@ -603,9 +603,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateGrant AWS API Documentation
     #
-    # @overload create_grant(params = {})
+    # @overload create_grant(**params)
     # @param [Hash] params ({})
-    def create_grant(params = {}, options = {})
+    def create_grant(params = {}, **options)
       req = build_request(:create_grant, params)
       req.send_request(options)
     end
@@ -656,9 +656,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateGrantVersion AWS API Documentation
     #
-    # @overload create_grant_version(params = {})
+    # @overload create_grant_version(**params)
     # @param [Hash] params ({})
-    def create_grant_version(params = {}, options = {})
+    def create_grant_version(params = {}, **options)
       req = build_request(:create_grant_version, params)
       req.send_request(options)
     end
@@ -761,9 +761,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateLicense AWS API Documentation
     #
-    # @overload create_license(params = {})
+    # @overload create_license(**params)
     # @param [Hash] params ({})
-    def create_license(params = {}, options = {})
+    def create_license(params = {}, **options)
       req = build_request(:create_license, params)
       req.send_request(options)
     end
@@ -866,9 +866,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateLicenseConfiguration AWS API Documentation
     #
-    # @overload create_license_configuration(params = {})
+    # @overload create_license_configuration(**params)
     # @param [Hash] params ({})
-    def create_license_configuration(params = {}, options = {})
+    def create_license_configuration(params = {}, **options)
       req = build_request(:create_license_configuration, params)
       req.send_request(options)
     end
@@ -975,9 +975,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateLicenseVersion AWS API Documentation
     #
-    # @overload create_license_version(params = {})
+    # @overload create_license_version(**params)
     # @param [Hash] params ({})
-    def create_license_version(params = {}, options = {})
+    def create_license_version(params = {}, **options)
       req = build_request(:create_license_version, params)
       req.send_request(options)
     end
@@ -1032,9 +1032,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateToken AWS API Documentation
     #
-    # @overload create_token(params = {})
+    # @overload create_token(**params)
     # @param [Hash] params ({})
-    def create_token(params = {}, options = {})
+    def create_token(params = {}, **options)
       req = build_request(:create_token, params)
       req.send_request(options)
     end
@@ -1068,9 +1068,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/DeleteGrant AWS API Documentation
     #
-    # @overload delete_grant(params = {})
+    # @overload delete_grant(**params)
     # @param [Hash] params ({})
-    def delete_grant(params = {}, options = {})
+    def delete_grant(params = {}, **options)
       req = build_request(:delete_grant, params)
       req.send_request(options)
     end
@@ -1102,9 +1102,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/DeleteLicense AWS API Documentation
     #
-    # @overload delete_license(params = {})
+    # @overload delete_license(**params)
     # @param [Hash] params ({})
-    def delete_license(params = {}, options = {})
+    def delete_license(params = {}, **options)
       req = build_request(:delete_license, params)
       req.send_request(options)
     end
@@ -1126,9 +1126,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/DeleteLicenseConfiguration AWS API Documentation
     #
-    # @overload delete_license_configuration(params = {})
+    # @overload delete_license_configuration(**params)
     # @param [Hash] params ({})
-    def delete_license_configuration(params = {}, options = {})
+    def delete_license_configuration(params = {}, **options)
       req = build_request(:delete_license_configuration, params)
       req.send_request(options)
     end
@@ -1149,9 +1149,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/DeleteToken AWS API Documentation
     #
-    # @overload delete_token(params = {})
+    # @overload delete_token(**params)
     # @param [Hash] params ({})
-    def delete_token(params = {}, options = {})
+    def delete_token(params = {}, **options)
       req = build_request(:delete_token, params)
       req.send_request(options)
     end
@@ -1185,9 +1185,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ExtendLicenseConsumption AWS API Documentation
     #
-    # @overload extend_license_consumption(params = {})
+    # @overload extend_license_consumption(**params)
     # @param [Hash] params ({})
-    def extend_license_consumption(params = {}, options = {})
+    def extend_license_consumption(params = {}, **options)
       req = build_request(:extend_license_consumption, params)
       req.send_request(options)
     end
@@ -1218,9 +1218,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetAccessToken AWS API Documentation
     #
-    # @overload get_access_token(params = {})
+    # @overload get_access_token(**params)
     # @param [Hash] params ({})
-    def get_access_token(params = {}, options = {})
+    def get_access_token(params = {}, **options)
       req = build_request(:get_access_token, params)
       req.send_request(options)
     end
@@ -1260,9 +1260,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetGrant AWS API Documentation
     #
-    # @overload get_grant(params = {})
+    # @overload get_grant(**params)
     # @param [Hash] params ({})
-    def get_grant(params = {}, options = {})
+    def get_grant(params = {}, **options)
       req = build_request(:get_grant, params)
       req.send_request(options)
     end
@@ -1319,9 +1319,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetLicense AWS API Documentation
     #
-    # @overload get_license(params = {})
+    # @overload get_license(**params)
     # @param [Hash] params ({})
-    def get_license(params = {}, options = {})
+    def get_license(params = {}, **options)
       req = build_request(:get_license, params)
       req.send_request(options)
     end
@@ -1392,9 +1392,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetLicenseConfiguration AWS API Documentation
     #
-    # @overload get_license_configuration(params = {})
+    # @overload get_license_configuration(**params)
     # @param [Hash] params ({})
-    def get_license_configuration(params = {}, options = {})
+    def get_license_configuration(params = {}, **options)
       req = build_request(:get_license_configuration, params)
       req.send_request(options)
     end
@@ -1424,9 +1424,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetLicenseUsage AWS API Documentation
     #
-    # @overload get_license_usage(params = {})
+    # @overload get_license_usage(**params)
     # @param [Hash] params ({})
-    def get_license_usage(params = {}, options = {})
+    def get_license_usage(params = {}, **options)
       req = build_request(:get_license_usage, params)
       req.send_request(options)
     end
@@ -1451,9 +1451,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetServiceSettings AWS API Documentation
     #
-    # @overload get_service_settings(params = {})
+    # @overload get_service_settings(**params)
     # @param [Hash] params ({})
-    def get_service_settings(params = {}, options = {})
+    def get_service_settings(params = {}, **options)
       req = build_request(:get_service_settings, params)
       req.send_request(options)
     end
@@ -1499,9 +1499,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListAssociationsForLicenseConfiguration AWS API Documentation
     #
-    # @overload list_associations_for_license_configuration(params = {})
+    # @overload list_associations_for_license_configuration(**params)
     # @param [Hash] params ({})
-    def list_associations_for_license_configuration(params = {}, options = {})
+    def list_associations_for_license_configuration(params = {}, **options)
       req = build_request(:list_associations_for_license_configuration, params)
       req.send_request(options)
     end
@@ -1565,9 +1565,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListDistributedGrants AWS API Documentation
     #
-    # @overload list_distributed_grants(params = {})
+    # @overload list_distributed_grants(**params)
     # @param [Hash] params ({})
-    def list_distributed_grants(params = {}, options = {})
+    def list_distributed_grants(params = {}, **options)
       req = build_request(:list_distributed_grants, params)
       req.send_request(options)
     end
@@ -1613,9 +1613,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListFailuresForLicenseConfigurationOperations AWS API Documentation
     #
-    # @overload list_failures_for_license_configuration_operations(params = {})
+    # @overload list_failures_for_license_configuration_operations(**params)
     # @param [Hash] params ({})
-    def list_failures_for_license_configuration_operations(params = {}, options = {})
+    def list_failures_for_license_configuration_operations(params = {}, **options)
       req = build_request(:list_failures_for_license_configuration_operations, params)
       req.send_request(options)
     end
@@ -1700,9 +1700,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenseConfigurations AWS API Documentation
     #
-    # @overload list_license_configurations(params = {})
+    # @overload list_license_configurations(**params)
     # @param [Hash] params ({})
-    def list_license_configurations(params = {}, options = {})
+    def list_license_configurations(params = {}, **options)
       req = build_request(:list_license_configurations, params)
       req.send_request(options)
     end
@@ -1741,9 +1741,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenseSpecificationsForResource AWS API Documentation
     #
-    # @overload list_license_specifications_for_resource(params = {})
+    # @overload list_license_specifications_for_resource(**params)
     # @param [Hash] params ({})
-    def list_license_specifications_for_resource(params = {}, options = {})
+    def list_license_specifications_for_resource(params = {}, **options)
       req = build_request(:list_license_specifications_for_resource, params)
       req.send_request(options)
     end
@@ -1807,9 +1807,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenseVersions AWS API Documentation
     #
-    # @overload list_license_versions(params = {})
+    # @overload list_license_versions(**params)
     # @param [Hash] params ({})
-    def list_license_versions(params = {}, options = {})
+    def list_license_versions(params = {}, **options)
       req = build_request(:list_license_versions, params)
       req.send_request(options)
     end
@@ -1890,9 +1890,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenses AWS API Documentation
     #
-    # @overload list_licenses(params = {})
+    # @overload list_licenses(**params)
     # @param [Hash] params ({})
-    def list_licenses(params = {}, options = {})
+    def list_licenses(params = {}, **options)
       req = build_request(:list_licenses, params)
       req.send_request(options)
     end
@@ -1952,9 +1952,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListReceivedGrants AWS API Documentation
     #
-    # @overload list_received_grants(params = {})
+    # @overload list_received_grants(**params)
     # @param [Hash] params ({})
-    def list_received_grants(params = {}, options = {})
+    def list_received_grants(params = {}, **options)
       req = build_request(:list_received_grants, params)
       req.send_request(options)
     end
@@ -2038,9 +2038,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListReceivedLicenses AWS API Documentation
     #
-    # @overload list_received_licenses(params = {})
+    # @overload list_received_licenses(**params)
     # @param [Hash] params ({})
-    def list_received_licenses(params = {}, options = {})
+    def list_received_licenses(params = {}, **options)
       req = build_request(:list_received_licenses, params)
       req.send_request(options)
     end
@@ -2110,9 +2110,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListResourceInventory AWS API Documentation
     #
-    # @overload list_resource_inventory(params = {})
+    # @overload list_resource_inventory(**params)
     # @param [Hash] params ({})
-    def list_resource_inventory(params = {}, options = {})
+    def list_resource_inventory(params = {}, **options)
       req = build_request(:list_resource_inventory, params)
       req.send_request(options)
     end
@@ -2140,9 +2140,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2200,9 +2200,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListTokens AWS API Documentation
     #
-    # @overload list_tokens(params = {})
+    # @overload list_tokens(**params)
     # @param [Hash] params ({})
-    def list_tokens(params = {}, options = {})
+    def list_tokens(params = {}, **options)
       req = build_request(:list_tokens, params)
       req.send_request(options)
     end
@@ -2267,9 +2267,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListUsageForLicenseConfiguration AWS API Documentation
     #
-    # @overload list_usage_for_license_configuration(params = {})
+    # @overload list_usage_for_license_configuration(**params)
     # @param [Hash] params ({})
-    def list_usage_for_license_configuration(params = {}, options = {})
+    def list_usage_for_license_configuration(params = {}, **options)
       req = build_request(:list_usage_for_license_configuration, params)
       req.send_request(options)
     end
@@ -2299,9 +2299,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/RejectGrant AWS API Documentation
     #
-    # @overload reject_grant(params = {})
+    # @overload reject_grant(**params)
     # @param [Hash] params ({})
-    def reject_grant(params = {}, options = {})
+    def reject_grant(params = {}, **options)
       req = build_request(:reject_grant, params)
       req.send_request(options)
     end
@@ -2330,9 +2330,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2356,9 +2356,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2422,9 +2422,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/UpdateLicenseConfiguration AWS API Documentation
     #
-    # @overload update_license_configuration(params = {})
+    # @overload update_license_configuration(**params)
     # @param [Hash] params ({})
-    def update_license_configuration(params = {}, options = {})
+    def update_license_configuration(params = {}, **options)
       req = build_request(:update_license_configuration, params)
       req.send_request(options)
     end
@@ -2468,9 +2468,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/UpdateLicenseSpecificationsForResource AWS API Documentation
     #
-    # @overload update_license_specifications_for_resource(params = {})
+    # @overload update_license_specifications_for_resource(**params)
     # @param [Hash] params ({})
-    def update_license_specifications_for_resource(params = {}, options = {})
+    def update_license_specifications_for_resource(params = {}, **options)
       req = build_request(:update_license_specifications_for_resource, params)
       req.send_request(options)
     end
@@ -2507,9 +2507,9 @@ module Aws::LicenseManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/UpdateServiceSettings AWS API Documentation
     #
-    # @overload update_service_settings(params = {})
+    # @overload update_service_settings(**params)
     # @param [Hash] params ({})
-    def update_service_settings(params = {}, options = {})
+    def update_service_settings(params = {}, **options)
       req = build_request(:update_service_settings, params)
       req.send_request(options)
     end
@@ -2518,7 +2518,7 @@ module Aws::LicenseManager
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2526,15 +2526,15 @@ module Aws::LicenseManager
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-licensemanager'
-      context[:gem_version] = '1.23.0'
+      context[:gem_name] = "aws-sdk-licensemanager"
+      context[:gem_version] = "1.23.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

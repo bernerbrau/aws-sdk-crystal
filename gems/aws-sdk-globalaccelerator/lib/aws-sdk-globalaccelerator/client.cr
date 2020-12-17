@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:globalaccelerator)
 
@@ -290,7 +290,7 @@ module Aws::GlobalAccelerator
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -390,9 +390,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/AddCustomRoutingEndpoints AWS API Documentation
     #
-    # @overload add_custom_routing_endpoints(params = {})
+    # @overload add_custom_routing_endpoints(**params)
     # @param [Hash] params ({})
-    def add_custom_routing_endpoints(params = {}, options = {})
+    def add_custom_routing_endpoints(params = {}, **options)
       req = build_request(:add_custom_routing_endpoints, params)
       req.send_request(options)
     end
@@ -438,9 +438,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/AdvertiseByoipCidr AWS API Documentation
     #
-    # @overload advertise_byoip_cidr(params = {})
+    # @overload advertise_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def advertise_byoip_cidr(params = {}, options = {})
+    def advertise_byoip_cidr(params = {}, **options)
       req = build_request(:advertise_byoip_cidr, params)
       req.send_request(options)
     end
@@ -508,9 +508,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/AllowCustomRoutingTraffic AWS API Documentation
     #
-    # @overload allow_custom_routing_traffic(params = {})
+    # @overload allow_custom_routing_traffic(**params)
     # @param [Hash] params ({})
-    def allow_custom_routing_traffic(params = {}, options = {})
+    def allow_custom_routing_traffic(params = {}, **options)
       req = build_request(:allow_custom_routing_traffic, params)
       req.send_request(options)
     end
@@ -616,9 +616,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateAccelerator AWS API Documentation
     #
-    # @overload create_accelerator(params = {})
+    # @overload create_accelerator(**params)
     # @param [Hash] params ({})
-    def create_accelerator(params = {}, options = {})
+    def create_accelerator(params = {}, **options)
       req = build_request(:create_accelerator, params)
       req.send_request(options)
     end
@@ -705,9 +705,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateCustomRoutingAccelerator AWS API Documentation
     #
-    # @overload create_custom_routing_accelerator(params = {})
+    # @overload create_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def create_custom_routing_accelerator(params = {}, options = {})
+    def create_custom_routing_accelerator(params = {}, **options)
       req = build_request(:create_custom_routing_accelerator, params)
       req.send_request(options)
     end
@@ -769,9 +769,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateCustomRoutingEndpointGroup AWS API Documentation
     #
-    # @overload create_custom_routing_endpoint_group(params = {})
+    # @overload create_custom_routing_endpoint_group(**params)
     # @param [Hash] params ({})
-    def create_custom_routing_endpoint_group(params = {}, options = {})
+    def create_custom_routing_endpoint_group(params = {}, **options)
       req = build_request(:create_custom_routing_endpoint_group, params)
       req.send_request(options)
     end
@@ -828,9 +828,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateCustomRoutingListener AWS API Documentation
     #
-    # @overload create_custom_routing_listener(params = {})
+    # @overload create_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def create_custom_routing_listener(params = {}, options = {})
+    def create_custom_routing_listener(params = {}, **options)
       req = build_request(:create_custom_routing_listener, params)
       req.send_request(options)
     end
@@ -959,9 +959,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateEndpointGroup AWS API Documentation
     #
-    # @overload create_endpoint_group(params = {})
+    # @overload create_endpoint_group(**params)
     # @param [Hash] params ({})
-    def create_endpoint_group(params = {}, options = {})
+    def create_endpoint_group(params = {}, **options)
       req = build_request(:create_endpoint_group, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateListener AWS API Documentation
     #
-    # @overload create_listener(params = {})
+    # @overload create_listener(**params)
     # @param [Hash] params ({})
-    def create_listener(params = {}, options = {})
+    def create_listener(params = {}, **options)
       req = build_request(:create_listener, params)
       req.send_request(options)
     end
@@ -1087,9 +1087,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteAccelerator AWS API Documentation
     #
-    # @overload delete_accelerator(params = {})
+    # @overload delete_accelerator(**params)
     # @param [Hash] params ({})
-    def delete_accelerator(params = {}, options = {})
+    def delete_accelerator(params = {}, **options)
       req = build_request(:delete_accelerator, params)
       req.send_request(options)
     end
@@ -1131,9 +1131,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteCustomRoutingAccelerator AWS API Documentation
     #
-    # @overload delete_custom_routing_accelerator(params = {})
+    # @overload delete_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def delete_custom_routing_accelerator(params = {}, options = {})
+    def delete_custom_routing_accelerator(params = {}, **options)
       req = build_request(:delete_custom_routing_accelerator, params)
       req.send_request(options)
     end
@@ -1154,9 +1154,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteCustomRoutingEndpointGroup AWS API Documentation
     #
-    # @overload delete_custom_routing_endpoint_group(params = {})
+    # @overload delete_custom_routing_endpoint_group(**params)
     # @param [Hash] params ({})
-    def delete_custom_routing_endpoint_group(params = {}, options = {})
+    def delete_custom_routing_endpoint_group(params = {}, **options)
       req = build_request(:delete_custom_routing_endpoint_group, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteCustomRoutingListener AWS API Documentation
     #
-    # @overload delete_custom_routing_listener(params = {})
+    # @overload delete_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def delete_custom_routing_listener(params = {}, options = {})
+    def delete_custom_routing_listener(params = {}, **options)
       req = build_request(:delete_custom_routing_listener, params)
       req.send_request(options)
     end
@@ -1198,9 +1198,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteEndpointGroup AWS API Documentation
     #
-    # @overload delete_endpoint_group(params = {})
+    # @overload delete_endpoint_group(**params)
     # @param [Hash] params ({})
-    def delete_endpoint_group(params = {}, options = {})
+    def delete_endpoint_group(params = {}, **options)
       req = build_request(:delete_endpoint_group, params)
       req.send_request(options)
     end
@@ -1220,9 +1220,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteListener AWS API Documentation
     #
-    # @overload delete_listener(params = {})
+    # @overload delete_listener(**params)
     # @param [Hash] params ({})
-    def delete_listener(params = {}, options = {})
+    def delete_listener(params = {}, **options)
       req = build_request(:delete_listener, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DenyCustomRoutingTraffic AWS API Documentation
     #
-    # @overload deny_custom_routing_traffic(params = {})
+    # @overload deny_custom_routing_traffic(**params)
     # @param [Hash] params ({})
-    def deny_custom_routing_traffic(params = {}, options = {})
+    def deny_custom_routing_traffic(params = {}, **options)
       req = build_request(:deny_custom_routing_traffic, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeprovisionByoipCidr AWS API Documentation
     #
-    # @overload deprovision_byoip_cidr(params = {})
+    # @overload deprovision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def deprovision_byoip_cidr(params = {}, options = {})
+    def deprovision_byoip_cidr(params = {}, **options)
       req = build_request(:deprovision_byoip_cidr, params)
       req.send_request(options)
     end
@@ -1372,9 +1372,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeAccelerator AWS API Documentation
     #
-    # @overload describe_accelerator(params = {})
+    # @overload describe_accelerator(**params)
     # @param [Hash] params ({})
-    def describe_accelerator(params = {}, options = {})
+    def describe_accelerator(params = {}, **options)
       req = build_request(:describe_accelerator, params)
       req.send_request(options)
     end
@@ -1403,9 +1403,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeAcceleratorAttributes AWS API Documentation
     #
-    # @overload describe_accelerator_attributes(params = {})
+    # @overload describe_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def describe_accelerator_attributes(params = {}, options = {})
+    def describe_accelerator_attributes(params = {}, **options)
       req = build_request(:describe_accelerator_attributes, params)
       req.send_request(options)
     end
@@ -1442,9 +1442,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeCustomRoutingAccelerator AWS API Documentation
     #
-    # @overload describe_custom_routing_accelerator(params = {})
+    # @overload describe_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_accelerator(params = {}, options = {})
+    def describe_custom_routing_accelerator(params = {}, **options)
       req = build_request(:describe_custom_routing_accelerator, params)
       req.send_request(options)
     end
@@ -1473,9 +1473,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeCustomRoutingAcceleratorAttributes AWS API Documentation
     #
-    # @overload describe_custom_routing_accelerator_attributes(params = {})
+    # @overload describe_custom_routing_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_accelerator_attributes(params = {}, options = {})
+    def describe_custom_routing_accelerator_attributes(params = {}, **options)
       req = build_request(:describe_custom_routing_accelerator_attributes, params)
       req.send_request(options)
     end
@@ -1509,9 +1509,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeCustomRoutingEndpointGroup AWS API Documentation
     #
-    # @overload describe_custom_routing_endpoint_group(params = {})
+    # @overload describe_custom_routing_endpoint_group(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_endpoint_group(params = {}, options = {})
+    def describe_custom_routing_endpoint_group(params = {}, **options)
       req = build_request(:describe_custom_routing_endpoint_group, params)
       req.send_request(options)
     end
@@ -1540,9 +1540,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeCustomRoutingListener AWS API Documentation
     #
-    # @overload describe_custom_routing_listener(params = {})
+    # @overload describe_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def describe_custom_routing_listener(params = {}, options = {})
+    def describe_custom_routing_listener(params = {}, **options)
       req = build_request(:describe_custom_routing_listener, params)
       req.send_request(options)
     end
@@ -1584,9 +1584,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeEndpointGroup AWS API Documentation
     #
-    # @overload describe_endpoint_group(params = {})
+    # @overload describe_endpoint_group(**params)
     # @param [Hash] params ({})
-    def describe_endpoint_group(params = {}, options = {})
+    def describe_endpoint_group(params = {}, **options)
       req = build_request(:describe_endpoint_group, params)
       req.send_request(options)
     end
@@ -1617,9 +1617,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeListener AWS API Documentation
     #
-    # @overload describe_listener(params = {})
+    # @overload describe_listener(**params)
     # @param [Hash] params ({})
-    def describe_listener(params = {}, options = {})
+    def describe_listener(params = {}, **options)
       req = build_request(:describe_listener, params)
       req.send_request(options)
     end
@@ -1667,9 +1667,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListAccelerators AWS API Documentation
     #
-    # @overload list_accelerators(params = {})
+    # @overload list_accelerators(**params)
     # @param [Hash] params ({})
-    def list_accelerators(params = {}, options = {})
+    def list_accelerators(params = {}, **options)
       req = build_request(:list_accelerators, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListByoipCidrs AWS API Documentation
     #
-    # @overload list_byoip_cidrs(params = {})
+    # @overload list_byoip_cidrs(**params)
     # @param [Hash] params ({})
-    def list_byoip_cidrs(params = {}, options = {})
+    def list_byoip_cidrs(params = {}, **options)
       req = build_request(:list_byoip_cidrs, params)
       req.send_request(options)
     end
@@ -1766,9 +1766,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCustomRoutingAccelerators AWS API Documentation
     #
-    # @overload list_custom_routing_accelerators(params = {})
+    # @overload list_custom_routing_accelerators(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_accelerators(params = {}, options = {})
+    def list_custom_routing_accelerators(params = {}, **options)
       req = build_request(:list_custom_routing_accelerators, params)
       req.send_request(options)
     end
@@ -1819,9 +1819,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCustomRoutingEndpointGroups AWS API Documentation
     #
-    # @overload list_custom_routing_endpoint_groups(params = {})
+    # @overload list_custom_routing_endpoint_groups(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_endpoint_groups(params = {}, options = {})
+    def list_custom_routing_endpoint_groups(params = {}, **options)
       req = build_request(:list_custom_routing_endpoint_groups, params)
       req.send_request(options)
     end
@@ -1866,9 +1866,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCustomRoutingListeners AWS API Documentation
     #
-    # @overload list_custom_routing_listeners(params = {})
+    # @overload list_custom_routing_listeners(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_listeners(params = {}, options = {})
+    def list_custom_routing_listeners(params = {}, **options)
       req = build_request(:list_custom_routing_listeners, params)
       req.send_request(options)
     end
@@ -1938,9 +1938,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCustomRoutingPortMappings AWS API Documentation
     #
-    # @overload list_custom_routing_port_mappings(params = {})
+    # @overload list_custom_routing_port_mappings(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_port_mappings(params = {}, options = {})
+    def list_custom_routing_port_mappings(params = {}, **options)
       req = build_request(:list_custom_routing_port_mappings, params)
       req.send_request(options)
     end
@@ -2001,9 +2001,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCustomRoutingPortMappingsByDestination AWS API Documentation
     #
-    # @overload list_custom_routing_port_mappings_by_destination(params = {})
+    # @overload list_custom_routing_port_mappings_by_destination(**params)
     # @param [Hash] params ({})
-    def list_custom_routing_port_mappings_by_destination(params = {}, options = {})
+    def list_custom_routing_port_mappings_by_destination(params = {}, **options)
       req = build_request(:list_custom_routing_port_mappings_by_destination, params)
       req.send_request(options)
     end
@@ -2060,9 +2060,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListEndpointGroups AWS API Documentation
     #
-    # @overload list_endpoint_groups(params = {})
+    # @overload list_endpoint_groups(**params)
     # @param [Hash] params ({})
-    def list_endpoint_groups(params = {}, options = {})
+    def list_endpoint_groups(params = {}, **options)
       req = build_request(:list_endpoint_groups, params)
       req.send_request(options)
     end
@@ -2109,9 +2109,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListListeners AWS API Documentation
     #
-    # @overload list_listeners(params = {})
+    # @overload list_listeners(**params)
     # @param [Hash] params ({})
-    def list_listeners(params = {}, options = {})
+    def list_listeners(params = {}, **options)
       req = build_request(:list_listeners, params)
       req.send_request(options)
     end
@@ -2147,9 +2147,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2201,9 +2201,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ProvisionByoipCidr AWS API Documentation
     #
-    # @overload provision_byoip_cidr(params = {})
+    # @overload provision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def provision_byoip_cidr(params = {}, options = {})
+    def provision_byoip_cidr(params = {}, **options)
       req = build_request(:provision_byoip_cidr, params)
       req.send_request(options)
     end
@@ -2229,9 +2229,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/RemoveCustomRoutingEndpoints AWS API Documentation
     #
-    # @overload remove_custom_routing_endpoints(params = {})
+    # @overload remove_custom_routing_endpoints(**params)
     # @param [Hash] params ({})
-    def remove_custom_routing_endpoints(params = {}, options = {})
+    def remove_custom_routing_endpoints(params = {}, **options)
       req = build_request(:remove_custom_routing_endpoints, params)
       req.send_request(options)
     end
@@ -2269,9 +2269,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2307,9 +2307,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2368,9 +2368,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateAccelerator AWS API Documentation
     #
-    # @overload update_accelerator(params = {})
+    # @overload update_accelerator(**params)
     # @param [Hash] params ({})
-    def update_accelerator(params = {}, options = {})
+    def update_accelerator(params = {}, **options)
       req = build_request(:update_accelerator, params)
       req.send_request(options)
     end
@@ -2431,9 +2431,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateAcceleratorAttributes AWS API Documentation
     #
-    # @overload update_accelerator_attributes(params = {})
+    # @overload update_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def update_accelerator_attributes(params = {}, options = {})
+    def update_accelerator_attributes(params = {}, **options)
       req = build_request(:update_accelerator_attributes, params)
       req.send_request(options)
     end
@@ -2488,9 +2488,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateCustomRoutingAccelerator AWS API Documentation
     #
-    # @overload update_custom_routing_accelerator(params = {})
+    # @overload update_custom_routing_accelerator(**params)
     # @param [Hash] params ({})
-    def update_custom_routing_accelerator(params = {}, options = {})
+    def update_custom_routing_accelerator(params = {}, **options)
       req = build_request(:update_custom_routing_accelerator, params)
       req.send_request(options)
     end
@@ -2551,9 +2551,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateCustomRoutingAcceleratorAttributes AWS API Documentation
     #
-    # @overload update_custom_routing_accelerator_attributes(params = {})
+    # @overload update_custom_routing_accelerator_attributes(**params)
     # @param [Hash] params ({})
-    def update_custom_routing_accelerator_attributes(params = {}, options = {})
+    def update_custom_routing_accelerator_attributes(params = {}, **options)
       req = build_request(:update_custom_routing_accelerator_attributes, params)
       req.send_request(options)
     end
@@ -2600,9 +2600,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateCustomRoutingListener AWS API Documentation
     #
-    # @overload update_custom_routing_listener(params = {})
+    # @overload update_custom_routing_listener(**params)
     # @param [Hash] params ({})
-    def update_custom_routing_listener(params = {}, options = {})
+    def update_custom_routing_listener(params = {}, **options)
       req = build_request(:update_custom_routing_listener, params)
       req.send_request(options)
     end
@@ -2718,9 +2718,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateEndpointGroup AWS API Documentation
     #
-    # @overload update_endpoint_group(params = {})
+    # @overload update_endpoint_group(**params)
     # @param [Hash] params ({})
-    def update_endpoint_group(params = {}, options = {})
+    def update_endpoint_group(params = {}, **options)
       req = build_request(:update_endpoint_group, params)
       req.send_request(options)
     end
@@ -2792,9 +2792,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateListener AWS API Documentation
     #
-    # @overload update_listener(params = {})
+    # @overload update_listener(**params)
     # @param [Hash] params ({})
-    def update_listener(params = {}, options = {})
+    def update_listener(params = {}, **options)
       req = build_request(:update_listener, params)
       req.send_request(options)
     end
@@ -2836,9 +2836,9 @@ module Aws::GlobalAccelerator
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/WithdrawByoipCidr AWS API Documentation
     #
-    # @overload withdraw_byoip_cidr(params = {})
+    # @overload withdraw_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def withdraw_byoip_cidr(params = {}, options = {})
+    def withdraw_byoip_cidr(params = {}, **options)
       req = build_request(:withdraw_byoip_cidr, params)
       req.send_request(options)
     end
@@ -2847,7 +2847,7 @@ module Aws::GlobalAccelerator
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2855,15 +2855,15 @@ module Aws::GlobalAccelerator
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-globalaccelerator'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-globalaccelerator"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

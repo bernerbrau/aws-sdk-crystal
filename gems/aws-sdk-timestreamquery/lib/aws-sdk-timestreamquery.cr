@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-timestreamquery/types'
-require_relative 'aws-sdk-timestreamquery/client_api'
-require_relative 'aws-sdk-timestreamquery/client'
-require_relative 'aws-sdk-timestreamquery/errors'
-require_relative 'aws-sdk-timestreamquery/resource'
-require_relative 'aws-sdk-timestreamquery/customizations'
+require_relative "aws-sdk-timestreamquery/types"
+require_relative "aws-sdk-timestreamquery/client_api"
+require_relative "aws-sdk-timestreamquery/client"
+require_relative "aws-sdk-timestreamquery/errors"
+require_relative "aws-sdk-timestreamquery/resource"
+require_relative "aws-sdk-timestreamquery/customizations"
 
 # This module provides support for Amazon Timestream Query. This module is available in the
 # `aws-sdk-timestreamquery` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-timestreamquery/customizations'
 # @!group service
 module Aws::TimestreamQuery
 
-  GEM_VERSION = '1.2.0'
+  GEM_VERSION = "1.2.0"
 
 end

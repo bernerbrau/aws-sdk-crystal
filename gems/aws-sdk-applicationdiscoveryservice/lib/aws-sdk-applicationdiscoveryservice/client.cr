@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:applicationdiscoveryservice)
 
@@ -290,7 +290,7 @@ module Aws::ApplicationDiscoveryService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -356,9 +356,9 @@ module Aws::ApplicationDiscoveryService
     #     configuration_ids: ["ConfigurationId"], # required
     #   })
     #
-    # @overload associate_configuration_items_to_application(params = {})
+    # @overload associate_configuration_items_to_application(**params)
     # @param [Hash] params ({})
-    def associate_configuration_items_to_application(params = {}, options = {})
+    def associate_configuration_items_to_application(params = {}, **options)
       req = build_request(:associate_configuration_items_to_application, params)
       req.send_request(options)
     end
@@ -395,9 +395,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.errors[0].error_code #=> String, one of "NOT_FOUND", "INTERNAL_SERVER_ERROR", "OVER_LIMIT"
     #   resp.errors[0].error_description #=> String
     #
-    # @overload batch_delete_import_data(params = {})
+    # @overload batch_delete_import_data(**params)
     # @param [Hash] params ({})
-    def batch_delete_import_data(params = {}, options = {})
+    def batch_delete_import_data(params = {}, **options)
       req = build_request(:batch_delete_import_data, params)
       req.send_request(options)
     end
@@ -425,9 +425,9 @@ module Aws::ApplicationDiscoveryService
     #
     #   resp.configuration_id #=> String
     #
-    # @overload create_application(params = {})
+    # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, options = {})
+    def create_application(params = {}, **options)
       req = build_request(:create_application, params)
       req.send_request(options)
     end
@@ -460,9 +460,9 @@ module Aws::ApplicationDiscoveryService
     #     ],
     #   })
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -481,9 +481,9 @@ module Aws::ApplicationDiscoveryService
     #     configuration_ids: ["ApplicationId"], # required
     #   })
     #
-    # @overload delete_applications(params = {})
+    # @overload delete_applications(**params)
     # @param [Hash] params ({})
-    def delete_applications(params = {}, options = {})
+    def delete_applications(params = {}, **options)
       req = build_request(:delete_applications, params)
       req.send_request(options)
     end
@@ -515,9 +515,9 @@ module Aws::ApplicationDiscoveryService
     #     ],
     #   })
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -585,9 +585,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.agents_info[0].registered_time #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_agents(params = {})
+    # @overload describe_agents(**params)
     # @param [Hash] params ({})
-    def describe_agents(params = {}, options = {})
+    def describe_agents(params = {}, **options)
       req = build_request(:describe_agents, params)
       req.send_request(options)
     end
@@ -639,9 +639,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.configurations[0] #=> Hash
     #   resp.configurations[0]["String"] #=> String
     #
-    # @overload describe_configurations(params = {})
+    # @overload describe_configurations(**params)
     # @param [Hash] params ({})
-    def describe_configurations(params = {}, options = {})
+    def describe_configurations(params = {}, **options)
       req = build_request(:describe_configurations, params)
       req.send_request(options)
     end
@@ -689,9 +689,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.descriptions[0].schema_storage_config["DatabaseName"] #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_continuous_exports(params = {})
+    # @overload describe_continuous_exports(**params)
     # @param [Hash] params ({})
-    def describe_continuous_exports(params = {}, options = {})
+    def describe_continuous_exports(params = {}, **options)
       req = build_request(:describe_continuous_exports, params)
       req.send_request(options)
     end
@@ -739,9 +739,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.exports_info[0].requested_end_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload describe_export_configurations(params = {})
+    # @overload describe_export_configurations(**params)
     # @param [Hash] params ({})
-    def describe_export_configurations(params = {}, options = {})
+    def describe_export_configurations(params = {}, **options)
       req = build_request(:describe_export_configurations, params)
       req.send_request(options)
     end
@@ -806,9 +806,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.exports_info[0].requested_end_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload describe_export_tasks(params = {})
+    # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, options = {})
+    def describe_export_tasks(params = {}, **options)
       req = build_request(:describe_export_tasks, params)
       req.send_request(options)
     end
@@ -867,9 +867,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.tasks[0].application_import_failure #=> Integer
     #   resp.tasks[0].errors_and_failed_entries_zip #=> String
     #
-    # @overload describe_import_tasks(params = {})
+    # @overload describe_import_tasks(**params)
     # @param [Hash] params ({})
-    def describe_import_tasks(params = {}, options = {})
+    def describe_import_tasks(params = {}, **options)
       req = build_request(:describe_import_tasks, params)
       req.send_request(options)
     end
@@ -931,9 +931,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.tags[0].time_of_creation #=> Time
     #   resp.next_token #=> String
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -956,9 +956,9 @@ module Aws::ApplicationDiscoveryService
     #     configuration_ids: ["ConfigurationId"], # required
     #   })
     #
-    # @overload disassociate_configuration_items_from_application(params = {})
+    # @overload disassociate_configuration_items_from_application(**params)
     # @param [Hash] params ({})
-    def disassociate_configuration_items_from_application(params = {}, options = {})
+    def disassociate_configuration_items_from_application(params = {}, **options)
       req = build_request(:disassociate_configuration_items_from_application, params)
       req.send_request(options)
     end
@@ -980,9 +980,9 @@ module Aws::ApplicationDiscoveryService
     #
     #   resp.export_id #=> String
     #
-    # @overload export_configurations(params = {})
+    # @overload export_configurations(**params)
     # @param [Hash] params ({})
-    def export_configurations(params = {}, options = {})
+    def export_configurations(params = {}, **options)
       req = build_request(:export_configurations, params)
       req.send_request(options)
     end
@@ -1022,9 +1022,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.connector_summary.total_connectors #=> Integer
     #   resp.connector_summary.unknown_connectors #=> Integer
     #
-    # @overload get_discovery_summary(params = {})
+    # @overload get_discovery_summary(**params)
     # @param [Hash] params ({})
-    def get_discovery_summary(params = {}, options = {})
+    def get_discovery_summary(params = {}, **options)
       req = build_request(:get_discovery_summary, params)
       req.send_request(options)
     end
@@ -1103,9 +1103,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.configurations[0]["String"] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_configurations(params = {})
+    # @overload list_configurations(**params)
     # @param [Hash] params ({})
-    def list_configurations(params = {}, options = {})
+    def list_configurations(params = {}, **options)
       req = build_request(:list_configurations, params)
       req.send_request(options)
     end
@@ -1161,9 +1161,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.next_token #=> String
     #   resp.known_dependency_count #=> Integer
     #
-    # @overload list_server_neighbors(params = {})
+    # @overload list_server_neighbors(**params)
     # @param [Hash] params ({})
-    def list_server_neighbors(params = {}, options = {})
+    def list_server_neighbors(params = {}, **options)
       req = build_request(:list_server_neighbors, params)
       req.send_request(options)
     end
@@ -1188,9 +1188,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.schema_storage_config #=> Hash
     #   resp.schema_storage_config["DatabaseName"] #=> String
     #
-    # @overload start_continuous_export(params = {})
+    # @overload start_continuous_export(**params)
     # @param [Hash] params ({})
-    def start_continuous_export(params = {}, options = {})
+    def start_continuous_export(params = {}, **options)
       req = build_request(:start_continuous_export, params)
       req.send_request(options)
     end
@@ -1224,9 +1224,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.agents_configuration_status[0].operation_succeeded #=> Boolean
     #   resp.agents_configuration_status[0].description #=> String
     #
-    # @overload start_data_collection_by_agent_ids(params = {})
+    # @overload start_data_collection_by_agent_ids(**params)
     # @param [Hash] params ({})
-    def start_data_collection_by_agent_ids(params = {}, options = {})
+    def start_data_collection_by_agent_ids(params = {}, **options)
       req = build_request(:start_data_collection_by_agent_ids, params)
       req.send_request(options)
     end
@@ -1290,9 +1290,9 @@ module Aws::ApplicationDiscoveryService
     #
     #   resp.export_id #=> String
     #
-    # @overload start_export_task(params = {})
+    # @overload start_export_task(**params)
     # @param [Hash] params ({})
-    def start_export_task(params = {}, options = {})
+    def start_export_task(params = {}, **options)
       req = build_request(:start_export_task, params)
       req.send_request(options)
     end
@@ -1390,9 +1390,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.task.application_import_failure #=> Integer
     #   resp.task.errors_and_failed_entries_zip #=> String
     #
-    # @overload start_import_task(params = {})
+    # @overload start_import_task(**params)
     # @param [Hash] params ({})
-    def start_import_task(params = {}, options = {})
+    def start_import_task(params = {}, **options)
       req = build_request(:start_import_task, params)
       req.send_request(options)
     end
@@ -1419,9 +1419,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.start_time #=> Time
     #   resp.stop_time #=> Time
     #
-    # @overload stop_continuous_export(params = {})
+    # @overload stop_continuous_export(**params)
     # @param [Hash] params ({})
-    def stop_continuous_export(params = {}, options = {})
+    def stop_continuous_export(params = {}, **options)
       req = build_request(:stop_continuous_export, params)
       req.send_request(options)
     end
@@ -1449,9 +1449,9 @@ module Aws::ApplicationDiscoveryService
     #   resp.agents_configuration_status[0].operation_succeeded #=> Boolean
     #   resp.agents_configuration_status[0].description #=> String
     #
-    # @overload stop_data_collection_by_agent_ids(params = {})
+    # @overload stop_data_collection_by_agent_ids(**params)
     # @param [Hash] params ({})
-    def stop_data_collection_by_agent_ids(params = {}, options = {})
+    def stop_data_collection_by_agent_ids(params = {}, **options)
       req = build_request(:stop_data_collection_by_agent_ids, params)
       req.send_request(options)
     end
@@ -1477,9 +1477,9 @@ module Aws::ApplicationDiscoveryService
     #     description: "String",
     #   })
     #
-    # @overload update_application(params = {})
+    # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, options = {})
+    def update_application(params = {}, **options)
       req = build_request(:update_application, params)
       req.send_request(options)
     end
@@ -1488,7 +1488,7 @@ module Aws::ApplicationDiscoveryService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1496,15 +1496,15 @@ module Aws::ApplicationDiscoveryService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-applicationdiscoveryservice'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-applicationdiscoveryservice"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

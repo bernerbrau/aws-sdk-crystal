@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:gluedatabrew)
 
@@ -280,7 +280,7 @@ module Aws::GlueDataBrew
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -357,9 +357,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/BatchDeleteRecipeVersion AWS API Documentation
     #
-    # @overload batch_delete_recipe_version(params = {})
+    # @overload batch_delete_recipe_version(**params)
     # @param [Hash] params ({})
-    def batch_delete_recipe_version(params = {}, options = {})
+    def batch_delete_recipe_version(params = {}, **options)
       req = build_request(:batch_delete_recipe_version, params)
       req.send_request(options)
     end
@@ -423,9 +423,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateDataset AWS API Documentation
     #
-    # @overload create_dataset(params = {})
+    # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, options = {})
+    def create_dataset(params = {}, **options)
       req = build_request(:create_dataset, params)
       req.send_request(options)
     end
@@ -509,9 +509,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateProfileJob AWS API Documentation
     #
-    # @overload create_profile_job(params = {})
+    # @overload create_profile_job(**params)
     # @param [Hash] params ({})
-    def create_profile_job(params = {}, options = {})
+    def create_profile_job(params = {}, **options)
       req = build_request(:create_profile_job, params)
       req.send_request(options)
     end
@@ -564,9 +564,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateRecipe AWS API Documentation
     #
-    # @overload create_recipe(params = {})
+    # @overload create_recipe(**params)
     # @param [Hash] params ({})
-    def create_recipe(params = {}, options = {})
+    def create_recipe(params = {}, **options)
       req = build_request(:create_recipe, params)
       req.send_request(options)
     end
@@ -729,9 +729,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateRecipeJob AWS API Documentation
     #
-    # @overload create_recipe_job(params = {})
+    # @overload create_recipe_job(**params)
     # @param [Hash] params ({})
-    def create_recipe_job(params = {}, options = {})
+    def create_recipe_job(params = {}, **options)
       req = build_request(:create_recipe_job, params)
       req.send_request(options)
     end
@@ -773,9 +773,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateSchedule AWS API Documentation
     #
-    # @overload create_schedule(params = {})
+    # @overload create_schedule(**params)
     # @param [Hash] params ({})
-    def create_schedule(params = {}, options = {})
+    def create_schedule(params = {}, **options)
       req = build_request(:create_schedule, params)
       req.send_request(options)
     end
@@ -801,9 +801,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteDataset AWS API Documentation
     #
-    # @overload delete_dataset(params = {})
+    # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, options = {})
+    def delete_dataset(params = {}, **options)
       req = build_request(:delete_dataset, params)
       req.send_request(options)
     end
@@ -830,9 +830,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteJob AWS API Documentation
     #
-    # @overload delete_job(params = {})
+    # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, options = {})
+    def delete_job(params = {}, **options)
       req = build_request(:delete_job, params)
       req.send_request(options)
     end
@@ -859,9 +859,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -893,9 +893,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteRecipeVersion AWS API Documentation
     #
-    # @overload delete_recipe_version(params = {})
+    # @overload delete_recipe_version(**params)
     # @param [Hash] params ({})
-    def delete_recipe_version(params = {}, options = {})
+    def delete_recipe_version(params = {}, **options)
       req = build_request(:delete_recipe_version, params)
       req.send_request(options)
     end
@@ -922,9 +922,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteSchedule AWS API Documentation
     #
-    # @overload delete_schedule(params = {})
+    # @overload delete_schedule(**params)
     # @param [Hash] params ({})
-    def delete_schedule(params = {}, options = {})
+    def delete_schedule(params = {}, **options)
       req = build_request(:delete_schedule, params)
       req.send_request(options)
     end
@@ -980,9 +980,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeDataset AWS API Documentation
     #
-    # @overload describe_dataset(params = {})
+    # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, options = {})
+    def describe_dataset(params = {}, **options)
       req = build_request(:describe_dataset, params)
       req.send_request(options)
     end
@@ -1054,9 +1054,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeJob AWS API Documentation
     #
-    # @overload describe_job(params = {})
+    # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, options = {})
+    def describe_job(params = {}, **options)
       req = build_request(:describe_job, params)
       req.send_request(options)
     end
@@ -1111,9 +1111,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeProject AWS API Documentation
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -1177,9 +1177,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeRecipe AWS API Documentation
     #
-    # @overload describe_recipe(params = {})
+    # @overload describe_recipe(**params)
     # @param [Hash] params ({})
-    def describe_recipe(params = {}, options = {})
+    def describe_recipe(params = {}, **options)
       req = build_request(:describe_recipe, params)
       req.send_request(options)
     end
@@ -1224,9 +1224,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeSchedule AWS API Documentation
     #
-    # @overload describe_schedule(params = {})
+    # @overload describe_schedule(**params)
     # @param [Hash] params ({})
-    def describe_schedule(params = {}, options = {})
+    def describe_schedule(params = {}, **options)
       req = build_request(:describe_schedule, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListDatasets AWS API Documentation
     #
-    # @overload list_datasets(params = {})
+    # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, options = {})
+    def list_datasets(params = {}, **options)
       req = build_request(:list_datasets, params)
       req.send_request(options)
     end
@@ -1352,9 +1352,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListJobRuns AWS API Documentation
     #
-    # @overload list_job_runs(params = {})
+    # @overload list_job_runs(**params)
     # @param [Hash] params ({})
-    def list_job_runs(params = {}, options = {})
+    def list_job_runs(params = {}, **options)
       req = build_request(:list_job_runs, params)
       req.send_request(options)
     end
@@ -1430,9 +1430,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -1544,9 +1544,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListRecipeVersions AWS API Documentation
     #
-    # @overload list_recipe_versions(params = {})
+    # @overload list_recipe_versions(**params)
     # @param [Hash] params ({})
-    def list_recipe_versions(params = {}, options = {})
+    def list_recipe_versions(params = {}, **options)
       req = build_request(:list_recipe_versions, params)
       req.send_request(options)
     end
@@ -1606,9 +1606,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListRecipes AWS API Documentation
     #
-    # @overload list_recipes(params = {})
+    # @overload list_recipes(**params)
     # @param [Hash] params ({})
-    def list_recipes(params = {}, options = {})
+    def list_recipes(params = {}, **options)
       req = build_request(:list_recipes, params)
       req.send_request(options)
     end
@@ -1658,9 +1658,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListSchedules AWS API Documentation
     #
-    # @overload list_schedules(params = {})
+    # @overload list_schedules(**params)
     # @param [Hash] params ({})
-    def list_schedules(params = {}, options = {})
+    def list_schedules(params = {}, **options)
       req = build_request(:list_schedules, params)
       req.send_request(options)
     end
@@ -1688,9 +1688,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1722,9 +1722,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/PublishRecipe AWS API Documentation
     #
-    # @overload publish_recipe(params = {})
+    # @overload publish_recipe(**params)
     # @param [Hash] params ({})
-    def publish_recipe(params = {}, options = {})
+    def publish_recipe(params = {}, **options)
       req = build_request(:publish_recipe, params)
       req.send_request(options)
     end
@@ -1799,9 +1799,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/SendProjectSessionAction AWS API Documentation
     #
-    # @overload send_project_session_action(params = {})
+    # @overload send_project_session_action(**params)
     # @param [Hash] params ({})
-    def send_project_session_action(params = {}, options = {})
+    def send_project_session_action(params = {}, **options)
       req = build_request(:send_project_session_action, params)
       req.send_request(options)
     end
@@ -1827,9 +1827,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/StartJobRun AWS API Documentation
     #
-    # @overload start_job_run(params = {})
+    # @overload start_job_run(**params)
     # @param [Hash] params ({})
-    def start_job_run(params = {}, options = {})
+    def start_job_run(params = {}, **options)
       req = build_request(:start_job_run, params)
       req.send_request(options)
     end
@@ -1863,9 +1863,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/StartProjectSession AWS API Documentation
     #
-    # @overload start_project_session(params = {})
+    # @overload start_project_session(**params)
     # @param [Hash] params ({})
-    def start_project_session(params = {}, options = {})
+    def start_project_session(params = {}, **options)
       req = build_request(:start_project_session, params)
       req.send_request(options)
     end
@@ -1895,9 +1895,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/StopJobRun AWS API Documentation
     #
-    # @overload stop_job_run(params = {})
+    # @overload stop_job_run(**params)
     # @param [Hash] params ({})
-    def stop_job_run(params = {}, options = {})
+    def stop_job_run(params = {}, **options)
       req = build_request(:stop_job_run, params)
       req.send_request(options)
     end
@@ -1926,9 +1926,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1953,9 +1953,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2014,9 +2014,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateDataset AWS API Documentation
     #
-    # @overload update_dataset(params = {})
+    # @overload update_dataset(**params)
     # @param [Hash] params ({})
-    def update_dataset(params = {}, options = {})
+    def update_dataset(params = {}, **options)
       req = build_request(:update_dataset, params)
       req.send_request(options)
     end
@@ -2089,9 +2089,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateProfileJob AWS API Documentation
     #
-    # @overload update_profile_job(params = {})
+    # @overload update_profile_job(**params)
     # @param [Hash] params ({})
-    def update_profile_job(params = {}, options = {})
+    def update_profile_job(params = {}, **options)
       req = build_request(:update_profile_job, params)
       req.send_request(options)
     end
@@ -2133,9 +2133,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateProject AWS API Documentation
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -2187,9 +2187,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateRecipe AWS API Documentation
     #
-    # @overload update_recipe(params = {})
+    # @overload update_recipe(**params)
     # @param [Hash] params ({})
-    def update_recipe(params = {}, options = {})
+    def update_recipe(params = {}, **options)
       req = build_request(:update_recipe, params)
       req.send_request(options)
     end
@@ -2269,9 +2269,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateRecipeJob AWS API Documentation
     #
-    # @overload update_recipe_job(params = {})
+    # @overload update_recipe_job(**params)
     # @param [Hash] params ({})
-    def update_recipe_job(params = {}, options = {})
+    def update_recipe_job(params = {}, **options)
       req = build_request(:update_recipe_job, params)
       req.send_request(options)
     end
@@ -2307,9 +2307,9 @@ module Aws::GlueDataBrew
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateSchedule AWS API Documentation
     #
-    # @overload update_schedule(params = {})
+    # @overload update_schedule(**params)
     # @param [Hash] params ({})
-    def update_schedule(params = {}, options = {})
+    def update_schedule(params = {}, **options)
       req = build_request(:update_schedule, params)
       req.send_request(options)
     end
@@ -2318,7 +2318,7 @@ module Aws::GlueDataBrew
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2326,15 +2326,15 @@ module Aws::GlueDataBrew
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-gluedatabrew'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-gluedatabrew"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

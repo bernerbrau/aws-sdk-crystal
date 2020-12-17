@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:schemas)
 
@@ -280,7 +280,7 @@ module Aws::Schemas
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -367,9 +367,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/CreateDiscoverer AWS API Documentation
     #
-    # @overload create_discoverer(params = {})
+    # @overload create_discoverer(**params)
     # @param [Hash] params ({})
-    def create_discoverer(params = {}, options = {})
+    def create_discoverer(params = {}, **options)
       req = build_request(:create_discoverer, params)
       req.send_request(options)
     end
@@ -410,9 +410,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/CreateRegistry AWS API Documentation
     #
-    # @overload create_registry(params = {})
+    # @overload create_registry(**params)
     # @param [Hash] params ({})
-    def create_registry(params = {}, options = {})
+    def create_registry(params = {}, **options)
       req = build_request(:create_registry, params)
       req.send_request(options)
     end
@@ -474,9 +474,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/CreateSchema AWS API Documentation
     #
-    # @overload create_schema(params = {})
+    # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, options = {})
+    def create_schema(params = {}, **options)
       req = build_request(:create_schema, params)
       req.send_request(options)
     end
@@ -495,9 +495,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DeleteDiscoverer AWS API Documentation
     #
-    # @overload delete_discoverer(params = {})
+    # @overload delete_discoverer(**params)
     # @param [Hash] params ({})
-    def delete_discoverer(params = {}, options = {})
+    def delete_discoverer(params = {}, **options)
       req = build_request(:delete_discoverer, params)
       req.send_request(options)
     end
@@ -516,9 +516,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DeleteRegistry AWS API Documentation
     #
-    # @overload delete_registry(params = {})
+    # @overload delete_registry(**params)
     # @param [Hash] params ({})
-    def delete_registry(params = {}, options = {})
+    def delete_registry(params = {}, **options)
       req = build_request(:delete_registry, params)
       req.send_request(options)
     end
@@ -537,9 +537,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DeleteResourcePolicy AWS API Documentation
     #
-    # @overload delete_resource_policy(params = {})
+    # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, options = {})
+    def delete_resource_policy(params = {}, **options)
       req = build_request(:delete_resource_policy, params)
       req.send_request(options)
     end
@@ -561,9 +561,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DeleteSchema AWS API Documentation
     #
-    # @overload delete_schema(params = {})
+    # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, options = {})
+    def delete_schema(params = {}, **options)
       req = build_request(:delete_schema, params)
       req.send_request(options)
     end
@@ -588,9 +588,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DeleteSchemaVersion AWS API Documentation
     #
-    # @overload delete_schema_version(params = {})
+    # @overload delete_schema_version(**params)
     # @param [Hash] params ({})
-    def delete_schema_version(params = {}, options = {})
+    def delete_schema_version(params = {}, **options)
       req = build_request(:delete_schema_version, params)
       req.send_request(options)
     end
@@ -635,9 +635,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DescribeCodeBinding AWS API Documentation
     #
-    # @overload describe_code_binding(params = {})
+    # @overload describe_code_binding(**params)
     # @param [Hash] params ({})
-    def describe_code_binding(params = {}, options = {})
+    def describe_code_binding(params = {}, **options)
       req = build_request(:describe_code_binding, params)
       req.send_request(options)
     end
@@ -673,9 +673,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DescribeDiscoverer AWS API Documentation
     #
-    # @overload describe_discoverer(params = {})
+    # @overload describe_discoverer(**params)
     # @param [Hash] params ({})
-    def describe_discoverer(params = {}, options = {})
+    def describe_discoverer(params = {}, **options)
       req = build_request(:describe_discoverer, params)
       req.send_request(options)
     end
@@ -707,9 +707,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DescribeRegistry AWS API Documentation
     #
-    # @overload describe_registry(params = {})
+    # @overload describe_registry(**params)
     # @param [Hash] params ({})
-    def describe_registry(params = {}, options = {})
+    def describe_registry(params = {}, **options)
       req = build_request(:describe_registry, params)
       req.send_request(options)
     end
@@ -757,9 +757,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/DescribeSchema AWS API Documentation
     #
-    # @overload describe_schema(params = {})
+    # @overload describe_schema(**params)
     # @param [Hash] params ({})
-    def describe_schema(params = {}, options = {})
+    def describe_schema(params = {}, **options)
       req = build_request(:describe_schema, params)
       req.send_request(options)
     end
@@ -793,9 +793,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/GetCodeBindingSource AWS API Documentation
     #
-    # @overload get_code_binding_source(params = {})
+    # @overload get_code_binding_source(**params)
     # @param [Hash] params ({})
-    def get_code_binding_source(params = {}, options = {}, &block)
+    def get_code_binding_source(params = {}, **options, &block)
       req = build_request(:get_code_binding_source, params)
       req.send_request(options, &block)
     end
@@ -823,9 +823,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/GetDiscoveredSchema AWS API Documentation
     #
-    # @overload get_discovered_schema(params = {})
+    # @overload get_discovered_schema(**params)
     # @param [Hash] params ({})
-    def get_discovered_schema(params = {}, options = {})
+    def get_discovered_schema(params = {}, **options)
       req = build_request(:get_discovered_schema, params)
       req.send_request(options)
     end
@@ -852,9 +852,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/GetResourcePolicy AWS API Documentation
     #
-    # @overload get_resource_policy(params = {})
+    # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, options = {})
+    def get_resource_policy(params = {}, **options)
       req = build_request(:get_resource_policy, params)
       req.send_request(options)
     end
@@ -898,9 +898,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/ListDiscoverers AWS API Documentation
     #
-    # @overload list_discoverers(params = {})
+    # @overload list_discoverers(**params)
     # @param [Hash] params ({})
-    def list_discoverers(params = {}, options = {})
+    def list_discoverers(params = {}, **options)
       req = build_request(:list_discoverers, params)
       req.send_request(options)
     end
@@ -942,9 +942,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/ListRegistries AWS API Documentation
     #
-    # @overload list_registries(params = {})
+    # @overload list_registries(**params)
     # @param [Hash] params ({})
-    def list_registries(params = {}, options = {})
+    def list_registries(params = {}, **options)
       req = build_request(:list_registries, params)
       req.send_request(options)
     end
@@ -986,9 +986,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/ListSchemaVersions AWS API Documentation
     #
-    # @overload list_schema_versions(params = {})
+    # @overload list_schema_versions(**params)
     # @param [Hash] params ({})
-    def list_schema_versions(params = {}, options = {})
+    def list_schema_versions(params = {}, **options)
       req = build_request(:list_schema_versions, params)
       req.send_request(options)
     end
@@ -1032,9 +1032,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/ListSchemas AWS API Documentation
     #
-    # @overload list_schemas(params = {})
+    # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, options = {})
+    def list_schemas(params = {}, **options)
       req = build_request(:list_schemas, params)
       req.send_request(options)
     end
@@ -1060,9 +1060,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1102,9 +1102,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/PutCodeBinding AWS API Documentation
     #
-    # @overload put_code_binding(params = {})
+    # @overload put_code_binding(**params)
     # @param [Hash] params ({})
-    def put_code_binding(params = {}, options = {})
+    def put_code_binding(params = {}, **options)
       req = build_request(:put_code_binding, params)
       req.send_request(options)
     end
@@ -1140,9 +1140,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/PutResourcePolicy AWS API Documentation
     #
-    # @overload put_resource_policy(params = {})
+    # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, options = {})
+    def put_resource_policy(params = {}, **options)
       req = build_request(:put_resource_policy, params)
       req.send_request(options)
     end
@@ -1187,9 +1187,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/SearchSchemas AWS API Documentation
     #
-    # @overload search_schemas(params = {})
+    # @overload search_schemas(**params)
     # @param [Hash] params ({})
-    def search_schemas(params = {}, options = {})
+    def search_schemas(params = {}, **options)
       req = build_request(:search_schemas, params)
       req.send_request(options)
     end
@@ -1216,9 +1216,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/StartDiscoverer AWS API Documentation
     #
-    # @overload start_discoverer(params = {})
+    # @overload start_discoverer(**params)
     # @param [Hash] params ({})
-    def start_discoverer(params = {}, options = {})
+    def start_discoverer(params = {}, **options)
       req = build_request(:start_discoverer, params)
       req.send_request(options)
     end
@@ -1245,9 +1245,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/StopDiscoverer AWS API Documentation
     #
-    # @overload stop_discoverer(params = {})
+    # @overload stop_discoverer(**params)
     # @param [Hash] params ({})
-    def stop_discoverer(params = {}, options = {})
+    def stop_discoverer(params = {}, **options)
       req = build_request(:stop_discoverer, params)
       req.send_request(options)
     end
@@ -1272,9 +1272,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1296,9 +1296,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1337,9 +1337,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/UpdateDiscoverer AWS API Documentation
     #
-    # @overload update_discoverer(params = {})
+    # @overload update_discoverer(**params)
     # @param [Hash] params ({})
-    def update_discoverer(params = {}, options = {})
+    def update_discoverer(params = {}, **options)
       req = build_request(:update_discoverer, params)
       req.send_request(options)
     end
@@ -1374,9 +1374,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/UpdateRegistry AWS API Documentation
     #
-    # @overload update_registry(params = {})
+    # @overload update_registry(**params)
     # @param [Hash] params ({})
-    def update_registry(params = {}, options = {})
+    def update_registry(params = {}, **options)
       req = build_request(:update_registry, params)
       req.send_request(options)
     end
@@ -1437,9 +1437,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/UpdateSchema AWS API Documentation
     #
-    # @overload update_schema(params = {})
+    # @overload update_schema(**params)
     # @param [Hash] params ({})
-    def update_schema(params = {}, options = {})
+    def update_schema(params = {}, **options)
       req = build_request(:update_schema, params)
       req.send_request(options)
     end
@@ -1481,9 +1481,9 @@ module Aws::Schemas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/schemas-2019-12-02/ExportSchema AWS API Documentation
     #
-    # @overload export_schema(params = {})
+    # @overload export_schema(**params)
     # @param [Hash] params ({})
-    def export_schema(params = {}, options = {})
+    def export_schema(params = {}, **options)
       req = build_request(:export_schema, params)
       req.send_request(options)
     end
@@ -1492,7 +1492,7 @@ module Aws::Schemas
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1500,8 +1500,8 @@ module Aws::Schemas
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-schemas'
-      context[:gem_version] = '1.10.0'
+      context[:gem_name] = "aws-sdk-schemas"
+      context[:gem_version] = "1.10.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -1593,7 +1593,7 @@ module Aws::Schemas
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -1609,7 +1609,7 @@ module Aws::Schemas
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

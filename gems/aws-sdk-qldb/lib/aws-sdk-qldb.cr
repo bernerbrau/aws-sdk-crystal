@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-qldb/types'
-require_relative 'aws-sdk-qldb/client_api'
-require_relative 'aws-sdk-qldb/client'
-require_relative 'aws-sdk-qldb/errors'
-require_relative 'aws-sdk-qldb/resource'
-require_relative 'aws-sdk-qldb/customizations'
+require_relative "aws-sdk-qldb/types"
+require_relative "aws-sdk-qldb/client_api"
+require_relative "aws-sdk-qldb/client"
+require_relative "aws-sdk-qldb/errors"
+require_relative "aws-sdk-qldb/resource"
+require_relative "aws-sdk-qldb/customizations"
 
 # This module provides support for Amazon QLDB. This module is available in the
 # `aws-sdk-qldb` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-qldb/customizations'
 # @!group service
 module Aws::QLDB
 
-  GEM_VERSION = '1.11.0'
+  GEM_VERSION = "1.11.0"
 
 end

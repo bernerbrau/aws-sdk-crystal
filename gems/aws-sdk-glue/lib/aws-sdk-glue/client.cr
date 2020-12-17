@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:glue)
 
@@ -290,7 +290,7 @@ module Aws::Glue
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -438,9 +438,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchCreatePartition AWS API Documentation
     #
-    # @overload batch_create_partition(params = {})
+    # @overload batch_create_partition(**params)
     # @param [Hash] params ({})
-    def batch_create_partition(params = {}, options = {})
+    def batch_create_partition(params = {}, **options)
       req = build_request(:batch_create_partition, params)
       req.send_request(options)
     end
@@ -476,9 +476,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchDeleteConnection AWS API Documentation
     #
-    # @overload batch_delete_connection(params = {})
+    # @overload batch_delete_connection(**params)
     # @param [Hash] params ({})
-    def batch_delete_connection(params = {}, options = {})
+    def batch_delete_connection(params = {}, **options)
       req = build_request(:batch_delete_connection, params)
       req.send_request(options)
     end
@@ -527,9 +527,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchDeletePartition AWS API Documentation
     #
-    # @overload batch_delete_partition(params = {})
+    # @overload batch_delete_partition(**params)
     # @param [Hash] params ({})
-    def batch_delete_partition(params = {}, options = {})
+    def batch_delete_partition(params = {}, **options)
       req = build_request(:batch_delete_partition, params)
       req.send_request(options)
     end
@@ -581,9 +581,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchDeleteTable AWS API Documentation
     #
-    # @overload batch_delete_table(params = {})
+    # @overload batch_delete_table(**params)
     # @param [Hash] params ({})
-    def batch_delete_table(params = {}, options = {})
+    def batch_delete_table(params = {}, **options)
       req = build_request(:batch_delete_table, params)
       req.send_request(options)
     end
@@ -629,9 +629,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchDeleteTableVersion AWS API Documentation
     #
-    # @overload batch_delete_table_version(params = {})
+    # @overload batch_delete_table_version(**params)
     # @param [Hash] params ({})
-    def batch_delete_table_version(params = {}, options = {})
+    def batch_delete_table_version(params = {}, **options)
       req = build_request(:batch_delete_table_version, params)
       req.send_request(options)
     end
@@ -713,9 +713,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCrawlers AWS API Documentation
     #
-    # @overload batch_get_crawlers(params = {})
+    # @overload batch_get_crawlers(**params)
     # @param [Hash] params ({})
-    def batch_get_crawlers(params = {}, options = {})
+    def batch_get_crawlers(params = {}, **options)
       req = build_request(:batch_get_crawlers, params)
       req.send_request(options)
     end
@@ -777,9 +777,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetDevEndpoints AWS API Documentation
     #
-    # @overload batch_get_dev_endpoints(params = {})
+    # @overload batch_get_dev_endpoints(**params)
     # @param [Hash] params ({})
-    def batch_get_dev_endpoints(params = {}, options = {})
+    def batch_get_dev_endpoints(params = {}, **options)
       req = build_request(:batch_get_dev_endpoints, params)
       req.send_request(options)
     end
@@ -838,9 +838,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetJobs AWS API Documentation
     #
-    # @overload batch_get_jobs(params = {})
+    # @overload batch_get_jobs(**params)
     # @param [Hash] params ({})
-    def batch_get_jobs(params = {}, options = {})
+    def batch_get_jobs(params = {}, **options)
       req = build_request(:batch_get_jobs, params)
       req.send_request(options)
     end
@@ -931,9 +931,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetPartition AWS API Documentation
     #
-    # @overload batch_get_partition(params = {})
+    # @overload batch_get_partition(**params)
     # @param [Hash] params ({})
-    def batch_get_partition(params = {}, options = {})
+    def batch_get_partition(params = {}, **options)
       req = build_request(:batch_get_partition, params)
       req.send_request(options)
     end
@@ -989,9 +989,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetTriggers AWS API Documentation
     #
-    # @overload batch_get_triggers(params = {})
+    # @overload batch_get_triggers(**params)
     # @param [Hash] params ({})
-    def batch_get_triggers(params = {}, options = {})
+    def batch_get_triggers(params = {}, **options)
       req = build_request(:batch_get_triggers, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetWorkflows AWS API Documentation
     #
-    # @overload batch_get_workflows(params = {})
+    # @overload batch_get_workflows(**params)
     # @param [Hash] params ({})
-    def batch_get_workflows(params = {}, options = {})
+    def batch_get_workflows(params = {}, **options)
       req = build_request(:batch_get_workflows, params)
       req.send_request(options)
     end
@@ -1217,9 +1217,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchStopJobRun AWS API Documentation
     #
-    # @overload batch_stop_job_run(params = {})
+    # @overload batch_stop_job_run(**params)
     # @param [Hash] params ({})
-    def batch_stop_job_run(params = {}, options = {})
+    def batch_stop_job_run(params = {}, **options)
       req = build_request(:batch_stop_job_run, params)
       req.send_request(options)
     end
@@ -1328,9 +1328,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchUpdatePartition AWS API Documentation
     #
-    # @overload batch_update_partition(params = {})
+    # @overload batch_update_partition(**params)
     # @param [Hash] params ({})
-    def batch_update_partition(params = {}, options = {})
+    def batch_update_partition(params = {}, **options)
       req = build_request(:batch_update_partition, params)
       req.send_request(options)
     end
@@ -1368,9 +1368,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelMLTaskRun AWS API Documentation
     #
-    # @overload cancel_ml_task_run(params = {})
+    # @overload cancel_ml_task_run(**params)
     # @param [Hash] params ({})
-    def cancel_ml_task_run(params = {}, options = {})
+    def cancel_ml_task_run(params = {}, **options)
       req = build_request(:cancel_ml_task_run, params)
       req.send_request(options)
     end
@@ -1406,9 +1406,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CheckSchemaVersionValidity AWS API Documentation
     #
-    # @overload check_schema_version_validity(params = {})
+    # @overload check_schema_version_validity(**params)
     # @param [Hash] params ({})
-    def check_schema_version_validity(params = {}, options = {})
+    def check_schema_version_validity(params = {}, **options)
       req = build_request(:check_schema_version_validity, params)
       req.send_request(options)
     end
@@ -1462,9 +1462,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateClassifier AWS API Documentation
     #
-    # @overload create_classifier(params = {})
+    # @overload create_classifier(**params)
     # @param [Hash] params ({})
-    def create_classifier(params = {}, options = {})
+    def create_classifier(params = {}, **options)
       req = build_request(:create_classifier, params)
       req.send_request(options)
     end
@@ -1502,9 +1502,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateConnection AWS API Documentation
     #
-    # @overload create_connection(params = {})
+    # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, options = {})
+    def create_connection(params = {}, **options)
       req = build_request(:create_connection, params)
       req.send_request(options)
     end
@@ -1648,9 +1648,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCrawler AWS API Documentation
     #
-    # @overload create_crawler(params = {})
+    # @overload create_crawler(**params)
     # @param [Hash] params ({})
-    def create_crawler(params = {}, options = {})
+    def create_crawler(params = {}, **options)
       req = build_request(:create_crawler, params)
       req.send_request(options)
     end
@@ -1694,9 +1694,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateDatabase AWS API Documentation
     #
-    # @overload create_database(params = {})
+    # @overload create_database(**params)
     # @param [Hash] params ({})
-    def create_database(params = {}, options = {})
+    def create_database(params = {}, **options)
       req = build_request(:create_database, params)
       req.send_request(options)
     end
@@ -1893,9 +1893,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateDevEndpoint AWS API Documentation
     #
-    # @overload create_dev_endpoint(params = {})
+    # @overload create_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def create_dev_endpoint(params = {}, options = {})
+    def create_dev_endpoint(params = {}, **options)
       req = build_request(:create_dev_endpoint, params)
       req.send_request(options)
     end
@@ -2099,9 +2099,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateJob AWS API Documentation
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -2308,9 +2308,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateMLTransform AWS API Documentation
     #
-    # @overload create_ml_transform(params = {})
+    # @overload create_ml_transform(**params)
     # @param [Hash] params ({})
-    def create_ml_transform(params = {}, options = {})
+    def create_ml_transform(params = {}, **options)
       req = build_request(:create_ml_transform, params)
       req.send_request(options)
     end
@@ -2403,9 +2403,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreatePartition AWS API Documentation
     #
-    # @overload create_partition(params = {})
+    # @overload create_partition(**params)
     # @param [Hash] params ({})
-    def create_partition(params = {}, options = {})
+    def create_partition(params = {}, **options)
       req = build_request(:create_partition, params)
       req.send_request(options)
     end
@@ -2443,9 +2443,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreatePartitionIndex AWS API Documentation
     #
-    # @overload create_partition_index(params = {})
+    # @overload create_partition_index(**params)
     # @param [Hash] params ({})
-    def create_partition_index(params = {}, options = {})
+    def create_partition_index(params = {}, **options)
       req = build_request(:create_partition_index, params)
       req.send_request(options)
     end
@@ -2493,9 +2493,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateRegistry AWS API Documentation
     #
-    # @overload create_registry(params = {})
+    # @overload create_registry(**params)
     # @param [Hash] params ({})
-    def create_registry(params = {}, options = {})
+    def create_registry(params = {}, **options)
       req = build_request(:create_registry, params)
       req.send_request(options)
     end
@@ -2642,9 +2642,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSchema AWS API Documentation
     #
-    # @overload create_schema(params = {})
+    # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, options = {})
+    def create_schema(params = {}, **options)
       req = build_request(:create_schema, params)
       req.send_request(options)
     end
@@ -2699,9 +2699,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateScript AWS API Documentation
     #
-    # @overload create_script(params = {})
+    # @overload create_script(**params)
     # @param [Hash] params ({})
-    def create_script(params = {}, options = {})
+    def create_script(params = {}, **options)
       req = build_request(:create_script, params)
       req.send_request(options)
     end
@@ -2756,9 +2756,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSecurityConfiguration AWS API Documentation
     #
-    # @overload create_security_configuration(params = {})
+    # @overload create_security_configuration(**params)
     # @param [Hash] params ({})
-    def create_security_configuration(params = {}, options = {})
+    def create_security_configuration(params = {}, **options)
       req = build_request(:create_security_configuration, params)
       req.send_request(options)
     end
@@ -2878,9 +2878,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateTable AWS API Documentation
     #
-    # @overload create_table(params = {})
+    # @overload create_table(**params)
     # @param [Hash] params ({})
-    def create_table(params = {}, options = {})
+    def create_table(params = {}, **options)
       req = build_request(:create_table, params)
       req.send_request(options)
     end
@@ -2981,9 +2981,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateTrigger AWS API Documentation
     #
-    # @overload create_trigger(params = {})
+    # @overload create_trigger(**params)
     # @param [Hash] params ({})
-    def create_trigger(params = {}, options = {})
+    def create_trigger(params = {}, **options)
       req = build_request(:create_trigger, params)
       req.send_request(options)
     end
@@ -3024,9 +3024,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateUserDefinedFunction AWS API Documentation
     #
-    # @overload create_user_defined_function(params = {})
+    # @overload create_user_defined_function(**params)
     # @param [Hash] params ({})
-    def create_user_defined_function(params = {}, options = {})
+    def create_user_defined_function(params = {}, **options)
       req = build_request(:create_user_defined_function, params)
       req.send_request(options)
     end
@@ -3078,9 +3078,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateWorkflow AWS API Documentation
     #
-    # @overload create_workflow(params = {})
+    # @overload create_workflow(**params)
     # @param [Hash] params ({})
-    def create_workflow(params = {}, options = {})
+    def create_workflow(params = {}, **options)
       req = build_request(:create_workflow, params)
       req.send_request(options)
     end
@@ -3100,9 +3100,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteClassifier AWS API Documentation
     #
-    # @overload delete_classifier(params = {})
+    # @overload delete_classifier(**params)
     # @param [Hash] params ({})
-    def delete_classifier(params = {}, options = {})
+    def delete_classifier(params = {}, **options)
       req = build_request(:delete_classifier, params)
       req.send_request(options)
     end
@@ -3142,9 +3142,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteColumnStatisticsForPartition AWS API Documentation
     #
-    # @overload delete_column_statistics_for_partition(params = {})
+    # @overload delete_column_statistics_for_partition(**params)
     # @param [Hash] params ({})
-    def delete_column_statistics_for_partition(params = {}, options = {})
+    def delete_column_statistics_for_partition(params = {}, **options)
       req = build_request(:delete_column_statistics_for_partition, params)
       req.send_request(options)
     end
@@ -3180,9 +3180,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteColumnStatisticsForTable AWS API Documentation
     #
-    # @overload delete_column_statistics_for_table(params = {})
+    # @overload delete_column_statistics_for_table(**params)
     # @param [Hash] params ({})
-    def delete_column_statistics_for_table(params = {}, options = {})
+    def delete_column_statistics_for_table(params = {}, **options)
       req = build_request(:delete_column_statistics_for_table, params)
       req.send_request(options)
     end
@@ -3207,9 +3207,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteConnection AWS API Documentation
     #
-    # @overload delete_connection(params = {})
+    # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, options = {})
+    def delete_connection(params = {}, **options)
       req = build_request(:delete_connection, params)
       req.send_request(options)
     end
@@ -3230,9 +3230,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler AWS API Documentation
     #
-    # @overload delete_crawler(params = {})
+    # @overload delete_crawler(**params)
     # @param [Hash] params ({})
-    def delete_crawler(params = {}, options = {})
+    def delete_crawler(params = {}, **options)
       req = build_request(:delete_crawler, params)
       req.send_request(options)
     end
@@ -3273,9 +3273,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteDatabase AWS API Documentation
     #
-    # @overload delete_database(params = {})
+    # @overload delete_database(**params)
     # @param [Hash] params ({})
-    def delete_database(params = {}, options = {})
+    def delete_database(params = {}, **options)
       req = build_request(:delete_database, params)
       req.send_request(options)
     end
@@ -3295,9 +3295,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteDevEndpoint AWS API Documentation
     #
-    # @overload delete_dev_endpoint(params = {})
+    # @overload delete_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_dev_endpoint(params = {}, options = {})
+    def delete_dev_endpoint(params = {}, **options)
       req = build_request(:delete_dev_endpoint, params)
       req.send_request(options)
     end
@@ -3324,9 +3324,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteJob AWS API Documentation
     #
-    # @overload delete_job(params = {})
+    # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, options = {})
+    def delete_job(params = {}, **options)
       req = build_request(:delete_job, params)
       req.send_request(options)
     end
@@ -3358,9 +3358,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteMLTransform AWS API Documentation
     #
-    # @overload delete_ml_transform(params = {})
+    # @overload delete_ml_transform(**params)
     # @param [Hash] params ({})
-    def delete_ml_transform(params = {}, options = {})
+    def delete_ml_transform(params = {}, **options)
       req = build_request(:delete_ml_transform, params)
       req.send_request(options)
     end
@@ -3394,9 +3394,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeletePartition AWS API Documentation
     #
-    # @overload delete_partition(params = {})
+    # @overload delete_partition(**params)
     # @param [Hash] params ({})
-    def delete_partition(params = {}, options = {})
+    def delete_partition(params = {}, **options)
       req = build_request(:delete_partition, params)
       req.send_request(options)
     end
@@ -3430,9 +3430,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeletePartitionIndex AWS API Documentation
     #
-    # @overload delete_partition_index(params = {})
+    # @overload delete_partition_index(**params)
     # @param [Hash] params ({})
-    def delete_partition_index(params = {}, options = {})
+    def delete_partition_index(params = {}, **options)
       req = build_request(:delete_partition_index, params)
       req.send_request(options)
     end
@@ -3471,9 +3471,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteRegistry AWS API Documentation
     #
-    # @overload delete_registry(params = {})
+    # @overload delete_registry(**params)
     # @param [Hash] params ({})
-    def delete_registry(params = {}, options = {})
+    def delete_registry(params = {}, **options)
       req = build_request(:delete_registry, params)
       req.send_request(options)
     end
@@ -3498,9 +3498,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteResourcePolicy AWS API Documentation
     #
-    # @overload delete_resource_policy(params = {})
+    # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, options = {})
+    def delete_resource_policy(params = {}, **options)
       req = build_request(:delete_resource_policy, params)
       req.send_request(options)
     end
@@ -3539,9 +3539,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSchema AWS API Documentation
     #
-    # @overload delete_schema(params = {})
+    # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, options = {})
+    def delete_schema(params = {}, **options)
       req = build_request(:delete_schema, params)
       req.send_request(options)
     end
@@ -3601,9 +3601,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSchemaVersions AWS API Documentation
     #
-    # @overload delete_schema_versions(params = {})
+    # @overload delete_schema_versions(**params)
     # @param [Hash] params ({})
-    def delete_schema_versions(params = {}, options = {})
+    def delete_schema_versions(params = {}, **options)
       req = build_request(:delete_schema_versions, params)
       req.send_request(options)
     end
@@ -3623,9 +3623,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSecurityConfiguration AWS API Documentation
     #
-    # @overload delete_security_configuration(params = {})
+    # @overload delete_security_configuration(**params)
     # @param [Hash] params ({})
-    def delete_security_configuration(params = {}, options = {})
+    def delete_security_configuration(params = {}, **options)
       req = build_request(:delete_security_configuration, params)
       req.send_request(options)
     end
@@ -3669,9 +3669,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTable AWS API Documentation
     #
-    # @overload delete_table(params = {})
+    # @overload delete_table(**params)
     # @param [Hash] params ({})
-    def delete_table(params = {}, options = {})
+    def delete_table(params = {}, **options)
       req = build_request(:delete_table, params)
       req.send_request(options)
     end
@@ -3707,9 +3707,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTableVersion AWS API Documentation
     #
-    # @overload delete_table_version(params = {})
+    # @overload delete_table_version(**params)
     # @param [Hash] params ({})
-    def delete_table_version(params = {}, options = {})
+    def delete_table_version(params = {}, **options)
       req = build_request(:delete_table_version, params)
       req.send_request(options)
     end
@@ -3736,9 +3736,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTrigger AWS API Documentation
     #
-    # @overload delete_trigger(params = {})
+    # @overload delete_trigger(**params)
     # @param [Hash] params ({})
-    def delete_trigger(params = {}, options = {})
+    def delete_trigger(params = {}, **options)
       req = build_request(:delete_trigger, params)
       req.send_request(options)
     end
@@ -3767,9 +3767,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteUserDefinedFunction AWS API Documentation
     #
-    # @overload delete_user_defined_function(params = {})
+    # @overload delete_user_defined_function(**params)
     # @param [Hash] params ({})
-    def delete_user_defined_function(params = {}, options = {})
+    def delete_user_defined_function(params = {}, **options)
       req = build_request(:delete_user_defined_function, params)
       req.send_request(options)
     end
@@ -3795,9 +3795,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteWorkflow AWS API Documentation
     #
-    # @overload delete_workflow(params = {})
+    # @overload delete_workflow(**params)
     # @param [Hash] params ({})
-    def delete_workflow(params = {}, options = {})
+    def delete_workflow(params = {}, **options)
       req = build_request(:delete_workflow, params)
       req.send_request(options)
     end
@@ -3826,9 +3826,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCatalogImportStatus AWS API Documentation
     #
-    # @overload get_catalog_import_status(params = {})
+    # @overload get_catalog_import_status(**params)
     # @param [Hash] params ({})
-    def get_catalog_import_status(params = {}, options = {})
+    def get_catalog_import_status(params = {}, **options)
       req = build_request(:get_catalog_import_status, params)
       req.send_request(options)
     end
@@ -3882,9 +3882,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetClassifier AWS API Documentation
     #
-    # @overload get_classifier(params = {})
+    # @overload get_classifier(**params)
     # @param [Hash] params ({})
-    def get_classifier(params = {}, options = {})
+    def get_classifier(params = {}, **options)
       req = build_request(:get_classifier, params)
       req.send_request(options)
     end
@@ -3947,9 +3947,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetClassifiers AWS API Documentation
     #
-    # @overload get_classifiers(params = {})
+    # @overload get_classifiers(**params)
     # @param [Hash] params ({})
-    def get_classifiers(params = {}, options = {})
+    def get_classifiers(params = {}, **options)
       req = build_request(:get_classifiers, params)
       req.send_request(options)
     end
@@ -4032,9 +4032,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetColumnStatisticsForPartition AWS API Documentation
     #
-    # @overload get_column_statistics_for_partition(params = {})
+    # @overload get_column_statistics_for_partition(**params)
     # @param [Hash] params ({})
-    def get_column_statistics_for_partition(params = {}, options = {})
+    def get_column_statistics_for_partition(params = {}, **options)
       req = build_request(:get_column_statistics_for_partition, params)
       req.send_request(options)
     end
@@ -4113,9 +4113,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetColumnStatisticsForTable AWS API Documentation
     #
-    # @overload get_column_statistics_for_table(params = {})
+    # @overload get_column_statistics_for_table(**params)
     # @param [Hash] params ({})
-    def get_column_statistics_for_table(params = {}, options = {})
+    def get_column_statistics_for_table(params = {}, **options)
       req = build_request(:get_column_statistics_for_table, params)
       req.send_request(options)
     end
@@ -4168,9 +4168,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetConnection AWS API Documentation
     #
-    # @overload get_connection(params = {})
+    # @overload get_connection(**params)
     # @param [Hash] params ({})
-    def get_connection(params = {}, options = {})
+    def get_connection(params = {}, **options)
       req = build_request(:get_connection, params)
       req.send_request(options)
     end
@@ -4239,9 +4239,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetConnections AWS API Documentation
     #
-    # @overload get_connections(params = {})
+    # @overload get_connections(**params)
     # @param [Hash] params ({})
-    def get_connections(params = {}, options = {})
+    def get_connections(params = {}, **options)
       req = build_request(:get_connections, params)
       req.send_request(options)
     end
@@ -4314,9 +4314,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCrawler AWS API Documentation
     #
-    # @overload get_crawler(params = {})
+    # @overload get_crawler(**params)
     # @param [Hash] params ({})
-    def get_crawler(params = {}, options = {})
+    def get_crawler(params = {}, **options)
       req = build_request(:get_crawler, params)
       req.send_request(options)
     end
@@ -4362,9 +4362,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCrawlerMetrics AWS API Documentation
     #
-    # @overload get_crawler_metrics(params = {})
+    # @overload get_crawler_metrics(**params)
     # @param [Hash] params ({})
-    def get_crawler_metrics(params = {}, options = {})
+    def get_crawler_metrics(params = {}, **options)
       req = build_request(:get_crawler_metrics, params)
       req.send_request(options)
     end
@@ -4446,9 +4446,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCrawlers AWS API Documentation
     #
-    # @overload get_crawlers(params = {})
+    # @overload get_crawlers(**params)
     # @param [Hash] params ({})
-    def get_crawlers(params = {}, options = {})
+    def get_crawlers(params = {}, **options)
       req = build_request(:get_crawlers, params)
       req.send_request(options)
     end
@@ -4478,9 +4478,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDataCatalogEncryptionSettings AWS API Documentation
     #
-    # @overload get_data_catalog_encryption_settings(params = {})
+    # @overload get_data_catalog_encryption_settings(**params)
     # @param [Hash] params ({})
-    def get_data_catalog_encryption_settings(params = {}, options = {})
+    def get_data_catalog_encryption_settings(params = {}, **options)
       req = build_request(:get_data_catalog_encryption_settings, params)
       req.send_request(options)
     end
@@ -4524,9 +4524,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDatabase AWS API Documentation
     #
-    # @overload get_database(params = {})
+    # @overload get_database(**params)
     # @param [Hash] params ({})
-    def get_database(params = {}, options = {})
+    def get_database(params = {}, **options)
       req = build_request(:get_database, params)
       req.send_request(options)
     end
@@ -4589,9 +4589,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDatabases AWS API Documentation
     #
-    # @overload get_databases(params = {})
+    # @overload get_databases(**params)
     # @param [Hash] params ({})
-    def get_databases(params = {}, options = {})
+    def get_databases(params = {}, **options)
       req = build_request(:get_databases, params)
       req.send_request(options)
     end
@@ -4629,9 +4629,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDataflowGraph AWS API Documentation
     #
-    # @overload get_dataflow_graph(params = {})
+    # @overload get_dataflow_graph(**params)
     # @param [Hash] params ({})
-    def get_dataflow_graph(params = {}, options = {})
+    def get_dataflow_graph(params = {}, **options)
       req = build_request(:get_dataflow_graph, params)
       req.send_request(options)
     end
@@ -4691,9 +4691,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoint AWS API Documentation
     #
-    # @overload get_dev_endpoint(params = {})
+    # @overload get_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def get_dev_endpoint(params = {}, options = {})
+    def get_dev_endpoint(params = {}, **options)
       req = build_request(:get_dev_endpoint, params)
       req.send_request(options)
     end
@@ -4762,9 +4762,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoints AWS API Documentation
     #
-    # @overload get_dev_endpoints(params = {})
+    # @overload get_dev_endpoints(**params)
     # @param [Hash] params ({})
-    def get_dev_endpoints(params = {}, options = {})
+    def get_dev_endpoints(params = {}, **options)
       req = build_request(:get_dev_endpoints, params)
       req.send_request(options)
     end
@@ -4814,9 +4814,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetJob AWS API Documentation
     #
-    # @overload get_job(params = {})
+    # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, options = {})
+    def get_job(params = {}, **options)
       req = build_request(:get_job, params)
       req.send_request(options)
     end
@@ -4852,9 +4852,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetJobBookmark AWS API Documentation
     #
-    # @overload get_job_bookmark(params = {})
+    # @overload get_job_bookmark(**params)
     # @param [Hash] params ({})
-    def get_job_bookmark(params = {}, options = {})
+    def get_job_bookmark(params = {}, **options)
       req = build_request(:get_job_bookmark, params)
       req.send_request(options)
     end
@@ -4912,9 +4912,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetJobRun AWS API Documentation
     #
-    # @overload get_job_run(params = {})
+    # @overload get_job_run(**params)
     # @param [Hash] params ({})
-    def get_job_run(params = {}, options = {})
+    def get_job_run(params = {}, **options)
       req = build_request(:get_job_run, params)
       req.send_request(options)
     end
@@ -4977,9 +4977,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetJobRuns AWS API Documentation
     #
-    # @overload get_job_runs(params = {})
+    # @overload get_job_runs(**params)
     # @param [Hash] params ({})
-    def get_job_runs(params = {}, options = {})
+    def get_job_runs(params = {}, **options)
       req = build_request(:get_job_runs, params)
       req.send_request(options)
     end
@@ -5038,9 +5038,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetJobs AWS API Documentation
     #
-    # @overload get_jobs(params = {})
+    # @overload get_jobs(**params)
     # @param [Hash] params ({})
-    def get_jobs(params = {}, options = {})
+    def get_jobs(params = {}, **options)
       req = build_request(:get_jobs, params)
       req.send_request(options)
     end
@@ -5099,9 +5099,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTaskRun AWS API Documentation
     #
-    # @overload get_ml_task_run(params = {})
+    # @overload get_ml_task_run(**params)
     # @param [Hash] params ({})
-    def get_ml_task_run(params = {}, options = {})
+    def get_ml_task_run(params = {}, **options)
       req = build_request(:get_ml_task_run, params)
       req.send_request(options)
     end
@@ -5181,9 +5181,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTaskRuns AWS API Documentation
     #
-    # @overload get_ml_task_runs(params = {})
+    # @overload get_ml_task_runs(**params)
     # @param [Hash] params ({})
-    def get_ml_task_runs(params = {}, options = {})
+    def get_ml_task_runs(params = {}, **options)
       req = build_request(:get_ml_task_runs, params)
       req.send_request(options)
     end
@@ -5271,9 +5271,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransform AWS API Documentation
     #
-    # @overload get_ml_transform(params = {})
+    # @overload get_ml_transform(**params)
     # @param [Hash] params ({})
-    def get_ml_transform(params = {}, options = {})
+    def get_ml_transform(params = {}, **options)
       req = build_request(:get_ml_transform, params)
       req.send_request(options)
     end
@@ -5377,9 +5377,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransforms AWS API Documentation
     #
-    # @overload get_ml_transforms(params = {})
+    # @overload get_ml_transforms(**params)
     # @param [Hash] params ({})
-    def get_ml_transforms(params = {}, options = {})
+    def get_ml_transforms(params = {}, **options)
       req = build_request(:get_ml_transforms, params)
       req.send_request(options)
     end
@@ -5449,9 +5449,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMapping AWS API Documentation
     #
-    # @overload get_mapping(params = {})
+    # @overload get_mapping(**params)
     # @param [Hash] params ({})
-    def get_mapping(params = {}, options = {})
+    def get_mapping(params = {}, **options)
       req = build_request(:get_mapping, params)
       req.send_request(options)
     end
@@ -5533,9 +5533,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartition AWS API Documentation
     #
-    # @overload get_partition(params = {})
+    # @overload get_partition(**params)
     # @param [Hash] params ({})
-    def get_partition(params = {}, options = {})
+    def get_partition(params = {}, **options)
       req = build_request(:get_partition, params)
       req.send_request(options)
     end
@@ -5589,9 +5589,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartitionIndexes AWS API Documentation
     #
-    # @overload get_partition_indexes(params = {})
+    # @overload get_partition_indexes(**params)
     # @param [Hash] params ({})
-    def get_partition_indexes(params = {}, options = {})
+    def get_partition_indexes(params = {}, **options)
       req = build_request(:get_partition_indexes, params)
       req.send_request(options)
     end
@@ -5784,9 +5784,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartitions AWS API Documentation
     #
-    # @overload get_partitions(params = {})
+    # @overload get_partitions(**params)
     # @param [Hash] params ({})
-    def get_partitions(params = {}, options = {})
+    def get_partitions(params = {}, **options)
       req = build_request(:get_partitions, params)
       req.send_request(options)
     end
@@ -5884,9 +5884,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPlan AWS API Documentation
     #
-    # @overload get_plan(params = {})
+    # @overload get_plan(**params)
     # @param [Hash] params ({})
-    def get_plan(params = {}, options = {})
+    def get_plan(params = {}, **options)
       req = build_request(:get_plan, params)
       req.send_request(options)
     end
@@ -5926,9 +5926,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetRegistry AWS API Documentation
     #
-    # @overload get_registry(params = {})
+    # @overload get_registry(**params)
     # @param [Hash] params ({})
-    def get_registry(params = {}, options = {})
+    def get_registry(params = {}, **options)
       req = build_request(:get_registry, params)
       req.send_request(options)
     end
@@ -5972,9 +5972,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetResourcePolicies AWS API Documentation
     #
-    # @overload get_resource_policies(params = {})
+    # @overload get_resource_policies(**params)
     # @param [Hash] params ({})
-    def get_resource_policies(params = {}, options = {})
+    def get_resource_policies(params = {}, **options)
       req = build_request(:get_resource_policies, params)
       req.send_request(options)
     end
@@ -6012,9 +6012,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetResourcePolicy AWS API Documentation
     #
-    # @overload get_resource_policy(params = {})
+    # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, options = {})
+    def get_resource_policy(params = {}, **options)
       req = build_request(:get_resource_policy, params)
       req.send_request(options)
     end
@@ -6076,9 +6076,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSchema AWS API Documentation
     #
-    # @overload get_schema(params = {})
+    # @overload get_schema(**params)
     # @param [Hash] params ({})
-    def get_schema(params = {}, options = {})
+    def get_schema(params = {}, **options)
       req = build_request(:get_schema, params)
       req.send_request(options)
     end
@@ -6132,9 +6132,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSchemaByDefinition AWS API Documentation
     #
-    # @overload get_schema_by_definition(params = {})
+    # @overload get_schema_by_definition(**params)
     # @param [Hash] params ({})
-    def get_schema_by_definition(params = {}, options = {})
+    def get_schema_by_definition(params = {}, **options)
       req = build_request(:get_schema_by_definition, params)
       req.send_request(options)
     end
@@ -6199,9 +6199,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSchemaVersion AWS API Documentation
     #
-    # @overload get_schema_version(params = {})
+    # @overload get_schema_version(**params)
     # @param [Hash] params ({})
-    def get_schema_version(params = {}, options = {})
+    def get_schema_version(params = {}, **options)
       req = build_request(:get_schema_version, params)
       req.send_request(options)
     end
@@ -6260,9 +6260,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSchemaVersionsDiff AWS API Documentation
     #
-    # @overload get_schema_versions_diff(params = {})
+    # @overload get_schema_versions_diff(**params)
     # @param [Hash] params ({})
-    def get_schema_versions_diff(params = {}, options = {})
+    def get_schema_versions_diff(params = {}, **options)
       req = build_request(:get_schema_versions_diff, params)
       req.send_request(options)
     end
@@ -6296,9 +6296,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSecurityConfiguration AWS API Documentation
     #
-    # @overload get_security_configuration(params = {})
+    # @overload get_security_configuration(**params)
     # @param [Hash] params ({})
-    def get_security_configuration(params = {}, options = {})
+    def get_security_configuration(params = {}, **options)
       req = build_request(:get_security_configuration, params)
       req.send_request(options)
     end
@@ -6341,9 +6341,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSecurityConfigurations AWS API Documentation
     #
-    # @overload get_security_configurations(params = {})
+    # @overload get_security_configurations(**params)
     # @param [Hash] params ({})
-    def get_security_configurations(params = {}, options = {})
+    def get_security_configurations(params = {}, **options)
       req = build_request(:get_security_configurations, params)
       req.send_request(options)
     end
@@ -6440,9 +6440,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTable AWS API Documentation
     #
-    # @overload get_table(params = {})
+    # @overload get_table(**params)
     # @param [Hash] params ({})
-    def get_table(params = {}, options = {})
+    def get_table(params = {}, **options)
       req = build_request(:get_table, params)
       req.send_request(options)
     end
@@ -6544,9 +6544,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTableVersion AWS API Documentation
     #
-    # @overload get_table_version(params = {})
+    # @overload get_table_version(**params)
     # @param [Hash] params ({})
-    def get_table_version(params = {}, options = {})
+    def get_table_version(params = {}, **options)
       req = build_request(:get_table_version, params)
       req.send_request(options)
     end
@@ -6657,9 +6657,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTableVersions AWS API Documentation
     #
-    # @overload get_table_versions(params = {})
+    # @overload get_table_versions(**params)
     # @param [Hash] params ({})
-    def get_table_versions(params = {}, options = {})
+    def get_table_versions(params = {}, **options)
       req = build_request(:get_table_versions, params)
       req.send_request(options)
     end
@@ -6769,9 +6769,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTables AWS API Documentation
     #
-    # @overload get_tables(params = {})
+    # @overload get_tables(**params)
     # @param [Hash] params ({})
-    def get_tables(params = {}, options = {})
+    def get_tables(params = {}, **options)
       req = build_request(:get_tables, params)
       req.send_request(options)
     end
@@ -6799,9 +6799,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTags AWS API Documentation
     #
-    # @overload get_tags(params = {})
+    # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, options = {})
+    def get_tags(params = {}, **options)
       req = build_request(:get_tags, params)
       req.send_request(options)
     end
@@ -6848,9 +6848,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTrigger AWS API Documentation
     #
-    # @overload get_trigger(params = {})
+    # @overload get_trigger(**params)
     # @param [Hash] params ({})
-    def get_trigger(params = {}, options = {})
+    def get_trigger(params = {}, **options)
       req = build_request(:get_trigger, params)
       req.send_request(options)
     end
@@ -6912,9 +6912,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTriggers AWS API Documentation
     #
-    # @overload get_triggers(params = {})
+    # @overload get_triggers(**params)
     # @param [Hash] params ({})
-    def get_triggers(params = {}, options = {})
+    def get_triggers(params = {}, **options)
       req = build_request(:get_triggers, params)
       req.send_request(options)
     end
@@ -6958,9 +6958,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUserDefinedFunction AWS API Documentation
     #
-    # @overload get_user_defined_function(params = {})
+    # @overload get_user_defined_function(**params)
     # @param [Hash] params ({})
-    def get_user_defined_function(params = {}, options = {})
+    def get_user_defined_function(params = {}, **options)
       req = build_request(:get_user_defined_function, params)
       req.send_request(options)
     end
@@ -7020,9 +7020,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUserDefinedFunctions AWS API Documentation
     #
-    # @overload get_user_defined_functions(params = {})
+    # @overload get_user_defined_functions(**params)
     # @param [Hash] params ({})
-    def get_user_defined_functions(params = {}, options = {})
+    def get_user_defined_functions(params = {}, **options)
       req = build_request(:get_user_defined_functions, params)
       req.send_request(options)
     end
@@ -7198,9 +7198,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetWorkflow AWS API Documentation
     #
-    # @overload get_workflow(params = {})
+    # @overload get_workflow(**params)
     # @param [Hash] params ({})
-    def get_workflow(params = {}, options = {})
+    def get_workflow(params = {}, **options)
       req = build_request(:get_workflow, params)
       req.send_request(options)
     end
@@ -7310,9 +7310,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetWorkflowRun AWS API Documentation
     #
-    # @overload get_workflow_run(params = {})
+    # @overload get_workflow_run(**params)
     # @param [Hash] params ({})
-    def get_workflow_run(params = {}, options = {})
+    def get_workflow_run(params = {}, **options)
       req = build_request(:get_workflow_run, params)
       req.send_request(options)
     end
@@ -7343,9 +7343,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetWorkflowRunProperties AWS API Documentation
     #
-    # @overload get_workflow_run_properties(params = {})
+    # @overload get_workflow_run_properties(**params)
     # @param [Hash] params ({})
-    def get_workflow_run_properties(params = {}, options = {})
+    def get_workflow_run_properties(params = {}, **options)
       req = build_request(:get_workflow_run_properties, params)
       req.send_request(options)
     end
@@ -7464,9 +7464,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetWorkflowRuns AWS API Documentation
     #
-    # @overload get_workflow_runs(params = {})
+    # @overload get_workflow_runs(**params)
     # @param [Hash] params ({})
-    def get_workflow_runs(params = {}, options = {})
+    def get_workflow_runs(params = {}, **options)
       req = build_request(:get_workflow_runs, params)
       req.send_request(options)
     end
@@ -7487,9 +7487,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ImportCatalogToGlue AWS API Documentation
     #
-    # @overload import_catalog_to_glue(params = {})
+    # @overload import_catalog_to_glue(**params)
     # @param [Hash] params ({})
-    def import_catalog_to_glue(params = {}, options = {})
+    def import_catalog_to_glue(params = {}, **options)
       req = build_request(:import_catalog_to_glue, params)
       req.send_request(options)
     end
@@ -7537,9 +7537,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers AWS API Documentation
     #
-    # @overload list_crawlers(params = {})
+    # @overload list_crawlers(**params)
     # @param [Hash] params ({})
-    def list_crawlers(params = {}, options = {})
+    def list_crawlers(params = {}, **options)
       req = build_request(:list_crawlers, params)
       req.send_request(options)
     end
@@ -7588,9 +7588,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints AWS API Documentation
     #
-    # @overload list_dev_endpoints(params = {})
+    # @overload list_dev_endpoints(**params)
     # @param [Hash] params ({})
-    def list_dev_endpoints(params = {}, options = {})
+    def list_dev_endpoints(params = {}, **options)
       req = build_request(:list_dev_endpoints, params)
       req.send_request(options)
     end
@@ -7638,9 +7638,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -7714,9 +7714,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListMLTransforms AWS API Documentation
     #
-    # @overload list_ml_transforms(params = {})
+    # @overload list_ml_transforms(**params)
     # @param [Hash] params ({})
-    def list_ml_transforms(params = {}, options = {})
+    def list_ml_transforms(params = {}, **options)
       req = build_request(:list_ml_transforms, params)
       req.send_request(options)
     end
@@ -7760,9 +7760,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListRegistries AWS API Documentation
     #
-    # @overload list_registries(params = {})
+    # @overload list_registries(**params)
     # @param [Hash] params ({})
-    def list_registries(params = {}, options = {})
+    def list_registries(params = {}, **options)
       req = build_request(:list_registries, params)
       req.send_request(options)
     end
@@ -7821,9 +7821,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSchemaVersions AWS API Documentation
     #
-    # @overload list_schema_versions(params = {})
+    # @overload list_schema_versions(**params)
     # @param [Hash] params ({})
-    def list_schema_versions(params = {}, options = {})
+    def list_schema_versions(params = {}, **options)
       req = build_request(:list_schema_versions, params)
       req.send_request(options)
     end
@@ -7878,9 +7878,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSchemas AWS API Documentation
     #
-    # @overload list_schemas(params = {})
+    # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, options = {})
+    def list_schemas(params = {}, **options)
       req = build_request(:list_schemas, params)
       req.send_request(options)
     end
@@ -7934,9 +7934,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers AWS API Documentation
     #
-    # @overload list_triggers(params = {})
+    # @overload list_triggers(**params)
     # @param [Hash] params ({})
-    def list_triggers(params = {}, options = {})
+    def list_triggers(params = {}, **options)
       req = build_request(:list_triggers, params)
       req.send_request(options)
     end
@@ -7971,9 +7971,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListWorkflows AWS API Documentation
     #
-    # @overload list_workflows(params = {})
+    # @overload list_workflows(**params)
     # @param [Hash] params ({})
-    def list_workflows(params = {}, options = {})
+    def list_workflows(params = {}, **options)
       req = build_request(:list_workflows, params)
       req.send_request(options)
     end
@@ -8009,9 +8009,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/PutDataCatalogEncryptionSettings AWS API Documentation
     #
-    # @overload put_data_catalog_encryption_settings(params = {})
+    # @overload put_data_catalog_encryption_settings(**params)
     # @param [Hash] params ({})
-    def put_data_catalog_encryption_settings(params = {}, options = {})
+    def put_data_catalog_encryption_settings(params = {}, **options)
       req = build_request(:put_data_catalog_encryption_settings, params)
       req.send_request(options)
     end
@@ -8073,9 +8073,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/PutResourcePolicy AWS API Documentation
     #
-    # @overload put_resource_policy(params = {})
+    # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, options = {})
+    def put_resource_policy(params = {}, **options)
       req = build_request(:put_resource_policy, params)
       req.send_request(options)
     end
@@ -8139,9 +8139,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/PutSchemaVersionMetadata AWS API Documentation
     #
-    # @overload put_schema_version_metadata(params = {})
+    # @overload put_schema_version_metadata(**params)
     # @param [Hash] params ({})
-    def put_schema_version_metadata(params = {}, options = {})
+    def put_schema_version_metadata(params = {}, **options)
       req = build_request(:put_schema_version_metadata, params)
       req.send_request(options)
     end
@@ -8174,9 +8174,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/PutWorkflowRunProperties AWS API Documentation
     #
-    # @overload put_workflow_run_properties(params = {})
+    # @overload put_workflow_run_properties(**params)
     # @param [Hash] params ({})
-    def put_workflow_run_properties(params = {}, options = {})
+    def put_workflow_run_properties(params = {}, **options)
       req = build_request(:put_workflow_run_properties, params)
       req.send_request(options)
     end
@@ -8243,9 +8243,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/QuerySchemaVersionMetadata AWS API Documentation
     #
-    # @overload query_schema_version_metadata(params = {})
+    # @overload query_schema_version_metadata(**params)
     # @param [Hash] params ({})
-    def query_schema_version_metadata(params = {}, options = {})
+    def query_schema_version_metadata(params = {}, **options)
       req = build_request(:query_schema_version_metadata, params)
       req.send_request(options)
     end
@@ -8307,9 +8307,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RegisterSchemaVersion AWS API Documentation
     #
-    # @overload register_schema_version(params = {})
+    # @overload register_schema_version(**params)
     # @param [Hash] params ({})
-    def register_schema_version(params = {}, options = {})
+    def register_schema_version(params = {}, **options)
       req = build_request(:register_schema_version, params)
       req.send_request(options)
     end
@@ -8373,9 +8373,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RemoveSchemaVersionMetadata AWS API Documentation
     #
-    # @overload remove_schema_version_metadata(params = {})
+    # @overload remove_schema_version_metadata(**params)
     # @param [Hash] params ({})
-    def remove_schema_version_metadata(params = {}, options = {})
+    def remove_schema_version_metadata(params = {}, **options)
       req = build_request(:remove_schema_version_metadata, params)
       req.send_request(options)
     end
@@ -8411,9 +8411,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ResetJobBookmark AWS API Documentation
     #
-    # @overload reset_job_bookmark(params = {})
+    # @overload reset_job_bookmark(**params)
     # @param [Hash] params ({})
-    def reset_job_bookmark(params = {}, options = {})
+    def reset_job_bookmark(params = {}, **options)
       req = build_request(:reset_job_bookmark, params)
       req.send_request(options)
     end
@@ -8453,9 +8453,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ResumeWorkflowRun AWS API Documentation
     #
-    # @overload resume_workflow_run(params = {})
+    # @overload resume_workflow_run(**params)
     # @param [Hash] params ({})
-    def resume_workflow_run(params = {}, options = {})
+    def resume_workflow_run(params = {}, **options)
       req = build_request(:resume_workflow_run, params)
       req.send_request(options)
     end
@@ -8613,9 +8613,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/SearchTables AWS API Documentation
     #
-    # @overload search_tables(params = {})
+    # @overload search_tables(**params)
     # @param [Hash] params ({})
-    def search_tables(params = {}, options = {})
+    def search_tables(params = {}, **options)
       req = build_request(:search_tables, params)
       req.send_request(options)
     end
@@ -8641,9 +8641,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartCrawler AWS API Documentation
     #
-    # @overload start_crawler(params = {})
+    # @overload start_crawler(**params)
     # @param [Hash] params ({})
-    def start_crawler(params = {}, options = {})
+    def start_crawler(params = {}, **options)
       req = build_request(:start_crawler, params)
       req.send_request(options)
     end
@@ -8665,9 +8665,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartCrawlerSchedule AWS API Documentation
     #
-    # @overload start_crawler_schedule(params = {})
+    # @overload start_crawler_schedule(**params)
     # @param [Hash] params ({})
-    def start_crawler_schedule(params = {}, options = {})
+    def start_crawler_schedule(params = {}, **options)
       req = build_request(:start_crawler_schedule, params)
       req.send_request(options)
     end
@@ -8706,9 +8706,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartExportLabelsTaskRun AWS API Documentation
     #
-    # @overload start_export_labels_task_run(params = {})
+    # @overload start_export_labels_task_run(**params)
     # @param [Hash] params ({})
-    def start_export_labels_task_run(params = {}, options = {})
+    def start_export_labels_task_run(params = {}, **options)
       req = build_request(:start_export_labels_task_run, params)
       req.send_request(options)
     end
@@ -8772,9 +8772,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartImportLabelsTaskRun AWS API Documentation
     #
-    # @overload start_import_labels_task_run(params = {})
+    # @overload start_import_labels_task_run(**params)
     # @param [Hash] params ({})
-    def start_import_labels_task_run(params = {}, options = {})
+    def start_import_labels_task_run(params = {}, **options)
       req = build_request(:start_import_labels_task_run, params)
       req.send_request(options)
     end
@@ -8907,9 +8907,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartJobRun AWS API Documentation
     #
-    # @overload start_job_run(params = {})
+    # @overload start_job_run(**params)
     # @param [Hash] params ({})
-    def start_job_run(params = {}, options = {})
+    def start_job_run(params = {}, **options)
       req = build_request(:start_job_run, params)
       req.send_request(options)
     end
@@ -8942,9 +8942,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartMLEvaluationTaskRun AWS API Documentation
     #
-    # @overload start_ml_evaluation_task_run(params = {})
+    # @overload start_ml_evaluation_task_run(**params)
     # @param [Hash] params ({})
-    def start_ml_evaluation_task_run(params = {}, options = {})
+    def start_ml_evaluation_task_run(params = {}, **options)
       req = build_request(:start_ml_evaluation_task_run, params)
       req.send_request(options)
     end
@@ -8991,9 +8991,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartMLLabelingSetGenerationTaskRun AWS API Documentation
     #
-    # @overload start_ml_labeling_set_generation_task_run(params = {})
+    # @overload start_ml_labeling_set_generation_task_run(**params)
     # @param [Hash] params ({})
-    def start_ml_labeling_set_generation_task_run(params = {}, options = {})
+    def start_ml_labeling_set_generation_task_run(params = {}, **options)
       req = build_request(:start_ml_labeling_set_generation_task_run, params)
       req.send_request(options)
     end
@@ -9024,9 +9024,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartTrigger AWS API Documentation
     #
-    # @overload start_trigger(params = {})
+    # @overload start_trigger(**params)
     # @param [Hash] params ({})
-    def start_trigger(params = {}, options = {})
+    def start_trigger(params = {}, **options)
       req = build_request(:start_trigger, params)
       req.send_request(options)
     end
@@ -9052,9 +9052,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartWorkflowRun AWS API Documentation
     #
-    # @overload start_workflow_run(params = {})
+    # @overload start_workflow_run(**params)
     # @param [Hash] params ({})
-    def start_workflow_run(params = {}, options = {})
+    def start_workflow_run(params = {}, **options)
       req = build_request(:start_workflow_run, params)
       req.send_request(options)
     end
@@ -9074,9 +9074,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopCrawler AWS API Documentation
     #
-    # @overload stop_crawler(params = {})
+    # @overload stop_crawler(**params)
     # @param [Hash] params ({})
-    def stop_crawler(params = {}, options = {})
+    def stop_crawler(params = {}, **options)
       req = build_request(:stop_crawler, params)
       req.send_request(options)
     end
@@ -9097,9 +9097,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopCrawlerSchedule AWS API Documentation
     #
-    # @overload stop_crawler_schedule(params = {})
+    # @overload stop_crawler_schedule(**params)
     # @param [Hash] params ({})
-    def stop_crawler_schedule(params = {}, options = {})
+    def stop_crawler_schedule(params = {}, **options)
       req = build_request(:stop_crawler_schedule, params)
       req.send_request(options)
     end
@@ -9125,9 +9125,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopTrigger AWS API Documentation
     #
-    # @overload stop_trigger(params = {})
+    # @overload stop_trigger(**params)
     # @param [Hash] params ({})
-    def stop_trigger(params = {}, options = {})
+    def stop_trigger(params = {}, **options)
       req = build_request(:stop_trigger, params)
       req.send_request(options)
     end
@@ -9151,9 +9151,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopWorkflowRun AWS API Documentation
     #
-    # @overload stop_workflow_run(params = {})
+    # @overload stop_workflow_run(**params)
     # @param [Hash] params ({})
-    def stop_workflow_run(params = {}, options = {})
+    def stop_workflow_run(params = {}, **options)
       req = build_request(:stop_workflow_run, params)
       req.send_request(options)
     end
@@ -9192,9 +9192,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -9219,9 +9219,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -9275,9 +9275,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateClassifier AWS API Documentation
     #
-    # @overload update_classifier(params = {})
+    # @overload update_classifier(**params)
     # @param [Hash] params ({})
-    def update_classifier(params = {}, options = {})
+    def update_classifier(params = {}, **options)
       req = build_request(:update_classifier, params)
       req.send_request(options)
     end
@@ -9412,9 +9412,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateColumnStatisticsForPartition AWS API Documentation
     #
-    # @overload update_column_statistics_for_partition(params = {})
+    # @overload update_column_statistics_for_partition(**params)
     # @param [Hash] params ({})
-    def update_column_statistics_for_partition(params = {}, options = {})
+    def update_column_statistics_for_partition(params = {}, **options)
       req = build_request(:update_column_statistics_for_partition, params)
       req.send_request(options)
     end
@@ -9545,9 +9545,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateColumnStatisticsForTable AWS API Documentation
     #
-    # @overload update_column_statistics_for_table(params = {})
+    # @overload update_column_statistics_for_table(**params)
     # @param [Hash] params ({})
-    def update_column_statistics_for_table(params = {}, options = {})
+    def update_column_statistics_for_table(params = {}, **options)
       req = build_request(:update_column_statistics_for_table, params)
       req.send_request(options)
     end
@@ -9589,9 +9589,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateConnection AWS API Documentation
     #
-    # @overload update_connection(params = {})
+    # @overload update_connection(**params)
     # @param [Hash] params ({})
-    def update_connection(params = {}, options = {})
+    def update_connection(params = {}, **options)
       req = build_request(:update_connection, params)
       req.send_request(options)
     end
@@ -9721,9 +9721,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateCrawler AWS API Documentation
     #
-    # @overload update_crawler(params = {})
+    # @overload update_crawler(**params)
     # @param [Hash] params ({})
-    def update_crawler(params = {}, options = {})
+    def update_crawler(params = {}, **options)
       req = build_request(:update_crawler, params)
       req.send_request(options)
     end
@@ -9754,9 +9754,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateCrawlerSchedule AWS API Documentation
     #
-    # @overload update_crawler_schedule(params = {})
+    # @overload update_crawler_schedule(**params)
     # @param [Hash] params ({})
-    def update_crawler_schedule(params = {}, options = {})
+    def update_crawler_schedule(params = {}, **options)
       req = build_request(:update_crawler_schedule, params)
       req.send_request(options)
     end
@@ -9806,9 +9806,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateDatabase AWS API Documentation
     #
-    # @overload update_database(params = {})
+    # @overload update_database(**params)
     # @param [Hash] params ({})
-    def update_database(params = {}, options = {})
+    def update_database(params = {}, **options)
       req = build_request(:update_database, params)
       req.send_request(options)
     end
@@ -9877,9 +9877,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateDevEndpoint AWS API Documentation
     #
-    # @overload update_dev_endpoint(params = {})
+    # @overload update_dev_endpoint(**params)
     # @param [Hash] params ({})
-    def update_dev_endpoint(params = {}, options = {})
+    def update_dev_endpoint(params = {}, **options)
       req = build_request(:update_dev_endpoint, params)
       req.send_request(options)
     end
@@ -9941,9 +9941,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateJob AWS API Documentation
     #
-    # @overload update_job(params = {})
+    # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, options = {})
+    def update_job(params = {}, **options)
       req = build_request(:update_job, params)
       req.send_request(options)
     end
@@ -10059,9 +10059,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateMLTransform AWS API Documentation
     #
-    # @overload update_ml_transform(params = {})
+    # @overload update_ml_transform(**params)
     # @param [Hash] params ({})
-    def update_ml_transform(params = {}, options = {})
+    def update_ml_transform(params = {}, **options)
       req = build_request(:update_ml_transform, params)
       req.send_request(options)
     end
@@ -10161,9 +10161,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdatePartition AWS API Documentation
     #
-    # @overload update_partition(params = {})
+    # @overload update_partition(**params)
     # @param [Hash] params ({})
-    def update_partition(params = {}, options = {})
+    def update_partition(params = {}, **options)
       req = build_request(:update_partition, params)
       req.send_request(options)
     end
@@ -10202,9 +10202,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateRegistry AWS API Documentation
     #
-    # @overload update_registry(params = {})
+    # @overload update_registry(**params)
     # @param [Hash] params ({})
-    def update_registry(params = {}, options = {})
+    def update_registry(params = {}, **options)
       req = build_request(:update_registry, params)
       req.send_request(options)
     end
@@ -10274,9 +10274,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateSchema AWS API Documentation
     #
-    # @overload update_schema(params = {})
+    # @overload update_schema(**params)
     # @param [Hash] params ({})
-    def update_schema(params = {}, options = {})
+    def update_schema(params = {}, **options)
       req = build_request(:update_schema, params)
       req.send_request(options)
     end
@@ -10392,9 +10392,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateTable AWS API Documentation
     #
-    # @overload update_table(params = {})
+    # @overload update_table(**params)
     # @param [Hash] params ({})
-    def update_table(params = {}, options = {})
+    def update_table(params = {}, **options)
       req = build_request(:update_table, params)
       req.send_request(options)
     end
@@ -10475,9 +10475,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateTrigger AWS API Documentation
     #
-    # @overload update_trigger(params = {})
+    # @overload update_trigger(**params)
     # @param [Hash] params ({})
-    def update_trigger(params = {}, options = {})
+    def update_trigger(params = {}, **options)
       req = build_request(:update_trigger, params)
       req.send_request(options)
     end
@@ -10523,9 +10523,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateUserDefinedFunction AWS API Documentation
     #
-    # @overload update_user_defined_function(params = {})
+    # @overload update_user_defined_function(**params)
     # @param [Hash] params ({})
-    def update_user_defined_function(params = {}, options = {})
+    def update_user_defined_function(params = {}, **options)
       req = build_request(:update_user_defined_function, params)
       req.send_request(options)
     end
@@ -10570,9 +10570,9 @@ module Aws::Glue
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateWorkflow AWS API Documentation
     #
-    # @overload update_workflow(params = {})
+    # @overload update_workflow(**params)
     # @param [Hash] params ({})
-    def update_workflow(params = {}, options = {})
+    def update_workflow(params = {}, **options)
       req = build_request(:update_workflow, params)
       req.send_request(options)
     end
@@ -10581,7 +10581,7 @@ module Aws::Glue
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -10589,15 +10589,15 @@ module Aws::Glue
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-glue'
-      context[:gem_version] = '1.80.0'
+      context[:gem_name] = "aws-sdk-glue"
+      context[:gem_version] = "1.80.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

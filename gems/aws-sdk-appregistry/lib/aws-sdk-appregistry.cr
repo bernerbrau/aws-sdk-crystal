@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appregistry/types'
-require_relative 'aws-sdk-appregistry/client_api'
-require_relative 'aws-sdk-appregistry/client'
-require_relative 'aws-sdk-appregistry/errors'
-require_relative 'aws-sdk-appregistry/resource'
-require_relative 'aws-sdk-appregistry/customizations'
+require_relative "aws-sdk-appregistry/types"
+require_relative "aws-sdk-appregistry/client_api"
+require_relative "aws-sdk-appregistry/client"
+require_relative "aws-sdk-appregistry/errors"
+require_relative "aws-sdk-appregistry/resource"
+require_relative "aws-sdk-appregistry/customizations"
 
 # This module provides support for AWS Service Catalog App Registry. This module is available in the
 # `aws-sdk-appregistry` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-appregistry/customizations'
 # @!group service
 module Aws::AppRegistry
 
-  GEM_VERSION = '1.2.0'
+  GEM_VERSION = "1.2.0"
 
 end

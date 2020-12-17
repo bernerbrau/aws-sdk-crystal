@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-elasticinference/types'
-require_relative 'aws-sdk-elasticinference/client_api'
-require_relative 'aws-sdk-elasticinference/client'
-require_relative 'aws-sdk-elasticinference/errors'
-require_relative 'aws-sdk-elasticinference/resource'
-require_relative 'aws-sdk-elasticinference/customizations'
+require_relative "aws-sdk-elasticinference/types"
+require_relative "aws-sdk-elasticinference/client_api"
+require_relative "aws-sdk-elasticinference/client"
+require_relative "aws-sdk-elasticinference/errors"
+require_relative "aws-sdk-elasticinference/resource"
+require_relative "aws-sdk-elasticinference/customizations"
 
 # This module provides support for Amazon Elastic  Inference. This module is available in the
 # `aws-sdk-elasticinference` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-elasticinference/customizations'
 # @!group service
 module Aws::ElasticInference
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

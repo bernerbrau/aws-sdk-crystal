@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-quicksight/types'
-require_relative 'aws-sdk-quicksight/client_api'
-require_relative 'aws-sdk-quicksight/client'
-require_relative 'aws-sdk-quicksight/errors'
-require_relative 'aws-sdk-quicksight/resource'
-require_relative 'aws-sdk-quicksight/customizations'
+require_relative "aws-sdk-quicksight/types"
+require_relative "aws-sdk-quicksight/client_api"
+require_relative "aws-sdk-quicksight/client"
+require_relative "aws-sdk-quicksight/errors"
+require_relative "aws-sdk-quicksight/resource"
+require_relative "aws-sdk-quicksight/customizations"
 
 # This module provides support for Amazon QuickSight. This module is available in the
 # `aws-sdk-quicksight` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-quicksight/customizations'
 # @!group service
 module Aws::QuickSight
 
-  GEM_VERSION = '1.39.0'
+  GEM_VERSION = "1.39.0"
 
 end

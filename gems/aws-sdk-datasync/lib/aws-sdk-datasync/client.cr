@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:datasync)
 
@@ -290,7 +290,7 @@ module Aws::DataSync
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -362,9 +362,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CancelTaskExecution AWS API Documentation
     #
-    # @overload cancel_task_execution(params = {})
+    # @overload cancel_task_execution(**params)
     # @param [Hash] params ({})
-    def cancel_task_execution(params = {}, options = {})
+    def cancel_task_execution(params = {}, **options)
       req = build_request(:cancel_task_execution, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateAgent AWS API Documentation
     #
-    # @overload create_agent(params = {})
+    # @overload create_agent(**params)
     # @param [Hash] params ({})
-    def create_agent(params = {}, options = {})
+    def create_agent(params = {}, **options)
       req = build_request(:create_agent, params)
       req.send_request(options)
     end
@@ -550,9 +550,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationEfs AWS API Documentation
     #
-    # @overload create_location_efs(params = {})
+    # @overload create_location_efs(**params)
     # @param [Hash] params ({})
-    def create_location_efs(params = {}, options = {})
+    def create_location_efs(params = {}, **options)
       req = build_request(:create_location_efs, params)
       req.send_request(options)
     end
@@ -617,9 +617,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxWindows AWS API Documentation
     #
-    # @overload create_location_fsx_windows(params = {})
+    # @overload create_location_fsx_windows(**params)
     # @param [Hash] params ({})
-    def create_location_fsx_windows(params = {}, options = {})
+    def create_location_fsx_windows(params = {}, **options)
       req = build_request(:create_location_fsx_windows, params)
       req.send_request(options)
     end
@@ -724,9 +724,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationNfs AWS API Documentation
     #
-    # @overload create_location_nfs(params = {})
+    # @overload create_location_nfs(**params)
     # @param [Hash] params ({})
-    def create_location_nfs(params = {}, options = {})
+    def create_location_nfs(params = {}, **options)
       req = build_request(:create_location_nfs, params)
       req.send_request(options)
     end
@@ -809,9 +809,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationObjectStorage AWS API Documentation
     #
-    # @overload create_location_object_storage(params = {})
+    # @overload create_location_object_storage(**params)
     # @param [Hash] params ({})
-    def create_location_object_storage(params = {}, options = {})
+    def create_location_object_storage(params = {}, **options)
       req = build_request(:create_location_object_storage, params)
       req.send_request(options)
     end
@@ -891,9 +891,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationS3 AWS API Documentation
     #
-    # @overload create_location_s3(params = {})
+    # @overload create_location_s3(**params)
     # @param [Hash] params ({})
-    def create_location_s3(params = {}, options = {})
+    def create_location_s3(params = {}, **options)
       req = build_request(:create_location_s3, params)
       req.send_request(options)
     end
@@ -986,9 +986,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationSmb AWS API Documentation
     #
-    # @overload create_location_smb(params = {})
+    # @overload create_location_smb(**params)
     # @param [Hash] params ({})
-    def create_location_smb(params = {}, options = {})
+    def create_location_smb(params = {}, **options)
       req = build_request(:create_location_smb, params)
       req.send_request(options)
     end
@@ -1101,9 +1101,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateTask AWS API Documentation
     #
-    # @overload create_task(params = {})
+    # @overload create_task(**params)
     # @param [Hash] params ({})
-    def create_task(params = {}, options = {})
+    def create_task(params = {}, **options)
       req = build_request(:create_task, params)
       req.send_request(options)
     end
@@ -1129,9 +1129,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DeleteAgent AWS API Documentation
     #
-    # @overload delete_agent(params = {})
+    # @overload delete_agent(**params)
     # @param [Hash] params ({})
-    def delete_agent(params = {}, options = {})
+    def delete_agent(params = {}, **options)
       req = build_request(:delete_agent, params)
       req.send_request(options)
     end
@@ -1151,9 +1151,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DeleteLocation AWS API Documentation
     #
-    # @overload delete_location(params = {})
+    # @overload delete_location(**params)
     # @param [Hash] params ({})
-    def delete_location(params = {}, options = {})
+    def delete_location(params = {}, **options)
       req = build_request(:delete_location, params)
       req.send_request(options)
     end
@@ -1173,9 +1173,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DeleteTask AWS API Documentation
     #
-    # @overload delete_task(params = {})
+    # @overload delete_task(**params)
     # @param [Hash] params ({})
-    def delete_task(params = {}, options = {})
+    def delete_task(params = {}, **options)
       req = build_request(:delete_task, params)
       req.send_request(options)
     end
@@ -1221,9 +1221,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeAgent AWS API Documentation
     #
-    # @overload describe_agent(params = {})
+    # @overload describe_agent(**params)
     # @param [Hash] params ({})
-    def describe_agent(params = {}, options = {})
+    def describe_agent(params = {}, **options)
       req = build_request(:describe_agent, params)
       req.send_request(options)
     end
@@ -1258,9 +1258,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationEfs AWS API Documentation
     #
-    # @overload describe_location_efs(params = {})
+    # @overload describe_location_efs(**params)
     # @param [Hash] params ({})
-    def describe_location_efs(params = {}, options = {})
+    def describe_location_efs(params = {}, **options)
       req = build_request(:describe_location_efs, params)
       req.send_request(options)
     end
@@ -1299,9 +1299,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxWindows AWS API Documentation
     #
-    # @overload describe_location_fsx_windows(params = {})
+    # @overload describe_location_fsx_windows(**params)
     # @param [Hash] params ({})
-    def describe_location_fsx_windows(params = {}, options = {})
+    def describe_location_fsx_windows(params = {}, **options)
       req = build_request(:describe_location_fsx_windows, params)
       req.send_request(options)
     end
@@ -1336,9 +1336,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationNfs AWS API Documentation
     #
-    # @overload describe_location_nfs(params = {})
+    # @overload describe_location_nfs(**params)
     # @param [Hash] params ({})
-    def describe_location_nfs(params = {}, options = {})
+    def describe_location_nfs(params = {}, **options)
       req = build_request(:describe_location_nfs, params)
       req.send_request(options)
     end
@@ -1380,9 +1380,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationObjectStorage AWS API Documentation
     #
-    # @overload describe_location_object_storage(params = {})
+    # @overload describe_location_object_storage(**params)
     # @param [Hash] params ({})
-    def describe_location_object_storage(params = {}, options = {})
+    def describe_location_object_storage(params = {}, **options)
       req = build_request(:describe_location_object_storage, params)
       req.send_request(options)
     end
@@ -1421,9 +1421,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationS3 AWS API Documentation
     #
-    # @overload describe_location_s3(params = {})
+    # @overload describe_location_s3(**params)
     # @param [Hash] params ({})
-    def describe_location_s3(params = {}, options = {})
+    def describe_location_s3(params = {}, **options)
       req = build_request(:describe_location_s3, params)
       req.send_request(options)
     end
@@ -1463,9 +1463,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationSmb AWS API Documentation
     #
-    # @overload describe_location_smb(params = {})
+    # @overload describe_location_smb(**params)
     # @param [Hash] params ({})
-    def describe_location_smb(params = {}, options = {})
+    def describe_location_smb(params = {}, **options)
       req = build_request(:describe_location_smb, params)
       req.send_request(options)
     end
@@ -1535,9 +1535,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeTask AWS API Documentation
     #
-    # @overload describe_task(params = {})
+    # @overload describe_task(**params)
     # @param [Hash] params ({})
-    def describe_task(params = {}, options = {})
+    def describe_task(params = {}, **options)
       req = build_request(:describe_task, params)
       req.send_request(options)
     end
@@ -1609,9 +1609,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeTaskExecution AWS API Documentation
     #
-    # @overload describe_task_execution(params = {})
+    # @overload describe_task_execution(**params)
     # @param [Hash] params ({})
-    def describe_task_execution(params = {}, options = {})
+    def describe_task_execution(params = {}, **options)
       req = build_request(:describe_task_execution, params)
       req.send_request(options)
     end
@@ -1660,9 +1660,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListAgents AWS API Documentation
     #
-    # @overload list_agents(params = {})
+    # @overload list_agents(**params)
     # @param [Hash] params ({})
-    def list_agents(params = {}, options = {})
+    def list_agents(params = {}, **options)
       req = build_request(:list_agents, params)
       req.send_request(options)
     end
@@ -1717,9 +1717,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListLocations AWS API Documentation
     #
-    # @overload list_locations(params = {})
+    # @overload list_locations(**params)
     # @param [Hash] params ({})
-    def list_locations(params = {}, options = {})
+    def list_locations(params = {}, **options)
       req = build_request(:list_locations, params)
       req.send_request(options)
     end
@@ -1760,9 +1760,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1804,9 +1804,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListTaskExecutions AWS API Documentation
     #
-    # @overload list_task_executions(params = {})
+    # @overload list_task_executions(**params)
     # @param [Hash] params ({})
-    def list_task_executions(params = {}, options = {})
+    def list_task_executions(params = {}, **options)
       req = build_request(:list_task_executions, params)
       req.send_request(options)
     end
@@ -1857,9 +1857,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListTasks AWS API Documentation
     #
-    # @overload list_tasks(params = {})
+    # @overload list_tasks(**params)
     # @param [Hash] params ({})
-    def list_tasks(params = {}, options = {})
+    def list_tasks(params = {}, **options)
       req = build_request(:list_tasks, params)
       req.send_request(options)
     end
@@ -1932,9 +1932,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StartTaskExecution AWS API Documentation
     #
-    # @overload start_task_execution(params = {})
+    # @overload start_task_execution(**params)
     # @param [Hash] params ({})
-    def start_task_execution(params = {}, options = {})
+    def start_task_execution(params = {}, **options)
       req = build_request(:start_task_execution, params)
       req.send_request(options)
     end
@@ -1963,9 +1963,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1989,9 +1989,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2015,9 +2015,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateAgent AWS API Documentation
     #
-    # @overload update_agent(params = {})
+    # @overload update_agent(**params)
     # @param [Hash] params ({})
-    def update_agent(params = {}, options = {})
+    def update_agent(params = {}, **options)
       req = build_request(:update_agent, params)
       req.send_request(options)
     end
@@ -2096,9 +2096,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateTask AWS API Documentation
     #
-    # @overload update_task(params = {})
+    # @overload update_task(**params)
     # @param [Hash] params ({})
-    def update_task(params = {}, options = {})
+    def update_task(params = {}, **options)
       req = build_request(:update_task, params)
       req.send_request(options)
     end
@@ -2159,9 +2159,9 @@ module Aws::DataSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateTaskExecution AWS API Documentation
     #
-    # @overload update_task_execution(params = {})
+    # @overload update_task_execution(**params)
     # @param [Hash] params ({})
-    def update_task_execution(params = {}, options = {})
+    def update_task_execution(params = {}, **options)
       req = build_request(:update_task_execution, params)
       req.send_request(options)
     end
@@ -2170,7 +2170,7 @@ module Aws::DataSync
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2178,15 +2178,15 @@ module Aws::DataSync
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-datasync'
-      context[:gem_version] = '1.28.0'
+      context[:gem_name] = "aws-sdk-datasync"
+      context[:gem_version] = "1.28.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

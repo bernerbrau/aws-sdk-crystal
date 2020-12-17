@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::SES
   # Waiters are utility methods that poll for a particular state to occur
@@ -100,7 +100,7 @@ module Aws::SES
 
       # @option (see Client#get_identity_verification_attributes)
       # @return (see Client#get_identity_verification_attributes)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

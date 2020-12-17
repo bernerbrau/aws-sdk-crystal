@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:identitystore)
 
@@ -290,7 +290,7 @@ module Aws::IdentityStore
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -369,9 +369,9 @@ module Aws::IdentityStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeGroup AWS API Documentation
     #
-    # @overload describe_group(params = {})
+    # @overload describe_group(**params)
     # @param [Hash] params ({})
-    def describe_group(params = {}, options = {})
+    def describe_group(params = {}, **options)
       req = build_request(:describe_group, params)
       req.send_request(options)
     end
@@ -408,9 +408,9 @@ module Aws::IdentityStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeUser AWS API Documentation
     #
-    # @overload describe_user(params = {})
+    # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, options = {})
+    def describe_user(params = {}, **options)
       req = build_request(:describe_user, params)
       req.send_request(options)
     end
@@ -474,9 +474,9 @@ module Aws::IdentityStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListGroups AWS API Documentation
     #
-    # @overload list_groups(params = {})
+    # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, options = {})
+    def list_groups(params = {}, **options)
       req = build_request(:list_groups, params)
       req.send_request(options)
     end
@@ -539,9 +539,9 @@ module Aws::IdentityStore
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -550,7 +550,7 @@ module Aws::IdentityStore
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -558,15 +558,15 @@ module Aws::IdentityStore
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-identitystore'
-      context[:gem_version] = '1.3.0'
+      context[:gem_name] = "aws-sdk-identitystore"
+      context[:gem_version] = "1.3.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

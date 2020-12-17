@@ -8,11 +8,11 @@
 Feature: Smoke tests for ElasticLoadBalancing
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @elasticloadbalancing @smoke
   Scenario: Call Aws::ElasticLoadBalancing::Client#describe_load_balancers and expect it to succeed
-  When I call the operation 'describe_load_balancers' with params:
+  When I call the operation "describe_load_balancers" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @elasticloadbalancing @smoke
   Scenario: Call Aws::Aws::ElasticLoadBalancing::Client#describe_load_balancers and expect it to fail
-  When I call the operation 'describe_load_balancers' with params:
+  When I call the operation "describe_load_balancers" with params:
     """
 {"load_balancer_names":["fake_load_balancer"]}
     """

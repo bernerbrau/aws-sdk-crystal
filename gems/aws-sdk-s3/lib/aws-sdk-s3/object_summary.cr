@@ -13,11 +13,11 @@ module Aws::S3
 
     extend Aws::Deprecations
 
-    # @overload def initialize(bucket_name, key, options = {})
+    # @overload def initialize(bucket_name, key, **options)
     #   @param [String] bucket_name
     #   @param [String] key
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :bucket_name
     #   @option options [required, String] :key
     #   @option options [Client] :client
@@ -122,7 +122,7 @@ module Aws::S3
     # @param [Hash] options ({})
     # @return [Boolean]
     #   Returns `true` if the ObjectSummary exists.
-    def exists?(options = {})
+    def exists?(**options)
       begin
         wait_until_exists(options.merge(max_attempts: 1))
         true
@@ -139,7 +139,7 @@ module Aws::S3
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
     # @return [ObjectSummary]
-    def wait_until_exists(options = {}, &block)
+    def wait_until_exists(**options, &block)
       options, params = separate_params_and_options(options)
       waiter = Waiters::ObjectExists.new(options)
       yield_waiter_and_warn(waiter, &block) if block_given?
@@ -158,7 +158,7 @@ module Aws::S3
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
     # @return [ObjectSummary]
-    def wait_until_not_exists(options = {}, &block)
+    def wait_until_not_exists(**options, &block)
       options, params = separate_params_and_options(options)
       waiter = Waiters::ObjectNotExists.new(options)
       yield_waiter_and_warn(waiter, &block) if block_given?
@@ -191,7 +191,7 @@ module Aws::S3
     # ## Example
     #
     #     instance.wait_until(max_attempts:10, delay:5) do |instance|
-    #       instance.state.name == 'running'
+    #       instance.state.name == "running"
     #     end
     #
     # ## Configuration
@@ -251,7 +251,7 @@ module Aws::S3
     # @option options [Proc] :before_wait (nil) Callback
     # invoked before each wait
     # @return [Resource] if the waiter was successful
-    def wait_until(options = {}, &block)
+    def wait_until(**options, &block)
       self_copy = self.dup
       attempts = 0
       options[:max_attempts] = 10 unless options.key?(:max_attempts)

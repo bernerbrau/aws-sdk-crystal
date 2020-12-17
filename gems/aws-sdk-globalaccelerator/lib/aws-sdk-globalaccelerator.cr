@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-globalaccelerator/types'
-require_relative 'aws-sdk-globalaccelerator/client_api'
-require_relative 'aws-sdk-globalaccelerator/client'
-require_relative 'aws-sdk-globalaccelerator/errors'
-require_relative 'aws-sdk-globalaccelerator/resource'
-require_relative 'aws-sdk-globalaccelerator/customizations'
+require_relative "aws-sdk-globalaccelerator/types"
+require_relative "aws-sdk-globalaccelerator/client_api"
+require_relative "aws-sdk-globalaccelerator/client"
+require_relative "aws-sdk-globalaccelerator/errors"
+require_relative "aws-sdk-globalaccelerator/resource"
+require_relative "aws-sdk-globalaccelerator/customizations"
 
 # This module provides support for AWS Global Accelerator. This module is available in the
 # `aws-sdk-globalaccelerator` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-globalaccelerator/customizations'
 # @!group service
 module Aws::GlobalAccelerator
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

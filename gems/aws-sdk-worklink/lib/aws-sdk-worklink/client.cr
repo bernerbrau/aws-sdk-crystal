@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:worklink)
 
@@ -280,7 +280,7 @@ module Aws::WorkLink
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -355,9 +355,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateDomain AWS API Documentation
     #
-    # @overload associate_domain(params = {})
+    # @overload associate_domain(**params)
     # @param [Hash] params ({})
-    def associate_domain(params = {}, options = {})
+    def associate_domain(params = {}, **options)
       req = build_request(:associate_domain, params)
       req.send_request(options)
     end
@@ -394,9 +394,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateWebsiteAuthorizationProvider AWS API Documentation
     #
-    # @overload associate_website_authorization_provider(params = {})
+    # @overload associate_website_authorization_provider(**params)
     # @param [Hash] params ({})
-    def associate_website_authorization_provider(params = {}, options = {})
+    def associate_website_authorization_provider(params = {}, **options)
       req = build_request(:associate_website_authorization_provider, params)
       req.send_request(options)
     end
@@ -432,9 +432,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateWebsiteCertificateAuthority AWS API Documentation
     #
-    # @overload associate_website_certificate_authority(params = {})
+    # @overload associate_website_certificate_authority(**params)
     # @param [Hash] params ({})
-    def associate_website_certificate_authority(params = {}, options = {})
+    def associate_website_certificate_authority(params = {}, **options)
       req = build_request(:associate_website_certificate_authority, params)
       req.send_request(options)
     end
@@ -478,9 +478,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/CreateFleet AWS API Documentation
     #
-    # @overload create_fleet(params = {})
+    # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, options = {})
+    def create_fleet(params = {}, **options)
       req = build_request(:create_fleet, params)
       req.send_request(options)
     end
@@ -501,9 +501,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DeleteFleet AWS API Documentation
     #
-    # @overload delete_fleet(params = {})
+    # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, options = {})
+    def delete_fleet(params = {}, **options)
       req = build_request(:delete_fleet, params)
       req.send_request(options)
     end
@@ -530,9 +530,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeAuditStreamConfiguration AWS API Documentation
     #
-    # @overload describe_audit_stream_configuration(params = {})
+    # @overload describe_audit_stream_configuration(**params)
     # @param [Hash] params ({})
-    def describe_audit_stream_configuration(params = {}, options = {})
+    def describe_audit_stream_configuration(params = {}, **options)
       req = build_request(:describe_audit_stream_configuration, params)
       req.send_request(options)
     end
@@ -565,9 +565,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeCompanyNetworkConfiguration AWS API Documentation
     #
-    # @overload describe_company_network_configuration(params = {})
+    # @overload describe_company_network_configuration(**params)
     # @param [Hash] params ({})
-    def describe_company_network_configuration(params = {}, options = {})
+    def describe_company_network_configuration(params = {}, **options)
       req = build_request(:describe_company_network_configuration, params)
       req.send_request(options)
     end
@@ -613,9 +613,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDevice AWS API Documentation
     #
-    # @overload describe_device(params = {})
+    # @overload describe_device(**params)
     # @param [Hash] params ({})
-    def describe_device(params = {}, options = {})
+    def describe_device(params = {}, **options)
       req = build_request(:describe_device, params)
       req.send_request(options)
     end
@@ -641,9 +641,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDevicePolicyConfiguration AWS API Documentation
     #
-    # @overload describe_device_policy_configuration(params = {})
+    # @overload describe_device_policy_configuration(**params)
     # @param [Hash] params ({})
-    def describe_device_policy_configuration(params = {}, options = {})
+    def describe_device_policy_configuration(params = {}, **options)
       req = build_request(:describe_device_policy_configuration, params)
       req.send_request(options)
     end
@@ -681,9 +681,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDomain AWS API Documentation
     #
-    # @overload describe_domain(params = {})
+    # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, options = {})
+    def describe_domain(params = {}, **options)
       req = build_request(:describe_domain, params)
       req.send_request(options)
     end
@@ -725,9 +725,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeFleetMetadata AWS API Documentation
     #
-    # @overload describe_fleet_metadata(params = {})
+    # @overload describe_fleet_metadata(**params)
     # @param [Hash] params ({})
-    def describe_fleet_metadata(params = {}, options = {})
+    def describe_fleet_metadata(params = {}, **options)
       req = build_request(:describe_fleet_metadata, params)
       req.send_request(options)
     end
@@ -757,9 +757,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeIdentityProviderConfiguration AWS API Documentation
     #
-    # @overload describe_identity_provider_configuration(params = {})
+    # @overload describe_identity_provider_configuration(**params)
     # @param [Hash] params ({})
-    def describe_identity_provider_configuration(params = {}, options = {})
+    def describe_identity_provider_configuration(params = {}, **options)
       req = build_request(:describe_identity_provider_configuration, params)
       req.send_request(options)
     end
@@ -793,9 +793,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeWebsiteCertificateAuthority AWS API Documentation
     #
-    # @overload describe_website_certificate_authority(params = {})
+    # @overload describe_website_certificate_authority(**params)
     # @param [Hash] params ({})
-    def describe_website_certificate_authority(params = {}, options = {})
+    def describe_website_certificate_authority(params = {}, **options)
       req = build_request(:describe_website_certificate_authority, params)
       req.send_request(options)
     end
@@ -820,9 +820,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateDomain AWS API Documentation
     #
-    # @overload disassociate_domain(params = {})
+    # @overload disassociate_domain(**params)
     # @param [Hash] params ({})
-    def disassociate_domain(params = {}, options = {})
+    def disassociate_domain(params = {}, **options)
       req = build_request(:disassociate_domain, params)
       req.send_request(options)
     end
@@ -848,9 +848,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateWebsiteAuthorizationProvider AWS API Documentation
     #
-    # @overload disassociate_website_authorization_provider(params = {})
+    # @overload disassociate_website_authorization_provider(**params)
     # @param [Hash] params ({})
-    def disassociate_website_authorization_provider(params = {}, options = {})
+    def disassociate_website_authorization_provider(params = {}, **options)
       req = build_request(:disassociate_website_authorization_provider, params)
       req.send_request(options)
     end
@@ -874,9 +874,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateWebsiteCertificateAuthority AWS API Documentation
     #
-    # @overload disassociate_website_certificate_authority(params = {})
+    # @overload disassociate_website_certificate_authority(**params)
     # @param [Hash] params ({})
-    def disassociate_website_certificate_authority(params = {}, options = {})
+    def disassociate_website_certificate_authority(params = {}, **options)
       req = build_request(:disassociate_website_certificate_authority, params)
       req.send_request(options)
     end
@@ -917,9 +917,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListDevices AWS API Documentation
     #
-    # @overload list_devices(params = {})
+    # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, options = {})
+    def list_devices(params = {}, **options)
       req = build_request(:list_devices, params)
       req.send_request(options)
     end
@@ -962,9 +962,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListDomains AWS API Documentation
     #
-    # @overload list_domains(params = {})
+    # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, options = {})
+    def list_domains(params = {}, **options)
       req = build_request(:list_domains, params)
       req.send_request(options)
     end
@@ -1008,9 +1008,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListFleets AWS API Documentation
     #
-    # @overload list_fleets(params = {})
+    # @overload list_fleets(**params)
     # @param [Hash] params ({})
-    def list_fleets(params = {}, options = {})
+    def list_fleets(params = {}, **options)
       req = build_request(:list_fleets, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1083,9 +1083,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListWebsiteAuthorizationProviders AWS API Documentation
     #
-    # @overload list_website_authorization_providers(params = {})
+    # @overload list_website_authorization_providers(**params)
     # @param [Hash] params ({})
-    def list_website_authorization_providers(params = {}, options = {})
+    def list_website_authorization_providers(params = {}, **options)
       req = build_request(:list_website_authorization_providers, params)
       req.send_request(options)
     end
@@ -1128,9 +1128,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListWebsiteCertificateAuthorities AWS API Documentation
     #
-    # @overload list_website_certificate_authorities(params = {})
+    # @overload list_website_certificate_authorities(**params)
     # @param [Hash] params ({})
-    def list_website_certificate_authorities(params = {}, options = {})
+    def list_website_certificate_authorities(params = {}, **options)
       req = build_request(:list_website_certificate_authorities, params)
       req.send_request(options)
     end
@@ -1154,9 +1154,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/RestoreDomainAccess AWS API Documentation
     #
-    # @overload restore_domain_access(params = {})
+    # @overload restore_domain_access(**params)
     # @param [Hash] params ({})
-    def restore_domain_access(params = {}, options = {})
+    def restore_domain_access(params = {}, **options)
       req = build_request(:restore_domain_access, params)
       req.send_request(options)
     end
@@ -1180,9 +1180,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/RevokeDomainAccess AWS API Documentation
     #
-    # @overload revoke_domain_access(params = {})
+    # @overload revoke_domain_access(**params)
     # @param [Hash] params ({})
-    def revoke_domain_access(params = {}, options = {})
+    def revoke_domain_access(params = {}, **options)
       req = build_request(:revoke_domain_access, params)
       req.send_request(options)
     end
@@ -1207,9 +1207,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/SignOutUser AWS API Documentation
     #
-    # @overload sign_out_user(params = {})
+    # @overload sign_out_user(**params)
     # @param [Hash] params ({})
-    def sign_out_user(params = {}, options = {})
+    def sign_out_user(params = {}, **options)
       req = build_request(:sign_out_user, params)
       req.send_request(options)
     end
@@ -1238,9 +1238,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1264,9 +1264,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1291,9 +1291,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateAuditStreamConfiguration AWS API Documentation
     #
-    # @overload update_audit_stream_configuration(params = {})
+    # @overload update_audit_stream_configuration(**params)
     # @param [Hash] params ({})
-    def update_audit_stream_configuration(params = {}, options = {})
+    def update_audit_stream_configuration(params = {}, **options)
       req = build_request(:update_audit_stream_configuration, params)
       req.send_request(options)
     end
@@ -1326,9 +1326,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateCompanyNetworkConfiguration AWS API Documentation
     #
-    # @overload update_company_network_configuration(params = {})
+    # @overload update_company_network_configuration(**params)
     # @param [Hash] params ({})
-    def update_company_network_configuration(params = {}, options = {})
+    def update_company_network_configuration(params = {}, **options)
       req = build_request(:update_company_network_configuration, params)
       req.send_request(options)
     end
@@ -1354,9 +1354,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateDevicePolicyConfiguration AWS API Documentation
     #
-    # @overload update_device_policy_configuration(params = {})
+    # @overload update_device_policy_configuration(**params)
     # @param [Hash] params ({})
-    def update_device_policy_configuration(params = {}, options = {})
+    def update_device_policy_configuration(params = {}, **options)
       req = build_request(:update_device_policy_configuration, params)
       req.send_request(options)
     end
@@ -1384,9 +1384,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateDomainMetadata AWS API Documentation
     #
-    # @overload update_domain_metadata(params = {})
+    # @overload update_domain_metadata(**params)
     # @param [Hash] params ({})
-    def update_domain_metadata(params = {}, options = {})
+    def update_domain_metadata(params = {}, **options)
       req = build_request(:update_domain_metadata, params)
       req.send_request(options)
     end
@@ -1417,9 +1417,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateFleetMetadata AWS API Documentation
     #
-    # @overload update_fleet_metadata(params = {})
+    # @overload update_fleet_metadata(**params)
     # @param [Hash] params ({})
-    def update_fleet_metadata(params = {}, options = {})
+    def update_fleet_metadata(params = {}, **options)
       req = build_request(:update_fleet_metadata, params)
       req.send_request(options)
     end
@@ -1449,9 +1449,9 @@ module Aws::WorkLink
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateIdentityProviderConfiguration AWS API Documentation
     #
-    # @overload update_identity_provider_configuration(params = {})
+    # @overload update_identity_provider_configuration(**params)
     # @param [Hash] params ({})
-    def update_identity_provider_configuration(params = {}, options = {})
+    def update_identity_provider_configuration(params = {}, **options)
       req = build_request(:update_identity_provider_configuration, params)
       req.send_request(options)
     end
@@ -1460,7 +1460,7 @@ module Aws::WorkLink
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1468,15 +1468,15 @@ module Aws::WorkLink
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-worklink'
-      context[:gem_version] = '1.21.0'
+      context[:gem_name] = "aws-sdk-worklink"
+      context[:gem_version] = "1.21.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codestarconnections/types'
-require_relative 'aws-sdk-codestarconnections/client_api'
-require_relative 'aws-sdk-codestarconnections/client'
-require_relative 'aws-sdk-codestarconnections/errors'
-require_relative 'aws-sdk-codestarconnections/resource'
-require_relative 'aws-sdk-codestarconnections/customizations'
+require_relative "aws-sdk-codestarconnections/types"
+require_relative "aws-sdk-codestarconnections/client_api"
+require_relative "aws-sdk-codestarconnections/client"
+require_relative "aws-sdk-codestarconnections/errors"
+require_relative "aws-sdk-codestarconnections/resource"
+require_relative "aws-sdk-codestarconnections/customizations"
 
 # This module provides support for AWS CodeStar connections. This module is available in the
 # `aws-sdk-codestarconnections` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-codestarconnections/customizations'
 # @!group service
 module Aws::CodeStarconnections
 
-  GEM_VERSION = '1.12.0'
+  GEM_VERSION = "1.12.0"
 
 end

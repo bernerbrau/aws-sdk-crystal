@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-firehose/types'
-require_relative 'aws-sdk-firehose/client_api'
-require_relative 'aws-sdk-firehose/client'
-require_relative 'aws-sdk-firehose/errors'
-require_relative 'aws-sdk-firehose/resource'
-require_relative 'aws-sdk-firehose/customizations'
+require_relative "aws-sdk-firehose/types"
+require_relative "aws-sdk-firehose/client_api"
+require_relative "aws-sdk-firehose/client"
+require_relative "aws-sdk-firehose/errors"
+require_relative "aws-sdk-firehose/resource"
+require_relative "aws-sdk-firehose/customizations"
 
 # This module provides support for Amazon Kinesis Firehose. This module is available in the
 # `aws-sdk-firehose` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-firehose/customizations'
 # @!group service
 module Aws::Firehose
 
-  GEM_VERSION = '1.35.0'
+  GEM_VERSION = "1.35.0"
 
 end

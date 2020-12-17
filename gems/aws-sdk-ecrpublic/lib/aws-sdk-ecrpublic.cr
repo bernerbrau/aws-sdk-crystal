@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ecrpublic/types'
-require_relative 'aws-sdk-ecrpublic/client_api'
-require_relative 'aws-sdk-ecrpublic/client'
-require_relative 'aws-sdk-ecrpublic/errors'
-require_relative 'aws-sdk-ecrpublic/resource'
-require_relative 'aws-sdk-ecrpublic/customizations'
+require_relative "aws-sdk-ecrpublic/types"
+require_relative "aws-sdk-ecrpublic/client_api"
+require_relative "aws-sdk-ecrpublic/client"
+require_relative "aws-sdk-ecrpublic/errors"
+require_relative "aws-sdk-ecrpublic/resource"
+require_relative "aws-sdk-ecrpublic/customizations"
 
 # This module provides support for Amazon Elastic Container Registry Public. This module is available in the
 # `aws-sdk-ecrpublic` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ecrpublic/customizations'
 # @!group service
 module Aws::ECRPublic
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

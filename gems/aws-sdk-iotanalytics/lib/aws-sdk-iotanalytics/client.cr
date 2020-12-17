@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotanalytics)
 
@@ -280,7 +280,7 @@ module Aws::IoTAnalytics
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -381,9 +381,9 @@ module Aws::IoTAnalytics
     #   resp.batch_put_message_error_entries[0].error_code #=> String
     #   resp.batch_put_message_error_entries[0].error_message #=> String
     #
-    # @overload batch_put_message(params = {})
+    # @overload batch_put_message(**params)
     # @param [Hash] params ({})
-    def batch_put_message(params = {}, options = {})
+    def batch_put_message(params = {}, **options)
       req = build_request(:batch_put_message, params)
       req.send_request(options)
     end
@@ -406,9 +406,9 @@ module Aws::IoTAnalytics
     #     reprocessing_id: "ReprocessingId", # required
     #   })
     #
-    # @overload cancel_pipeline_reprocessing(params = {})
+    # @overload cancel_pipeline_reprocessing(**params)
     # @param [Hash] params ({})
-    def cancel_pipeline_reprocessing(params = {}, options = {})
+    def cancel_pipeline_reprocessing(params = {}, **options)
       req = build_request(:cancel_pipeline_reprocessing, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::IoTAnalytics
     #   resp.retention_period.unlimited #=> Boolean
     #   resp.retention_period.number_of_days #=> Integer
     #
-    # @overload create_channel(params = {})
+    # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, options = {})
+    def create_channel(params = {}, **options)
       req = build_request(:create_channel, params)
       req.send_request(options)
     end
@@ -648,9 +648,9 @@ module Aws::IoTAnalytics
     #   resp.retention_period.unlimited #=> Boolean
     #   resp.retention_period.number_of_days #=> Integer
     #
-    # @overload create_dataset(params = {})
+    # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, options = {})
+    def create_dataset(params = {}, **options)
       req = build_request(:create_dataset, params)
       req.send_request(options)
     end
@@ -684,9 +684,9 @@ module Aws::IoTAnalytics
     #
     #   resp.version_id #=> String
     #
-    # @overload create_dataset_content(params = {})
+    # @overload create_dataset_content(**params)
     # @param [Hash] params ({})
-    def create_dataset_content(params = {}, options = {})
+    def create_dataset_content(params = {}, **options)
       req = build_request(:create_dataset_content, params)
       req.send_request(options)
     end
@@ -773,9 +773,9 @@ module Aws::IoTAnalytics
     #   resp.retention_period.unlimited #=> Boolean
     #   resp.retention_period.number_of_days #=> Integer
     #
-    # @overload create_datastore(params = {})
+    # @overload create_datastore(**params)
     # @param [Hash] params ({})
-    def create_datastore(params = {}, options = {})
+    def create_datastore(params = {}, **options)
       req = build_request(:create_datastore, params)
       req.send_request(options)
     end
@@ -889,9 +889,9 @@ module Aws::IoTAnalytics
     #   resp.pipeline_name #=> String
     #   resp.pipeline_arn #=> String
     #
-    # @overload create_pipeline(params = {})
+    # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, options = {})
+    def create_pipeline(params = {}, **options)
       req = build_request(:create_pipeline, params)
       req.send_request(options)
     end
@@ -909,9 +909,9 @@ module Aws::IoTAnalytics
     #     channel_name: "ChannelName", # required
     #   })
     #
-    # @overload delete_channel(params = {})
+    # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, options = {})
+    def delete_channel(params = {}, **options)
       req = build_request(:delete_channel, params)
       req.send_request(options)
     end
@@ -932,9 +932,9 @@ module Aws::IoTAnalytics
     #     dataset_name: "DatasetName", # required
     #   })
     #
-    # @overload delete_dataset(params = {})
+    # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, options = {})
+    def delete_dataset(params = {}, **options)
       req = build_request(:delete_dataset, params)
       req.send_request(options)
     end
@@ -959,9 +959,9 @@ module Aws::IoTAnalytics
     #     version_id: "DatasetContentVersion",
     #   })
     #
-    # @overload delete_dataset_content(params = {})
+    # @overload delete_dataset_content(**params)
     # @param [Hash] params ({})
-    def delete_dataset_content(params = {}, options = {})
+    def delete_dataset_content(params = {}, **options)
       req = build_request(:delete_dataset_content, params)
       req.send_request(options)
     end
@@ -979,9 +979,9 @@ module Aws::IoTAnalytics
     #     datastore_name: "DatastoreName", # required
     #   })
     #
-    # @overload delete_datastore(params = {})
+    # @overload delete_datastore(**params)
     # @param [Hash] params ({})
-    def delete_datastore(params = {}, options = {})
+    def delete_datastore(params = {}, **options)
       req = build_request(:delete_datastore, params)
       req.send_request(options)
     end
@@ -999,9 +999,9 @@ module Aws::IoTAnalytics
     #     pipeline_name: "PipelineName", # required
     #   })
     #
-    # @overload delete_pipeline(params = {})
+    # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, options = {})
+    def delete_pipeline(params = {}, **options)
       req = build_request(:delete_pipeline, params)
       req.send_request(options)
     end
@@ -1044,9 +1044,9 @@ module Aws::IoTAnalytics
     #   resp.statistics.size.estimated_size_in_bytes #=> Float
     #   resp.statistics.size.estimated_on #=> Time
     #
-    # @overload describe_channel(params = {})
+    # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, options = {})
+    def describe_channel(params = {}, **options)
       req = build_request(:describe_channel, params)
       req.send_request(options)
     end
@@ -1109,9 +1109,9 @@ module Aws::IoTAnalytics
     #   resp.dataset.late_data_rules[0].rule_name #=> String
     #   resp.dataset.late_data_rules[0].rule_configuration.delta_time_session_window_configuration.timeout_in_minutes #=> Integer
     #
-    # @overload describe_dataset(params = {})
+    # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, options = {})
+    def describe_dataset(params = {}, **options)
       req = build_request(:describe_dataset, params)
       req.send_request(options)
     end
@@ -1157,9 +1157,9 @@ module Aws::IoTAnalytics
     #   resp.statistics.size.estimated_size_in_bytes #=> Float
     #   resp.statistics.size.estimated_on #=> Time
     #
-    # @overload describe_datastore(params = {})
+    # @overload describe_datastore(**params)
     # @param [Hash] params ({})
-    def describe_datastore(params = {}, options = {})
+    def describe_datastore(params = {}, **options)
       req = build_request(:describe_datastore, params)
       req.send_request(options)
     end
@@ -1177,9 +1177,9 @@ module Aws::IoTAnalytics
     #   resp.logging_options.level #=> String, one of "ERROR"
     #   resp.logging_options.enabled #=> Boolean
     #
-    # @overload describe_logging_options(params = {})
+    # @overload describe_logging_options(**params)
     # @param [Hash] params ({})
-    def describe_logging_options(params = {}, options = {})
+    def describe_logging_options(params = {}, **options)
       req = build_request(:describe_logging_options, params)
       req.send_request(options)
     end
@@ -1249,9 +1249,9 @@ module Aws::IoTAnalytics
     #   resp.pipeline.creation_time #=> Time
     #   resp.pipeline.last_update_time #=> Time
     #
-    # @overload describe_pipeline(params = {})
+    # @overload describe_pipeline(**params)
     # @param [Hash] params ({})
-    def describe_pipeline(params = {}, options = {})
+    def describe_pipeline(params = {}, **options)
       req = build_request(:describe_pipeline, params)
       req.send_request(options)
     end
@@ -1289,9 +1289,9 @@ module Aws::IoTAnalytics
     #   resp.status.state #=> String, one of "CREATING", "SUCCEEDED", "FAILED"
     #   resp.status.reason #=> String
     #
-    # @overload get_dataset_content(params = {})
+    # @overload get_dataset_content(**params)
     # @param [Hash] params ({})
-    def get_dataset_content(params = {}, options = {})
+    def get_dataset_content(params = {}, **options)
       req = build_request(:get_dataset_content, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::IoTAnalytics
     #   resp.channel_summaries[0].last_message_arrival_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_channels(params = {})
+    # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, options = {})
+    def list_channels(params = {}, **options)
       req = build_request(:list_channels, params)
       req.send_request(options)
     end
@@ -1389,9 +1389,9 @@ module Aws::IoTAnalytics
     #   resp.dataset_content_summaries[0].completion_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_dataset_contents(params = {})
+    # @overload list_dataset_contents(**params)
     # @param [Hash] params ({})
-    def list_dataset_contents(params = {}, options = {})
+    def list_dataset_contents(params = {}, **options)
       req = build_request(:list_dataset_contents, params)
       req.send_request(options)
     end
@@ -1435,9 +1435,9 @@ module Aws::IoTAnalytics
     #   resp.dataset_summaries[0].actions[0].action_type #=> String, one of "QUERY", "CONTAINER"
     #   resp.next_token #=> String
     #
-    # @overload list_datasets(params = {})
+    # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, options = {})
+    def list_datasets(params = {}, **options)
       req = build_request(:list_datasets, params)
       req.send_request(options)
     end
@@ -1480,9 +1480,9 @@ module Aws::IoTAnalytics
     #   resp.datastore_summaries[0].file_format_type #=> String, one of "JSON", "PARQUET"
     #   resp.next_token #=> String
     #
-    # @overload list_datastores(params = {})
+    # @overload list_datastores(**params)
     # @param [Hash] params ({})
-    def list_datastores(params = {}, options = {})
+    def list_datastores(params = {}, **options)
       req = build_request(:list_datastores, params)
       req.send_request(options)
     end
@@ -1523,9 +1523,9 @@ module Aws::IoTAnalytics
     #   resp.pipeline_summaries[0].last_update_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_pipelines(params = {})
+    # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, options = {})
+    def list_pipelines(params = {}, **options)
       req = build_request(:list_pipelines, params)
       req.send_request(options)
     end
@@ -1551,9 +1551,9 @@ module Aws::IoTAnalytics
     #   resp.tags[0].key #=> String
     #   resp.tags[0].value #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1581,9 +1581,9 @@ module Aws::IoTAnalytics
     #     },
     #   })
     #
-    # @overload put_logging_options(params = {})
+    # @overload put_logging_options(**params)
     # @param [Hash] params ({})
-    def put_logging_options(params = {}, options = {})
+    def put_logging_options(params = {}, **options)
       req = build_request(:put_logging_options, params)
       req.send_request(options)
     end
@@ -1678,9 +1678,9 @@ module Aws::IoTAnalytics
     #   resp.payloads[0] #=> String
     #   resp.log_result #=> String
     #
-    # @overload run_pipeline_activity(params = {})
+    # @overload run_pipeline_activity(**params)
     # @param [Hash] params ({})
-    def run_pipeline_activity(params = {}, options = {})
+    def run_pipeline_activity(params = {}, **options)
       req = build_request(:run_pipeline_activity, params)
       req.send_request(options)
     end
@@ -1719,9 +1719,9 @@ module Aws::IoTAnalytics
     #   resp.payloads #=> Array
     #   resp.payloads[0] #=> String
     #
-    # @overload sample_channel_data(params = {})
+    # @overload sample_channel_data(**params)
     # @param [Hash] params ({})
-    def sample_channel_data(params = {}, options = {})
+    def sample_channel_data(params = {}, **options)
       req = build_request(:sample_channel_data, params)
       req.send_request(options)
     end
@@ -1769,9 +1769,9 @@ module Aws::IoTAnalytics
     #
     #   resp.reprocessing_id #=> String
     #
-    # @overload start_pipeline_reprocessing(params = {})
+    # @overload start_pipeline_reprocessing(**params)
     # @param [Hash] params ({})
-    def start_pipeline_reprocessing(params = {}, options = {})
+    def start_pipeline_reprocessing(params = {}, **options)
       req = build_request(:start_pipeline_reprocessing, params)
       req.send_request(options)
     end
@@ -1799,9 +1799,9 @@ module Aws::IoTAnalytics
     #     ],
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1823,9 +1823,9 @@ module Aws::IoTAnalytics
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1867,9 +1867,9 @@ module Aws::IoTAnalytics
     #     },
     #   })
     #
-    # @overload update_channel(params = {})
+    # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, options = {})
+    def update_channel(params = {}, **options)
       req = build_request(:update_channel, params)
       req.send_request(options)
     end
@@ -2007,9 +2007,9 @@ module Aws::IoTAnalytics
     #     ],
     #   })
     #
-    # @overload update_dataset(params = {})
+    # @overload update_dataset(**params)
     # @param [Hash] params ({})
-    def update_dataset(params = {}, options = {})
+    def update_dataset(params = {}, **options)
       req = build_request(:update_dataset, params)
       req.send_request(options)
     end
@@ -2077,9 +2077,9 @@ module Aws::IoTAnalytics
     #     },
     #   })
     #
-    # @overload update_datastore(params = {})
+    # @overload update_datastore(**params)
     # @param [Hash] params ({})
-    def update_datastore(params = {}, options = {})
+    def update_datastore(params = {}, **options)
       req = build_request(:update_datastore, params)
       req.send_request(options)
     end
@@ -2174,9 +2174,9 @@ module Aws::IoTAnalytics
     #     ],
     #   })
     #
-    # @overload update_pipeline(params = {})
+    # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, options = {})
+    def update_pipeline(params = {}, **options)
       req = build_request(:update_pipeline, params)
       req.send_request(options)
     end
@@ -2185,7 +2185,7 @@ module Aws::IoTAnalytics
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2193,15 +2193,15 @@ module Aws::IoTAnalytics
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotanalytics'
-      context[:gem_version] = '1.36.0'
+      context[:gem_name] = "aws-sdk-iotanalytics"
+      context[:gem_version] = "1.36.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

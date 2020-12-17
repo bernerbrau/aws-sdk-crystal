@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::Lambda
   # Waiters are utility methods that poll for a particular state to occur
@@ -117,7 +117,7 @@ module Aws::Lambda
 
       # @option (see Client#get_function_configuration)
       # @return (see Client#get_function_configuration)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -159,7 +159,7 @@ module Aws::Lambda
 
       # @option (see Client#get_function)
       # @return (see Client#get_function)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -210,7 +210,7 @@ module Aws::Lambda
 
       # @option (see Client#get_function_configuration)
       # @return (see Client#get_function_configuration)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

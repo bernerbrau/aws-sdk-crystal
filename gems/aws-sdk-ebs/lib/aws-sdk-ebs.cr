@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ebs/types'
-require_relative 'aws-sdk-ebs/client_api'
-require_relative 'aws-sdk-ebs/client'
-require_relative 'aws-sdk-ebs/errors'
-require_relative 'aws-sdk-ebs/resource'
-require_relative 'aws-sdk-ebs/customizations'
+require_relative "aws-sdk-ebs/types"
+require_relative "aws-sdk-ebs/client_api"
+require_relative "aws-sdk-ebs/client"
+require_relative "aws-sdk-ebs/errors"
+require_relative "aws-sdk-ebs/resource"
+require_relative "aws-sdk-ebs/customizations"
 
 # This module provides support for Amazon Elastic Block Store. This module is available in the
 # `aws-sdk-ebs` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ebs/customizations'
 # @!group service
 module Aws::EBS
 
-  GEM_VERSION = '1.11.0'
+  GEM_VERSION = "1.11.0"
 
 end

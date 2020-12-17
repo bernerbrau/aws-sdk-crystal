@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::CloudFormation
   # Waiters are utility methods that poll for a particular state to occur
@@ -121,7 +121,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_change_set)
       # @return (see Client#describe_change_set)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -195,7 +195,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_stacks)
       # @return (see Client#describe_stacks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -275,7 +275,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_stacks)
       # @return (see Client#describe_stacks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -317,7 +317,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_stacks)
       # @return (see Client#describe_stacks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -391,7 +391,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_stacks)
       # @return (see Client#describe_stacks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -453,7 +453,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_stacks)
       # @return (see Client#describe_stacks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -515,7 +515,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_stacks)
       # @return (see Client#describe_stacks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -560,7 +560,7 @@ module Aws::CloudFormation
 
       # @option (see Client#describe_type_registration)
       # @return (see Client#describe_type_registration)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

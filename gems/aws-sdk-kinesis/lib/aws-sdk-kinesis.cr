@@ -8,18 +8,18 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-kinesis/types'
-require_relative 'aws-sdk-kinesis/client_api'
-require_relative 'aws-sdk-kinesis/client'
-require_relative 'aws-sdk-kinesis/errors'
-require_relative 'aws-sdk-kinesis/waiters'
-require_relative 'aws-sdk-kinesis/resource'
-require_relative 'aws-sdk-kinesis/customizations'
-require_relative 'aws-sdk-kinesis/async_client'
-require_relative 'aws-sdk-kinesis/event_streams'
+require_relative "aws-sdk-kinesis/types"
+require_relative "aws-sdk-kinesis/client_api"
+require_relative "aws-sdk-kinesis/client"
+require_relative "aws-sdk-kinesis/errors"
+require_relative "aws-sdk-kinesis/waiters"
+require_relative "aws-sdk-kinesis/resource"
+require_relative "aws-sdk-kinesis/customizations"
+require_relative "aws-sdk-kinesis/async_client"
+require_relative "aws-sdk-kinesis/event_streams"
 
 # This module provides support for Amazon Kinesis. This module is available in the
 # `aws-sdk-kinesis` gem.
@@ -51,6 +51,6 @@ require_relative 'aws-sdk-kinesis/event_streams'
 # @!group service
 module Aws::Kinesis
 
-  GEM_VERSION = '1.30.0'
+  GEM_VERSION = "1.30.0"
 
 end

@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-neptune/types'
-require_relative 'aws-sdk-neptune/client_api'
-require_relative 'aws-sdk-neptune/client'
-require_relative 'aws-sdk-neptune/errors'
-require_relative 'aws-sdk-neptune/waiters'
-require_relative 'aws-sdk-neptune/resource'
-require_relative 'aws-sdk-neptune/customizations'
+require_relative "aws-sdk-neptune/types"
+require_relative "aws-sdk-neptune/client_api"
+require_relative "aws-sdk-neptune/client"
+require_relative "aws-sdk-neptune/errors"
+require_relative "aws-sdk-neptune/waiters"
+require_relative "aws-sdk-neptune/resource"
+require_relative "aws-sdk-neptune/customizations"
 
 # This module provides support for Amazon Neptune. This module is available in the
 # `aws-sdk-neptune` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-neptune/customizations'
 # @!group service
 module Aws::Neptune
 
-  GEM_VERSION = '1.32.0'
+  GEM_VERSION = "1.32.0"
 
 end

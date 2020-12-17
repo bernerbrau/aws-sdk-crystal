@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotsecuretunneling/types'
-require_relative 'aws-sdk-iotsecuretunneling/client_api'
-require_relative 'aws-sdk-iotsecuretunneling/client'
-require_relative 'aws-sdk-iotsecuretunneling/errors'
-require_relative 'aws-sdk-iotsecuretunneling/resource'
-require_relative 'aws-sdk-iotsecuretunneling/customizations'
+require_relative "aws-sdk-iotsecuretunneling/types"
+require_relative "aws-sdk-iotsecuretunneling/client_api"
+require_relative "aws-sdk-iotsecuretunneling/client"
+require_relative "aws-sdk-iotsecuretunneling/errors"
+require_relative "aws-sdk-iotsecuretunneling/resource"
+require_relative "aws-sdk-iotsecuretunneling/customizations"
 
 # This module provides support for AWS IoT Secure Tunneling. This module is available in the
 # `aws-sdk-iotsecuretunneling` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotsecuretunneling/customizations'
 # @!group service
 module Aws::IoTSecureTunneling
 
-  GEM_VERSION = '1.9.0'
+  GEM_VERSION = "1.9.0"
 
 end

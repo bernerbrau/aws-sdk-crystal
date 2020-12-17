@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::CloudWatch
   # Waiters are utility methods that poll for a particular state to occur
@@ -101,7 +101,7 @@ module Aws::CloudWatch
 
       # @option (see Client#describe_alarms)
       # @return (see Client#describe_alarms)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -137,7 +137,7 @@ module Aws::CloudWatch
 
       # @option (see Client#describe_alarms)
       # @return (see Client#describe_alarms)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

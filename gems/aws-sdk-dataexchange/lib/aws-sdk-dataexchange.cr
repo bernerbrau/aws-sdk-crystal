@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-dataexchange/types'
-require_relative 'aws-sdk-dataexchange/client_api'
-require_relative 'aws-sdk-dataexchange/client'
-require_relative 'aws-sdk-dataexchange/errors'
-require_relative 'aws-sdk-dataexchange/resource'
-require_relative 'aws-sdk-dataexchange/customizations'
+require_relative "aws-sdk-dataexchange/types"
+require_relative "aws-sdk-dataexchange/client_api"
+require_relative "aws-sdk-dataexchange/client"
+require_relative "aws-sdk-dataexchange/errors"
+require_relative "aws-sdk-dataexchange/resource"
+require_relative "aws-sdk-dataexchange/customizations"
 
 # This module provides support for AWS Data Exchange. This module is available in the
 # `aws-sdk-dataexchange` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-dataexchange/customizations'
 # @!group service
 module Aws::DataExchange
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

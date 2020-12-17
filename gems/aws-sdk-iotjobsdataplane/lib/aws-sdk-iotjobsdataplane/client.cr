@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotjobsdataplane)
 
@@ -280,7 +280,7 @@ module Aws::IoTJobsDataPlane
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -373,9 +373,9 @@ module Aws::IoTJobsDataPlane
     #   resp.execution.execution_number #=> Integer
     #   resp.execution.job_document #=> String
     #
-    # @overload describe_job_execution(params = {})
+    # @overload describe_job_execution(**params)
     # @param [Hash] params ({})
-    def describe_job_execution(params = {}, options = {})
+    def describe_job_execution(params = {}, **options)
       req = build_request(:describe_job_execution, params)
       req.send_request(options)
     end
@@ -414,9 +414,9 @@ module Aws::IoTJobsDataPlane
     #   resp.queued_jobs[0].version_number #=> Integer
     #   resp.queued_jobs[0].execution_number #=> Integer
     #
-    # @overload get_pending_job_executions(params = {})
+    # @overload get_pending_job_executions(**params)
     # @param [Hash] params ({})
-    def get_pending_job_executions(params = {}, options = {})
+    def get_pending_job_executions(params = {}, **options)
       req = build_request(:get_pending_job_executions, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::IoTJobsDataPlane
     #   resp.execution.execution_number #=> Integer
     #   resp.execution.job_document #=> String
     #
-    # @overload start_next_pending_job_execution(params = {})
+    # @overload start_next_pending_job_execution(**params)
     # @param [Hash] params ({})
-    def start_next_pending_job_execution(params = {}, options = {})
+    def start_next_pending_job_execution(params = {}, **options)
       req = build_request(:start_next_pending_job_execution, params)
       req.send_request(options)
     end
@@ -555,9 +555,9 @@ module Aws::IoTJobsDataPlane
     #   resp.execution_state.version_number #=> Integer
     #   resp.job_document #=> String
     #
-    # @overload update_job_execution(params = {})
+    # @overload update_job_execution(**params)
     # @param [Hash] params ({})
-    def update_job_execution(params = {}, options = {})
+    def update_job_execution(params = {}, **options)
       req = build_request(:update_job_execution, params)
       req.send_request(options)
     end
@@ -566,7 +566,7 @@ module Aws::IoTJobsDataPlane
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -574,15 +574,15 @@ module Aws::IoTJobsDataPlane
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotjobsdataplane'
-      context[:gem_version] = '1.25.0'
+      context[:gem_name] = "aws-sdk-iotjobsdataplane"
+      context[:gem_version] = "1.25.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

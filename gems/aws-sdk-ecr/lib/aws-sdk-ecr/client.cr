@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ecr)
 
@@ -290,7 +290,7 @@ module Aws::ECR
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -388,9 +388,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/BatchCheckLayerAvailability AWS API Documentation
     #
-    # @overload batch_check_layer_availability(params = {})
+    # @overload batch_check_layer_availability(**params)
     # @param [Hash] params ({})
-    def batch_check_layer_availability(params = {}, options = {})
+    def batch_check_layer_availability(params = {}, **options)
       req = build_request(:batch_check_layer_availability, params)
       req.send_request(options)
     end
@@ -476,9 +476,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/BatchDeleteImage AWS API Documentation
     #
-    # @overload batch_delete_image(params = {})
+    # @overload batch_delete_image(**params)
     # @param [Hash] params ({})
-    def batch_delete_image(params = {}, options = {})
+    def batch_delete_image(params = {}, **options)
       req = build_request(:batch_delete_image, params)
       req.send_request(options)
     end
@@ -577,9 +577,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/BatchGetImage AWS API Documentation
     #
-    # @overload batch_get_image(params = {})
+    # @overload batch_get_image(**params)
     # @param [Hash] params ({})
-    def batch_get_image(params = {}, options = {})
+    def batch_get_image(params = {}, **options)
       req = build_request(:batch_get_image, params)
       req.send_request(options)
     end
@@ -638,9 +638,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CompleteLayerUpload AWS API Documentation
     #
-    # @overload complete_layer_upload(params = {})
+    # @overload complete_layer_upload(**params)
     # @param [Hash] params ({})
-    def complete_layer_upload(params = {}, options = {})
+    def complete_layer_upload(params = {}, **options)
       req = build_request(:complete_layer_upload, params)
       req.send_request(options)
     end
@@ -739,9 +739,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreateRepository AWS API Documentation
     #
-    # @overload create_repository(params = {})
+    # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, options = {})
+    def create_repository(params = {}, **options)
       req = build_request(:create_repository, params)
       req.send_request(options)
     end
@@ -779,9 +779,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteLifecyclePolicy AWS API Documentation
     #
-    # @overload delete_lifecycle_policy(params = {})
+    # @overload delete_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_policy(params = {}, options = {})
+    def delete_lifecycle_policy(params = {}, **options)
       req = build_request(:delete_lifecycle_policy, params)
       req.send_request(options)
     end
@@ -800,9 +800,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRegistryPolicy AWS API Documentation
     #
-    # @overload delete_registry_policy(params = {})
+    # @overload delete_registry_policy(**params)
     # @param [Hash] params ({})
-    def delete_registry_policy(params = {}, options = {})
+    def delete_registry_policy(params = {}, **options)
       req = build_request(:delete_registry_policy, params)
       req.send_request(options)
     end
@@ -868,9 +868,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRepository AWS API Documentation
     #
-    # @overload delete_repository(params = {})
+    # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, options = {})
+    def delete_repository(params = {}, **options)
       req = build_request(:delete_repository, params)
       req.send_request(options)
     end
@@ -924,9 +924,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRepositoryPolicy AWS API Documentation
     #
-    # @overload delete_repository_policy(params = {})
+    # @overload delete_repository_policy(**params)
     # @param [Hash] params ({})
-    def delete_repository_policy(params = {}, options = {})
+    def delete_repository_policy(params = {}, **options)
       req = build_request(:delete_repository_policy, params)
       req.send_request(options)
     end
@@ -1015,9 +1015,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImageScanFindings AWS API Documentation
     #
-    # @overload describe_image_scan_findings(params = {})
+    # @overload describe_image_scan_findings(**params)
     # @param [Hash] params ({})
-    def describe_image_scan_findings(params = {}, options = {})
+    def describe_image_scan_findings(params = {}, **options)
       req = build_request(:describe_image_scan_findings, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImages AWS API Documentation
     #
-    # @overload describe_images(params = {})
+    # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, options = {})
+    def describe_images(params = {}, **options)
       req = build_request(:describe_images, params)
       req.send_request(options)
     end
@@ -1139,9 +1139,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeRegistry AWS API Documentation
     #
-    # @overload describe_registry(params = {})
+    # @overload describe_registry(**params)
     # @param [Hash] params ({})
-    def describe_registry(params = {}, options = {})
+    def describe_registry(params = {}, **options)
       req = build_request(:describe_registry, params)
       req.send_request(options)
     end
@@ -1241,9 +1241,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeRepositories AWS API Documentation
     #
-    # @overload describe_repositories(params = {})
+    # @overload describe_repositories(**params)
     # @param [Hash] params ({})
-    def describe_repositories(params = {}, options = {})
+    def describe_repositories(params = {}, **options)
       req = build_request(:describe_repositories, params)
       req.send_request(options)
     end
@@ -1307,9 +1307,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetAuthorizationToken AWS API Documentation
     #
-    # @overload get_authorization_token(params = {})
+    # @overload get_authorization_token(**params)
     # @param [Hash] params ({})
-    def get_authorization_token(params = {}, options = {})
+    def get_authorization_token(params = {}, **options)
       req = build_request(:get_authorization_token, params)
       req.send_request(options)
     end
@@ -1359,9 +1359,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetDownloadUrlForLayer AWS API Documentation
     #
-    # @overload get_download_url_for_layer(params = {})
+    # @overload get_download_url_for_layer(**params)
     # @param [Hash] params ({})
-    def get_download_url_for_layer(params = {}, options = {})
+    def get_download_url_for_layer(params = {}, **options)
       req = build_request(:get_download_url_for_layer, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetLifecyclePolicy AWS API Documentation
     #
-    # @overload get_lifecycle_policy(params = {})
+    # @overload get_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy(params = {}, options = {})
+    def get_lifecycle_policy(params = {}, **options)
       req = build_request(:get_lifecycle_policy, params)
       req.send_request(options)
     end
@@ -1499,9 +1499,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetLifecyclePolicyPreview AWS API Documentation
     #
-    # @overload get_lifecycle_policy_preview(params = {})
+    # @overload get_lifecycle_policy_preview(**params)
     # @param [Hash] params ({})
-    def get_lifecycle_policy_preview(params = {}, options = {})
+    def get_lifecycle_policy_preview(params = {}, **options)
       req = build_request(:get_lifecycle_policy_preview, params)
       req.send_request(options)
     end
@@ -1520,9 +1520,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRegistryPolicy AWS API Documentation
     #
-    # @overload get_registry_policy(params = {})
+    # @overload get_registry_policy(**params)
     # @param [Hash] params ({})
-    def get_registry_policy(params = {}, options = {})
+    def get_registry_policy(params = {}, **options)
       req = build_request(:get_registry_policy, params)
       req.send_request(options)
     end
@@ -1574,9 +1574,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRepositoryPolicy AWS API Documentation
     #
-    # @overload get_repository_policy(params = {})
+    # @overload get_repository_policy(**params)
     # @param [Hash] params ({})
-    def get_repository_policy(params = {}, options = {})
+    def get_repository_policy(params = {}, **options)
       req = build_request(:get_repository_policy, params)
       req.send_request(options)
     end
@@ -1621,9 +1621,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/InitiateLayerUpload AWS API Documentation
     #
-    # @overload initiate_layer_upload(params = {})
+    # @overload initiate_layer_upload(**params)
     # @param [Hash] params ({})
-    def initiate_layer_upload(params = {}, options = {})
+    def initiate_layer_upload(params = {}, **options)
       req = build_request(:initiate_layer_upload, params)
       req.send_request(options)
     end
@@ -1719,9 +1719,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/ListImages AWS API Documentation
     #
-    # @overload list_images(params = {})
+    # @overload list_images(**params)
     # @param [Hash] params ({})
-    def list_images(params = {}, options = {})
+    def list_images(params = {}, **options)
       req = build_request(:list_images, params)
       req.send_request(options)
     end
@@ -1751,9 +1751,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1821,9 +1821,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutImage AWS API Documentation
     #
-    # @overload put_image(params = {})
+    # @overload put_image(**params)
     # @param [Hash] params ({})
-    def put_image(params = {}, options = {})
+    def put_image(params = {}, **options)
       req = build_request(:put_image, params)
       req.send_request(options)
     end
@@ -1869,9 +1869,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutImageScanningConfiguration AWS API Documentation
     #
-    # @overload put_image_scanning_configuration(params = {})
+    # @overload put_image_scanning_configuration(**params)
     # @param [Hash] params ({})
-    def put_image_scanning_configuration(params = {}, options = {})
+    def put_image_scanning_configuration(params = {}, **options)
       req = build_request(:put_image_scanning_configuration, params)
       req.send_request(options)
     end
@@ -1921,9 +1921,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutImageTagMutability AWS API Documentation
     #
-    # @overload put_image_tag_mutability(params = {})
+    # @overload put_image_tag_mutability(**params)
     # @param [Hash] params ({})
-    def put_image_tag_mutability(params = {}, options = {})
+    def put_image_tag_mutability(params = {}, **options)
       req = build_request(:put_image_tag_mutability, params)
       req.send_request(options)
     end
@@ -1968,9 +1968,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutLifecyclePolicy AWS API Documentation
     #
-    # @overload put_lifecycle_policy(params = {})
+    # @overload put_lifecycle_policy(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_policy(params = {}, options = {})
+    def put_lifecycle_policy(params = {}, **options)
       req = build_request(:put_lifecycle_policy, params)
       req.send_request(options)
     end
@@ -2014,9 +2014,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutRegistryPolicy AWS API Documentation
     #
-    # @overload put_registry_policy(params = {})
+    # @overload put_registry_policy(**params)
     # @param [Hash] params ({})
-    def put_registry_policy(params = {}, options = {})
+    def put_registry_policy(params = {}, **options)
       req = build_request(:put_registry_policy, params)
       req.send_request(options)
     end
@@ -2073,9 +2073,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutReplicationConfiguration AWS API Documentation
     #
-    # @overload put_replication_configuration(params = {})
+    # @overload put_replication_configuration(**params)
     # @param [Hash] params ({})
-    def put_replication_configuration(params = {}, options = {})
+    def put_replication_configuration(params = {}, **options)
       req = build_request(:put_replication_configuration, params)
       req.send_request(options)
     end
@@ -2134,9 +2134,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/SetRepositoryPolicy AWS API Documentation
     #
-    # @overload set_repository_policy(params = {})
+    # @overload set_repository_policy(**params)
     # @param [Hash] params ({})
-    def set_repository_policy(params = {}, options = {})
+    def set_repository_policy(params = {}, **options)
       req = build_request(:set_repository_policy, params)
       req.send_request(options)
     end
@@ -2190,9 +2190,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/StartImageScan AWS API Documentation
     #
-    # @overload start_image_scan(params = {})
+    # @overload start_image_scan(**params)
     # @param [Hash] params ({})
-    def start_image_scan(params = {}, options = {})
+    def start_image_scan(params = {}, **options)
       req = build_request(:start_image_scan, params)
       req.send_request(options)
     end
@@ -2237,9 +2237,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/StartLifecyclePolicyPreview AWS API Documentation
     #
-    # @overload start_lifecycle_policy_preview(params = {})
+    # @overload start_lifecycle_policy_preview(**params)
     # @param [Hash] params ({})
-    def start_lifecycle_policy_preview(params = {}, options = {})
+    def start_lifecycle_policy_preview(params = {}, **options)
       req = build_request(:start_lifecycle_policy_preview, params)
       req.send_request(options)
     end
@@ -2274,9 +2274,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2302,9 +2302,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2372,9 +2372,9 @@ module Aws::ECR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/UploadLayerPart AWS API Documentation
     #
-    # @overload upload_layer_part(params = {})
+    # @overload upload_layer_part(**params)
     # @param [Hash] params ({})
-    def upload_layer_part(params = {}, options = {})
+    def upload_layer_part(params = {}, **options)
       req = build_request(:upload_layer_part, params)
       req.send_request(options)
     end
@@ -2383,7 +2383,7 @@ module Aws::ECR
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2391,8 +2391,8 @@ module Aws::ECR
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ecr'
-      context[:gem_version] = '1.40.0'
+      context[:gem_name] = "aws-sdk-ecr"
+      context[:gem_version] = "1.40.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -2485,7 +2485,7 @@ module Aws::ECR
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -2501,7 +2501,7 @@ module Aws::ECR
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

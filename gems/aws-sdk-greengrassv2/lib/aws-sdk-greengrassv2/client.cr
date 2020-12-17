@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:greengrassv2)
 
@@ -280,7 +280,7 @@ module Aws::GreengrassV2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -351,9 +351,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CancelDeployment AWS API Documentation
     #
-    # @overload cancel_deployment(params = {})
+    # @overload cancel_deployment(**params)
     # @param [Hash] params ({})
-    def cancel_deployment(params = {}, options = {})
+    def cancel_deployment(params = {}, **options)
       req = build_request(:cancel_deployment, params)
       req.send_request(options)
     end
@@ -518,9 +518,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CreateComponentVersion AWS API Documentation
     #
-    # @overload create_component_version(params = {})
+    # @overload create_component_version(**params)
     # @param [Hash] params ({})
-    def create_component_version(params = {}, options = {})
+    def create_component_version(params = {}, **options)
       req = build_request(:create_component_version, params)
       req.send_request(options)
     end
@@ -657,9 +657,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CreateDeployment AWS API Documentation
     #
-    # @overload create_deployment(params = {})
+    # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, options = {})
+    def create_deployment(params = {}, **options)
       req = build_request(:create_deployment, params)
       req.send_request(options)
     end
@@ -691,9 +691,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DeleteComponent AWS API Documentation
     #
-    # @overload delete_component(params = {})
+    # @overload delete_component(**params)
     # @param [Hash] params ({})
-    def delete_component(params = {}, options = {})
+    def delete_component(params = {}, **options)
       req = build_request(:delete_component, params)
       req.send_request(options)
     end
@@ -722,9 +722,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DeleteCoreDevice AWS API Documentation
     #
-    # @overload delete_core_device(params = {})
+    # @overload delete_core_device(**params)
     # @param [Hash] params ({})
-    def delete_core_device(params = {}, options = {})
+    def delete_core_device(params = {}, **options)
       req = build_request(:delete_core_device, params)
       req.send_request(options)
     end
@@ -777,9 +777,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DescribeComponent AWS API Documentation
     #
-    # @overload describe_component(params = {})
+    # @overload describe_component(**params)
     # @param [Hash] params ({})
-    def describe_component(params = {}, options = {})
+    def describe_component(params = {}, **options)
       req = build_request(:describe_component, params)
       req.send_request(options)
     end
@@ -820,9 +820,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetComponent AWS API Documentation
     #
-    # @overload get_component(params = {})
+    # @overload get_component(**params)
     # @param [Hash] params ({})
-    def get_component(params = {}, options = {})
+    def get_component(params = {}, **options)
       req = build_request(:get_component, params)
       req.send_request(options)
     end
@@ -858,9 +858,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetComponentVersionArtifact AWS API Documentation
     #
-    # @overload get_component_version_artifact(params = {})
+    # @overload get_component_version_artifact(**params)
     # @param [Hash] params ({})
-    def get_component_version_artifact(params = {}, options = {})
+    def get_component_version_artifact(params = {}, **options)
       req = build_request(:get_component_version_artifact, params)
       req.send_request(options)
     end
@@ -900,9 +900,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetCoreDevice AWS API Documentation
     #
-    # @overload get_core_device(params = {})
+    # @overload get_core_device(**params)
     # @param [Hash] params ({})
-    def get_core_device(params = {}, options = {})
+    def get_core_device(params = {}, **options)
       req = build_request(:get_core_device, params)
       req.send_request(options)
     end
@@ -972,9 +972,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetDeployment AWS API Documentation
     #
-    # @overload get_deployment(params = {})
+    # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, options = {})
+    def get_deployment(params = {}, **options)
       req = build_request(:get_deployment, params)
       req.send_request(options)
     end
@@ -1019,9 +1019,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListComponentVersions AWS API Documentation
     #
-    # @overload list_component_versions(params = {})
+    # @overload list_component_versions(**params)
     # @param [Hash] params ({})
-    def list_component_versions(params = {}, options = {})
+    def list_component_versions(params = {}, **options)
       req = build_request(:list_component_versions, params)
       req.send_request(options)
     end
@@ -1073,9 +1073,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListComponents AWS API Documentation
     #
-    # @overload list_components(params = {})
+    # @overload list_components(**params)
     # @param [Hash] params ({})
-    def list_components(params = {}, options = {})
+    def list_components(params = {}, **options)
       req = build_request(:list_components, params)
       req.send_request(options)
     end
@@ -1134,9 +1134,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListCoreDevices AWS API Documentation
     #
-    # @overload list_core_devices(params = {})
+    # @overload list_core_devices(**params)
     # @param [Hash] params ({})
-    def list_core_devices(params = {}, options = {})
+    def list_core_devices(params = {}, **options)
       req = build_request(:list_core_devices, params)
       req.send_request(options)
     end
@@ -1197,9 +1197,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListDeployments AWS API Documentation
     #
-    # @overload list_deployments(params = {})
+    # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, options = {})
+    def list_deployments(params = {}, **options)
       req = build_request(:list_deployments, params)
       req.send_request(options)
     end
@@ -1249,9 +1249,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListEffectiveDeployments AWS API Documentation
     #
-    # @overload list_effective_deployments(params = {})
+    # @overload list_effective_deployments(**params)
     # @param [Hash] params ({})
-    def list_effective_deployments(params = {}, options = {})
+    def list_effective_deployments(params = {}, **options)
       req = build_request(:list_effective_deployments, params)
       req.send_request(options)
     end
@@ -1296,9 +1296,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListInstalledComponents AWS API Documentation
     #
-    # @overload list_installed_components(params = {})
+    # @overload list_installed_components(**params)
     # @param [Hash] params ({})
-    def list_installed_components(params = {}, options = {})
+    def list_installed_components(params = {}, **options)
       req = build_request(:list_installed_components, params)
       req.send_request(options)
     end
@@ -1329,9 +1329,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1401,9 +1401,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ResolveComponentCandidates AWS API Documentation
     #
-    # @overload resolve_component_candidates(params = {})
+    # @overload resolve_component_candidates(**params)
     # @param [Hash] params ({})
-    def resolve_component_candidates(params = {}, options = {})
+    def resolve_component_candidates(params = {}, **options)
       req = build_request(:resolve_component_candidates, params)
       req.send_request(options)
     end
@@ -1440,9 +1440,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1470,9 +1470,9 @@ module Aws::GreengrassV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1481,7 +1481,7 @@ module Aws::GreengrassV2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1489,15 +1489,15 @@ module Aws::GreengrassV2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-greengrassv2'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-greengrassv2"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

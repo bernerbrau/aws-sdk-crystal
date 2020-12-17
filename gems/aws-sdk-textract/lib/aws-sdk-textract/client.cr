@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:textract)
 
@@ -290,7 +290,7 @@ module Aws::Textract
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -460,9 +460,9 @@ module Aws::Textract
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/AnalyzeDocument AWS API Documentation
     #
-    # @overload analyze_document(params = {})
+    # @overload analyze_document(**params)
     # @param [Hash] params ({})
-    def analyze_document(params = {}, options = {})
+    def analyze_document(params = {}, **options)
       req = build_request(:analyze_document, params)
       req.send_request(options)
     end
@@ -547,9 +547,9 @@ module Aws::Textract
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/DetectDocumentText AWS API Documentation
     #
-    # @overload detect_document_text(params = {})
+    # @overload detect_document_text(**params)
     # @param [Hash] params ({})
-    def detect_document_text(params = {}, options = {})
+    def detect_document_text(params = {}, **options)
       req = build_request(:detect_document_text, params)
       req.send_request(options)
     end
@@ -679,9 +679,9 @@ module Aws::Textract
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetDocumentAnalysis AWS API Documentation
     #
-    # @overload get_document_analysis(params = {})
+    # @overload get_document_analysis(**params)
     # @param [Hash] params ({})
-    def get_document_analysis(params = {}, options = {})
+    def get_document_analysis(params = {}, **options)
       req = build_request(:get_document_analysis, params)
       req.send_request(options)
     end
@@ -797,9 +797,9 @@ module Aws::Textract
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetDocumentTextDetection AWS API Documentation
     #
-    # @overload get_document_text_detection(params = {})
+    # @overload get_document_text_detection(**params)
     # @param [Hash] params ({})
-    def get_document_text_detection(params = {}, options = {})
+    def get_document_text_detection(params = {}, **options)
       req = build_request(:get_document_text_detection, params)
       req.send_request(options)
     end
@@ -907,9 +907,9 @@ module Aws::Textract
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/StartDocumentAnalysis AWS API Documentation
     #
-    # @overload start_document_analysis(params = {})
+    # @overload start_document_analysis(**params)
     # @param [Hash] params ({})
-    def start_document_analysis(params = {}, options = {})
+    def start_document_analysis(params = {}, **options)
       req = build_request(:start_document_analysis, params)
       req.send_request(options)
     end
@@ -1009,9 +1009,9 @@ module Aws::Textract
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/StartDocumentTextDetection AWS API Documentation
     #
-    # @overload start_document_text_detection(params = {})
+    # @overload start_document_text_detection(**params)
     # @param [Hash] params ({})
-    def start_document_text_detection(params = {}, options = {})
+    def start_document_text_detection(params = {}, **options)
       req = build_request(:start_document_text_detection, params)
       req.send_request(options)
     end
@@ -1020,7 +1020,7 @@ module Aws::Textract
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1028,15 +1028,15 @@ module Aws::Textract
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-textract'
-      context[:gem_version] = '1.22.0'
+      context[:gem_name] = "aws-sdk-textract"
+      context[:gem_version] = "1.22.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

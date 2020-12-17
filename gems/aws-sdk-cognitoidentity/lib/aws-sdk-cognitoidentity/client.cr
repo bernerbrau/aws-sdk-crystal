@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cognitoidentity)
 
@@ -290,7 +290,7 @@ module Aws::CognitoIdentity
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -455,9 +455,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/CreateIdentityPool AWS API Documentation
     #
-    # @overload create_identity_pool(params = {})
+    # @overload create_identity_pool(**params)
     # @param [Hash] params ({})
-    def create_identity_pool(params = {}, options = {})
+    def create_identity_pool(params = {}, **options)
       req = build_request(:create_identity_pool, params)
       req.send_request(options)
     end
@@ -488,9 +488,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/DeleteIdentities AWS API Documentation
     #
-    # @overload delete_identities(params = {})
+    # @overload delete_identities(**params)
     # @param [Hash] params ({})
-    def delete_identities(params = {}, options = {})
+    def delete_identities(params = {}, **options)
       req = build_request(:delete_identities, params)
       req.send_request(options)
     end
@@ -513,9 +513,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/DeleteIdentityPool AWS API Documentation
     #
-    # @overload delete_identity_pool(params = {})
+    # @overload delete_identity_pool(**params)
     # @param [Hash] params ({})
-    def delete_identity_pool(params = {}, options = {})
+    def delete_identity_pool(params = {}, **options)
       req = build_request(:delete_identity_pool, params)
       req.send_request(options)
     end
@@ -551,9 +551,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/DescribeIdentity AWS API Documentation
     #
-    # @overload describe_identity(params = {})
+    # @overload describe_identity(**params)
     # @param [Hash] params ({})
-    def describe_identity(params = {}, options = {})
+    def describe_identity(params = {}, **options)
       req = build_request(:describe_identity, params)
       req.send_request(options)
     end
@@ -607,9 +607,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/DescribeIdentityPool AWS API Documentation
     #
-    # @overload describe_identity_pool(params = {})
+    # @overload describe_identity_pool(**params)
     # @param [Hash] params ({})
-    def describe_identity_pool(params = {}, options = {})
+    def describe_identity_pool(params = {}, **options)
       req = build_request(:describe_identity_pool, params)
       req.send_request(options)
     end
@@ -673,9 +673,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/GetCredentialsForIdentity AWS API Documentation
     #
-    # @overload get_credentials_for_identity(params = {})
+    # @overload get_credentials_for_identity(**params)
     # @param [Hash] params ({})
-    def get_credentials_for_identity(params = {}, options = {})
+    def get_credentials_for_identity(params = {}, **options)
       req = build_request(:get_credentials_for_identity, params)
       req.send_request(options)
     end
@@ -730,9 +730,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/GetId AWS API Documentation
     #
-    # @overload get_id(params = {})
+    # @overload get_id(**params)
     # @param [Hash] params ({})
-    def get_id(params = {}, options = {})
+    def get_id(params = {}, **options)
       req = build_request(:get_id, params)
       req.send_request(options)
     end
@@ -772,9 +772,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/GetIdentityPoolRoles AWS API Documentation
     #
-    # @overload get_identity_pool_roles(params = {})
+    # @overload get_identity_pool_roles(**params)
     # @param [Hash] params ({})
-    def get_identity_pool_roles(params = {}, options = {})
+    def get_identity_pool_roles(params = {}, **options)
       req = build_request(:get_identity_pool_roles, params)
       req.send_request(options)
     end
@@ -819,9 +819,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/GetOpenIdToken AWS API Documentation
     #
-    # @overload get_open_id_token(params = {})
+    # @overload get_open_id_token(**params)
     # @param [Hash] params ({})
-    def get_open_id_token(params = {}, options = {})
+    def get_open_id_token(params = {}, **options)
       req = build_request(:get_open_id_token, params)
       req.send_request(options)
     end
@@ -901,9 +901,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/GetOpenIdTokenForDeveloperIdentity AWS API Documentation
     #
-    # @overload get_open_id_token_for_developer_identity(params = {})
+    # @overload get_open_id_token_for_developer_identity(**params)
     # @param [Hash] params ({})
-    def get_open_id_token_for_developer_identity(params = {}, options = {})
+    def get_open_id_token_for_developer_identity(params = {}, **options)
       req = build_request(:get_open_id_token_for_developer_identity, params)
       req.send_request(options)
     end
@@ -954,9 +954,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/ListIdentities AWS API Documentation
     #
-    # @overload list_identities(params = {})
+    # @overload list_identities(**params)
     # @param [Hash] params ({})
-    def list_identities(params = {}, options = {})
+    def list_identities(params = {}, **options)
       req = build_request(:list_identities, params)
       req.send_request(options)
     end
@@ -994,9 +994,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/ListIdentityPools AWS API Documentation
     #
-    # @overload list_identity_pools(params = {})
+    # @overload list_identity_pools(**params)
     # @param [Hash] params ({})
-    def list_identity_pools(params = {}, options = {})
+    def list_identity_pools(params = {}, **options)
       req = build_request(:list_identity_pools, params)
       req.send_request(options)
     end
@@ -1030,9 +1030,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1105,9 +1105,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/LookupDeveloperIdentity AWS API Documentation
     #
-    # @overload lookup_developer_identity(params = {})
+    # @overload lookup_developer_identity(**params)
     # @param [Hash] params ({})
-    def lookup_developer_identity(params = {}, options = {})
+    def lookup_developer_identity(params = {}, **options)
       req = build_request(:lookup_developer_identity, params)
       req.send_request(options)
     end
@@ -1167,9 +1167,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/MergeDeveloperIdentities AWS API Documentation
     #
-    # @overload merge_developer_identities(params = {})
+    # @overload merge_developer_identities(**params)
     # @param [Hash] params ({})
-    def merge_developer_identities(params = {}, options = {})
+    def merge_developer_identities(params = {}, **options)
       req = build_request(:merge_developer_identities, params)
       req.send_request(options)
     end
@@ -1224,9 +1224,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/SetIdentityPoolRoles AWS API Documentation
     #
-    # @overload set_identity_pool_roles(params = {})
+    # @overload set_identity_pool_roles(**params)
     # @param [Hash] params ({})
-    def set_identity_pool_roles(params = {}, options = {})
+    def set_identity_pool_roles(params = {}, **options)
       req = build_request(:set_identity_pool_roles, params)
       req.send_request(options)
     end
@@ -1272,9 +1272,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1313,9 +1313,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/UnlinkDeveloperIdentity AWS API Documentation
     #
-    # @overload unlink_developer_identity(params = {})
+    # @overload unlink_developer_identity(**params)
     # @param [Hash] params ({})
-    def unlink_developer_identity(params = {}, options = {})
+    def unlink_developer_identity(params = {}, **options)
       req = build_request(:unlink_developer_identity, params)
       req.send_request(options)
     end
@@ -1351,9 +1351,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/UnlinkIdentity AWS API Documentation
     #
-    # @overload unlink_identity(params = {})
+    # @overload unlink_identity(**params)
     # @param [Hash] params ({})
-    def unlink_identity(params = {}, options = {})
+    def unlink_identity(params = {}, **options)
       req = build_request(:unlink_identity, params)
       req.send_request(options)
     end
@@ -1379,9 +1379,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1490,9 +1490,9 @@ module Aws::CognitoIdentity
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/UpdateIdentityPool AWS API Documentation
     #
-    # @overload update_identity_pool(params = {})
+    # @overload update_identity_pool(**params)
     # @param [Hash] params ({})
-    def update_identity_pool(params = {}, options = {})
+    def update_identity_pool(params = {}, **options)
       req = build_request(:update_identity_pool, params)
       req.send_request(options)
     end
@@ -1501,7 +1501,7 @@ module Aws::CognitoIdentity
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1509,15 +1509,15 @@ module Aws::CognitoIdentity
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cognitoidentity'
-      context[:gem_version] = '1.28.0'
+      context[:gem_name] = "aws-sdk-cognitoidentity"
+      context[:gem_version] = "1.28.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

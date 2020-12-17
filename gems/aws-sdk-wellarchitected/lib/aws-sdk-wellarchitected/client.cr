@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:wellarchitected)
 
@@ -280,7 +280,7 @@ module Aws::WellArchitected
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -349,9 +349,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/AssociateLenses AWS API Documentation
     #
-    # @overload associate_lenses(params = {})
+    # @overload associate_lenses(**params)
     # @param [Hash] params ({})
-    def associate_lenses(params = {}, options = {})
+    def associate_lenses(params = {}, **options)
       req = build_request(:associate_lenses, params)
       req.send_request(options)
     end
@@ -404,9 +404,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateMilestone AWS API Documentation
     #
-    # @overload create_milestone(params = {})
+    # @overload create_milestone(**params)
     # @param [Hash] params ({})
-    def create_milestone(params = {}, options = {})
+    def create_milestone(params = {}, **options)
       req = build_request(:create_milestone, params)
       req.send_request(options)
     end
@@ -576,9 +576,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateWorkload AWS API Documentation
     #
-    # @overload create_workload(params = {})
+    # @overload create_workload(**params)
     # @param [Hash] params ({})
-    def create_workload(params = {}, options = {})
+    def create_workload(params = {}, **options)
       req = build_request(:create_workload, params)
       req.send_request(options)
     end
@@ -644,9 +644,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateWorkloadShare AWS API Documentation
     #
-    # @overload create_workload_share(params = {})
+    # @overload create_workload_share(**params)
     # @param [Hash] params ({})
-    def create_workload_share(params = {}, options = {})
+    def create_workload_share(params = {}, **options)
       req = build_request(:create_workload_share, params)
       req.send_request(options)
     end
@@ -685,9 +685,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteWorkload AWS API Documentation
     #
-    # @overload delete_workload(params = {})
+    # @overload delete_workload(**params)
     # @param [Hash] params ({})
-    def delete_workload(params = {}, options = {})
+    def delete_workload(params = {}, **options)
       req = build_request(:delete_workload, params)
       req.send_request(options)
     end
@@ -730,9 +730,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteWorkloadShare AWS API Documentation
     #
-    # @overload delete_workload_share(params = {})
+    # @overload delete_workload_share(**params)
     # @param [Hash] params ({})
-    def delete_workload_share(params = {}, options = {})
+    def delete_workload_share(params = {}, **options)
       req = build_request(:delete_workload_share, params)
       req.send_request(options)
     end
@@ -764,9 +764,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DisassociateLenses AWS API Documentation
     #
-    # @overload disassociate_lenses(params = {})
+    # @overload disassociate_lenses(**params)
     # @param [Hash] params ({})
-    def disassociate_lenses(params = {}, options = {})
+    def disassociate_lenses(params = {}, **options)
       req = build_request(:disassociate_lenses, params)
       req.send_request(options)
     end
@@ -829,9 +829,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetAnswer AWS API Documentation
     #
-    # @overload get_answer(params = {})
+    # @overload get_answer(**params)
     # @param [Hash] params ({})
-    def get_answer(params = {}, options = {})
+    def get_answer(params = {}, **options)
       req = build_request(:get_answer, params)
       req.send_request(options)
     end
@@ -888,9 +888,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLensReview AWS API Documentation
     #
-    # @overload get_lens_review(params = {})
+    # @overload get_lens_review(**params)
     # @param [Hash] params ({})
-    def get_lens_review(params = {}, options = {})
+    def get_lens_review(params = {}, **options)
       req = build_request(:get_lens_review, params)
       req.send_request(options)
     end
@@ -934,9 +934,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLensReviewReport AWS API Documentation
     #
-    # @overload get_lens_review_report(params = {})
+    # @overload get_lens_review_report(**params)
     # @param [Hash] params ({})
-    def get_lens_review_report(params = {}, options = {})
+    def get_lens_review_report(params = {}, **options)
       req = build_request(:get_lens_review_report, params)
       req.send_request(options)
     end
@@ -980,9 +980,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetLensVersionDifference AWS API Documentation
     #
-    # @overload get_lens_version_difference(params = {})
+    # @overload get_lens_version_difference(**params)
     # @param [Hash] params ({})
-    def get_lens_version_difference(params = {}, options = {})
+    def get_lens_version_difference(params = {}, **options)
       req = build_request(:get_lens_version_difference, params)
       req.send_request(options)
     end
@@ -1047,9 +1047,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetMilestone AWS API Documentation
     #
-    # @overload get_milestone(params = {})
+    # @overload get_milestone(**params)
     # @param [Hash] params ({})
-    def get_milestone(params = {}, options = {})
+    def get_milestone(params = {}, **options)
       req = build_request(:get_milestone, params)
       req.send_request(options)
     end
@@ -1103,9 +1103,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetWorkload AWS API Documentation
     #
-    # @overload get_workload(params = {})
+    # @overload get_workload(**params)
     # @param [Hash] params ({})
-    def get_workload(params = {}, options = {})
+    def get_workload(params = {}, **options)
       req = build_request(:get_workload, params)
       req.send_request(options)
     end
@@ -1179,9 +1179,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListAnswers AWS API Documentation
     #
-    # @overload list_answers(params = {})
+    # @overload list_answers(**params)
     # @param [Hash] params ({})
-    def list_answers(params = {}, options = {})
+    def list_answers(params = {}, **options)
       req = build_request(:list_answers, params)
       req.send_request(options)
     end
@@ -1249,9 +1249,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLensReviewImprovements AWS API Documentation
     #
-    # @overload list_lens_review_improvements(params = {})
+    # @overload list_lens_review_improvements(**params)
     # @param [Hash] params ({})
-    def list_lens_review_improvements(params = {}, options = {})
+    def list_lens_review_improvements(params = {}, **options)
       req = build_request(:list_lens_review_improvements, params)
       req.send_request(options)
     end
@@ -1307,9 +1307,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLensReviews AWS API Documentation
     #
-    # @overload list_lens_reviews(params = {})
+    # @overload list_lens_reviews(**params)
     # @param [Hash] params ({})
-    def list_lens_reviews(params = {}, options = {})
+    def list_lens_reviews(params = {}, **options)
       req = build_request(:list_lens_reviews, params)
       req.send_request(options)
     end
@@ -1347,9 +1347,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListLenses AWS API Documentation
     #
-    # @overload list_lenses(params = {})
+    # @overload list_lenses(**params)
     # @param [Hash] params ({})
-    def list_lenses(params = {}, options = {})
+    def list_lenses(params = {}, **options)
       req = build_request(:list_lenses, params)
       req.send_request(options)
     end
@@ -1403,9 +1403,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListMilestones AWS API Documentation
     #
-    # @overload list_milestones(params = {})
+    # @overload list_milestones(**params)
     # @param [Hash] params ({})
-    def list_milestones(params = {}, options = {})
+    def list_milestones(params = {}, **options)
       req = build_request(:list_milestones, params)
       req.send_request(options)
     end
@@ -1450,9 +1450,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListNotifications AWS API Documentation
     #
-    # @overload list_notifications(params = {})
+    # @overload list_notifications(**params)
     # @param [Hash] params ({})
-    def list_notifications(params = {}, options = {})
+    def list_notifications(params = {}, **options)
       req = build_request(:list_notifications, params)
       req.send_request(options)
     end
@@ -1497,9 +1497,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListShareInvitations AWS API Documentation
     #
-    # @overload list_share_invitations(params = {})
+    # @overload list_share_invitations(**params)
     # @param [Hash] params ({})
-    def list_share_invitations(params = {}, options = {})
+    def list_share_invitations(params = {}, **options)
       req = build_request(:list_share_invitations, params)
       req.send_request(options)
     end
@@ -1548,9 +1548,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListWorkloadShares AWS API Documentation
     #
-    # @overload list_workload_shares(params = {})
+    # @overload list_workload_shares(**params)
     # @param [Hash] params ({})
-    def list_workload_shares(params = {}, options = {})
+    def list_workload_shares(params = {}, **options)
       req = build_request(:list_workload_shares, params)
       req.send_request(options)
     end
@@ -1599,9 +1599,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListWorkloads AWS API Documentation
     #
-    # @overload list_workloads(params = {})
+    # @overload list_workloads(**params)
     # @param [Hash] params ({})
-    def list_workloads(params = {}, options = {})
+    def list_workloads(params = {}, **options)
       req = build_request(:list_workloads, params)
       req.send_request(options)
     end
@@ -1668,9 +1668,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateAnswer AWS API Documentation
     #
-    # @overload update_answer(params = {})
+    # @overload update_answer(**params)
     # @param [Hash] params ({})
-    def update_answer(params = {}, options = {})
+    def update_answer(params = {}, **options)
       req = build_request(:update_answer, params)
       req.send_request(options)
     end
@@ -1729,9 +1729,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateLensReview AWS API Documentation
     #
-    # @overload update_lens_review(params = {})
+    # @overload update_lens_review(**params)
     # @param [Hash] params ({})
-    def update_lens_review(params = {}, options = {})
+    def update_lens_review(params = {}, **options)
       req = build_request(:update_lens_review, params)
       req.send_request(options)
     end
@@ -1762,9 +1762,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateShareInvitation AWS API Documentation
     #
-    # @overload update_share_invitation(params = {})
+    # @overload update_share_invitation(**params)
     # @param [Hash] params ({})
-    def update_share_invitation(params = {}, options = {})
+    def update_share_invitation(params = {}, **options)
       req = build_request(:update_share_invitation, params)
       req.send_request(options)
     end
@@ -1943,9 +1943,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateWorkload AWS API Documentation
     #
-    # @overload update_workload(params = {})
+    # @overload update_workload(**params)
     # @param [Hash] params ({})
-    def update_workload(params = {}, options = {})
+    def update_workload(params = {}, **options)
       req = build_request(:update_workload, params)
       req.send_request(options)
     end
@@ -1988,9 +1988,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateWorkloadShare AWS API Documentation
     #
-    # @overload update_workload_share(params = {})
+    # @overload update_workload_share(**params)
     # @param [Hash] params ({})
-    def update_workload_share(params = {}, options = {})
+    def update_workload_share(params = {}, **options)
       req = build_request(:update_workload_share, params)
       req.send_request(options)
     end
@@ -2038,9 +2038,9 @@ module Aws::WellArchitected
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeLensReview AWS API Documentation
     #
-    # @overload upgrade_lens_review(params = {})
+    # @overload upgrade_lens_review(**params)
     # @param [Hash] params ({})
-    def upgrade_lens_review(params = {}, options = {})
+    def upgrade_lens_review(params = {}, **options)
       req = build_request(:upgrade_lens_review, params)
       req.send_request(options)
     end
@@ -2049,7 +2049,7 @@ module Aws::WellArchitected
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2057,15 +2057,15 @@ module Aws::WellArchitected
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-wellarchitected'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-wellarchitected"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

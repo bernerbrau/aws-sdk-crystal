@@ -7,31 +7,31 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
-require 'aws-sdk-glacier/plugins/account_id.rb'
-require 'aws-sdk-glacier/plugins/api_version.rb'
-require 'aws-sdk-glacier/plugins/checksums.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
+require "aws-sdk-glacier/plugins/account_id.rb"
+require "aws-sdk-glacier/plugins/api_version.rb"
+require "aws-sdk-glacier/plugins/checksums.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:glacier)
 
@@ -291,7 +291,7 @@ module Aws::Glacier
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -400,9 +400,9 @@ module Aws::Glacier
     #     upload_id: "string", # required
     #   })
     #
-    # @overload abort_multipart_upload(params = {})
+    # @overload abort_multipart_upload(**params)
     # @param [Hash] params ({})
-    def abort_multipart_upload(params = {}, options = {})
+    def abort_multipart_upload(params = {}, **options)
       req = build_request(:abort_multipart_upload, params)
       req.send_request(options)
     end
@@ -462,9 +462,9 @@ module Aws::Glacier
     #     vault_name: "string", # required
     #   })
     #
-    # @overload abort_vault_lock(params = {})
+    # @overload abort_vault_lock(**params)
     # @param [Hash] params ({})
-    def abort_vault_lock(params = {}, options = {})
+    def abort_vault_lock(params = {}, **options)
       req = build_request(:abort_vault_lock, params)
       req.send_request(options)
     end
@@ -522,9 +522,9 @@ module Aws::Glacier
     #     },
     #   })
     #
-    # @overload add_tags_to_vault(params = {})
+    # @overload add_tags_to_vault(**params)
     # @param [Hash] params ({})
-    def add_tags_to_vault(params = {}, options = {})
+    def add_tags_to_vault(params = {}, **options)
       req = build_request(:add_tags_to_vault, params)
       req.send_request(options)
     end
@@ -649,9 +649,9 @@ module Aws::Glacier
     #   resp.checksum #=> String
     #   resp.archive_id #=> String
     #
-    # @overload complete_multipart_upload(params = {})
+    # @overload complete_multipart_upload(**params)
     # @param [Hash] params ({})
-    def complete_multipart_upload(params = {}, options = {})
+    def complete_multipart_upload(params = {}, **options)
       req = build_request(:complete_multipart_upload, params)
       req.send_request(options)
     end
@@ -716,9 +716,9 @@ module Aws::Glacier
     #     lock_id: "string", # required
     #   })
     #
-    # @overload complete_vault_lock(params = {})
+    # @overload complete_vault_lock(**params)
     # @param [Hash] params ({})
-    def complete_vault_lock(params = {}, options = {})
+    def complete_vault_lock(params = {}, **options)
       req = build_request(:complete_vault_lock, params)
       req.send_request(options)
     end
@@ -795,9 +795,9 @@ module Aws::Glacier
     #
     #   resp.location #=> String
     #
-    # @overload create_vault(params = {})
+    # @overload create_vault(**params)
     # @param [Hash] params ({})
-    def create_vault(params = {}, options = {})
+    def create_vault(params = {}, **options)
       req = build_request(:create_vault, params)
       req.send_request(options)
     end
@@ -869,9 +869,9 @@ module Aws::Glacier
     #     archive_id: "string", # required
     #   })
     #
-    # @overload delete_archive(params = {})
+    # @overload delete_archive(**params)
     # @param [Hash] params ({})
-    def delete_archive(params = {}, options = {})
+    def delete_archive(params = {}, **options)
       req = build_request(:delete_archive, params)
       req.send_request(options)
     end
@@ -937,9 +937,9 @@ module Aws::Glacier
     #     vault_name: "string", # required
     #   })
     #
-    # @overload delete_vault(params = {})
+    # @overload delete_vault(**params)
     # @param [Hash] params ({})
-    def delete_vault(params = {}, options = {})
+    def delete_vault(params = {}, **options)
       req = build_request(:delete_vault, params)
       req.send_request(options)
     end
@@ -989,9 +989,9 @@ module Aws::Glacier
     #     vault_name: "string", # required
     #   })
     #
-    # @overload delete_vault_access_policy(params = {})
+    # @overload delete_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def delete_vault_access_policy(params = {}, options = {})
+    def delete_vault_access_policy(params = {}, **options)
       req = build_request(:delete_vault_access_policy, params)
       req.send_request(options)
     end
@@ -1049,9 +1049,9 @@ module Aws::Glacier
     #     vault_name: "string", # required
     #   })
     #
-    # @overload delete_vault_notifications(params = {})
+    # @overload delete_vault_notifications(**params)
     # @param [Hash] params ({})
-    def delete_vault_notifications(params = {}, options = {})
+    def delete_vault_notifications(params = {}, **options)
       req = build_request(:delete_vault_notifications, params)
       req.send_request(options)
     end
@@ -1214,9 +1214,9 @@ module Aws::Glacier
     #   resp.output_location.s3.user_metadata["string"] #=> String
     #   resp.output_location.s3.storage_class #=> String, one of "STANDARD", "REDUCED_REDUNDANCY", "STANDARD_IA"
     #
-    # @overload describe_job(params = {})
+    # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, options = {})
+    def describe_job(params = {}, **options)
       req = build_request(:describe_job, params)
       req.send_request(options)
     end
@@ -1311,9 +1311,9 @@ module Aws::Glacier
     #   * vault_exists
     #   * vault_not_exists
     #
-    # @overload describe_vault(params = {})
+    # @overload describe_vault(**params)
     # @param [Hash] params ({})
-    def describe_vault(params = {}, options = {})
+    def describe_vault(params = {}, **options)
       req = build_request(:describe_vault, params)
       req.send_request(options)
     end
@@ -1373,9 +1373,9 @@ module Aws::Glacier
     #   resp.policy.rules[0].strategy #=> String
     #   resp.policy.rules[0].bytes_per_hour #=> Integer
     #
-    # @overload get_data_retrieval_policy(params = {})
+    # @overload get_data_retrieval_policy(**params)
     # @param [Hash] params ({})
-    def get_data_retrieval_policy(params = {}, options = {})
+    def get_data_retrieval_policy(params = {}, **options)
       req = build_request(:get_data_retrieval_policy, params)
       req.send_request(options)
     end
@@ -1529,9 +1529,9 @@ module Aws::Glacier
     #   resp.content_type #=> String
     #   resp.archive_description #=> String
     #
-    # @overload get_job_output(params = {})
+    # @overload get_job_output(**params)
     # @param [Hash] params ({})
-    def get_job_output(params = {}, options = {}, &block)
+    def get_job_output(params = {}, **options, &block)
       req = build_request(:get_job_output, params)
       req.send_request(options, &block)
     end
@@ -1591,9 +1591,9 @@ module Aws::Glacier
     #
     #   resp.policy.policy #=> String
     #
-    # @overload get_vault_access_policy(params = {})
+    # @overload get_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def get_vault_access_policy(params = {}, options = {})
+    def get_vault_access_policy(params = {}, **options)
       req = build_request(:get_vault_access_policy, params)
       req.send_request(options)
     end
@@ -1677,9 +1677,9 @@ module Aws::Glacier
     #   resp.expiration_date #=> Time
     #   resp.creation_date #=> Time
     #
-    # @overload get_vault_lock(params = {})
+    # @overload get_vault_lock(**params)
     # @param [Hash] params ({})
-    def get_vault_lock(params = {}, options = {})
+    def get_vault_lock(params = {}, **options)
       req = build_request(:get_vault_lock, params)
       req.send_request(options)
     end
@@ -1759,9 +1759,9 @@ module Aws::Glacier
     #   resp.vault_notification_config.events #=> Array
     #   resp.vault_notification_config.events[0] #=> String
     #
-    # @overload get_vault_notifications(params = {})
+    # @overload get_vault_notifications(**params)
     # @param [Hash] params ({})
-    def get_vault_notifications(params = {}, options = {})
+    def get_vault_notifications(params = {}, **options)
       req = build_request(:get_vault_notifications, params)
       req.send_request(options)
     end
@@ -1899,9 +1899,9 @@ module Aws::Glacier
     #   resp.job_id #=> String
     #   resp.job_output_path #=> String
     #
-    # @overload initiate_job(params = {})
+    # @overload initiate_job(**params)
     # @param [Hash] params ({})
-    def initiate_job(params = {}, options = {})
+    def initiate_job(params = {}, **options)
       req = build_request(:initiate_job, params)
       req.send_request(options)
     end
@@ -2011,9 +2011,9 @@ module Aws::Glacier
     #   resp.location #=> String
     #   resp.upload_id #=> String
     #
-    # @overload initiate_multipart_upload(params = {})
+    # @overload initiate_multipart_upload(**params)
     # @param [Hash] params ({})
-    def initiate_multipart_upload(params = {}, options = {})
+    def initiate_multipart_upload(params = {}, **options)
       req = build_request(:initiate_multipart_upload, params)
       req.send_request(options)
     end
@@ -2110,9 +2110,9 @@ module Aws::Glacier
     #
     #   resp.lock_id #=> String
     #
-    # @overload initiate_vault_lock(params = {})
+    # @overload initiate_vault_lock(**params)
     # @param [Hash] params ({})
-    def initiate_vault_lock(params = {}, options = {})
+    def initiate_vault_lock(params = {}, **options)
       req = build_request(:initiate_vault_lock, params)
       req.send_request(options)
     end
@@ -2312,9 +2312,9 @@ module Aws::Glacier
     #   resp.job_list[0].output_location.s3.storage_class #=> String, one of "STANDARD", "REDUCED_REDUNDANCY", "STANDARD_IA"
     #   resp.marker #=> String
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -2444,9 +2444,9 @@ module Aws::Glacier
     #   resp.uploads_list[0].creation_date #=> Time
     #   resp.marker #=> String
     #
-    # @overload list_multipart_uploads(params = {})
+    # @overload list_multipart_uploads(**params)
     # @param [Hash] params ({})
-    def list_multipart_uploads(params = {}, options = {})
+    def list_multipart_uploads(params = {}, **options)
       req = build_request(:list_multipart_uploads, params)
       req.send_request(options)
     end
@@ -2574,9 +2574,9 @@ module Aws::Glacier
     #   resp.parts[0].sha256_tree_hash #=> String
     #   resp.marker #=> String
     #
-    # @overload list_parts(params = {})
+    # @overload list_parts(**params)
     # @param [Hash] params ({})
-    def list_parts(params = {}, options = {})
+    def list_parts(params = {}, **options)
       req = build_request(:list_parts, params)
       req.send_request(options)
     end
@@ -2633,9 +2633,9 @@ module Aws::Glacier
     #   resp.provisioned_capacity_list[0].start_date #=> Time
     #   resp.provisioned_capacity_list[0].expiration_date #=> Time
     #
-    # @overload list_provisioned_capacity(params = {})
+    # @overload list_provisioned_capacity(**params)
     # @param [Hash] params ({})
-    def list_provisioned_capacity(params = {}, options = {})
+    def list_provisioned_capacity(params = {}, **options)
       req = build_request(:list_provisioned_capacity, params)
       req.send_request(options)
     end
@@ -2693,9 +2693,9 @@ module Aws::Glacier
     #   resp.tags #=> Hash
     #   resp.tags["TagKey"] #=> String
     #
-    # @overload list_tags_for_vault(params = {})
+    # @overload list_tags_for_vault(**params)
     # @param [Hash] params ({})
-    def list_tags_for_vault(params = {}, options = {})
+    def list_tags_for_vault(params = {}, **options)
       req = build_request(:list_tags_for_vault, params)
       req.send_request(options)
     end
@@ -2797,9 +2797,9 @@ module Aws::Glacier
     #   resp.vault_list[0].size_in_bytes #=> Integer
     #   resp.marker #=> String
     #
-    # @overload list_vaults(params = {})
+    # @overload list_vaults(**params)
     # @param [Hash] params ({})
-    def list_vaults(params = {}, options = {})
+    def list_vaults(params = {}, **options)
       req = build_request(:list_vaults, params)
       req.send_request(options)
     end
@@ -2842,9 +2842,9 @@ module Aws::Glacier
     #
     #   resp.capacity_id #=> String
     #
-    # @overload purchase_provisioned_capacity(params = {})
+    # @overload purchase_provisioned_capacity(**params)
     # @param [Hash] params ({})
-    def purchase_provisioned_capacity(params = {}, options = {})
+    def purchase_provisioned_capacity(params = {}, **options)
       req = build_request(:purchase_provisioned_capacity, params)
       req.send_request(options)
     end
@@ -2896,9 +2896,9 @@ module Aws::Glacier
     #     tag_keys: ["string"],
     #   })
     #
-    # @overload remove_tags_from_vault(params = {})
+    # @overload remove_tags_from_vault(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_vault(params = {}, options = {})
+    def remove_tags_from_vault(params = {}, **options)
       req = build_request(:remove_tags_from_vault, params)
       req.send_request(options)
     end
@@ -2962,9 +2962,9 @@ module Aws::Glacier
     #     },
     #   })
     #
-    # @overload set_data_retrieval_policy(params = {})
+    # @overload set_data_retrieval_policy(**params)
     # @param [Hash] params ({})
-    def set_data_retrieval_policy(params = {}, options = {})
+    def set_data_retrieval_policy(params = {}, **options)
       req = build_request(:set_data_retrieval_policy, params)
       req.send_request(options)
     end
@@ -3021,9 +3021,9 @@ module Aws::Glacier
     #     },
     #   })
     #
-    # @overload set_vault_access_policy(params = {})
+    # @overload set_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def set_vault_access_policy(params = {}, options = {})
+    def set_vault_access_policy(params = {}, **options)
       req = build_request(:set_vault_access_policy, params)
       req.send_request(options)
     end
@@ -3115,9 +3115,9 @@ module Aws::Glacier
     #     },
     #   })
     #
-    # @overload set_vault_notifications(params = {})
+    # @overload set_vault_notifications(**params)
     # @param [Hash] params ({})
-    def set_vault_notifications(params = {}, options = {})
+    def set_vault_notifications(params = {}, **options)
       req = build_request(:set_vault_notifications, params)
       req.send_request(options)
     end
@@ -3231,9 +3231,9 @@ module Aws::Glacier
     #   resp.checksum #=> String
     #   resp.archive_id #=> String
     #
-    # @overload upload_archive(params = {})
+    # @overload upload_archive(**params)
     # @param [Hash] params ({})
-    def upload_archive(params = {}, options = {})
+    def upload_archive(params = {}, **options)
       req = build_request(:upload_archive, params)
       req.send_request(options)
     end
@@ -3358,9 +3358,9 @@ module Aws::Glacier
     #
     #   resp.checksum #=> String
     #
-    # @overload upload_multipart_part(params = {})
+    # @overload upload_multipart_part(**params)
     # @param [Hash] params ({})
-    def upload_multipart_part(params = {}, options = {})
+    def upload_multipart_part(params = {}, **options)
       req = build_request(:upload_multipart_part, params)
       req.send_request(options)
     end
@@ -3369,7 +3369,7 @@ module Aws::Glacier
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3377,8 +3377,8 @@ module Aws::Glacier
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-glacier'
-      context[:gem_version] = '1.35.0'
+      context[:gem_name] = "aws-sdk-glacier"
+      context[:gem_version] = "1.35.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3471,7 +3471,7 @@ module Aws::Glacier
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3487,7 +3487,7 @@ module Aws::Glacier
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

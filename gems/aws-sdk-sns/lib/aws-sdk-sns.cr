@@ -8,19 +8,19 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sns/types'
-require_relative 'aws-sdk-sns/client_api'
-require_relative 'aws-sdk-sns/client'
-require_relative 'aws-sdk-sns/errors'
-require_relative 'aws-sdk-sns/resource'
-require_relative 'aws-sdk-sns/platform_application'
-require_relative 'aws-sdk-sns/platform_endpoint'
-require_relative 'aws-sdk-sns/subscription'
-require_relative 'aws-sdk-sns/topic'
-require_relative 'aws-sdk-sns/customizations'
+require_relative "aws-sdk-sns/types"
+require_relative "aws-sdk-sns/client_api"
+require_relative "aws-sdk-sns/client"
+require_relative "aws-sdk-sns/errors"
+require_relative "aws-sdk-sns/resource"
+require_relative "aws-sdk-sns/platform_application"
+require_relative "aws-sdk-sns/platform_endpoint"
+require_relative "aws-sdk-sns/subscription"
+require_relative "aws-sdk-sns/topic"
+require_relative "aws-sdk-sns/customizations"
 
 # This module provides support for Amazon Simple Notification Service. This module is available in the
 # `aws-sdk-sns` gem.
@@ -52,6 +52,6 @@ require_relative 'aws-sdk-sns/customizations'
 # @!group service
 module Aws::SNS
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

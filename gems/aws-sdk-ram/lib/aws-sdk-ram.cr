@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ram/types'
-require_relative 'aws-sdk-ram/client_api'
-require_relative 'aws-sdk-ram/client'
-require_relative 'aws-sdk-ram/errors'
-require_relative 'aws-sdk-ram/resource'
-require_relative 'aws-sdk-ram/customizations'
+require_relative "aws-sdk-ram/types"
+require_relative "aws-sdk-ram/client_api"
+require_relative "aws-sdk-ram/client"
+require_relative "aws-sdk-ram/errors"
+require_relative "aws-sdk-ram/resource"
+require_relative "aws-sdk-ram/customizations"
 
 # This module provides support for AWS Resource Access Manager. This module is available in the
 # `aws-sdk-ram` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ram/customizations'
 # @!group service
 module Aws::RAM
 
-  GEM_VERSION = '1.22.0'
+  GEM_VERSION = "1.22.0"
 
 end

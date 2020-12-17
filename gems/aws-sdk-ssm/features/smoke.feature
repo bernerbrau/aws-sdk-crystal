@@ -8,11 +8,11 @@
 Feature: Smoke tests for SSM
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @ssm @smoke
   Scenario: Call Aws::SSM::Client#list_documents and expect it to succeed
-  When I call the operation 'list_documents' with params:
+  When I call the operation "list_documents" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @ssm @smoke
   Scenario: Call Aws::Aws::SSM::Client#get_document and expect it to fail
-  When I call the operation 'get_document' with params:
+  When I call the operation "get_document" with params:
     """
 {"name":"'fake-name'"}
     """

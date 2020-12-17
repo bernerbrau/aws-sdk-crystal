@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iot)
 
@@ -280,7 +280,7 @@ module Aws::IoT
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -349,9 +349,9 @@ module Aws::IoT
     #     set_as_active: false,
     #   })
     #
-    # @overload accept_certificate_transfer(params = {})
+    # @overload accept_certificate_transfer(**params)
     # @param [Hash] params ({})
-    def accept_certificate_transfer(params = {}, options = {})
+    def accept_certificate_transfer(params = {}, **options)
       req = build_request(:accept_certificate_transfer, params)
       req.send_request(options)
     end
@@ -381,9 +381,9 @@ module Aws::IoT
     #     thing_arn: "ThingArn",
     #   })
     #
-    # @overload add_thing_to_billing_group(params = {})
+    # @overload add_thing_to_billing_group(**params)
     # @param [Hash] params ({})
-    def add_thing_to_billing_group(params = {}, options = {})
+    def add_thing_to_billing_group(params = {}, **options)
       req = build_request(:add_thing_to_billing_group, params)
       req.send_request(options)
     end
@@ -420,9 +420,9 @@ module Aws::IoT
     #     override_dynamic_groups: false,
     #   })
     #
-    # @overload add_thing_to_thing_group(params = {})
+    # @overload add_thing_to_thing_group(**params)
     # @param [Hash] params ({})
-    def add_thing_to_thing_group(params = {}, options = {})
+    def add_thing_to_thing_group(params = {}, **options)
       req = build_request(:add_thing_to_thing_group, params)
       req.send_request(options)
     end
@@ -482,9 +482,9 @@ module Aws::IoT
     #   resp.job_id #=> String
     #   resp.description #=> String
     #
-    # @overload associate_targets_with_job(params = {})
+    # @overload associate_targets_with_job(**params)
     # @param [Hash] params ({})
-    def associate_targets_with_job(params = {}, options = {})
+    def associate_targets_with_job(params = {}, **options)
       req = build_request(:associate_targets_with_job, params)
       req.send_request(options)
     end
@@ -510,9 +510,9 @@ module Aws::IoT
     #     target: "PolicyTarget", # required
     #   })
     #
-    # @overload attach_policy(params = {})
+    # @overload attach_policy(**params)
     # @param [Hash] params ({})
-    def attach_policy(params = {}, options = {})
+    def attach_policy(params = {}, **options)
       req = build_request(:attach_policy, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::IoT
     #     principal: "Principal", # required
     #   })
     #
-    # @overload attach_principal_policy(params = {})
+    # @overload attach_principal_policy(**params)
     # @param [Hash] params ({})
-    def attach_principal_policy(params = {}, options = {})
+    def attach_principal_policy(params = {}, **options)
       req = build_request(:attach_principal_policy, params)
       req.send_request(options)
     end
@@ -565,9 +565,9 @@ module Aws::IoT
     #     security_profile_target_arn: "SecurityProfileTargetArn", # required
     #   })
     #
-    # @overload attach_security_profile(params = {})
+    # @overload attach_security_profile(**params)
     # @param [Hash] params ({})
-    def attach_security_profile(params = {}, options = {})
+    def attach_security_profile(params = {}, **options)
       req = build_request(:attach_security_profile, params)
       req.send_request(options)
     end
@@ -592,9 +592,9 @@ module Aws::IoT
     #     principal: "Principal", # required
     #   })
     #
-    # @overload attach_thing_principal(params = {})
+    # @overload attach_thing_principal(**params)
     # @param [Hash] params ({})
-    def attach_thing_principal(params = {}, options = {})
+    def attach_thing_principal(params = {}, **options)
       req = build_request(:attach_thing_principal, params)
       req.send_request(options)
     end
@@ -613,9 +613,9 @@ module Aws::IoT
     #     task_id: "MitigationActionsTaskId", # required
     #   })
     #
-    # @overload cancel_audit_mitigation_actions_task(params = {})
+    # @overload cancel_audit_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def cancel_audit_mitigation_actions_task(params = {}, options = {})
+    def cancel_audit_mitigation_actions_task(params = {}, **options)
       req = build_request(:cancel_audit_mitigation_actions_task, params)
       req.send_request(options)
     end
@@ -636,9 +636,9 @@ module Aws::IoT
     #     task_id: "AuditTaskId", # required
     #   })
     #
-    # @overload cancel_audit_task(params = {})
+    # @overload cancel_audit_task(**params)
     # @param [Hash] params ({})
-    def cancel_audit_task(params = {}, options = {})
+    def cancel_audit_task(params = {}, **options)
       req = build_request(:cancel_audit_task, params)
       req.send_request(options)
     end
@@ -667,9 +667,9 @@ module Aws::IoT
     #     certificate_id: "CertificateId", # required
     #   })
     #
-    # @overload cancel_certificate_transfer(params = {})
+    # @overload cancel_certificate_transfer(**params)
     # @param [Hash] params ({})
-    def cancel_certificate_transfer(params = {}, options = {})
+    def cancel_certificate_transfer(params = {}, **options)
       req = build_request(:cancel_certificate_transfer, params)
       req.send_request(options)
     end
@@ -687,9 +687,9 @@ module Aws::IoT
     #     task_id: "MitigationActionsTaskId", # required
     #   })
     #
-    # @overload cancel_detect_mitigation_actions_task(params = {})
+    # @overload cancel_detect_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def cancel_detect_mitigation_actions_task(params = {}, options = {})
+    def cancel_detect_mitigation_actions_task(params = {}, **options)
       req = build_request(:cancel_detect_mitigation_actions_task, params)
       req.send_request(options)
     end
@@ -736,9 +736,9 @@ module Aws::IoT
     #   resp.job_id #=> String
     #   resp.description #=> String
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -791,9 +791,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload cancel_job_execution(params = {})
+    # @overload cancel_job_execution(**params)
     # @param [Hash] params ({})
-    def cancel_job_execution(params = {}, options = {})
+    def cancel_job_execution(params = {}, **options)
       req = build_request(:cancel_job_execution, params)
       req.send_request(options)
     end
@@ -802,9 +802,9 @@ module Aws::IoT
     #
     # @return [Struct] Returns an empty {Seahorse::Client::Response response}.
     #
-    # @overload clear_default_authorizer(params = {})
+    # @overload clear_default_authorizer(**params)
     # @param [Hash] params ({})
-    def clear_default_authorizer(params = {}, options = {})
+    def clear_default_authorizer(params = {}, **options)
       req = build_request(:clear_default_authorizer, params)
       req.send_request(options)
     end
@@ -827,9 +827,9 @@ module Aws::IoT
     #     confirmation_token: "ConfirmationToken", # required
     #   })
     #
-    # @overload confirm_topic_rule_destination(params = {})
+    # @overload confirm_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def confirm_topic_rule_destination(params = {}, options = {})
+    def confirm_topic_rule_destination(params = {}, **options)
       req = build_request(:confirm_topic_rule_destination, params)
       req.send_request(options)
     end
@@ -885,9 +885,9 @@ module Aws::IoT
     #     client_request_token: "ClientRequestToken", # required
     #   })
     #
-    # @overload create_audit_suppression(params = {})
+    # @overload create_audit_suppression(**params)
     # @param [Hash] params ({})
-    def create_audit_suppression(params = {}, options = {})
+    def create_audit_suppression(params = {}, **options)
       req = build_request(:create_audit_suppression, params)
       req.send_request(options)
     end
@@ -958,9 +958,9 @@ module Aws::IoT
     #   resp.authorizer_name #=> String
     #   resp.authorizer_arn #=> String
     #
-    # @overload create_authorizer(params = {})
+    # @overload create_authorizer(**params)
     # @param [Hash] params ({})
-    def create_authorizer(params = {}, options = {})
+    def create_authorizer(params = {}, **options)
       req = build_request(:create_authorizer, params)
       req.send_request(options)
     end
@@ -1003,9 +1003,9 @@ module Aws::IoT
     #   resp.billing_group_arn #=> String
     #   resp.billing_group_id #=> String
     #
-    # @overload create_billing_group(params = {})
+    # @overload create_billing_group(**params)
     # @param [Hash] params ({})
-    def create_billing_group(params = {}, options = {})
+    def create_billing_group(params = {}, **options)
       req = build_request(:create_billing_group, params)
       req.send_request(options)
     end
@@ -1084,9 +1084,9 @@ module Aws::IoT
     #   resp.certificate_id #=> String
     #   resp.certificate_pem #=> String
     #
-    # @overload create_certificate_from_csr(params = {})
+    # @overload create_certificate_from_csr(**params)
     # @param [Hash] params ({})
-    def create_certificate_from_csr(params = {}, options = {})
+    def create_certificate_from_csr(params = {}, **options)
       req = build_request(:create_certificate_from_csr, params)
       req.send_request(options)
     end
@@ -1145,9 +1145,9 @@ module Aws::IoT
     #   resp.metric_name #=> String
     #   resp.metric_arn #=> String
     #
-    # @overload create_custom_metric(params = {})
+    # @overload create_custom_metric(**params)
     # @param [Hash] params ({})
-    def create_custom_metric(params = {}, options = {})
+    def create_custom_metric(params = {}, **options)
       req = build_request(:create_custom_metric, params)
       req.send_request(options)
     end
@@ -1207,9 +1207,9 @@ module Aws::IoT
     #   resp.name #=> String
     #   resp.arn #=> String
     #
-    # @overload create_dimension(params = {})
+    # @overload create_dimension(**params)
     # @param [Hash] params ({})
-    def create_dimension(params = {}, options = {})
+    def create_dimension(params = {}, **options)
       req = build_request(:create_dimension, params)
       req.send_request(options)
     end
@@ -1293,9 +1293,9 @@ module Aws::IoT
     #   resp.domain_configuration_name #=> String
     #   resp.domain_configuration_arn #=> String
     #
-    # @overload create_domain_configuration(params = {})
+    # @overload create_domain_configuration(**params)
     # @param [Hash] params ({})
-    def create_domain_configuration(params = {}, options = {})
+    def create_domain_configuration(params = {}, **options)
       req = build_request(:create_domain_configuration, params)
       req.send_request(options)
     end
@@ -1377,9 +1377,9 @@ module Aws::IoT
     #   resp.query_string #=> String
     #   resp.query_version #=> String
     #
-    # @overload create_dynamic_thing_group(params = {})
+    # @overload create_dynamic_thing_group(**params)
     # @param [Hash] params ({})
-    def create_dynamic_thing_group(params = {}, options = {})
+    def create_dynamic_thing_group(params = {}, **options)
       req = build_request(:create_dynamic_thing_group, params)
       req.send_request(options)
     end
@@ -1513,9 +1513,9 @@ module Aws::IoT
     #   resp.job_id #=> String
     #   resp.description #=> String
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -1556,9 +1556,9 @@ module Aws::IoT
     #   resp.key_pair.public_key #=> String
     #   resp.key_pair.private_key #=> String
     #
-    # @overload create_keys_and_certificate(params = {})
+    # @overload create_keys_and_certificate(**params)
     # @param [Hash] params ({})
-    def create_keys_and_certificate(params = {}, options = {})
+    def create_keys_and_certificate(params = {}, **options)
       req = build_request(:create_keys_and_certificate, params)
       req.send_request(options)
     end
@@ -1631,9 +1631,9 @@ module Aws::IoT
     #   resp.action_arn #=> String
     #   resp.action_id #=> String
     #
-    # @overload create_mitigation_action(params = {})
+    # @overload create_mitigation_action(**params)
     # @param [Hash] params ({})
-    def create_mitigation_action(params = {}, options = {})
+    def create_mitigation_action(params = {}, **options)
       req = build_request(:create_mitigation_action, params)
       req.send_request(options)
     end
@@ -1804,9 +1804,9 @@ module Aws::IoT
     #   resp.aws_iot_job_arn #=> String
     #   resp.ota_update_status #=> String, one of "CREATE_PENDING", "CREATE_IN_PROGRESS", "CREATE_COMPLETE", "CREATE_FAILED"
     #
-    # @overload create_ota_update(params = {})
+    # @overload create_ota_update(**params)
     # @param [Hash] params ({})
-    def create_ota_update(params = {}, options = {})
+    def create_ota_update(params = {}, **options)
       req = build_request(:create_ota_update, params)
       req.send_request(options)
     end
@@ -1866,9 +1866,9 @@ module Aws::IoT
     #   resp.policy_document #=> String
     #   resp.policy_version_id #=> String
     #
-    # @overload create_policy(params = {})
+    # @overload create_policy(**params)
     # @param [Hash] params ({})
-    def create_policy(params = {}, options = {})
+    def create_policy(params = {}, **options)
       req = build_request(:create_policy, params)
       req.send_request(options)
     end
@@ -1919,9 +1919,9 @@ module Aws::IoT
     #   resp.policy_version_id #=> String
     #   resp.is_default_version #=> Boolean
     #
-    # @overload create_policy_version(params = {})
+    # @overload create_policy_version(**params)
     # @param [Hash] params ({})
-    def create_policy_version(params = {}, options = {})
+    def create_policy_version(params = {}, **options)
       req = build_request(:create_policy_version, params)
       req.send_request(options)
     end
@@ -1952,9 +1952,9 @@ module Aws::IoT
     #   resp.key_pair.private_key #=> String
     #   resp.expiration #=> Time
     #
-    # @overload create_provisioning_claim(params = {})
+    # @overload create_provisioning_claim(**params)
     # @param [Hash] params ({})
-    def create_provisioning_claim(params = {}, options = {})
+    def create_provisioning_claim(params = {}, **options)
       req = build_request(:create_provisioning_claim, params)
       req.send_request(options)
     end
@@ -2026,9 +2026,9 @@ module Aws::IoT
     #   resp.template_name #=> String
     #   resp.default_version_id #=> Integer
     #
-    # @overload create_provisioning_template(params = {})
+    # @overload create_provisioning_template(**params)
     # @param [Hash] params ({})
-    def create_provisioning_template(params = {}, options = {})
+    def create_provisioning_template(params = {}, **options)
       req = build_request(:create_provisioning_template, params)
       req.send_request(options)
     end
@@ -2066,9 +2066,9 @@ module Aws::IoT
     #   resp.version_id #=> Integer
     #   resp.is_default_version #=> Boolean
     #
-    # @overload create_provisioning_template_version(params = {})
+    # @overload create_provisioning_template_version(**params)
     # @param [Hash] params ({})
-    def create_provisioning_template_version(params = {}, options = {})
+    def create_provisioning_template_version(params = {}, **options)
       req = build_request(:create_provisioning_template_version, params)
       req.send_request(options)
     end
@@ -2123,9 +2123,9 @@ module Aws::IoT
     #   resp.role_alias #=> String
     #   resp.role_alias_arn #=> String
     #
-    # @overload create_role_alias(params = {})
+    # @overload create_role_alias(**params)
     # @param [Hash] params ({})
-    def create_role_alias(params = {}, options = {})
+    def create_role_alias(params = {}, **options)
       req = build_request(:create_role_alias, params)
       req.send_request(options)
     end
@@ -2186,9 +2186,9 @@ module Aws::IoT
     #
     #   resp.scheduled_audit_arn #=> String
     #
-    # @overload create_scheduled_audit(params = {})
+    # @overload create_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def create_scheduled_audit(params = {}, options = {})
+    def create_scheduled_audit(params = {}, **options)
       req = build_request(:create_scheduled_audit, params)
       req.send_request(options)
     end
@@ -2298,9 +2298,9 @@ module Aws::IoT
     #   resp.security_profile_name #=> String
     #   resp.security_profile_arn #=> String
     #
-    # @overload create_security_profile(params = {})
+    # @overload create_security_profile(**params)
     # @param [Hash] params ({})
-    def create_security_profile(params = {}, options = {})
+    def create_security_profile(params = {}, **options)
       req = build_request(:create_security_profile, params)
       req.send_request(options)
     end
@@ -2364,9 +2364,9 @@ module Aws::IoT
     #   resp.description #=> String
     #   resp.stream_version #=> Integer
     #
-    # @overload create_stream(params = {})
+    # @overload create_stream(**params)
     # @param [Hash] params ({})
-    def create_stream(params = {}, options = {})
+    def create_stream(params = {}, **options)
       req = build_request(:create_stream, params)
       req.send_request(options)
     end
@@ -2430,9 +2430,9 @@ module Aws::IoT
     #   resp.thing_arn #=> String
     #   resp.thing_id #=> String
     #
-    # @overload create_thing(params = {})
+    # @overload create_thing(**params)
     # @param [Hash] params ({})
-    def create_thing(params = {}, options = {})
+    def create_thing(params = {}, **options)
       req = build_request(:create_thing, params)
       req.send_request(options)
     end
@@ -2494,9 +2494,9 @@ module Aws::IoT
     #   resp.thing_group_arn #=> String
     #   resp.thing_group_id #=> String
     #
-    # @overload create_thing_group(params = {})
+    # @overload create_thing_group(**params)
     # @param [Hash] params ({})
-    def create_thing_group(params = {}, options = {})
+    def create_thing_group(params = {}, **options)
       req = build_request(:create_thing_group, params)
       req.send_request(options)
     end
@@ -2542,9 +2542,9 @@ module Aws::IoT
     #   resp.thing_type_arn #=> String
     #   resp.thing_type_id #=> String
     #
-    # @overload create_thing_type(params = {})
+    # @overload create_thing_type(**params)
     # @param [Hash] params ({})
-    def create_thing_type(params = {}, options = {})
+    def create_thing_type(params = {}, **options)
       req = build_request(:create_thing_type, params)
       req.send_request(options)
     end
@@ -2926,9 +2926,9 @@ module Aws::IoT
     #     tags: "String",
     #   })
     #
-    # @overload create_topic_rule(params = {})
+    # @overload create_topic_rule(**params)
     # @param [Hash] params ({})
-    def create_topic_rule(params = {}, options = {})
+    def create_topic_rule(params = {}, **options)
       req = build_request(:create_topic_rule, params)
       req.send_request(options)
     end
@@ -2974,9 +2974,9 @@ module Aws::IoT
     #   resp.topic_rule_destination.vpc_properties.vpc_id #=> String
     #   resp.topic_rule_destination.vpc_properties.role_arn #=> String
     #
-    # @overload create_topic_rule_destination(params = {})
+    # @overload create_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def create_topic_rule_destination(params = {}, options = {})
+    def create_topic_rule_destination(params = {}, **options)
       req = build_request(:create_topic_rule_destination, params)
       req.send_request(options)
     end
@@ -2996,9 +2996,9 @@ module Aws::IoT
     #     delete_scheduled_audits: false,
     #   })
     #
-    # @overload delete_account_audit_configuration(params = {})
+    # @overload delete_account_audit_configuration(**params)
     # @param [Hash] params ({})
-    def delete_account_audit_configuration(params = {}, options = {})
+    def delete_account_audit_configuration(params = {}, **options)
       req = build_request(:delete_account_audit_configuration, params)
       req.send_request(options)
     end
@@ -3035,9 +3035,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload delete_audit_suppression(params = {})
+    # @overload delete_audit_suppression(**params)
     # @param [Hash] params ({})
-    def delete_audit_suppression(params = {}, options = {})
+    def delete_audit_suppression(params = {}, **options)
       req = build_request(:delete_audit_suppression, params)
       req.send_request(options)
     end
@@ -3055,9 +3055,9 @@ module Aws::IoT
     #     authorizer_name: "AuthorizerName", # required
     #   })
     #
-    # @overload delete_authorizer(params = {})
+    # @overload delete_authorizer(**params)
     # @param [Hash] params ({})
-    def delete_authorizer(params = {}, options = {})
+    def delete_authorizer(params = {}, **options)
       req = build_request(:delete_authorizer, params)
       req.send_request(options)
     end
@@ -3082,9 +3082,9 @@ module Aws::IoT
     #     expected_version: 1,
     #   })
     #
-    # @overload delete_billing_group(params = {})
+    # @overload delete_billing_group(**params)
     # @param [Hash] params ({})
-    def delete_billing_group(params = {}, options = {})
+    def delete_billing_group(params = {}, **options)
       req = build_request(:delete_billing_group, params)
       req.send_request(options)
     end
@@ -3103,9 +3103,9 @@ module Aws::IoT
     #     certificate_id: "CertificateId", # required
     #   })
     #
-    # @overload delete_ca_certificate(params = {})
+    # @overload delete_ca_certificate(**params)
     # @param [Hash] params ({})
-    def delete_ca_certificate(params = {}, options = {})
+    def delete_ca_certificate(params = {}, **options)
       req = build_request(:delete_ca_certificate, params)
       req.send_request(options)
     end
@@ -3135,9 +3135,9 @@ module Aws::IoT
     #     force_delete: false,
     #   })
     #
-    # @overload delete_certificate(params = {})
+    # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, options = {})
+    def delete_certificate(params = {}, **options)
       req = build_request(:delete_certificate, params)
       req.send_request(options)
     end
@@ -3167,9 +3167,9 @@ module Aws::IoT
     #     metric_name: "MetricName", # required
     #   })
     #
-    # @overload delete_custom_metric(params = {})
+    # @overload delete_custom_metric(**params)
     # @param [Hash] params ({})
-    def delete_custom_metric(params = {}, options = {})
+    def delete_custom_metric(params = {}, **options)
       req = build_request(:delete_custom_metric, params)
       req.send_request(options)
     end
@@ -3187,9 +3187,9 @@ module Aws::IoT
     #     name: "DimensionName", # required
     #   })
     #
-    # @overload delete_dimension(params = {})
+    # @overload delete_dimension(**params)
     # @param [Hash] params ({})
-    def delete_dimension(params = {}, options = {})
+    def delete_dimension(params = {}, **options)
       req = build_request(:delete_dimension, params)
       req.send_request(options)
     end
@@ -3212,9 +3212,9 @@ module Aws::IoT
     #     domain_configuration_name: "DomainConfigurationName", # required
     #   })
     #
-    # @overload delete_domain_configuration(params = {})
+    # @overload delete_domain_configuration(**params)
     # @param [Hash] params ({})
-    def delete_domain_configuration(params = {}, options = {})
+    def delete_domain_configuration(params = {}, **options)
       req = build_request(:delete_domain_configuration, params)
       req.send_request(options)
     end
@@ -3236,9 +3236,9 @@ module Aws::IoT
     #     expected_version: 1,
     #   })
     #
-    # @overload delete_dynamic_thing_group(params = {})
+    # @overload delete_dynamic_thing_group(**params)
     # @param [Hash] params ({})
-    def delete_dynamic_thing_group(params = {}, options = {})
+    def delete_dynamic_thing_group(params = {}, **options)
       req = build_request(:delete_dynamic_thing_group, params)
       req.send_request(options)
     end
@@ -3298,9 +3298,9 @@ module Aws::IoT
     #     namespace_id: "NamespaceId",
     #   })
     #
-    # @overload delete_job(params = {})
+    # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, options = {})
+    def delete_job(params = {}, **options)
       req = build_request(:delete_job, params)
       req.send_request(options)
     end
@@ -3360,9 +3360,9 @@ module Aws::IoT
     #     namespace_id: "NamespaceId",
     #   })
     #
-    # @overload delete_job_execution(params = {})
+    # @overload delete_job_execution(**params)
     # @param [Hash] params ({})
-    def delete_job_execution(params = {}, options = {})
+    def delete_job_execution(params = {}, **options)
       req = build_request(:delete_job_execution, params)
       req.send_request(options)
     end
@@ -3380,9 +3380,9 @@ module Aws::IoT
     #     action_name: "MitigationActionName", # required
     #   })
     #
-    # @overload delete_mitigation_action(params = {})
+    # @overload delete_mitigation_action(**params)
     # @param [Hash] params ({})
-    def delete_mitigation_action(params = {}, options = {})
+    def delete_mitigation_action(params = {}, **options)
       req = build_request(:delete_mitigation_action, params)
       req.send_request(options)
     end
@@ -3410,9 +3410,9 @@ module Aws::IoT
     #     force_delete_aws_job: false,
     #   })
     #
-    # @overload delete_ota_update(params = {})
+    # @overload delete_ota_update(**params)
     # @param [Hash] params ({})
-    def delete_ota_update(params = {}, options = {})
+    def delete_ota_update(params = {}, **options)
       req = build_request(:delete_ota_update, params)
       req.send_request(options)
     end
@@ -3441,9 +3441,9 @@ module Aws::IoT
     #     policy_name: "PolicyName", # required
     #   })
     #
-    # @overload delete_policy(params = {})
+    # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, options = {})
+    def delete_policy(params = {}, **options)
       req = build_request(:delete_policy, params)
       req.send_request(options)
     end
@@ -3469,9 +3469,9 @@ module Aws::IoT
     #     policy_version_id: "PolicyVersionId", # required
     #   })
     #
-    # @overload delete_policy_version(params = {})
+    # @overload delete_policy_version(**params)
     # @param [Hash] params ({})
-    def delete_policy_version(params = {}, options = {})
+    def delete_policy_version(params = {}, **options)
       req = build_request(:delete_policy_version, params)
       req.send_request(options)
     end
@@ -3489,9 +3489,9 @@ module Aws::IoT
     #     template_name: "TemplateName", # required
     #   })
     #
-    # @overload delete_provisioning_template(params = {})
+    # @overload delete_provisioning_template(**params)
     # @param [Hash] params ({})
-    def delete_provisioning_template(params = {}, options = {})
+    def delete_provisioning_template(params = {}, **options)
       req = build_request(:delete_provisioning_template, params)
       req.send_request(options)
     end
@@ -3513,9 +3513,9 @@ module Aws::IoT
     #     version_id: 1, # required
     #   })
     #
-    # @overload delete_provisioning_template_version(params = {})
+    # @overload delete_provisioning_template_version(**params)
     # @param [Hash] params ({})
-    def delete_provisioning_template_version(params = {}, options = {})
+    def delete_provisioning_template_version(params = {}, **options)
       req = build_request(:delete_provisioning_template_version, params)
       req.send_request(options)
     end
@@ -3524,9 +3524,9 @@ module Aws::IoT
     #
     # @return [Struct] Returns an empty {Seahorse::Client::Response response}.
     #
-    # @overload delete_registration_code(params = {})
+    # @overload delete_registration_code(**params)
     # @param [Hash] params ({})
-    def delete_registration_code(params = {}, options = {})
+    def delete_registration_code(params = {}, **options)
       req = build_request(:delete_registration_code, params)
       req.send_request(options)
     end
@@ -3544,9 +3544,9 @@ module Aws::IoT
     #     role_alias: "RoleAlias", # required
     #   })
     #
-    # @overload delete_role_alias(params = {})
+    # @overload delete_role_alias(**params)
     # @param [Hash] params ({})
-    def delete_role_alias(params = {}, options = {})
+    def delete_role_alias(params = {}, **options)
       req = build_request(:delete_role_alias, params)
       req.send_request(options)
     end
@@ -3564,9 +3564,9 @@ module Aws::IoT
     #     scheduled_audit_name: "ScheduledAuditName", # required
     #   })
     #
-    # @overload delete_scheduled_audit(params = {})
+    # @overload delete_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_audit(params = {}, options = {})
+    def delete_scheduled_audit(params = {}, **options)
       req = build_request(:delete_scheduled_audit, params)
       req.send_request(options)
     end
@@ -3591,9 +3591,9 @@ module Aws::IoT
     #     expected_version: 1,
     #   })
     #
-    # @overload delete_security_profile(params = {})
+    # @overload delete_security_profile(**params)
     # @param [Hash] params ({})
-    def delete_security_profile(params = {}, options = {})
+    def delete_security_profile(params = {}, **options)
       req = build_request(:delete_security_profile, params)
       req.send_request(options)
     end
@@ -3611,9 +3611,9 @@ module Aws::IoT
     #     stream_id: "StreamId", # required
     #   })
     #
-    # @overload delete_stream(params = {})
+    # @overload delete_stream(**params)
     # @param [Hash] params ({})
-    def delete_stream(params = {}, options = {})
+    def delete_stream(params = {}, **options)
       req = build_request(:delete_stream, params)
       req.send_request(options)
     end
@@ -3639,9 +3639,9 @@ module Aws::IoT
     #     expected_version: 1,
     #   })
     #
-    # @overload delete_thing(params = {})
+    # @overload delete_thing(**params)
     # @param [Hash] params ({})
-    def delete_thing(params = {}, options = {})
+    def delete_thing(params = {}, **options)
       req = build_request(:delete_thing, params)
       req.send_request(options)
     end
@@ -3663,9 +3663,9 @@ module Aws::IoT
     #     expected_version: 1,
     #   })
     #
-    # @overload delete_thing_group(params = {})
+    # @overload delete_thing_group(**params)
     # @param [Hash] params ({})
-    def delete_thing_group(params = {}, options = {})
+    def delete_thing_group(params = {}, **options)
       req = build_request(:delete_thing_group, params)
       req.send_request(options)
     end
@@ -3688,9 +3688,9 @@ module Aws::IoT
     #     thing_type_name: "ThingTypeName", # required
     #   })
     #
-    # @overload delete_thing_type(params = {})
+    # @overload delete_thing_type(**params)
     # @param [Hash] params ({})
-    def delete_thing_type(params = {}, options = {})
+    def delete_thing_type(params = {}, **options)
       req = build_request(:delete_thing_type, params)
       req.send_request(options)
     end
@@ -3708,9 +3708,9 @@ module Aws::IoT
     #     rule_name: "RuleName", # required
     #   })
     #
-    # @overload delete_topic_rule(params = {})
+    # @overload delete_topic_rule(**params)
     # @param [Hash] params ({})
-    def delete_topic_rule(params = {}, options = {})
+    def delete_topic_rule(params = {}, **options)
       req = build_request(:delete_topic_rule, params)
       req.send_request(options)
     end
@@ -3728,9 +3728,9 @@ module Aws::IoT
     #     arn: "AwsArn", # required
     #   })
     #
-    # @overload delete_topic_rule_destination(params = {})
+    # @overload delete_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def delete_topic_rule_destination(params = {}, options = {})
+    def delete_topic_rule_destination(params = {}, **options)
       req = build_request(:delete_topic_rule_destination, params)
       req.send_request(options)
     end
@@ -3753,9 +3753,9 @@ module Aws::IoT
     #     target_name: "LogTargetName", # required
     #   })
     #
-    # @overload delete_v2_logging_level(params = {})
+    # @overload delete_v2_logging_level(**params)
     # @param [Hash] params ({})
-    def delete_v2_logging_level(params = {}, options = {})
+    def delete_v2_logging_level(params = {}, **options)
       req = build_request(:delete_v2_logging_level, params)
       req.send_request(options)
     end
@@ -3780,9 +3780,9 @@ module Aws::IoT
     #     undo_deprecate: false,
     #   })
     #
-    # @overload deprecate_thing_type(params = {})
+    # @overload deprecate_thing_type(**params)
     # @param [Hash] params ({})
-    def deprecate_thing_type(params = {}, options = {})
+    def deprecate_thing_type(params = {}, **options)
       req = build_request(:deprecate_thing_type, params)
       req.send_request(options)
     end
@@ -3807,9 +3807,9 @@ module Aws::IoT
     #   resp.audit_check_configurations #=> Hash
     #   resp.audit_check_configurations["AuditCheckName"].enabled #=> Boolean
     #
-    # @overload describe_account_audit_configuration(params = {})
+    # @overload describe_account_audit_configuration(**params)
     # @param [Hash] params ({})
-    def describe_account_audit_configuration(params = {}, options = {})
+    def describe_account_audit_configuration(params = {}, **options)
       req = build_request(:describe_account_audit_configuration, params)
       req.send_request(options)
     end
@@ -3869,9 +3869,9 @@ module Aws::IoT
     #   resp.finding.reason_for_non_compliance_code #=> String
     #   resp.finding.is_suppressed #=> Boolean
     #
-    # @overload describe_audit_finding(params = {})
+    # @overload describe_audit_finding(**params)
     # @param [Hash] params ({})
-    def describe_audit_finding(params = {}, options = {})
+    def describe_audit_finding(params = {}, **options)
       req = build_request(:describe_audit_finding, params)
       req.send_request(options)
     end
@@ -3934,9 +3934,9 @@ module Aws::IoT
     #   resp.actions_definition[0].action_params.enable_io_t_logging_params.log_level #=> String, one of "DEBUG", "INFO", "ERROR", "WARN", "DISABLED"
     #   resp.actions_definition[0].action_params.publish_finding_to_sns_params.topic_arn #=> String
     #
-    # @overload describe_audit_mitigation_actions_task(params = {})
+    # @overload describe_audit_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def describe_audit_mitigation_actions_task(params = {}, options = {})
+    def describe_audit_mitigation_actions_task(params = {}, **options)
       req = build_request(:describe_audit_mitigation_actions_task, params)
       req.send_request(options)
     end
@@ -3995,9 +3995,9 @@ module Aws::IoT
     #   resp.suppress_indefinitely #=> Boolean
     #   resp.description #=> String
     #
-    # @overload describe_audit_suppression(params = {})
+    # @overload describe_audit_suppression(**params)
     # @param [Hash] params ({})
-    def describe_audit_suppression(params = {}, options = {})
+    def describe_audit_suppression(params = {}, **options)
       req = build_request(:describe_audit_suppression, params)
       req.send_request(options)
     end
@@ -4044,9 +4044,9 @@ module Aws::IoT
     #   resp.audit_details["AuditCheckName"].error_code #=> String
     #   resp.audit_details["AuditCheckName"].message #=> String
     #
-    # @overload describe_audit_task(params = {})
+    # @overload describe_audit_task(**params)
     # @param [Hash] params ({})
-    def describe_audit_task(params = {}, options = {})
+    def describe_audit_task(params = {}, **options)
       req = build_request(:describe_audit_task, params)
       req.send_request(options)
     end
@@ -4079,9 +4079,9 @@ module Aws::IoT
     #   resp.authorizer_description.last_modified_date #=> Time
     #   resp.authorizer_description.signing_disabled #=> Boolean
     #
-    # @overload describe_authorizer(params = {})
+    # @overload describe_authorizer(**params)
     # @param [Hash] params ({})
-    def describe_authorizer(params = {}, options = {})
+    def describe_authorizer(params = {}, **options)
       req = build_request(:describe_authorizer, params)
       req.send_request(options)
     end
@@ -4115,9 +4115,9 @@ module Aws::IoT
     #   resp.billing_group_properties.billing_group_description #=> String
     #   resp.billing_group_metadata.creation_date #=> Time
     #
-    # @overload describe_billing_group(params = {})
+    # @overload describe_billing_group(**params)
     # @param [Hash] params ({})
-    def describe_billing_group(params = {}, options = {})
+    def describe_billing_group(params = {}, **options)
       req = build_request(:describe_billing_group, params)
       req.send_request(options)
     end
@@ -4155,9 +4155,9 @@ module Aws::IoT
     #   resp.registration_config.template_body #=> String
     #   resp.registration_config.role_arn #=> String
     #
-    # @overload describe_ca_certificate(params = {})
+    # @overload describe_ca_certificate(**params)
     # @param [Hash] params ({})
-    def describe_ca_certificate(params = {}, options = {})
+    def describe_ca_certificate(params = {}, **options)
       req = build_request(:describe_ca_certificate, params)
       req.send_request(options)
     end
@@ -4200,9 +4200,9 @@ module Aws::IoT
     #   resp.certificate_description.validity.not_after #=> Time
     #   resp.certificate_description.certificate_mode #=> String, one of "DEFAULT", "SNI_ONLY"
     #
-    # @overload describe_certificate(params = {})
+    # @overload describe_certificate(**params)
     # @param [Hash] params ({})
-    def describe_certificate(params = {}, options = {})
+    def describe_certificate(params = {}, **options)
       req = build_request(:describe_certificate, params)
       req.send_request(options)
     end
@@ -4236,9 +4236,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload describe_custom_metric(params = {})
+    # @overload describe_custom_metric(**params)
     # @param [Hash] params ({})
-    def describe_custom_metric(params = {}, options = {})
+    def describe_custom_metric(params = {}, **options)
       req = build_request(:describe_custom_metric, params)
       req.send_request(options)
     end
@@ -4262,9 +4262,9 @@ module Aws::IoT
     #   resp.authorizer_description.last_modified_date #=> Time
     #   resp.authorizer_description.signing_disabled #=> Boolean
     #
-    # @overload describe_default_authorizer(params = {})
+    # @overload describe_default_authorizer(**params)
     # @param [Hash] params ({})
-    def describe_default_authorizer(params = {}, options = {})
+    def describe_default_authorizer(params = {}, **options)
       req = build_request(:describe_default_authorizer, params)
       req.send_request(options)
     end
@@ -4315,9 +4315,9 @@ module Aws::IoT
     #   resp.task_summary.task_statistics.actions_skipped #=> Integer
     #   resp.task_summary.task_statistics.actions_failed #=> Integer
     #
-    # @overload describe_detect_mitigation_actions_task(params = {})
+    # @overload describe_detect_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def describe_detect_mitigation_actions_task(params = {}, options = {})
+    def describe_detect_mitigation_actions_task(params = {}, **options)
       req = build_request(:describe_detect_mitigation_actions_task, params)
       req.send_request(options)
     end
@@ -4353,9 +4353,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload describe_dimension(params = {})
+    # @overload describe_dimension(**params)
     # @param [Hash] params ({})
-    def describe_dimension(params = {}, options = {})
+    def describe_dimension(params = {}, **options)
       req = build_request(:describe_dimension, params)
       req.send_request(options)
     end
@@ -4404,9 +4404,9 @@ module Aws::IoT
     #   resp.domain_type #=> String, one of "ENDPOINT", "AWS_MANAGED", "CUSTOMER_MANAGED"
     #   resp.last_status_change_date #=> Time
     #
-    # @overload describe_domain_configuration(params = {})
+    # @overload describe_domain_configuration(**params)
     # @param [Hash] params ({})
-    def describe_domain_configuration(params = {}, options = {})
+    def describe_domain_configuration(params = {}, **options)
       req = build_request(:describe_domain_configuration, params)
       req.send_request(options)
     end
@@ -4454,9 +4454,9 @@ module Aws::IoT
     #
     #   resp.endpoint_address #=> String
     #
-    # @overload describe_endpoint(params = {})
+    # @overload describe_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_endpoint(params = {}, options = {})
+    def describe_endpoint(params = {}, **options)
       req = build_request(:describe_endpoint, params)
       req.send_request(options)
     end
@@ -4476,9 +4476,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload describe_event_configurations(params = {})
+    # @overload describe_event_configurations(**params)
     # @param [Hash] params ({})
-    def describe_event_configurations(params = {}, options = {})
+    def describe_event_configurations(params = {}, **options)
       req = build_request(:describe_event_configurations, params)
       req.send_request(options)
     end
@@ -4506,9 +4506,9 @@ module Aws::IoT
     #   resp.index_status #=> String, one of "ACTIVE", "BUILDING", "REBUILDING"
     #   resp.schema #=> String
     #
-    # @overload describe_index(params = {})
+    # @overload describe_index(**params)
     # @param [Hash] params ({})
-    def describe_index(params = {}, options = {})
+    def describe_index(params = {}, **options)
       req = build_request(:describe_index, params)
       req.send_request(options)
     end
@@ -4570,9 +4570,9 @@ module Aws::IoT
     #   resp.job.timeout_config.in_progress_timeout_in_minutes #=> Integer
     #   resp.job.namespace_id #=> String
     #
-    # @overload describe_job(params = {})
+    # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, options = {})
+    def describe_job(params = {}, **options)
       req = build_request(:describe_job, params)
       req.send_request(options)
     end
@@ -4616,9 +4616,9 @@ module Aws::IoT
     #   resp.execution.version_number #=> Integer
     #   resp.execution.approximate_seconds_before_timed_out #=> Integer
     #
-    # @overload describe_job_execution(params = {})
+    # @overload describe_job_execution(**params)
     # @param [Hash] params ({})
-    def describe_job_execution(params = {}, options = {})
+    def describe_job_execution(params = {}, **options)
       req = build_request(:describe_job_execution, params)
       req.send_request(options)
     end
@@ -4664,9 +4664,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload describe_mitigation_action(params = {})
+    # @overload describe_mitigation_action(**params)
     # @param [Hash] params ({})
-    def describe_mitigation_action(params = {}, options = {})
+    def describe_mitigation_action(params = {}, **options)
       req = build_request(:describe_mitigation_action, params)
       req.send_request(options)
     end
@@ -4709,9 +4709,9 @@ module Aws::IoT
     #   resp.pre_provisioning_hook.payload_version #=> String
     #   resp.pre_provisioning_hook.target_arn #=> String
     #
-    # @overload describe_provisioning_template(params = {})
+    # @overload describe_provisioning_template(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_template(params = {}, options = {})
+    def describe_provisioning_template(params = {}, **options)
       req = build_request(:describe_provisioning_template, params)
       req.send_request(options)
     end
@@ -4745,9 +4745,9 @@ module Aws::IoT
     #   resp.template_body #=> String
     #   resp.is_default_version #=> Boolean
     #
-    # @overload describe_provisioning_template_version(params = {})
+    # @overload describe_provisioning_template_version(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_template_version(params = {}, options = {})
+    def describe_provisioning_template_version(params = {}, **options)
       req = build_request(:describe_provisioning_template_version, params)
       req.send_request(options)
     end
@@ -4777,9 +4777,9 @@ module Aws::IoT
     #   resp.role_alias_description.creation_date #=> Time
     #   resp.role_alias_description.last_modified_date #=> Time
     #
-    # @overload describe_role_alias(params = {})
+    # @overload describe_role_alias(**params)
     # @param [Hash] params ({})
-    def describe_role_alias(params = {}, options = {})
+    def describe_role_alias(params = {}, **options)
       req = build_request(:describe_role_alias, params)
       req.send_request(options)
     end
@@ -4814,9 +4814,9 @@ module Aws::IoT
     #   resp.scheduled_audit_name #=> String
     #   resp.scheduled_audit_arn #=> String
     #
-    # @overload describe_scheduled_audit(params = {})
+    # @overload describe_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_audit(params = {}, options = {})
+    def describe_scheduled_audit(params = {}, **options)
       req = build_request(:describe_scheduled_audit, params)
       req.send_request(options)
     end
@@ -4885,9 +4885,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload describe_security_profile(params = {})
+    # @overload describe_security_profile(**params)
     # @param [Hash] params ({})
-    def describe_security_profile(params = {}, options = {})
+    def describe_security_profile(params = {}, **options)
       req = build_request(:describe_security_profile, params)
       req.send_request(options)
     end
@@ -4922,9 +4922,9 @@ module Aws::IoT
     #   resp.stream_info.last_updated_at #=> Time
     #   resp.stream_info.role_arn #=> String
     #
-    # @overload describe_stream(params = {})
+    # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, options = {})
+    def describe_stream(params = {}, **options)
       req = build_request(:describe_stream, params)
       req.send_request(options)
     end
@@ -4963,9 +4963,9 @@ module Aws::IoT
     #   resp.version #=> Integer
     #   resp.billing_group_name #=> String
     #
-    # @overload describe_thing(params = {})
+    # @overload describe_thing(**params)
     # @param [Hash] params ({})
-    def describe_thing(params = {}, options = {})
+    def describe_thing(params = {}, **options)
       req = build_request(:describe_thing, params)
       req.send_request(options)
     end
@@ -5014,9 +5014,9 @@ module Aws::IoT
     #   resp.query_version #=> String
     #   resp.status #=> String, one of "ACTIVE", "BUILDING", "REBUILDING"
     #
-    # @overload describe_thing_group(params = {})
+    # @overload describe_thing_group(**params)
     # @param [Hash] params ({})
-    def describe_thing_group(params = {}, options = {})
+    def describe_thing_group(params = {}, **options)
       req = build_request(:describe_thing_group, params)
       req.send_request(options)
     end
@@ -5062,9 +5062,9 @@ module Aws::IoT
     #   resp.failure_count #=> Integer
     #   resp.percentage_progress #=> Integer
     #
-    # @overload describe_thing_registration_task(params = {})
+    # @overload describe_thing_registration_task(**params)
     # @param [Hash] params ({})
-    def describe_thing_registration_task(params = {}, options = {})
+    def describe_thing_registration_task(params = {}, **options)
       req = build_request(:describe_thing_registration_task, params)
       req.send_request(options)
     end
@@ -5100,9 +5100,9 @@ module Aws::IoT
     #   resp.thing_type_metadata.deprecation_date #=> Time
     #   resp.thing_type_metadata.creation_date #=> Time
     #
-    # @overload describe_thing_type(params = {})
+    # @overload describe_thing_type(**params)
     # @param [Hash] params ({})
-    def describe_thing_type(params = {}, options = {})
+    def describe_thing_type(params = {}, **options)
       req = build_request(:describe_thing_type, params)
       req.send_request(options)
     end
@@ -5124,9 +5124,9 @@ module Aws::IoT
     #     target: "PolicyTarget", # required
     #   })
     #
-    # @overload detach_policy(params = {})
+    # @overload detach_policy(**params)
     # @param [Hash] params ({})
-    def detach_policy(params = {}, options = {})
+    def detach_policy(params = {}, **options)
       req = build_request(:detach_policy, params)
       req.send_request(options)
     end
@@ -5156,9 +5156,9 @@ module Aws::IoT
     #     principal: "Principal", # required
     #   })
     #
-    # @overload detach_principal_policy(params = {})
+    # @overload detach_principal_policy(**params)
     # @param [Hash] params ({})
-    def detach_principal_policy(params = {}, options = {})
+    def detach_principal_policy(params = {}, **options)
       req = build_request(:detach_principal_policy, params)
       req.send_request(options)
     end
@@ -5182,9 +5182,9 @@ module Aws::IoT
     #     security_profile_target_arn: "SecurityProfileTargetArn", # required
     #   })
     #
-    # @overload detach_security_profile(params = {})
+    # @overload detach_security_profile(**params)
     # @param [Hash] params ({})
-    def detach_security_profile(params = {}, options = {})
+    def detach_security_profile(params = {}, **options)
       req = build_request(:detach_security_profile, params)
       req.send_request(options)
     end
@@ -5215,9 +5215,9 @@ module Aws::IoT
     #     principal: "Principal", # required
     #   })
     #
-    # @overload detach_thing_principal(params = {})
+    # @overload detach_thing_principal(**params)
     # @param [Hash] params ({})
-    def detach_thing_principal(params = {}, options = {})
+    def detach_thing_principal(params = {}, **options)
       req = build_request(:detach_thing_principal, params)
       req.send_request(options)
     end
@@ -5235,9 +5235,9 @@ module Aws::IoT
     #     rule_name: "RuleName", # required
     #   })
     #
-    # @overload disable_topic_rule(params = {})
+    # @overload disable_topic_rule(**params)
     # @param [Hash] params ({})
-    def disable_topic_rule(params = {}, options = {})
+    def disable_topic_rule(params = {}, **options)
       req = build_request(:disable_topic_rule, params)
       req.send_request(options)
     end
@@ -5255,9 +5255,9 @@ module Aws::IoT
     #     rule_name: "RuleName", # required
     #   })
     #
-    # @overload enable_topic_rule(params = {})
+    # @overload enable_topic_rule(**params)
     # @param [Hash] params ({})
-    def enable_topic_rule(params = {}, options = {})
+    def enable_topic_rule(params = {}, **options)
       req = build_request(:enable_topic_rule, params)
       req.send_request(options)
     end
@@ -5301,9 +5301,9 @@ module Aws::IoT
     #   resp.summaries[0].last_model_refresh_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload get_behavior_model_training_summaries(params = {})
+    # @overload get_behavior_model_training_summaries(**params)
     # @param [Hash] params ({})
-    def get_behavior_model_training_summaries(params = {}, options = {})
+    def get_behavior_model_training_summaries(params = {}, **options)
       req = build_request(:get_behavior_model_training_summaries, params)
       req.send_request(options)
     end
@@ -5339,9 +5339,9 @@ module Aws::IoT
     #
     #   resp.cardinality #=> Integer
     #
-    # @overload get_cardinality(params = {})
+    # @overload get_cardinality(**params)
     # @param [Hash] params ({})
-    def get_cardinality(params = {}, options = {})
+    def get_cardinality(params = {}, **options)
       req = build_request(:get_cardinality, params)
       req.send_request(options)
     end
@@ -5382,9 +5382,9 @@ module Aws::IoT
     #   resp.effective_policies[0].policy_arn #=> String
     #   resp.effective_policies[0].policy_document #=> String
     #
-    # @overload get_effective_policies(params = {})
+    # @overload get_effective_policies(**params)
     # @param [Hash] params ({})
-    def get_effective_policies(params = {}, options = {})
+    def get_effective_policies(params = {}, **options)
       req = build_request(:get_effective_policies, params)
       req.send_request(options)
     end
@@ -5414,9 +5414,9 @@ module Aws::IoT
     #   resp.thing_group_indexing_configuration.custom_fields[0].name #=> String
     #   resp.thing_group_indexing_configuration.custom_fields[0].type #=> String, one of "Number", "String", "Boolean"
     #
-    # @overload get_indexing_configuration(params = {})
+    # @overload get_indexing_configuration(**params)
     # @param [Hash] params ({})
-    def get_indexing_configuration(params = {}, options = {})
+    def get_indexing_configuration(params = {}, **options)
       req = build_request(:get_indexing_configuration, params)
       req.send_request(options)
     end
@@ -5440,9 +5440,9 @@ module Aws::IoT
     #
     #   resp.document #=> String
     #
-    # @overload get_job_document(params = {})
+    # @overload get_job_document(**params)
     # @param [Hash] params ({})
-    def get_job_document(params = {}, options = {})
+    def get_job_document(params = {}, **options)
       req = build_request(:get_job_document, params)
       req.send_request(options)
     end
@@ -5462,9 +5462,9 @@ module Aws::IoT
     #   resp.role_arn #=> String
     #   resp.log_level #=> String, one of "DEBUG", "INFO", "ERROR", "WARN", "DISABLED"
     #
-    # @overload get_logging_options(params = {})
+    # @overload get_logging_options(**params)
     # @param [Hash] params ({})
-    def get_logging_options(params = {}, options = {})
+    def get_logging_options(params = {}, **options)
       req = build_request(:get_logging_options, params)
       req.send_request(options)
     end
@@ -5533,9 +5533,9 @@ module Aws::IoT
     #   resp.ota_update_info.additional_parameters #=> Hash
     #   resp.ota_update_info.additional_parameters["AttributeKey"] #=> String
     #
-    # @overload get_ota_update(params = {})
+    # @overload get_ota_update(**params)
     # @param [Hash] params ({})
-    def get_ota_update(params = {}, options = {})
+    def get_ota_update(params = {}, **options)
       req = build_request(:get_ota_update, params)
       req.send_request(options)
     end
@@ -5587,9 +5587,9 @@ module Aws::IoT
     #   resp.percentiles[0].percent #=> Float
     #   resp.percentiles[0].value #=> Float
     #
-    # @overload get_percentiles(params = {})
+    # @overload get_percentiles(**params)
     # @param [Hash] params ({})
-    def get_percentiles(params = {}, options = {})
+    def get_percentiles(params = {}, **options)
       req = build_request(:get_percentiles, params)
       req.send_request(options)
     end
@@ -5626,9 +5626,9 @@ module Aws::IoT
     #   resp.last_modified_date #=> Time
     #   resp.generation_id #=> String
     #
-    # @overload get_policy(params = {})
+    # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, options = {})
+    def get_policy(params = {}, **options)
       req = build_request(:get_policy, params)
       req.send_request(options)
     end
@@ -5670,9 +5670,9 @@ module Aws::IoT
     #   resp.last_modified_date #=> Time
     #   resp.generation_id #=> String
     #
-    # @overload get_policy_version(params = {})
+    # @overload get_policy_version(**params)
     # @param [Hash] params ({})
-    def get_policy_version(params = {}, options = {})
+    def get_policy_version(params = {}, **options)
       req = build_request(:get_policy_version, params)
       req.send_request(options)
     end
@@ -5688,9 +5688,9 @@ module Aws::IoT
     #
     #   resp.registration_code #=> String
     #
-    # @overload get_registration_code(params = {})
+    # @overload get_registration_code(**params)
     # @param [Hash] params ({})
-    def get_registration_code(params = {}, options = {})
+    def get_registration_code(params = {}, **options)
       req = build_request(:get_registration_code, params)
       req.send_request(options)
     end
@@ -5737,9 +5737,9 @@ module Aws::IoT
     #   resp.statistics.variance #=> Float
     #   resp.statistics.std_deviation #=> Float
     #
-    # @overload get_statistics(params = {})
+    # @overload get_statistics(**params)
     # @param [Hash] params ({})
-    def get_statistics(params = {}, options = {})
+    def get_statistics(params = {}, **options)
       req = build_request(:get_statistics, params)
       req.send_request(options)
     end
@@ -5969,9 +5969,9 @@ module Aws::IoT
     #   resp.rule.error_action.kafka.client_properties #=> Hash
     #   resp.rule.error_action.kafka.client_properties["String"] #=> String
     #
-    # @overload get_topic_rule(params = {})
+    # @overload get_topic_rule(**params)
     # @param [Hash] params ({})
-    def get_topic_rule(params = {}, options = {})
+    def get_topic_rule(params = {}, **options)
       req = build_request(:get_topic_rule, params)
       req.send_request(options)
     end
@@ -6006,9 +6006,9 @@ module Aws::IoT
     #   resp.topic_rule_destination.vpc_properties.vpc_id #=> String
     #   resp.topic_rule_destination.vpc_properties.role_arn #=> String
     #
-    # @overload get_topic_rule_destination(params = {})
+    # @overload get_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def get_topic_rule_destination(params = {}, options = {})
+    def get_topic_rule_destination(params = {}, **options)
       req = build_request(:get_topic_rule_destination, params)
       req.send_request(options)
     end
@@ -6027,9 +6027,9 @@ module Aws::IoT
     #   resp.default_log_level #=> String, one of "DEBUG", "INFO", "ERROR", "WARN", "DISABLED"
     #   resp.disable_all_logs #=> Boolean
     #
-    # @overload get_v2_logging_options(params = {})
+    # @overload get_v2_logging_options(**params)
     # @param [Hash] params ({})
-    def get_v2_logging_options(params = {}, options = {})
+    def get_v2_logging_options(params = {}, **options)
       req = build_request(:get_v2_logging_options, params)
       req.send_request(options)
     end
@@ -6116,9 +6116,9 @@ module Aws::IoT
     #   resp.active_violations[0].violation_start_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_active_violations(params = {})
+    # @overload list_active_violations(**params)
     # @param [Hash] params ({})
-    def list_active_violations(params = {}, options = {})
+    def list_active_violations(params = {}, **options)
       req = build_request(:list_active_violations, params)
       req.send_request(options)
     end
@@ -6165,9 +6165,9 @@ module Aws::IoT
     #   resp.policies[0].policy_arn #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_attached_policies(params = {})
+    # @overload list_attached_policies(**params)
     # @param [Hash] params ({})
-    def list_attached_policies(params = {}, options = {})
+    def list_attached_policies(params = {}, **options)
       req = build_request(:list_attached_policies, params)
       req.send_request(options)
     end
@@ -6281,9 +6281,9 @@ module Aws::IoT
     #   resp.findings[0].is_suppressed #=> Boolean
     #   resp.next_token #=> String
     #
-    # @overload list_audit_findings(params = {})
+    # @overload list_audit_findings(**params)
     # @param [Hash] params ({})
-    def list_audit_findings(params = {}, options = {})
+    def list_audit_findings(params = {}, **options)
       req = build_request(:list_audit_findings, params)
       req.send_request(options)
     end
@@ -6339,9 +6339,9 @@ module Aws::IoT
     #   resp.actions_executions[0].message #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_audit_mitigation_actions_executions(params = {})
+    # @overload list_audit_mitigation_actions_executions(**params)
     # @param [Hash] params ({})
-    def list_audit_mitigation_actions_executions(params = {}, options = {})
+    def list_audit_mitigation_actions_executions(params = {}, **options)
       req = build_request(:list_audit_mitigation_actions_executions, params)
       req.send_request(options)
     end
@@ -6403,9 +6403,9 @@ module Aws::IoT
     #   resp.tasks[0].task_status #=> String, one of "IN_PROGRESS", "COMPLETED", "FAILED", "CANCELED"
     #   resp.next_token #=> String
     #
-    # @overload list_audit_mitigation_actions_tasks(params = {})
+    # @overload list_audit_mitigation_actions_tasks(**params)
     # @param [Hash] params ({})
-    def list_audit_mitigation_actions_tasks(params = {}, options = {})
+    def list_audit_mitigation_actions_tasks(params = {}, **options)
       req = build_request(:list_audit_mitigation_actions_tasks, params)
       req.send_request(options)
     end
@@ -6480,9 +6480,9 @@ module Aws::IoT
     #   resp.suppressions[0].description #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_audit_suppressions(params = {})
+    # @overload list_audit_suppressions(**params)
     # @param [Hash] params ({})
-    def list_audit_suppressions(params = {}, options = {})
+    def list_audit_suppressions(params = {}, **options)
       req = build_request(:list_audit_suppressions, params)
       req.send_request(options)
     end
@@ -6540,9 +6540,9 @@ module Aws::IoT
     #   resp.tasks[0].task_type #=> String, one of "ON_DEMAND_AUDIT_TASK", "SCHEDULED_AUDIT_TASK"
     #   resp.next_token #=> String
     #
-    # @overload list_audit_tasks(params = {})
+    # @overload list_audit_tasks(**params)
     # @param [Hash] params ({})
-    def list_audit_tasks(params = {}, options = {})
+    def list_audit_tasks(params = {}, **options)
       req = build_request(:list_audit_tasks, params)
       req.send_request(options)
     end
@@ -6584,9 +6584,9 @@ module Aws::IoT
     #   resp.authorizers[0].authorizer_arn #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_authorizers(params = {})
+    # @overload list_authorizers(**params)
     # @param [Hash] params ({})
-    def list_authorizers(params = {}, options = {})
+    def list_authorizers(params = {}, **options)
       req = build_request(:list_authorizers, params)
       req.send_request(options)
     end
@@ -6626,9 +6626,9 @@ module Aws::IoT
     #   resp.billing_groups[0].group_arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_billing_groups(params = {})
+    # @overload list_billing_groups(**params)
     # @param [Hash] params ({})
-    def list_billing_groups(params = {}, options = {})
+    def list_billing_groups(params = {}, **options)
       req = build_request(:list_billing_groups, params)
       req.send_request(options)
     end
@@ -6671,9 +6671,9 @@ module Aws::IoT
     #   resp.certificates[0].creation_date #=> Time
     #   resp.next_marker #=> String
     #
-    # @overload list_ca_certificates(params = {})
+    # @overload list_ca_certificates(**params)
     # @param [Hash] params ({})
-    def list_ca_certificates(params = {}, options = {})
+    def list_ca_certificates(params = {}, **options)
       req = build_request(:list_ca_certificates, params)
       req.send_request(options)
     end
@@ -6718,9 +6718,9 @@ module Aws::IoT
     #   resp.certificates[0].creation_date #=> Time
     #   resp.next_marker #=> String
     #
-    # @overload list_certificates(params = {})
+    # @overload list_certificates(**params)
     # @param [Hash] params ({})
-    def list_certificates(params = {}, options = {})
+    def list_certificates(params = {}, **options)
       req = build_request(:list_certificates, params)
       req.send_request(options)
     end
@@ -6767,9 +6767,9 @@ module Aws::IoT
     #   resp.certificates[0].creation_date #=> Time
     #   resp.next_marker #=> String
     #
-    # @overload list_certificates_by_ca(params = {})
+    # @overload list_certificates_by_ca(**params)
     # @param [Hash] params ({})
-    def list_certificates_by_ca(params = {}, options = {})
+    def list_certificates_by_ca(params = {}, **options)
       req = build_request(:list_certificates_by_ca, params)
       req.send_request(options)
     end
@@ -6803,9 +6803,9 @@ module Aws::IoT
     #   resp.metric_names[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_custom_metrics(params = {})
+    # @overload list_custom_metrics(**params)
     # @param [Hash] params ({})
-    def list_custom_metrics(params = {}, options = {})
+    def list_custom_metrics(params = {}, **options)
       req = build_request(:list_custom_metrics, params)
       req.send_request(options)
     end
@@ -6871,9 +6871,9 @@ module Aws::IoT
     #   resp.actions_executions[0].message #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_detect_mitigation_actions_executions(params = {})
+    # @overload list_detect_mitigation_actions_executions(**params)
     # @param [Hash] params ({})
-    def list_detect_mitigation_actions_executions(params = {}, options = {})
+    def list_detect_mitigation_actions_executions(params = {}, **options)
       req = build_request(:list_detect_mitigation_actions_executions, params)
       req.send_request(options)
     end
@@ -6945,9 +6945,9 @@ module Aws::IoT
     #   resp.tasks[0].task_statistics.actions_failed #=> Integer
     #   resp.next_token #=> String
     #
-    # @overload list_detect_mitigation_actions_tasks(params = {})
+    # @overload list_detect_mitigation_actions_tasks(**params)
     # @param [Hash] params ({})
-    def list_detect_mitigation_actions_tasks(params = {}, options = {})
+    def list_detect_mitigation_actions_tasks(params = {}, **options)
       req = build_request(:list_detect_mitigation_actions_tasks, params)
       req.send_request(options)
     end
@@ -6980,9 +6980,9 @@ module Aws::IoT
     #   resp.dimension_names[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_dimensions(params = {})
+    # @overload list_dimensions(**params)
     # @param [Hash] params ({})
-    def list_dimensions(params = {}, options = {})
+    def list_dimensions(params = {}, **options)
       req = build_request(:list_dimensions, params)
       req.send_request(options)
     end
@@ -7027,9 +7027,9 @@ module Aws::IoT
     #   resp.domain_configurations[0].service_type #=> String, one of "DATA", "CREDENTIAL_PROVIDER", "JOBS"
     #   resp.next_marker #=> String
     #
-    # @overload list_domain_configurations(params = {})
+    # @overload list_domain_configurations(**params)
     # @param [Hash] params ({})
-    def list_domain_configurations(params = {}, options = {})
+    def list_domain_configurations(params = {}, **options)
       req = build_request(:list_domain_configurations, params)
       req.send_request(options)
     end
@@ -7063,9 +7063,9 @@ module Aws::IoT
     #   resp.index_names[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_indices(params = {})
+    # @overload list_indices(**params)
     # @param [Hash] params ({})
-    def list_indices(params = {}, options = {})
+    def list_indices(params = {}, **options)
       req = build_request(:list_indices, params)
       req.send_request(options)
     end
@@ -7111,9 +7111,9 @@ module Aws::IoT
     #   resp.execution_summaries[0].job_execution_summary.execution_number #=> Integer
     #   resp.next_token #=> String
     #
-    # @overload list_job_executions_for_job(params = {})
+    # @overload list_job_executions_for_job(**params)
     # @param [Hash] params ({})
-    def list_job_executions_for_job(params = {}, options = {})
+    def list_job_executions_for_job(params = {}, **options)
       req = build_request(:list_job_executions_for_job, params)
       req.send_request(options)
     end
@@ -7174,9 +7174,9 @@ module Aws::IoT
     #   resp.execution_summaries[0].job_execution_summary.execution_number #=> Integer
     #   resp.next_token #=> String
     #
-    # @overload list_job_executions_for_thing(params = {})
+    # @overload list_job_executions_for_thing(**params)
     # @param [Hash] params ({})
-    def list_job_executions_for_thing(params = {}, options = {})
+    def list_job_executions_for_thing(params = {}, **options)
       req = build_request(:list_job_executions_for_thing, params)
       req.send_request(options)
     end
@@ -7254,9 +7254,9 @@ module Aws::IoT
     #   resp.jobs[0].completed_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -7298,9 +7298,9 @@ module Aws::IoT
     #   resp.action_identifiers[0].creation_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_mitigation_actions(params = {})
+    # @overload list_mitigation_actions(**params)
     # @param [Hash] params ({})
-    def list_mitigation_actions(params = {}, options = {})
+    def list_mitigation_actions(params = {}, **options)
       req = build_request(:list_mitigation_actions, params)
       req.send_request(options)
     end
@@ -7339,9 +7339,9 @@ module Aws::IoT
     #   resp.ota_updates[0].creation_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_ota_updates(params = {})
+    # @overload list_ota_updates(**params)
     # @param [Hash] params ({})
-    def list_ota_updates(params = {}, options = {})
+    def list_ota_updates(params = {}, **options)
       req = build_request(:list_ota_updates, params)
       req.send_request(options)
     end
@@ -7384,9 +7384,9 @@ module Aws::IoT
     #   resp.outgoing_certificates[0].creation_date #=> Time
     #   resp.next_marker #=> String
     #
-    # @overload list_outgoing_certificates(params = {})
+    # @overload list_outgoing_certificates(**params)
     # @param [Hash] params ({})
-    def list_outgoing_certificates(params = {}, options = {})
+    def list_outgoing_certificates(params = {}, **options)
       req = build_request(:list_outgoing_certificates, params)
       req.send_request(options)
     end
@@ -7425,9 +7425,9 @@ module Aws::IoT
     #   resp.policies[0].policy_arn #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_policies(params = {})
+    # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, options = {})
+    def list_policies(params = {}, **options)
       req = build_request(:list_policies, params)
       req.send_request(options)
     end
@@ -7472,9 +7472,9 @@ module Aws::IoT
     #   resp.principals[0] #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_policy_principals(params = {})
+    # @overload list_policy_principals(**params)
     # @param [Hash] params ({})
-    def list_policy_principals(params = {}, options = {})
+    def list_policy_principals(params = {}, **options)
       req = build_request(:list_policy_principals, params)
       req.send_request(options)
     end
@@ -7502,9 +7502,9 @@ module Aws::IoT
     #   resp.policy_versions[0].is_default_version #=> Boolean
     #   resp.policy_versions[0].create_date #=> Time
     #
-    # @overload list_policy_versions(params = {})
+    # @overload list_policy_versions(**params)
     # @param [Hash] params ({})
-    def list_policy_versions(params = {}, options = {})
+    def list_policy_versions(params = {}, **options)
       req = build_request(:list_policy_versions, params)
       req.send_request(options)
     end
@@ -7560,9 +7560,9 @@ module Aws::IoT
     #   resp.policies[0].policy_arn #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_principal_policies(params = {})
+    # @overload list_principal_policies(**params)
     # @param [Hash] params ({})
-    def list_principal_policies(params = {}, options = {})
+    def list_principal_policies(params = {}, **options)
       req = build_request(:list_principal_policies, params)
       req.send_request(options)
     end
@@ -7603,9 +7603,9 @@ module Aws::IoT
     #   resp.things[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_principal_things(params = {})
+    # @overload list_principal_things(**params)
     # @param [Hash] params ({})
-    def list_principal_things(params = {}, options = {})
+    def list_principal_things(params = {}, **options)
       req = build_request(:list_principal_things, params)
       req.send_request(options)
     end
@@ -7644,9 +7644,9 @@ module Aws::IoT
     #   resp.versions[0].is_default_version #=> Boolean
     #   resp.next_token #=> String
     #
-    # @overload list_provisioning_template_versions(params = {})
+    # @overload list_provisioning_template_versions(**params)
     # @param [Hash] params ({})
-    def list_provisioning_template_versions(params = {}, options = {})
+    def list_provisioning_template_versions(params = {}, **options)
       req = build_request(:list_provisioning_template_versions, params)
       req.send_request(options)
     end
@@ -7684,9 +7684,9 @@ module Aws::IoT
     #   resp.templates[0].enabled #=> Boolean
     #   resp.next_token #=> String
     #
-    # @overload list_provisioning_templates(params = {})
+    # @overload list_provisioning_templates(**params)
     # @param [Hash] params ({})
-    def list_provisioning_templates(params = {}, options = {})
+    def list_provisioning_templates(params = {}, **options)
       req = build_request(:list_provisioning_templates, params)
       req.send_request(options)
     end
@@ -7723,9 +7723,9 @@ module Aws::IoT
     #   resp.role_aliases[0] #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_role_aliases(params = {})
+    # @overload list_role_aliases(**params)
     # @param [Hash] params ({})
-    def list_role_aliases(params = {}, options = {})
+    def list_role_aliases(params = {}, **options)
       req = build_request(:list_role_aliases, params)
       req.send_request(options)
     end
@@ -7763,9 +7763,9 @@ module Aws::IoT
     #   resp.scheduled_audits[0].day_of_week #=> String, one of "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"
     #   resp.next_token #=> String
     #
-    # @overload list_scheduled_audits(params = {})
+    # @overload list_scheduled_audits(**params)
     # @param [Hash] params ({})
-    def list_scheduled_audits(params = {}, options = {})
+    def list_scheduled_audits(params = {}, **options)
       req = build_request(:list_scheduled_audits, params)
       req.send_request(options)
     end
@@ -7813,9 +7813,9 @@ module Aws::IoT
     #   resp.security_profile_identifiers[0].arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_security_profiles(params = {})
+    # @overload list_security_profiles(**params)
     # @param [Hash] params ({})
-    def list_security_profiles(params = {}, options = {})
+    def list_security_profiles(params = {}, **options)
       req = build_request(:list_security_profiles, params)
       req.send_request(options)
     end
@@ -7860,9 +7860,9 @@ module Aws::IoT
     #   resp.security_profile_target_mappings[0].target.arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_security_profiles_for_target(params = {})
+    # @overload list_security_profiles_for_target(**params)
     # @param [Hash] params ({})
-    def list_security_profiles_for_target(params = {}, options = {})
+    def list_security_profiles_for_target(params = {}, **options)
       req = build_request(:list_security_profiles_for_target, params)
       req.send_request(options)
     end
@@ -7902,9 +7902,9 @@ module Aws::IoT
     #   resp.streams[0].description #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_streams(params = {})
+    # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, options = {})
+    def list_streams(params = {}, **options)
       req = build_request(:list_streams, params)
       req.send_request(options)
     end
@@ -7940,9 +7940,9 @@ module Aws::IoT
     #   resp.tags[0].value #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -7979,9 +7979,9 @@ module Aws::IoT
     #   resp.targets[0] #=> String
     #   resp.next_marker #=> String
     #
-    # @overload list_targets_for_policy(params = {})
+    # @overload list_targets_for_policy(**params)
     # @param [Hash] params ({})
-    def list_targets_for_policy(params = {}, options = {})
+    def list_targets_for_policy(params = {}, **options)
       req = build_request(:list_targets_for_policy, params)
       req.send_request(options)
     end
@@ -8019,9 +8019,9 @@ module Aws::IoT
     #   resp.security_profile_targets[0].arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_targets_for_security_profile(params = {})
+    # @overload list_targets_for_security_profile(**params)
     # @param [Hash] params ({})
-    def list_targets_for_security_profile(params = {}, options = {})
+    def list_targets_for_security_profile(params = {}, **options)
       req = build_request(:list_targets_for_security_profile, params)
       req.send_request(options)
     end
@@ -8071,9 +8071,9 @@ module Aws::IoT
     #   resp.thing_groups[0].group_arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_thing_groups(params = {})
+    # @overload list_thing_groups(**params)
     # @param [Hash] params ({})
-    def list_thing_groups(params = {}, options = {})
+    def list_thing_groups(params = {}, **options)
       req = build_request(:list_thing_groups, params)
       req.send_request(options)
     end
@@ -8113,9 +8113,9 @@ module Aws::IoT
     #   resp.thing_groups[0].group_arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_thing_groups_for_thing(params = {})
+    # @overload list_thing_groups_for_thing(**params)
     # @param [Hash] params ({})
-    def list_thing_groups_for_thing(params = {}, options = {})
+    def list_thing_groups_for_thing(params = {}, **options)
       req = build_request(:list_thing_groups_for_thing, params)
       req.send_request(options)
     end
@@ -8156,9 +8156,9 @@ module Aws::IoT
     #   resp.principals[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_thing_principals(params = {})
+    # @overload list_thing_principals(**params)
     # @param [Hash] params ({})
-    def list_thing_principals(params = {}, options = {})
+    def list_thing_principals(params = {}, **options)
       req = build_request(:list_thing_principals, params)
       req.send_request(options)
     end
@@ -8203,9 +8203,9 @@ module Aws::IoT
     #   resp.report_type #=> String, one of "ERRORS", "RESULTS"
     #   resp.next_token #=> String
     #
-    # @overload list_thing_registration_task_reports(params = {})
+    # @overload list_thing_registration_task_reports(**params)
     # @param [Hash] params ({})
-    def list_thing_registration_task_reports(params = {}, options = {})
+    def list_thing_registration_task_reports(params = {}, **options)
       req = build_request(:list_thing_registration_task_reports, params)
       req.send_request(options)
     end
@@ -8244,9 +8244,9 @@ module Aws::IoT
     #   resp.task_ids[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_thing_registration_tasks(params = {})
+    # @overload list_thing_registration_tasks(**params)
     # @param [Hash] params ({})
-    def list_thing_registration_tasks(params = {}, options = {})
+    def list_thing_registration_tasks(params = {}, **options)
       req = build_request(:list_thing_registration_tasks, params)
       req.send_request(options)
     end
@@ -8292,9 +8292,9 @@ module Aws::IoT
     #   resp.thing_types[0].thing_type_metadata.creation_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_thing_types(params = {})
+    # @overload list_thing_types(**params)
     # @param [Hash] params ({})
-    def list_thing_types(params = {}, options = {})
+    def list_thing_types(params = {}, **options)
       req = build_request(:list_thing_types, params)
       req.send_request(options)
     end
@@ -8357,9 +8357,9 @@ module Aws::IoT
     #   resp.things[0].version #=> Integer
     #   resp.next_token #=> String
     #
-    # @overload list_things(params = {})
+    # @overload list_things(**params)
     # @param [Hash] params ({})
-    def list_things(params = {}, options = {})
+    def list_things(params = {}, **options)
       req = build_request(:list_things, params)
       req.send_request(options)
     end
@@ -8398,9 +8398,9 @@ module Aws::IoT
     #   resp.things[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_things_in_billing_group(params = {})
+    # @overload list_things_in_billing_group(**params)
     # @param [Hash] params ({})
-    def list_things_in_billing_group(params = {}, options = {})
+    def list_things_in_billing_group(params = {}, **options)
       req = build_request(:list_things_in_billing_group, params)
       req.send_request(options)
     end
@@ -8444,9 +8444,9 @@ module Aws::IoT
     #   resp.things[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_things_in_thing_group(params = {})
+    # @overload list_things_in_thing_group(**params)
     # @param [Hash] params ({})
-    def list_things_in_thing_group(params = {}, options = {})
+    def list_things_in_thing_group(params = {}, **options)
       req = build_request(:list_things_in_thing_group, params)
       req.send_request(options)
     end
@@ -8492,9 +8492,9 @@ module Aws::IoT
     #   resp.destination_summaries[0].vpc_destination_summary.role_arn #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_topic_rule_destinations(params = {})
+    # @overload list_topic_rule_destinations(**params)
     # @param [Hash] params ({})
-    def list_topic_rule_destinations(params = {}, options = {})
+    def list_topic_rule_destinations(params = {}, **options)
       req = build_request(:list_topic_rule_destinations, params)
       req.send_request(options)
     end
@@ -8541,9 +8541,9 @@ module Aws::IoT
     #   resp.rules[0].rule_disabled #=> Boolean
     #   resp.next_token #=> String
     #
-    # @overload list_topic_rules(params = {})
+    # @overload list_topic_rules(**params)
     # @param [Hash] params ({})
-    def list_topic_rules(params = {}, options = {})
+    def list_topic_rules(params = {}, **options)
       req = build_request(:list_topic_rules, params)
       req.send_request(options)
     end
@@ -8585,9 +8585,9 @@ module Aws::IoT
     #   resp.log_target_configurations[0].log_level #=> String, one of "DEBUG", "INFO", "ERROR", "WARN", "DISABLED"
     #   resp.next_token #=> String
     #
-    # @overload list_v2_logging_levels(params = {})
+    # @overload list_v2_logging_levels(**params)
     # @param [Hash] params ({})
-    def list_v2_logging_levels(params = {}, options = {})
+    def list_v2_logging_levels(params = {}, **options)
       req = build_request(:list_v2_logging_levels, params)
       req.send_request(options)
     end
@@ -8685,9 +8685,9 @@ module Aws::IoT
     #   resp.violation_events[0].violation_event_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_violation_events(params = {})
+    # @overload list_violation_events(**params)
     # @param [Hash] params ({})
-    def list_violation_events(params = {}, options = {})
+    def list_violation_events(params = {}, **options)
       req = build_request(:list_violation_events, params)
       req.send_request(options)
     end
@@ -8760,9 +8760,9 @@ module Aws::IoT
     #   resp.certificate_arn #=> String
     #   resp.certificate_id #=> String
     #
-    # @overload register_ca_certificate(params = {})
+    # @overload register_ca_certificate(**params)
     # @param [Hash] params ({})
-    def register_ca_certificate(params = {}, options = {})
+    def register_ca_certificate(params = {}, **options)
       req = build_request(:register_ca_certificate, params)
       req.send_request(options)
     end
@@ -8804,9 +8804,9 @@ module Aws::IoT
     #   resp.certificate_arn #=> String
     #   resp.certificate_id #=> String
     #
-    # @overload register_certificate(params = {})
+    # @overload register_certificate(**params)
     # @param [Hash] params ({})
-    def register_certificate(params = {}, options = {})
+    def register_certificate(params = {}, **options)
       req = build_request(:register_certificate, params)
       req.send_request(options)
     end
@@ -8837,9 +8837,9 @@ module Aws::IoT
     #   resp.certificate_arn #=> String
     #   resp.certificate_id #=> String
     #
-    # @overload register_certificate_without_ca(params = {})
+    # @overload register_certificate_without_ca(**params)
     # @param [Hash] params ({})
-    def register_certificate_without_ca(params = {}, options = {})
+    def register_certificate_without_ca(params = {}, **options)
       req = build_request(:register_certificate_without_ca, params)
       req.send_request(options)
     end
@@ -8891,9 +8891,9 @@ module Aws::IoT
     #   resp.resource_arns #=> Hash
     #   resp.resource_arns["ResourceLogicalId"] #=> String
     #
-    # @overload register_thing(params = {})
+    # @overload register_thing(**params)
     # @param [Hash] params ({})
-    def register_thing(params = {}, options = {})
+    def register_thing(params = {}, **options)
       req = build_request(:register_thing, params)
       req.send_request(options)
     end
@@ -8925,9 +8925,9 @@ module Aws::IoT
     #     reject_reason: "Message",
     #   })
     #
-    # @overload reject_certificate_transfer(params = {})
+    # @overload reject_certificate_transfer(**params)
     # @param [Hash] params ({})
-    def reject_certificate_transfer(params = {}, options = {})
+    def reject_certificate_transfer(params = {}, **options)
       req = build_request(:reject_certificate_transfer, params)
       req.send_request(options)
     end
@@ -8957,9 +8957,9 @@ module Aws::IoT
     #     thing_arn: "ThingArn",
     #   })
     #
-    # @overload remove_thing_from_billing_group(params = {})
+    # @overload remove_thing_from_billing_group(**params)
     # @param [Hash] params ({})
-    def remove_thing_from_billing_group(params = {}, options = {})
+    def remove_thing_from_billing_group(params = {}, **options)
       req = build_request(:remove_thing_from_billing_group, params)
       req.send_request(options)
     end
@@ -8993,9 +8993,9 @@ module Aws::IoT
     #     thing_arn: "ThingArn",
     #   })
     #
-    # @overload remove_thing_from_thing_group(params = {})
+    # @overload remove_thing_from_thing_group(**params)
     # @param [Hash] params ({})
-    def remove_thing_from_thing_group(params = {}, options = {})
+    def remove_thing_from_thing_group(params = {}, **options)
       req = build_request(:remove_thing_from_thing_group, params)
       req.send_request(options)
     end
@@ -9363,9 +9363,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload replace_topic_rule(params = {})
+    # @overload replace_topic_rule(**params)
     # @param [Hash] params ({})
-    def replace_topic_rule(params = {}, options = {})
+    def replace_topic_rule(params = {}, **options)
       req = build_request(:replace_topic_rule, params)
       req.send_request(options)
     end
@@ -9427,9 +9427,9 @@ module Aws::IoT
     #   resp.thing_groups[0].parent_group_names #=> Array
     #   resp.thing_groups[0].parent_group_names[0] #=> String
     #
-    # @overload search_index(params = {})
+    # @overload search_index(**params)
     # @param [Hash] params ({})
-    def search_index(params = {}, options = {})
+    def search_index(params = {}, **options)
       req = build_request(:search_index, params)
       req.send_request(options)
     end
@@ -9456,9 +9456,9 @@ module Aws::IoT
     #   resp.authorizer_name #=> String
     #   resp.authorizer_arn #=> String
     #
-    # @overload set_default_authorizer(params = {})
+    # @overload set_default_authorizer(**params)
     # @param [Hash] params ({})
-    def set_default_authorizer(params = {}, options = {})
+    def set_default_authorizer(params = {}, **options)
       req = build_request(:set_default_authorizer, params)
       req.send_request(options)
     end
@@ -9483,9 +9483,9 @@ module Aws::IoT
     #     policy_version_id: "PolicyVersionId", # required
     #   })
     #
-    # @overload set_default_policy_version(params = {})
+    # @overload set_default_policy_version(**params)
     # @param [Hash] params ({})
-    def set_default_policy_version(params = {}, options = {})
+    def set_default_policy_version(params = {}, **options)
       req = build_request(:set_default_policy_version, params)
       req.send_request(options)
     end
@@ -9509,9 +9509,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload set_logging_options(params = {})
+    # @overload set_logging_options(**params)
     # @param [Hash] params ({})
-    def set_logging_options(params = {}, options = {})
+    def set_logging_options(params = {}, **options)
       req = build_request(:set_logging_options, params)
       req.send_request(options)
     end
@@ -9536,9 +9536,9 @@ module Aws::IoT
     #     log_level: "DEBUG", # required, accepts DEBUG, INFO, ERROR, WARN, DISABLED
     #   })
     #
-    # @overload set_v2_logging_level(params = {})
+    # @overload set_v2_logging_level(**params)
     # @param [Hash] params ({})
-    def set_v2_logging_level(params = {}, options = {})
+    def set_v2_logging_level(params = {}, **options)
       req = build_request(:set_v2_logging_level, params)
       req.send_request(options)
     end
@@ -9564,9 +9564,9 @@ module Aws::IoT
     #     disable_all_logs: false,
     #   })
     #
-    # @overload set_v2_logging_options(params = {})
+    # @overload set_v2_logging_options(**params)
     # @param [Hash] params ({})
-    def set_v2_logging_options(params = {}, options = {})
+    def set_v2_logging_options(params = {}, **options)
       req = build_request(:set_v2_logging_options, params)
       req.send_request(options)
     end
@@ -9621,9 +9621,9 @@ module Aws::IoT
     #
     #   resp.task_id #=> String
     #
-    # @overload start_audit_mitigation_actions_task(params = {})
+    # @overload start_audit_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def start_audit_mitigation_actions_task(params = {}, options = {})
+    def start_audit_mitigation_actions_task(params = {}, **options)
       req = build_request(:start_audit_mitigation_actions_task, params)
       req.send_request(options)
     end
@@ -9685,9 +9685,9 @@ module Aws::IoT
     #
     #   resp.task_id #=> String
     #
-    # @overload start_detect_mitigation_actions_task(params = {})
+    # @overload start_detect_mitigation_actions_task(**params)
     # @param [Hash] params ({})
-    def start_detect_mitigation_actions_task(params = {}, options = {})
+    def start_detect_mitigation_actions_task(params = {}, **options)
       req = build_request(:start_detect_mitigation_actions_task, params)
       req.send_request(options)
     end
@@ -9715,9 +9715,9 @@ module Aws::IoT
     #
     #   resp.task_id #=> String
     #
-    # @overload start_on_demand_audit_task(params = {})
+    # @overload start_on_demand_audit_task(**params)
     # @param [Hash] params ({})
-    def start_on_demand_audit_task(params = {}, options = {})
+    def start_on_demand_audit_task(params = {}, **options)
       req = build_request(:start_on_demand_audit_task, params)
       req.send_request(options)
     end
@@ -9755,9 +9755,9 @@ module Aws::IoT
     #
     #   resp.task_id #=> String
     #
-    # @overload start_thing_registration_task(params = {})
+    # @overload start_thing_registration_task(**params)
     # @param [Hash] params ({})
-    def start_thing_registration_task(params = {}, options = {})
+    def start_thing_registration_task(params = {}, **options)
       req = build_request(:start_thing_registration_task, params)
       req.send_request(options)
     end
@@ -9775,9 +9775,9 @@ module Aws::IoT
     #     task_id: "TaskId", # required
     #   })
     #
-    # @overload stop_thing_registration_task(params = {})
+    # @overload stop_thing_registration_task(**params)
     # @param [Hash] params ({})
-    def stop_thing_registration_task(params = {}, options = {})
+    def stop_thing_registration_task(params = {}, **options)
       req = build_request(:stop_thing_registration_task, params)
       req.send_request(options)
     end
@@ -9805,9 +9805,9 @@ module Aws::IoT
     #     ],
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -9881,9 +9881,9 @@ module Aws::IoT
     #   resp.auth_results[0].missing_context_values #=> Array
     #   resp.auth_results[0].missing_context_values[0] #=> String
     #
-    # @overload test_authorization(params = {})
+    # @overload test_authorization(**params)
     # @param [Hash] params ({})
-    def test_authorization(params = {}, options = {})
+    def test_authorization(params = {}, **options)
       req = build_request(:test_authorization, params)
       req.send_request(options)
     end
@@ -9950,9 +9950,9 @@ module Aws::IoT
     #   resp.refresh_after_in_seconds #=> Integer
     #   resp.disconnect_after_in_seconds #=> Integer
     #
-    # @overload test_invoke_authorizer(params = {})
+    # @overload test_invoke_authorizer(**params)
     # @param [Hash] params ({})
-    def test_invoke_authorizer(params = {}, options = {})
+    def test_invoke_authorizer(params = {}, **options)
       req = build_request(:test_invoke_authorizer, params)
       req.send_request(options)
     end
@@ -9996,9 +9996,9 @@ module Aws::IoT
     #
     #   resp.transferred_certificate_arn #=> String
     #
-    # @overload transfer_certificate(params = {})
+    # @overload transfer_certificate(**params)
     # @param [Hash] params ({})
-    def transfer_certificate(params = {}, options = {})
+    def transfer_certificate(params = {}, **options)
       req = build_request(:transfer_certificate, params)
       req.send_request(options)
     end
@@ -10020,9 +10020,9 @@ module Aws::IoT
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -10075,9 +10075,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload update_account_audit_configuration(params = {})
+    # @overload update_account_audit_configuration(**params)
     # @param [Hash] params ({})
-    def update_account_audit_configuration(params = {}, options = {})
+    def update_account_audit_configuration(params = {}, **options)
       req = build_request(:update_account_audit_configuration, params)
       req.send_request(options)
     end
@@ -10127,9 +10127,9 @@ module Aws::IoT
     #     description: "AuditDescription",
     #   })
     #
-    # @overload update_audit_suppression(params = {})
+    # @overload update_audit_suppression(**params)
     # @param [Hash] params ({})
-    def update_audit_suppression(params = {}, options = {})
+    def update_audit_suppression(params = {}, **options)
       req = build_request(:update_audit_suppression, params)
       req.send_request(options)
     end
@@ -10173,9 +10173,9 @@ module Aws::IoT
     #   resp.authorizer_name #=> String
     #   resp.authorizer_arn #=> String
     #
-    # @overload update_authorizer(params = {})
+    # @overload update_authorizer(**params)
     # @param [Hash] params ({})
-    def update_authorizer(params = {}, options = {})
+    def update_authorizer(params = {}, **options)
       req = build_request(:update_authorizer, params)
       req.send_request(options)
     end
@@ -10212,9 +10212,9 @@ module Aws::IoT
     #
     #   resp.version #=> Integer
     #
-    # @overload update_billing_group(params = {})
+    # @overload update_billing_group(**params)
     # @param [Hash] params ({})
-    def update_billing_group(params = {}, options = {})
+    def update_billing_group(params = {}, **options)
       req = build_request(:update_billing_group, params)
       req.send_request(options)
     end
@@ -10255,9 +10255,9 @@ module Aws::IoT
     #     remove_auto_registration: false,
     #   })
     #
-    # @overload update_ca_certificate(params = {})
+    # @overload update_ca_certificate(**params)
     # @param [Hash] params ({})
-    def update_ca_certificate(params = {}, options = {})
+    def update_ca_certificate(params = {}, **options)
       req = build_request(:update_ca_certificate, params)
       req.send_request(options)
     end
@@ -10297,9 +10297,9 @@ module Aws::IoT
     #     new_status: "ACTIVE", # required, accepts ACTIVE, INACTIVE, REVOKED, PENDING_TRANSFER, REGISTER_INACTIVE, PENDING_ACTIVATION
     #   })
     #
-    # @overload update_certificate(params = {})
+    # @overload update_certificate(**params)
     # @param [Hash] params ({})
-    def update_certificate(params = {}, options = {})
+    def update_certificate(params = {}, **options)
       req = build_request(:update_certificate, params)
       req.send_request(options)
     end
@@ -10339,9 +10339,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload update_custom_metric(params = {})
+    # @overload update_custom_metric(**params)
     # @param [Hash] params ({})
-    def update_custom_metric(params = {}, options = {})
+    def update_custom_metric(params = {}, **options)
       req = build_request(:update_custom_metric, params)
       req.send_request(options)
     end
@@ -10384,9 +10384,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload update_dimension(params = {})
+    # @overload update_dimension(**params)
     # @param [Hash] params ({})
-    def update_dimension(params = {}, options = {})
+    def update_dimension(params = {}, **options)
       req = build_request(:update_dimension, params)
       req.send_request(options)
     end
@@ -10433,9 +10433,9 @@ module Aws::IoT
     #   resp.domain_configuration_name #=> String
     #   resp.domain_configuration_arn #=> String
     #
-    # @overload update_domain_configuration(params = {})
+    # @overload update_domain_configuration(**params)
     # @param [Hash] params ({})
-    def update_domain_configuration(params = {}, options = {})
+    def update_domain_configuration(params = {}, **options)
       req = build_request(:update_domain_configuration, params)
       req.send_request(options)
     end
@@ -10496,9 +10496,9 @@ module Aws::IoT
     #
     #   resp.version #=> Integer
     #
-    # @overload update_dynamic_thing_group(params = {})
+    # @overload update_dynamic_thing_group(**params)
     # @param [Hash] params ({})
-    def update_dynamic_thing_group(params = {}, options = {})
+    def update_dynamic_thing_group(params = {}, **options)
       req = build_request(:update_dynamic_thing_group, params)
       req.send_request(options)
     end
@@ -10520,9 +10520,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload update_event_configurations(params = {})
+    # @overload update_event_configurations(**params)
     # @param [Hash] params ({})
-    def update_event_configurations(params = {}, options = {})
+    def update_event_configurations(params = {}, **options)
       req = build_request(:update_event_configurations, params)
       req.send_request(options)
     end
@@ -10573,9 +10573,9 @@ module Aws::IoT
     #     },
     #   })
     #
-    # @overload update_indexing_configuration(params = {})
+    # @overload update_indexing_configuration(**params)
     # @param [Hash] params ({})
-    def update_indexing_configuration(params = {}, options = {})
+    def update_indexing_configuration(params = {}, **options)
       req = build_request(:update_indexing_configuration, params)
       req.send_request(options)
     end
@@ -10655,9 +10655,9 @@ module Aws::IoT
     #     namespace_id: "NamespaceId",
     #   })
     #
-    # @overload update_job(params = {})
+    # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, options = {})
+    def update_job(params = {}, **options)
       req = build_request(:update_job, params)
       req.send_request(options)
     end
@@ -10714,9 +10714,9 @@ module Aws::IoT
     #   resp.action_arn #=> String
     #   resp.action_id #=> String
     #
-    # @overload update_mitigation_action(params = {})
+    # @overload update_mitigation_action(**params)
     # @param [Hash] params ({})
-    def update_mitigation_action(params = {}, options = {})
+    def update_mitigation_action(params = {}, **options)
       req = build_request(:update_mitigation_action, params)
       req.send_request(options)
     end
@@ -10762,9 +10762,9 @@ module Aws::IoT
     #     remove_pre_provisioning_hook: false,
     #   })
     #
-    # @overload update_provisioning_template(params = {})
+    # @overload update_provisioning_template(**params)
     # @param [Hash] params ({})
-    def update_provisioning_template(params = {}, options = {})
+    def update_provisioning_template(params = {}, **options)
       req = build_request(:update_provisioning_template, params)
       req.send_request(options)
     end
@@ -10798,9 +10798,9 @@ module Aws::IoT
     #   resp.role_alias #=> String
     #   resp.role_alias_arn #=> String
     #
-    # @overload update_role_alias(params = {})
+    # @overload update_role_alias(**params)
     # @param [Hash] params ({})
-    def update_role_alias(params = {}, options = {})
+    def update_role_alias(params = {}, **options)
       req = build_request(:update_role_alias, params)
       req.send_request(options)
     end
@@ -10853,9 +10853,9 @@ module Aws::IoT
     #
     #   resp.scheduled_audit_arn #=> String
     #
-    # @overload update_scheduled_audit(params = {})
+    # @overload update_scheduled_audit(**params)
     # @param [Hash] params ({})
-    def update_scheduled_audit(params = {}, options = {})
+    def update_scheduled_audit(params = {}, **options)
       req = build_request(:update_scheduled_audit, params)
       req.send_request(options)
     end
@@ -11022,9 +11022,9 @@ module Aws::IoT
     #   resp.creation_date #=> Time
     #   resp.last_modified_date #=> Time
     #
-    # @overload update_security_profile(params = {})
+    # @overload update_security_profile(**params)
     # @param [Hash] params ({})
-    def update_security_profile(params = {}, options = {})
+    def update_security_profile(params = {}, **options)
       req = build_request(:update_security_profile, params)
       req.send_request(options)
     end
@@ -11077,9 +11077,9 @@ module Aws::IoT
     #   resp.description #=> String
     #   resp.stream_version #=> Integer
     #
-    # @overload update_stream(params = {})
+    # @overload update_stream(**params)
     # @param [Hash] params ({})
-    def update_stream(params = {}, options = {})
+    def update_stream(params = {}, **options)
       req = build_request(:update_stream, params)
       req.send_request(options)
     end
@@ -11131,9 +11131,9 @@ module Aws::IoT
     #     remove_thing_type: false,
     #   })
     #
-    # @overload update_thing(params = {})
+    # @overload update_thing(**params)
     # @param [Hash] params ({})
-    def update_thing(params = {}, options = {})
+    def update_thing(params = {}, **options)
       req = build_request(:update_thing, params)
       req.send_request(options)
     end
@@ -11174,9 +11174,9 @@ module Aws::IoT
     #
     #   resp.version #=> Integer
     #
-    # @overload update_thing_group(params = {})
+    # @overload update_thing_group(**params)
     # @param [Hash] params ({})
-    def update_thing_group(params = {}, options = {})
+    def update_thing_group(params = {}, **options)
       req = build_request(:update_thing_group, params)
       req.send_request(options)
     end
@@ -11209,9 +11209,9 @@ module Aws::IoT
     #     override_dynamic_groups: false,
     #   })
     #
-    # @overload update_thing_groups_for_thing(params = {})
+    # @overload update_thing_groups_for_thing(**params)
     # @param [Hash] params ({})
-    def update_thing_groups_for_thing(params = {}, options = {})
+    def update_thing_groups_for_thing(params = {}, **options)
       req = build_request(:update_thing_groups_for_thing, params)
       req.send_request(options)
     end
@@ -11263,9 +11263,9 @@ module Aws::IoT
     #     status: "ENABLED", # required, accepts ENABLED, IN_PROGRESS, DISABLED, ERROR, DELETING
     #   })
     #
-    # @overload update_topic_rule_destination(params = {})
+    # @overload update_topic_rule_destination(**params)
     # @param [Hash] params ({})
-    def update_topic_rule_destination(params = {}, options = {})
+    def update_topic_rule_destination(params = {}, **options)
       req = build_request(:update_topic_rule_destination, params)
       req.send_request(options)
     end
@@ -11323,9 +11323,9 @@ module Aws::IoT
     #   resp.validation_errors #=> Array
     #   resp.validation_errors[0].error_message #=> String
     #
-    # @overload validate_security_profile_behaviors(params = {})
+    # @overload validate_security_profile_behaviors(**params)
     # @param [Hash] params ({})
-    def validate_security_profile_behaviors(params = {}, options = {})
+    def validate_security_profile_behaviors(params = {}, **options)
       req = build_request(:validate_security_profile_behaviors, params)
       req.send_request(options)
     end
@@ -11334,7 +11334,7 @@ module Aws::IoT
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -11342,15 +11342,15 @@ module Aws::IoT
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iot'
-      context[:gem_version] = '1.64.0'
+      context[:gem_name] = "aws-sdk-iot"
+      context[:gem_version] = "1.64.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

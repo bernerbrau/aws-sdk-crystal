@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-rekognition/types'
-require_relative 'aws-sdk-rekognition/client_api'
-require_relative 'aws-sdk-rekognition/client'
-require_relative 'aws-sdk-rekognition/errors'
-require_relative 'aws-sdk-rekognition/waiters'
-require_relative 'aws-sdk-rekognition/resource'
-require_relative 'aws-sdk-rekognition/customizations'
+require_relative "aws-sdk-rekognition/types"
+require_relative "aws-sdk-rekognition/client_api"
+require_relative "aws-sdk-rekognition/client"
+require_relative "aws-sdk-rekognition/errors"
+require_relative "aws-sdk-rekognition/waiters"
+require_relative "aws-sdk-rekognition/resource"
+require_relative "aws-sdk-rekognition/customizations"
 
 # This module provides support for Amazon Rekognition. This module is available in the
 # `aws-sdk-rekognition` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-rekognition/customizations'
 # @!group service
 module Aws::Rekognition
 
-  GEM_VERSION = '1.47.0'
+  GEM_VERSION = "1.47.0"
 
 end

@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotsitewise/types'
-require_relative 'aws-sdk-iotsitewise/client_api'
-require_relative 'aws-sdk-iotsitewise/client'
-require_relative 'aws-sdk-iotsitewise/errors'
-require_relative 'aws-sdk-iotsitewise/waiters'
-require_relative 'aws-sdk-iotsitewise/resource'
-require_relative 'aws-sdk-iotsitewise/customizations'
+require_relative "aws-sdk-iotsitewise/types"
+require_relative "aws-sdk-iotsitewise/client_api"
+require_relative "aws-sdk-iotsitewise/client"
+require_relative "aws-sdk-iotsitewise/errors"
+require_relative "aws-sdk-iotsitewise/waiters"
+require_relative "aws-sdk-iotsitewise/resource"
+require_relative "aws-sdk-iotsitewise/customizations"
 
 # This module provides support for AWS IoT SiteWise. This module is available in the
 # `aws-sdk-iotsitewise` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-iotsitewise/customizations'
 # @!group service
 module Aws::IoTSiteWise
 
-  GEM_VERSION = '1.16.0'
+  GEM_VERSION = "1.16.0"
 
 end

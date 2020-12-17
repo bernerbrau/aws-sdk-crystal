@@ -7,18 +7,18 @@
 {{#require_core_guard?}}
 unless Module.const_defined?(:Aws)
   {{#requires}}
-  require '{{.}}'
+  require "{{.}}"
   {{/requires}}
 end
 {{/require_core_guard?}}
 {{^require_core_guard?}}
 {{#requires}}
-require '{{.}}'
+require "{{.}}"
 {{/requires}}
 {{/require_core_guard?}}
 
 {{#relative_requires}}
-require_relative '{{.}}'
+require_relative "{{.}}"
 {{/relative_requires}}
 
 # This module provides support for {{full_name}}. This module is available in the
@@ -53,6 +53,6 @@ require_relative '{{.}}'
 # @!group service
 module {{module_name}}
 
-  GEM_VERSION = '{{gem_version}}'
+  GEM_VERSION = "{{gem_version}}"
 
 end

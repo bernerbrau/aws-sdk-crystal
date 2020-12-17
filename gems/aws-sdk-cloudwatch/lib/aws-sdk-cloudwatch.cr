@@ -8,19 +8,19 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudwatch/types'
-require_relative 'aws-sdk-cloudwatch/client_api'
-require_relative 'aws-sdk-cloudwatch/client'
-require_relative 'aws-sdk-cloudwatch/errors'
-require_relative 'aws-sdk-cloudwatch/waiters'
-require_relative 'aws-sdk-cloudwatch/resource'
-require_relative 'aws-sdk-cloudwatch/alarm'
-require_relative 'aws-sdk-cloudwatch/composite_alarm'
-require_relative 'aws-sdk-cloudwatch/metric'
-require_relative 'aws-sdk-cloudwatch/customizations'
+require_relative "aws-sdk-cloudwatch/types"
+require_relative "aws-sdk-cloudwatch/client_api"
+require_relative "aws-sdk-cloudwatch/client"
+require_relative "aws-sdk-cloudwatch/errors"
+require_relative "aws-sdk-cloudwatch/waiters"
+require_relative "aws-sdk-cloudwatch/resource"
+require_relative "aws-sdk-cloudwatch/alarm"
+require_relative "aws-sdk-cloudwatch/composite_alarm"
+require_relative "aws-sdk-cloudwatch/metric"
+require_relative "aws-sdk-cloudwatch/customizations"
 
 # This module provides support for Amazon CloudWatch. This module is available in the
 # `aws-sdk-cloudwatch` gem.
@@ -52,6 +52,6 @@ require_relative 'aws-sdk-cloudwatch/customizations'
 # @!group service
 module Aws::CloudWatch
 
-  GEM_VERSION = '1.47.0'
+  GEM_VERSION = "1.47.0"
 
 end

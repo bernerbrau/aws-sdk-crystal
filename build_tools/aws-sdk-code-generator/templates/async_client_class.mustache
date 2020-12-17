@@ -3,13 +3,9 @@
 {{#generated_src_warning}}
 {{generated_src_warning}}
 {{/generated_src_warning}}
-if RUBY_VERSION >= '2.1'
-  begin
-    require 'http/2'
-  rescue LoadError; end
-end
+
 {{#plugin_requires}}
-require '{{.}}'
+require "{{.}}"
 {{/plugin_requires}}
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:{{service_identifier}})
@@ -43,9 +39,9 @@ module {{module_name}}
     {{#documentation}}
     {{>documentation}}
     {{/documentation}}
-    # @overload {{name}}(params = {})
+    # @overload {{name}}(**params)
     # @param [Hash] params ({})
-    def {{name}}(params = {}, options = {}{{{block_option}}})
+    def {{name}}(params = {}, **options{{{block_option}}})
       params = params.dup
       {{#eventstream_input}}
       input_event_stream_handler = _event_stream_handler(
@@ -83,7 +79,7 @@ module {{module_name}}
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -92,8 +88,8 @@ module {{module_name}}
         params: params,
         http_response: Seahorse::Client::Http::AsyncResponse.new,
         config: config)
-      context[:gem_name] = '{{gem_name}}'
-      context[:gem_version] = '{{gem_version}}'
+      context[:gem_name] = "{{gem_name}}"
+      context[:gem_version] = "{{gem_version}}"
       Seahorse::Client::Request.new(handlers, context)
     end
 

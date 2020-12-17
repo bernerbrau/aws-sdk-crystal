@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-elastictranscoder/types'
-require_relative 'aws-sdk-elastictranscoder/client_api'
-require_relative 'aws-sdk-elastictranscoder/client'
-require_relative 'aws-sdk-elastictranscoder/errors'
-require_relative 'aws-sdk-elastictranscoder/waiters'
-require_relative 'aws-sdk-elastictranscoder/resource'
-require_relative 'aws-sdk-elastictranscoder/customizations'
+require_relative "aws-sdk-elastictranscoder/types"
+require_relative "aws-sdk-elastictranscoder/client_api"
+require_relative "aws-sdk-elastictranscoder/client"
+require_relative "aws-sdk-elastictranscoder/errors"
+require_relative "aws-sdk-elastictranscoder/waiters"
+require_relative "aws-sdk-elastictranscoder/resource"
+require_relative "aws-sdk-elastictranscoder/customizations"
 
 # This module provides support for Amazon Elastic Transcoder. This module is available in the
 # `aws-sdk-elastictranscoder` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-elastictranscoder/customizations'
 # @!group service
 module Aws::ElasticTranscoder
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

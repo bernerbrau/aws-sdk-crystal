@@ -8,11 +8,11 @@
 Feature: Smoke tests for Kinesis
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @kinesis @smoke
   Scenario: Call Aws::Kinesis::Client#list_streams and expect it to succeed
-  When I call the operation 'list_streams' with params:
+  When I call the operation "list_streams" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @kinesis @smoke
   Scenario: Call Aws::Aws::Kinesis::Client#describe_stream and expect it to fail
-  When I call the operation 'describe_stream' with params:
+  When I call the operation "describe_stream" with params:
     """
 {"stream_name":"bogus-stream-name"}
     """

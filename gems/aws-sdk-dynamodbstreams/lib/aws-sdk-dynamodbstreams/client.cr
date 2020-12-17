@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:dynamodbstreams)
 
@@ -290,7 +290,7 @@ module Aws::DynamoDBStreams
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -459,9 +459,9 @@ module Aws::DynamoDBStreams
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/streams-dynamodb-2012-08-10/DescribeStream AWS API Documentation
     #
-    # @overload describe_stream(params = {})
+    # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, options = {})
+    def describe_stream(params = {}, **options)
       req = build_request(:describe_stream, params)
       req.send_request(options)
     end
@@ -605,9 +605,9 @@ module Aws::DynamoDBStreams
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/streams-dynamodb-2012-08-10/GetRecords AWS API Documentation
     #
-    # @overload get_records(params = {})
+    # @overload get_records(**params)
     # @param [Hash] params ({})
-    def get_records(params = {}, options = {})
+    def get_records(params = {}, **options)
       req = build_request(:get_records, params)
       req.send_request(options)
     end
@@ -688,9 +688,9 @@ module Aws::DynamoDBStreams
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/streams-dynamodb-2012-08-10/GetShardIterator AWS API Documentation
     #
-    # @overload get_shard_iterator(params = {})
+    # @overload get_shard_iterator(**params)
     # @param [Hash] params ({})
-    def get_shard_iterator(params = {}, options = {})
+    def get_shard_iterator(params = {}, **options)
       req = build_request(:get_shard_iterator, params)
       req.send_request(options)
     end
@@ -767,9 +767,9 @@ module Aws::DynamoDBStreams
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/streams-dynamodb-2012-08-10/ListStreams AWS API Documentation
     #
-    # @overload list_streams(params = {})
+    # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, options = {})
+    def list_streams(params = {}, **options)
       req = build_request(:list_streams, params)
       req.send_request(options)
     end
@@ -778,7 +778,7 @@ module Aws::DynamoDBStreams
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -786,15 +786,15 @@ module Aws::DynamoDBStreams
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-dynamodbstreams'
-      context[:gem_version] = '1.26.0'
+      context[:gem_name] = "aws-sdk-dynamodbstreams"
+      context[:gem_version] = "1.26.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

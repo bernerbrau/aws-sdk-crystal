@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-serverlessapplicationrepository/types'
-require_relative 'aws-sdk-serverlessapplicationrepository/client_api'
-require_relative 'aws-sdk-serverlessapplicationrepository/client'
-require_relative 'aws-sdk-serverlessapplicationrepository/errors'
-require_relative 'aws-sdk-serverlessapplicationrepository/resource'
-require_relative 'aws-sdk-serverlessapplicationrepository/customizations'
+require_relative "aws-sdk-serverlessapplicationrepository/types"
+require_relative "aws-sdk-serverlessapplicationrepository/client_api"
+require_relative "aws-sdk-serverlessapplicationrepository/client"
+require_relative "aws-sdk-serverlessapplicationrepository/errors"
+require_relative "aws-sdk-serverlessapplicationrepository/resource"
+require_relative "aws-sdk-serverlessapplicationrepository/customizations"
 
 # This module provides support for AWSServerlessApplicationRepository. This module is available in the
 # `aws-sdk-serverlessapplicationrepository` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-serverlessapplicationrepository/customizations'
 # @!group service
 module Aws::ServerlessApplicationRepository
 
-  GEM_VERSION = '1.32.0'
+  GEM_VERSION = "1.32.0"
 
 end

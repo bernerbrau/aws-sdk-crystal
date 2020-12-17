@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ACMPCA
   # Waiters are utility methods that poll for a particular state to occur
@@ -111,7 +111,7 @@ module Aws::ACMPCA
 
       # @option (see Client#describe_certificate_authority_audit_report)
       # @return (see Client#describe_certificate_authority_audit_report)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -154,7 +154,7 @@ module Aws::ACMPCA
 
       # @option (see Client#get_certificate_authority_csr)
       # @return (see Client#get_certificate_authority_csr)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -197,7 +197,7 @@ module Aws::ACMPCA
 
       # @option (see Client#get_certificate)
       # @return (see Client#get_certificate)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

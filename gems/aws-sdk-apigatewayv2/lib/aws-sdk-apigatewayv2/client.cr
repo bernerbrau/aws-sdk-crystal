@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:apigatewayv2)
 
@@ -280,7 +280,7 @@ module Aws::ApiGatewayV2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -465,9 +465,9 @@ module Aws::ApiGatewayV2
     #   resp.warnings #=> Array
     #   resp.warnings[0] #=> String
     #
-    # @overload create_api(params = {})
+    # @overload create_api(**params)
     # @param [Hash] params ({})
-    def create_api(params = {}, options = {})
+    def create_api(params = {}, **options)
       req = build_request(:create_api, params)
       req.send_request(options)
     end
@@ -515,9 +515,9 @@ module Aws::ApiGatewayV2
     #   resp.api_mapping_key #=> String
     #   resp.stage #=> String
     #
-    # @overload create_api_mapping(params = {})
+    # @overload create_api_mapping(**params)
     # @param [Hash] params ({})
-    def create_api_mapping(params = {}, options = {})
+    def create_api_mapping(params = {}, **options)
       req = build_request(:create_api_mapping, params)
       req.send_request(options)
     end
@@ -622,9 +622,9 @@ module Aws::ApiGatewayV2
     #   resp.authorizer_payload_format_version #=> String
     #   resp.enable_simple_responses #=> Boolean
     #
-    # @overload create_authorizer(params = {})
+    # @overload create_authorizer(**params)
     # @param [Hash] params ({})
-    def create_authorizer(params = {}, options = {})
+    def create_authorizer(params = {}, **options)
       req = build_request(:create_authorizer, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::ApiGatewayV2
     #   resp.deployment_status_message #=> String
     #   resp.description #=> String
     #
-    # @overload create_deployment(params = {})
+    # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, options = {})
+    def create_deployment(params = {}, **options)
       req = build_request(:create_deployment, params)
       req.send_request(options)
     end
@@ -743,9 +743,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload create_domain_name(params = {})
+    # @overload create_domain_name(**params)
     # @param [Hash] params ({})
-    def create_domain_name(params = {}, options = {})
+    def create_domain_name(params = {}, **options)
       req = build_request(:create_domain_name, params)
       req.send_request(options)
     end
@@ -897,9 +897,9 @@ module Aws::ApiGatewayV2
     #   resp.timeout_in_millis #=> Integer
     #   resp.tls_config.server_name_to_verify #=> String
     #
-    # @overload create_integration(params = {})
+    # @overload create_integration(**params)
     # @param [Hash] params ({})
-    def create_integration(params = {}, options = {})
+    def create_integration(params = {}, **options)
       req = build_request(:create_integration, params)
       req.send_request(options)
     end
@@ -986,9 +986,9 @@ module Aws::ApiGatewayV2
     #   resp.response_templates["__string"] #=> String
     #   resp.template_selection_expression #=> String
     #
-    # @overload create_integration_response(params = {})
+    # @overload create_integration_response(**params)
     # @param [Hash] params ({})
-    def create_integration_response(params = {}, options = {})
+    def create_integration_response(params = {}, **options)
       req = build_request(:create_integration_response, params)
       req.send_request(options)
     end
@@ -1035,9 +1035,9 @@ module Aws::ApiGatewayV2
     #   resp.name #=> String
     #   resp.schema #=> String
     #
-    # @overload create_model(params = {})
+    # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, options = {})
+    def create_model(params = {}, **options)
       req = build_request(:create_model, params)
       req.send_request(options)
     end
@@ -1164,9 +1164,9 @@ module Aws::ApiGatewayV2
     #   resp.route_response_selection_expression #=> String
     #   resp.target #=> String
     #
-    # @overload create_route(params = {})
+    # @overload create_route(**params)
     # @param [Hash] params ({})
-    def create_route(params = {}, options = {})
+    def create_route(params = {}, **options)
       req = build_request(:create_route, params)
       req.send_request(options)
     end
@@ -1236,9 +1236,9 @@ module Aws::ApiGatewayV2
     #   resp.route_response_id #=> String
     #   resp.route_response_key #=> String
     #
-    # @overload create_route_response(params = {})
+    # @overload create_route_response(**params)
     # @param [Hash] params ({})
-    def create_route_response(params = {}, options = {})
+    def create_route_response(params = {}, **options)
       req = build_request(:create_route_response, params)
       req.send_request(options)
     end
@@ -1359,9 +1359,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload create_stage(params = {})
+    # @overload create_stage(**params)
     # @param [Hash] params ({})
-    def create_stage(params = {}, options = {})
+    def create_stage(params = {}, **options)
       req = build_request(:create_stage, params)
       req.send_request(options)
     end
@@ -1418,9 +1418,9 @@ module Aws::ApiGatewayV2
     #   resp.vpc_link_status_message #=> String
     #   resp.vpc_link_version #=> String, one of "V2"
     #
-    # @overload create_vpc_link(params = {})
+    # @overload create_vpc_link(**params)
     # @param [Hash] params ({})
-    def create_vpc_link(params = {}, options = {})
+    def create_vpc_link(params = {}, **options)
       req = build_request(:create_vpc_link, params)
       req.send_request(options)
     end
@@ -1441,9 +1441,9 @@ module Aws::ApiGatewayV2
     #     stage_name: "__string", # required
     #   })
     #
-    # @overload delete_access_log_settings(params = {})
+    # @overload delete_access_log_settings(**params)
     # @param [Hash] params ({})
-    def delete_access_log_settings(params = {}, options = {})
+    def delete_access_log_settings(params = {}, **options)
       req = build_request(:delete_access_log_settings, params)
       req.send_request(options)
     end
@@ -1460,9 +1460,9 @@ module Aws::ApiGatewayV2
     #     api_id: "__string", # required
     #   })
     #
-    # @overload delete_api(params = {})
+    # @overload delete_api(**params)
     # @param [Hash] params ({})
-    def delete_api(params = {}, options = {})
+    def delete_api(params = {}, **options)
       req = build_request(:delete_api, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::ApiGatewayV2
     #     domain_name: "__string", # required
     #   })
     #
-    # @overload delete_api_mapping(params = {})
+    # @overload delete_api_mapping(**params)
     # @param [Hash] params ({})
-    def delete_api_mapping(params = {}, options = {})
+    def delete_api_mapping(params = {}, **options)
       req = build_request(:delete_api_mapping, params)
       req.send_request(options)
     end
@@ -1504,9 +1504,9 @@ module Aws::ApiGatewayV2
     #     authorizer_id: "__string", # required
     #   })
     #
-    # @overload delete_authorizer(params = {})
+    # @overload delete_authorizer(**params)
     # @param [Hash] params ({})
-    def delete_authorizer(params = {}, options = {})
+    def delete_authorizer(params = {}, **options)
       req = build_request(:delete_authorizer, params)
       req.send_request(options)
     end
@@ -1523,9 +1523,9 @@ module Aws::ApiGatewayV2
     #     api_id: "__string", # required
     #   })
     #
-    # @overload delete_cors_configuration(params = {})
+    # @overload delete_cors_configuration(**params)
     # @param [Hash] params ({})
-    def delete_cors_configuration(params = {}, options = {})
+    def delete_cors_configuration(params = {}, **options)
       req = build_request(:delete_cors_configuration, params)
       req.send_request(options)
     end
@@ -1545,9 +1545,9 @@ module Aws::ApiGatewayV2
     #     deployment_id: "__string", # required
     #   })
     #
-    # @overload delete_deployment(params = {})
+    # @overload delete_deployment(**params)
     # @param [Hash] params ({})
-    def delete_deployment(params = {}, options = {})
+    def delete_deployment(params = {}, **options)
       req = build_request(:delete_deployment, params)
       req.send_request(options)
     end
@@ -1564,9 +1564,9 @@ module Aws::ApiGatewayV2
     #     domain_name: "__string", # required
     #   })
     #
-    # @overload delete_domain_name(params = {})
+    # @overload delete_domain_name(**params)
     # @param [Hash] params ({})
-    def delete_domain_name(params = {}, options = {})
+    def delete_domain_name(params = {}, **options)
       req = build_request(:delete_domain_name, params)
       req.send_request(options)
     end
@@ -1586,9 +1586,9 @@ module Aws::ApiGatewayV2
     #     integration_id: "__string", # required
     #   })
     #
-    # @overload delete_integration(params = {})
+    # @overload delete_integration(**params)
     # @param [Hash] params ({})
-    def delete_integration(params = {}, options = {})
+    def delete_integration(params = {}, **options)
       req = build_request(:delete_integration, params)
       req.send_request(options)
     end
@@ -1611,9 +1611,9 @@ module Aws::ApiGatewayV2
     #     integration_response_id: "__string", # required
     #   })
     #
-    # @overload delete_integration_response(params = {})
+    # @overload delete_integration_response(**params)
     # @param [Hash] params ({})
-    def delete_integration_response(params = {}, options = {})
+    def delete_integration_response(params = {}, **options)
       req = build_request(:delete_integration_response, params)
       req.send_request(options)
     end
@@ -1633,9 +1633,9 @@ module Aws::ApiGatewayV2
     #     model_id: "__string", # required
     #   })
     #
-    # @overload delete_model(params = {})
+    # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, options = {})
+    def delete_model(params = {}, **options)
       req = build_request(:delete_model, params)
       req.send_request(options)
     end
@@ -1655,9 +1655,9 @@ module Aws::ApiGatewayV2
     #     route_id: "__string", # required
     #   })
     #
-    # @overload delete_route(params = {})
+    # @overload delete_route(**params)
     # @param [Hash] params ({})
-    def delete_route(params = {}, options = {})
+    def delete_route(params = {}, **options)
       req = build_request(:delete_route, params)
       req.send_request(options)
     end
@@ -1680,9 +1680,9 @@ module Aws::ApiGatewayV2
     #     route_id: "__string", # required
     #   })
     #
-    # @overload delete_route_request_parameter(params = {})
+    # @overload delete_route_request_parameter(**params)
     # @param [Hash] params ({})
-    def delete_route_request_parameter(params = {}, options = {})
+    def delete_route_request_parameter(params = {}, **options)
       req = build_request(:delete_route_request_parameter, params)
       req.send_request(options)
     end
@@ -1705,9 +1705,9 @@ module Aws::ApiGatewayV2
     #     route_response_id: "__string", # required
     #   })
     #
-    # @overload delete_route_response(params = {})
+    # @overload delete_route_response(**params)
     # @param [Hash] params ({})
-    def delete_route_response(params = {}, options = {})
+    def delete_route_response(params = {}, **options)
       req = build_request(:delete_route_response, params)
       req.send_request(options)
     end
@@ -1730,9 +1730,9 @@ module Aws::ApiGatewayV2
     #     stage_name: "__string", # required
     #   })
     #
-    # @overload delete_route_settings(params = {})
+    # @overload delete_route_settings(**params)
     # @param [Hash] params ({})
-    def delete_route_settings(params = {}, options = {})
+    def delete_route_settings(params = {}, **options)
       req = build_request(:delete_route_settings, params)
       req.send_request(options)
     end
@@ -1752,9 +1752,9 @@ module Aws::ApiGatewayV2
     #     stage_name: "__string", # required
     #   })
     #
-    # @overload delete_stage(params = {})
+    # @overload delete_stage(**params)
     # @param [Hash] params ({})
-    def delete_stage(params = {}, options = {})
+    def delete_stage(params = {}, **options)
       req = build_request(:delete_stage, params)
       req.send_request(options)
     end
@@ -1771,9 +1771,9 @@ module Aws::ApiGatewayV2
     #     vpc_link_id: "__string", # required
     #   })
     #
-    # @overload delete_vpc_link(params = {})
+    # @overload delete_vpc_link(**params)
     # @param [Hash] params ({})
-    def delete_vpc_link(params = {}, options = {})
+    def delete_vpc_link(params = {}, **options)
       req = build_request(:delete_vpc_link, params)
       req.send_request(options)
     end
@@ -1812,9 +1812,9 @@ module Aws::ApiGatewayV2
     #
     #   resp.body #=> String
     #
-    # @overload export_api(params = {})
+    # @overload export_api(**params)
     # @param [Hash] params ({})
-    def export_api(params = {}, options = {})
+    def export_api(params = {}, **options)
       req = build_request(:export_api, params)
       req.send_request(options)
     end
@@ -1835,9 +1835,9 @@ module Aws::ApiGatewayV2
     #     stage_name: "__string", # required
     #   })
     #
-    # @overload reset_authorizers_cache(params = {})
+    # @overload reset_authorizers_cache(**params)
     # @param [Hash] params ({})
-    def reset_authorizers_cache(params = {}, options = {})
+    def reset_authorizers_cache(params = {}, **options)
       req = build_request(:reset_authorizers_cache, params)
       req.send_request(options)
     end
@@ -1902,9 +1902,9 @@ module Aws::ApiGatewayV2
     #   resp.warnings #=> Array
     #   resp.warnings[0] #=> String
     #
-    # @overload get_api(params = {})
+    # @overload get_api(**params)
     # @param [Hash] params ({})
-    def get_api(params = {}, options = {})
+    def get_api(params = {}, **options)
       req = build_request(:get_api, params)
       req.send_request(options)
     end
@@ -1936,9 +1936,9 @@ module Aws::ApiGatewayV2
     #   resp.api_mapping_key #=> String
     #   resp.stage #=> String
     #
-    # @overload get_api_mapping(params = {})
+    # @overload get_api_mapping(**params)
     # @param [Hash] params ({})
-    def get_api_mapping(params = {}, options = {})
+    def get_api_mapping(params = {}, **options)
       req = build_request(:get_api_mapping, params)
       req.send_request(options)
     end
@@ -1973,9 +1973,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].stage #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_api_mappings(params = {})
+    # @overload get_api_mappings(**params)
     # @param [Hash] params ({})
-    def get_api_mappings(params = {}, options = {})
+    def get_api_mappings(params = {}, **options)
       req = build_request(:get_api_mappings, params)
       req.send_request(options)
     end
@@ -2031,9 +2031,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].warnings[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_apis(params = {})
+    # @overload get_apis(**params)
     # @param [Hash] params ({})
-    def get_apis(params = {}, options = {})
+    def get_apis(params = {}, **options)
       req = build_request(:get_apis, params)
       req.send_request(options)
     end
@@ -2082,9 +2082,9 @@ module Aws::ApiGatewayV2
     #   resp.authorizer_payload_format_version #=> String
     #   resp.enable_simple_responses #=> Boolean
     #
-    # @overload get_authorizer(params = {})
+    # @overload get_authorizer(**params)
     # @param [Hash] params ({})
-    def get_authorizer(params = {}, options = {})
+    def get_authorizer(params = {}, **options)
       req = build_request(:get_authorizer, params)
       req.send_request(options)
     end
@@ -2129,9 +2129,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].enable_simple_responses #=> Boolean
     #   resp.next_token #=> String
     #
-    # @overload get_authorizers(params = {})
+    # @overload get_authorizers(**params)
     # @param [Hash] params ({})
-    def get_authorizers(params = {}, options = {})
+    def get_authorizers(params = {}, **options)
       req = build_request(:get_authorizers, params)
       req.send_request(options)
     end
@@ -2167,9 +2167,9 @@ module Aws::ApiGatewayV2
     #   resp.deployment_status_message #=> String
     #   resp.description #=> String
     #
-    # @overload get_deployment(params = {})
+    # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, options = {})
+    def get_deployment(params = {}, **options)
       req = build_request(:get_deployment, params)
       req.send_request(options)
     end
@@ -2206,9 +2206,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].description #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_deployments(params = {})
+    # @overload get_deployments(**params)
     # @param [Hash] params ({})
-    def get_deployments(params = {}, options = {})
+    def get_deployments(params = {}, **options)
       req = build_request(:get_deployments, params)
       req.send_request(options)
     end
@@ -2252,9 +2252,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload get_domain_name(params = {})
+    # @overload get_domain_name(**params)
     # @param [Hash] params ({})
-    def get_domain_name(params = {}, options = {})
+    def get_domain_name(params = {}, **options)
       req = build_request(:get_domain_name, params)
       req.send_request(options)
     end
@@ -2300,9 +2300,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].tags["__string"] #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_domain_names(params = {})
+    # @overload get_domain_names(**params)
     # @param [Hash] params ({})
-    def get_domain_names(params = {}, options = {})
+    def get_domain_names(params = {}, **options)
       req = build_request(:get_domain_names, params)
       req.send_request(options)
     end
@@ -2366,9 +2366,9 @@ module Aws::ApiGatewayV2
     #   resp.timeout_in_millis #=> Integer
     #   resp.tls_config.server_name_to_verify #=> String
     #
-    # @overload get_integration(params = {})
+    # @overload get_integration(**params)
     # @param [Hash] params ({})
-    def get_integration(params = {}, options = {})
+    def get_integration(params = {}, **options)
       req = build_request(:get_integration, params)
       req.send_request(options)
     end
@@ -2409,9 +2409,9 @@ module Aws::ApiGatewayV2
     #   resp.response_templates["__string"] #=> String
     #   resp.template_selection_expression #=> String
     #
-    # @overload get_integration_response(params = {})
+    # @overload get_integration_response(**params)
     # @param [Hash] params ({})
-    def get_integration_response(params = {}, options = {})
+    def get_integration_response(params = {}, **options)
       req = build_request(:get_integration_response, params)
       req.send_request(options)
     end
@@ -2453,9 +2453,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].template_selection_expression #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_integration_responses(params = {})
+    # @overload get_integration_responses(**params)
     # @param [Hash] params ({})
-    def get_integration_responses(params = {}, options = {})
+    def get_integration_responses(params = {}, **options)
       req = build_request(:get_integration_responses, params)
       req.send_request(options)
     end
@@ -2507,9 +2507,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].tls_config.server_name_to_verify #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_integrations(params = {})
+    # @overload get_integrations(**params)
     # @param [Hash] params ({})
-    def get_integrations(params = {}, options = {})
+    def get_integrations(params = {}, **options)
       req = build_request(:get_integrations, params)
       req.send_request(options)
     end
@@ -2543,9 +2543,9 @@ module Aws::ApiGatewayV2
     #   resp.name #=> String
     #   resp.schema #=> String
     #
-    # @overload get_model(params = {})
+    # @overload get_model(**params)
     # @param [Hash] params ({})
-    def get_model(params = {}, options = {})
+    def get_model(params = {}, **options)
       req = build_request(:get_model, params)
       req.send_request(options)
     end
@@ -2571,9 +2571,9 @@ module Aws::ApiGatewayV2
     #
     #   resp.value #=> String
     #
-    # @overload get_model_template(params = {})
+    # @overload get_model_template(**params)
     # @param [Hash] params ({})
-    def get_model_template(params = {}, options = {})
+    def get_model_template(params = {}, **options)
       req = build_request(:get_model_template, params)
       req.send_request(options)
     end
@@ -2609,9 +2609,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].schema #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_models(params = {})
+    # @overload get_models(**params)
     # @param [Hash] params ({})
-    def get_models(params = {}, options = {})
+    def get_models(params = {}, **options)
       req = build_request(:get_models, params)
       req.send_request(options)
     end
@@ -2664,9 +2664,9 @@ module Aws::ApiGatewayV2
     #   resp.route_response_selection_expression #=> String
     #   resp.target #=> String
     #
-    # @overload get_route(params = {})
+    # @overload get_route(**params)
     # @param [Hash] params ({})
-    def get_route(params = {}, options = {})
+    def get_route(params = {}, **options)
       req = build_request(:get_route, params)
       req.send_request(options)
     end
@@ -2705,9 +2705,9 @@ module Aws::ApiGatewayV2
     #   resp.route_response_id #=> String
     #   resp.route_response_key #=> String
     #
-    # @overload get_route_response(params = {})
+    # @overload get_route_response(**params)
     # @param [Hash] params ({})
-    def get_route_response(params = {}, options = {})
+    def get_route_response(params = {}, **options)
       req = build_request(:get_route_response, params)
       req.send_request(options)
     end
@@ -2748,9 +2748,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].route_response_key #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_route_responses(params = {})
+    # @overload get_route_responses(**params)
     # @param [Hash] params ({})
-    def get_route_responses(params = {}, options = {})
+    def get_route_responses(params = {}, **options)
       req = build_request(:get_route_responses, params)
       req.send_request(options)
     end
@@ -2797,9 +2797,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].target #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_routes(params = {})
+    # @overload get_routes(**params)
     # @param [Hash] params ({})
-    def get_routes(params = {}, options = {})
+    def get_routes(params = {}, **options)
       req = build_request(:get_routes, params)
       req.send_request(options)
     end
@@ -2863,9 +2863,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload get_stage(params = {})
+    # @overload get_stage(**params)
     # @param [Hash] params ({})
-    def get_stage(params = {}, options = {})
+    def get_stage(params = {}, **options)
       req = build_request(:get_stage, params)
       req.send_request(options)
     end
@@ -2922,9 +2922,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].tags["__string"] #=> String
     #   resp.next_token #=> String
     #
-    # @overload get_stages(params = {})
+    # @overload get_stages(**params)
     # @param [Hash] params ({})
-    def get_stages(params = {}, options = {})
+    def get_stages(params = {}, **options)
       req = build_request(:get_stages, params)
       req.send_request(options)
     end
@@ -2948,9 +2948,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload get_tags(params = {})
+    # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, options = {})
+    def get_tags(params = {}, **options)
       req = build_request(:get_tags, params)
       req.send_request(options)
     end
@@ -2992,9 +2992,9 @@ module Aws::ApiGatewayV2
     #   resp.vpc_link_status_message #=> String
     #   resp.vpc_link_version #=> String, one of "V2"
     #
-    # @overload get_vpc_link(params = {})
+    # @overload get_vpc_link(**params)
     # @param [Hash] params ({})
-    def get_vpc_link(params = {}, options = {})
+    def get_vpc_link(params = {}, **options)
       req = build_request(:get_vpc_link, params)
       req.send_request(options)
     end
@@ -3034,9 +3034,9 @@ module Aws::ApiGatewayV2
     #   resp.items[0].vpc_link_version #=> String, one of "V2"
     #   resp.next_token #=> String
     #
-    # @overload get_vpc_links(params = {})
+    # @overload get_vpc_links(**params)
     # @param [Hash] params ({})
-    def get_vpc_links(params = {}, options = {})
+    def get_vpc_links(params = {}, **options)
       req = build_request(:get_vpc_links, params)
       req.send_request(options)
     end
@@ -3107,9 +3107,9 @@ module Aws::ApiGatewayV2
     #   resp.warnings #=> Array
     #   resp.warnings[0] #=> String
     #
-    # @overload import_api(params = {})
+    # @overload import_api(**params)
     # @param [Hash] params ({})
-    def import_api(params = {}, options = {})
+    def import_api(params = {}, **options)
       req = build_request(:import_api, params)
       req.send_request(options)
     end
@@ -3183,9 +3183,9 @@ module Aws::ApiGatewayV2
     #   resp.warnings #=> Array
     #   resp.warnings[0] #=> String
     #
-    # @overload reimport_api(params = {})
+    # @overload reimport_api(**params)
     # @param [Hash] params ({})
-    def reimport_api(params = {}, options = {})
+    def reimport_api(params = {}, **options)
       req = build_request(:reimport_api, params)
       req.send_request(options)
     end
@@ -3208,9 +3208,9 @@ module Aws::ApiGatewayV2
     #     },
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3230,9 +3230,9 @@ module Aws::ApiGatewayV2
     #     tag_keys: ["__string"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3368,9 +3368,9 @@ module Aws::ApiGatewayV2
     #   resp.warnings #=> Array
     #   resp.warnings[0] #=> String
     #
-    # @overload update_api(params = {})
+    # @overload update_api(**params)
     # @param [Hash] params ({})
-    def update_api(params = {}, options = {})
+    def update_api(params = {}, **options)
       req = build_request(:update_api, params)
       req.send_request(options)
     end
@@ -3421,9 +3421,9 @@ module Aws::ApiGatewayV2
     #   resp.api_mapping_key #=> String
     #   resp.stage #=> String
     #
-    # @overload update_api_mapping(params = {})
+    # @overload update_api_mapping(**params)
     # @param [Hash] params ({})
-    def update_api_mapping(params = {}, options = {})
+    def update_api_mapping(params = {}, **options)
       req = build_request(:update_api_mapping, params)
       req.send_request(options)
     end
@@ -3531,9 +3531,9 @@ module Aws::ApiGatewayV2
     #   resp.authorizer_payload_format_version #=> String
     #   resp.enable_simple_responses #=> Boolean
     #
-    # @overload update_authorizer(params = {})
+    # @overload update_authorizer(**params)
     # @param [Hash] params ({})
-    def update_authorizer(params = {}, options = {})
+    def update_authorizer(params = {}, **options)
       req = build_request(:update_authorizer, params)
       req.send_request(options)
     end
@@ -3573,9 +3573,9 @@ module Aws::ApiGatewayV2
     #   resp.deployment_status_message #=> String
     #   resp.description #=> String
     #
-    # @overload update_deployment(params = {})
+    # @overload update_deployment(**params)
     # @param [Hash] params ({})
-    def update_deployment(params = {}, options = {})
+    def update_deployment(params = {}, **options)
       req = build_request(:update_deployment, params)
       req.send_request(options)
     end
@@ -3644,9 +3644,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload update_domain_name(params = {})
+    # @overload update_domain_name(**params)
     # @param [Hash] params ({})
-    def update_domain_name(params = {}, options = {})
+    def update_domain_name(params = {}, **options)
       req = build_request(:update_domain_name, params)
       req.send_request(options)
     end
@@ -3801,9 +3801,9 @@ module Aws::ApiGatewayV2
     #   resp.timeout_in_millis #=> Integer
     #   resp.tls_config.server_name_to_verify #=> String
     #
-    # @overload update_integration(params = {})
+    # @overload update_integration(**params)
     # @param [Hash] params ({})
-    def update_integration(params = {}, options = {})
+    def update_integration(params = {}, **options)
       req = build_request(:update_integration, params)
       req.send_request(options)
     end
@@ -3893,9 +3893,9 @@ module Aws::ApiGatewayV2
     #   resp.response_templates["__string"] #=> String
     #   resp.template_selection_expression #=> String
     #
-    # @overload update_integration_response(params = {})
+    # @overload update_integration_response(**params)
     # @param [Hash] params ({})
-    def update_integration_response(params = {}, options = {})
+    def update_integration_response(params = {}, **options)
       req = build_request(:update_integration_response, params)
       req.send_request(options)
     end
@@ -3945,9 +3945,9 @@ module Aws::ApiGatewayV2
     #   resp.name #=> String
     #   resp.schema #=> String
     #
-    # @overload update_model(params = {})
+    # @overload update_model(**params)
     # @param [Hash] params ({})
-    def update_model(params = {}, options = {})
+    def update_model(params = {}, **options)
       req = build_request(:update_model, params)
       req.send_request(options)
     end
@@ -4077,9 +4077,9 @@ module Aws::ApiGatewayV2
     #   resp.route_response_selection_expression #=> String
     #   resp.target #=> String
     #
-    # @overload update_route(params = {})
+    # @overload update_route(**params)
     # @param [Hash] params ({})
-    def update_route(params = {}, options = {})
+    def update_route(params = {}, **options)
       req = build_request(:update_route, params)
       req.send_request(options)
     end
@@ -4152,9 +4152,9 @@ module Aws::ApiGatewayV2
     #   resp.route_response_id #=> String
     #   resp.route_response_key #=> String
     #
-    # @overload update_route_response(params = {})
+    # @overload update_route_response(**params)
     # @param [Hash] params ({})
-    def update_route_response(params = {}, options = {})
+    def update_route_response(params = {}, **options)
       req = build_request(:update_route_response, params)
       req.send_request(options)
     end
@@ -4268,9 +4268,9 @@ module Aws::ApiGatewayV2
     #   resp.tags #=> Hash
     #   resp.tags["__string"] #=> String
     #
-    # @overload update_stage(params = {})
+    # @overload update_stage(**params)
     # @param [Hash] params ({})
-    def update_stage(params = {}, options = {})
+    def update_stage(params = {}, **options)
       req = build_request(:update_stage, params)
       req.send_request(options)
     end
@@ -4316,9 +4316,9 @@ module Aws::ApiGatewayV2
     #   resp.vpc_link_status_message #=> String
     #   resp.vpc_link_version #=> String, one of "V2"
     #
-    # @overload update_vpc_link(params = {})
+    # @overload update_vpc_link(**params)
     # @param [Hash] params ({})
-    def update_vpc_link(params = {}, options = {})
+    def update_vpc_link(params = {}, **options)
       req = build_request(:update_vpc_link, params)
       req.send_request(options)
     end
@@ -4327,7 +4327,7 @@ module Aws::ApiGatewayV2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4335,15 +4335,15 @@ module Aws::ApiGatewayV2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-apigatewayv2'
-      context[:gem_version] = '1.29.0'
+      context[:gem_name] = "aws-sdk-apigatewayv2"
+      context[:gem_version] = "1.29.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

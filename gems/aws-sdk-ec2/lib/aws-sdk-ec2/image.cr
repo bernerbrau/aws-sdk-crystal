@@ -13,10 +13,10 @@ module Aws::EC2
 
     extend Aws::Deprecations
 
-    # @overload def initialize(id, options = {})
+    # @overload def initialize(id, **options)
     #   @param [String] id
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :id
     #   @option options [Client] :client
     def initialize(*args)
@@ -249,7 +249,7 @@ module Aws::EC2
     # @param [Hash] options ({})
     # @return [Boolean]
     #   Returns `true` if the Image exists.
-    def exists?(options = {})
+    def exists?(**options)
       begin
         wait_until_exists(options.merge(max_attempts: 1))
         true
@@ -266,7 +266,7 @@ module Aws::EC2
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
     # @return [Image]
-    def wait_until_exists(options = {}, &block)
+    def wait_until_exists(**options, &block)
       options, params = separate_params_and_options(options)
       waiter = Waiters::ImageExists.new(options)
       yield_waiter_and_warn(waiter, &block) if block_given?
@@ -298,7 +298,7 @@ module Aws::EC2
     # ## Example
     #
     #     instance.wait_until(max_attempts:10, delay:5) do |instance|
-    #       instance.state.name == 'running'
+    #       instance.state.name == "running"
     #     end
     #
     # ## Configuration
@@ -358,7 +358,7 @@ module Aws::EC2
     # @option options [Proc] :before_wait (nil) Callback
     # invoked before each wait
     # @return [Resource] if the waiter was successful
-    def wait_until(options = {}, &block)
+    def wait_until(**options, &block)
       self_copy = self.dup
       attempts = 0
       options[:max_attempts] = 10 unless options.key?(:max_attempts)

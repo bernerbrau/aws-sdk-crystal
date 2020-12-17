@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:autoscaling)
 
@@ -280,7 +280,7 @@ module Aws::AutoScaling
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -377,9 +377,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/AttachInstances AWS API Documentation
     #
-    # @overload attach_instances(params = {})
+    # @overload attach_instances(**params)
     # @param [Hash] params ({})
-    def attach_instances(params = {}, options = {})
+    def attach_instances(params = {}, **options)
       req = build_request(:attach_instances, params)
       req.send_request(options)
     end
@@ -443,9 +443,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/AttachLoadBalancerTargetGroups AWS API Documentation
     #
-    # @overload attach_load_balancer_target_groups(params = {})
+    # @overload attach_load_balancer_target_groups(**params)
     # @param [Hash] params ({})
-    def attach_load_balancer_target_groups(params = {}, options = {})
+    def attach_load_balancer_target_groups(params = {}, **options)
       req = build_request(:attach_load_balancer_target_groups, params)
       req.send_request(options)
     end
@@ -501,9 +501,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/AttachLoadBalancers AWS API Documentation
     #
-    # @overload attach_load_balancers(params = {})
+    # @overload attach_load_balancers(**params)
     # @param [Hash] params ({})
-    def attach_load_balancers(params = {}, options = {})
+    def attach_load_balancers(params = {}, **options)
       req = build_request(:attach_load_balancers, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/BatchDeleteScheduledAction AWS API Documentation
     #
-    # @overload batch_delete_scheduled_action(params = {})
+    # @overload batch_delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def batch_delete_scheduled_action(params = {}, options = {})
+    def batch_delete_scheduled_action(params = {}, **options)
       req = build_request(:batch_delete_scheduled_action, params)
       req.send_request(options)
     end
@@ -585,9 +585,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/BatchPutScheduledUpdateGroupAction AWS API Documentation
     #
-    # @overload batch_put_scheduled_update_group_action(params = {})
+    # @overload batch_put_scheduled_update_group_action(**params)
     # @param [Hash] params ({})
-    def batch_put_scheduled_update_group_action(params = {}, options = {})
+    def batch_put_scheduled_update_group_action(params = {}, **options)
       req = build_request(:batch_put_scheduled_update_group_action, params)
       req.send_request(options)
     end
@@ -636,9 +636,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CancelInstanceRefresh AWS API Documentation
     #
-    # @overload cancel_instance_refresh(params = {})
+    # @overload cancel_instance_refresh(**params)
     # @param [Hash] params ({})
-    def cancel_instance_refresh(params = {}, options = {})
+    def cancel_instance_refresh(params = {}, **options)
       req = build_request(:cancel_instance_refresh, params)
       req.send_request(options)
     end
@@ -720,9 +720,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CompleteLifecycleAction AWS API Documentation
     #
-    # @overload complete_lifecycle_action(params = {})
+    # @overload complete_lifecycle_action(**params)
     # @param [Hash] params ({})
-    def complete_lifecycle_action(params = {}, options = {})
+    def complete_lifecycle_action(params = {}, **options)
       req = build_request(:complete_lifecycle_action, params)
       req.send_request(options)
     end
@@ -1138,9 +1138,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CreateAutoScalingGroup AWS API Documentation
     #
-    # @overload create_auto_scaling_group(params = {})
+    # @overload create_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def create_auto_scaling_group(params = {}, options = {})
+    def create_auto_scaling_group(params = {}, **options)
       req = build_request(:create_auto_scaling_group, params)
       req.send_request(options)
     end
@@ -1464,9 +1464,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CreateLaunchConfiguration AWS API Documentation
     #
-    # @overload create_launch_configuration(params = {})
+    # @overload create_launch_configuration(**params)
     # @param [Hash] params ({})
-    def create_launch_configuration(params = {}, options = {})
+    def create_launch_configuration(params = {}, **options)
       req = build_request(:create_launch_configuration, params)
       req.send_request(options)
     end
@@ -1529,9 +1529,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CreateOrUpdateTags AWS API Documentation
     #
-    # @overload create_or_update_tags(params = {})
+    # @overload create_or_update_tags(**params)
     # @param [Hash] params ({})
-    def create_or_update_tags(params = {}, options = {})
+    def create_or_update_tags(params = {}, **options)
       req = build_request(:create_or_update_tags, params)
       req.send_request(options)
     end
@@ -1592,9 +1592,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteAutoScalingGroup AWS API Documentation
     #
-    # @overload delete_auto_scaling_group(params = {})
+    # @overload delete_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def delete_auto_scaling_group(params = {}, options = {})
+    def delete_auto_scaling_group(params = {}, **options)
       req = build_request(:delete_auto_scaling_group, params)
       req.send_request(options)
     end
@@ -1627,9 +1627,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteLaunchConfiguration AWS API Documentation
     #
-    # @overload delete_launch_configuration(params = {})
+    # @overload delete_launch_configuration(**params)
     # @param [Hash] params ({})
-    def delete_launch_configuration(params = {}, options = {})
+    def delete_launch_configuration(params = {}, **options)
       req = build_request(:delete_launch_configuration, params)
       req.send_request(options)
     end
@@ -1667,9 +1667,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteLifecycleHook AWS API Documentation
     #
-    # @overload delete_lifecycle_hook(params = {})
+    # @overload delete_lifecycle_hook(**params)
     # @param [Hash] params ({})
-    def delete_lifecycle_hook(params = {}, options = {})
+    def delete_lifecycle_hook(params = {}, **options)
       req = build_request(:delete_lifecycle_hook, params)
       req.send_request(options)
     end
@@ -1704,9 +1704,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteNotificationConfiguration AWS API Documentation
     #
-    # @overload delete_notification_configuration(params = {})
+    # @overload delete_notification_configuration(**params)
     # @param [Hash] params ({})
-    def delete_notification_configuration(params = {}, options = {})
+    def delete_notification_configuration(params = {}, **options)
       req = build_request(:delete_notification_configuration, params)
       req.send_request(options)
     end
@@ -1751,9 +1751,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeletePolicy AWS API Documentation
     #
-    # @overload delete_policy(params = {})
+    # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, options = {})
+    def delete_policy(params = {}, **options)
       req = build_request(:delete_policy, params)
       req.send_request(options)
     end
@@ -1787,9 +1787,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteScheduledAction AWS API Documentation
     #
-    # @overload delete_scheduled_action(params = {})
+    # @overload delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_action(params = {}, options = {})
+    def delete_scheduled_action(params = {}, **options)
       req = build_request(:delete_scheduled_action, params)
       req.send_request(options)
     end
@@ -1833,9 +1833,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -1883,9 +1883,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAccountLimits AWS API Documentation
     #
-    # @overload describe_account_limits(params = {})
+    # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, options = {})
+    def describe_account_limits(params = {}, **options)
       req = build_request(:describe_account_limits, params)
       req.send_request(options)
     end
@@ -1937,9 +1937,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAdjustmentTypes AWS API Documentation
     #
-    # @overload describe_adjustment_types(params = {})
+    # @overload describe_adjustment_types(**params)
     # @param [Hash] params ({})
-    def describe_adjustment_types(params = {}, options = {})
+    def describe_adjustment_types(params = {}, **options)
       req = build_request(:describe_adjustment_types, params)
       req.send_request(options)
     end
@@ -2112,9 +2112,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingGroups AWS API Documentation
     #
-    # @overload describe_auto_scaling_groups(params = {})
+    # @overload describe_auto_scaling_groups(**params)
     # @param [Hash] params ({})
-    def describe_auto_scaling_groups(params = {}, options = {})
+    def describe_auto_scaling_groups(params = {}, **options)
       req = build_request(:describe_auto_scaling_groups, params)
       req.send_request(options)
     end
@@ -2194,9 +2194,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingInstances AWS API Documentation
     #
-    # @overload describe_auto_scaling_instances(params = {})
+    # @overload describe_auto_scaling_instances(**params)
     # @param [Hash] params ({})
-    def describe_auto_scaling_instances(params = {}, options = {})
+    def describe_auto_scaling_instances(params = {}, **options)
       req = build_request(:describe_auto_scaling_instances, params)
       req.send_request(options)
     end
@@ -2234,9 +2234,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingNotificationTypes AWS API Documentation
     #
-    # @overload describe_auto_scaling_notification_types(params = {})
+    # @overload describe_auto_scaling_notification_types(**params)
     # @param [Hash] params ({})
-    def describe_auto_scaling_notification_types(params = {}, options = {})
+    def describe_auto_scaling_notification_types(params = {}, **options)
       req = build_request(:describe_auto_scaling_notification_types, params)
       req.send_request(options)
     end
@@ -2344,9 +2344,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeInstanceRefreshes AWS API Documentation
     #
-    # @overload describe_instance_refreshes(params = {})
+    # @overload describe_instance_refreshes(**params)
     # @param [Hash] params ({})
-    def describe_instance_refreshes(params = {}, options = {})
+    def describe_instance_refreshes(params = {}, **options)
       req = build_request(:describe_instance_refreshes, params)
       req.send_request(options)
     end
@@ -2454,9 +2454,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLaunchConfigurations AWS API Documentation
     #
-    # @overload describe_launch_configurations(params = {})
+    # @overload describe_launch_configurations(**params)
     # @param [Hash] params ({})
-    def describe_launch_configurations(params = {}, options = {})
+    def describe_launch_configurations(params = {}, **options)
       req = build_request(:describe_launch_configurations, params)
       req.send_request(options)
     end
@@ -2496,9 +2496,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHookTypes AWS API Documentation
     #
-    # @overload describe_lifecycle_hook_types(params = {})
+    # @overload describe_lifecycle_hook_types(**params)
     # @param [Hash] params ({})
-    def describe_lifecycle_hook_types(params = {}, options = {})
+    def describe_lifecycle_hook_types(params = {}, **options)
       req = build_request(:describe_lifecycle_hook_types, params)
       req.send_request(options)
     end
@@ -2563,9 +2563,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHooks AWS API Documentation
     #
-    # @overload describe_lifecycle_hooks(params = {})
+    # @overload describe_lifecycle_hooks(**params)
     # @param [Hash] params ({})
-    def describe_lifecycle_hooks(params = {}, options = {})
+    def describe_lifecycle_hooks(params = {}, **options)
       req = build_request(:describe_lifecycle_hooks, params)
       req.send_request(options)
     end
@@ -2624,9 +2624,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancerTargetGroups AWS API Documentation
     #
-    # @overload describe_load_balancer_target_groups(params = {})
+    # @overload describe_load_balancer_target_groups(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_target_groups(params = {}, options = {})
+    def describe_load_balancer_target_groups(params = {}, **options)
       req = build_request(:describe_load_balancer_target_groups, params)
       req.send_request(options)
     end
@@ -2689,9 +2689,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancers AWS API Documentation
     #
-    # @overload describe_load_balancers(params = {})
+    # @overload describe_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_load_balancers(params = {}, options = {})
+    def describe_load_balancers(params = {}, **options)
       req = build_request(:describe_load_balancers, params)
       req.send_request(options)
     end
@@ -2760,9 +2760,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeMetricCollectionTypes AWS API Documentation
     #
-    # @overload describe_metric_collection_types(params = {})
+    # @overload describe_metric_collection_types(**params)
     # @param [Hash] params ({})
-    def describe_metric_collection_types(params = {}, options = {})
+    def describe_metric_collection_types(params = {}, **options)
       req = build_request(:describe_metric_collection_types, params)
       req.send_request(options)
     end
@@ -2833,9 +2833,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeNotificationConfigurations AWS API Documentation
     #
-    # @overload describe_notification_configurations(params = {})
+    # @overload describe_notification_configurations(**params)
     # @param [Hash] params ({})
-    def describe_notification_configurations(params = {}, options = {})
+    def describe_notification_configurations(params = {}, **options)
       req = build_request(:describe_notification_configurations, params)
       req.send_request(options)
     end
@@ -2952,9 +2952,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribePolicies AWS API Documentation
     #
-    # @overload describe_policies(params = {})
+    # @overload describe_policies(**params)
     # @param [Hash] params ({})
-    def describe_policies(params = {}, options = {})
+    def describe_policies(params = {}, **options)
       req = build_request(:describe_policies, params)
       req.send_request(options)
     end
@@ -3039,9 +3039,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScalingActivities AWS API Documentation
     #
-    # @overload describe_scaling_activities(params = {})
+    # @overload describe_scaling_activities(**params)
     # @param [Hash] params ({})
-    def describe_scaling_activities(params = {}, options = {})
+    def describe_scaling_activities(params = {}, **options)
       req = build_request(:describe_scaling_activities, params)
       req.send_request(options)
     end
@@ -3098,9 +3098,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScalingProcessTypes AWS API Documentation
     #
-    # @overload describe_scaling_process_types(params = {})
+    # @overload describe_scaling_process_types(**params)
     # @param [Hash] params ({})
-    def describe_scaling_process_types(params = {}, options = {})
+    def describe_scaling_process_types(params = {}, **options)
       req = build_request(:describe_scaling_process_types, params)
       req.send_request(options)
     end
@@ -3195,9 +3195,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScheduledActions AWS API Documentation
     #
-    # @overload describe_scheduled_actions(params = {})
+    # @overload describe_scheduled_actions(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_actions(params = {}, options = {})
+    def describe_scheduled_actions(params = {}, **options)
       req = build_request(:describe_scheduled_actions, params)
       req.send_request(options)
     end
@@ -3300,9 +3300,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -3348,9 +3348,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeTerminationPolicyTypes AWS API Documentation
     #
-    # @overload describe_termination_policy_types(params = {})
+    # @overload describe_termination_policy_types(**params)
     # @param [Hash] params ({})
-    def describe_termination_policy_types(params = {}, options = {})
+    def describe_termination_policy_types(params = {}, **options)
       req = build_request(:describe_termination_policy_types, params)
       req.send_request(options)
     end
@@ -3443,9 +3443,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DetachInstances AWS API Documentation
     #
-    # @overload detach_instances(params = {})
+    # @overload detach_instances(**params)
     # @param [Hash] params ({})
-    def detach_instances(params = {}, options = {})
+    def detach_instances(params = {}, **options)
       req = build_request(:detach_instances, params)
       req.send_request(options)
     end
@@ -3483,9 +3483,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DetachLoadBalancerTargetGroups AWS API Documentation
     #
-    # @overload detach_load_balancer_target_groups(params = {})
+    # @overload detach_load_balancer_target_groups(**params)
     # @param [Hash] params ({})
-    def detach_load_balancer_target_groups(params = {}, options = {})
+    def detach_load_balancer_target_groups(params = {}, **options)
       req = build_request(:detach_load_balancer_target_groups, params)
       req.send_request(options)
     end
@@ -3532,9 +3532,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DetachLoadBalancers AWS API Documentation
     #
-    # @overload detach_load_balancers(params = {})
+    # @overload detach_load_balancers(**params)
     # @param [Hash] params ({})
-    def detach_load_balancers(params = {}, options = {})
+    def detach_load_balancers(params = {}, **options)
       req = build_request(:detach_load_balancers, params)
       req.send_request(options)
     end
@@ -3598,9 +3598,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DisableMetricsCollection AWS API Documentation
     #
-    # @overload disable_metrics_collection(params = {})
+    # @overload disable_metrics_collection(**params)
     # @param [Hash] params ({})
-    def disable_metrics_collection(params = {}, options = {})
+    def disable_metrics_collection(params = {}, **options)
       req = build_request(:disable_metrics_collection, params)
       req.send_request(options)
     end
@@ -3677,9 +3677,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/EnableMetricsCollection AWS API Documentation
     #
-    # @overload enable_metrics_collection(params = {})
+    # @overload enable_metrics_collection(**params)
     # @param [Hash] params ({})
-    def enable_metrics_collection(params = {}, options = {})
+    def enable_metrics_collection(params = {}, **options)
       req = build_request(:enable_metrics_collection, params)
       req.send_request(options)
     end
@@ -3769,9 +3769,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/EnterStandby AWS API Documentation
     #
-    # @overload enter_standby(params = {})
+    # @overload enter_standby(**params)
     # @param [Hash] params ({})
-    def enter_standby(params = {}, options = {})
+    def enter_standby(params = {}, **options)
       req = build_request(:enter_standby, params)
       req.send_request(options)
     end
@@ -3842,9 +3842,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/ExecutePolicy AWS API Documentation
     #
-    # @overload execute_policy(params = {})
+    # @overload execute_policy(**params)
     # @param [Hash] params ({})
-    def execute_policy(params = {}, options = {})
+    def execute_policy(params = {}, **options)
       req = build_request(:execute_policy, params)
       req.send_request(options)
     end
@@ -3922,9 +3922,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/ExitStandby AWS API Documentation
     #
-    # @overload exit_standby(params = {})
+    # @overload exit_standby(**params)
     # @param [Hash] params ({})
-    def exit_standby(params = {}, options = {})
+    def exit_standby(params = {}, **options)
       req = build_request(:exit_standby, params)
       req.send_request(options)
     end
@@ -4064,9 +4064,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutLifecycleHook AWS API Documentation
     #
-    # @overload put_lifecycle_hook(params = {})
+    # @overload put_lifecycle_hook(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_hook(params = {}, options = {})
+    def put_lifecycle_hook(params = {}, **options)
       req = build_request(:put_lifecycle_hook, params)
       req.send_request(options)
     end
@@ -4126,9 +4126,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutNotificationConfiguration AWS API Documentation
     #
-    # @overload put_notification_configuration(params = {})
+    # @overload put_notification_configuration(**params)
     # @param [Hash] params ({})
-    def put_notification_configuration(params = {}, options = {})
+    def put_notification_configuration(params = {}, **options)
       req = build_request(:put_notification_configuration, params)
       req.send_request(options)
     end
@@ -4372,9 +4372,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScalingPolicy AWS API Documentation
     #
-    # @overload put_scaling_policy(params = {})
+    # @overload put_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_scaling_policy(params = {}, options = {})
+    def put_scaling_policy(params = {}, **options)
       req = build_request(:put_scaling_policy, params)
       req.send_request(options)
     end
@@ -4474,9 +4474,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScheduledUpdateGroupAction AWS API Documentation
     #
-    # @overload put_scheduled_update_group_action(params = {})
+    # @overload put_scheduled_update_group_action(**params)
     # @param [Hash] params ({})
-    def put_scheduled_update_group_action(params = {}, options = {})
+    def put_scheduled_update_group_action(params = {}, **options)
       req = build_request(:put_scheduled_update_group_action, params)
       req.send_request(options)
     end
@@ -4552,9 +4552,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/RecordLifecycleActionHeartbeat AWS API Documentation
     #
-    # @overload record_lifecycle_action_heartbeat(params = {})
+    # @overload record_lifecycle_action_heartbeat(**params)
     # @param [Hash] params ({})
-    def record_lifecycle_action_heartbeat(params = {}, options = {})
+    def record_lifecycle_action_heartbeat(params = {}, **options)
       req = build_request(:record_lifecycle_action_heartbeat, params)
       req.send_request(options)
     end
@@ -4618,9 +4618,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/ResumeProcesses AWS API Documentation
     #
-    # @overload resume_processes(params = {})
+    # @overload resume_processes(**params)
     # @param [Hash] params ({})
-    def resume_processes(params = {}, options = {})
+    def resume_processes(params = {}, **options)
       req = build_request(:resume_processes, params)
       req.send_request(options)
     end
@@ -4677,9 +4677,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SetDesiredCapacity AWS API Documentation
     #
-    # @overload set_desired_capacity(params = {})
+    # @overload set_desired_capacity(**params)
     # @param [Hash] params ({})
-    def set_desired_capacity(params = {}, options = {})
+    def set_desired_capacity(params = {}, **options)
       req = build_request(:set_desired_capacity, params)
       req.send_request(options)
     end
@@ -4738,9 +4738,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SetInstanceHealth AWS API Documentation
     #
-    # @overload set_instance_health(params = {})
+    # @overload set_instance_health(**params)
     # @param [Hash] params ({})
-    def set_instance_health(params = {}, options = {})
+    def set_instance_health(params = {}, **options)
       req = build_request(:set_instance_health, params)
       req.send_request(options)
     end
@@ -4805,9 +4805,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SetInstanceProtection AWS API Documentation
     #
-    # @overload set_instance_protection(params = {})
+    # @overload set_instance_protection(**params)
     # @param [Hash] params ({})
-    def set_instance_protection(params = {}, options = {})
+    def set_instance_protection(params = {}, **options)
       req = build_request(:set_instance_protection, params)
       req.send_request(options)
     end
@@ -4898,9 +4898,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/StartInstanceRefresh AWS API Documentation
     #
-    # @overload start_instance_refresh(params = {})
+    # @overload start_instance_refresh(**params)
     # @param [Hash] params ({})
-    def start_instance_refresh(params = {}, options = {})
+    def start_instance_refresh(params = {}, **options)
       req = build_request(:start_instance_refresh, params)
       req.send_request(options)
     end
@@ -4969,9 +4969,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SuspendProcesses AWS API Documentation
     #
-    # @overload suspend_processes(params = {})
+    # @overload suspend_processes(**params)
     # @param [Hash] params ({})
-    def suspend_processes(params = {}, options = {})
+    def suspend_processes(params = {}, **options)
       req = build_request(:suspend_processes, params)
       req.send_request(options)
     end
@@ -5044,9 +5044,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/TerminateInstanceInAutoScalingGroup AWS API Documentation
     #
-    # @overload terminate_instance_in_auto_scaling_group(params = {})
+    # @overload terminate_instance_in_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def terminate_instance_in_auto_scaling_group(params = {}, options = {})
+    def terminate_instance_in_auto_scaling_group(params = {}, **options)
       req = build_request(:terminate_instance_in_auto_scaling_group, params)
       req.send_request(options)
     end
@@ -5334,9 +5334,9 @@ module Aws::AutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/UpdateAutoScalingGroup AWS API Documentation
     #
-    # @overload update_auto_scaling_group(params = {})
+    # @overload update_auto_scaling_group(**params)
     # @param [Hash] params ({})
-    def update_auto_scaling_group(params = {}, options = {})
+    def update_auto_scaling_group(params = {}, **options)
       req = build_request(:update_auto_scaling_group, params)
       req.send_request(options)
     end
@@ -5345,7 +5345,7 @@ module Aws::AutoScaling
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5353,8 +5353,8 @@ module Aws::AutoScaling
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-autoscaling'
-      context[:gem_version] = '1.52.0'
+      context[:gem_name] = "aws-sdk-autoscaling"
+      context[:gem_version] = "1.52.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -5448,7 +5448,7 @@ module Aws::AutoScaling
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -5464,7 +5464,7 @@ module Aws::AutoScaling
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

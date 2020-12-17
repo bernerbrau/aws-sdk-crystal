@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:costexplorer)
 
@@ -290,7 +290,7 @@ module Aws::CostExplorer
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -398,9 +398,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/CreateAnomalyMonitor AWS API Documentation
     #
-    # @overload create_anomaly_monitor(params = {})
+    # @overload create_anomaly_monitor(**params)
     # @param [Hash] params ({})
-    def create_anomaly_monitor(params = {}, options = {})
+    def create_anomaly_monitor(params = {}, **options)
       req = build_request(:create_anomaly_monitor, params)
       req.send_request(options)
     end
@@ -443,9 +443,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/CreateAnomalySubscription AWS API Documentation
     #
-    # @overload create_anomaly_subscription(params = {})
+    # @overload create_anomaly_subscription(**params)
     # @param [Hash] params ({})
-    def create_anomaly_subscription(params = {}, options = {})
+    def create_anomaly_subscription(params = {}, **options)
       req = build_request(:create_anomaly_subscription, params)
       req.send_request(options)
     end
@@ -520,9 +520,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/CreateCostCategoryDefinition AWS API Documentation
     #
-    # @overload create_cost_category_definition(params = {})
+    # @overload create_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def create_cost_category_definition(params = {}, options = {})
+    def create_cost_category_definition(params = {}, **options)
       req = build_request(:create_cost_category_definition, params)
       req.send_request(options)
     end
@@ -543,9 +543,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/DeleteAnomalyMonitor AWS API Documentation
     #
-    # @overload delete_anomaly_monitor(params = {})
+    # @overload delete_anomaly_monitor(**params)
     # @param [Hash] params ({})
-    def delete_anomaly_monitor(params = {}, options = {})
+    def delete_anomaly_monitor(params = {}, **options)
       req = build_request(:delete_anomaly_monitor, params)
       req.send_request(options)
     end
@@ -566,9 +566,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/DeleteAnomalySubscription AWS API Documentation
     #
-    # @overload delete_anomaly_subscription(params = {})
+    # @overload delete_anomaly_subscription(**params)
     # @param [Hash] params ({})
-    def delete_anomaly_subscription(params = {}, options = {})
+    def delete_anomaly_subscription(params = {}, **options)
       req = build_request(:delete_anomaly_subscription, params)
       req.send_request(options)
     end
@@ -597,9 +597,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/DeleteCostCategoryDefinition AWS API Documentation
     #
-    # @overload delete_cost_category_definition(params = {})
+    # @overload delete_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def delete_cost_category_definition(params = {}, options = {})
+    def delete_cost_category_definition(params = {}, **options)
       req = build_request(:delete_cost_category_definition, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/DescribeCostCategoryDefinition AWS API Documentation
     #
-    # @overload describe_cost_category_definition(params = {})
+    # @overload describe_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def describe_cost_category_definition(params = {}, options = {})
+    def describe_cost_category_definition(params = {}, **options)
       req = build_request(:describe_cost_category_definition, params)
       req.send_request(options)
     end
@@ -745,9 +745,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetAnomalies AWS API Documentation
     #
-    # @overload get_anomalies(params = {})
+    # @overload get_anomalies(**params)
     # @param [Hash] params ({})
-    def get_anomalies(params = {}, options = {})
+    def get_anomalies(params = {}, **options)
       req = build_request(:get_anomalies, params)
       req.send_request(options)
     end
@@ -815,9 +815,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetAnomalyMonitors AWS API Documentation
     #
-    # @overload get_anomaly_monitors(params = {})
+    # @overload get_anomaly_monitors(**params)
     # @param [Hash] params ({})
-    def get_anomaly_monitors(params = {}, options = {})
+    def get_anomaly_monitors(params = {}, **options)
       req = build_request(:get_anomaly_monitors, params)
       req.send_request(options)
     end
@@ -872,9 +872,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetAnomalySubscriptions AWS API Documentation
     #
-    # @overload get_anomaly_subscriptions(params = {})
+    # @overload get_anomaly_subscriptions(**params)
     # @param [Hash] params ({})
-    def get_anomaly_subscriptions(params = {}, options = {})
+    def get_anomaly_subscriptions(params = {}, **options)
       req = build_request(:get_anomaly_subscriptions, params)
       req.send_request(options)
     end
@@ -1036,9 +1036,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetCostAndUsage AWS API Documentation
     #
-    # @overload get_cost_and_usage(params = {})
+    # @overload get_cost_and_usage(**params)
     # @param [Hash] params ({})
-    def get_cost_and_usage(params = {}, options = {})
+    def get_cost_and_usage(params = {}, **options)
       req = build_request(:get_cost_and_usage, params)
       req.send_request(options)
     end
@@ -1204,9 +1204,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetCostAndUsageWithResources AWS API Documentation
     #
-    # @overload get_cost_and_usage_with_resources(params = {})
+    # @overload get_cost_and_usage_with_resources(**params)
     # @param [Hash] params ({})
-    def get_cost_and_usage_with_resources(params = {}, options = {})
+    def get_cost_and_usage_with_resources(params = {}, **options)
       req = build_request(:get_cost_and_usage_with_resources, params)
       req.send_request(options)
     end
@@ -1320,9 +1320,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetCostForecast AWS API Documentation
     #
-    # @overload get_cost_forecast(params = {})
+    # @overload get_cost_forecast(**params)
     # @param [Hash] params ({})
-    def get_cost_forecast(params = {}, options = {})
+    def get_cost_forecast(params = {}, **options)
       req = build_request(:get_cost_forecast, params)
       req.send_request(options)
     end
@@ -1492,9 +1492,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetDimensionValues AWS API Documentation
     #
-    # @overload get_dimension_values(params = {})
+    # @overload get_dimension_values(**params)
     # @param [Hash] params ({})
-    def get_dimension_values(params = {}, options = {})
+    def get_dimension_values(params = {}, **options)
       req = build_request(:get_dimension_values, params)
       req.send_request(options)
     end
@@ -1724,9 +1724,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetReservationCoverage AWS API Documentation
     #
-    # @overload get_reservation_coverage(params = {})
+    # @overload get_reservation_coverage(**params)
     # @param [Hash] params ({})
-    def get_reservation_coverage(params = {}, options = {})
+    def get_reservation_coverage(params = {}, **options)
       req = build_request(:get_reservation_coverage, params)
       req.send_request(options)
     end
@@ -1881,9 +1881,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetReservationPurchaseRecommendation AWS API Documentation
     #
-    # @overload get_reservation_purchase_recommendation(params = {})
+    # @overload get_reservation_purchase_recommendation(**params)
     # @param [Hash] params ({})
-    def get_reservation_purchase_recommendation(params = {}, options = {})
+    def get_reservation_purchase_recommendation(params = {}, **options)
       req = build_request(:get_reservation_purchase_recommendation, params)
       req.send_request(options)
     end
@@ -2062,9 +2062,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetReservationUtilization AWS API Documentation
     #
-    # @overload get_reservation_utilization(params = {})
+    # @overload get_reservation_utilization(**params)
     # @param [Hash] params ({})
-    def get_reservation_utilization(params = {}, options = {})
+    def get_reservation_utilization(params = {}, **options)
       req = build_request(:get_reservation_utilization, params)
       req.send_request(options)
     end
@@ -2271,9 +2271,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetRightsizingRecommendation AWS API Documentation
     #
-    # @overload get_rightsizing_recommendation(params = {})
+    # @overload get_rightsizing_recommendation(**params)
     # @param [Hash] params ({})
-    def get_rightsizing_recommendation(params = {}, options = {})
+    def get_rightsizing_recommendation(params = {}, **options)
       req = build_request(:get_rightsizing_recommendation, params)
       req.send_request(options)
     end
@@ -2419,9 +2419,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetSavingsPlansCoverage AWS API Documentation
     #
-    # @overload get_savings_plans_coverage(params = {})
+    # @overload get_savings_plans_coverage(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_coverage(params = {}, options = {})
+    def get_savings_plans_coverage(params = {}, **options)
       req = build_request(:get_savings_plans_coverage, params)
       req.send_request(options)
     end
@@ -2564,9 +2564,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetSavingsPlansPurchaseRecommendation AWS API Documentation
     #
-    # @overload get_savings_plans_purchase_recommendation(params = {})
+    # @overload get_savings_plans_purchase_recommendation(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_purchase_recommendation(params = {}, options = {})
+    def get_savings_plans_purchase_recommendation(params = {}, **options)
       req = build_request(:get_savings_plans_purchase_recommendation, params)
       req.send_request(options)
     end
@@ -2690,9 +2690,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetSavingsPlansUtilization AWS API Documentation
     #
-    # @overload get_savings_plans_utilization(params = {})
+    # @overload get_savings_plans_utilization(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_utilization(params = {}, options = {})
+    def get_savings_plans_utilization(params = {}, **options)
       req = build_request(:get_savings_plans_utilization, params)
       req.send_request(options)
     end
@@ -2828,9 +2828,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetSavingsPlansUtilizationDetails AWS API Documentation
     #
-    # @overload get_savings_plans_utilization_details(params = {})
+    # @overload get_savings_plans_utilization_details(**params)
     # @param [Hash] params ({})
-    def get_savings_plans_utilization_details(params = {}, options = {})
+    def get_savings_plans_utilization_details(params = {}, **options)
       req = build_request(:get_savings_plans_utilization_details, params)
       req.send_request(options)
     end
@@ -2885,9 +2885,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetTags AWS API Documentation
     #
-    # @overload get_tags(params = {})
+    # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, options = {})
+    def get_tags(params = {}, **options)
       req = build_request(:get_tags, params)
       req.send_request(options)
     end
@@ -2993,9 +2993,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/GetUsageForecast AWS API Documentation
     #
-    # @overload get_usage_forecast(params = {})
+    # @overload get_usage_forecast(**params)
     # @param [Hash] params ({})
-    def get_usage_forecast(params = {}, options = {})
+    def get_usage_forecast(params = {}, **options)
       req = build_request(:get_usage_forecast, params)
       req.send_request(options)
     end
@@ -3052,9 +3052,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListCostCategoryDefinitions AWS API Documentation
     #
-    # @overload list_cost_category_definitions(params = {})
+    # @overload list_cost_category_definitions(**params)
     # @param [Hash] params ({})
-    def list_cost_category_definitions(params = {}, options = {})
+    def list_cost_category_definitions(params = {}, **options)
       req = build_request(:list_cost_category_definitions, params)
       req.send_request(options)
     end
@@ -3085,9 +3085,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ProvideAnomalyFeedback AWS API Documentation
     #
-    # @overload provide_anomaly_feedback(params = {})
+    # @overload provide_anomaly_feedback(**params)
     # @param [Hash] params ({})
-    def provide_anomaly_feedback(params = {}, options = {})
+    def provide_anomaly_feedback(params = {}, **options)
       req = build_request(:provide_anomaly_feedback, params)
       req.send_request(options)
     end
@@ -3118,9 +3118,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/UpdateAnomalyMonitor AWS API Documentation
     #
-    # @overload update_anomaly_monitor(params = {})
+    # @overload update_anomaly_monitor(**params)
     # @param [Hash] params ({})
-    def update_anomaly_monitor(params = {}, options = {})
+    def update_anomaly_monitor(params = {}, **options)
       req = build_request(:update_anomaly_monitor, params)
       req.send_request(options)
     end
@@ -3173,9 +3173,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/UpdateAnomalySubscription AWS API Documentation
     #
-    # @overload update_anomaly_subscription(params = {})
+    # @overload update_anomaly_subscription(**params)
     # @param [Hash] params ({})
-    def update_anomaly_subscription(params = {}, options = {})
+    def update_anomaly_subscription(params = {}, **options)
       req = build_request(:update_anomaly_subscription, params)
       req.send_request(options)
     end
@@ -3253,9 +3253,9 @@ module Aws::CostExplorer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/UpdateCostCategoryDefinition AWS API Documentation
     #
-    # @overload update_cost_category_definition(params = {})
+    # @overload update_cost_category_definition(**params)
     # @param [Hash] params ({})
-    def update_cost_category_definition(params = {}, options = {})
+    def update_cost_category_definition(params = {}, **options)
       req = build_request(:update_cost_category_definition, params)
       req.send_request(options)
     end
@@ -3264,7 +3264,7 @@ module Aws::CostExplorer
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3272,15 +3272,15 @@ module Aws::CostExplorer
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-costexplorer'
-      context[:gem_version] = '1.54.0'
+      context[:gem_name] = "aws-sdk-costexplorer"
+      context[:gem_version] = "1.54.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

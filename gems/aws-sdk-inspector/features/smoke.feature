@@ -8,11 +8,11 @@
 Feature: Smoke tests for Inspector
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @inspector @smoke
   Scenario: Call Aws::Inspector::Client#list_assessment_templates and expect it to succeed
-  When I call the operation 'list_assessment_templates' with params:
+  When I call the operation "list_assessment_templates" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @inspector @smoke
   Scenario: Call Aws::Aws::Inspector::Client#list_tags_for_resource and expect it to fail
-  When I call the operation 'list_tags_for_resource' with params:
+  When I call the operation "list_tags_for_resource" with params:
     """
 {"resource_arn":"fake-arn"}
     """

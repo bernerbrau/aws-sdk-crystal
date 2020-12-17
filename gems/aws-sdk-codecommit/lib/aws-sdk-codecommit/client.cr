@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codecommit)
 
@@ -290,7 +290,7 @@ module Aws::CodeCommit
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -364,9 +364,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/AssociateApprovalRuleTemplateWithRepository AWS API Documentation
     #
-    # @overload associate_approval_rule_template_with_repository(params = {})
+    # @overload associate_approval_rule_template_with_repository(**params)
     # @param [Hash] params ({})
-    def associate_approval_rule_template_with_repository(params = {}, options = {})
+    def associate_approval_rule_template_with_repository(params = {}, **options)
       req = build_request(:associate_approval_rule_template_with_repository, params)
       req.send_request(options)
     end
@@ -409,9 +409,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/BatchAssociateApprovalRuleTemplateWithRepositories AWS API Documentation
     #
-    # @overload batch_associate_approval_rule_template_with_repositories(params = {})
+    # @overload batch_associate_approval_rule_template_with_repositories(**params)
     # @param [Hash] params ({})
-    def batch_associate_approval_rule_template_with_repositories(params = {}, options = {})
+    def batch_associate_approval_rule_template_with_repositories(params = {}, **options)
       req = build_request(:batch_associate_approval_rule_template_with_repositories, params)
       req.send_request(options)
     end
@@ -530,9 +530,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/BatchDescribeMergeConflicts AWS API Documentation
     #
-    # @overload batch_describe_merge_conflicts(params = {})
+    # @overload batch_describe_merge_conflicts(**params)
     # @param [Hash] params ({})
-    def batch_describe_merge_conflicts(params = {}, options = {})
+    def batch_describe_merge_conflicts(params = {}, **options)
       req = build_request(:batch_describe_merge_conflicts, params)
       req.send_request(options)
     end
@@ -576,9 +576,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/BatchDisassociateApprovalRuleTemplateFromRepositories AWS API Documentation
     #
-    # @overload batch_disassociate_approval_rule_template_from_repositories(params = {})
+    # @overload batch_disassociate_approval_rule_template_from_repositories(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_approval_rule_template_from_repositories(params = {}, options = {})
+    def batch_disassociate_approval_rule_template_from_repositories(params = {}, **options)
       req = build_request(:batch_disassociate_approval_rule_template_from_repositories, params)
       req.send_request(options)
     end
@@ -631,9 +631,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/BatchGetCommits AWS API Documentation
     #
-    # @overload batch_get_commits(params = {})
+    # @overload batch_get_commits(**params)
     # @param [Hash] params ({})
-    def batch_get_commits(params = {}, options = {})
+    def batch_get_commits(params = {}, **options)
       req = build_request(:batch_get_commits, params)
       req.send_request(options)
     end
@@ -686,9 +686,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/BatchGetRepositories AWS API Documentation
     #
-    # @overload batch_get_repositories(params = {})
+    # @overload batch_get_repositories(**params)
     # @param [Hash] params ({})
-    def batch_get_repositories(params = {}, options = {})
+    def batch_get_repositories(params = {}, **options)
       req = build_request(:batch_get_repositories, params)
       req.send_request(options)
     end
@@ -777,9 +777,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreateApprovalRuleTemplate AWS API Documentation
     #
-    # @overload create_approval_rule_template(params = {})
+    # @overload create_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def create_approval_rule_template(params = {}, options = {})
+    def create_approval_rule_template(params = {}, **options)
       req = build_request(:create_approval_rule_template, params)
       req.send_request(options)
     end
@@ -812,9 +812,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreateBranch AWS API Documentation
     #
-    # @overload create_branch(params = {})
+    # @overload create_branch(**params)
     # @param [Hash] params ({})
-    def create_branch(params = {}, options = {})
+    def create_branch(params = {}, **options)
       req = build_request(:create_branch, params)
       req.send_request(options)
     end
@@ -919,9 +919,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreateCommit AWS API Documentation
     #
-    # @overload create_commit(params = {})
+    # @overload create_commit(**params)
     # @param [Hash] params ({})
-    def create_commit(params = {}, options = {})
+    def create_commit(params = {}, **options)
       req = build_request(:create_commit, params)
       req.send_request(options)
     end
@@ -1010,9 +1010,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreatePullRequest AWS API Documentation
     #
-    # @overload create_pull_request(params = {})
+    # @overload create_pull_request(**params)
     # @param [Hash] params ({})
-    def create_pull_request(params = {}, options = {})
+    def create_pull_request(params = {}, **options)
       req = build_request(:create_pull_request, params)
       req.send_request(options)
     end
@@ -1093,9 +1093,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreatePullRequestApprovalRule AWS API Documentation
     #
-    # @overload create_pull_request_approval_rule(params = {})
+    # @overload create_pull_request_approval_rule(**params)
     # @param [Hash] params ({})
-    def create_pull_request_approval_rule(params = {}, options = {})
+    def create_pull_request_approval_rule(params = {}, **options)
       req = build_request(:create_pull_request_approval_rule, params)
       req.send_request(options)
     end
@@ -1161,9 +1161,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreateRepository AWS API Documentation
     #
-    # @overload create_repository(params = {})
+    # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, options = {})
+    def create_repository(params = {}, **options)
       req = build_request(:create_repository, params)
       req.send_request(options)
     end
@@ -1276,9 +1276,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/CreateUnreferencedMergeCommit AWS API Documentation
     #
-    # @overload create_unreferenced_merge_commit(params = {})
+    # @overload create_unreferenced_merge_commit(**params)
     # @param [Hash] params ({})
-    def create_unreferenced_merge_commit(params = {}, options = {})
+    def create_unreferenced_merge_commit(params = {}, **options)
       req = build_request(:create_unreferenced_merge_commit, params)
       req.send_request(options)
     end
@@ -1306,9 +1306,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DeleteApprovalRuleTemplate AWS API Documentation
     #
-    # @overload delete_approval_rule_template(params = {})
+    # @overload delete_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def delete_approval_rule_template(params = {}, options = {})
+    def delete_approval_rule_template(params = {}, **options)
       req = build_request(:delete_approval_rule_template, params)
       req.send_request(options)
     end
@@ -1340,9 +1340,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DeleteBranch AWS API Documentation
     #
-    # @overload delete_branch(params = {})
+    # @overload delete_branch(**params)
     # @param [Hash] params ({})
-    def delete_branch(params = {}, options = {})
+    def delete_branch(params = {}, **options)
       req = build_request(:delete_branch, params)
       req.send_request(options)
     end
@@ -1381,9 +1381,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DeleteCommentContent AWS API Documentation
     #
-    # @overload delete_comment_content(params = {})
+    # @overload delete_comment_content(**params)
     # @param [Hash] params ({})
-    def delete_comment_content(params = {}, options = {})
+    def delete_comment_content(params = {}, **options)
       req = build_request(:delete_comment_content, params)
       req.send_request(options)
     end
@@ -1461,9 +1461,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DeleteFile AWS API Documentation
     #
-    # @overload delete_file(params = {})
+    # @overload delete_file(**params)
     # @param [Hash] params ({})
-    def delete_file(params = {}, options = {})
+    def delete_file(params = {}, **options)
       req = build_request(:delete_file, params)
       req.send_request(options)
     end
@@ -1499,9 +1499,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DeletePullRequestApprovalRule AWS API Documentation
     #
-    # @overload delete_pull_request_approval_rule(params = {})
+    # @overload delete_pull_request_approval_rule(**params)
     # @param [Hash] params ({})
-    def delete_pull_request_approval_rule(params = {}, options = {})
+    def delete_pull_request_approval_rule(params = {}, **options)
       req = build_request(:delete_pull_request_approval_rule, params)
       req.send_request(options)
     end
@@ -1532,9 +1532,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DeleteRepository AWS API Documentation
     #
-    # @overload delete_repository(params = {})
+    # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, options = {})
+    def delete_repository(params = {}, **options)
       req = build_request(:delete_repository, params)
       req.send_request(options)
     end
@@ -1646,9 +1646,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DescribeMergeConflicts AWS API Documentation
     #
-    # @overload describe_merge_conflicts(params = {})
+    # @overload describe_merge_conflicts(**params)
     # @param [Hash] params ({})
-    def describe_merge_conflicts(params = {}, options = {})
+    def describe_merge_conflicts(params = {}, **options)
       req = build_request(:describe_merge_conflicts, params)
       req.send_request(options)
     end
@@ -1727,9 +1727,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DescribePullRequestEvents AWS API Documentation
     #
-    # @overload describe_pull_request_events(params = {})
+    # @overload describe_pull_request_events(**params)
     # @param [Hash] params ({})
-    def describe_pull_request_events(params = {}, options = {})
+    def describe_pull_request_events(params = {}, **options)
       req = build_request(:describe_pull_request_events, params)
       req.send_request(options)
     end
@@ -1758,9 +1758,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/DisassociateApprovalRuleTemplateFromRepository AWS API Documentation
     #
-    # @overload disassociate_approval_rule_template_from_repository(params = {})
+    # @overload disassociate_approval_rule_template_from_repository(**params)
     # @param [Hash] params ({})
-    def disassociate_approval_rule_template_from_repository(params = {}, options = {})
+    def disassociate_approval_rule_template_from_repository(params = {}, **options)
       req = build_request(:disassociate_approval_rule_template_from_repository, params)
       req.send_request(options)
     end
@@ -1797,9 +1797,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/EvaluatePullRequestApprovalRules AWS API Documentation
     #
-    # @overload evaluate_pull_request_approval_rules(params = {})
+    # @overload evaluate_pull_request_approval_rules(**params)
     # @param [Hash] params ({})
-    def evaluate_pull_request_approval_rules(params = {}, options = {})
+    def evaluate_pull_request_approval_rules(params = {}, **options)
       req = build_request(:evaluate_pull_request_approval_rules, params)
       req.send_request(options)
     end
@@ -1833,9 +1833,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetApprovalRuleTemplate AWS API Documentation
     #
-    # @overload get_approval_rule_template(params = {})
+    # @overload get_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def get_approval_rule_template(params = {}, options = {})
+    def get_approval_rule_template(params = {}, **options)
       req = build_request(:get_approval_rule_template, params)
       req.send_request(options)
     end
@@ -1866,9 +1866,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetBlob AWS API Documentation
     #
-    # @overload get_blob(params = {})
+    # @overload get_blob(**params)
     # @param [Hash] params ({})
-    def get_blob(params = {}, options = {})
+    def get_blob(params = {}, **options)
       req = build_request(:get_blob, params)
       req.send_request(options)
     end
@@ -1901,9 +1901,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetBranch AWS API Documentation
     #
-    # @overload get_branch(params = {})
+    # @overload get_branch(**params)
     # @param [Hash] params ({})
-    def get_branch(params = {}, options = {})
+    def get_branch(params = {}, **options)
       req = build_request(:get_branch, params)
       req.send_request(options)
     end
@@ -1948,9 +1948,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetComment AWS API Documentation
     #
-    # @overload get_comment(params = {})
+    # @overload get_comment(**params)
     # @param [Hash] params ({})
-    def get_comment(params = {}, options = {})
+    def get_comment(params = {}, **options)
       req = build_request(:get_comment, params)
       req.send_request(options)
     end
@@ -2003,9 +2003,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetCommentReactions AWS API Documentation
     #
-    # @overload get_comment_reactions(params = {})
+    # @overload get_comment_reactions(**params)
     # @param [Hash] params ({})
-    def get_comment_reactions(params = {}, options = {})
+    def get_comment_reactions(params = {}, **options)
       req = build_request(:get_comment_reactions, params)
       req.send_request(options)
     end
@@ -2083,9 +2083,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetCommentsForComparedCommit AWS API Documentation
     #
-    # @overload get_comments_for_compared_commit(params = {})
+    # @overload get_comments_for_compared_commit(**params)
     # @param [Hash] params ({})
-    def get_comments_for_compared_commit(params = {}, options = {})
+    def get_comments_for_compared_commit(params = {}, **options)
       req = build_request(:get_comments_for_compared_commit, params)
       req.send_request(options)
     end
@@ -2169,9 +2169,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetCommentsForPullRequest AWS API Documentation
     #
-    # @overload get_comments_for_pull_request(params = {})
+    # @overload get_comments_for_pull_request(**params)
     # @param [Hash] params ({})
-    def get_comments_for_pull_request(params = {}, options = {})
+    def get_comments_for_pull_request(params = {}, **options)
       req = build_request(:get_comments_for_pull_request, params)
       req.send_request(options)
     end
@@ -2213,9 +2213,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetCommit AWS API Documentation
     #
-    # @overload get_commit(params = {})
+    # @overload get_commit(**params)
     # @param [Hash] params ({})
-    def get_commit(params = {}, options = {})
+    def get_commit(params = {}, **options)
       req = build_request(:get_commit, params)
       req.send_request(options)
     end
@@ -2291,9 +2291,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetDifferences AWS API Documentation
     #
-    # @overload get_differences(params = {})
+    # @overload get_differences(**params)
     # @param [Hash] params ({})
-    def get_differences(params = {}, options = {})
+    def get_differences(params = {}, **options)
       req = build_request(:get_differences, params)
       req.send_request(options)
     end
@@ -2343,9 +2343,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetFile AWS API Documentation
     #
-    # @overload get_file(params = {})
+    # @overload get_file(**params)
     # @param [Hash] params ({})
-    def get_file(params = {}, options = {})
+    def get_file(params = {}, **options)
       req = build_request(:get_file, params)
       req.send_request(options)
     end
@@ -2412,9 +2412,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetFolder AWS API Documentation
     #
-    # @overload get_folder(params = {})
+    # @overload get_folder(**params)
     # @param [Hash] params ({})
-    def get_folder(params = {}, options = {})
+    def get_folder(params = {}, **options)
       req = build_request(:get_folder, params)
       req.send_request(options)
     end
@@ -2472,9 +2472,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetMergeCommit AWS API Documentation
     #
-    # @overload get_merge_commit(params = {})
+    # @overload get_merge_commit(**params)
     # @param [Hash] params ({})
-    def get_merge_commit(params = {}, options = {})
+    def get_merge_commit(params = {}, **options)
       req = build_request(:get_merge_commit, params)
       req.send_request(options)
     end
@@ -2570,9 +2570,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetMergeConflicts AWS API Documentation
     #
-    # @overload get_merge_conflicts(params = {})
+    # @overload get_merge_conflicts(**params)
     # @param [Hash] params ({})
-    def get_merge_conflicts(params = {}, options = {})
+    def get_merge_conflicts(params = {}, **options)
       req = build_request(:get_merge_conflicts, params)
       req.send_request(options)
     end
@@ -2633,9 +2633,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetMergeOptions AWS API Documentation
     #
-    # @overload get_merge_options(params = {})
+    # @overload get_merge_options(**params)
     # @param [Hash] params ({})
-    def get_merge_options(params = {}, options = {})
+    def get_merge_options(params = {}, **options)
       req = build_request(:get_merge_options, params)
       req.send_request(options)
     end
@@ -2691,9 +2691,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetPullRequest AWS API Documentation
     #
-    # @overload get_pull_request(params = {})
+    # @overload get_pull_request(**params)
     # @param [Hash] params ({})
-    def get_pull_request(params = {}, options = {})
+    def get_pull_request(params = {}, **options)
       req = build_request(:get_pull_request, params)
       req.send_request(options)
     end
@@ -2727,9 +2727,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetPullRequestApprovalStates AWS API Documentation
     #
-    # @overload get_pull_request_approval_states(params = {})
+    # @overload get_pull_request_approval_states(**params)
     # @param [Hash] params ({})
-    def get_pull_request_approval_states(params = {}, options = {})
+    def get_pull_request_approval_states(params = {}, **options)
       req = build_request(:get_pull_request_approval_states, params)
       req.send_request(options)
     end
@@ -2766,9 +2766,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetPullRequestOverrideState AWS API Documentation
     #
-    # @overload get_pull_request_override_state(params = {})
+    # @overload get_pull_request_override_state(**params)
     # @param [Hash] params ({})
-    def get_pull_request_override_state(params = {}, options = {})
+    def get_pull_request_override_state(params = {}, **options)
       req = build_request(:get_pull_request_override_state, params)
       req.send_request(options)
     end
@@ -2812,9 +2812,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetRepository AWS API Documentation
     #
-    # @overload get_repository(params = {})
+    # @overload get_repository(**params)
     # @param [Hash] params ({})
-    def get_repository(params = {}, options = {})
+    def get_repository(params = {}, **options)
       req = build_request(:get_repository, params)
       req.send_request(options)
     end
@@ -2849,9 +2849,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/GetRepositoryTriggers AWS API Documentation
     #
-    # @overload get_repository_triggers(params = {})
+    # @overload get_repository_triggers(**params)
     # @param [Hash] params ({})
-    def get_repository_triggers(params = {}, options = {})
+    def get_repository_triggers(params = {}, **options)
       req = build_request(:get_repository_triggers, params)
       req.send_request(options)
     end
@@ -2890,9 +2890,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListApprovalRuleTemplates AWS API Documentation
     #
-    # @overload list_approval_rule_templates(params = {})
+    # @overload list_approval_rule_templates(**params)
     # @param [Hash] params ({})
-    def list_approval_rule_templates(params = {}, options = {})
+    def list_approval_rule_templates(params = {}, **options)
       req = build_request(:list_approval_rule_templates, params)
       req.send_request(options)
     end
@@ -2935,9 +2935,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListAssociatedApprovalRuleTemplatesForRepository AWS API Documentation
     #
-    # @overload list_associated_approval_rule_templates_for_repository(params = {})
+    # @overload list_associated_approval_rule_templates_for_repository(**params)
     # @param [Hash] params ({})
-    def list_associated_approval_rule_templates_for_repository(params = {}, options = {})
+    def list_associated_approval_rule_templates_for_repository(params = {}, **options)
       req = build_request(:list_associated_approval_rule_templates_for_repository, params)
       req.send_request(options)
     end
@@ -2972,9 +2972,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListBranches AWS API Documentation
     #
-    # @overload list_branches(params = {})
+    # @overload list_branches(**params)
     # @param [Hash] params ({})
-    def list_branches(params = {}, options = {})
+    def list_branches(params = {}, **options)
       req = build_request(:list_branches, params)
       req.send_request(options)
     end
@@ -3027,9 +3027,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListPullRequests AWS API Documentation
     #
-    # @overload list_pull_requests(params = {})
+    # @overload list_pull_requests(**params)
     # @param [Hash] params ({})
-    def list_pull_requests(params = {}, options = {})
+    def list_pull_requests(params = {}, **options)
       req = build_request(:list_pull_requests, params)
       req.send_request(options)
     end
@@ -3074,9 +3074,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListRepositories AWS API Documentation
     #
-    # @overload list_repositories(params = {})
+    # @overload list_repositories(**params)
     # @param [Hash] params ({})
-    def list_repositories(params = {}, options = {})
+    def list_repositories(params = {}, **options)
       req = build_request(:list_repositories, params)
       req.send_request(options)
     end
@@ -3119,9 +3119,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListRepositoriesForApprovalRuleTemplate AWS API Documentation
     #
-    # @overload list_repositories_for_approval_rule_template(params = {})
+    # @overload list_repositories_for_approval_rule_template(**params)
     # @param [Hash] params ({})
-    def list_repositories_for_approval_rule_template(params = {}, options = {})
+    def list_repositories_for_approval_rule_template(params = {}, **options)
       req = build_request(:list_repositories_for_approval_rule_template, params)
       req.send_request(options)
     end
@@ -3163,9 +3163,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3207,9 +3207,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/MergeBranchesByFastForward AWS API Documentation
     #
-    # @overload merge_branches_by_fast_forward(params = {})
+    # @overload merge_branches_by_fast_forward(**params)
     # @param [Hash] params ({})
-    def merge_branches_by_fast_forward(params = {}, options = {})
+    def merge_branches_by_fast_forward(params = {}, **options)
       req = build_request(:merge_branches_by_fast_forward, params)
       req.send_request(options)
     end
@@ -3312,9 +3312,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/MergeBranchesBySquash AWS API Documentation
     #
-    # @overload merge_branches_by_squash(params = {})
+    # @overload merge_branches_by_squash(**params)
     # @param [Hash] params ({})
-    def merge_branches_by_squash(params = {}, options = {})
+    def merge_branches_by_squash(params = {}, **options)
       req = build_request(:merge_branches_by_squash, params)
       req.send_request(options)
     end
@@ -3416,9 +3416,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/MergeBranchesByThreeWay AWS API Documentation
     #
-    # @overload merge_branches_by_three_way(params = {})
+    # @overload merge_branches_by_three_way(**params)
     # @param [Hash] params ({})
-    def merge_branches_by_three_way(params = {}, options = {})
+    def merge_branches_by_three_way(params = {}, **options)
       req = build_request(:merge_branches_by_three_way, params)
       req.send_request(options)
     end
@@ -3488,9 +3488,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/MergePullRequestByFastForward AWS API Documentation
     #
-    # @overload merge_pull_request_by_fast_forward(params = {})
+    # @overload merge_pull_request_by_fast_forward(**params)
     # @param [Hash] params ({})
-    def merge_pull_request_by_fast_forward(params = {}, options = {})
+    def merge_pull_request_by_fast_forward(params = {}, **options)
       req = build_request(:merge_pull_request_by_fast_forward, params)
       req.send_request(options)
     end
@@ -3620,9 +3620,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/MergePullRequestBySquash AWS API Documentation
     #
-    # @overload merge_pull_request_by_squash(params = {})
+    # @overload merge_pull_request_by_squash(**params)
     # @param [Hash] params ({})
-    def merge_pull_request_by_squash(params = {}, options = {})
+    def merge_pull_request_by_squash(params = {}, **options)
       req = build_request(:merge_pull_request_by_squash, params)
       req.send_request(options)
     end
@@ -3752,9 +3752,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/MergePullRequestByThreeWay AWS API Documentation
     #
-    # @overload merge_pull_request_by_three_way(params = {})
+    # @overload merge_pull_request_by_three_way(**params)
     # @param [Hash] params ({})
-    def merge_pull_request_by_three_way(params = {}, options = {})
+    def merge_pull_request_by_three_way(params = {}, **options)
       req = build_request(:merge_pull_request_by_three_way, params)
       req.send_request(options)
     end
@@ -3790,9 +3790,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/OverridePullRequestApprovalRules AWS API Documentation
     #
-    # @overload override_pull_request_approval_rules(params = {})
+    # @overload override_pull_request_approval_rules(**params)
     # @param [Hash] params ({})
-    def override_pull_request_approval_rules(params = {}, options = {})
+    def override_pull_request_approval_rules(params = {}, **options)
       req = build_request(:override_pull_request_approval_rules, params)
       req.send_request(options)
     end
@@ -3878,9 +3878,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/PostCommentForComparedCommit AWS API Documentation
     #
-    # @overload post_comment_for_compared_commit(params = {})
+    # @overload post_comment_for_compared_commit(**params)
     # @param [Hash] params ({})
-    def post_comment_for_compared_commit(params = {}, options = {})
+    def post_comment_for_compared_commit(params = {}, **options)
       req = build_request(:post_comment_for_compared_commit, params)
       req.send_request(options)
     end
@@ -3976,9 +3976,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/PostCommentForPullRequest AWS API Documentation
     #
-    # @overload post_comment_for_pull_request(params = {})
+    # @overload post_comment_for_pull_request(**params)
     # @param [Hash] params ({})
-    def post_comment_for_pull_request(params = {}, options = {})
+    def post_comment_for_pull_request(params = {}, **options)
       req = build_request(:post_comment_for_pull_request, params)
       req.send_request(options)
     end
@@ -4033,9 +4033,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/PostCommentReply AWS API Documentation
     #
-    # @overload post_comment_reply(params = {})
+    # @overload post_comment_reply(**params)
     # @param [Hash] params ({})
-    def post_comment_reply(params = {}, options = {})
+    def post_comment_reply(params = {}, **options)
       req = build_request(:post_comment_reply, params)
       req.send_request(options)
     end
@@ -4069,9 +4069,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/PutCommentReaction AWS API Documentation
     #
-    # @overload put_comment_reaction(params = {})
+    # @overload put_comment_reaction(**params)
     # @param [Hash] params ({})
-    def put_comment_reaction(params = {}, options = {})
+    def put_comment_reaction(params = {}, **options)
       req = build_request(:put_comment_reaction, params)
       req.send_request(options)
     end
@@ -4153,9 +4153,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/PutFile AWS API Documentation
     #
-    # @overload put_file(params = {})
+    # @overload put_file(**params)
     # @param [Hash] params ({})
-    def put_file(params = {}, options = {})
+    def put_file(params = {}, **options)
       req = build_request(:put_file, params)
       req.send_request(options)
     end
@@ -4195,9 +4195,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/PutRepositoryTriggers AWS API Documentation
     #
-    # @overload put_repository_triggers(params = {})
+    # @overload put_repository_triggers(**params)
     # @param [Hash] params ({})
-    def put_repository_triggers(params = {}, options = {})
+    def put_repository_triggers(params = {}, **options)
       req = build_request(:put_repository_triggers, params)
       req.send_request(options)
     end
@@ -4230,9 +4230,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -4278,9 +4278,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/TestRepositoryTriggers AWS API Documentation
     #
-    # @overload test_repository_triggers(params = {})
+    # @overload test_repository_triggers(**params)
     # @param [Hash] params ({})
-    def test_repository_triggers(params = {}, options = {})
+    def test_repository_triggers(params = {}, **options)
       req = build_request(:test_repository_triggers, params)
       req.send_request(options)
     end
@@ -4311,9 +4311,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -4359,9 +4359,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateApprovalRuleTemplateContent AWS API Documentation
     #
-    # @overload update_approval_rule_template_content(params = {})
+    # @overload update_approval_rule_template_content(**params)
     # @param [Hash] params ({})
-    def update_approval_rule_template_content(params = {}, options = {})
+    def update_approval_rule_template_content(params = {}, **options)
       req = build_request(:update_approval_rule_template_content, params)
       req.send_request(options)
     end
@@ -4398,9 +4398,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateApprovalRuleTemplateDescription AWS API Documentation
     #
-    # @overload update_approval_rule_template_description(params = {})
+    # @overload update_approval_rule_template_description(**params)
     # @param [Hash] params ({})
-    def update_approval_rule_template_description(params = {}, options = {})
+    def update_approval_rule_template_description(params = {}, **options)
       req = build_request(:update_approval_rule_template_description, params)
       req.send_request(options)
     end
@@ -4437,9 +4437,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateApprovalRuleTemplateName AWS API Documentation
     #
-    # @overload update_approval_rule_template_name(params = {})
+    # @overload update_approval_rule_template_name(**params)
     # @param [Hash] params ({})
-    def update_approval_rule_template_name(params = {}, options = {})
+    def update_approval_rule_template_name(params = {}, **options)
       req = build_request(:update_approval_rule_template_name, params)
       req.send_request(options)
     end
@@ -4481,9 +4481,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateComment AWS API Documentation
     #
-    # @overload update_comment(params = {})
+    # @overload update_comment(**params)
     # @param [Hash] params ({})
-    def update_comment(params = {}, options = {})
+    def update_comment(params = {}, **options)
       req = build_request(:update_comment, params)
       req.send_request(options)
     end
@@ -4513,9 +4513,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateDefaultBranch AWS API Documentation
     #
-    # @overload update_default_branch(params = {})
+    # @overload update_default_branch(**params)
     # @param [Hash] params ({})
-    def update_default_branch(params = {}, options = {})
+    def update_default_branch(params = {}, **options)
       req = build_request(:update_default_branch, params)
       req.send_request(options)
     end
@@ -4599,9 +4599,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdatePullRequestApprovalRuleContent AWS API Documentation
     #
-    # @overload update_pull_request_approval_rule_content(params = {})
+    # @overload update_pull_request_approval_rule_content(**params)
     # @param [Hash] params ({})
-    def update_pull_request_approval_rule_content(params = {}, options = {})
+    def update_pull_request_approval_rule_content(params = {}, **options)
       req = build_request(:update_pull_request_approval_rule_content, params)
       req.send_request(options)
     end
@@ -4630,9 +4630,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdatePullRequestApprovalState AWS API Documentation
     #
-    # @overload update_pull_request_approval_state(params = {})
+    # @overload update_pull_request_approval_state(**params)
     # @param [Hash] params ({})
-    def update_pull_request_approval_state(params = {}, options = {})
+    def update_pull_request_approval_state(params = {}, **options)
       req = build_request(:update_pull_request_approval_state, params)
       req.send_request(options)
     end
@@ -4693,9 +4693,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdatePullRequestDescription AWS API Documentation
     #
-    # @overload update_pull_request_description(params = {})
+    # @overload update_pull_request_description(**params)
     # @param [Hash] params ({})
-    def update_pull_request_description(params = {}, options = {})
+    def update_pull_request_description(params = {}, **options)
       req = build_request(:update_pull_request_description, params)
       req.send_request(options)
     end
@@ -4757,9 +4757,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdatePullRequestStatus AWS API Documentation
     #
-    # @overload update_pull_request_status(params = {})
+    # @overload update_pull_request_status(**params)
     # @param [Hash] params ({})
-    def update_pull_request_status(params = {}, options = {})
+    def update_pull_request_status(params = {}, **options)
       req = build_request(:update_pull_request_status, params)
       req.send_request(options)
     end
@@ -4820,9 +4820,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdatePullRequestTitle AWS API Documentation
     #
-    # @overload update_pull_request_title(params = {})
+    # @overload update_pull_request_title(**params)
     # @param [Hash] params ({})
-    def update_pull_request_title(params = {}, options = {})
+    def update_pull_request_title(params = {}, **options)
       req = build_request(:update_pull_request_title, params)
       req.send_request(options)
     end
@@ -4857,9 +4857,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateRepositoryDescription AWS API Documentation
     #
-    # @overload update_repository_description(params = {})
+    # @overload update_repository_description(**params)
     # @param [Hash] params ({})
-    def update_repository_description(params = {}, options = {})
+    def update_repository_description(params = {}, **options)
       req = build_request(:update_repository_description, params)
       req.send_request(options)
     end
@@ -4892,9 +4892,9 @@ module Aws::CodeCommit
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateRepositoryName AWS API Documentation
     #
-    # @overload update_repository_name(params = {})
+    # @overload update_repository_name(**params)
     # @param [Hash] params ({})
-    def update_repository_name(params = {}, options = {})
+    def update_repository_name(params = {}, **options)
       req = build_request(:update_repository_name, params)
       req.send_request(options)
     end
@@ -4903,7 +4903,7 @@ module Aws::CodeCommit
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4911,15 +4911,15 @@ module Aws::CodeCommit
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codecommit'
-      context[:gem_version] = '1.40.0'
+      context[:gem_name] = "aws-sdk-codecommit"
+      context[:gem_version] = "1.40.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

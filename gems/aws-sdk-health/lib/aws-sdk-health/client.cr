@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:health)
 
@@ -290,7 +290,7 @@ module Aws::Health
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -398,9 +398,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeAffectedAccountsForOrganization AWS API Documentation
     #
-    # @overload describe_affected_accounts_for_organization(params = {})
+    # @overload describe_affected_accounts_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_affected_accounts_for_organization(params = {}, options = {})
+    def describe_affected_accounts_for_organization(params = {}, **options)
       req = build_request(:describe_affected_accounts_for_organization, params)
       req.send_request(options)
     end
@@ -487,9 +487,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeAffectedEntities AWS API Documentation
     #
-    # @overload describe_affected_entities(params = {})
+    # @overload describe_affected_entities(**params)
     # @param [Hash] params ({})
-    def describe_affected_entities(params = {}, options = {})
+    def describe_affected_entities(params = {}, **options)
       req = build_request(:describe_affected_entities, params)
       req.send_request(options)
     end
@@ -580,9 +580,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeAffectedEntitiesForOrganization AWS API Documentation
     #
-    # @overload describe_affected_entities_for_organization(params = {})
+    # @overload describe_affected_entities_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_affected_entities_for_organization(params = {}, options = {})
+    def describe_affected_entities_for_organization(params = {}, **options)
       req = build_request(:describe_affected_entities_for_organization, params)
       req.send_request(options)
     end
@@ -614,9 +614,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEntityAggregates AWS API Documentation
     #
-    # @overload describe_entity_aggregates(params = {})
+    # @overload describe_entity_aggregates(**params)
     # @param [Hash] params ({})
-    def describe_entity_aggregates(params = {}, options = {})
+    def describe_entity_aggregates(params = {}, **options)
       req = build_request(:describe_entity_aggregates, params)
       req.send_request(options)
     end
@@ -705,9 +705,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEventAggregates AWS API Documentation
     #
-    # @overload describe_event_aggregates(params = {})
+    # @overload describe_event_aggregates(**params)
     # @param [Hash] params ({})
-    def describe_event_aggregates(params = {}, options = {})
+    def describe_event_aggregates(params = {}, **options)
       req = build_request(:describe_event_aggregates, params)
       req.send_request(options)
     end
@@ -772,9 +772,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEventDetails AWS API Documentation
     #
-    # @overload describe_event_details(params = {})
+    # @overload describe_event_details(**params)
     # @param [Hash] params ({})
-    def describe_event_details(params = {}, options = {})
+    def describe_event_details(params = {}, **options)
       req = build_request(:describe_event_details, params)
       req.send_request(options)
     end
@@ -867,9 +867,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEventDetailsForOrganization AWS API Documentation
     #
-    # @overload describe_event_details_for_organization(params = {})
+    # @overload describe_event_details_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_event_details_for_organization(params = {}, options = {})
+    def describe_event_details_for_organization(params = {}, **options)
       req = build_request(:describe_event_details_for_organization, params)
       req.send_request(options)
     end
@@ -931,9 +931,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEventTypes AWS API Documentation
     #
-    # @overload describe_event_types(params = {})
+    # @overload describe_event_types(**params)
     # @param [Hash] params ({})
-    def describe_event_types(params = {}, options = {})
+    def describe_event_types(params = {}, **options)
       req = build_request(:describe_event_types, params)
       req.send_request(options)
     end
@@ -1053,9 +1053,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -1170,9 +1170,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEventsForOrganization AWS API Documentation
     #
-    # @overload describe_events_for_organization(params = {})
+    # @overload describe_events_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_events_for_organization(params = {}, options = {})
+    def describe_events_for_organization(params = {}, **options)
       req = build_request(:describe_events_for_organization, params)
       req.send_request(options)
     end
@@ -1192,9 +1192,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeHealthServiceStatusForOrganization AWS API Documentation
     #
-    # @overload describe_health_service_status_for_organization(params = {})
+    # @overload describe_health_service_status_for_organization(**params)
     # @param [Hash] params ({})
-    def describe_health_service_status_for_organization(params = {}, options = {})
+    def describe_health_service_status_for_organization(params = {}, **options)
       req = build_request(:describe_health_service_status_for_organization, params)
       req.send_request(options)
     end
@@ -1231,9 +1231,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DisableHealthServiceAccessForOrganization AWS API Documentation
     #
-    # @overload disable_health_service_access_for_organization(params = {})
+    # @overload disable_health_service_access_for_organization(**params)
     # @param [Hash] params ({})
-    def disable_health_service_access_for_organization(params = {}, options = {})
+    def disable_health_service_access_for_organization(params = {}, **options)
       req = build_request(:disable_health_service_access_for_organization, params)
       req.send_request(options)
     end
@@ -1255,9 +1255,9 @@ module Aws::Health
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/EnableHealthServiceAccessForOrganization AWS API Documentation
     #
-    # @overload enable_health_service_access_for_organization(params = {})
+    # @overload enable_health_service_access_for_organization(**params)
     # @param [Hash] params ({})
-    def enable_health_service_access_for_organization(params = {}, options = {})
+    def enable_health_service_access_for_organization(params = {}, **options)
       req = build_request(:enable_health_service_access_for_organization, params)
       req.send_request(options)
     end
@@ -1266,7 +1266,7 @@ module Aws::Health
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1274,15 +1274,15 @@ module Aws::Health
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-health'
-      context[:gem_version] = '1.31.0'
+      context[:gem_name] = "aws-sdk-health"
+      context[:gem_version] = "1.31.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

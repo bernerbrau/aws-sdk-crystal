@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::MachineLearning
   # Waiters are utility methods that poll for a particular state to occur
@@ -111,7 +111,7 @@ module Aws::MachineLearning
 
       # @option (see Client#describe_batch_predictions)
       # @return (see Client#describe_batch_predictions)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -155,7 +155,7 @@ module Aws::MachineLearning
 
       # @option (see Client#describe_data_sources)
       # @return (see Client#describe_data_sources)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -199,7 +199,7 @@ module Aws::MachineLearning
 
       # @option (see Client#describe_evaluations)
       # @return (see Client#describe_evaluations)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -243,7 +243,7 @@ module Aws::MachineLearning
 
       # @option (see Client#describe_ml_models)
       # @return (see Client#describe_ml_models)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

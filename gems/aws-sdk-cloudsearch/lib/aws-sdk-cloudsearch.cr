@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudsearch/types'
-require_relative 'aws-sdk-cloudsearch/client_api'
-require_relative 'aws-sdk-cloudsearch/client'
-require_relative 'aws-sdk-cloudsearch/errors'
-require_relative 'aws-sdk-cloudsearch/resource'
-require_relative 'aws-sdk-cloudsearch/customizations'
+require_relative "aws-sdk-cloudsearch/types"
+require_relative "aws-sdk-cloudsearch/client_api"
+require_relative "aws-sdk-cloudsearch/client"
+require_relative "aws-sdk-cloudsearch/errors"
+require_relative "aws-sdk-cloudsearch/resource"
+require_relative "aws-sdk-cloudsearch/customizations"
 
 # This module provides support for Amazon CloudSearch. This module is available in the
 # `aws-sdk-cloudsearch` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cloudsearch/customizations'
 # @!group service
 module Aws::CloudSearch
 
-  GEM_VERSION = '1.26.0'
+  GEM_VERSION = "1.26.0"
 
 end

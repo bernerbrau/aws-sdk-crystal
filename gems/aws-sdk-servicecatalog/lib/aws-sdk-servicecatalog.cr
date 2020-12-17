@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-servicecatalog/types'
-require_relative 'aws-sdk-servicecatalog/client_api'
-require_relative 'aws-sdk-servicecatalog/client'
-require_relative 'aws-sdk-servicecatalog/errors'
-require_relative 'aws-sdk-servicecatalog/resource'
-require_relative 'aws-sdk-servicecatalog/customizations'
+require_relative "aws-sdk-servicecatalog/types"
+require_relative "aws-sdk-servicecatalog/client_api"
+require_relative "aws-sdk-servicecatalog/client"
+require_relative "aws-sdk-servicecatalog/errors"
+require_relative "aws-sdk-servicecatalog/resource"
+require_relative "aws-sdk-servicecatalog/customizations"
 
 # This module provides support for AWS Service Catalog. This module is available in the
 # `aws-sdk-servicecatalog` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-servicecatalog/customizations'
 # @!group service
 module Aws::ServiceCatalog
 
-  GEM_VERSION = '1.55.0'
+  GEM_VERSION = "1.55.0"
 
 end

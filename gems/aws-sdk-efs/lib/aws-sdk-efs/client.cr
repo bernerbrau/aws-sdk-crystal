@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:efs)
 
@@ -280,7 +280,7 @@ module Aws::EFS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -435,9 +435,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateAccessPoint AWS API Documentation
     #
-    # @overload create_access_point(params = {})
+    # @overload create_access_point(**params)
     # @param [Hash] params ({})
-    def create_access_point(params = {}, options = {})
+    def create_access_point(params = {}, **options)
       req = build_request(:create_access_point, params)
       req.send_request(options)
     end
@@ -679,9 +679,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateFileSystem AWS API Documentation
     #
-    # @overload create_file_system(params = {})
+    # @overload create_file_system(**params)
     # @param [Hash] params ({})
-    def create_file_system(params = {}, options = {})
+    def create_file_system(params = {}, **options)
       req = build_request(:create_file_system, params)
       req.send_request(options)
     end
@@ -872,9 +872,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateMountTarget AWS API Documentation
     #
-    # @overload create_mount_target(params = {})
+    # @overload create_mount_target(**params)
     # @param [Hash] params ({})
-    def create_mount_target(params = {}, options = {})
+    def create_mount_target(params = {}, **options)
       req = build_request(:create_mount_target, params)
       req.send_request(options)
     end
@@ -928,9 +928,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/CreateTags AWS API Documentation
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -956,9 +956,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteAccessPoint AWS API Documentation
     #
-    # @overload delete_access_point(params = {})
+    # @overload delete_access_point(**params)
     # @param [Hash] params ({})
-    def delete_access_point(params = {}, options = {})
+    def delete_access_point(params = {}, **options)
       req = build_request(:delete_access_point, params)
       req.send_request(options)
     end
@@ -1005,9 +1005,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteFileSystem AWS API Documentation
     #
-    # @overload delete_file_system(params = {})
+    # @overload delete_file_system(**params)
     # @param [Hash] params ({})
-    def delete_file_system(params = {}, options = {})
+    def delete_file_system(params = {}, **options)
       req = build_request(:delete_file_system, params)
       req.send_request(options)
     end
@@ -1038,9 +1038,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteFileSystemPolicy AWS API Documentation
     #
-    # @overload delete_file_system_policy(params = {})
+    # @overload delete_file_system_policy(**params)
     # @param [Hash] params ({})
-    def delete_file_system_policy(params = {}, options = {})
+    def delete_file_system_policy(params = {}, **options)
       req = build_request(:delete_file_system_policy, params)
       req.send_request(options)
     end
@@ -1100,9 +1100,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteMountTarget AWS API Documentation
     #
-    # @overload delete_mount_target(params = {})
+    # @overload delete_mount_target(**params)
     # @param [Hash] params ({})
-    def delete_mount_target(params = {}, options = {})
+    def delete_mount_target(params = {}, **options)
       req = build_request(:delete_mount_target, params)
       req.send_request(options)
     end
@@ -1149,9 +1149,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -1224,9 +1224,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeAccessPoints AWS API Documentation
     #
-    # @overload describe_access_points(params = {})
+    # @overload describe_access_points(**params)
     # @param [Hash] params ({})
-    def describe_access_points(params = {}, options = {})
+    def describe_access_points(params = {}, **options)
       req = build_request(:describe_access_points, params)
       req.send_request(options)
     end
@@ -1252,9 +1252,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeBackupPolicy AWS API Documentation
     #
-    # @overload describe_backup_policy(params = {})
+    # @overload describe_backup_policy(**params)
     # @param [Hash] params ({})
-    def describe_backup_policy(params = {}, options = {})
+    def describe_backup_policy(params = {}, **options)
       req = build_request(:describe_backup_policy, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeFileSystemPolicy AWS API Documentation
     #
-    # @overload describe_file_system_policy(params = {})
+    # @overload describe_file_system_policy(**params)
     # @param [Hash] params ({})
-    def describe_file_system_policy(params = {}, options = {})
+    def describe_file_system_policy(params = {}, **options)
       req = build_request(:describe_file_system_policy, params)
       req.send_request(options)
     end
@@ -1418,9 +1418,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeFileSystems AWS API Documentation
     #
-    # @overload describe_file_systems(params = {})
+    # @overload describe_file_systems(**params)
     # @param [Hash] params ({})
-    def describe_file_systems(params = {}, options = {})
+    def describe_file_systems(params = {}, **options)
       req = build_request(:describe_file_systems, params)
       req.send_request(options)
     end
@@ -1475,9 +1475,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeLifecycleConfiguration AWS API Documentation
     #
-    # @overload describe_lifecycle_configuration(params = {})
+    # @overload describe_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def describe_lifecycle_configuration(params = {}, options = {})
+    def describe_lifecycle_configuration(params = {}, **options)
       req = build_request(:describe_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -1531,9 +1531,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeMountTargetSecurityGroups AWS API Documentation
     #
-    # @overload describe_mount_target_security_groups(params = {})
+    # @overload describe_mount_target_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_mount_target_security_groups(params = {}, options = {})
+    def describe_mount_target_security_groups(params = {}, **options)
       req = build_request(:describe_mount_target_security_groups, params)
       req.send_request(options)
     end
@@ -1634,9 +1634,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeMountTargets AWS API Documentation
     #
-    # @overload describe_mount_targets(params = {})
+    # @overload describe_mount_targets(**params)
     # @param [Hash] params ({})
-    def describe_mount_targets(params = {}, options = {})
+    def describe_mount_targets(params = {}, **options)
       req = build_request(:describe_mount_targets, params)
       req.send_request(options)
     end
@@ -1708,9 +1708,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -1758,9 +1758,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1812,9 +1812,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/ModifyMountTargetSecurityGroups AWS API Documentation
     #
-    # @overload modify_mount_target_security_groups(params = {})
+    # @overload modify_mount_target_security_groups(**params)
     # @param [Hash] params ({})
-    def modify_mount_target_security_groups(params = {}, options = {})
+    def modify_mount_target_security_groups(params = {}, **options)
       req = build_request(:modify_mount_target_security_groups, params)
       req.send_request(options)
     end
@@ -1847,9 +1847,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/PutBackupPolicy AWS API Documentation
     #
-    # @overload put_backup_policy(params = {})
+    # @overload put_backup_policy(**params)
     # @param [Hash] params ({})
-    def put_backup_policy(params = {}, options = {})
+    def put_backup_policy(params = {}, **options)
       req = build_request(:put_backup_policy, params)
       req.send_request(options)
     end
@@ -1913,9 +1913,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/PutFileSystemPolicy AWS API Documentation
     #
-    # @overload put_file_system_policy(params = {})
+    # @overload put_file_system_policy(**params)
     # @param [Hash] params ({})
-    def put_file_system_policy(params = {}, options = {})
+    def put_file_system_policy(params = {}, **options)
       req = build_request(:put_file_system_policy, params)
       req.send_request(options)
     end
@@ -2008,9 +2008,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/PutLifecycleConfiguration AWS API Documentation
     #
-    # @overload put_lifecycle_configuration(params = {})
+    # @overload put_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_configuration(params = {}, options = {})
+    def put_lifecycle_configuration(params = {}, **options)
       req = build_request(:put_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -2042,9 +2042,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2073,9 +2073,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2151,9 +2151,9 @@ module Aws::EFS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/UpdateFileSystem AWS API Documentation
     #
-    # @overload update_file_system(params = {})
+    # @overload update_file_system(**params)
     # @param [Hash] params ({})
-    def update_file_system(params = {}, options = {})
+    def update_file_system(params = {}, **options)
       req = build_request(:update_file_system, params)
       req.send_request(options)
     end
@@ -2162,7 +2162,7 @@ module Aws::EFS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2170,15 +2170,15 @@ module Aws::EFS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-efs'
-      context[:gem_version] = '1.36.0'
+      context[:gem_name] = "aws-sdk-efs"
+      context[:gem_version] = "1.36.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

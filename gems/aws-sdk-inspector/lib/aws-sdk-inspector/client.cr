@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:inspector)
 
@@ -290,7 +290,7 @@ module Aws::Inspector
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -394,9 +394,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/AddAttributesToFindings AWS API Documentation
     #
-    # @overload add_attributes_to_findings(params = {})
+    # @overload add_attributes_to_findings(**params)
     # @param [Hash] params ({})
-    def add_attributes_to_findings(params = {}, options = {})
+    def add_attributes_to_findings(params = {}, **options)
       req = build_request(:add_attributes_to_findings, params)
       req.send_request(options)
     end
@@ -460,9 +460,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/CreateAssessmentTarget AWS API Documentation
     #
-    # @overload create_assessment_target(params = {})
+    # @overload create_assessment_target(**params)
     # @param [Hash] params ({})
-    def create_assessment_target(params = {}, options = {})
+    def create_assessment_target(params = {}, **options)
       req = build_request(:create_assessment_target, params)
       req.send_request(options)
     end
@@ -550,9 +550,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/CreateAssessmentTemplate AWS API Documentation
     #
-    # @overload create_assessment_template(params = {})
+    # @overload create_assessment_template(**params)
     # @param [Hash] params ({})
-    def create_assessment_template(params = {}, options = {})
+    def create_assessment_template(params = {}, **options)
       req = build_request(:create_assessment_template, params)
       req.send_request(options)
     end
@@ -582,9 +582,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/CreateExclusionsPreview AWS API Documentation
     #
-    # @overload create_exclusions_preview(params = {})
+    # @overload create_exclusions_preview(**params)
     # @param [Hash] params ({})
-    def create_exclusions_preview(params = {}, options = {})
+    def create_exclusions_preview(params = {}, **options)
       req = build_request(:create_exclusions_preview, params)
       req.send_request(options)
     end
@@ -644,9 +644,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/CreateResourceGroup AWS API Documentation
     #
-    # @overload create_resource_group(params = {})
+    # @overload create_resource_group(**params)
     # @param [Hash] params ({})
-    def create_resource_group(params = {}, options = {})
+    def create_resource_group(params = {}, **options)
       req = build_request(:create_resource_group, params)
       req.send_request(options)
     end
@@ -676,9 +676,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DeleteAssessmentRun AWS API Documentation
     #
-    # @overload delete_assessment_run(params = {})
+    # @overload delete_assessment_run(**params)
     # @param [Hash] params ({})
-    def delete_assessment_run(params = {}, options = {})
+    def delete_assessment_run(params = {}, **options)
       req = build_request(:delete_assessment_run, params)
       req.send_request(options)
     end
@@ -708,9 +708,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DeleteAssessmentTarget AWS API Documentation
     #
-    # @overload delete_assessment_target(params = {})
+    # @overload delete_assessment_target(**params)
     # @param [Hash] params ({})
-    def delete_assessment_target(params = {}, options = {})
+    def delete_assessment_target(params = {}, **options)
       req = build_request(:delete_assessment_target, params)
       req.send_request(options)
     end
@@ -741,9 +741,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DeleteAssessmentTemplate AWS API Documentation
     #
-    # @overload delete_assessment_template(params = {})
+    # @overload delete_assessment_template(**params)
     # @param [Hash] params ({})
-    def delete_assessment_template(params = {}, options = {})
+    def delete_assessment_template(params = {}, **options)
       req = build_request(:delete_assessment_template, params)
       req.send_request(options)
     end
@@ -880,9 +880,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeAssessmentRuns AWS API Documentation
     #
-    # @overload describe_assessment_runs(params = {})
+    # @overload describe_assessment_runs(**params)
     # @param [Hash] params ({})
-    def describe_assessment_runs(params = {}, options = {})
+    def describe_assessment_runs(params = {}, **options)
       req = build_request(:describe_assessment_runs, params)
       req.send_request(options)
     end
@@ -945,9 +945,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeAssessmentTargets AWS API Documentation
     #
-    # @overload describe_assessment_targets(params = {})
+    # @overload describe_assessment_targets(**params)
     # @param [Hash] params ({})
-    def describe_assessment_targets(params = {}, options = {})
+    def describe_assessment_targets(params = {}, **options)
       req = build_request(:describe_assessment_targets, params)
       req.send_request(options)
     end
@@ -1021,9 +1021,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeAssessmentTemplates AWS API Documentation
     #
-    # @overload describe_assessment_templates(params = {})
+    # @overload describe_assessment_templates(**params)
     # @param [Hash] params ({})
-    def describe_assessment_templates(params = {}, options = {})
+    def describe_assessment_templates(params = {}, **options)
       req = build_request(:describe_assessment_templates, params)
       req.send_request(options)
     end
@@ -1060,9 +1060,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeCrossAccountAccessRole AWS API Documentation
     #
-    # @overload describe_cross_account_access_role(params = {})
+    # @overload describe_cross_account_access_role(**params)
     # @param [Hash] params ({})
-    def describe_cross_account_access_role(params = {}, options = {})
+    def describe_cross_account_access_role(params = {}, **options)
       req = build_request(:describe_cross_account_access_role, params)
       req.send_request(options)
     end
@@ -1108,9 +1108,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeExclusions AWS API Documentation
     #
-    # @overload describe_exclusions(params = {})
+    # @overload describe_exclusions(**params)
     # @param [Hash] params ({})
-    def describe_exclusions(params = {}, options = {})
+    def describe_exclusions(params = {}, **options)
       req = build_request(:describe_exclusions, params)
       req.send_request(options)
     end
@@ -1242,9 +1242,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeFindings AWS API Documentation
     #
-    # @overload describe_findings(params = {})
+    # @overload describe_findings(**params)
     # @param [Hash] params ({})
-    def describe_findings(params = {}, options = {})
+    def describe_findings(params = {}, **options)
       req = build_request(:describe_findings, params)
       req.send_request(options)
     end
@@ -1309,9 +1309,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeResourceGroups AWS API Documentation
     #
-    # @overload describe_resource_groups(params = {})
+    # @overload describe_resource_groups(**params)
     # @param [Hash] params ({})
-    def describe_resource_groups(params = {}, options = {})
+    def describe_resource_groups(params = {}, **options)
       req = build_request(:describe_resource_groups, params)
       req.send_request(options)
     end
@@ -1378,9 +1378,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/DescribeRulesPackages AWS API Documentation
     #
-    # @overload describe_rules_packages(params = {})
+    # @overload describe_rules_packages(**params)
     # @param [Hash] params ({})
-    def describe_rules_packages(params = {}, options = {})
+    def describe_rules_packages(params = {}, **options)
       req = build_request(:describe_rules_packages, params)
       req.send_request(options)
     end
@@ -1425,9 +1425,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/GetAssessmentReport AWS API Documentation
     #
-    # @overload get_assessment_report(params = {})
+    # @overload get_assessment_report(**params)
     # @param [Hash] params ({})
-    def get_assessment_report(params = {}, options = {})
+    def get_assessment_report(params = {}, **options)
       req = build_request(:get_assessment_report, params)
       req.send_request(options)
     end
@@ -1494,9 +1494,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/GetExclusionsPreview AWS API Documentation
     #
-    # @overload get_exclusions_preview(params = {})
+    # @overload get_exclusions_preview(**params)
     # @param [Hash] params ({})
-    def get_exclusions_preview(params = {}, options = {})
+    def get_exclusions_preview(params = {}, **options)
       req = build_request(:get_exclusions_preview, params)
       req.send_request(options)
     end
@@ -1687,9 +1687,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/GetTelemetryMetadata AWS API Documentation
     #
-    # @overload get_telemetry_metadata(params = {})
+    # @overload get_telemetry_metadata(**params)
     # @param [Hash] params ({})
-    def get_telemetry_metadata(params = {}, options = {})
+    def get_telemetry_metadata(params = {}, **options)
       req = build_request(:get_telemetry_metadata, params)
       req.send_request(options)
     end
@@ -1927,9 +1927,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListAssessmentRunAgents AWS API Documentation
     #
-    # @overload list_assessment_run_agents(params = {})
+    # @overload list_assessment_run_agents(**params)
     # @param [Hash] params ({})
-    def list_assessment_run_agents(params = {}, options = {})
+    def list_assessment_run_agents(params = {}, **options)
       req = build_request(:list_assessment_run_agents, params)
       req.send_request(options)
     end
@@ -2027,9 +2027,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListAssessmentRuns AWS API Documentation
     #
-    # @overload list_assessment_runs(params = {})
+    # @overload list_assessment_runs(**params)
     # @param [Hash] params ({})
-    def list_assessment_runs(params = {}, options = {})
+    def list_assessment_runs(params = {}, **options)
       req = build_request(:list_assessment_runs, params)
       req.send_request(options)
     end
@@ -2104,9 +2104,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListAssessmentTargets AWS API Documentation
     #
-    # @overload list_assessment_targets(params = {})
+    # @overload list_assessment_targets(**params)
     # @param [Hash] params ({})
-    def list_assessment_targets(params = {}, options = {})
+    def list_assessment_targets(params = {}, **options)
       req = build_request(:list_assessment_targets, params)
       req.send_request(options)
     end
@@ -2191,9 +2191,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListAssessmentTemplates AWS API Documentation
     #
-    # @overload list_assessment_templates(params = {})
+    # @overload list_assessment_templates(**params)
     # @param [Hash] params ({})
-    def list_assessment_templates(params = {}, options = {})
+    def list_assessment_templates(params = {}, **options)
       req = build_request(:list_assessment_templates, params)
       req.send_request(options)
     end
@@ -2272,9 +2272,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListEventSubscriptions AWS API Documentation
     #
-    # @overload list_event_subscriptions(params = {})
+    # @overload list_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def list_event_subscriptions(params = {}, options = {})
+    def list_event_subscriptions(params = {}, **options)
       req = build_request(:list_event_subscriptions, params)
       req.send_request(options)
     end
@@ -2320,9 +2320,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListExclusions AWS API Documentation
     #
-    # @overload list_exclusions(params = {})
+    # @overload list_exclusions(**params)
     # @param [Hash] params ({})
-    def list_exclusions(params = {}, options = {})
+    def list_exclusions(params = {}, **options)
       req = build_request(:list_exclusions, params)
       req.send_request(options)
     end
@@ -2421,9 +2421,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListFindings AWS API Documentation
     #
-    # @overload list_findings(params = {})
+    # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, options = {})
+    def list_findings(params = {}, **options)
       req = build_request(:list_findings, params)
       req.send_request(options)
     end
@@ -2484,9 +2484,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListRulesPackages AWS API Documentation
     #
-    # @overload list_rules_packages(params = {})
+    # @overload list_rules_packages(**params)
     # @param [Hash] params ({})
-    def list_rules_packages(params = {}, options = {})
+    def list_rules_packages(params = {}, **options)
       req = build_request(:list_rules_packages, params)
       req.send_request(options)
     end
@@ -2534,9 +2534,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2609,9 +2609,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/PreviewAgents AWS API Documentation
     #
-    # @overload preview_agents(params = {})
+    # @overload preview_agents(**params)
     # @param [Hash] params ({})
-    def preview_agents(params = {}, options = {})
+    def preview_agents(params = {}, **options)
       req = build_request(:preview_agents, params)
       req.send_request(options)
     end
@@ -2643,9 +2643,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/RegisterCrossAccountAccessRole AWS API Documentation
     #
-    # @overload register_cross_account_access_role(params = {})
+    # @overload register_cross_account_access_role(**params)
     # @param [Hash] params ({})
-    def register_cross_account_access_role(params = {}, options = {})
+    def register_cross_account_access_role(params = {}, **options)
       req = build_request(:register_cross_account_access_role, params)
       req.send_request(options)
     end
@@ -2702,9 +2702,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/RemoveAttributesFromFindings AWS API Documentation
     #
-    # @overload remove_attributes_from_findings(params = {})
+    # @overload remove_attributes_from_findings(**params)
     # @param [Hash] params ({})
-    def remove_attributes_from_findings(params = {}, options = {})
+    def remove_attributes_from_findings(params = {}, **options)
       req = build_request(:remove_attributes_from_findings, params)
       req.send_request(options)
     end
@@ -2750,9 +2750,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/SetTagsForResource AWS API Documentation
     #
-    # @overload set_tags_for_resource(params = {})
+    # @overload set_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def set_tags_for_resource(params = {}, options = {})
+    def set_tags_for_resource(params = {}, **options)
       req = build_request(:set_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2803,9 +2803,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/StartAssessmentRun AWS API Documentation
     #
-    # @overload start_assessment_run(params = {})
+    # @overload start_assessment_run(**params)
     # @param [Hash] params ({})
-    def start_assessment_run(params = {}, options = {})
+    def start_assessment_run(params = {}, **options)
       req = build_request(:start_assessment_run, params)
       req.send_request(options)
     end
@@ -2843,9 +2843,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/StopAssessmentRun AWS API Documentation
     #
-    # @overload stop_assessment_run(params = {})
+    # @overload stop_assessment_run(**params)
     # @param [Hash] params ({})
-    def stop_assessment_run(params = {}, options = {})
+    def stop_assessment_run(params = {}, **options)
       req = build_request(:stop_assessment_run, params)
       req.send_request(options)
     end
@@ -2887,9 +2887,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/SubscribeToEvent AWS API Documentation
     #
-    # @overload subscribe_to_event(params = {})
+    # @overload subscribe_to_event(**params)
     # @param [Hash] params ({})
-    def subscribe_to_event(params = {}, options = {})
+    def subscribe_to_event(params = {}, **options)
       req = build_request(:subscribe_to_event, params)
       req.send_request(options)
     end
@@ -2931,9 +2931,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/UnsubscribeFromEvent AWS API Documentation
     #
-    # @overload unsubscribe_from_event(params = {})
+    # @overload unsubscribe_from_event(**params)
     # @param [Hash] params ({})
-    def unsubscribe_from_event(params = {}, options = {})
+    def unsubscribe_from_event(params = {}, **options)
       req = build_request(:unsubscribe_from_event, params)
       req.send_request(options)
     end
@@ -2977,9 +2977,9 @@ module Aws::Inspector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/inspector-2016-02-16/UpdateAssessmentTarget AWS API Documentation
     #
-    # @overload update_assessment_target(params = {})
+    # @overload update_assessment_target(**params)
     # @param [Hash] params ({})
-    def update_assessment_target(params = {}, options = {})
+    def update_assessment_target(params = {}, **options)
       req = build_request(:update_assessment_target, params)
       req.send_request(options)
     end
@@ -2988,7 +2988,7 @@ module Aws::Inspector
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2996,15 +2996,15 @@ module Aws::Inspector
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-inspector'
-      context[:gem_version] = '1.32.0'
+      context[:gem_name] = "aws-sdk-inspector"
+      context[:gem_version] = "1.32.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

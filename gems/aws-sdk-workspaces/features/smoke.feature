@@ -8,11 +8,11 @@
 Feature: Smoke tests for WorkSpaces
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @workspaces @smoke
   Scenario: Call Aws::WorkSpaces::Client#describe_workspaces and expect it to succeed
-  When I call the operation 'describe_workspaces' with params:
+  When I call the operation "describe_workspaces" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @workspaces @smoke
   Scenario: Call Aws::Aws::WorkSpaces::Client#describe_workspaces and expect it to fail
-  When I call the operation 'describe_workspaces' with params:
+  When I call the operation "describe_workspaces" with params:
     """
 {"directory_id":"fake-id"}
     """

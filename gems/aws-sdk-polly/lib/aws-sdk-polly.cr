@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-polly/types'
-require_relative 'aws-sdk-polly/client_api'
-require_relative 'aws-sdk-polly/client'
-require_relative 'aws-sdk-polly/errors'
-require_relative 'aws-sdk-polly/resource'
-require_relative 'aws-sdk-polly/customizations'
+require_relative "aws-sdk-polly/types"
+require_relative "aws-sdk-polly/client_api"
+require_relative "aws-sdk-polly/client"
+require_relative "aws-sdk-polly/errors"
+require_relative "aws-sdk-polly/resource"
+require_relative "aws-sdk-polly/customizations"
 
 # This module provides support for Amazon Polly. This module is available in the
 # `aws-sdk-polly` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-polly/customizations'
 # @!group service
 module Aws::Polly
 
-  GEM_VERSION = '1.38.0'
+  GEM_VERSION = "1.38.0"
 
 end

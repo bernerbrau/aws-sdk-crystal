@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mediaconnect)
 
@@ -280,7 +280,7 @@ module Aws::MediaConnect
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -407,9 +407,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/AddFlowOutputs AWS API Documentation
     #
-    # @overload add_flow_outputs(params = {})
+    # @overload add_flow_outputs(**params)
     # @param [Hash] params ({})
-    def add_flow_outputs(params = {}, options = {})
+    def add_flow_outputs(params = {}, **options)
       req = build_request(:add_flow_outputs, params)
       req.send_request(options)
     end
@@ -490,9 +490,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/AddFlowSources AWS API Documentation
     #
-    # @overload add_flow_sources(params = {})
+    # @overload add_flow_sources(**params)
     # @param [Hash] params ({})
-    def add_flow_sources(params = {}, options = {})
+    def add_flow_sources(params = {}, **options)
       req = build_request(:add_flow_sources, params)
       req.send_request(options)
     end
@@ -537,9 +537,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/AddFlowVpcInterfaces AWS API Documentation
     #
-    # @overload add_flow_vpc_interfaces(params = {})
+    # @overload add_flow_vpc_interfaces(**params)
     # @param [Hash] params ({})
-    def add_flow_vpc_interfaces(params = {}, options = {})
+    def add_flow_vpc_interfaces(params = {}, **options)
       req = build_request(:add_flow_vpc_interfaces, params)
       req.send_request(options)
     end
@@ -809,9 +809,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/CreateFlow AWS API Documentation
     #
-    # @overload create_flow(params = {})
+    # @overload create_flow(**params)
     # @param [Hash] params ({})
-    def create_flow(params = {}, options = {})
+    def create_flow(params = {}, **options)
       req = build_request(:create_flow, params)
       req.send_request(options)
     end
@@ -838,9 +838,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DeleteFlow AWS API Documentation
     #
-    # @overload delete_flow(params = {})
+    # @overload delete_flow(**params)
     # @param [Hash] params ({})
-    def delete_flow(params = {}, options = {})
+    def delete_flow(params = {}, **options)
       req = build_request(:delete_flow, params)
       req.send_request(options)
     end
@@ -982,9 +982,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DescribeFlow AWS API Documentation
     #
-    # @overload describe_flow(params = {})
+    # @overload describe_flow(**params)
     # @param [Hash] params ({})
-    def describe_flow(params = {}, options = {})
+    def describe_flow(params = {}, **options)
       req = build_request(:describe_flow, params)
       req.send_request(options)
     end
@@ -1019,9 +1019,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DescribeOffering AWS API Documentation
     #
-    # @overload describe_offering(params = {})
+    # @overload describe_offering(**params)
     # @param [Hash] params ({})
-    def describe_offering(params = {}, options = {})
+    def describe_offering(params = {}, **options)
       req = build_request(:describe_offering, params)
       req.send_request(options)
     end
@@ -1062,9 +1062,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DescribeReservation AWS API Documentation
     #
-    # @overload describe_reservation(params = {})
+    # @overload describe_reservation(**params)
     # @param [Hash] params ({})
-    def describe_reservation(params = {}, options = {})
+    def describe_reservation(params = {}, **options)
       req = build_request(:describe_reservation, params)
       req.send_request(options)
     end
@@ -1130,9 +1130,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/GrantFlowEntitlements AWS API Documentation
     #
-    # @overload grant_flow_entitlements(params = {})
+    # @overload grant_flow_entitlements(**params)
     # @param [Hash] params ({})
-    def grant_flow_entitlements(params = {}, options = {})
+    def grant_flow_entitlements(params = {}, **options)
       req = build_request(:grant_flow_entitlements, params)
       req.send_request(options)
     end
@@ -1168,9 +1168,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/ListEntitlements AWS API Documentation
     #
-    # @overload list_entitlements(params = {})
+    # @overload list_entitlements(**params)
     # @param [Hash] params ({})
-    def list_entitlements(params = {}, options = {})
+    def list_entitlements(params = {}, **options)
       req = build_request(:list_entitlements, params)
       req.send_request(options)
     end
@@ -1209,9 +1209,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/ListFlows AWS API Documentation
     #
-    # @overload list_flows(params = {})
+    # @overload list_flows(**params)
     # @param [Hash] params ({})
-    def list_flows(params = {}, options = {})
+    def list_flows(params = {}, **options)
       req = build_request(:list_flows, params)
       req.send_request(options)
     end
@@ -1255,9 +1255,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/ListOfferings AWS API Documentation
     #
-    # @overload list_offerings(params = {})
+    # @overload list_offerings(**params)
     # @param [Hash] params ({})
-    def list_offerings(params = {}, options = {})
+    def list_offerings(params = {}, **options)
       req = build_request(:list_offerings, params)
       req.send_request(options)
     end
@@ -1305,9 +1305,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/ListReservations AWS API Documentation
     #
-    # @overload list_reservations(params = {})
+    # @overload list_reservations(**params)
     # @param [Hash] params ({})
-    def list_reservations(params = {}, options = {})
+    def list_reservations(params = {}, **options)
       req = build_request(:list_reservations, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1388,9 +1388,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/PurchaseOffering AWS API Documentation
     #
-    # @overload purchase_offering(params = {})
+    # @overload purchase_offering(**params)
     # @param [Hash] params ({})
-    def purchase_offering(params = {}, options = {})
+    def purchase_offering(params = {}, **options)
       req = build_request(:purchase_offering, params)
       req.send_request(options)
     end
@@ -1424,9 +1424,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/RemoveFlowOutput AWS API Documentation
     #
-    # @overload remove_flow_output(params = {})
+    # @overload remove_flow_output(**params)
     # @param [Hash] params ({})
-    def remove_flow_output(params = {}, options = {})
+    def remove_flow_output(params = {}, **options)
       req = build_request(:remove_flow_output, params)
       req.send_request(options)
     end
@@ -1457,9 +1457,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/RemoveFlowSource AWS API Documentation
     #
-    # @overload remove_flow_source(params = {})
+    # @overload remove_flow_source(**params)
     # @param [Hash] params ({})
-    def remove_flow_source(params = {}, options = {})
+    def remove_flow_source(params = {}, **options)
       req = build_request(:remove_flow_source, params)
       req.send_request(options)
     end
@@ -1496,9 +1496,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/RemoveFlowVpcInterface AWS API Documentation
     #
-    # @overload remove_flow_vpc_interface(params = {})
+    # @overload remove_flow_vpc_interface(**params)
     # @param [Hash] params ({})
-    def remove_flow_vpc_interface(params = {}, options = {})
+    def remove_flow_vpc_interface(params = {}, **options)
       req = build_request(:remove_flow_vpc_interface, params)
       req.send_request(options)
     end
@@ -1530,9 +1530,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/RevokeFlowEntitlement AWS API Documentation
     #
-    # @overload revoke_flow_entitlement(params = {})
+    # @overload revoke_flow_entitlement(**params)
     # @param [Hash] params ({})
-    def revoke_flow_entitlement(params = {}, options = {})
+    def revoke_flow_entitlement(params = {}, **options)
       req = build_request(:revoke_flow_entitlement, params)
       req.send_request(options)
     end
@@ -1559,9 +1559,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/StartFlow AWS API Documentation
     #
-    # @overload start_flow(params = {})
+    # @overload start_flow(**params)
     # @param [Hash] params ({})
-    def start_flow(params = {}, options = {})
+    def start_flow(params = {}, **options)
       req = build_request(:start_flow, params)
       req.send_request(options)
     end
@@ -1588,9 +1588,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/StopFlow AWS API Documentation
     #
-    # @overload stop_flow(params = {})
+    # @overload stop_flow(**params)
     # @param [Hash] params ({})
-    def stop_flow(params = {}, options = {})
+    def stop_flow(params = {}, **options)
       req = build_request(:stop_flow, params)
       req.send_request(options)
     end
@@ -1620,9 +1620,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1644,9 +1644,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1790,9 +1790,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/UpdateFlow AWS API Documentation
     #
-    # @overload update_flow(params = {})
+    # @overload update_flow(**params)
     # @param [Hash] params ({})
-    def update_flow(params = {}, options = {})
+    def update_flow(params = {}, **options)
       req = build_request(:update_flow, params)
       req.send_request(options)
     end
@@ -1873,9 +1873,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/UpdateFlowEntitlement AWS API Documentation
     #
-    # @overload update_flow_entitlement(params = {})
+    # @overload update_flow_entitlement(**params)
     # @param [Hash] params ({})
-    def update_flow_entitlement(params = {}, options = {})
+    def update_flow_entitlement(params = {}, **options)
       req = build_request(:update_flow_entitlement, params)
       req.send_request(options)
     end
@@ -1992,9 +1992,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/UpdateFlowOutput AWS API Documentation
     #
-    # @overload update_flow_output(params = {})
+    # @overload update_flow_output(**params)
     # @param [Hash] params ({})
-    def update_flow_output(params = {}, options = {})
+    def update_flow_output(params = {}, **options)
       req = build_request(:update_flow_output, params)
       req.send_request(options)
     end
@@ -2106,9 +2106,9 @@ module Aws::MediaConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/UpdateFlowSource AWS API Documentation
     #
-    # @overload update_flow_source(params = {})
+    # @overload update_flow_source(**params)
     # @param [Hash] params ({})
-    def update_flow_source(params = {}, options = {})
+    def update_flow_source(params = {}, **options)
       req = build_request(:update_flow_source, params)
       req.send_request(options)
     end
@@ -2117,7 +2117,7 @@ module Aws::MediaConnect
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2125,15 +2125,15 @@ module Aws::MediaConnect
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mediaconnect'
-      context[:gem_version] = '1.28.0'
+      context[:gem_name] = "aws-sdk-mediaconnect"
+      context[:gem_version] = "1.28.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

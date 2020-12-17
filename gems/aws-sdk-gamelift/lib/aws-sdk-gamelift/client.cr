@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:gamelift)
 
@@ -290,7 +290,7 @@ module Aws::GameLift
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -409,9 +409,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/AcceptMatch AWS API Documentation
     #
-    # @overload accept_match(params = {})
+    # @overload accept_match(**params)
     # @param [Hash] params ({})
-    def accept_match(params = {}, options = {})
+    def accept_match(params = {}, **options)
       req = build_request(:accept_match, params)
       req.send_request(options)
     end
@@ -524,9 +524,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ClaimGameServer AWS API Documentation
     #
-    # @overload claim_game_server(params = {})
+    # @overload claim_game_server(**params)
     # @param [Hash] params ({})
-    def claim_game_server(params = {}, options = {})
+    def claim_game_server(params = {}, **options)
       req = build_request(:claim_game_server, params)
       req.send_request(options)
     end
@@ -622,9 +622,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateAlias AWS API Documentation
     #
-    # @overload create_alias(params = {})
+    # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, options = {})
+    def create_alias(params = {}, **options)
       req = build_request(:create_alias, params)
       req.send_request(options)
     end
@@ -779,9 +779,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateBuild AWS API Documentation
     #
-    # @overload create_build(params = {})
+    # @overload create_build(**params)
     # @param [Hash] params ({})
-    def create_build(params = {}, options = {})
+    def create_build(params = {}, **options)
       req = build_request(:create_build, params)
       req.send_request(options)
     end
@@ -1119,9 +1119,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateFleet AWS API Documentation
     #
-    # @overload create_fleet(params = {})
+    # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, options = {})
+    def create_fleet(params = {}, **options)
       req = build_request(:create_fleet, params)
       req.send_request(options)
     end
@@ -1375,9 +1375,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateGameServerGroup AWS API Documentation
     #
-    # @overload create_game_server_group(params = {})
+    # @overload create_game_server_group(**params)
     # @param [Hash] params ({})
-    def create_game_server_group(params = {}, options = {})
+    def create_game_server_group(params = {}, **options)
       req = build_request(:create_game_server_group, params)
       req.send_request(options)
     end
@@ -1547,9 +1547,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateGameSession AWS API Documentation
     #
-    # @overload create_game_session(params = {})
+    # @overload create_game_session(**params)
     # @param [Hash] params ({})
-    def create_game_session(params = {}, options = {})
+    def create_game_session(params = {}, **options)
       req = build_request(:create_game_session, params)
       req.send_request(options)
     end
@@ -1693,9 +1693,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateGameSessionQueue AWS API Documentation
     #
-    # @overload create_game_session_queue(params = {})
+    # @overload create_game_session_queue(**params)
     # @param [Hash] params ({})
-    def create_game_session_queue(params = {}, options = {})
+    def create_game_session_queue(params = {}, **options)
       req = build_request(:create_game_session_queue, params)
       req.send_request(options)
     end
@@ -1942,9 +1942,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateMatchmakingConfiguration AWS API Documentation
     #
-    # @overload create_matchmaking_configuration(params = {})
+    # @overload create_matchmaking_configuration(**params)
     # @param [Hash] params ({})
-    def create_matchmaking_configuration(params = {}, options = {})
+    def create_matchmaking_configuration(params = {}, **options)
       req = build_request(:create_matchmaking_configuration, params)
       req.send_request(options)
     end
@@ -2046,9 +2046,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateMatchmakingRuleSet AWS API Documentation
     #
-    # @overload create_matchmaking_rule_set(params = {})
+    # @overload create_matchmaking_rule_set(**params)
     # @param [Hash] params ({})
-    def create_matchmaking_rule_set(params = {}, options = {})
+    def create_matchmaking_rule_set(params = {}, **options)
       req = build_request(:create_matchmaking_rule_set, params)
       req.send_request(options)
     end
@@ -2122,9 +2122,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreatePlayerSession AWS API Documentation
     #
-    # @overload create_player_session(params = {})
+    # @overload create_player_session(**params)
     # @param [Hash] params ({})
-    def create_player_session(params = {}, options = {})
+    def create_player_session(params = {}, **options)
       req = build_request(:create_player_session, params)
       req.send_request(options)
     end
@@ -2203,9 +2203,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreatePlayerSessions AWS API Documentation
     #
-    # @overload create_player_sessions(params = {})
+    # @overload create_player_sessions(**params)
     # @param [Hash] params ({})
-    def create_player_sessions(params = {}, options = {})
+    def create_player_sessions(params = {}, **options)
       req = build_request(:create_player_sessions, params)
       req.send_request(options)
     end
@@ -2348,9 +2348,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateScript AWS API Documentation
     #
-    # @overload create_script(params = {})
+    # @overload create_script(**params)
     # @param [Hash] params ({})
-    def create_script(params = {}, options = {})
+    def create_script(params = {}, **options)
       req = build_request(:create_script, params)
       req.send_request(options)
     end
@@ -2441,9 +2441,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateVpcPeeringAuthorization AWS API Documentation
     #
-    # @overload create_vpc_peering_authorization(params = {})
+    # @overload create_vpc_peering_authorization(**params)
     # @param [Hash] params ({})
-    def create_vpc_peering_authorization(params = {}, options = {})
+    def create_vpc_peering_authorization(params = {}, **options)
       req = build_request(:create_vpc_peering_authorization, params)
       req.send_request(options)
     end
@@ -2524,9 +2524,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateVpcPeeringConnection AWS API Documentation
     #
-    # @overload create_vpc_peering_connection(params = {})
+    # @overload create_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def create_vpc_peering_connection(params = {}, options = {})
+    def create_vpc_peering_connection(params = {}, **options)
       req = build_request(:create_vpc_peering_connection, params)
       req.send_request(options)
     end
@@ -2562,9 +2562,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteAlias AWS API Documentation
     #
-    # @overload delete_alias(params = {})
+    # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, options = {})
+    def delete_alias(params = {}, **options)
       req = build_request(:delete_alias, params)
       req.send_request(options)
     end
@@ -2610,9 +2610,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteBuild AWS API Documentation
     #
-    # @overload delete_build(params = {})
+    # @overload delete_build(**params)
     # @param [Hash] params ({})
-    def delete_build(params = {}, options = {})
+    def delete_build(params = {}, **options)
       req = build_request(:delete_build, params)
       req.send_request(options)
     end
@@ -2666,9 +2666,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteFleet AWS API Documentation
     #
-    # @overload delete_fleet(params = {})
+    # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, options = {})
+    def delete_fleet(params = {}, **options)
       req = build_request(:delete_fleet, params)
       req.send_request(options)
     end
@@ -2778,9 +2778,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteGameServerGroup AWS API Documentation
     #
-    # @overload delete_game_server_group(params = {})
+    # @overload delete_game_server_group(**params)
     # @param [Hash] params ({})
-    def delete_game_server_group(params = {}, options = {})
+    def delete_game_server_group(params = {}, **options)
       req = build_request(:delete_game_server_group, params)
       req.send_request(options)
     end
@@ -2822,9 +2822,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteGameSessionQueue AWS API Documentation
     #
-    # @overload delete_game_session_queue(params = {})
+    # @overload delete_game_session_queue(**params)
     # @param [Hash] params ({})
-    def delete_game_session_queue(params = {}, options = {})
+    def delete_game_session_queue(params = {}, **options)
       req = build_request(:delete_game_session_queue, params)
       req.send_request(options)
     end
@@ -2865,9 +2865,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteMatchmakingConfiguration AWS API Documentation
     #
-    # @overload delete_matchmaking_configuration(params = {})
+    # @overload delete_matchmaking_configuration(**params)
     # @param [Hash] params ({})
-    def delete_matchmaking_configuration(params = {}, options = {})
+    def delete_matchmaking_configuration(params = {}, **options)
       req = build_request(:delete_matchmaking_configuration, params)
       req.send_request(options)
     end
@@ -2919,9 +2919,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteMatchmakingRuleSet AWS API Documentation
     #
-    # @overload delete_matchmaking_rule_set(params = {})
+    # @overload delete_matchmaking_rule_set(**params)
     # @param [Hash] params ({})
-    def delete_matchmaking_rule_set(params = {}, options = {})
+    def delete_matchmaking_rule_set(params = {}, **options)
       req = build_request(:delete_matchmaking_rule_set, params)
       req.send_request(options)
     end
@@ -2973,9 +2973,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteScalingPolicy AWS API Documentation
     #
-    # @overload delete_scaling_policy(params = {})
+    # @overload delete_scaling_policy(**params)
     # @param [Hash] params ({})
-    def delete_scaling_policy(params = {}, options = {})
+    def delete_scaling_policy(params = {}, **options)
       req = build_request(:delete_scaling_policy, params)
       req.send_request(options)
     end
@@ -3024,9 +3024,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteScript AWS API Documentation
     #
-    # @overload delete_script(params = {})
+    # @overload delete_script(**params)
     # @param [Hash] params ({})
-    def delete_script(params = {}, options = {})
+    def delete_script(params = {}, **options)
       req = build_request(:delete_script, params)
       req.send_request(options)
     end
@@ -3075,9 +3075,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteVpcPeeringAuthorization AWS API Documentation
     #
-    # @overload delete_vpc_peering_authorization(params = {})
+    # @overload delete_vpc_peering_authorization(**params)
     # @param [Hash] params ({})
-    def delete_vpc_peering_authorization(params = {}, options = {})
+    def delete_vpc_peering_authorization(params = {}, **options)
       req = build_request(:delete_vpc_peering_authorization, params)
       req.send_request(options)
     end
@@ -3126,9 +3126,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteVpcPeeringConnection AWS API Documentation
     #
-    # @overload delete_vpc_peering_connection(params = {})
+    # @overload delete_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def delete_vpc_peering_connection(params = {}, options = {})
+    def delete_vpc_peering_connection(params = {}, **options)
       req = build_request(:delete_vpc_peering_connection, params)
       req.send_request(options)
     end
@@ -3185,9 +3185,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeregisterGameServer AWS API Documentation
     #
-    # @overload deregister_game_server(params = {})
+    # @overload deregister_game_server(**params)
     # @param [Hash] params ({})
-    def deregister_game_server(params = {}, options = {})
+    def deregister_game_server(params = {}, **options)
       req = build_request(:deregister_game_server, params)
       req.send_request(options)
     end
@@ -3239,9 +3239,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeAlias AWS API Documentation
     #
-    # @overload describe_alias(params = {})
+    # @overload describe_alias(**params)
     # @param [Hash] params ({})
-    def describe_alias(params = {}, options = {})
+    def describe_alias(params = {}, **options)
       req = build_request(:describe_alias, params)
       req.send_request(options)
     end
@@ -3297,9 +3297,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeBuild AWS API Documentation
     #
-    # @overload describe_build(params = {})
+    # @overload describe_build(**params)
     # @param [Hash] params ({})
-    def describe_build(params = {}, options = {})
+    def describe_build(params = {}, **options)
       req = build_request(:describe_build, params)
       req.send_request(options)
     end
@@ -3369,9 +3369,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeEC2InstanceLimits AWS API Documentation
     #
-    # @overload describe_ec2_instance_limits(params = {})
+    # @overload describe_ec2_instance_limits(**params)
     # @param [Hash] params ({})
-    def describe_ec2_instance_limits(params = {}, options = {})
+    def describe_ec2_instance_limits(params = {}, **options)
       req = build_request(:describe_ec2_instance_limits, params)
       req.send_request(options)
     end
@@ -3497,9 +3497,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetAttributes AWS API Documentation
     #
-    # @overload describe_fleet_attributes(params = {})
+    # @overload describe_fleet_attributes(**params)
     # @param [Hash] params ({})
-    def describe_fleet_attributes(params = {}, options = {})
+    def describe_fleet_attributes(params = {}, **options)
       req = build_request(:describe_fleet_attributes, params)
       req.send_request(options)
     end
@@ -3610,9 +3610,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetCapacity AWS API Documentation
     #
-    # @overload describe_fleet_capacity(params = {})
+    # @overload describe_fleet_capacity(**params)
     # @param [Hash] params ({})
-    def describe_fleet_capacity(params = {}, options = {})
+    def describe_fleet_capacity(params = {}, **options)
       req = build_request(:describe_fleet_capacity, params)
       req.send_request(options)
     end
@@ -3714,9 +3714,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetEvents AWS API Documentation
     #
-    # @overload describe_fleet_events(params = {})
+    # @overload describe_fleet_events(**params)
     # @param [Hash] params ({})
-    def describe_fleet_events(params = {}, options = {})
+    def describe_fleet_events(params = {}, **options)
       req = build_request(:describe_fleet_events, params)
       req.send_request(options)
     end
@@ -3792,9 +3792,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetPortSettings AWS API Documentation
     #
-    # @overload describe_fleet_port_settings(params = {})
+    # @overload describe_fleet_port_settings(**params)
     # @param [Hash] params ({})
-    def describe_fleet_port_settings(params = {}, options = {})
+    def describe_fleet_port_settings(params = {}, **options)
       req = build_request(:describe_fleet_port_settings, params)
       req.send_request(options)
     end
@@ -3902,9 +3902,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetUtilization AWS API Documentation
     #
-    # @overload describe_fleet_utilization(params = {})
+    # @overload describe_fleet_utilization(**params)
     # @param [Hash] params ({})
-    def describe_fleet_utilization(params = {}, options = {})
+    def describe_fleet_utilization(params = {}, **options)
       req = build_request(:describe_fleet_utilization, params)
       req.send_request(options)
     end
@@ -3976,9 +3976,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameServer AWS API Documentation
     #
-    # @overload describe_game_server(params = {})
+    # @overload describe_game_server(**params)
     # @param [Hash] params ({})
-    def describe_game_server(params = {}, options = {})
+    def describe_game_server(params = {}, **options)
       req = build_request(:describe_game_server, params)
       req.send_request(options)
     end
@@ -4055,9 +4055,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameServerGroup AWS API Documentation
     #
-    # @overload describe_game_server_group(params = {})
+    # @overload describe_game_server_group(**params)
     # @param [Hash] params ({})
-    def describe_game_server_group(params = {}, options = {})
+    def describe_game_server_group(params = {}, **options)
       req = build_request(:describe_game_server_group, params)
       req.send_request(options)
     end
@@ -4156,9 +4156,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameServerInstances AWS API Documentation
     #
-    # @overload describe_game_server_instances(params = {})
+    # @overload describe_game_server_instances(**params)
     # @param [Hash] params ({})
-    def describe_game_server_instances(params = {}, options = {})
+    def describe_game_server_instances(params = {}, **options)
       req = build_request(:describe_game_server_instances, params)
       req.send_request(options)
     end
@@ -4267,9 +4267,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameSessionDetails AWS API Documentation
     #
-    # @overload describe_game_session_details(params = {})
+    # @overload describe_game_session_details(**params)
     # @param [Hash] params ({})
-    def describe_game_session_details(params = {}, options = {})
+    def describe_game_session_details(params = {}, **options)
       req = build_request(:describe_game_session_details, params)
       req.send_request(options)
     end
@@ -4341,9 +4341,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameSessionPlacement AWS API Documentation
     #
-    # @overload describe_game_session_placement(params = {})
+    # @overload describe_game_session_placement(**params)
     # @param [Hash] params ({})
-    def describe_game_session_placement(params = {}, options = {})
+    def describe_game_session_placement(params = {}, **options)
       req = build_request(:describe_game_session_placement, params)
       req.send_request(options)
     end
@@ -4419,9 +4419,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameSessionQueues AWS API Documentation
     #
-    # @overload describe_game_session_queues(params = {})
+    # @overload describe_game_session_queues(**params)
     # @param [Hash] params ({})
-    def describe_game_session_queues(params = {}, options = {})
+    def describe_game_session_queues(params = {}, **options)
       req = build_request(:describe_game_session_queues, params)
       req.send_request(options)
     end
@@ -4530,9 +4530,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameSessions AWS API Documentation
     #
-    # @overload describe_game_sessions(params = {})
+    # @overload describe_game_sessions(**params)
     # @param [Hash] params ({})
-    def describe_game_sessions(params = {}, options = {})
+    def describe_game_sessions(params = {}, **options)
       req = build_request(:describe_game_sessions, params)
       req.send_request(options)
     end
@@ -4611,9 +4611,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeInstances AWS API Documentation
     #
-    # @overload describe_instances(params = {})
+    # @overload describe_instances(**params)
     # @param [Hash] params ({})
-    def describe_instances(params = {}, options = {})
+    def describe_instances(params = {}, **options)
       req = build_request(:describe_instances, params)
       req.send_request(options)
     end
@@ -4703,9 +4703,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeMatchmaking AWS API Documentation
     #
-    # @overload describe_matchmaking(params = {})
+    # @overload describe_matchmaking(**params)
     # @param [Hash] params ({})
-    def describe_matchmaking(params = {}, options = {})
+    def describe_matchmaking(params = {}, **options)
       req = build_request(:describe_matchmaking, params)
       req.send_request(options)
     end
@@ -4813,9 +4813,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeMatchmakingConfigurations AWS API Documentation
     #
-    # @overload describe_matchmaking_configurations(params = {})
+    # @overload describe_matchmaking_configurations(**params)
     # @param [Hash] params ({})
-    def describe_matchmaking_configurations(params = {}, options = {})
+    def describe_matchmaking_configurations(params = {}, **options)
       req = build_request(:describe_matchmaking_configurations, params)
       req.send_request(options)
     end
@@ -4896,9 +4896,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeMatchmakingRuleSets AWS API Documentation
     #
-    # @overload describe_matchmaking_rule_sets(params = {})
+    # @overload describe_matchmaking_rule_sets(**params)
     # @param [Hash] params ({})
-    def describe_matchmaking_rule_sets(params = {}, options = {})
+    def describe_matchmaking_rule_sets(params = {}, **options)
       req = build_request(:describe_matchmaking_rule_sets, params)
       req.send_request(options)
     end
@@ -5009,9 +5009,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribePlayerSessions AWS API Documentation
     #
-    # @overload describe_player_sessions(params = {})
+    # @overload describe_player_sessions(**params)
     # @param [Hash] params ({})
-    def describe_player_sessions(params = {}, options = {})
+    def describe_player_sessions(params = {}, **options)
       req = build_request(:describe_player_sessions, params)
       req.send_request(options)
     end
@@ -5089,9 +5089,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeRuntimeConfiguration AWS API Documentation
     #
-    # @overload describe_runtime_configuration(params = {})
+    # @overload describe_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def describe_runtime_configuration(params = {}, options = {})
+    def describe_runtime_configuration(params = {}, **options)
       req = build_request(:describe_runtime_configuration, params)
       req.send_request(options)
     end
@@ -5198,9 +5198,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeScalingPolicies AWS API Documentation
     #
-    # @overload describe_scaling_policies(params = {})
+    # @overload describe_scaling_policies(**params)
     # @param [Hash] params ({})
-    def describe_scaling_policies(params = {}, options = {})
+    def describe_scaling_policies(params = {}, **options)
       req = build_request(:describe_scaling_policies, params)
       req.send_request(options)
     end
@@ -5259,9 +5259,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeScript AWS API Documentation
     #
-    # @overload describe_script(params = {})
+    # @overload describe_script(**params)
     # @param [Hash] params ({})
-    def describe_script(params = {}, options = {})
+    def describe_script(params = {}, **options)
       req = build_request(:describe_script, params)
       req.send_request(options)
     end
@@ -5298,9 +5298,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeVpcPeeringAuthorizations AWS API Documentation
     #
-    # @overload describe_vpc_peering_authorizations(params = {})
+    # @overload describe_vpc_peering_authorizations(**params)
     # @param [Hash] params ({})
-    def describe_vpc_peering_authorizations(params = {}, options = {})
+    def describe_vpc_peering_authorizations(params = {}, **options)
       req = build_request(:describe_vpc_peering_authorizations, params)
       req.send_request(options)
     end
@@ -5356,9 +5356,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeVpcPeeringConnections AWS API Documentation
     #
-    # @overload describe_vpc_peering_connections(params = {})
+    # @overload describe_vpc_peering_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpc_peering_connections(params = {}, options = {})
+    def describe_vpc_peering_connections(params = {}, **options)
       req = build_request(:describe_vpc_peering_connections, params)
       req.send_request(options)
     end
@@ -5416,9 +5416,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/GetGameSessionLogUrl AWS API Documentation
     #
-    # @overload get_game_session_log_url(params = {})
+    # @overload get_game_session_log_url(**params)
     # @param [Hash] params ({})
-    def get_game_session_log_url(params = {}, options = {})
+    def get_game_session_log_url(params = {}, **options)
       req = build_request(:get_game_session_log_url, params)
       req.send_request(options)
     end
@@ -5493,9 +5493,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/GetInstanceAccess AWS API Documentation
     #
-    # @overload get_instance_access(params = {})
+    # @overload get_instance_access(**params)
     # @param [Hash] params ({})
-    def get_instance_access(params = {}, options = {})
+    def get_instance_access(params = {}, **options)
       req = build_request(:get_instance_access, params)
       req.send_request(options)
     end
@@ -5581,9 +5581,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListAliases AWS API Documentation
     #
-    # @overload list_aliases(params = {})
+    # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, options = {})
+    def list_aliases(params = {}, **options)
       req = build_request(:list_aliases, params)
       req.send_request(options)
     end
@@ -5673,9 +5673,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListBuilds AWS API Documentation
     #
-    # @overload list_builds(params = {})
+    # @overload list_builds(**params)
     # @param [Hash] params ({})
-    def list_builds(params = {}, options = {})
+    def list_builds(params = {}, **options)
       req = build_request(:list_builds, params)
       req.send_request(options)
     end
@@ -5756,9 +5756,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListFleets AWS API Documentation
     #
-    # @overload list_fleets(params = {})
+    # @overload list_fleets(**params)
     # @param [Hash] params ({})
-    def list_fleets(params = {}, options = {})
+    def list_fleets(params = {}, **options)
       req = build_request(:list_fleets, params)
       req.send_request(options)
     end
@@ -5842,9 +5842,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListGameServerGroups AWS API Documentation
     #
-    # @overload list_game_server_groups(params = {})
+    # @overload list_game_server_groups(**params)
     # @param [Hash] params ({})
-    def list_game_server_groups(params = {}, options = {})
+    def list_game_server_groups(params = {}, **options)
       req = build_request(:list_game_server_groups, params)
       req.send_request(options)
     end
@@ -5934,9 +5934,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListGameServers AWS API Documentation
     #
-    # @overload list_game_servers(params = {})
+    # @overload list_game_servers(**params)
     # @param [Hash] params ({})
-    def list_game_servers(params = {}, options = {})
+    def list_game_servers(params = {}, **options)
       req = build_request(:list_game_servers, params)
       req.send_request(options)
     end
@@ -6005,9 +6005,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListScripts AWS API Documentation
     #
-    # @overload list_scripts(params = {})
+    # @overload list_scripts(**params)
     # @param [Hash] params ({})
-    def list_scripts(params = {}, options = {})
+    def list_scripts(params = {}, **options)
       req = build_request(:list_scripts, params)
       req.send_request(options)
     end
@@ -6082,9 +6082,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -6319,9 +6319,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/PutScalingPolicy AWS API Documentation
     #
-    # @overload put_scaling_policy(params = {})
+    # @overload put_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_scaling_policy(params = {}, options = {})
+    def put_scaling_policy(params = {}, **options)
       req = build_request(:put_scaling_policy, params)
       req.send_request(options)
     end
@@ -6424,9 +6424,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/RegisterGameServer AWS API Documentation
     #
-    # @overload register_game_server(params = {})
+    # @overload register_game_server(**params)
     # @param [Hash] params ({})
-    def register_game_server(params = {}, options = {})
+    def register_game_server(params = {}, **options)
       req = build_request(:register_game_server, params)
       req.send_request(options)
     end
@@ -6487,9 +6487,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/RequestUploadCredentials AWS API Documentation
     #
-    # @overload request_upload_credentials(params = {})
+    # @overload request_upload_credentials(**params)
     # @param [Hash] params ({})
-    def request_upload_credentials(params = {}, options = {})
+    def request_upload_credentials(params = {}, **options)
       req = build_request(:request_upload_credentials, params)
       req.send_request(options)
     end
@@ -6530,9 +6530,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ResolveAlias AWS API Documentation
     #
-    # @overload resolve_alias(params = {})
+    # @overload resolve_alias(**params)
     # @param [Hash] params ({})
-    def resolve_alias(params = {}, options = {})
+    def resolve_alias(params = {}, **options)
       req = build_request(:resolve_alias, params)
       req.send_request(options)
     end
@@ -6617,9 +6617,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ResumeGameServerGroup AWS API Documentation
     #
-    # @overload resume_game_server_group(params = {})
+    # @overload resume_game_server_group(**params)
     # @param [Hash] params ({})
-    def resume_game_server_group(params = {}, options = {})
+    def resume_game_server_group(params = {}, **options)
       req = build_request(:resume_game_server_group, params)
       req.send_request(options)
     end
@@ -6832,9 +6832,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/SearchGameSessions AWS API Documentation
     #
-    # @overload search_game_sessions(params = {})
+    # @overload search_game_sessions(**params)
     # @param [Hash] params ({})
-    def search_game_sessions(params = {}, options = {})
+    def search_game_sessions(params = {}, **options)
       req = build_request(:search_game_sessions, params)
       req.send_request(options)
     end
@@ -6890,9 +6890,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StartFleetActions AWS API Documentation
     #
-    # @overload start_fleet_actions(params = {})
+    # @overload start_fleet_actions(**params)
     # @param [Hash] params ({})
-    def start_fleet_actions(params = {}, options = {})
+    def start_fleet_actions(params = {}, **options)
       req = build_request(:start_fleet_actions, params)
       req.send_request(options)
     end
@@ -7073,9 +7073,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StartGameSessionPlacement AWS API Documentation
     #
-    # @overload start_game_session_placement(params = {})
+    # @overload start_game_session_placement(**params)
     # @param [Hash] params ({})
-    def start_game_session_placement(params = {}, options = {})
+    def start_game_session_placement(params = {}, **options)
       req = build_request(:start_game_session_placement, params)
       req.send_request(options)
     end
@@ -7220,9 +7220,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StartMatchBackfill AWS API Documentation
     #
-    # @overload start_match_backfill(params = {})
+    # @overload start_match_backfill(**params)
     # @param [Hash] params ({})
-    def start_match_backfill(params = {}, options = {})
+    def start_match_backfill(params = {}, **options)
       req = build_request(:start_match_backfill, params)
       req.send_request(options)
     end
@@ -7348,9 +7348,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StartMatchmaking AWS API Documentation
     #
-    # @overload start_matchmaking(params = {})
+    # @overload start_matchmaking(**params)
     # @param [Hash] params ({})
-    def start_matchmaking(params = {}, options = {})
+    def start_matchmaking(params = {}, **options)
       req = build_request(:start_matchmaking, params)
       req.send_request(options)
     end
@@ -7406,9 +7406,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StopFleetActions AWS API Documentation
     #
-    # @overload stop_fleet_actions(params = {})
+    # @overload stop_fleet_actions(**params)
     # @param [Hash] params ({})
-    def stop_fleet_actions(params = {}, options = {})
+    def stop_fleet_actions(params = {}, **options)
       req = build_request(:stop_fleet_actions, params)
       req.send_request(options)
     end
@@ -7480,9 +7480,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StopGameSessionPlacement AWS API Documentation
     #
-    # @overload stop_game_session_placement(params = {})
+    # @overload stop_game_session_placement(**params)
     # @param [Hash] params ({})
-    def stop_game_session_placement(params = {}, options = {})
+    def stop_game_session_placement(params = {}, **options)
       req = build_request(:stop_game_session_placement, params)
       req.send_request(options)
     end
@@ -7536,9 +7536,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StopMatchmaking AWS API Documentation
     #
-    # @overload stop_matchmaking(params = {})
+    # @overload stop_matchmaking(**params)
     # @param [Hash] params ({})
-    def stop_matchmaking(params = {}, options = {})
+    def stop_matchmaking(params = {}, **options)
       req = build_request(:stop_matchmaking, params)
       req.send_request(options)
     end
@@ -7630,9 +7630,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/SuspendGameServerGroup AWS API Documentation
     #
-    # @overload suspend_game_server_group(params = {})
+    # @overload suspend_game_server_group(**params)
     # @param [Hash] params ({})
-    def suspend_game_server_group(params = {}, options = {})
+    def suspend_game_server_group(params = {}, **options)
       req = build_request(:suspend_game_server_group, params)
       req.send_request(options)
     end
@@ -7719,9 +7719,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -7796,9 +7796,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -7866,9 +7866,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateAlias AWS API Documentation
     #
-    # @overload update_alias(params = {})
+    # @overload update_alias(**params)
     # @param [Hash] params ({})
-    def update_alias(params = {}, options = {})
+    def update_alias(params = {}, **options)
       req = build_request(:update_alias, params)
       req.send_request(options)
     end
@@ -7935,9 +7935,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateBuild AWS API Documentation
     #
-    # @overload update_build(params = {})
+    # @overload update_build(**params)
     # @param [Hash] params ({})
-    def update_build(params = {}, options = {})
+    def update_build(params = {}, **options)
       req = build_request(:update_build, params)
       req.send_request(options)
     end
@@ -8034,9 +8034,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateFleetAttributes AWS API Documentation
     #
-    # @overload update_fleet_attributes(params = {})
+    # @overload update_fleet_attributes(**params)
     # @param [Hash] params ({})
-    def update_fleet_attributes(params = {}, options = {})
+    def update_fleet_attributes(params = {}, **options)
       req = build_request(:update_fleet_attributes, params)
       req.send_request(options)
     end
@@ -8125,9 +8125,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateFleetCapacity AWS API Documentation
     #
-    # @overload update_fleet_capacity(params = {})
+    # @overload update_fleet_capacity(**params)
     # @param [Hash] params ({})
-    def update_fleet_capacity(params = {}, options = {})
+    def update_fleet_capacity(params = {}, **options)
       req = build_request(:update_fleet_capacity, params)
       req.send_request(options)
     end
@@ -8212,9 +8212,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateFleetPortSettings AWS API Documentation
     #
-    # @overload update_fleet_port_settings(params = {})
+    # @overload update_fleet_port_settings(**params)
     # @param [Hash] params ({})
-    def update_fleet_port_settings(params = {}, options = {})
+    def update_fleet_port_settings(params = {}, **options)
       req = build_request(:update_fleet_port_settings, params)
       req.send_request(options)
     end
@@ -8323,9 +8323,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateGameServer AWS API Documentation
     #
-    # @overload update_game_server(params = {})
+    # @overload update_game_server(**params)
     # @param [Hash] params ({})
-    def update_game_server(params = {}, options = {})
+    def update_game_server(params = {}, **options)
       req = build_request(:update_game_server, params)
       req.send_request(options)
     end
@@ -8473,9 +8473,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateGameServerGroup AWS API Documentation
     #
-    # @overload update_game_server_group(params = {})
+    # @overload update_game_server_group(**params)
     # @param [Hash] params ({})
-    def update_game_server_group(params = {}, options = {})
+    def update_game_server_group(params = {}, **options)
       req = build_request(:update_game_server_group, params)
       req.send_request(options)
     end
@@ -8571,9 +8571,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateGameSession AWS API Documentation
     #
-    # @overload update_game_session(params = {})
+    # @overload update_game_session(**params)
     # @param [Hash] params ({})
-    def update_game_session(params = {}, options = {})
+    def update_game_session(params = {}, **options)
       req = build_request(:update_game_session, params)
       req.send_request(options)
     end
@@ -8665,9 +8665,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateGameSessionQueue AWS API Documentation
     #
-    # @overload update_game_session_queue(params = {})
+    # @overload update_game_session_queue(**params)
     # @param [Hash] params ({})
-    def update_game_session_queue(params = {}, options = {})
+    def update_game_session_queue(params = {}, **options)
       req = build_request(:update_game_session_queue, params)
       req.send_request(options)
     end
@@ -8873,9 +8873,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateMatchmakingConfiguration AWS API Documentation
     #
-    # @overload update_matchmaking_configuration(params = {})
+    # @overload update_matchmaking_configuration(**params)
     # @param [Hash] params ({})
-    def update_matchmaking_configuration(params = {}, options = {})
+    def update_matchmaking_configuration(params = {}, **options)
       req = build_request(:update_matchmaking_configuration, params)
       req.send_request(options)
     end
@@ -8974,9 +8974,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateRuntimeConfiguration AWS API Documentation
     #
-    # @overload update_runtime_configuration(params = {})
+    # @overload update_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def update_runtime_configuration(params = {}, options = {})
+    def update_runtime_configuration(params = {}, **options)
       req = build_request(:update_runtime_configuration, params)
       req.send_request(options)
     end
@@ -9088,9 +9088,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateScript AWS API Documentation
     #
-    # @overload update_script(params = {})
+    # @overload update_script(**params)
     # @param [Hash] params ({})
-    def update_script(params = {}, options = {})
+    def update_script(params = {}, **options)
       req = build_request(:update_script, params)
       req.send_request(options)
     end
@@ -9148,9 +9148,9 @@ module Aws::GameLift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ValidateMatchmakingRuleSet AWS API Documentation
     #
-    # @overload validate_matchmaking_rule_set(params = {})
+    # @overload validate_matchmaking_rule_set(**params)
     # @param [Hash] params ({})
-    def validate_matchmaking_rule_set(params = {}, options = {})
+    def validate_matchmaking_rule_set(params = {}, **options)
       req = build_request(:validate_matchmaking_rule_set, params)
       req.send_request(options)
     end
@@ -9159,7 +9159,7 @@ module Aws::GameLift
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -9167,15 +9167,15 @@ module Aws::GameLift
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-gamelift'
-      context[:gem_version] = '1.39.0'
+      context[:gem_name] = "aws-sdk-gamelift"
+      context[:gem_version] = "1.39.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

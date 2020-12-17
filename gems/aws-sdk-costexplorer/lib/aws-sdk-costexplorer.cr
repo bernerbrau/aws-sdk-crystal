@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-costexplorer/types'
-require_relative 'aws-sdk-costexplorer/client_api'
-require_relative 'aws-sdk-costexplorer/client'
-require_relative 'aws-sdk-costexplorer/errors'
-require_relative 'aws-sdk-costexplorer/resource'
-require_relative 'aws-sdk-costexplorer/customizations'
+require_relative "aws-sdk-costexplorer/types"
+require_relative "aws-sdk-costexplorer/client_api"
+require_relative "aws-sdk-costexplorer/client"
+require_relative "aws-sdk-costexplorer/errors"
+require_relative "aws-sdk-costexplorer/resource"
+require_relative "aws-sdk-costexplorer/customizations"
 
 # This module provides support for AWS Cost Explorer Service. This module is available in the
 # `aws-sdk-costexplorer` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-costexplorer/customizations'
 # @!group service
 module Aws::CostExplorer
 
-  GEM_VERSION = '1.54.0'
+  GEM_VERSION = "1.54.0"
 
 end

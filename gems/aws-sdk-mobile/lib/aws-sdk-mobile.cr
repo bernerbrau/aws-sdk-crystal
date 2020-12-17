@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mobile/types'
-require_relative 'aws-sdk-mobile/client_api'
-require_relative 'aws-sdk-mobile/client'
-require_relative 'aws-sdk-mobile/errors'
-require_relative 'aws-sdk-mobile/resource'
-require_relative 'aws-sdk-mobile/customizations'
+require_relative "aws-sdk-mobile/types"
+require_relative "aws-sdk-mobile/client_api"
+require_relative "aws-sdk-mobile/client"
+require_relative "aws-sdk-mobile/errors"
+require_relative "aws-sdk-mobile/resource"
+require_relative "aws-sdk-mobile/customizations"
 
 # This module provides support for AWS Mobile. This module is available in the
 # `aws-sdk-mobile` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mobile/customizations'
 # @!group service
 module Aws::Mobile
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

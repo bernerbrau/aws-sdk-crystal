@@ -13,12 +13,12 @@ module Aws::S3
 
     extend Aws::Deprecations
 
-    # @overload def initialize(bucket_name, object_key, id, options = {})
+    # @overload def initialize(bucket_name, object_key, id, **options)
     #   @param [String] bucket_name
     #   @param [String] object_key
     #   @param [String] id
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :bucket_name
     #   @option options [required, String] :object_key
     #   @option options [required, String] :id
@@ -149,7 +149,7 @@ module Aws::S3
     # ## Example
     #
     #     instance.wait_until(max_attempts:10, delay:5) do |instance|
-    #       instance.state.name == 'running'
+    #       instance.state.name == "running"
     #     end
     #
     # ## Configuration
@@ -209,7 +209,7 @@ module Aws::S3
     # @option options [Proc] :before_wait (nil) Callback
     # invoked before each wait
     # @return [Resource] if the waiter was successful
-    def wait_until(options = {}, &block)
+    def wait_until(**options, &block)
       self_copy = self.dup
       attempts = 0
       options[:max_attempts] = 10 unless options.key?(:max_attempts)

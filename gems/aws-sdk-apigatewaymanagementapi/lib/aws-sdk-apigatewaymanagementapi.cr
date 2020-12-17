@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-apigatewaymanagementapi/types'
-require_relative 'aws-sdk-apigatewaymanagementapi/client_api'
-require_relative 'aws-sdk-apigatewaymanagementapi/client'
-require_relative 'aws-sdk-apigatewaymanagementapi/errors'
-require_relative 'aws-sdk-apigatewaymanagementapi/resource'
-require_relative 'aws-sdk-apigatewaymanagementapi/customizations'
+require_relative "aws-sdk-apigatewaymanagementapi/types"
+require_relative "aws-sdk-apigatewaymanagementapi/client_api"
+require_relative "aws-sdk-apigatewaymanagementapi/client"
+require_relative "aws-sdk-apigatewaymanagementapi/errors"
+require_relative "aws-sdk-apigatewaymanagementapi/resource"
+require_relative "aws-sdk-apigatewaymanagementapi/customizations"
 
 # This module provides support for AmazonApiGatewayManagementApi. This module is available in the
 # `aws-sdk-apigatewaymanagementapi` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-apigatewaymanagementapi/customizations'
 # @!group service
 module Aws::ApiGatewayManagementApi
 
-  GEM_VERSION = '1.19.0'
+  GEM_VERSION = "1.19.0"
 
 end

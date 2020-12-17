@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:migrationhub)
 
@@ -290,7 +290,7 @@ module Aws::MigrationHub
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -383,9 +383,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/AssociateCreatedArtifact AWS API Documentation
     #
-    # @overload associate_created_artifact(params = {})
+    # @overload associate_created_artifact(**params)
     # @param [Hash] params ({})
-    def associate_created_artifact(params = {}, options = {})
+    def associate_created_artifact(params = {}, **options)
       req = build_request(:associate_created_artifact, params)
       req.send_request(options)
     end
@@ -423,9 +423,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/AssociateDiscoveredResource AWS API Documentation
     #
-    # @overload associate_discovered_resource(params = {})
+    # @overload associate_discovered_resource(**params)
     # @param [Hash] params ({})
-    def associate_discovered_resource(params = {}, options = {})
+    def associate_discovered_resource(params = {}, **options)
       req = build_request(:associate_discovered_resource, params)
       req.send_request(options)
     end
@@ -456,9 +456,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/CreateProgressUpdateStream AWS API Documentation
     #
-    # @overload create_progress_update_stream(params = {})
+    # @overload create_progress_update_stream(**params)
     # @param [Hash] params ({})
-    def create_progress_update_stream(params = {}, options = {})
+    def create_progress_update_stream(params = {}, **options)
       req = build_request(:create_progress_update_stream, params)
       req.send_request(options)
     end
@@ -507,9 +507,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/DeleteProgressUpdateStream AWS API Documentation
     #
-    # @overload delete_progress_update_stream(params = {})
+    # @overload delete_progress_update_stream(**params)
     # @param [Hash] params ({})
-    def delete_progress_update_stream(params = {}, options = {})
+    def delete_progress_update_stream(params = {}, **options)
       req = build_request(:delete_progress_update_stream, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/DescribeApplicationState AWS API Documentation
     #
-    # @overload describe_application_state(params = {})
+    # @overload describe_application_state(**params)
     # @param [Hash] params ({})
-    def describe_application_state(params = {}, options = {})
+    def describe_application_state(params = {}, **options)
       req = build_request(:describe_application_state, params)
       req.send_request(options)
     end
@@ -580,9 +580,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/DescribeMigrationTask AWS API Documentation
     #
-    # @overload describe_migration_task(params = {})
+    # @overload describe_migration_task(**params)
     # @param [Hash] params ({})
-    def describe_migration_task(params = {}, options = {})
+    def describe_migration_task(params = {}, **options)
       req = build_request(:describe_migration_task, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/DisassociateCreatedArtifact AWS API Documentation
     #
-    # @overload disassociate_created_artifact(params = {})
+    # @overload disassociate_created_artifact(**params)
     # @param [Hash] params ({})
-    def disassociate_created_artifact(params = {}, options = {})
+    def disassociate_created_artifact(params = {}, **options)
       req = build_request(:disassociate_created_artifact, params)
       req.send_request(options)
     end
@@ -670,9 +670,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/DisassociateDiscoveredResource AWS API Documentation
     #
-    # @overload disassociate_discovered_resource(params = {})
+    # @overload disassociate_discovered_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_discovered_resource(params = {}, options = {})
+    def disassociate_discovered_resource(params = {}, **options)
       req = build_request(:disassociate_discovered_resource, params)
       req.send_request(options)
     end
@@ -707,9 +707,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/ImportMigrationTask AWS API Documentation
     #
-    # @overload import_migration_task(params = {})
+    # @overload import_migration_task(**params)
     # @param [Hash] params ({})
-    def import_migration_task(params = {}, options = {})
+    def import_migration_task(params = {}, **options)
       req = build_request(:import_migration_task, params)
       req.send_request(options)
     end
@@ -755,9 +755,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/ListApplicationStates AWS API Documentation
     #
-    # @overload list_application_states(params = {})
+    # @overload list_application_states(**params)
     # @param [Hash] params ({})
-    def list_application_states(params = {}, options = {})
+    def list_application_states(params = {}, **options)
       req = build_request(:list_application_states, params)
       req.send_request(options)
     end
@@ -813,9 +813,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/ListCreatedArtifacts AWS API Documentation
     #
-    # @overload list_created_artifacts(params = {})
+    # @overload list_created_artifacts(**params)
     # @param [Hash] params ({})
-    def list_created_artifacts(params = {}, options = {})
+    def list_created_artifacts(params = {}, **options)
       req = build_request(:list_created_artifacts, params)
       req.send_request(options)
     end
@@ -862,9 +862,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/ListDiscoveredResources AWS API Documentation
     #
-    # @overload list_discovered_resources(params = {})
+    # @overload list_discovered_resources(**params)
     # @param [Hash] params ({})
-    def list_discovered_resources(params = {}, options = {})
+    def list_discovered_resources(params = {}, **options)
       req = build_request(:list_discovered_resources, params)
       req.send_request(options)
     end
@@ -919,9 +919,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/ListMigrationTasks AWS API Documentation
     #
-    # @overload list_migration_tasks(params = {})
+    # @overload list_migration_tasks(**params)
     # @param [Hash] params ({})
-    def list_migration_tasks(params = {}, options = {})
+    def list_migration_tasks(params = {}, **options)
       req = build_request(:list_migration_tasks, params)
       req.send_request(options)
     end
@@ -959,9 +959,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/ListProgressUpdateStreams AWS API Documentation
     #
-    # @overload list_progress_update_streams(params = {})
+    # @overload list_progress_update_streams(**params)
     # @param [Hash] params ({})
-    def list_progress_update_streams(params = {}, options = {})
+    def list_progress_update_streams(params = {}, **options)
       req = build_request(:list_progress_update_streams, params)
       req.send_request(options)
     end
@@ -998,9 +998,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/NotifyApplicationState AWS API Documentation
     #
-    # @overload notify_application_state(params = {})
+    # @overload notify_application_state(**params)
     # @param [Hash] params ({})
-    def notify_application_state(params = {}, options = {})
+    def notify_application_state(params = {}, **options)
       req = build_request(:notify_application_state, params)
       req.send_request(options)
     end
@@ -1059,9 +1059,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/NotifyMigrationTaskState AWS API Documentation
     #
-    # @overload notify_migration_task_state(params = {})
+    # @overload notify_migration_task_state(**params)
     # @param [Hash] params ({})
-    def notify_migration_task_state(params = {}, options = {})
+    def notify_migration_task_state(params = {}, **options)
       req = build_request(:notify_migration_task_state, params)
       req.send_request(options)
     end
@@ -1150,9 +1150,9 @@ module Aws::MigrationHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/AWSMigrationHub-2017-05-31/PutResourceAttributes AWS API Documentation
     #
-    # @overload put_resource_attributes(params = {})
+    # @overload put_resource_attributes(**params)
     # @param [Hash] params ({})
-    def put_resource_attributes(params = {}, options = {})
+    def put_resource_attributes(params = {}, **options)
       req = build_request(:put_resource_attributes, params)
       req.send_request(options)
     end
@@ -1161,7 +1161,7 @@ module Aws::MigrationHub
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1169,15 +1169,15 @@ module Aws::MigrationHub
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-migrationhub'
-      context[:gem_version] = '1.29.0'
+      context[:gem_name] = "aws-sdk-migrationhub"
+      context[:gem_version] = "1.29.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

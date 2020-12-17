@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:dax)
 
@@ -290,7 +290,7 @@ module Aws::DAX
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -508,9 +508,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -543,9 +543,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/CreateParameterGroup AWS API Documentation
     #
-    # @overload create_parameter_group(params = {})
+    # @overload create_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_parameter_group(params = {}, options = {})
+    def create_parameter_group(params = {}, **options)
       req = build_request(:create_parameter_group, params)
       req.send_request(options)
     end
@@ -585,9 +585,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/CreateSubnetGroup AWS API Documentation
     #
-    # @overload create_subnet_group(params = {})
+    # @overload create_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_subnet_group(params = {}, options = {})
+    def create_subnet_group(params = {}, **options)
       req = build_request(:create_subnet_group, params)
       req.send_request(options)
     end
@@ -661,9 +661,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DecreaseReplicationFactor AWS API Documentation
     #
-    # @overload decrease_replication_factor(params = {})
+    # @overload decrease_replication_factor(**params)
     # @param [Hash] params ({})
-    def decrease_replication_factor(params = {}, options = {})
+    def decrease_replication_factor(params = {}, **options)
       req = build_request(:decrease_replication_factor, params)
       req.send_request(options)
     end
@@ -723,9 +723,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DeleteCluster AWS API Documentation
     #
-    # @overload delete_cluster(params = {})
+    # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, options = {})
+    def delete_cluster(params = {}, **options)
       req = build_request(:delete_cluster, params)
       req.send_request(options)
     end
@@ -752,9 +752,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DeleteParameterGroup AWS API Documentation
     #
-    # @overload delete_parameter_group(params = {})
+    # @overload delete_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_parameter_group(params = {}, options = {})
+    def delete_parameter_group(params = {}, **options)
       req = build_request(:delete_parameter_group, params)
       req.send_request(options)
     end
@@ -785,9 +785,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DeleteSubnetGroup AWS API Documentation
     #
-    # @overload delete_subnet_group(params = {})
+    # @overload delete_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_subnet_group(params = {}, options = {})
+    def delete_subnet_group(params = {}, **options)
       req = build_request(:delete_subnet_group, params)
       req.send_request(options)
     end
@@ -880,9 +880,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DescribeClusters AWS API Documentation
     #
-    # @overload describe_clusters(params = {})
+    # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, options = {})
+    def describe_clusters(params = {}, **options)
       req = build_request(:describe_clusters, params)
       req.send_request(options)
     end
@@ -935,9 +935,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DescribeDefaultParameters AWS API Documentation
     #
-    # @overload describe_default_parameters(params = {})
+    # @overload describe_default_parameters(**params)
     # @param [Hash] params ({})
-    def describe_default_parameters(params = {}, options = {})
+    def describe_default_parameters(params = {}, **options)
       req = build_request(:describe_default_parameters, params)
       req.send_request(options)
     end
@@ -1011,9 +1011,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -1061,9 +1061,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DescribeParameterGroups AWS API Documentation
     #
-    # @overload describe_parameter_groups(params = {})
+    # @overload describe_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_parameter_groups(params = {}, options = {})
+    def describe_parameter_groups(params = {}, **options)
       req = build_request(:describe_parameter_groups, params)
       req.send_request(options)
     end
@@ -1124,9 +1124,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DescribeParameters AWS API Documentation
     #
-    # @overload describe_parameters(params = {})
+    # @overload describe_parameters(**params)
     # @param [Hash] params ({})
-    def describe_parameters(params = {}, options = {})
+    def describe_parameters(params = {}, **options)
       req = build_request(:describe_parameters, params)
       req.send_request(options)
     end
@@ -1177,9 +1177,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/DescribeSubnetGroups AWS API Documentation
     #
-    # @overload describe_subnet_groups(params = {})
+    # @overload describe_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_subnet_groups(params = {}, options = {})
+    def describe_subnet_groups(params = {}, **options)
       req = build_request(:describe_subnet_groups, params)
       req.send_request(options)
     end
@@ -1247,9 +1247,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/IncreaseReplicationFactor AWS API Documentation
     #
-    # @overload increase_replication_factor(params = {})
+    # @overload increase_replication_factor(**params)
     # @param [Hash] params ({})
-    def increase_replication_factor(params = {}, options = {})
+    def increase_replication_factor(params = {}, **options)
       req = build_request(:increase_replication_factor, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -1356,9 +1356,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/RebootNode AWS API Documentation
     #
-    # @overload reboot_node(params = {})
+    # @overload reboot_node(**params)
     # @param [Hash] params ({})
-    def reboot_node(params = {}, options = {})
+    def reboot_node(params = {}, **options)
       req = build_request(:reboot_node, params)
       req.send_request(options)
     end
@@ -1396,9 +1396,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1432,9 +1432,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1522,9 +1522,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/UpdateCluster AWS API Documentation
     #
-    # @overload update_cluster(params = {})
+    # @overload update_cluster(**params)
     # @param [Hash] params ({})
-    def update_cluster(params = {}, options = {})
+    def update_cluster(params = {}, **options)
       req = build_request(:update_cluster, params)
       req.send_request(options)
     end
@@ -1563,9 +1563,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/UpdateParameterGroup AWS API Documentation
     #
-    # @overload update_parameter_group(params = {})
+    # @overload update_parameter_group(**params)
     # @param [Hash] params ({})
-    def update_parameter_group(params = {}, options = {})
+    def update_parameter_group(params = {}, **options)
       req = build_request(:update_parameter_group, params)
       req.send_request(options)
     end
@@ -1604,9 +1604,9 @@ module Aws::DAX
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dax-2017-04-19/UpdateSubnetGroup AWS API Documentation
     #
-    # @overload update_subnet_group(params = {})
+    # @overload update_subnet_group(**params)
     # @param [Hash] params ({})
-    def update_subnet_group(params = {}, options = {})
+    def update_subnet_group(params = {}, **options)
       req = build_request(:update_subnet_group, params)
       req.send_request(options)
     end
@@ -1615,7 +1615,7 @@ module Aws::DAX
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1623,15 +1623,15 @@ module Aws::DAX
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-dax'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-dax"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

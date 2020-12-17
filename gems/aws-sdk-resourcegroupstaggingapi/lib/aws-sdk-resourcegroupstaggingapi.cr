@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-resourcegroupstaggingapi/types'
-require_relative 'aws-sdk-resourcegroupstaggingapi/client_api'
-require_relative 'aws-sdk-resourcegroupstaggingapi/client'
-require_relative 'aws-sdk-resourcegroupstaggingapi/errors'
-require_relative 'aws-sdk-resourcegroupstaggingapi/resource'
-require_relative 'aws-sdk-resourcegroupstaggingapi/customizations'
+require_relative "aws-sdk-resourcegroupstaggingapi/types"
+require_relative "aws-sdk-resourcegroupstaggingapi/client_api"
+require_relative "aws-sdk-resourcegroupstaggingapi/client"
+require_relative "aws-sdk-resourcegroupstaggingapi/errors"
+require_relative "aws-sdk-resourcegroupstaggingapi/resource"
+require_relative "aws-sdk-resourcegroupstaggingapi/customizations"
 
 # This module provides support for AWS Resource Groups Tagging API. This module is available in the
 # `aws-sdk-resourcegroupstaggingapi` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-resourcegroupstaggingapi/customizations'
 # @!group service
 module Aws::ResourceGroupsTaggingAPI
 
-  GEM_VERSION = '1.34.0'
+  GEM_VERSION = "1.34.0"
 
 end

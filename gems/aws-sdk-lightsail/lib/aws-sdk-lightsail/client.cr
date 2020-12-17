@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:lightsail)
 
@@ -290,7 +290,7 @@ module Aws::Lightsail
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -371,9 +371,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AllocateStaticIp AWS API Documentation
     #
-    # @overload allocate_static_ip(params = {})
+    # @overload allocate_static_ip(**params)
     # @param [Hash] params ({})
-    def allocate_static_ip(params = {}, options = {})
+    def allocate_static_ip(params = {}, **options)
       req = build_request(:allocate_static_ip, params)
       req.send_request(options)
     end
@@ -446,9 +446,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AttachCertificateToDistribution AWS API Documentation
     #
-    # @overload attach_certificate_to_distribution(params = {})
+    # @overload attach_certificate_to_distribution(**params)
     # @param [Hash] params ({})
-    def attach_certificate_to_distribution(params = {}, options = {})
+    def attach_certificate_to_distribution(params = {}, **options)
       req = build_request(:attach_certificate_to_distribution, params)
       req.send_request(options)
     end
@@ -505,9 +505,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AttachDisk AWS API Documentation
     #
-    # @overload attach_disk(params = {})
+    # @overload attach_disk(**params)
     # @param [Hash] params ({})
-    def attach_disk(params = {}, options = {})
+    def attach_disk(params = {}, **options)
       req = build_request(:attach_disk, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AttachInstancesToLoadBalancer AWS API Documentation
     #
-    # @overload attach_instances_to_load_balancer(params = {})
+    # @overload attach_instances_to_load_balancer(**params)
     # @param [Hash] params ({})
-    def attach_instances_to_load_balancer(params = {}, options = {})
+    def attach_instances_to_load_balancer(params = {}, **options)
       req = build_request(:attach_instances_to_load_balancer, params)
       req.send_request(options)
     end
@@ -634,9 +634,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AttachLoadBalancerTlsCertificate AWS API Documentation
     #
-    # @overload attach_load_balancer_tls_certificate(params = {})
+    # @overload attach_load_balancer_tls_certificate(**params)
     # @param [Hash] params ({})
-    def attach_load_balancer_tls_certificate(params = {}, options = {})
+    def attach_load_balancer_tls_certificate(params = {}, **options)
       req = build_request(:attach_load_balancer_tls_certificate, params)
       req.send_request(options)
     end
@@ -679,9 +679,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AttachStaticIp AWS API Documentation
     #
-    # @overload attach_static_ip(params = {})
+    # @overload attach_static_ip(**params)
     # @param [Hash] params ({})
-    def attach_static_ip(params = {}, options = {})
+    def attach_static_ip(params = {}, **options)
       req = build_request(:attach_static_ip, params)
       req.send_request(options)
     end
@@ -738,9 +738,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CloseInstancePublicPorts AWS API Documentation
     #
-    # @overload close_instance_public_ports(params = {})
+    # @overload close_instance_public_ports(**params)
     # @param [Hash] params ({})
-    def close_instance_public_ports(params = {}, options = {})
+    def close_instance_public_ports(params = {}, **options)
       req = build_request(:close_instance_public_ports, params)
       req.send_request(options)
     end
@@ -866,9 +866,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CopySnapshot AWS API Documentation
     #
-    # @overload copy_snapshot(params = {})
+    # @overload copy_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_snapshot(params = {}, options = {})
+    def copy_snapshot(params = {}, **options)
       req = build_request(:copy_snapshot, params)
       req.send_request(options)
     end
@@ -987,9 +987,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateCertificate AWS API Documentation
     #
-    # @overload create_certificate(params = {})
+    # @overload create_certificate(**params)
     # @param [Hash] params ({})
-    def create_certificate(params = {}, options = {})
+    def create_certificate(params = {}, **options)
       req = build_request(:create_certificate, params)
       req.send_request(options)
     end
@@ -1047,9 +1047,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateCloudFormationStack AWS API Documentation
     #
-    # @overload create_cloud_formation_stack(params = {})
+    # @overload create_cloud_formation_stack(**params)
     # @param [Hash] params ({})
-    def create_cloud_formation_stack(params = {}, options = {})
+    def create_cloud_formation_stack(params = {}, **options)
       req = build_request(:create_cloud_formation_stack, params)
       req.send_request(options)
     end
@@ -1144,9 +1144,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateContactMethod AWS API Documentation
     #
-    # @overload create_contact_method(params = {})
+    # @overload create_contact_method(**params)
     # @param [Hash] params ({})
-    def create_contact_method(params = {}, options = {})
+    def create_contact_method(params = {}, **options)
       req = build_request(:create_contact_method, params)
       req.send_request(options)
     end
@@ -1356,9 +1356,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateContainerService AWS API Documentation
     #
-    # @overload create_container_service(params = {})
+    # @overload create_container_service(**params)
     # @param [Hash] params ({})
-    def create_container_service(params = {}, options = {})
+    def create_container_service(params = {}, **options)
       req = build_request(:create_container_service, params)
       req.send_request(options)
     end
@@ -1489,9 +1489,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateContainerServiceDeployment AWS API Documentation
     #
-    # @overload create_container_service_deployment(params = {})
+    # @overload create_container_service_deployment(**params)
     # @param [Hash] params ({})
-    def create_container_service_deployment(params = {}, options = {})
+    def create_container_service_deployment(params = {}, **options)
       req = build_request(:create_container_service_deployment, params)
       req.send_request(options)
     end
@@ -1538,9 +1538,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateContainerServiceRegistryLogin AWS API Documentation
     #
-    # @overload create_container_service_registry_login(params = {})
+    # @overload create_container_service_registry_login(**params)
     # @param [Hash] params ({})
-    def create_container_service_registry_login(params = {}, options = {})
+    def create_container_service_registry_login(params = {}, **options)
       req = build_request(:create_container_service_registry_login, params)
       req.send_request(options)
     end
@@ -1623,9 +1623,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateDisk AWS API Documentation
     #
-    # @overload create_disk(params = {})
+    # @overload create_disk(**params)
     # @param [Hash] params ({})
-    def create_disk(params = {}, options = {})
+    def create_disk(params = {}, **options)
       req = build_request(:create_disk, params)
       req.send_request(options)
     end
@@ -1784,9 +1784,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateDiskFromSnapshot AWS API Documentation
     #
-    # @overload create_disk_from_snapshot(params = {})
+    # @overload create_disk_from_snapshot(**params)
     # @param [Hash] params ({})
-    def create_disk_from_snapshot(params = {}, options = {})
+    def create_disk_from_snapshot(params = {}, **options)
       req = build_request(:create_disk_from_snapshot, params)
       req.send_request(options)
     end
@@ -1891,9 +1891,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateDiskSnapshot AWS API Documentation
     #
-    # @overload create_disk_snapshot(params = {})
+    # @overload create_disk_snapshot(**params)
     # @param [Hash] params ({})
-    def create_disk_snapshot(params = {}, options = {})
+    def create_disk_snapshot(params = {}, **options)
       req = build_request(:create_disk_snapshot, params)
       req.send_request(options)
     end
@@ -2057,9 +2057,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateDistribution AWS API Documentation
     #
-    # @overload create_distribution(params = {})
+    # @overload create_distribution(**params)
     # @param [Hash] params ({})
-    def create_distribution(params = {}, options = {})
+    def create_distribution(params = {}, **options)
       req = build_request(:create_distribution, params)
       req.send_request(options)
     end
@@ -2123,9 +2123,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateDomain AWS API Documentation
     #
-    # @overload create_domain(params = {})
+    # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, options = {})
+    def create_domain(params = {}, **options)
       req = build_request(:create_domain, params)
       req.send_request(options)
     end
@@ -2189,9 +2189,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateDomainEntry AWS API Documentation
     #
-    # @overload create_domain_entry(params = {})
+    # @overload create_domain_entry(**params)
     # @param [Hash] params ({})
-    def create_domain_entry(params = {}, options = {})
+    def create_domain_entry(params = {}, **options)
       req = build_request(:create_domain_entry, params)
       req.send_request(options)
     end
@@ -2255,9 +2255,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateInstanceSnapshot AWS API Documentation
     #
-    # @overload create_instance_snapshot(params = {})
+    # @overload create_instance_snapshot(**params)
     # @param [Hash] params ({})
-    def create_instance_snapshot(params = {}, options = {})
+    def create_instance_snapshot(params = {}, **options)
       req = build_request(:create_instance_snapshot, params)
       req.send_request(options)
     end
@@ -2389,9 +2389,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateInstances AWS API Documentation
     #
-    # @overload create_instances(params = {})
+    # @overload create_instances(**params)
     # @param [Hash] params ({})
-    def create_instances(params = {}, options = {})
+    def create_instances(params = {}, **options)
       req = build_request(:create_instances, params)
       req.send_request(options)
     end
@@ -2586,9 +2586,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateInstancesFromSnapshot AWS API Documentation
     #
-    # @overload create_instances_from_snapshot(params = {})
+    # @overload create_instances_from_snapshot(**params)
     # @param [Hash] params ({})
-    def create_instances_from_snapshot(params = {}, options = {})
+    def create_instances_from_snapshot(params = {}, **options)
       req = build_request(:create_instances_from_snapshot, params)
       req.send_request(options)
     end
@@ -2660,9 +2660,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateKeyPair AWS API Documentation
     #
-    # @overload create_key_pair(params = {})
+    # @overload create_key_pair(**params)
     # @param [Hash] params ({})
-    def create_key_pair(params = {}, options = {})
+    def create_key_pair(params = {}, **options)
       req = build_request(:create_key_pair, params)
       req.send_request(options)
     end
@@ -2763,9 +2763,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateLoadBalancer AWS API Documentation
     #
-    # @overload create_load_balancer(params = {})
+    # @overload create_load_balancer(**params)
     # @param [Hash] params ({})
-    def create_load_balancer(params = {}, options = {})
+    def create_load_balancer(params = {}, **options)
       req = build_request(:create_load_balancer, params)
       req.send_request(options)
     end
@@ -2853,9 +2853,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateLoadBalancerTlsCertificate AWS API Documentation
     #
-    # @overload create_load_balancer_tls_certificate(params = {})
+    # @overload create_load_balancer_tls_certificate(**params)
     # @param [Hash] params ({})
-    def create_load_balancer_tls_certificate(params = {}, options = {})
+    def create_load_balancer_tls_certificate(params = {}, **options)
       req = build_request(:create_load_balancer_tls_certificate, params)
       req.send_request(options)
     end
@@ -3042,9 +3042,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateRelationalDatabase AWS API Documentation
     #
-    # @overload create_relational_database(params = {})
+    # @overload create_relational_database(**params)
     # @param [Hash] params ({})
-    def create_relational_database(params = {}, options = {})
+    def create_relational_database(params = {}, **options)
       req = build_request(:create_relational_database, params)
       req.send_request(options)
     end
@@ -3179,9 +3179,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateRelationalDatabaseFromSnapshot AWS API Documentation
     #
-    # @overload create_relational_database_from_snapshot(params = {})
+    # @overload create_relational_database_from_snapshot(**params)
     # @param [Hash] params ({})
-    def create_relational_database_from_snapshot(params = {}, options = {})
+    def create_relational_database_from_snapshot(params = {}, **options)
       req = build_request(:create_relational_database_from_snapshot, params)
       req.send_request(options)
     end
@@ -3251,9 +3251,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CreateRelationalDatabaseSnapshot AWS API Documentation
     #
-    # @overload create_relational_database_snapshot(params = {})
+    # @overload create_relational_database_snapshot(**params)
     # @param [Hash] params ({})
-    def create_relational_database_snapshot(params = {}, options = {})
+    def create_relational_database_snapshot(params = {}, **options)
       req = build_request(:create_relational_database_snapshot, params)
       req.send_request(options)
     end
@@ -3301,9 +3301,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteAlarm AWS API Documentation
     #
-    # @overload delete_alarm(params = {})
+    # @overload delete_alarm(**params)
     # @param [Hash] params ({})
-    def delete_alarm(params = {}, options = {})
+    def delete_alarm(params = {}, **options)
       req = build_request(:delete_alarm, params)
       req.send_request(options)
     end
@@ -3354,9 +3354,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteAutoSnapshot AWS API Documentation
     #
-    # @overload delete_auto_snapshot(params = {})
+    # @overload delete_auto_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_auto_snapshot(params = {}, options = {})
+    def delete_auto_snapshot(params = {}, **options)
       req = build_request(:delete_auto_snapshot, params)
       req.send_request(options)
     end
@@ -3403,9 +3403,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteCertificate AWS API Documentation
     #
-    # @overload delete_certificate(params = {})
+    # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, options = {})
+    def delete_certificate(params = {}, **options)
       req = build_request(:delete_certificate, params)
       req.send_request(options)
     end
@@ -3462,9 +3462,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteContactMethod AWS API Documentation
     #
-    # @overload delete_contact_method(params = {})
+    # @overload delete_contact_method(**params)
     # @param [Hash] params ({})
-    def delete_contact_method(params = {}, options = {})
+    def delete_contact_method(params = {}, **options)
       req = build_request(:delete_contact_method, params)
       req.send_request(options)
     end
@@ -3501,9 +3501,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteContainerImage AWS API Documentation
     #
-    # @overload delete_container_image(params = {})
+    # @overload delete_container_image(**params)
     # @param [Hash] params ({})
-    def delete_container_image(params = {}, options = {})
+    def delete_container_image(params = {}, **options)
       req = build_request(:delete_container_image, params)
       req.send_request(options)
     end
@@ -3523,9 +3523,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteContainerService AWS API Documentation
     #
-    # @overload delete_container_service(params = {})
+    # @overload delete_container_service(**params)
     # @param [Hash] params ({})
-    def delete_container_service(params = {}, options = {})
+    def delete_container_service(params = {}, **options)
       req = build_request(:delete_container_service, params)
       req.send_request(options)
     end
@@ -3582,9 +3582,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteDisk AWS API Documentation
     #
-    # @overload delete_disk(params = {})
+    # @overload delete_disk(**params)
     # @param [Hash] params ({})
-    def delete_disk(params = {}, options = {})
+    def delete_disk(params = {}, **options)
       req = build_request(:delete_disk, params)
       req.send_request(options)
     end
@@ -3640,9 +3640,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteDiskSnapshot AWS API Documentation
     #
-    # @overload delete_disk_snapshot(params = {})
+    # @overload delete_disk_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_disk_snapshot(params = {}, options = {})
+    def delete_disk_snapshot(params = {}, **options)
       req = build_request(:delete_disk_snapshot, params)
       req.send_request(options)
     end
@@ -3684,9 +3684,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteDistribution AWS API Documentation
     #
-    # @overload delete_distribution(params = {})
+    # @overload delete_distribution(**params)
     # @param [Hash] params ({})
-    def delete_distribution(params = {}, options = {})
+    def delete_distribution(params = {}, **options)
       req = build_request(:delete_distribution, params)
       req.send_request(options)
     end
@@ -3732,9 +3732,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteDomain AWS API Documentation
     #
-    # @overload delete_domain(params = {})
+    # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, options = {})
+    def delete_domain(params = {}, **options)
       req = build_request(:delete_domain, params)
       req.send_request(options)
     end
@@ -3794,9 +3794,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteDomainEntry AWS API Documentation
     #
-    # @overload delete_domain_entry(params = {})
+    # @overload delete_domain_entry(**params)
     # @param [Hash] params ({})
-    def delete_domain_entry(params = {}, options = {})
+    def delete_domain_entry(params = {}, **options)
       req = build_request(:delete_domain_entry, params)
       req.send_request(options)
     end
@@ -3848,9 +3848,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteInstance AWS API Documentation
     #
-    # @overload delete_instance(params = {})
+    # @overload delete_instance(**params)
     # @param [Hash] params ({})
-    def delete_instance(params = {}, options = {})
+    def delete_instance(params = {}, **options)
       req = build_request(:delete_instance, params)
       req.send_request(options)
     end
@@ -3899,9 +3899,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteInstanceSnapshot AWS API Documentation
     #
-    # @overload delete_instance_snapshot(params = {})
+    # @overload delete_instance_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_instance_snapshot(params = {}, options = {})
+    def delete_instance_snapshot(params = {}, **options)
       req = build_request(:delete_instance_snapshot, params)
       req.send_request(options)
     end
@@ -3947,9 +3947,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteKeyPair AWS API Documentation
     #
-    # @overload delete_key_pair(params = {})
+    # @overload delete_key_pair(**params)
     # @param [Hash] params ({})
-    def delete_key_pair(params = {}, options = {})
+    def delete_key_pair(params = {}, **options)
       req = build_request(:delete_key_pair, params)
       req.send_request(options)
     end
@@ -4002,9 +4002,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteKnownHostKeys AWS API Documentation
     #
-    # @overload delete_known_host_keys(params = {})
+    # @overload delete_known_host_keys(**params)
     # @param [Hash] params ({})
-    def delete_known_host_keys(params = {}, options = {})
+    def delete_known_host_keys(params = {}, **options)
       req = build_request(:delete_known_host_keys, params)
       req.send_request(options)
     end
@@ -4054,9 +4054,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteLoadBalancer AWS API Documentation
     #
-    # @overload delete_load_balancer(params = {})
+    # @overload delete_load_balancer(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer(params = {}, options = {})
+    def delete_load_balancer(params = {}, **options)
       req = build_request(:delete_load_balancer, params)
       req.send_request(options)
     end
@@ -4118,9 +4118,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteLoadBalancerTlsCertificate AWS API Documentation
     #
-    # @overload delete_load_balancer_tls_certificate(params = {})
+    # @overload delete_load_balancer_tls_certificate(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer_tls_certificate(params = {}, options = {})
+    def delete_load_balancer_tls_certificate(params = {}, **options)
       req = build_request(:delete_load_balancer_tls_certificate, params)
       req.send_request(options)
     end
@@ -4196,9 +4196,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteRelationalDatabase AWS API Documentation
     #
-    # @overload delete_relational_database(params = {})
+    # @overload delete_relational_database(**params)
     # @param [Hash] params ({})
-    def delete_relational_database(params = {}, options = {})
+    def delete_relational_database(params = {}, **options)
       req = build_request(:delete_relational_database, params)
       req.send_request(options)
     end
@@ -4246,9 +4246,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DeleteRelationalDatabaseSnapshot AWS API Documentation
     #
-    # @overload delete_relational_database_snapshot(params = {})
+    # @overload delete_relational_database_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_relational_database_snapshot(params = {}, options = {})
+    def delete_relational_database_snapshot(params = {}, **options)
       req = build_request(:delete_relational_database_snapshot, params)
       req.send_request(options)
     end
@@ -4294,9 +4294,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DetachCertificateFromDistribution AWS API Documentation
     #
-    # @overload detach_certificate_from_distribution(params = {})
+    # @overload detach_certificate_from_distribution(**params)
     # @param [Hash] params ({})
-    def detach_certificate_from_distribution(params = {}, options = {})
+    def detach_certificate_from_distribution(params = {}, **options)
       req = build_request(:detach_certificate_from_distribution, params)
       req.send_request(options)
     end
@@ -4346,9 +4346,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DetachDisk AWS API Documentation
     #
-    # @overload detach_disk(params = {})
+    # @overload detach_disk(**params)
     # @param [Hash] params ({})
-    def detach_disk(params = {}, options = {})
+    def detach_disk(params = {}, **options)
       req = build_request(:detach_disk, params)
       req.send_request(options)
     end
@@ -4404,9 +4404,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DetachInstancesFromLoadBalancer AWS API Documentation
     #
-    # @overload detach_instances_from_load_balancer(params = {})
+    # @overload detach_instances_from_load_balancer(**params)
     # @param [Hash] params ({})
-    def detach_instances_from_load_balancer(params = {}, options = {})
+    def detach_instances_from_load_balancer(params = {}, **options)
       req = build_request(:detach_instances_from_load_balancer, params)
       req.send_request(options)
     end
@@ -4446,9 +4446,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DetachStaticIp AWS API Documentation
     #
-    # @overload detach_static_ip(params = {})
+    # @overload detach_static_ip(**params)
     # @param [Hash] params ({})
-    def detach_static_ip(params = {}, options = {})
+    def detach_static_ip(params = {}, **options)
       req = build_request(:detach_static_ip, params)
       req.send_request(options)
     end
@@ -4496,9 +4496,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DisableAddOn AWS API Documentation
     #
-    # @overload disable_add_on(params = {})
+    # @overload disable_add_on(**params)
     # @param [Hash] params ({})
-    def disable_add_on(params = {}, options = {})
+    def disable_add_on(params = {}, **options)
       req = build_request(:disable_add_on, params)
       req.send_request(options)
     end
@@ -4517,9 +4517,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/DownloadDefaultKeyPair AWS API Documentation
     #
-    # @overload download_default_key_pair(params = {})
+    # @overload download_default_key_pair(**params)
     # @param [Hash] params ({})
-    def download_default_key_pair(params = {}, options = {})
+    def download_default_key_pair(params = {}, **options)
       req = build_request(:download_default_key_pair, params)
       req.send_request(options)
     end
@@ -4573,9 +4573,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/EnableAddOn AWS API Documentation
     #
-    # @overload enable_add_on(params = {})
+    # @overload enable_add_on(**params)
     # @param [Hash] params ({})
-    def enable_add_on(params = {}, options = {})
+    def enable_add_on(params = {}, **options)
       req = build_request(:enable_add_on, params)
       req.send_request(options)
     end
@@ -4640,9 +4640,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/ExportSnapshot AWS API Documentation
     #
-    # @overload export_snapshot(params = {})
+    # @overload export_snapshot(**params)
     # @param [Hash] params ({})
-    def export_snapshot(params = {}, options = {})
+    def export_snapshot(params = {}, **options)
       req = build_request(:export_snapshot, params)
       req.send_request(options)
     end
@@ -4675,9 +4675,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetActiveNames AWS API Documentation
     #
-    # @overload get_active_names(params = {})
+    # @overload get_active_names(**params)
     # @param [Hash] params ({})
-    def get_active_names(params = {}, options = {})
+    def get_active_names(params = {}, **options)
       req = build_request(:get_active_names, params)
       req.send_request(options)
     end
@@ -4759,9 +4759,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetAlarms AWS API Documentation
     #
-    # @overload get_alarms(params = {})
+    # @overload get_alarms(**params)
     # @param [Hash] params ({})
-    def get_alarms(params = {}, options = {})
+    def get_alarms(params = {}, **options)
       req = build_request(:get_alarms, params)
       req.send_request(options)
     end
@@ -4803,9 +4803,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetAutoSnapshots AWS API Documentation
     #
-    # @overload get_auto_snapshots(params = {})
+    # @overload get_auto_snapshots(**params)
     # @param [Hash] params ({})
-    def get_auto_snapshots(params = {}, options = {})
+    def get_auto_snapshots(params = {}, **options)
       req = build_request(:get_auto_snapshots, params)
       req.send_request(options)
     end
@@ -4866,9 +4866,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetBlueprints AWS API Documentation
     #
-    # @overload get_blueprints(params = {})
+    # @overload get_blueprints(**params)
     # @param [Hash] params ({})
-    def get_blueprints(params = {}, options = {})
+    def get_blueprints(params = {}, **options)
       req = build_request(:get_blueprints, params)
       req.send_request(options)
     end
@@ -4918,9 +4918,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetBundles AWS API Documentation
     #
-    # @overload get_bundles(params = {})
+    # @overload get_bundles(**params)
     # @param [Hash] params ({})
-    def get_bundles(params = {}, options = {})
+    def get_bundles(params = {}, **options)
       req = build_request(:get_bundles, params)
       req.send_request(options)
     end
@@ -5016,9 +5016,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetCertificates AWS API Documentation
     #
-    # @overload get_certificates(params = {})
+    # @overload get_certificates(**params)
     # @param [Hash] params ({})
-    def get_certificates(params = {}, options = {})
+    def get_certificates(params = {}, **options)
       req = build_request(:get_certificates, params)
       req.send_request(options)
     end
@@ -5068,9 +5068,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetCloudFormationStackRecords AWS API Documentation
     #
-    # @overload get_cloud_formation_stack_records(params = {})
+    # @overload get_cloud_formation_stack_records(**params)
     # @param [Hash] params ({})
-    def get_cloud_formation_stack_records(params = {}, options = {})
+    def get_cloud_formation_stack_records(params = {}, **options)
       req = build_request(:get_cloud_formation_stack_records, params)
       req.send_request(options)
     end
@@ -5123,9 +5123,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContactMethods AWS API Documentation
     #
-    # @overload get_contact_methods(params = {})
+    # @overload get_contact_methods(**params)
     # @param [Hash] params ({})
-    def get_contact_methods(params = {}, options = {})
+    def get_contact_methods(params = {}, **options)
       req = build_request(:get_contact_methods, params)
       req.send_request(options)
     end
@@ -5145,9 +5145,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerAPIMetadata AWS API Documentation
     #
-    # @overload get_container_api_metadata(params = {})
+    # @overload get_container_api_metadata(**params)
     # @param [Hash] params ({})
-    def get_container_api_metadata(params = {}, options = {})
+    def get_container_api_metadata(params = {}, **options)
       req = build_request(:get_container_api_metadata, params)
       req.send_request(options)
     end
@@ -5185,9 +5185,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerImages AWS API Documentation
     #
-    # @overload get_container_images(params = {})
+    # @overload get_container_images(**params)
     # @param [Hash] params ({})
-    def get_container_images(params = {}, options = {})
+    def get_container_images(params = {}, **options)
       req = build_request(:get_container_images, params)
       req.send_request(options)
     end
@@ -5308,9 +5308,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerLog AWS API Documentation
     #
-    # @overload get_container_log(params = {})
+    # @overload get_container_log(**params)
     # @param [Hash] params ({})
-    def get_container_log(params = {}, options = {})
+    def get_container_log(params = {}, **options)
       req = build_request(:get_container_log, params)
       req.send_request(options)
     end
@@ -5371,9 +5371,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerServiceDeployments AWS API Documentation
     #
-    # @overload get_container_service_deployments(params = {})
+    # @overload get_container_service_deployments(**params)
     # @param [Hash] params ({})
-    def get_container_service_deployments(params = {}, options = {})
+    def get_container_service_deployments(params = {}, **options)
       req = build_request(:get_container_service_deployments, params)
       req.send_request(options)
     end
@@ -5482,9 +5482,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerServiceMetricData AWS API Documentation
     #
-    # @overload get_container_service_metric_data(params = {})
+    # @overload get_container_service_metric_data(**params)
     # @param [Hash] params ({})
-    def get_container_service_metric_data(params = {}, options = {})
+    def get_container_service_metric_data(params = {}, **options)
       req = build_request(:get_container_service_metric_data, params)
       req.send_request(options)
     end
@@ -5511,9 +5511,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerServicePowers AWS API Documentation
     #
-    # @overload get_container_service_powers(params = {})
+    # @overload get_container_service_powers(**params)
     # @param [Hash] params ({})
-    def get_container_service_powers(params = {}, options = {})
+    def get_container_service_powers(params = {}, **options)
       req = build_request(:get_container_service_powers, params)
       req.send_request(options)
     end
@@ -5601,9 +5601,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetContainerServices AWS API Documentation
     #
-    # @overload get_container_services(params = {})
+    # @overload get_container_services(**params)
     # @param [Hash] params ({})
-    def get_container_services(params = {}, options = {})
+    def get_container_services(params = {}, **options)
       req = build_request(:get_container_services, params)
       req.send_request(options)
     end
@@ -5652,9 +5652,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDisk AWS API Documentation
     #
-    # @overload get_disk(params = {})
+    # @overload get_disk(**params)
     # @param [Hash] params ({})
-    def get_disk(params = {}, options = {})
+    def get_disk(params = {}, **options)
       req = build_request(:get_disk, params)
       req.send_request(options)
     end
@@ -5697,9 +5697,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDiskSnapshot AWS API Documentation
     #
-    # @overload get_disk_snapshot(params = {})
+    # @overload get_disk_snapshot(**params)
     # @param [Hash] params ({})
-    def get_disk_snapshot(params = {}, options = {})
+    def get_disk_snapshot(params = {}, **options)
       req = build_request(:get_disk_snapshot, params)
       req.send_request(options)
     end
@@ -5750,9 +5750,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDiskSnapshots AWS API Documentation
     #
-    # @overload get_disk_snapshots(params = {})
+    # @overload get_disk_snapshots(**params)
     # @param [Hash] params ({})
-    def get_disk_snapshots(params = {}, options = {})
+    def get_disk_snapshots(params = {}, **options)
       req = build_request(:get_disk_snapshots, params)
       req.send_request(options)
     end
@@ -5809,9 +5809,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDisks AWS API Documentation
     #
-    # @overload get_disks(params = {})
+    # @overload get_disks(**params)
     # @param [Hash] params ({})
-    def get_disks(params = {}, options = {})
+    def get_disks(params = {}, **options)
       req = build_request(:get_disks, params)
       req.send_request(options)
     end
@@ -5837,9 +5837,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDistributionBundles AWS API Documentation
     #
-    # @overload get_distribution_bundles(params = {})
+    # @overload get_distribution_bundles(**params)
     # @param [Hash] params ({})
-    def get_distribution_bundles(params = {}, options = {})
+    def get_distribution_bundles(params = {}, **options)
       req = build_request(:get_distribution_bundles, params)
       req.send_request(options)
     end
@@ -5875,9 +5875,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDistributionLatestCacheReset AWS API Documentation
     #
-    # @overload get_distribution_latest_cache_reset(params = {})
+    # @overload get_distribution_latest_cache_reset(**params)
     # @param [Hash] params ({})
-    def get_distribution_latest_cache_reset(params = {}, options = {})
+    def get_distribution_latest_cache_reset(params = {}, **options)
       req = build_request(:get_distribution_latest_cache_reset, params)
       req.send_request(options)
     end
@@ -6059,9 +6059,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDistributionMetricData AWS API Documentation
     #
-    # @overload get_distribution_metric_data(params = {})
+    # @overload get_distribution_metric_data(**params)
     # @param [Hash] params ({})
-    def get_distribution_metric_data(params = {}, options = {})
+    def get_distribution_metric_data(params = {}, **options)
       req = build_request(:get_distribution_metric_data, params)
       req.send_request(options)
     end
@@ -6145,9 +6145,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDistributions AWS API Documentation
     #
-    # @overload get_distributions(params = {})
+    # @overload get_distributions(**params)
     # @param [Hash] params ({})
-    def get_distributions(params = {}, options = {})
+    def get_distributions(params = {}, **options)
       req = build_request(:get_distributions, params)
       req.send_request(options)
     end
@@ -6190,9 +6190,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDomain AWS API Documentation
     #
-    # @overload get_domain(params = {})
+    # @overload get_domain(**params)
     # @param [Hash] params ({})
-    def get_domain(params = {}, options = {})
+    def get_domain(params = {}, **options)
       req = build_request(:get_domain, params)
       req.send_request(options)
     end
@@ -6242,9 +6242,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetDomains AWS API Documentation
     #
-    # @overload get_domains(params = {})
+    # @overload get_domains(**params)
     # @param [Hash] params ({})
-    def get_domains(params = {}, options = {})
+    def get_domains(params = {}, **options)
       req = build_request(:get_domains, params)
       req.send_request(options)
     end
@@ -6305,9 +6305,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetExportSnapshotRecords AWS API Documentation
     #
-    # @overload get_export_snapshot_records(params = {})
+    # @overload get_export_snapshot_records(**params)
     # @param [Hash] params ({})
-    def get_export_snapshot_records(params = {}, options = {})
+    def get_export_snapshot_records(params = {}, **options)
       req = build_request(:get_export_snapshot_records, params)
       req.send_request(options)
     end
@@ -6399,9 +6399,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstance AWS API Documentation
     #
-    # @overload get_instance(params = {})
+    # @overload get_instance(**params)
     # @param [Hash] params ({})
-    def get_instance(params = {}, options = {})
+    def get_instance(params = {}, **options)
       req = build_request(:get_instance, params)
       req.send_request(options)
     end
@@ -6458,9 +6458,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstanceAccessDetails AWS API Documentation
     #
-    # @overload get_instance_access_details(params = {})
+    # @overload get_instance_access_details(**params)
     # @param [Hash] params ({})
-    def get_instance_access_details(params = {}, options = {})
+    def get_instance_access_details(params = {}, **options)
       req = build_request(:get_instance_access_details, params)
       req.send_request(options)
     end
@@ -6658,9 +6658,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstanceMetricData AWS API Documentation
     #
-    # @overload get_instance_metric_data(params = {})
+    # @overload get_instance_metric_data(**params)
     # @param [Hash] params ({})
-    def get_instance_metric_data(params = {}, options = {})
+    def get_instance_metric_data(params = {}, **options)
       req = build_request(:get_instance_metric_data, params)
       req.send_request(options)
     end
@@ -6696,9 +6696,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstancePortStates AWS API Documentation
     #
-    # @overload get_instance_port_states(params = {})
+    # @overload get_instance_port_states(**params)
     # @param [Hash] params ({})
-    def get_instance_port_states(params = {}, options = {})
+    def get_instance_port_states(params = {}, **options)
       req = build_request(:get_instance_port_states, params)
       req.send_request(options)
     end
@@ -6766,9 +6766,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstanceSnapshot AWS API Documentation
     #
-    # @overload get_instance_snapshot(params = {})
+    # @overload get_instance_snapshot(**params)
     # @param [Hash] params ({})
-    def get_instance_snapshot(params = {}, options = {})
+    def get_instance_snapshot(params = {}, **options)
       req = build_request(:get_instance_snapshot, params)
       req.send_request(options)
     end
@@ -6844,9 +6844,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstanceSnapshots AWS API Documentation
     #
-    # @overload get_instance_snapshots(params = {})
+    # @overload get_instance_snapshots(**params)
     # @param [Hash] params ({})
-    def get_instance_snapshots(params = {}, options = {})
+    def get_instance_snapshots(params = {}, **options)
       req = build_request(:get_instance_snapshots, params)
       req.send_request(options)
     end
@@ -6874,9 +6874,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstanceState AWS API Documentation
     #
-    # @overload get_instance_state(params = {})
+    # @overload get_instance_state(**params)
     # @param [Hash] params ({})
-    def get_instance_state(params = {}, options = {})
+    def get_instance_state(params = {}, **options)
       req = build_request(:get_instance_state, params)
       req.send_request(options)
     end
@@ -6975,9 +6975,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetInstances AWS API Documentation
     #
-    # @overload get_instances(params = {})
+    # @overload get_instances(**params)
     # @param [Hash] params ({})
-    def get_instances(params = {}, options = {})
+    def get_instances(params = {}, **options)
       req = build_request(:get_instances, params)
       req.send_request(options)
     end
@@ -7013,9 +7013,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetKeyPair AWS API Documentation
     #
-    # @overload get_key_pair(params = {})
+    # @overload get_key_pair(**params)
     # @param [Hash] params ({})
-    def get_key_pair(params = {}, options = {})
+    def get_key_pair(params = {}, **options)
       req = build_request(:get_key_pair, params)
       req.send_request(options)
     end
@@ -7058,9 +7058,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetKeyPairs AWS API Documentation
     #
-    # @overload get_key_pairs(params = {})
+    # @overload get_key_pairs(**params)
     # @param [Hash] params ({})
-    def get_key_pairs(params = {}, options = {})
+    def get_key_pairs(params = {}, **options)
       req = build_request(:get_key_pairs, params)
       req.send_request(options)
     end
@@ -7111,9 +7111,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetLoadBalancer AWS API Documentation
     #
-    # @overload get_load_balancer(params = {})
+    # @overload get_load_balancer(**params)
     # @param [Hash] params ({})
-    def get_load_balancer(params = {}, options = {})
+    def get_load_balancer(params = {}, **options)
       req = build_request(:get_load_balancer, params)
       req.send_request(options)
     end
@@ -7318,9 +7318,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetLoadBalancerMetricData AWS API Documentation
     #
-    # @overload get_load_balancer_metric_data(params = {})
+    # @overload get_load_balancer_metric_data(**params)
     # @param [Hash] params ({})
-    def get_load_balancer_metric_data(params = {}, options = {})
+    def get_load_balancer_metric_data(params = {}, **options)
       req = build_request(:get_load_balancer_metric_data, params)
       req.send_request(options)
     end
@@ -7391,9 +7391,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetLoadBalancerTlsCertificates AWS API Documentation
     #
-    # @overload get_load_balancer_tls_certificates(params = {})
+    # @overload get_load_balancer_tls_certificates(**params)
     # @param [Hash] params ({})
-    def get_load_balancer_tls_certificates(params = {}, options = {})
+    def get_load_balancer_tls_certificates(params = {}, **options)
       req = build_request(:get_load_balancer_tls_certificates, params)
       req.send_request(options)
     end
@@ -7451,9 +7451,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetLoadBalancers AWS API Documentation
     #
-    # @overload get_load_balancers(params = {})
+    # @overload get_load_balancers(**params)
     # @param [Hash] params ({})
-    def get_load_balancers(params = {}, options = {})
+    def get_load_balancers(params = {}, **options)
       req = build_request(:get_load_balancers, params)
       req.send_request(options)
     end
@@ -7493,9 +7493,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetOperation AWS API Documentation
     #
-    # @overload get_operation(params = {})
+    # @overload get_operation(**params)
     # @param [Hash] params ({})
-    def get_operation(params = {}, options = {})
+    def get_operation(params = {}, **options)
       req = build_request(:get_operation, params)
       req.send_request(options)
     end
@@ -7545,9 +7545,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetOperations AWS API Documentation
     #
-    # @overload get_operations(params = {})
+    # @overload get_operations(**params)
     # @param [Hash] params ({})
-    def get_operations(params = {}, options = {})
+    def get_operations(params = {}, **options)
       req = build_request(:get_operations, params)
       req.send_request(options)
     end
@@ -7600,9 +7600,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetOperationsForResource AWS API Documentation
     #
-    # @overload get_operations_for_resource(params = {})
+    # @overload get_operations_for_resource(**params)
     # @param [Hash] params ({})
-    def get_operations_for_resource(params = {}, options = {})
+    def get_operations_for_resource(params = {}, **options)
       req = build_request(:get_operations_for_resource, params)
       req.send_request(options)
     end
@@ -7648,9 +7648,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRegions AWS API Documentation
     #
-    # @overload get_regions(params = {})
+    # @overload get_regions(**params)
     # @param [Hash] params ({})
-    def get_regions(params = {}, options = {})
+    def get_regions(params = {}, **options)
       req = build_request(:get_regions, params)
       req.send_request(options)
     end
@@ -7712,9 +7712,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabase AWS API Documentation
     #
-    # @overload get_relational_database(params = {})
+    # @overload get_relational_database(**params)
     # @param [Hash] params ({})
-    def get_relational_database(params = {}, options = {})
+    def get_relational_database(params = {}, **options)
       req = build_request(:get_relational_database, params)
       req.send_request(options)
     end
@@ -7757,9 +7757,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseBlueprints AWS API Documentation
     #
-    # @overload get_relational_database_blueprints(params = {})
+    # @overload get_relational_database_blueprints(**params)
     # @param [Hash] params ({})
-    def get_relational_database_blueprints(params = {}, options = {})
+    def get_relational_database_blueprints(params = {}, **options)
       req = build_request(:get_relational_database_blueprints, params)
       req.send_request(options)
     end
@@ -7805,9 +7805,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseBundles AWS API Documentation
     #
-    # @overload get_relational_database_bundles(params = {})
+    # @overload get_relational_database_bundles(**params)
     # @param [Hash] params ({})
-    def get_relational_database_bundles(params = {}, options = {})
+    def get_relational_database_bundles(params = {}, **options)
       req = build_request(:get_relational_database_bundles, params)
       req.send_request(options)
     end
@@ -7858,9 +7858,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseEvents AWS API Documentation
     #
-    # @overload get_relational_database_events(params = {})
+    # @overload get_relational_database_events(**params)
     # @param [Hash] params ({})
-    def get_relational_database_events(params = {}, options = {})
+    def get_relational_database_events(params = {}, **options)
       req = build_request(:get_relational_database_events, params)
       req.send_request(options)
     end
@@ -7947,9 +7947,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseLogEvents AWS API Documentation
     #
-    # @overload get_relational_database_log_events(params = {})
+    # @overload get_relational_database_log_events(**params)
     # @param [Hash] params ({})
-    def get_relational_database_log_events(params = {}, options = {})
+    def get_relational_database_log_events(params = {}, **options)
       req = build_request(:get_relational_database_log_events, params)
       req.send_request(options)
     end
@@ -7977,9 +7977,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseLogStreams AWS API Documentation
     #
-    # @overload get_relational_database_log_streams(params = {})
+    # @overload get_relational_database_log_streams(**params)
     # @param [Hash] params ({})
-    def get_relational_database_log_streams(params = {}, options = {})
+    def get_relational_database_log_streams(params = {}, **options)
       req = build_request(:get_relational_database_log_streams, params)
       req.send_request(options)
     end
@@ -8024,9 +8024,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseMasterUserPassword AWS API Documentation
     #
-    # @overload get_relational_database_master_user_password(params = {})
+    # @overload get_relational_database_master_user_password(**params)
     # @param [Hash] params ({})
-    def get_relational_database_master_user_password(params = {}, options = {})
+    def get_relational_database_master_user_password(params = {}, **options)
       req = build_request(:get_relational_database_master_user_password, params)
       req.send_request(options)
     end
@@ -8190,9 +8190,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseMetricData AWS API Documentation
     #
-    # @overload get_relational_database_metric_data(params = {})
+    # @overload get_relational_database_metric_data(**params)
     # @param [Hash] params ({})
-    def get_relational_database_metric_data(params = {}, options = {})
+    def get_relational_database_metric_data(params = {}, **options)
       req = build_request(:get_relational_database_metric_data, params)
       req.send_request(options)
     end
@@ -8244,9 +8244,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseParameters AWS API Documentation
     #
-    # @overload get_relational_database_parameters(params = {})
+    # @overload get_relational_database_parameters(**params)
     # @param [Hash] params ({})
-    def get_relational_database_parameters(params = {}, options = {})
+    def get_relational_database_parameters(params = {}, **options)
       req = build_request(:get_relational_database_parameters, params)
       req.send_request(options)
     end
@@ -8290,9 +8290,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseSnapshot AWS API Documentation
     #
-    # @overload get_relational_database_snapshot(params = {})
+    # @overload get_relational_database_snapshot(**params)
     # @param [Hash] params ({})
-    def get_relational_database_snapshot(params = {}, options = {})
+    def get_relational_database_snapshot(params = {}, **options)
       req = build_request(:get_relational_database_snapshot, params)
       req.send_request(options)
     end
@@ -8344,9 +8344,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabaseSnapshots AWS API Documentation
     #
-    # @overload get_relational_database_snapshots(params = {})
+    # @overload get_relational_database_snapshots(**params)
     # @param [Hash] params ({})
-    def get_relational_database_snapshots(params = {}, options = {})
+    def get_relational_database_snapshots(params = {}, **options)
       req = build_request(:get_relational_database_snapshots, params)
       req.send_request(options)
     end
@@ -8416,9 +8416,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetRelationalDatabases AWS API Documentation
     #
-    # @overload get_relational_databases(params = {})
+    # @overload get_relational_databases(**params)
     # @param [Hash] params ({})
-    def get_relational_databases(params = {}, options = {})
+    def get_relational_databases(params = {}, **options)
       req = build_request(:get_relational_databases, params)
       req.send_request(options)
     end
@@ -8453,9 +8453,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetStaticIp AWS API Documentation
     #
-    # @overload get_static_ip(params = {})
+    # @overload get_static_ip(**params)
     # @param [Hash] params ({})
-    def get_static_ip(params = {}, options = {})
+    def get_static_ip(params = {}, **options)
       req = build_request(:get_static_ip, params)
       req.send_request(options)
     end
@@ -8497,9 +8497,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetStaticIps AWS API Documentation
     #
-    # @overload get_static_ips(params = {})
+    # @overload get_static_ips(**params)
     # @param [Hash] params ({})
-    def get_static_ips(params = {}, options = {})
+    def get_static_ips(params = {}, **options)
       req = build_request(:get_static_ips, params)
       req.send_request(options)
     end
@@ -8541,9 +8541,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/ImportKeyPair AWS API Documentation
     #
-    # @overload import_key_pair(params = {})
+    # @overload import_key_pair(**params)
     # @param [Hash] params ({})
-    def import_key_pair(params = {}, options = {})
+    def import_key_pair(params = {}, **options)
       req = build_request(:import_key_pair, params)
       req.send_request(options)
     end
@@ -8561,9 +8561,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/IsVpcPeered AWS API Documentation
     #
-    # @overload is_vpc_peered(params = {})
+    # @overload is_vpc_peered(**params)
     # @param [Hash] params ({})
-    def is_vpc_peered(params = {}, options = {})
+    def is_vpc_peered(params = {}, **options)
       req = build_request(:is_vpc_peered, params)
       req.send_request(options)
     end
@@ -8622,9 +8622,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/OpenInstancePublicPorts AWS API Documentation
     #
-    # @overload open_instance_public_ports(params = {})
+    # @overload open_instance_public_ports(**params)
     # @param [Hash] params ({})
-    def open_instance_public_ports(params = {}, options = {})
+    def open_instance_public_ports(params = {}, **options)
       req = build_request(:open_instance_public_ports, params)
       req.send_request(options)
     end
@@ -8653,9 +8653,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/PeerVpc AWS API Documentation
     #
-    # @overload peer_vpc(params = {})
+    # @overload peer_vpc(**params)
     # @param [Hash] params ({})
-    def peer_vpc(params = {}, options = {})
+    def peer_vpc(params = {}, **options)
       req = build_request(:peer_vpc, params)
       req.send_request(options)
     end
@@ -8860,9 +8860,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/PutAlarm AWS API Documentation
     #
-    # @overload put_alarm(params = {})
+    # @overload put_alarm(**params)
     # @param [Hash] params ({})
-    def put_alarm(params = {}, options = {})
+    def put_alarm(params = {}, **options)
       req = build_request(:put_alarm, params)
       req.send_request(options)
     end
@@ -8928,9 +8928,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/PutInstancePublicPorts AWS API Documentation
     #
-    # @overload put_instance_public_ports(params = {})
+    # @overload put_instance_public_ports(**params)
     # @param [Hash] params ({})
-    def put_instance_public_ports(params = {}, options = {})
+    def put_instance_public_ports(params = {}, **options)
       req = build_request(:put_instance_public_ports, params)
       req.send_request(options)
     end
@@ -8977,9 +8977,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/RebootInstance AWS API Documentation
     #
-    # @overload reboot_instance(params = {})
+    # @overload reboot_instance(**params)
     # @param [Hash] params ({})
-    def reboot_instance(params = {}, options = {})
+    def reboot_instance(params = {}, **options)
       req = build_request(:reboot_instance, params)
       req.send_request(options)
     end
@@ -9027,9 +9027,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/RebootRelationalDatabase AWS API Documentation
     #
-    # @overload reboot_relational_database(params = {})
+    # @overload reboot_relational_database(**params)
     # @param [Hash] params ({})
-    def reboot_relational_database(params = {}, options = {})
+    def reboot_relational_database(params = {}, **options)
       req = build_request(:reboot_relational_database, params)
       req.send_request(options)
     end
@@ -9100,9 +9100,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/RegisterContainerImage AWS API Documentation
     #
-    # @overload register_container_image(params = {})
+    # @overload register_container_image(**params)
     # @param [Hash] params ({})
-    def register_container_image(params = {}, options = {})
+    def register_container_image(params = {}, **options)
       req = build_request(:register_container_image, params)
       req.send_request(options)
     end
@@ -9141,9 +9141,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/ReleaseStaticIp AWS API Documentation
     #
-    # @overload release_static_ip(params = {})
+    # @overload release_static_ip(**params)
     # @param [Hash] params ({})
-    def release_static_ip(params = {}, options = {})
+    def release_static_ip(params = {}, **options)
       req = build_request(:release_static_ip, params)
       req.send_request(options)
     end
@@ -9192,9 +9192,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/ResetDistributionCache AWS API Documentation
     #
-    # @overload reset_distribution_cache(params = {})
+    # @overload reset_distribution_cache(**params)
     # @param [Hash] params ({})
-    def reset_distribution_cache(params = {}, options = {})
+    def reset_distribution_cache(params = {}, **options)
       req = build_request(:reset_distribution_cache, params)
       req.send_request(options)
     end
@@ -9254,9 +9254,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/SendContactMethodVerification AWS API Documentation
     #
-    # @overload send_contact_method_verification(params = {})
+    # @overload send_contact_method_verification(**params)
     # @param [Hash] params ({})
-    def send_contact_method_verification(params = {}, options = {})
+    def send_contact_method_verification(params = {}, **options)
       req = build_request(:send_contact_method_verification, params)
       req.send_request(options)
     end
@@ -9312,9 +9312,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/StartInstance AWS API Documentation
     #
-    # @overload start_instance(params = {})
+    # @overload start_instance(**params)
     # @param [Hash] params ({})
-    def start_instance(params = {}, options = {})
+    def start_instance(params = {}, **options)
       req = build_request(:start_instance, params)
       req.send_request(options)
     end
@@ -9363,9 +9363,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/StartRelationalDatabase AWS API Documentation
     #
-    # @overload start_relational_database(params = {})
+    # @overload start_relational_database(**params)
     # @param [Hash] params ({})
-    def start_relational_database(params = {}, options = {})
+    def start_relational_database(params = {}, **options)
       req = build_request(:start_relational_database, params)
       req.send_request(options)
     end
@@ -9429,9 +9429,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/StopInstance AWS API Documentation
     #
-    # @overload stop_instance(params = {})
+    # @overload stop_instance(**params)
     # @param [Hash] params ({})
-    def stop_instance(params = {}, options = {})
+    def stop_instance(params = {}, **options)
       req = build_request(:stop_instance, params)
       req.send_request(options)
     end
@@ -9485,9 +9485,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/StopRelationalDatabase AWS API Documentation
     #
-    # @overload stop_relational_database(params = {})
+    # @overload stop_relational_database(**params)
     # @param [Hash] params ({})
-    def stop_relational_database(params = {}, options = {})
+    def stop_relational_database(params = {}, **options)
       req = build_request(:stop_relational_database, params)
       req.send_request(options)
     end
@@ -9553,9 +9553,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -9620,9 +9620,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/TestAlarm AWS API Documentation
     #
-    # @overload test_alarm(params = {})
+    # @overload test_alarm(**params)
     # @param [Hash] params ({})
-    def test_alarm(params = {}, options = {})
+    def test_alarm(params = {}, **options)
       req = build_request(:test_alarm, params)
       req.send_request(options)
     end
@@ -9651,9 +9651,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UnpeerVpc AWS API Documentation
     #
-    # @overload unpeer_vpc(params = {})
+    # @overload unpeer_vpc(**params)
     # @param [Hash] params ({})
-    def unpeer_vpc(params = {}, options = {})
+    def unpeer_vpc(params = {}, **options)
       req = build_request(:unpeer_vpc, params)
       req.send_request(options)
     end
@@ -9711,9 +9711,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -9847,9 +9847,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateContainerService AWS API Documentation
     #
-    # @overload update_container_service(params = {})
+    # @overload update_container_service(**params)
     # @param [Hash] params ({})
-    def update_container_service(params = {}, options = {})
+    def update_container_service(params = {}, **options)
       req = build_request(:update_container_service, params)
       req.send_request(options)
     end
@@ -9955,9 +9955,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateDistribution AWS API Documentation
     #
-    # @overload update_distribution(params = {})
+    # @overload update_distribution(**params)
     # @param [Hash] params ({})
-    def update_distribution(params = {}, options = {})
+    def update_distribution(params = {}, **options)
       req = build_request(:update_distribution, params)
       req.send_request(options)
     end
@@ -10018,9 +10018,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateDistributionBundle AWS API Documentation
     #
-    # @overload update_distribution_bundle(params = {})
+    # @overload update_distribution_bundle(**params)
     # @param [Hash] params ({})
-    def update_distribution_bundle(params = {}, options = {})
+    def update_distribution_bundle(params = {}, **options)
       req = build_request(:update_distribution_bundle, params)
       req.send_request(options)
     end
@@ -10081,9 +10081,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateDomainEntry AWS API Documentation
     #
-    # @overload update_domain_entry(params = {})
+    # @overload update_domain_entry(**params)
     # @param [Hash] params ({})
-    def update_domain_entry(params = {}, options = {})
+    def update_domain_entry(params = {}, **options)
       req = build_request(:update_domain_entry, params)
       req.send_request(options)
     end
@@ -10141,9 +10141,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateLoadBalancerAttribute AWS API Documentation
     #
-    # @overload update_load_balancer_attribute(params = {})
+    # @overload update_load_balancer_attribute(**params)
     # @param [Hash] params ({})
-    def update_load_balancer_attribute(params = {}, options = {})
+    def update_load_balancer_attribute(params = {}, **options)
       req = build_request(:update_load_balancer_attribute, params)
       req.send_request(options)
     end
@@ -10288,9 +10288,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateRelationalDatabase AWS API Documentation
     #
-    # @overload update_relational_database(params = {})
+    # @overload update_relational_database(**params)
     # @param [Hash] params ({})
-    def update_relational_database(params = {}, options = {})
+    def update_relational_database(params = {}, **options)
       req = build_request(:update_relational_database, params)
       req.send_request(options)
     end
@@ -10362,9 +10362,9 @@ module Aws::Lightsail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateRelationalDatabaseParameters AWS API Documentation
     #
-    # @overload update_relational_database_parameters(params = {})
+    # @overload update_relational_database_parameters(**params)
     # @param [Hash] params ({})
-    def update_relational_database_parameters(params = {}, options = {})
+    def update_relational_database_parameters(params = {}, **options)
       req = build_request(:update_relational_database_parameters, params)
       req.send_request(options)
     end
@@ -10373,7 +10373,7 @@ module Aws::Lightsail
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -10381,15 +10381,15 @@ module Aws::Lightsail
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-lightsail'
-      context[:gem_version] = '1.40.0'
+      context[:gem_name] = "aws-sdk-lightsail"
+      context[:gem_version] = "1.40.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

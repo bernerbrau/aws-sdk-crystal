@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ec2instanceconnect/types'
-require_relative 'aws-sdk-ec2instanceconnect/client_api'
-require_relative 'aws-sdk-ec2instanceconnect/client'
-require_relative 'aws-sdk-ec2instanceconnect/errors'
-require_relative 'aws-sdk-ec2instanceconnect/resource'
-require_relative 'aws-sdk-ec2instanceconnect/customizations'
+require_relative "aws-sdk-ec2instanceconnect/types"
+require_relative "aws-sdk-ec2instanceconnect/client_api"
+require_relative "aws-sdk-ec2instanceconnect/client"
+require_relative "aws-sdk-ec2instanceconnect/errors"
+require_relative "aws-sdk-ec2instanceconnect/resource"
+require_relative "aws-sdk-ec2instanceconnect/customizations"
 
 # This module provides support for AWS EC2 Instance Connect. This module is available in the
 # `aws-sdk-ec2instanceconnect` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ec2instanceconnect/customizations'
 # @!group service
 module Aws::EC2InstanceConnect
 
-  GEM_VERSION = '1.11.0'
+  GEM_VERSION = "1.11.0"
 
 end

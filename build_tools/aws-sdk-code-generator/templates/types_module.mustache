@@ -28,7 +28,7 @@ module {{module_name}}
 
       def event_types
         {{#empty?}}
-        []
+        [] of String
         {{/empty?}}
         {{^empty?}}
         [

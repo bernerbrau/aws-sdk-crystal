@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:appmesh)
 
@@ -280,7 +280,7 @@ module Aws::AppMesh
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -459,9 +459,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateGatewayRoute AWS API Documentation
     #
-    # @overload create_gateway_route(params = {})
+    # @overload create_gateway_route(**params)
     # @param [Hash] params ({})
-    def create_gateway_route(params = {}, options = {})
+    def create_gateway_route(params = {}, **options)
       req = build_request(:create_gateway_route, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateMesh AWS API Documentation
     #
-    # @overload create_mesh(params = {})
+    # @overload create_mesh(**params)
     # @param [Hash] params ({})
-    def create_mesh(params = {}, options = {})
+    def create_mesh(params = {}, **options)
       req = build_request(:create_mesh, params)
       req.send_request(options)
     end
@@ -886,9 +886,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateRoute AWS API Documentation
     #
-    # @overload create_route(params = {})
+    # @overload create_route(**params)
     # @param [Hash] params ({})
-    def create_route(params = {}, options = {})
+    def create_route(params = {}, **options)
       req = build_request(:create_route, params)
       req.send_request(options)
     end
@@ -1071,9 +1071,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateVirtualGateway AWS API Documentation
     #
-    # @overload create_virtual_gateway(params = {})
+    # @overload create_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def create_virtual_gateway(params = {}, options = {})
+    def create_virtual_gateway(params = {}, **options)
       req = build_request(:create_virtual_gateway, params)
       req.send_request(options)
     end
@@ -1407,9 +1407,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateVirtualNode AWS API Documentation
     #
-    # @overload create_virtual_node(params = {})
+    # @overload create_virtual_node(**params)
     # @param [Hash] params ({})
-    def create_virtual_node(params = {}, options = {})
+    def create_virtual_node(params = {}, **options)
       req = build_request(:create_virtual_node, params)
       req.send_request(options)
     end
@@ -1511,9 +1511,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateVirtualRouter AWS API Documentation
     #
-    # @overload create_virtual_router(params = {})
+    # @overload create_virtual_router(**params)
     # @param [Hash] params ({})
-    def create_virtual_router(params = {}, options = {})
+    def create_virtual_router(params = {}, **options)
       req = build_request(:create_virtual_router, params)
       req.send_request(options)
     end
@@ -1615,9 +1615,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/CreateVirtualService AWS API Documentation
     #
-    # @overload create_virtual_service(params = {})
+    # @overload create_virtual_service(**params)
     # @param [Hash] params ({})
-    def create_virtual_service(params = {}, options = {})
+    def create_virtual_service(params = {}, **options)
       req = build_request(:create_virtual_service, params)
       req.send_request(options)
     end
@@ -1678,9 +1678,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteGatewayRoute AWS API Documentation
     #
-    # @overload delete_gateway_route(params = {})
+    # @overload delete_gateway_route(**params)
     # @param [Hash] params ({})
-    def delete_gateway_route(params = {}, options = {})
+    def delete_gateway_route(params = {}, **options)
       req = build_request(:delete_gateway_route, params)
       req.send_request(options)
     end
@@ -1719,9 +1719,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteMesh AWS API Documentation
     #
-    # @overload delete_mesh(params = {})
+    # @overload delete_mesh(**params)
     # @param [Hash] params ({})
-    def delete_mesh(params = {}, options = {})
+    def delete_mesh(params = {}, **options)
       req = build_request(:delete_mesh, params)
       req.send_request(options)
     end
@@ -1861,9 +1861,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteRoute AWS API Documentation
     #
-    # @overload delete_route(params = {})
+    # @overload delete_route(**params)
     # @param [Hash] params ({})
-    def delete_route(params = {}, options = {})
+    def delete_route(params = {}, **options)
       req = build_request(:delete_route, params)
       req.send_request(options)
     end
@@ -1939,9 +1939,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteVirtualGateway AWS API Documentation
     #
-    # @overload delete_virtual_gateway(params = {})
+    # @overload delete_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def delete_virtual_gateway(params = {}, options = {})
+    def delete_virtual_gateway(params = {}, **options)
       req = build_request(:delete_virtual_gateway, params)
       req.send_request(options)
     end
@@ -2054,9 +2054,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteVirtualNode AWS API Documentation
     #
-    # @overload delete_virtual_node(params = {})
+    # @overload delete_virtual_node(**params)
     # @param [Hash] params ({})
-    def delete_virtual_node(params = {}, options = {})
+    def delete_virtual_node(params = {}, **options)
       req = build_request(:delete_virtual_node, params)
       req.send_request(options)
     end
@@ -2112,9 +2112,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteVirtualRouter AWS API Documentation
     #
-    # @overload delete_virtual_router(params = {})
+    # @overload delete_virtual_router(**params)
     # @param [Hash] params ({})
-    def delete_virtual_router(params = {}, options = {})
+    def delete_virtual_router(params = {}, **options)
       req = build_request(:delete_virtual_router, params)
       req.send_request(options)
     end
@@ -2166,9 +2166,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DeleteVirtualService AWS API Documentation
     #
-    # @overload delete_virtual_service(params = {})
+    # @overload delete_virtual_service(**params)
     # @param [Hash] params ({})
-    def delete_virtual_service(params = {}, options = {})
+    def delete_virtual_service(params = {}, **options)
       req = build_request(:delete_virtual_service, params)
       req.send_request(options)
     end
@@ -2230,9 +2230,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeGatewayRoute AWS API Documentation
     #
-    # @overload describe_gateway_route(params = {})
+    # @overload describe_gateway_route(**params)
     # @param [Hash] params ({})
-    def describe_gateway_route(params = {}, options = {})
+    def describe_gateway_route(params = {}, **options)
       req = build_request(:describe_gateway_route, params)
       req.send_request(options)
     end
@@ -2278,9 +2278,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeMesh AWS API Documentation
     #
-    # @overload describe_mesh(params = {})
+    # @overload describe_mesh(**params)
     # @param [Hash] params ({})
-    def describe_mesh(params = {}, options = {})
+    def describe_mesh(params = {}, **options)
       req = build_request(:describe_mesh, params)
       req.send_request(options)
     end
@@ -2420,9 +2420,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeRoute AWS API Documentation
     #
-    # @overload describe_route(params = {})
+    # @overload describe_route(**params)
     # @param [Hash] params ({})
-    def describe_route(params = {}, options = {})
+    def describe_route(params = {}, **options)
       req = build_request(:describe_route, params)
       req.send_request(options)
     end
@@ -2497,9 +2497,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeVirtualGateway AWS API Documentation
     #
-    # @overload describe_virtual_gateway(params = {})
+    # @overload describe_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def describe_virtual_gateway(params = {}, options = {})
+    def describe_virtual_gateway(params = {}, **options)
       req = build_request(:describe_virtual_gateway, params)
       req.send_request(options)
     end
@@ -2609,9 +2609,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeVirtualNode AWS API Documentation
     #
-    # @overload describe_virtual_node(params = {})
+    # @overload describe_virtual_node(**params)
     # @param [Hash] params ({})
-    def describe_virtual_node(params = {}, options = {})
+    def describe_virtual_node(params = {}, **options)
       req = build_request(:describe_virtual_node, params)
       req.send_request(options)
     end
@@ -2664,9 +2664,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeVirtualRouter AWS API Documentation
     #
-    # @overload describe_virtual_router(params = {})
+    # @overload describe_virtual_router(**params)
     # @param [Hash] params ({})
-    def describe_virtual_router(params = {}, options = {})
+    def describe_virtual_router(params = {}, **options)
       req = build_request(:describe_virtual_router, params)
       req.send_request(options)
     end
@@ -2718,9 +2718,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/DescribeVirtualService AWS API Documentation
     #
-    # @overload describe_virtual_service(params = {})
+    # @overload describe_virtual_service(**params)
     # @param [Hash] params ({})
-    def describe_virtual_service(params = {}, options = {})
+    def describe_virtual_service(params = {}, **options)
       req = build_request(:describe_virtual_service, params)
       req.send_request(options)
     end
@@ -2793,9 +2793,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListGatewayRoutes AWS API Documentation
     #
-    # @overload list_gateway_routes(params = {})
+    # @overload list_gateway_routes(**params)
     # @param [Hash] params ({})
-    def list_gateway_routes(params = {}, options = {})
+    def list_gateway_routes(params = {}, **options)
       req = build_request(:list_gateway_routes, params)
       req.send_request(options)
     end
@@ -2852,9 +2852,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListMeshes AWS API Documentation
     #
-    # @overload list_meshes(params = {})
+    # @overload list_meshes(**params)
     # @param [Hash] params ({})
-    def list_meshes(params = {}, options = {})
+    def list_meshes(params = {}, **options)
       req = build_request(:list_meshes, params)
       req.send_request(options)
     end
@@ -2926,9 +2926,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListRoutes AWS API Documentation
     #
-    # @overload list_routes(params = {})
+    # @overload list_routes(**params)
     # @param [Hash] params ({})
-    def list_routes(params = {}, options = {})
+    def list_routes(params = {}, **options)
       req = build_request(:list_routes, params)
       req.send_request(options)
     end
@@ -2979,9 +2979,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3048,9 +3048,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListVirtualGateways AWS API Documentation
     #
-    # @overload list_virtual_gateways(params = {})
+    # @overload list_virtual_gateways(**params)
     # @param [Hash] params ({})
-    def list_virtual_gateways(params = {}, options = {})
+    def list_virtual_gateways(params = {}, **options)
       req = build_request(:list_virtual_gateways, params)
       req.send_request(options)
     end
@@ -3117,9 +3117,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListVirtualNodes AWS API Documentation
     #
-    # @overload list_virtual_nodes(params = {})
+    # @overload list_virtual_nodes(**params)
     # @param [Hash] params ({})
-    def list_virtual_nodes(params = {}, options = {})
+    def list_virtual_nodes(params = {}, **options)
       req = build_request(:list_virtual_nodes, params)
       req.send_request(options)
     end
@@ -3186,9 +3186,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListVirtualRouters AWS API Documentation
     #
-    # @overload list_virtual_routers(params = {})
+    # @overload list_virtual_routers(**params)
     # @param [Hash] params ({})
-    def list_virtual_routers(params = {}, options = {})
+    def list_virtual_routers(params = {}, **options)
       req = build_request(:list_virtual_routers, params)
       req.send_request(options)
     end
@@ -3255,9 +3255,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/ListVirtualServices AWS API Documentation
     #
-    # @overload list_virtual_services(params = {})
+    # @overload list_virtual_services(**params)
     # @param [Hash] params ({})
-    def list_virtual_services(params = {}, options = {})
+    def list_virtual_services(params = {}, **options)
       req = build_request(:list_virtual_services, params)
       req.send_request(options)
     end
@@ -3291,9 +3291,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3317,9 +3317,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3433,9 +3433,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateGatewayRoute AWS API Documentation
     #
-    # @overload update_gateway_route(params = {})
+    # @overload update_gateway_route(**params)
     # @param [Hash] params ({})
-    def update_gateway_route(params = {}, options = {})
+    def update_gateway_route(params = {}, **options)
       req = build_request(:update_gateway_route, params)
       req.send_request(options)
     end
@@ -3487,9 +3487,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateMesh AWS API Documentation
     #
-    # @overload update_mesh(params = {})
+    # @overload update_mesh(**params)
     # @param [Hash] params ({})
-    def update_mesh(params = {}, options = {})
+    def update_mesh(params = {}, **options)
       req = build_request(:update_mesh, params)
       req.send_request(options)
     end
@@ -3812,9 +3812,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateRoute AWS API Documentation
     #
-    # @overload update_route(params = {})
+    # @overload update_route(**params)
     # @param [Hash] params ({})
-    def update_route(params = {}, options = {})
+    def update_route(params = {}, **options)
       req = build_request(:update_route, params)
       req.send_request(options)
     end
@@ -3970,9 +3970,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateVirtualGateway AWS API Documentation
     #
-    # @overload update_virtual_gateway(params = {})
+    # @overload update_virtual_gateway(**params)
     # @param [Hash] params ({})
-    def update_virtual_gateway(params = {}, options = {})
+    def update_virtual_gateway(params = {}, **options)
       req = build_request(:update_virtual_gateway, params)
       req.send_request(options)
     end
@@ -4254,9 +4254,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateVirtualNode AWS API Documentation
     #
-    # @overload update_virtual_node(params = {})
+    # @overload update_virtual_node(**params)
     # @param [Hash] params ({})
-    def update_virtual_node(params = {}, options = {})
+    def update_virtual_node(params = {}, **options)
       req = build_request(:update_virtual_node, params)
       req.send_request(options)
     end
@@ -4332,9 +4332,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateVirtualRouter AWS API Documentation
     #
-    # @overload update_virtual_router(params = {})
+    # @overload update_virtual_router(**params)
     # @param [Hash] params ({})
-    def update_virtual_router(params = {}, options = {})
+    def update_virtual_router(params = {}, **options)
       req = build_request(:update_virtual_router, params)
       req.send_request(options)
     end
@@ -4409,9 +4409,9 @@ module Aws::AppMesh
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appmesh-2019-01-25/UpdateVirtualService AWS API Documentation
     #
-    # @overload update_virtual_service(params = {})
+    # @overload update_virtual_service(**params)
     # @param [Hash] params ({})
-    def update_virtual_service(params = {}, options = {})
+    def update_virtual_service(params = {}, **options)
       req = build_request(:update_virtual_service, params)
       req.send_request(options)
     end
@@ -4420,7 +4420,7 @@ module Aws::AppMesh
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4428,15 +4428,15 @@ module Aws::AppMesh
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-appmesh'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-appmesh"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

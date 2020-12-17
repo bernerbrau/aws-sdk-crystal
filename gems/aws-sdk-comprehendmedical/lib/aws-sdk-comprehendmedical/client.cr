@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:comprehendmedical)
 
@@ -290,7 +290,7 @@ module Aws::ComprehendMedical
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -376,9 +376,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeEntitiesDetectionV2Job AWS API Documentation
     #
-    # @overload describe_entities_detection_v2_job(params = {})
+    # @overload describe_entities_detection_v2_job(**params)
     # @param [Hash] params ({})
-    def describe_entities_detection_v2_job(params = {}, options = {})
+    def describe_entities_detection_v2_job(params = {}, **options)
       req = build_request(:describe_entities_detection_v2_job, params)
       req.send_request(options)
     end
@@ -422,9 +422,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeICD10CMInferenceJob AWS API Documentation
     #
-    # @overload describe_icd10cm_inference_job(params = {})
+    # @overload describe_icd10cm_inference_job(**params)
     # @param [Hash] params ({})
-    def describe_icd10cm_inference_job(params = {}, options = {})
+    def describe_icd10cm_inference_job(params = {}, **options)
       req = build_request(:describe_icd10cm_inference_job, params)
       req.send_request(options)
     end
@@ -469,9 +469,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribePHIDetectionJob AWS API Documentation
     #
-    # @overload describe_phi_detection_job(params = {})
+    # @overload describe_phi_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_phi_detection_job(params = {}, options = {})
+    def describe_phi_detection_job(params = {}, **options)
       req = build_request(:describe_phi_detection_job, params)
       req.send_request(options)
     end
@@ -515,9 +515,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DescribeRxNormInferenceJob AWS API Documentation
     #
-    # @overload describe_rx_norm_inference_job(params = {})
+    # @overload describe_rx_norm_inference_job(**params)
     # @param [Hash] params ({})
-    def describe_rx_norm_inference_job(params = {}, options = {})
+    def describe_rx_norm_inference_job(params = {}, **options)
       req = build_request(:describe_rx_norm_inference_job, params)
       req.send_request(options)
     end
@@ -592,9 +592,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DetectEntities AWS API Documentation
     #
-    # @overload detect_entities(params = {})
+    # @overload detect_entities(**params)
     # @param [Hash] params ({})
-    def detect_entities(params = {}, options = {})
+    def detect_entities(params = {}, **options)
       req = build_request(:detect_entities, params)
       req.send_request(options)
     end
@@ -676,9 +676,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DetectEntitiesV2 AWS API Documentation
     #
-    # @overload detect_entities_v2(params = {})
+    # @overload detect_entities_v2(**params)
     # @param [Hash] params ({})
-    def detect_entities_v2(params = {}, options = {})
+    def detect_entities_v2(params = {}, **options)
       req = build_request(:detect_entities_v2, params)
       req.send_request(options)
     end
@@ -736,9 +736,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/DetectPHI AWS API Documentation
     #
-    # @overload detect_phi(params = {})
+    # @overload detect_phi(**params)
     # @param [Hash] params ({})
-    def detect_phi(params = {}, options = {})
+    def detect_phi(params = {}, **options)
       req = build_request(:detect_phi, params)
       req.send_request(options)
     end
@@ -798,9 +798,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/InferICD10CM AWS API Documentation
     #
-    # @overload infer_icd10cm(params = {})
+    # @overload infer_icd10cm(**params)
     # @param [Hash] params ({})
-    def infer_icd10cm(params = {}, options = {})
+    def infer_icd10cm(params = {}, **options)
       req = build_request(:infer_icd10cm, params)
       req.send_request(options)
     end
@@ -859,9 +859,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/InferRxNorm AWS API Documentation
     #
-    # @overload infer_rx_norm(params = {})
+    # @overload infer_rx_norm(**params)
     # @param [Hash] params ({})
-    def infer_rx_norm(params = {}, options = {})
+    def infer_rx_norm(params = {}, **options)
       req = build_request(:infer_rx_norm, params)
       req.send_request(options)
     end
@@ -921,9 +921,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListEntitiesDetectionV2Jobs AWS API Documentation
     #
-    # @overload list_entities_detection_v2_jobs(params = {})
+    # @overload list_entities_detection_v2_jobs(**params)
     # @param [Hash] params ({})
-    def list_entities_detection_v2_jobs(params = {}, options = {})
+    def list_entities_detection_v2_jobs(params = {}, **options)
       req = build_request(:list_entities_detection_v2_jobs, params)
       req.send_request(options)
     end
@@ -983,9 +983,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListICD10CMInferenceJobs AWS API Documentation
     #
-    # @overload list_icd10cm_inference_jobs(params = {})
+    # @overload list_icd10cm_inference_jobs(**params)
     # @param [Hash] params ({})
-    def list_icd10cm_inference_jobs(params = {}, options = {})
+    def list_icd10cm_inference_jobs(params = {}, **options)
       req = build_request(:list_icd10cm_inference_jobs, params)
       req.send_request(options)
     end
@@ -1046,9 +1046,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListPHIDetectionJobs AWS API Documentation
     #
-    # @overload list_phi_detection_jobs(params = {})
+    # @overload list_phi_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_phi_detection_jobs(params = {}, options = {})
+    def list_phi_detection_jobs(params = {}, **options)
       req = build_request(:list_phi_detection_jobs, params)
       req.send_request(options)
     end
@@ -1107,9 +1107,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/ListRxNormInferenceJobs AWS API Documentation
     #
-    # @overload list_rx_norm_inference_jobs(params = {})
+    # @overload list_rx_norm_inference_jobs(**params)
     # @param [Hash] params ({})
-    def list_rx_norm_inference_jobs(params = {}, options = {})
+    def list_rx_norm_inference_jobs(params = {}, **options)
       req = build_request(:list_rx_norm_inference_jobs, params)
       req.send_request(options)
     end
@@ -1180,9 +1180,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartEntitiesDetectionV2Job AWS API Documentation
     #
-    # @overload start_entities_detection_v2_job(params = {})
+    # @overload start_entities_detection_v2_job(**params)
     # @param [Hash] params ({})
-    def start_entities_detection_v2_job(params = {}, options = {})
+    def start_entities_detection_v2_job(params = {}, **options)
       req = build_request(:start_entities_detection_v2_job, params)
       req.send_request(options)
     end
@@ -1253,9 +1253,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartICD10CMInferenceJob AWS API Documentation
     #
-    # @overload start_icd10cm_inference_job(params = {})
+    # @overload start_icd10cm_inference_job(**params)
     # @param [Hash] params ({})
-    def start_icd10cm_inference_job(params = {}, options = {})
+    def start_icd10cm_inference_job(params = {}, **options)
       req = build_request(:start_icd10cm_inference_job, params)
       req.send_request(options)
     end
@@ -1326,9 +1326,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartPHIDetectionJob AWS API Documentation
     #
-    # @overload start_phi_detection_job(params = {})
+    # @overload start_phi_detection_job(**params)
     # @param [Hash] params ({})
-    def start_phi_detection_job(params = {}, options = {})
+    def start_phi_detection_job(params = {}, **options)
       req = build_request(:start_phi_detection_job, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StartRxNormInferenceJob AWS API Documentation
     #
-    # @overload start_rx_norm_inference_job(params = {})
+    # @overload start_rx_norm_inference_job(**params)
     # @param [Hash] params ({})
-    def start_rx_norm_inference_job(params = {}, options = {})
+    def start_rx_norm_inference_job(params = {}, **options)
       req = build_request(:start_rx_norm_inference_job, params)
       req.send_request(options)
     end
@@ -1427,9 +1427,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopEntitiesDetectionV2Job AWS API Documentation
     #
-    # @overload stop_entities_detection_v2_job(params = {})
+    # @overload stop_entities_detection_v2_job(**params)
     # @param [Hash] params ({})
-    def stop_entities_detection_v2_job(params = {}, options = {})
+    def stop_entities_detection_v2_job(params = {}, **options)
       req = build_request(:stop_entities_detection_v2_job, params)
       req.send_request(options)
     end
@@ -1455,9 +1455,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopICD10CMInferenceJob AWS API Documentation
     #
-    # @overload stop_icd10cm_inference_job(params = {})
+    # @overload stop_icd10cm_inference_job(**params)
     # @param [Hash] params ({})
-    def stop_icd10cm_inference_job(params = {}, options = {})
+    def stop_icd10cm_inference_job(params = {}, **options)
       req = build_request(:stop_icd10cm_inference_job, params)
       req.send_request(options)
     end
@@ -1483,9 +1483,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopPHIDetectionJob AWS API Documentation
     #
-    # @overload stop_phi_detection_job(params = {})
+    # @overload stop_phi_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_phi_detection_job(params = {}, options = {})
+    def stop_phi_detection_job(params = {}, **options)
       req = build_request(:stop_phi_detection_job, params)
       req.send_request(options)
     end
@@ -1511,9 +1511,9 @@ module Aws::ComprehendMedical
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehendmedical-2018-10-30/StopRxNormInferenceJob AWS API Documentation
     #
-    # @overload stop_rx_norm_inference_job(params = {})
+    # @overload stop_rx_norm_inference_job(**params)
     # @param [Hash] params ({})
-    def stop_rx_norm_inference_job(params = {}, options = {})
+    def stop_rx_norm_inference_job(params = {}, **options)
       req = build_request(:stop_rx_norm_inference_job, params)
       req.send_request(options)
     end
@@ -1522,7 +1522,7 @@ module Aws::ComprehendMedical
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1530,15 +1530,15 @@ module Aws::ComprehendMedical
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-comprehendmedical'
-      context[:gem_version] = '1.23.0'
+      context[:gem_name] = "aws-sdk-comprehendmedical"
+      context[:gem_version] = "1.23.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

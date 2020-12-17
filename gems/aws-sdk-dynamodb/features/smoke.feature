@@ -8,11 +8,11 @@
 Feature: Smoke tests for DynamoDB
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @dynamodb @smoke
   Scenario: Call Aws::DynamoDB::Client#list_tables and expect it to succeed
-  When I call the operation 'list_tables' with params:
+  When I call the operation "list_tables" with params:
     """
 {"limit":1}
     """
@@ -20,7 +20,7 @@ Background:
 
   @dynamodb @smoke
   Scenario: Call Aws::Aws::DynamoDB::Client#describe_table and expect it to fail
-  When I call the operation 'describe_table' with params:
+  When I call the operation "describe_table" with params:
     """
 {"table_name":"fake-table"}
     """

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cognitosync/types'
-require_relative 'aws-sdk-cognitosync/client_api'
-require_relative 'aws-sdk-cognitosync/client'
-require_relative 'aws-sdk-cognitosync/errors'
-require_relative 'aws-sdk-cognitosync/resource'
-require_relative 'aws-sdk-cognitosync/customizations'
+require_relative "aws-sdk-cognitosync/types"
+require_relative "aws-sdk-cognitosync/client_api"
+require_relative "aws-sdk-cognitosync/client"
+require_relative "aws-sdk-cognitosync/errors"
+require_relative "aws-sdk-cognitosync/resource"
+require_relative "aws-sdk-cognitosync/customizations"
 
 # This module provides support for Amazon Cognito Sync. This module is available in the
 # `aws-sdk-cognitosync` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cognitosync/customizations'
 # @!group service
 module Aws::CognitoSync
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

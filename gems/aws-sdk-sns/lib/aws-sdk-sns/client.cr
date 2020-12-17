@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:sns)
 
@@ -280,7 +280,7 @@ module Aws::SNS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -359,9 +359,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/AddPermission AWS API Documentation
     #
-    # @overload add_permission(params = {})
+    # @overload add_permission(**params)
     # @param [Hash] params ({})
-    def add_permission(params = {}, options = {})
+    def add_permission(params = {}, **options)
       req = build_request(:add_permission, params)
       req.send_request(options)
     end
@@ -392,9 +392,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CheckIfPhoneNumberIsOptedOut AWS API Documentation
     #
-    # @overload check_if_phone_number_is_opted_out(params = {})
+    # @overload check_if_phone_number_is_opted_out(**params)
     # @param [Hash] params ({})
-    def check_if_phone_number_is_opted_out(params = {}, options = {})
+    def check_if_phone_number_is_opted_out(params = {}, **options)
       req = build_request(:check_if_phone_number_is_opted_out, params)
       req.send_request(options)
     end
@@ -436,9 +436,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ConfirmSubscription AWS API Documentation
     #
-    # @overload confirm_subscription(params = {})
+    # @overload confirm_subscription(**params)
     # @param [Hash] params ({})
-    def confirm_subscription(params = {}, options = {})
+    def confirm_subscription(params = {}, **options)
       req = build_request(:confirm_subscription, params)
       req.send_request(options)
     end
@@ -510,9 +510,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreatePlatformApplication AWS API Documentation
     #
-    # @overload create_platform_application(params = {})
+    # @overload create_platform_application(**params)
     # @param [Hash] params ({})
-    def create_platform_application(params = {}, options = {})
+    def create_platform_application(params = {}, **options)
       req = build_request(:create_platform_application, params)
       req.send_request(options)
     end
@@ -583,9 +583,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreatePlatformEndpoint AWS API Documentation
     #
-    # @overload create_platform_endpoint(params = {})
+    # @overload create_platform_endpoint(**params)
     # @param [Hash] params ({})
-    def create_platform_endpoint(params = {}, options = {})
+    def create_platform_endpoint(params = {}, **options)
       req = build_request(:create_platform_endpoint, params)
       req.send_request(options)
     end
@@ -698,9 +698,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateTopic AWS API Documentation
     #
-    # @overload create_topic(params = {})
+    # @overload create_topic(**params)
     # @param [Hash] params ({})
-    def create_topic(params = {}, options = {})
+    def create_topic(params = {}, **options)
       req = build_request(:create_topic, params)
       req.send_request(options)
     end
@@ -729,9 +729,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeleteEndpoint AWS API Documentation
     #
-    # @overload delete_endpoint(params = {})
+    # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, options = {})
+    def delete_endpoint(params = {}, **options)
       req = build_request(:delete_endpoint, params)
       req.send_request(options)
     end
@@ -758,9 +758,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeletePlatformApplication AWS API Documentation
     #
-    # @overload delete_platform_application(params = {})
+    # @overload delete_platform_application(**params)
     # @param [Hash] params ({})
-    def delete_platform_application(params = {}, options = {})
+    def delete_platform_application(params = {}, **options)
       req = build_request(:delete_platform_application, params)
       req.send_request(options)
     end
@@ -783,9 +783,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeleteTopic AWS API Documentation
     #
-    # @overload delete_topic(params = {})
+    # @overload delete_topic(**params)
     # @param [Hash] params ({})
-    def delete_topic(params = {}, options = {})
+    def delete_topic(params = {}, **options)
       req = build_request(:delete_topic, params)
       req.send_request(options)
     end
@@ -819,9 +819,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetEndpointAttributes AWS API Documentation
     #
-    # @overload get_endpoint_attributes(params = {})
+    # @overload get_endpoint_attributes(**params)
     # @param [Hash] params ({})
-    def get_endpoint_attributes(params = {}, options = {})
+    def get_endpoint_attributes(params = {}, **options)
       req = build_request(:get_endpoint_attributes, params)
       req.send_request(options)
     end
@@ -855,9 +855,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetPlatformApplicationAttributes AWS API Documentation
     #
-    # @overload get_platform_application_attributes(params = {})
+    # @overload get_platform_application_attributes(**params)
     # @param [Hash] params ({})
-    def get_platform_application_attributes(params = {}, options = {})
+    def get_platform_application_attributes(params = {}, **options)
       req = build_request(:get_platform_application_attributes, params)
       req.send_request(options)
     end
@@ -896,9 +896,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSAttributes AWS API Documentation
     #
-    # @overload get_sms_attributes(params = {})
+    # @overload get_sms_attributes(**params)
     # @param [Hash] params ({})
-    def get_sms_attributes(params = {}, options = {})
+    def get_sms_attributes(params = {}, **options)
       req = build_request(:get_sms_attributes, params)
       req.send_request(options)
     end
@@ -925,9 +925,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSubscriptionAttributes AWS API Documentation
     #
-    # @overload get_subscription_attributes(params = {})
+    # @overload get_subscription_attributes(**params)
     # @param [Hash] params ({})
-    def get_subscription_attributes(params = {}, options = {})
+    def get_subscription_attributes(params = {}, **options)
       req = build_request(:get_subscription_attributes, params)
       req.send_request(options)
     end
@@ -955,9 +955,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetTopicAttributes AWS API Documentation
     #
-    # @overload get_topic_attributes(params = {})
+    # @overload get_topic_attributes(**params)
     # @param [Hash] params ({})
-    def get_topic_attributes(params = {}, options = {})
+    def get_topic_attributes(params = {}, **options)
       req = build_request(:get_topic_attributes, params)
       req.send_request(options)
     end
@@ -1012,9 +1012,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListEndpointsByPlatformApplication AWS API Documentation
     #
-    # @overload list_endpoints_by_platform_application(params = {})
+    # @overload list_endpoints_by_platform_application(**params)
     # @param [Hash] params ({})
-    def list_endpoints_by_platform_application(params = {}, options = {})
+    def list_endpoints_by_platform_application(params = {}, **options)
       req = build_request(:list_endpoints_by_platform_application, params)
       req.send_request(options)
     end
@@ -1054,9 +1054,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListPhoneNumbersOptedOut AWS API Documentation
     #
-    # @overload list_phone_numbers_opted_out(params = {})
+    # @overload list_phone_numbers_opted_out(**params)
     # @param [Hash] params ({})
-    def list_phone_numbers_opted_out(params = {}, options = {})
+    def list_phone_numbers_opted_out(params = {}, **options)
       req = build_request(:list_phone_numbers_opted_out, params)
       req.send_request(options)
     end
@@ -1106,9 +1106,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListPlatformApplications AWS API Documentation
     #
-    # @overload list_platform_applications(params = {})
+    # @overload list_platform_applications(**params)
     # @param [Hash] params ({})
-    def list_platform_applications(params = {}, options = {})
+    def list_platform_applications(params = {}, **options)
       req = build_request(:list_platform_applications, params)
       req.send_request(options)
     end
@@ -1148,9 +1148,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSubscriptions AWS API Documentation
     #
-    # @overload list_subscriptions(params = {})
+    # @overload list_subscriptions(**params)
     # @param [Hash] params ({})
-    def list_subscriptions(params = {}, options = {})
+    def list_subscriptions(params = {}, **options)
       req = build_request(:list_subscriptions, params)
       req.send_request(options)
     end
@@ -1195,9 +1195,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSubscriptionsByTopic AWS API Documentation
     #
-    # @overload list_subscriptions_by_topic(params = {})
+    # @overload list_subscriptions_by_topic(**params)
     # @param [Hash] params ({})
-    def list_subscriptions_by_topic(params = {}, options = {})
+    def list_subscriptions_by_topic(params = {}, **options)
       req = build_request(:list_subscriptions_by_topic, params)
       req.send_request(options)
     end
@@ -1231,9 +1231,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1269,9 +1269,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListTopics AWS API Documentation
     #
-    # @overload list_topics(params = {})
+    # @overload list_topics(**params)
     # @param [Hash] params ({})
-    def list_topics(params = {}, options = {})
+    def list_topics(params = {}, **options)
       req = build_request(:list_topics, params)
       req.send_request(options)
     end
@@ -1294,9 +1294,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/OptInPhoneNumber AWS API Documentation
     #
-    # @overload opt_in_phone_number(params = {})
+    # @overload opt_in_phone_number(**params)
     # @param [Hash] params ({})
-    def opt_in_phone_number(params = {}, options = {})
+    def opt_in_phone_number(params = {}, **options)
       req = build_request(:opt_in_phone_number, params)
       req.send_request(options)
     end
@@ -1490,9 +1490,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Publish AWS API Documentation
     #
-    # @overload publish(params = {})
+    # @overload publish(**params)
     # @param [Hash] params ({})
-    def publish(params = {}, options = {})
+    def publish(params = {}, **options)
       req = build_request(:publish, params)
       req.send_request(options)
     end
@@ -1516,9 +1516,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/RemovePermission AWS API Documentation
     #
-    # @overload remove_permission(params = {})
+    # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, options = {})
+    def remove_permission(params = {}, **options)
       req = build_request(:remove_permission, params)
       req.send_request(options)
     end
@@ -1566,9 +1566,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetEndpointAttributes AWS API Documentation
     #
-    # @overload set_endpoint_attributes(params = {})
+    # @overload set_endpoint_attributes(**params)
     # @param [Hash] params ({})
-    def set_endpoint_attributes(params = {}, options = {})
+    def set_endpoint_attributes(params = {}, **options)
       req = build_request(:set_endpoint_attributes, params)
       req.send_request(options)
     end
@@ -1638,9 +1638,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetPlatformApplicationAttributes AWS API Documentation
     #
-    # @overload set_platform_application_attributes(params = {})
+    # @overload set_platform_application_attributes(**params)
     # @param [Hash] params ({})
-    def set_platform_application_attributes(params = {}, options = {})
+    def set_platform_application_attributes(params = {}, **options)
       req = build_request(:set_platform_application_attributes, params)
       req.send_request(options)
     end
@@ -1753,9 +1753,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetSMSAttributes AWS API Documentation
     #
-    # @overload set_sms_attributes(params = {})
+    # @overload set_sms_attributes(**params)
     # @param [Hash] params ({})
-    def set_sms_attributes(params = {}, options = {})
+    def set_sms_attributes(params = {}, **options)
       req = build_request(:set_sms_attributes, params)
       req.send_request(options)
     end
@@ -1806,9 +1806,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetSubscriptionAttributes AWS API Documentation
     #
-    # @overload set_subscription_attributes(params = {})
+    # @overload set_subscription_attributes(**params)
     # @param [Hash] params ({})
-    def set_subscription_attributes(params = {}, options = {})
+    def set_subscription_attributes(params = {}, **options)
       req = build_request(:set_subscription_attributes, params)
       req.send_request(options)
     end
@@ -1883,9 +1883,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetTopicAttributes AWS API Documentation
     #
-    # @overload set_topic_attributes(params = {})
+    # @overload set_topic_attributes(**params)
     # @param [Hash] params ({})
-    def set_topic_attributes(params = {}, options = {})
+    def set_topic_attributes(params = {}, **options)
       req = build_request(:set_topic_attributes, params)
       req.send_request(options)
     end
@@ -2012,9 +2012,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Subscribe AWS API Documentation
     #
-    # @overload subscribe(params = {})
+    # @overload subscribe(**params)
     # @param [Hash] params ({})
-    def subscribe(params = {}, options = {})
+    def subscribe(params = {}, **options)
       req = build_request(:subscribe, params)
       req.send_request(options)
     end
@@ -2066,9 +2066,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2096,9 +2096,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Unsubscribe AWS API Documentation
     #
-    # @overload unsubscribe(params = {})
+    # @overload unsubscribe(**params)
     # @param [Hash] params ({})
-    def unsubscribe(params = {}, options = {})
+    def unsubscribe(params = {}, **options)
       req = build_request(:unsubscribe, params)
       req.send_request(options)
     end
@@ -2127,9 +2127,9 @@ module Aws::SNS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2138,7 +2138,7 @@ module Aws::SNS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2146,15 +2146,15 @@ module Aws::SNS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-sns'
-      context[:gem_version] = '1.36.0'
+      context[:gem_name] = "aws-sdk-sns"
+      context[:gem_version] = "1.36.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

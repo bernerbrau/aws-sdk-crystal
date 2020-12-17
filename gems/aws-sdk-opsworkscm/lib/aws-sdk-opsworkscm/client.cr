@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:opsworkscm)
 
@@ -290,7 +290,7 @@ module Aws::OpsWorksCM
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -410,9 +410,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/AssociateNode AWS API Documentation
     #
-    # @overload associate_node(params = {})
+    # @overload associate_node(**params)
     # @param [Hash] params ({})
-    def associate_node(params = {}, options = {})
+    def associate_node(params = {}, **options)
       req = build_request(:associate_node, params)
       req.send_request(options)
     end
@@ -508,9 +508,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/CreateBackup AWS API Documentation
     #
-    # @overload create_backup(params = {})
+    # @overload create_backup(**params)
     # @param [Hash] params ({})
-    def create_backup(params = {}, options = {})
+    def create_backup(params = {}, **options)
       req = build_request(:create_backup, params)
       req.send_request(options)
     end
@@ -838,9 +838,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/CreateServer AWS API Documentation
     #
-    # @overload create_server(params = {})
+    # @overload create_server(**params)
     # @param [Hash] params ({})
-    def create_server(params = {}, options = {})
+    def create_server(params = {}, **options)
       req = build_request(:create_server, params)
       req.send_request(options)
     end
@@ -868,9 +868,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DeleteBackup AWS API Documentation
     #
-    # @overload delete_backup(params = {})
+    # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, options = {})
+    def delete_backup(params = {}, **options)
       req = build_request(:delete_backup, params)
       req.send_request(options)
     end
@@ -901,9 +901,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DeleteServer AWS API Documentation
     #
-    # @overload delete_server(params = {})
+    # @overload delete_server(**params)
     # @param [Hash] params ({})
-    def delete_server(params = {}, options = {})
+    def delete_server(params = {}, **options)
       req = build_request(:delete_server, params)
       req.send_request(options)
     end
@@ -925,9 +925,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DescribeAccountAttributes AWS API Documentation
     #
-    # @overload describe_account_attributes(params = {})
+    # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, options = {})
+    def describe_account_attributes(params = {}, **options)
       req = build_request(:describe_account_attributes, params)
       req.send_request(options)
     end
@@ -1003,9 +1003,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DescribeBackups AWS API Documentation
     #
-    # @overload describe_backups(params = {})
+    # @overload describe_backups(**params)
     # @param [Hash] params ({})
-    def describe_backups(params = {}, options = {})
+    def describe_backups(params = {}, **options)
       req = build_request(:describe_backups, params)
       req.send_request(options)
     end
@@ -1065,9 +1065,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DescribeNodeAssociationStatus AWS API Documentation
     #
-    # @overload describe_node_association_status(params = {})
+    # @overload describe_node_association_status(**params)
     # @param [Hash] params ({})
-    def describe_node_association_status(params = {}, options = {})
+    def describe_node_association_status(params = {}, **options)
       req = build_request(:describe_node_association_status, params)
       req.send_request(options)
     end
@@ -1189,9 +1189,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DescribeServers AWS API Documentation
     #
-    # @overload describe_servers(params = {})
+    # @overload describe_servers(**params)
     # @param [Hash] params ({})
-    def describe_servers(params = {}, options = {})
+    def describe_servers(params = {}, **options)
       req = build_request(:describe_servers, params)
       req.send_request(options)
     end
@@ -1249,9 +1249,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/DisassociateNode AWS API Documentation
     #
-    # @overload disassociate_node(params = {})
+    # @overload disassociate_node(**params)
     # @param [Hash] params ({})
-    def disassociate_node(params = {}, options = {})
+    def disassociate_node(params = {}, **options)
       req = build_request(:disassociate_node, params)
       req.send_request(options)
     end
@@ -1324,9 +1324,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/ExportServerEngineAttribute AWS API Documentation
     #
-    # @overload export_server_engine_attribute(params = {})
+    # @overload export_server_engine_attribute(**params)
     # @param [Hash] params ({})
-    def export_server_engine_attribute(params = {}, options = {})
+    def export_server_engine_attribute(params = {}, **options)
       req = build_request(:export_server_engine_attribute, params)
       req.send_request(options)
     end
@@ -1383,9 +1383,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1440,9 +1440,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/RestoreServer AWS API Documentation
     #
-    # @overload restore_server(params = {})
+    # @overload restore_server(**params)
     # @param [Hash] params ({})
-    def restore_server(params = {}, options = {})
+    def restore_server(params = {}, **options)
       req = build_request(:restore_server, params)
       req.send_request(options)
     end
@@ -1528,9 +1528,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/StartMaintenance AWS API Documentation
     #
-    # @overload start_maintenance(params = {})
+    # @overload start_maintenance(**params)
     # @param [Hash] params ({})
-    def start_maintenance(params = {}, options = {})
+    def start_maintenance(params = {}, **options)
       req = build_request(:start_maintenance, params)
       req.send_request(options)
     end
@@ -1579,9 +1579,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1607,9 +1607,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1689,9 +1689,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/UpdateServer AWS API Documentation
     #
-    # @overload update_server(params = {})
+    # @overload update_server(**params)
     # @param [Hash] params ({})
-    def update_server(params = {}, options = {})
+    def update_server(params = {}, **options)
       req = build_request(:update_server, params)
       req.send_request(options)
     end
@@ -1764,9 +1764,9 @@ module Aws::OpsWorksCM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworkscm-2016-11-01/UpdateServerEngineAttributes AWS API Documentation
     #
-    # @overload update_server_engine_attributes(params = {})
+    # @overload update_server_engine_attributes(**params)
     # @param [Hash] params ({})
-    def update_server_engine_attributes(params = {}, options = {})
+    def update_server_engine_attributes(params = {}, **options)
       req = build_request(:update_server_engine_attributes, params)
       req.send_request(options)
     end
@@ -1775,7 +1775,7 @@ module Aws::OpsWorksCM
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1783,8 +1783,8 @@ module Aws::OpsWorksCM
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-opsworkscm'
-      context[:gem_version] = '1.40.0'
+      context[:gem_name] = "aws-sdk-opsworkscm"
+      context[:gem_version] = "1.40.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -1876,7 +1876,7 @@ module Aws::OpsWorksCM
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -1892,7 +1892,7 @@ module Aws::OpsWorksCM
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

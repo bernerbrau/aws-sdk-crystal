@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::Signer
   # Waiters are utility methods that poll for a particular state to occur
@@ -113,7 +113,7 @@ module Aws::Signer
 
       # @option (see Client#describe_signing_job)
       # @return (see Client#describe_signing_job)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

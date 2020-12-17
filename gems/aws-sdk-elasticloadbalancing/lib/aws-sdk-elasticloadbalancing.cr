@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-elasticloadbalancing/types'
-require_relative 'aws-sdk-elasticloadbalancing/client_api'
-require_relative 'aws-sdk-elasticloadbalancing/client'
-require_relative 'aws-sdk-elasticloadbalancing/errors'
-require_relative 'aws-sdk-elasticloadbalancing/waiters'
-require_relative 'aws-sdk-elasticloadbalancing/resource'
-require_relative 'aws-sdk-elasticloadbalancing/customizations'
+require_relative "aws-sdk-elasticloadbalancing/types"
+require_relative "aws-sdk-elasticloadbalancing/client_api"
+require_relative "aws-sdk-elasticloadbalancing/client"
+require_relative "aws-sdk-elasticloadbalancing/errors"
+require_relative "aws-sdk-elasticloadbalancing/waiters"
+require_relative "aws-sdk-elasticloadbalancing/resource"
+require_relative "aws-sdk-elasticloadbalancing/customizations"
 
 # This module provides support for Elastic Load Balancing. This module is available in the
 # `aws-sdk-elasticloadbalancing` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-elasticloadbalancing/customizations'
 # @!group service
 module Aws::ElasticLoadBalancing
 
-  GEM_VERSION = '1.29.0'
+  GEM_VERSION = "1.29.0"
 
 end

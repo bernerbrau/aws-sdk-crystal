@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-xray/types'
-require_relative 'aws-sdk-xray/client_api'
-require_relative 'aws-sdk-xray/client'
-require_relative 'aws-sdk-xray/errors'
-require_relative 'aws-sdk-xray/resource'
-require_relative 'aws-sdk-xray/customizations'
+require_relative "aws-sdk-xray/types"
+require_relative "aws-sdk-xray/client_api"
+require_relative "aws-sdk-xray/client"
+require_relative "aws-sdk-xray/errors"
+require_relative "aws-sdk-xray/resource"
+require_relative "aws-sdk-xray/customizations"
 
 # This module provides support for AWS X-Ray. This module is available in the
 # `aws-sdk-xray` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-xray/customizations'
 # @!group service
 module Aws::XRay
 
-  GEM_VERSION = '1.35.0'
+  GEM_VERSION = "1.35.0"
 
 end

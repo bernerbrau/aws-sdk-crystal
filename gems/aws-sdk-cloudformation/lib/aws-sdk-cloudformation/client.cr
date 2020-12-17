@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudformation)
 
@@ -280,7 +280,7 @@ module Aws::CloudFormation
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -356,9 +356,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CancelUpdateStack AWS API Documentation
     #
-    # @overload cancel_update_stack(params = {})
+    # @overload cancel_update_stack(**params)
     # @param [Hash] params ({})
-    def cancel_update_stack(params = {}, options = {})
+    def cancel_update_stack(params = {}, **options)
       req = build_request(:cancel_update_stack, params)
       req.send_request(options)
     end
@@ -473,9 +473,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ContinueUpdateRollback AWS API Documentation
     #
-    # @overload continue_update_rollback(params = {})
+    # @overload continue_update_rollback(**params)
     # @param [Hash] params ({})
-    def continue_update_rollback(params = {}, options = {})
+    def continue_update_rollback(params = {}, **options)
       req = build_request(:continue_update_rollback, params)
       req.send_request(options)
     end
@@ -779,9 +779,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateChangeSet AWS API Documentation
     #
-    # @overload create_change_set(params = {})
+    # @overload create_change_set(**params)
     # @param [Hash] params ({})
-    def create_change_set(params = {}, options = {})
+    def create_change_set(params = {}, **options)
       req = build_request(:create_change_set, params)
       req.send_request(options)
     end
@@ -1097,9 +1097,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStack AWS API Documentation
     #
-    # @overload create_stack(params = {})
+    # @overload create_stack(**params)
     # @param [Hash] params ({})
-    def create_stack(params = {}, options = {})
+    def create_stack(params = {}, **options)
       req = build_request(:create_stack, params)
       req.send_request(options)
     end
@@ -1230,9 +1230,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStackInstances AWS API Documentation
     #
-    # @overload create_stack_instances(params = {})
+    # @overload create_stack_instances(**params)
     # @param [Hash] params ({})
-    def create_stack_instances(params = {}, options = {})
+    def create_stack_instances(params = {}, **options)
       req = build_request(:create_stack_instances, params)
       req.send_request(options)
     end
@@ -1470,9 +1470,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStackSet AWS API Documentation
     #
-    # @overload create_stack_set(params = {})
+    # @overload create_stack_set(**params)
     # @param [Hash] params ({})
-    def create_stack_set(params = {}, options = {})
+    def create_stack_set(params = {}, **options)
       req = build_request(:create_stack_set, params)
       req.send_request(options)
     end
@@ -1507,9 +1507,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeleteChangeSet AWS API Documentation
     #
-    # @overload delete_change_set(params = {})
+    # @overload delete_change_set(**params)
     # @param [Hash] params ({})
-    def delete_change_set(params = {}, options = {})
+    def delete_change_set(params = {}, **options)
       req = build_request(:delete_change_set, params)
       req.send_request(options)
     end
@@ -1575,9 +1575,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeleteStack AWS API Documentation
     #
-    # @overload delete_stack(params = {})
+    # @overload delete_stack(**params)
     # @param [Hash] params ({})
-    def delete_stack(params = {}, options = {})
+    def delete_stack(params = {}, **options)
       req = build_request(:delete_stack, params)
       req.send_request(options)
     end
@@ -1668,9 +1668,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeleteStackInstances AWS API Documentation
     #
-    # @overload delete_stack_instances(params = {})
+    # @overload delete_stack_instances(**params)
     # @param [Hash] params ({})
-    def delete_stack_instances(params = {}, options = {})
+    def delete_stack_instances(params = {}, **options)
       req = build_request(:delete_stack_instances, params)
       req.send_request(options)
     end
@@ -1693,9 +1693,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeleteStackSet AWS API Documentation
     #
-    # @overload delete_stack_set(params = {})
+    # @overload delete_stack_set(**params)
     # @param [Hash] params ({})
-    def delete_stack_set(params = {}, options = {})
+    def delete_stack_set(params = {}, **options)
       req = build_request(:delete_stack_set, params)
       req.send_request(options)
     end
@@ -1748,9 +1748,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeregisterType AWS API Documentation
     #
-    # @overload deregister_type(params = {})
+    # @overload deregister_type(**params)
     # @param [Hash] params ({})
-    def deregister_type(params = {}, options = {})
+    def deregister_type(params = {}, **options)
       req = build_request(:deregister_type, params)
       req.send_request(options)
     end
@@ -1790,9 +1790,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeAccountLimits AWS API Documentation
     #
-    # @overload describe_account_limits(params = {})
+    # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, options = {})
+    def describe_account_limits(params = {}, **options)
       req = build_request(:describe_account_limits, params)
       req.send_request(options)
     end
@@ -1906,9 +1906,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeChangeSet AWS API Documentation
     #
-    # @overload describe_change_set(params = {})
+    # @overload describe_change_set(**params)
     # @param [Hash] params ({})
-    def describe_change_set(params = {}, options = {})
+    def describe_change_set(params = {}, **options)
       req = build_request(:describe_change_set, params)
       req.send_request(options)
     end
@@ -1969,9 +1969,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackDriftDetectionStatus AWS API Documentation
     #
-    # @overload describe_stack_drift_detection_status(params = {})
+    # @overload describe_stack_drift_detection_status(**params)
     # @param [Hash] params ({})
-    def describe_stack_drift_detection_status(params = {}, options = {})
+    def describe_stack_drift_detection_status(params = {}, **options)
       req = build_request(:describe_stack_drift_detection_status, params)
       req.send_request(options)
     end
@@ -2036,9 +2036,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackEvents AWS API Documentation
     #
-    # @overload describe_stack_events(params = {})
+    # @overload describe_stack_events(**params)
     # @param [Hash] params ({})
-    def describe_stack_events(params = {}, options = {})
+    def describe_stack_events(params = {}, **options)
       req = build_request(:describe_stack_events, params)
       req.send_request(options)
     end
@@ -2091,9 +2091,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackInstance AWS API Documentation
     #
-    # @overload describe_stack_instance(params = {})
+    # @overload describe_stack_instance(**params)
     # @param [Hash] params ({})
-    def describe_stack_instance(params = {}, options = {})
+    def describe_stack_instance(params = {}, **options)
       req = build_request(:describe_stack_instance, params)
       req.send_request(options)
     end
@@ -2150,9 +2150,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackResource AWS API Documentation
     #
-    # @overload describe_stack_resource(params = {})
+    # @overload describe_stack_resource(**params)
     # @param [Hash] params ({})
-    def describe_stack_resource(params = {}, options = {})
+    def describe_stack_resource(params = {}, **options)
       req = build_request(:describe_stack_resource, params)
       req.send_request(options)
     end
@@ -2247,9 +2247,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackResourceDrifts AWS API Documentation
     #
-    # @overload describe_stack_resource_drifts(params = {})
+    # @overload describe_stack_resource_drifts(**params)
     # @param [Hash] params ({})
-    def describe_stack_resource_drifts(params = {}, options = {})
+    def describe_stack_resource_drifts(params = {}, **options)
       req = build_request(:describe_stack_resource_drifts, params)
       req.send_request(options)
     end
@@ -2347,9 +2347,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackResources AWS API Documentation
     #
-    # @overload describe_stack_resources(params = {})
+    # @overload describe_stack_resources(**params)
     # @param [Hash] params ({})
-    def describe_stack_resources(params = {}, options = {})
+    def describe_stack_resources(params = {}, **options)
       req = build_request(:describe_stack_resources, params)
       req.send_request(options)
     end
@@ -2405,9 +2405,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackSet AWS API Documentation
     #
-    # @overload describe_stack_set(params = {})
+    # @overload describe_stack_set(**params)
     # @param [Hash] params ({})
-    def describe_stack_set(params = {}, options = {})
+    def describe_stack_set(params = {}, **options)
       req = build_request(:describe_stack_set, params)
       req.send_request(options)
     end
@@ -2464,9 +2464,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStackSetOperation AWS API Documentation
     #
-    # @overload describe_stack_set_operation(params = {})
+    # @overload describe_stack_set_operation(**params)
     # @param [Hash] params ({})
-    def describe_stack_set_operation(params = {}, options = {})
+    def describe_stack_set_operation(params = {}, **options)
       req = build_request(:describe_stack_set_operation, params)
       req.send_request(options)
     end
@@ -2563,9 +2563,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeStacks AWS API Documentation
     #
-    # @overload describe_stacks(params = {})
+    # @overload describe_stacks(**params)
     # @param [Hash] params ({})
-    def describe_stacks(params = {}, options = {})
+    def describe_stacks(params = {}, **options)
       req = build_request(:describe_stacks, params)
       req.send_request(options)
     end
@@ -2652,9 +2652,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeType AWS API Documentation
     #
-    # @overload describe_type(params = {})
+    # @overload describe_type(**params)
     # @param [Hash] params ({})
-    def describe_type(params = {}, options = {})
+    def describe_type(params = {}, **options)
       req = build_request(:describe_type, params)
       req.send_request(options)
     end
@@ -2702,9 +2702,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeTypeRegistration AWS API Documentation
     #
-    # @overload describe_type_registration(params = {})
+    # @overload describe_type_registration(**params)
     # @param [Hash] params ({})
-    def describe_type_registration(params = {}, options = {})
+    def describe_type_registration(params = {}, **options)
       req = build_request(:describe_type_registration, params)
       req.send_request(options)
     end
@@ -2767,9 +2767,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DetectStackDrift AWS API Documentation
     #
-    # @overload detect_stack_drift(params = {})
+    # @overload detect_stack_drift(**params)
     # @param [Hash] params ({})
-    def detect_stack_drift(params = {}, options = {})
+    def detect_stack_drift(params = {}, **options)
       req = build_request(:detect_stack_drift, params)
       req.send_request(options)
     end
@@ -2838,9 +2838,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DetectStackResourceDrift AWS API Documentation
     #
-    # @overload detect_stack_resource_drift(params = {})
+    # @overload detect_stack_resource_drift(**params)
     # @param [Hash] params ({})
-    def detect_stack_resource_drift(params = {}, options = {})
+    def detect_stack_resource_drift(params = {}, **options)
       req = build_request(:detect_stack_resource_drift, params)
       req.send_request(options)
     end
@@ -2932,9 +2932,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DetectStackSetDrift AWS API Documentation
     #
-    # @overload detect_stack_set_drift(params = {})
+    # @overload detect_stack_set_drift(**params)
     # @param [Hash] params ({})
-    def detect_stack_set_drift(params = {}, options = {})
+    def detect_stack_set_drift(params = {}, **options)
       req = build_request(:detect_stack_set_drift, params)
       req.send_request(options)
     end
@@ -2995,9 +2995,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/EstimateTemplateCost AWS API Documentation
     #
-    # @overload estimate_template_cost(params = {})
+    # @overload estimate_template_cost(**params)
     # @param [Hash] params ({})
-    def estimate_template_cost(params = {}, options = {})
+    def estimate_template_cost(params = {}, **options)
       req = build_request(:estimate_template_cost, params)
       req.send_request(options)
     end
@@ -3045,9 +3045,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ExecuteChangeSet AWS API Documentation
     #
-    # @overload execute_change_set(params = {})
+    # @overload execute_change_set(**params)
     # @param [Hash] params ({})
-    def execute_change_set(params = {}, options = {})
+    def execute_change_set(params = {}, **options)
       req = build_request(:execute_change_set, params)
       req.send_request(options)
     end
@@ -3075,9 +3075,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/GetStackPolicy AWS API Documentation
     #
-    # @overload get_stack_policy(params = {})
+    # @overload get_stack_policy(**params)
     # @param [Hash] params ({})
-    def get_stack_policy(params = {}, options = {})
+    def get_stack_policy(params = {}, **options)
       req = build_request(:get_stack_policy, params)
       req.send_request(options)
     end
@@ -3139,9 +3139,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/GetTemplate AWS API Documentation
     #
-    # @overload get_template(params = {})
+    # @overload get_template(**params)
     # @param [Hash] params ({})
-    def get_template(params = {}, options = {})
+    def get_template(params = {}, **options)
       req = build_request(:get_template, params)
       req.send_request(options)
     end
@@ -3251,9 +3251,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/GetTemplateSummary AWS API Documentation
     #
-    # @overload get_template_summary(params = {})
+    # @overload get_template_summary(**params)
     # @param [Hash] params ({})
-    def get_template_summary(params = {}, options = {})
+    def get_template_summary(params = {}, **options)
       req = build_request(:get_template_summary, params)
       req.send_request(options)
     end
@@ -3303,9 +3303,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListChangeSets AWS API Documentation
     #
-    # @overload list_change_sets(params = {})
+    # @overload list_change_sets(**params)
     # @param [Hash] params ({})
-    def list_change_sets(params = {}, options = {})
+    def list_change_sets(params = {}, **options)
       req = build_request(:list_change_sets, params)
       req.send_request(options)
     end
@@ -3350,9 +3350,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListExports AWS API Documentation
     #
-    # @overload list_exports(params = {})
+    # @overload list_exports(**params)
     # @param [Hash] params ({})
-    def list_exports(params = {}, options = {})
+    def list_exports(params = {}, **options)
       req = build_request(:list_exports, params)
       req.send_request(options)
     end
@@ -3400,9 +3400,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListImports AWS API Documentation
     #
-    # @overload list_imports(params = {})
+    # @overload list_imports(**params)
     # @param [Hash] params ({})
-    def list_imports(params = {}, options = {})
+    def list_imports(params = {}, **options)
       req = build_request(:list_imports, params)
       req.send_request(options)
     end
@@ -3479,9 +3479,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackInstances AWS API Documentation
     #
-    # @overload list_stack_instances(params = {})
+    # @overload list_stack_instances(**params)
     # @param [Hash] params ({})
-    def list_stack_instances(params = {}, options = {})
+    def list_stack_instances(params = {}, **options)
       req = build_request(:list_stack_instances, params)
       req.send_request(options)
     end
@@ -3537,9 +3537,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackResources AWS API Documentation
     #
-    # @overload list_stack_resources(params = {})
+    # @overload list_stack_resources(**params)
     # @param [Hash] params ({})
-    def list_stack_resources(params = {}, options = {})
+    def list_stack_resources(params = {}, **options)
       req = build_request(:list_stack_resources, params)
       req.send_request(options)
     end
@@ -3599,9 +3599,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackSetOperationResults AWS API Documentation
     #
-    # @overload list_stack_set_operation_results(params = {})
+    # @overload list_stack_set_operation_results(**params)
     # @param [Hash] params ({})
-    def list_stack_set_operation_results(params = {}, options = {})
+    def list_stack_set_operation_results(params = {}, **options)
       req = build_request(:list_stack_set_operation_results, params)
       req.send_request(options)
     end
@@ -3654,9 +3654,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackSetOperations AWS API Documentation
     #
-    # @overload list_stack_set_operations(params = {})
+    # @overload list_stack_set_operations(**params)
     # @param [Hash] params ({})
-    def list_stack_set_operations(params = {}, options = {})
+    def list_stack_set_operations(params = {}, **options)
       req = build_request(:list_stack_set_operations, params)
       req.send_request(options)
     end
@@ -3713,9 +3713,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackSets AWS API Documentation
     #
-    # @overload list_stack_sets(params = {})
+    # @overload list_stack_sets(**params)
     # @param [Hash] params ({})
-    def list_stack_sets(params = {}, options = {})
+    def list_stack_sets(params = {}, **options)
       req = build_request(:list_stack_sets, params)
       req.send_request(options)
     end
@@ -3770,9 +3770,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStacks AWS API Documentation
     #
-    # @overload list_stacks(params = {})
+    # @overload list_stacks(**params)
     # @param [Hash] params ({})
-    def list_stacks(params = {}, options = {})
+    def list_stacks(params = {}, **options)
       req = build_request(:list_stacks, params)
       req.send_request(options)
     end
@@ -3841,9 +3841,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListTypeRegistrations AWS API Documentation
     #
-    # @overload list_type_registrations(params = {})
+    # @overload list_type_registrations(**params)
     # @param [Hash] params ({})
-    def list_type_registrations(params = {}, options = {})
+    def list_type_registrations(params = {}, **options)
       req = build_request(:list_type_registrations, params)
       req.send_request(options)
     end
@@ -3929,9 +3929,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListTypeVersions AWS API Documentation
     #
-    # @overload list_type_versions(params = {})
+    # @overload list_type_versions(**params)
     # @param [Hash] params ({})
-    def list_type_versions(params = {}, options = {})
+    def list_type_versions(params = {}, **options)
       req = build_request(:list_type_versions, params)
       req.send_request(options)
     end
@@ -4031,9 +4031,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListTypes AWS API Documentation
     #
-    # @overload list_types(params = {})
+    # @overload list_types(**params)
     # @param [Hash] params ({})
-    def list_types(params = {}, options = {})
+    def list_types(params = {}, **options)
       req = build_request(:list_types, params)
       req.send_request(options)
     end
@@ -4112,9 +4112,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/RecordHandlerProgress AWS API Documentation
     #
-    # @overload record_handler_progress(params = {})
+    # @overload record_handler_progress(**params)
     # @param [Hash] params ({})
-    def record_handler_progress(params = {}, options = {})
+    def record_handler_progress(params = {}, **options)
       req = build_request(:record_handler_progress, params)
       req.send_request(options)
     end
@@ -4245,9 +4245,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/RegisterType AWS API Documentation
     #
-    # @overload register_type(params = {})
+    # @overload register_type(**params)
     # @param [Hash] params ({})
-    def register_type(params = {}, options = {})
+    def register_type(params = {}, **options)
       req = build_request(:register_type, params)
       req.send_request(options)
     end
@@ -4285,9 +4285,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/SetStackPolicy AWS API Documentation
     #
-    # @overload set_stack_policy(params = {})
+    # @overload set_stack_policy(**params)
     # @param [Hash] params ({})
-    def set_stack_policy(params = {}, options = {})
+    def set_stack_policy(params = {}, **options)
       req = build_request(:set_stack_policy, params)
       req.send_request(options)
     end
@@ -4329,9 +4329,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/SetTypeDefaultVersion AWS API Documentation
     #
-    # @overload set_type_default_version(params = {})
+    # @overload set_type_default_version(**params)
     # @param [Hash] params ({})
-    def set_type_default_version(params = {}, options = {})
+    def set_type_default_version(params = {}, **options)
       req = build_request(:set_type_default_version, params)
       req.send_request(options)
     end
@@ -4377,9 +4377,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/SignalResource AWS API Documentation
     #
-    # @overload signal_resource(params = {})
+    # @overload signal_resource(**params)
     # @param [Hash] params ({})
-    def signal_resource(params = {}, options = {})
+    def signal_resource(params = {}, **options)
       req = build_request(:signal_resource, params)
       req.send_request(options)
     end
@@ -4405,9 +4405,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StopStackSetOperation AWS API Documentation
     #
-    # @overload stop_stack_set_operation(params = {})
+    # @overload stop_stack_set_operation(**params)
     # @param [Hash] params ({})
-    def stop_stack_set_operation(params = {}, options = {})
+    def stop_stack_set_operation(params = {}, **options)
       req = build_request(:stop_stack_set_operation, params)
       req.send_request(options)
     end
@@ -4725,9 +4725,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/UpdateStack AWS API Documentation
     #
-    # @overload update_stack(params = {})
+    # @overload update_stack(**params)
     # @param [Hash] params ({})
-    def update_stack(params = {}, options = {})
+    def update_stack(params = {}, **options)
       req = build_request(:update_stack, params)
       req.send_request(options)
     end
@@ -4887,9 +4887,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/UpdateStackInstances AWS API Documentation
     #
-    # @overload update_stack_instances(params = {})
+    # @overload update_stack_instances(**params)
     # @param [Hash] params ({})
-    def update_stack_instances(params = {}, options = {})
+    def update_stack_instances(params = {}, **options)
       req = build_request(:update_stack_instances, params)
       req.send_request(options)
     end
@@ -5241,9 +5241,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/UpdateStackSet AWS API Documentation
     #
-    # @overload update_stack_set(params = {})
+    # @overload update_stack_set(**params)
     # @param [Hash] params ({})
-    def update_stack_set(params = {}, options = {})
+    def update_stack_set(params = {}, **options)
       req = build_request(:update_stack_set, params)
       req.send_request(options)
     end
@@ -5286,9 +5286,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/UpdateTerminationProtection AWS API Documentation
     #
-    # @overload update_termination_protection(params = {})
+    # @overload update_termination_protection(**params)
     # @param [Hash] params ({})
-    def update_termination_protection(params = {}, options = {})
+    def update_termination_protection(params = {}, **options)
       req = build_request(:update_termination_protection, params)
       req.send_request(options)
     end
@@ -5354,9 +5354,9 @@ module Aws::CloudFormation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ValidateTemplate AWS API Documentation
     #
-    # @overload validate_template(params = {})
+    # @overload validate_template(**params)
     # @param [Hash] params ({})
-    def validate_template(params = {}, options = {})
+    def validate_template(params = {}, **options)
       req = build_request(:validate_template, params)
       req.send_request(options)
     end
@@ -5365,7 +5365,7 @@ module Aws::CloudFormation
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5373,8 +5373,8 @@ module Aws::CloudFormation
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudformation'
-      context[:gem_version] = '1.46.0'
+      context[:gem_name] = "aws-sdk-cloudformation"
+      context[:gem_version] = "1.46.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -5473,7 +5473,7 @@ module Aws::CloudFormation
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -5489,7 +5489,7 @@ module Aws::CloudFormation
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

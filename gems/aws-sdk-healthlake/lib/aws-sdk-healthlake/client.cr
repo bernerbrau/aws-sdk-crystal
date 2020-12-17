@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:healthlake)
 
@@ -290,7 +290,7 @@ module Aws::HealthLake
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -383,9 +383,9 @@ module Aws::HealthLake
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/CreateFHIRDatastore AWS API Documentation
     #
-    # @overload create_fhir_datastore(params = {})
+    # @overload create_fhir_datastore(**params)
     # @param [Hash] params ({})
-    def create_fhir_datastore(params = {}, options = {})
+    def create_fhir_datastore(params = {}, **options)
       req = build_request(:create_fhir_datastore, params)
       req.send_request(options)
     end
@@ -417,9 +417,9 @@ module Aws::HealthLake
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/DeleteFHIRDatastore AWS API Documentation
     #
-    # @overload delete_fhir_datastore(params = {})
+    # @overload delete_fhir_datastore(**params)
     # @param [Hash] params ({})
-    def delete_fhir_datastore(params = {}, options = {})
+    def delete_fhir_datastore(params = {}, **options)
       req = build_request(:delete_fhir_datastore, params)
       req.send_request(options)
     end
@@ -455,9 +455,9 @@ module Aws::HealthLake
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/DescribeFHIRDatastore AWS API Documentation
     #
-    # @overload describe_fhir_datastore(params = {})
+    # @overload describe_fhir_datastore(**params)
     # @param [Hash] params ({})
-    def describe_fhir_datastore(params = {}, options = {})
+    def describe_fhir_datastore(params = {}, **options)
       req = build_request(:describe_fhir_datastore, params)
       req.send_request(options)
     end
@@ -496,9 +496,9 @@ module Aws::HealthLake
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/DescribeFHIRImportJob AWS API Documentation
     #
-    # @overload describe_fhir_import_job(params = {})
+    # @overload describe_fhir_import_job(**params)
     # @param [Hash] params ({})
-    def describe_fhir_import_job(params = {}, options = {})
+    def describe_fhir_import_job(params = {}, **options)
       req = build_request(:describe_fhir_import_job, params)
       req.send_request(options)
     end
@@ -551,9 +551,9 @@ module Aws::HealthLake
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/ListFHIRDatastores AWS API Documentation
     #
-    # @overload list_fhir_datastores(params = {})
+    # @overload list_fhir_datastores(**params)
     # @param [Hash] params ({})
-    def list_fhir_datastores(params = {}, options = {})
+    def list_fhir_datastores(params = {}, **options)
       req = build_request(:list_fhir_datastores, params)
       req.send_request(options)
     end
@@ -606,9 +606,9 @@ module Aws::HealthLake
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/StartFHIRImportJob AWS API Documentation
     #
-    # @overload start_fhir_import_job(params = {})
+    # @overload start_fhir_import_job(**params)
     # @param [Hash] params ({})
-    def start_fhir_import_job(params = {}, options = {})
+    def start_fhir_import_job(params = {}, **options)
       req = build_request(:start_fhir_import_job, params)
       req.send_request(options)
     end
@@ -617,7 +617,7 @@ module Aws::HealthLake
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -625,15 +625,15 @@ module Aws::HealthLake
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-healthlake'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-healthlake"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

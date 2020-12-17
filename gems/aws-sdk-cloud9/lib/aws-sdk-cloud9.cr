@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloud9/types'
-require_relative 'aws-sdk-cloud9/client_api'
-require_relative 'aws-sdk-cloud9/client'
-require_relative 'aws-sdk-cloud9/errors'
-require_relative 'aws-sdk-cloud9/resource'
-require_relative 'aws-sdk-cloud9/customizations'
+require_relative "aws-sdk-cloud9/types"
+require_relative "aws-sdk-cloud9/client_api"
+require_relative "aws-sdk-cloud9/client"
+require_relative "aws-sdk-cloud9/errors"
+require_relative "aws-sdk-cloud9/resource"
+require_relative "aws-sdk-cloud9/customizations"
 
 # This module provides support for AWS Cloud9. This module is available in the
 # `aws-sdk-cloud9` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cloud9/customizations'
 # @!group service
 module Aws::Cloud9
 
-  GEM_VERSION = '1.29.0'
+  GEM_VERSION = "1.29.0"
 
 end

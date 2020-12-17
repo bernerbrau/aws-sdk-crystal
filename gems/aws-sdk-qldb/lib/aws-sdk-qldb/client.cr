@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:qldb)
 
@@ -280,7 +280,7 @@ module Aws::QLDB
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -357,9 +357,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/CancelJournalKinesisStream AWS API Documentation
     #
-    # @overload cancel_journal_kinesis_stream(params = {})
+    # @overload cancel_journal_kinesis_stream(**params)
     # @param [Hash] params ({})
-    def cancel_journal_kinesis_stream(params = {}, options = {})
+    def cancel_journal_kinesis_stream(params = {}, **options)
       req = build_request(:cancel_journal_kinesis_stream, params)
       req.send_request(options)
     end
@@ -425,9 +425,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/CreateLedger AWS API Documentation
     #
-    # @overload create_ledger(params = {})
+    # @overload create_ledger(**params)
     # @param [Hash] params ({})
-    def create_ledger(params = {}, options = {})
+    def create_ledger(params = {}, **options)
       req = build_request(:create_ledger, params)
       req.send_request(options)
     end
@@ -453,9 +453,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/DeleteLedger AWS API Documentation
     #
-    # @overload delete_ledger(params = {})
+    # @overload delete_ledger(**params)
     # @param [Hash] params ({})
-    def delete_ledger(params = {}, options = {})
+    def delete_ledger(params = {}, **options)
       req = build_request(:delete_ledger, params)
       req.send_request(options)
     end
@@ -499,9 +499,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/DescribeJournalKinesisStream AWS API Documentation
     #
-    # @overload describe_journal_kinesis_stream(params = {})
+    # @overload describe_journal_kinesis_stream(**params)
     # @param [Hash] params ({})
-    def describe_journal_kinesis_stream(params = {}, options = {})
+    def describe_journal_kinesis_stream(params = {}, **options)
       req = build_request(:describe_journal_kinesis_stream, params)
       req.send_request(options)
     end
@@ -557,9 +557,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/DescribeJournalS3Export AWS API Documentation
     #
-    # @overload describe_journal_s3_export(params = {})
+    # @overload describe_journal_s3_export(**params)
     # @param [Hash] params ({})
-    def describe_journal_s3_export(params = {}, options = {})
+    def describe_journal_s3_export(params = {}, **options)
       req = build_request(:describe_journal_s3_export, params)
       req.send_request(options)
     end
@@ -594,9 +594,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/DescribeLedger AWS API Documentation
     #
-    # @overload describe_ledger(params = {})
+    # @overload describe_ledger(**params)
     # @param [Hash] params ({})
-    def describe_ledger(params = {}, options = {})
+    def describe_ledger(params = {}, **options)
       req = build_request(:describe_ledger, params)
       req.send_request(options)
     end
@@ -684,9 +684,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/ExportJournalToS3 AWS API Documentation
     #
-    # @overload export_journal_to_s3(params = {})
+    # @overload export_journal_to_s3(**params)
     # @param [Hash] params ({})
-    def export_journal_to_s3(params = {}, options = {})
+    def export_journal_to_s3(params = {}, **options)
       req = build_request(:export_journal_to_s3, params)
       req.send_request(options)
     end
@@ -751,9 +751,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/GetBlock AWS API Documentation
     #
-    # @overload get_block(params = {})
+    # @overload get_block(**params)
     # @param [Hash] params ({})
-    def get_block(params = {}, options = {})
+    def get_block(params = {}, **options)
       req = build_request(:get_block, params)
       req.send_request(options)
     end
@@ -783,9 +783,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/GetDigest AWS API Documentation
     #
-    # @overload get_digest(params = {})
+    # @overload get_digest(**params)
     # @param [Hash] params ({})
-    def get_digest(params = {}, options = {})
+    def get_digest(params = {}, **options)
       req = build_request(:get_digest, params)
       req.send_request(options)
     end
@@ -839,9 +839,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/GetRevision AWS API Documentation
     #
-    # @overload get_revision(params = {})
+    # @overload get_revision(**params)
     # @param [Hash] params ({})
-    def get_revision(params = {}, options = {})
+    def get_revision(params = {}, **options)
       req = build_request(:get_revision, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/ListJournalKinesisStreamsForLedger AWS API Documentation
     #
-    # @overload list_journal_kinesis_streams_for_ledger(params = {})
+    # @overload list_journal_kinesis_streams_for_ledger(**params)
     # @param [Hash] params ({})
-    def list_journal_kinesis_streams_for_ledger(params = {}, options = {})
+    def list_journal_kinesis_streams_for_ledger(params = {}, **options)
       req = build_request(:list_journal_kinesis_streams_for_ledger, params)
       req.send_request(options)
     end
@@ -967,9 +967,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/ListJournalS3Exports AWS API Documentation
     #
-    # @overload list_journal_s3_exports(params = {})
+    # @overload list_journal_s3_exports(**params)
     # @param [Hash] params ({})
-    def list_journal_s3_exports(params = {}, options = {})
+    def list_journal_s3_exports(params = {}, **options)
       req = build_request(:list_journal_s3_exports, params)
       req.send_request(options)
     end
@@ -1036,9 +1036,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/ListJournalS3ExportsForLedger AWS API Documentation
     #
-    # @overload list_journal_s3_exports_for_ledger(params = {})
+    # @overload list_journal_s3_exports_for_ledger(**params)
     # @param [Hash] params ({})
-    def list_journal_s3_exports_for_ledger(params = {}, options = {})
+    def list_journal_s3_exports_for_ledger(params = {}, **options)
       req = build_request(:list_journal_s3_exports_for_ledger, params)
       req.send_request(options)
     end
@@ -1084,9 +1084,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/ListLedgers AWS API Documentation
     #
-    # @overload list_ledgers(params = {})
+    # @overload list_ledgers(**params)
     # @param [Hash] params ({})
-    def list_ledgers(params = {}, options = {})
+    def list_ledgers(params = {}, **options)
       req = build_request(:list_ledgers, params)
       req.send_request(options)
     end
@@ -1116,9 +1116,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/StreamJournalToKinesis AWS API Documentation
     #
-    # @overload stream_journal_to_kinesis(params = {})
+    # @overload stream_journal_to_kinesis(**params)
     # @param [Hash] params ({})
-    def stream_journal_to_kinesis(params = {}, options = {})
+    def stream_journal_to_kinesis(params = {}, **options)
       req = build_request(:stream_journal_to_kinesis, params)
       req.send_request(options)
     end
@@ -1245,9 +1245,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1275,9 +1275,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1323,9 +1323,9 @@ module Aws::QLDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/qldb-2019-01-02/UpdateLedger AWS API Documentation
     #
-    # @overload update_ledger(params = {})
+    # @overload update_ledger(**params)
     # @param [Hash] params ({})
-    def update_ledger(params = {}, options = {})
+    def update_ledger(params = {}, **options)
       req = build_request(:update_ledger, params)
       req.send_request(options)
     end
@@ -1334,7 +1334,7 @@ module Aws::QLDB
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1342,15 +1342,15 @@ module Aws::QLDB
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-qldb'
-      context[:gem_version] = '1.11.0'
+      context[:gem_name] = "aws-sdk-qldb"
+      context[:gem_version] = "1.11.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,11 +8,11 @@
 Feature: Smoke tests for CodePipeline
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @codepipeline @smoke
   Scenario: Call Aws::CodePipeline::Client#list_pipelines and expect it to succeed
-  When I call the operation 'list_pipelines' with params:
+  When I call the operation "list_pipelines" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @codepipeline @smoke
   Scenario: Call Aws::Aws::CodePipeline::Client#get_pipeline and expect it to fail
-  When I call the operation 'get_pipeline' with params:
+  When I call the operation "get_pipeline" with params:
     """
 {"name":"fake-pipeline"}
     """

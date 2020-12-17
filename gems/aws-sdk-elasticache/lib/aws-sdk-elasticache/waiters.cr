@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ElastiCache
   # Waiters are utility methods that poll for a particular state to occur
@@ -130,7 +130,7 @@ module Aws::ElastiCache
 
       # @option (see Client#describe_cache_clusters)
       # @return (see Client#describe_cache_clusters)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -210,7 +210,7 @@ module Aws::ElastiCache
 
       # @option (see Client#describe_cache_clusters)
       # @return (see Client#describe_cache_clusters)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -255,7 +255,7 @@ module Aws::ElastiCache
 
       # @option (see Client#describe_replication_groups)
       # @return (see Client#describe_replication_groups)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -305,7 +305,7 @@ module Aws::ElastiCache
 
       # @option (see Client#describe_replication_groups)
       # @return (see Client#describe_replication_groups)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

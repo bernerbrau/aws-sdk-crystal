@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-eks/types'
-require_relative 'aws-sdk-eks/client_api'
-require_relative 'aws-sdk-eks/client'
-require_relative 'aws-sdk-eks/errors'
-require_relative 'aws-sdk-eks/waiters'
-require_relative 'aws-sdk-eks/resource'
-require_relative 'aws-sdk-eks/customizations'
+require_relative "aws-sdk-eks/types"
+require_relative "aws-sdk-eks/client_api"
+require_relative "aws-sdk-eks/client"
+require_relative "aws-sdk-eks/errors"
+require_relative "aws-sdk-eks/waiters"
+require_relative "aws-sdk-eks/resource"
+require_relative "aws-sdk-eks/customizations"
 
 # This module provides support for Amazon Elastic Kubernetes Service. This module is available in the
 # `aws-sdk-eks` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-eks/customizations'
 # @!group service
 module Aws::EKS
 
-  GEM_VERSION = '1.46.0'
+  GEM_VERSION = "1.46.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-workspaces/types'
-require_relative 'aws-sdk-workspaces/client_api'
-require_relative 'aws-sdk-workspaces/client'
-require_relative 'aws-sdk-workspaces/errors'
-require_relative 'aws-sdk-workspaces/resource'
-require_relative 'aws-sdk-workspaces/customizations'
+require_relative "aws-sdk-workspaces/types"
+require_relative "aws-sdk-workspaces/client_api"
+require_relative "aws-sdk-workspaces/client"
+require_relative "aws-sdk-workspaces/errors"
+require_relative "aws-sdk-workspaces/resource"
+require_relative "aws-sdk-workspaces/customizations"
 
 # This module provides support for Amazon WorkSpaces. This module is available in the
 # `aws-sdk-workspaces` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-workspaces/customizations'
 # @!group service
 module Aws::WorkSpaces
 
-  GEM_VERSION = '1.49.0'
+  GEM_VERSION = "1.49.0"
 
 end

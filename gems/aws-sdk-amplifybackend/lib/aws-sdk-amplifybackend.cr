@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-amplifybackend/types'
-require_relative 'aws-sdk-amplifybackend/client_api'
-require_relative 'aws-sdk-amplifybackend/client'
-require_relative 'aws-sdk-amplifybackend/errors'
-require_relative 'aws-sdk-amplifybackend/resource'
-require_relative 'aws-sdk-amplifybackend/customizations'
+require_relative "aws-sdk-amplifybackend/types"
+require_relative "aws-sdk-amplifybackend/client_api"
+require_relative "aws-sdk-amplifybackend/client"
+require_relative "aws-sdk-amplifybackend/errors"
+require_relative "aws-sdk-amplifybackend/resource"
+require_relative "aws-sdk-amplifybackend/customizations"
 
 # This module provides support for AmplifyBackend. This module is available in the
 # `aws-sdk-amplifybackend` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-amplifybackend/customizations'
 # @!group service
 module Aws::AmplifyBackend
 
-  GEM_VERSION = '1.1.0'
+  GEM_VERSION = "1.1.0"
 
 end

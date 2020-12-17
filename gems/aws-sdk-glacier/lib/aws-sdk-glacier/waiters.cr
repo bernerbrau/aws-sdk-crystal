@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::Glacier
   # Waiters are utility methods that poll for a particular state to occur
@@ -107,7 +107,7 @@ module Aws::Glacier
 
       # @option (see Client#describe_vault)
       # @return (see Client#describe_vault)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -149,7 +149,7 @@ module Aws::Glacier
 
       # @option (see Client#describe_vault)
       # @return (see Client#describe_vault)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

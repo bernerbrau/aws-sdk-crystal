@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudhsmv2)
 
@@ -290,7 +290,7 @@ module Aws::CloudHSMV2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -377,9 +377,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/CopyBackupToRegion AWS API Documentation
     #
-    # @overload copy_backup_to_region(params = {})
+    # @overload copy_backup_to_region(**params)
     # @param [Hash] params ({})
-    def copy_backup_to_region(params = {}, options = {})
+    def copy_backup_to_region(params = {}, **options)
       req = build_request(:copy_backup_to_region, params)
       req.send_request(options)
     end
@@ -468,9 +468,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -517,9 +517,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/CreateHsm AWS API Documentation
     #
-    # @overload create_hsm(params = {})
+    # @overload create_hsm(**params)
     # @param [Hash] params ({})
-    def create_hsm(params = {}, options = {})
+    def create_hsm(params = {}, **options)
       req = build_request(:create_hsm, params)
       req.send_request(options)
     end
@@ -560,9 +560,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/DeleteBackup AWS API Documentation
     #
-    # @overload delete_backup(params = {})
+    # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, options = {})
+    def delete_backup(params = {}, **options)
       req = build_request(:delete_backup, params)
       req.send_request(options)
     end
@@ -622,9 +622,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/DeleteCluster AWS API Documentation
     #
-    # @overload delete_cluster(params = {})
+    # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, options = {})
+    def delete_cluster(params = {}, **options)
       req = build_request(:delete_cluster, params)
       req.send_request(options)
     end
@@ -668,9 +668,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/DeleteHsm AWS API Documentation
     #
-    # @overload delete_hsm(params = {})
+    # @overload delete_hsm(**params)
     # @param [Hash] params ({})
-    def delete_hsm(params = {}, options = {})
+    def delete_hsm(params = {}, **options)
       req = build_request(:delete_hsm, params)
       req.send_request(options)
     end
@@ -756,9 +756,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/DescribeBackups AWS API Documentation
     #
-    # @overload describe_backups(params = {})
+    # @overload describe_backups(**params)
     # @param [Hash] params ({})
-    def describe_backups(params = {}, options = {})
+    def describe_backups(params = {}, **options)
       req = build_request(:describe_backups, params)
       req.send_request(options)
     end
@@ -849,9 +849,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/DescribeClusters AWS API Documentation
     #
-    # @overload describe_clusters(params = {})
+    # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, options = {})
+    def describe_clusters(params = {}, **options)
       req = build_request(:describe_clusters, params)
       req.send_request(options)
     end
@@ -898,9 +898,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/InitializeCluster AWS API Documentation
     #
-    # @overload initialize_cluster(params = {})
+    # @overload initialize_cluster(**params)
     # @param [Hash] params ({})
-    def initialize_cluster(params = {}, options = {})
+    def initialize_cluster(params = {}, **options)
       req = build_request(:initialize_cluster, params)
       req.send_request(options)
     end
@@ -951,9 +951,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -999,9 +999,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/ModifyBackupAttributes AWS API Documentation
     #
-    # @overload modify_backup_attributes(params = {})
+    # @overload modify_backup_attributes(**params)
     # @param [Hash] params ({})
-    def modify_backup_attributes(params = {}, options = {})
+    def modify_backup_attributes(params = {}, **options)
       req = build_request(:modify_backup_attributes, params)
       req.send_request(options)
     end
@@ -1065,9 +1065,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/ModifyCluster AWS API Documentation
     #
-    # @overload modify_cluster(params = {})
+    # @overload modify_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cluster(params = {}, options = {})
+    def modify_cluster(params = {}, **options)
       req = build_request(:modify_cluster, params)
       req.send_request(options)
     end
@@ -1108,9 +1108,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/RestoreBackup AWS API Documentation
     #
-    # @overload restore_backup(params = {})
+    # @overload restore_backup(**params)
     # @param [Hash] params ({})
-    def restore_backup(params = {}, options = {})
+    def restore_backup(params = {}, **options)
       req = build_request(:restore_backup, params)
       req.send_request(options)
     end
@@ -1141,9 +1141,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1170,9 +1170,9 @@ module Aws::CloudHSMV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsmv2-2017-04-28/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1181,7 +1181,7 @@ module Aws::CloudHSMV2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1189,15 +1189,15 @@ module Aws::CloudHSMV2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudhsmv2'
-      context[:gem_version] = '1.31.0'
+      context[:gem_name] = "aws-sdk-cloudhsmv2"
+      context[:gem_version] = "1.31.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

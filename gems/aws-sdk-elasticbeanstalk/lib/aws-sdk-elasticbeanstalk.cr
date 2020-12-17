@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-elasticbeanstalk/types'
-require_relative 'aws-sdk-elasticbeanstalk/client_api'
-require_relative 'aws-sdk-elasticbeanstalk/client'
-require_relative 'aws-sdk-elasticbeanstalk/errors'
-require_relative 'aws-sdk-elasticbeanstalk/waiters'
-require_relative 'aws-sdk-elasticbeanstalk/resource'
-require_relative 'aws-sdk-elasticbeanstalk/customizations'
+require_relative "aws-sdk-elasticbeanstalk/types"
+require_relative "aws-sdk-elasticbeanstalk/client_api"
+require_relative "aws-sdk-elasticbeanstalk/client"
+require_relative "aws-sdk-elasticbeanstalk/errors"
+require_relative "aws-sdk-elasticbeanstalk/waiters"
+require_relative "aws-sdk-elasticbeanstalk/resource"
+require_relative "aws-sdk-elasticbeanstalk/customizations"
 
 # This module provides support for AWS Elastic Beanstalk. This module is available in the
 # `aws-sdk-elasticbeanstalk` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-elasticbeanstalk/customizations'
 # @!group service
 module Aws::ElasticBeanstalk
 
-  GEM_VERSION = '1.40.0'
+  GEM_VERSION = "1.40.0"
 
 end

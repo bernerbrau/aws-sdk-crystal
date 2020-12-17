@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appmesh/types'
-require_relative 'aws-sdk-appmesh/client_api'
-require_relative 'aws-sdk-appmesh/client'
-require_relative 'aws-sdk-appmesh/errors'
-require_relative 'aws-sdk-appmesh/resource'
-require_relative 'aws-sdk-appmesh/customizations'
+require_relative "aws-sdk-appmesh/types"
+require_relative "aws-sdk-appmesh/client_api"
+require_relative "aws-sdk-appmesh/client"
+require_relative "aws-sdk-appmesh/errors"
+require_relative "aws-sdk-appmesh/resource"
+require_relative "aws-sdk-appmesh/customizations"
 
 # This module provides support for AWS App Mesh. This module is available in the
 # `aws-sdk-appmesh` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-appmesh/customizations'
 # @!group service
 module Aws::AppMesh
 
-  GEM_VERSION = '1.33.0'
+  GEM_VERSION = "1.33.0"
 
 end

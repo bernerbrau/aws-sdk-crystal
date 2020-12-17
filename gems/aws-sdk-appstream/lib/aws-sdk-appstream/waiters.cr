@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::AppStream
   # Waiters are utility methods that poll for a particular state to occur
@@ -115,7 +115,7 @@ module Aws::AppStream
 
       # @option (see Client#describe_fleets)
       # @return (see Client#describe_fleets)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -165,7 +165,7 @@ module Aws::AppStream
 
       # @option (see Client#describe_fleets)
       # @return (see Client#describe_fleets)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

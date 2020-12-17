@@ -13,7 +13,7 @@ module Aws::IoT1ClickDevicesService
 
     # @param options ({})
     # @option options [Client] :client
-    def initialize(options = {})
+    def initialize(**options)
       @client = options[:client] || Client.new(options)
     end
 

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:networkmanager)
 
@@ -280,7 +280,7 @@ module Aws::NetworkManager
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -387,9 +387,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/AssociateCustomerGateway AWS API Documentation
     #
-    # @overload associate_customer_gateway(params = {})
+    # @overload associate_customer_gateway(**params)
     # @param [Hash] params ({})
-    def associate_customer_gateway(params = {}, options = {})
+    def associate_customer_gateway(params = {}, **options)
       req = build_request(:associate_customer_gateway, params)
       req.send_request(options)
     end
@@ -428,9 +428,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/AssociateLink AWS API Documentation
     #
-    # @overload associate_link(params = {})
+    # @overload associate_link(**params)
     # @param [Hash] params ({})
-    def associate_link(params = {}, options = {})
+    def associate_link(params = {}, **options)
       req = build_request(:associate_link, params)
       req.send_request(options)
     end
@@ -481,9 +481,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/AssociateTransitGatewayConnectPeer AWS API Documentation
     #
-    # @overload associate_transit_gateway_connect_peer(params = {})
+    # @overload associate_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def associate_transit_gateway_connect_peer(params = {}, options = {})
+    def associate_transit_gateway_connect_peer(params = {}, **options)
       req = build_request(:associate_transit_gateway_connect_peer, params)
       req.send_request(options)
     end
@@ -555,9 +555,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateConnection AWS API Documentation
     #
-    # @overload create_connection(params = {})
+    # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, options = {})
+    def create_connection(params = {}, **options)
       req = build_request(:create_connection, params)
       req.send_request(options)
     end
@@ -659,9 +659,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateDevice AWS API Documentation
     #
-    # @overload create_device(params = {})
+    # @overload create_device(**params)
     # @param [Hash] params ({})
-    def create_device(params = {}, options = {})
+    def create_device(params = {}, **options)
       req = build_request(:create_device, params)
       req.send_request(options)
     end
@@ -705,9 +705,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateGlobalNetwork AWS API Documentation
     #
-    # @overload create_global_network(params = {})
+    # @overload create_global_network(**params)
     # @param [Hash] params ({})
-    def create_global_network(params = {}, options = {})
+    def create_global_network(params = {}, **options)
       req = build_request(:create_global_network, params)
       req.send_request(options)
     end
@@ -788,9 +788,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateLink AWS API Documentation
     #
-    # @overload create_link(params = {})
+    # @overload create_link(**params)
     # @param [Hash] params ({})
-    def create_link(params = {}, options = {})
+    def create_link(params = {}, **options)
       req = build_request(:create_link, params)
       req.send_request(options)
     end
@@ -858,9 +858,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateSite AWS API Documentation
     #
-    # @overload create_site(params = {})
+    # @overload create_site(**params)
     # @param [Hash] params ({})
-    def create_site(params = {}, options = {})
+    def create_site(params = {}, **options)
       req = build_request(:create_site, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeleteConnection AWS API Documentation
     #
-    # @overload delete_connection(params = {})
+    # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, options = {})
+    def delete_connection(params = {}, **options)
       req = build_request(:delete_connection, params)
       req.send_request(options)
     end
@@ -953,9 +953,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeleteDevice AWS API Documentation
     #
-    # @overload delete_device(params = {})
+    # @overload delete_device(**params)
     # @param [Hash] params ({})
-    def delete_device(params = {}, options = {})
+    def delete_device(params = {}, **options)
       req = build_request(:delete_device, params)
       req.send_request(options)
     end
@@ -990,9 +990,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeleteGlobalNetwork AWS API Documentation
     #
-    # @overload delete_global_network(params = {})
+    # @overload delete_global_network(**params)
     # @param [Hash] params ({})
-    def delete_global_network(params = {}, options = {})
+    def delete_global_network(params = {}, **options)
       req = build_request(:delete_global_network, params)
       req.send_request(options)
     end
@@ -1036,9 +1036,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeleteLink AWS API Documentation
     #
-    # @overload delete_link(params = {})
+    # @overload delete_link(**params)
     # @param [Hash] params ({})
-    def delete_link(params = {}, options = {})
+    def delete_link(params = {}, **options)
       req = build_request(:delete_link, params)
       req.send_request(options)
     end
@@ -1080,9 +1080,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeleteSite AWS API Documentation
     #
-    # @overload delete_site(params = {})
+    # @overload delete_site(**params)
     # @param [Hash] params ({})
-    def delete_site(params = {}, options = {})
+    def delete_site(params = {}, **options)
       req = build_request(:delete_site, params)
       req.send_request(options)
     end
@@ -1117,9 +1117,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeregisterTransitGateway AWS API Documentation
     #
-    # @overload deregister_transit_gateway(params = {})
+    # @overload deregister_transit_gateway(**params)
     # @param [Hash] params ({})
-    def deregister_transit_gateway(params = {}, options = {})
+    def deregister_transit_gateway(params = {}, **options)
       req = build_request(:deregister_transit_gateway, params)
       req.send_request(options)
     end
@@ -1169,9 +1169,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DescribeGlobalNetworks AWS API Documentation
     #
-    # @overload describe_global_networks(params = {})
+    # @overload describe_global_networks(**params)
     # @param [Hash] params ({})
-    def describe_global_networks(params = {}, options = {})
+    def describe_global_networks(params = {}, **options)
       req = build_request(:describe_global_networks, params)
       req.send_request(options)
     end
@@ -1210,9 +1210,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DisassociateCustomerGateway AWS API Documentation
     #
-    # @overload disassociate_customer_gateway(params = {})
+    # @overload disassociate_customer_gateway(**params)
     # @param [Hash] params ({})
-    def disassociate_customer_gateway(params = {}, options = {})
+    def disassociate_customer_gateway(params = {}, **options)
       req = build_request(:disassociate_customer_gateway, params)
       req.send_request(options)
     end
@@ -1250,9 +1250,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DisassociateLink AWS API Documentation
     #
-    # @overload disassociate_link(params = {})
+    # @overload disassociate_link(**params)
     # @param [Hash] params ({})
-    def disassociate_link(params = {}, options = {})
+    def disassociate_link(params = {}, **options)
       req = build_request(:disassociate_link, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DisassociateTransitGatewayConnectPeer AWS API Documentation
     #
-    # @overload disassociate_transit_gateway_connect_peer(params = {})
+    # @overload disassociate_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def disassociate_transit_gateway_connect_peer(params = {}, options = {})
+    def disassociate_transit_gateway_connect_peer(params = {}, **options)
       req = build_request(:disassociate_transit_gateway_connect_peer, params)
       req.send_request(options)
     end
@@ -1348,9 +1348,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetConnections AWS API Documentation
     #
-    # @overload get_connections(params = {})
+    # @overload get_connections(**params)
     # @param [Hash] params ({})
-    def get_connections(params = {}, options = {})
+    def get_connections(params = {}, **options)
       req = build_request(:get_connections, params)
       req.send_request(options)
     end
@@ -1404,9 +1404,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetCustomerGatewayAssociations AWS API Documentation
     #
-    # @overload get_customer_gateway_associations(params = {})
+    # @overload get_customer_gateway_associations(**params)
     # @param [Hash] params ({})
-    def get_customer_gateway_associations(params = {}, options = {})
+    def get_customer_gateway_associations(params = {}, **options)
       req = build_request(:get_customer_gateway_associations, params)
       req.send_request(options)
     end
@@ -1472,9 +1472,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetDevices AWS API Documentation
     #
-    # @overload get_devices(params = {})
+    # @overload get_devices(**params)
     # @param [Hash] params ({})
-    def get_devices(params = {}, options = {})
+    def get_devices(params = {}, **options)
       req = build_request(:get_devices, params)
       req.send_request(options)
     end
@@ -1525,9 +1525,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetLinkAssociations AWS API Documentation
     #
-    # @overload get_link_associations(params = {})
+    # @overload get_link_associations(**params)
     # @param [Hash] params ({})
-    def get_link_associations(params = {}, options = {})
+    def get_link_associations(params = {}, **options)
       req = build_request(:get_link_associations, params)
       req.send_request(options)
     end
@@ -1600,9 +1600,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetLinks AWS API Documentation
     #
-    # @overload get_links(params = {})
+    # @overload get_links(**params)
     # @param [Hash] params ({})
-    def get_links(params = {}, options = {})
+    def get_links(params = {}, **options)
       req = build_request(:get_links, params)
       req.send_request(options)
     end
@@ -1656,9 +1656,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetSites AWS API Documentation
     #
-    # @overload get_sites(params = {})
+    # @overload get_sites(**params)
     # @param [Hash] params ({})
-    def get_sites(params = {}, options = {})
+    def get_sites(params = {}, **options)
       req = build_request(:get_sites, params)
       req.send_request(options)
     end
@@ -1706,9 +1706,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayConnectPeerAssociations AWS API Documentation
     #
-    # @overload get_transit_gateway_connect_peer_associations(params = {})
+    # @overload get_transit_gateway_connect_peer_associations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_connect_peer_associations(params = {}, options = {})
+    def get_transit_gateway_connect_peer_associations(params = {}, **options)
       req = build_request(:get_transit_gateway_connect_peer_associations, params)
       req.send_request(options)
     end
@@ -1756,9 +1756,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayRegistrations AWS API Documentation
     #
-    # @overload get_transit_gateway_registrations(params = {})
+    # @overload get_transit_gateway_registrations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_registrations(params = {}, options = {})
+    def get_transit_gateway_registrations(params = {}, **options)
       req = build_request(:get_transit_gateway_registrations, params)
       req.send_request(options)
     end
@@ -1786,9 +1786,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1829,9 +1829,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/RegisterTransitGateway AWS API Documentation
     #
-    # @overload register_transit_gateway(params = {})
+    # @overload register_transit_gateway(**params)
     # @param [Hash] params ({})
-    def register_transit_gateway(params = {}, options = {})
+    def register_transit_gateway(params = {}, **options)
       req = build_request(:register_transit_gateway, params)
       req.send_request(options)
     end
@@ -1860,9 +1860,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1886,9 +1886,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1945,9 +1945,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateConnection AWS API Documentation
     #
-    # @overload update_connection(params = {})
+    # @overload update_connection(**params)
     # @param [Hash] params ({})
-    def update_connection(params = {}, options = {})
+    def update_connection(params = {}, **options)
       req = build_request(:update_connection, params)
       req.send_request(options)
     end
@@ -2043,9 +2043,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateDevice AWS API Documentation
     #
-    # @overload update_device(params = {})
+    # @overload update_device(**params)
     # @param [Hash] params ({})
-    def update_device(params = {}, options = {})
+    def update_device(params = {}, **options)
       req = build_request(:update_device, params)
       req.send_request(options)
     end
@@ -2085,9 +2085,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateGlobalNetwork AWS API Documentation
     #
-    # @overload update_global_network(params = {})
+    # @overload update_global_network(**params)
     # @param [Hash] params ({})
-    def update_global_network(params = {}, options = {})
+    def update_global_network(params = {}, **options)
       req = build_request(:update_global_network, params)
       req.send_request(options)
     end
@@ -2156,9 +2156,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateLink AWS API Documentation
     #
-    # @overload update_link(params = {})
+    # @overload update_link(**params)
     # @param [Hash] params ({})
-    def update_link(params = {}, options = {})
+    def update_link(params = {}, **options)
       req = build_request(:update_link, params)
       req.send_request(options)
     end
@@ -2220,9 +2220,9 @@ module Aws::NetworkManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateSite AWS API Documentation
     #
-    # @overload update_site(params = {})
+    # @overload update_site(**params)
     # @param [Hash] params ({})
-    def update_site(params = {}, options = {})
+    def update_site(params = {}, **options)
       req = build_request(:update_site, params)
       req.send_request(options)
     end
@@ -2231,7 +2231,7 @@ module Aws::NetworkManager
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2239,15 +2239,15 @@ module Aws::NetworkManager
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-networkmanager'
-      context[:gem_version] = '1.9.0'
+      context[:gem_name] = "aws-sdk-networkmanager"
+      context[:gem_version] = "1.9.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

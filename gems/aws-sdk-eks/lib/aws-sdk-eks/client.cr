@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:eks)
 
@@ -280,7 +280,7 @@ module Aws::EKS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -429,9 +429,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateAddon AWS API Documentation
     #
-    # @overload create_addon(params = {})
+    # @overload create_addon(**params)
     # @param [Hash] params ({})
-    def create_addon(params = {}, options = {})
+    def create_addon(params = {}, **options)
       req = build_request(:create_addon, params)
       req.send_request(options)
     end
@@ -661,9 +661,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -797,9 +797,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateFargateProfile AWS API Documentation
     #
-    # @overload create_fargate_profile(params = {})
+    # @overload create_fargate_profile(**params)
     # @param [Hash] params ({})
-    def create_fargate_profile(params = {}, options = {})
+    def create_fargate_profile(params = {}, **options)
       req = build_request(:create_fargate_profile, params)
       req.send_request(options)
     end
@@ -1062,9 +1062,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateNodegroup AWS API Documentation
     #
-    # @overload create_nodegroup(params = {})
+    # @overload create_nodegroup(**params)
     # @param [Hash] params ({})
-    def create_nodegroup(params = {}, options = {})
+    def create_nodegroup(params = {}, **options)
       req = build_request(:create_nodegroup, params)
       req.send_request(options)
     end
@@ -1117,9 +1117,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteAddon AWS API Documentation
     #
-    # @overload delete_addon(params = {})
+    # @overload delete_addon(**params)
     # @param [Hash] params ({})
-    def delete_addon(params = {}, options = {})
+    def delete_addon(params = {}, **options)
       req = build_request(:delete_addon, params)
       req.send_request(options)
     end
@@ -1204,9 +1204,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteCluster AWS API Documentation
     #
-    # @overload delete_cluster(params = {})
+    # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, options = {})
+    def delete_cluster(params = {}, **options)
       req = build_request(:delete_cluster, params)
       req.send_request(options)
     end
@@ -1260,9 +1260,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteFargateProfile AWS API Documentation
     #
-    # @overload delete_fargate_profile(params = {})
+    # @overload delete_fargate_profile(**params)
     # @param [Hash] params ({})
-    def delete_fargate_profile(params = {}, options = {})
+    def delete_fargate_profile(params = {}, **options)
       req = build_request(:delete_fargate_profile, params)
       req.send_request(options)
     end
@@ -1329,9 +1329,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteNodegroup AWS API Documentation
     #
-    # @overload delete_nodegroup(params = {})
+    # @overload delete_nodegroup(**params)
     # @param [Hash] params ({})
-    def delete_nodegroup(params = {}, options = {})
+    def delete_nodegroup(params = {}, **options)
       req = build_request(:delete_nodegroup, params)
       req.send_request(options)
     end
@@ -1386,9 +1386,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeAddon AWS API Documentation
     #
-    # @overload describe_addon(params = {})
+    # @overload describe_addon(**params)
     # @param [Hash] params ({})
-    def describe_addon(params = {}, options = {})
+    def describe_addon(params = {}, **options)
       req = build_request(:describe_addon, params)
       req.send_request(options)
     end
@@ -1456,9 +1456,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeAddonVersions AWS API Documentation
     #
-    # @overload describe_addon_versions(params = {})
+    # @overload describe_addon_versions(**params)
     # @param [Hash] params ({})
-    def describe_addon_versions(params = {}, options = {})
+    def describe_addon_versions(params = {}, **options)
       req = build_request(:describe_addon_versions, params)
       req.send_request(options)
     end
@@ -1570,9 +1570,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeCluster AWS API Documentation
     #
-    # @overload describe_cluster(params = {})
+    # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, options = {})
+    def describe_cluster(params = {}, **options)
       req = build_request(:describe_cluster, params)
       req.send_request(options)
     end
@@ -1616,9 +1616,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeFargateProfile AWS API Documentation
     #
-    # @overload describe_fargate_profile(params = {})
+    # @overload describe_fargate_profile(**params)
     # @param [Hash] params ({})
-    def describe_fargate_profile(params = {}, options = {})
+    def describe_fargate_profile(params = {}, **options)
       req = build_request(:describe_fargate_profile, params)
       req.send_request(options)
     end
@@ -1690,9 +1690,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeNodegroup AWS API Documentation
     #
-    # @overload describe_nodegroup(params = {})
+    # @overload describe_nodegroup(**params)
     # @param [Hash] params ({})
-    def describe_nodegroup(params = {}, options = {})
+    def describe_nodegroup(params = {}, **options)
       req = build_request(:describe_nodegroup, params)
       req.send_request(options)
     end
@@ -1751,9 +1751,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeUpdate AWS API Documentation
     #
-    # @overload describe_update(params = {})
+    # @overload describe_update(**params)
     # @param [Hash] params ({})
-    def describe_update(params = {}, options = {})
+    def describe_update(params = {}, **options)
       req = build_request(:describe_update, params)
       req.send_request(options)
     end
@@ -1808,9 +1808,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListAddons AWS API Documentation
     #
-    # @overload list_addons(params = {})
+    # @overload list_addons(**params)
     # @param [Hash] params ({})
-    def list_addons(params = {}, options = {})
+    def list_addons(params = {}, **options)
       req = build_request(:list_addons, params)
       req.send_request(options)
     end
@@ -1878,9 +1878,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListClusters AWS API Documentation
     #
-    # @overload list_clusters(params = {})
+    # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, options = {})
+    def list_clusters(params = {}, **options)
       req = build_request(:list_clusters, params)
       req.send_request(options)
     end
@@ -1933,9 +1933,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListFargateProfiles AWS API Documentation
     #
-    # @overload list_fargate_profiles(params = {})
+    # @overload list_fargate_profiles(**params)
     # @param [Hash] params ({})
-    def list_fargate_profiles(params = {}, options = {})
+    def list_fargate_profiles(params = {}, **options)
       req = build_request(:list_fargate_profiles, params)
       req.send_request(options)
     end
@@ -1987,9 +1987,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListNodegroups AWS API Documentation
     #
-    # @overload list_nodegroups(params = {})
+    # @overload list_nodegroups(**params)
     # @param [Hash] params ({})
-    def list_nodegroups(params = {}, options = {})
+    def list_nodegroups(params = {}, **options)
       req = build_request(:list_nodegroups, params)
       req.send_request(options)
     end
@@ -2034,9 +2034,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2094,9 +2094,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListUpdates AWS API Documentation
     #
-    # @overload list_updates(params = {})
+    # @overload list_updates(**params)
     # @param [Hash] params ({})
-    def list_updates(params = {}, options = {})
+    def list_updates(params = {}, **options)
       req = build_request(:list_updates, params)
       req.send_request(options)
     end
@@ -2131,9 +2131,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2159,9 +2159,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2250,9 +2250,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateAddon AWS API Documentation
     #
-    # @overload update_addon(params = {})
+    # @overload update_addon(**params)
     # @param [Hash] params ({})
-    def update_addon(params = {}, options = {})
+    def update_addon(params = {}, **options)
       req = build_request(:update_addon, params)
       req.send_request(options)
     end
@@ -2370,9 +2370,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateClusterConfig AWS API Documentation
     #
-    # @overload update_cluster_config(params = {})
+    # @overload update_cluster_config(**params)
     # @param [Hash] params ({})
-    def update_cluster_config(params = {}, options = {})
+    def update_cluster_config(params = {}, **options)
       req = build_request(:update_cluster_config, params)
       req.send_request(options)
     end
@@ -2434,9 +2434,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateClusterVersion AWS API Documentation
     #
-    # @overload update_cluster_version(params = {})
+    # @overload update_cluster_version(**params)
     # @param [Hash] params ({})
-    def update_cluster_version(params = {}, options = {})
+    def update_cluster_version(params = {}, **options)
       req = build_request(:update_cluster_version, params)
       req.send_request(options)
     end
@@ -2510,9 +2510,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateNodegroupConfig AWS API Documentation
     #
-    # @overload update_nodegroup_config(params = {})
+    # @overload update_nodegroup_config(**params)
     # @param [Hash] params ({})
-    def update_nodegroup_config(params = {}, options = {})
+    def update_nodegroup_config(params = {}, **options)
       req = build_request(:update_nodegroup_config, params)
       req.send_request(options)
     end
@@ -2641,9 +2641,9 @@ module Aws::EKS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateNodegroupVersion AWS API Documentation
     #
-    # @overload update_nodegroup_version(params = {})
+    # @overload update_nodegroup_version(**params)
     # @param [Hash] params ({})
-    def update_nodegroup_version(params = {}, options = {})
+    def update_nodegroup_version(params = {}, **options)
       req = build_request(:update_nodegroup_version, params)
       req.send_request(options)
     end
@@ -2652,7 +2652,7 @@ module Aws::EKS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2660,8 +2660,8 @@ module Aws::EKS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-eks'
-      context[:gem_version] = '1.46.0'
+      context[:gem_name] = "aws-sdk-eks"
+      context[:gem_version] = "1.46.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -2758,7 +2758,7 @@ module Aws::EKS
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -2774,7 +2774,7 @@ module Aws::EKS
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

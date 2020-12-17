@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:workspaces)
 
@@ -290,7 +290,7 @@ module Aws::WorkSpaces
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -376,9 +376,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AssociateConnectionAlias AWS API Documentation
     #
-    # @overload associate_connection_alias(params = {})
+    # @overload associate_connection_alias(**params)
     # @param [Hash] params ({})
-    def associate_connection_alias(params = {}, options = {})
+    def associate_connection_alias(params = {}, **options)
       req = build_request(:associate_connection_alias, params)
       req.send_request(options)
     end
@@ -403,9 +403,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AssociateIpGroups AWS API Documentation
     #
-    # @overload associate_ip_groups(params = {})
+    # @overload associate_ip_groups(**params)
     # @param [Hash] params ({})
-    def associate_ip_groups(params = {}, options = {})
+    def associate_ip_groups(params = {}, **options)
       req = build_request(:associate_ip_groups, params)
       req.send_request(options)
     end
@@ -437,9 +437,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AuthorizeIpRules AWS API Documentation
     #
-    # @overload authorize_ip_rules(params = {})
+    # @overload authorize_ip_rules(**params)
     # @param [Hash] params ({})
-    def authorize_ip_rules(params = {}, options = {})
+    def authorize_ip_rules(params = {}, **options)
       req = build_request(:authorize_ip_rules, params)
       req.send_request(options)
     end
@@ -508,9 +508,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CopyWorkspaceImage AWS API Documentation
     #
-    # @overload copy_workspace_image(params = {})
+    # @overload copy_workspace_image(**params)
     # @param [Hash] params ({})
-    def copy_workspace_image(params = {}, options = {})
+    def copy_workspace_image(params = {}, **options)
       req = build_request(:copy_workspace_image, params)
       req.send_request(options)
     end
@@ -558,9 +558,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateConnectionAlias AWS API Documentation
     #
-    # @overload create_connection_alias(params = {})
+    # @overload create_connection_alias(**params)
     # @param [Hash] params ({})
-    def create_connection_alias(params = {}, options = {})
+    def create_connection_alias(params = {}, **options)
       req = build_request(:create_connection_alias, params)
       req.send_request(options)
     end
@@ -622,9 +622,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateIpGroup AWS API Documentation
     #
-    # @overload create_ip_group(params = {})
+    # @overload create_ip_group(**params)
     # @param [Hash] params ({})
-    def create_ip_group(params = {}, options = {})
+    def create_ip_group(params = {}, **options)
       req = build_request(:create_ip_group, params)
       req.send_request(options)
     end
@@ -655,9 +655,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateTags AWS API Documentation
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -747,9 +747,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateWorkspaces AWS API Documentation
     #
-    # @overload create_workspaces(params = {})
+    # @overload create_workspaces(**params)
     # @param [Hash] params ({})
-    def create_workspaces(params = {}, options = {})
+    def create_workspaces(params = {}, **options)
       req = build_request(:create_workspaces, params)
       req.send_request(options)
     end
@@ -790,9 +790,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteConnectionAlias AWS API Documentation
     #
-    # @overload delete_connection_alias(params = {})
+    # @overload delete_connection_alias(**params)
     # @param [Hash] params ({})
-    def delete_connection_alias(params = {}, options = {})
+    def delete_connection_alias(params = {}, **options)
       req = build_request(:delete_connection_alias, params)
       req.send_request(options)
     end
@@ -815,9 +815,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteIpGroup AWS API Documentation
     #
-    # @overload delete_ip_group(params = {})
+    # @overload delete_ip_group(**params)
     # @param [Hash] params ({})
-    def delete_ip_group(params = {}, options = {})
+    def delete_ip_group(params = {}, **options)
       req = build_request(:delete_ip_group, params)
       req.send_request(options)
     end
@@ -843,9 +843,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -867,9 +867,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteWorkspaceImage AWS API Documentation
     #
-    # @overload delete_workspace_image(params = {})
+    # @overload delete_workspace_image(**params)
     # @param [Hash] params ({})
-    def delete_workspace_image(params = {}, options = {})
+    def delete_workspace_image(params = {}, **options)
       req = build_request(:delete_workspace_image, params)
       req.send_request(options)
     end
@@ -914,9 +914,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeregisterWorkspaceDirectory AWS API Documentation
     #
-    # @overload deregister_workspace_directory(params = {})
+    # @overload deregister_workspace_directory(**params)
     # @param [Hash] params ({})
-    def deregister_workspace_directory(params = {}, options = {})
+    def deregister_workspace_directory(params = {}, **options)
       req = build_request(:deregister_workspace_directory, params)
       req.send_request(options)
     end
@@ -936,9 +936,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeAccount AWS API Documentation
     #
-    # @overload describe_account(params = {})
+    # @overload describe_account(**params)
     # @param [Hash] params ({})
-    def describe_account(params = {}, options = {})
+    def describe_account(params = {}, **options)
       req = build_request(:describe_account, params)
       req.send_request(options)
     end
@@ -974,9 +974,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeAccountModifications AWS API Documentation
     #
-    # @overload describe_account_modifications(params = {})
+    # @overload describe_account_modifications(**params)
     # @param [Hash] params ({})
-    def describe_account_modifications(params = {}, options = {})
+    def describe_account_modifications(params = {}, **options)
       req = build_request(:describe_account_modifications, params)
       req.send_request(options)
     end
@@ -1005,9 +1005,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeClientProperties AWS API Documentation
     #
-    # @overload describe_client_properties(params = {})
+    # @overload describe_client_properties(**params)
     # @param [Hash] params ({})
-    def describe_client_properties(params = {}, options = {})
+    def describe_client_properties(params = {}, **options)
       req = build_request(:describe_client_properties, params)
       req.send_request(options)
     end
@@ -1055,9 +1055,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeConnectionAliasPermissions AWS API Documentation
     #
-    # @overload describe_connection_alias_permissions(params = {})
+    # @overload describe_connection_alias_permissions(**params)
     # @param [Hash] params ({})
-    def describe_connection_alias_permissions(params = {}, options = {})
+    def describe_connection_alias_permissions(params = {}, **options)
       req = build_request(:describe_connection_alias_permissions, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeConnectionAliases AWS API Documentation
     #
-    # @overload describe_connection_aliases(params = {})
+    # @overload describe_connection_aliases(**params)
     # @param [Hash] params ({})
-    def describe_connection_aliases(params = {}, options = {})
+    def describe_connection_aliases(params = {}, **options)
       req = build_request(:describe_connection_aliases, params)
       req.send_request(options)
     end
@@ -1158,9 +1158,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeIpGroups AWS API Documentation
     #
-    # @overload describe_ip_groups(params = {})
+    # @overload describe_ip_groups(**params)
     # @param [Hash] params ({})
-    def describe_ip_groups(params = {}, options = {})
+    def describe_ip_groups(params = {}, **options)
       req = build_request(:describe_ip_groups, params)
       req.send_request(options)
     end
@@ -1190,9 +1190,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -1248,9 +1248,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspaceBundles AWS API Documentation
     #
-    # @overload describe_workspace_bundles(params = {})
+    # @overload describe_workspace_bundles(**params)
     # @param [Hash] params ({})
-    def describe_workspace_bundles(params = {}, options = {})
+    def describe_workspace_bundles(params = {}, **options)
       req = build_request(:describe_workspace_bundles, params)
       req.send_request(options)
     end
@@ -1325,9 +1325,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspaceDirectories AWS API Documentation
     #
-    # @overload describe_workspace_directories(params = {})
+    # @overload describe_workspace_directories(**params)
     # @param [Hash] params ({})
-    def describe_workspace_directories(params = {}, options = {})
+    def describe_workspace_directories(params = {}, **options)
       req = build_request(:describe_workspace_directories, params)
       req.send_request(options)
     end
@@ -1368,9 +1368,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspaceImagePermissions AWS API Documentation
     #
-    # @overload describe_workspace_image_permissions(params = {})
+    # @overload describe_workspace_image_permissions(**params)
     # @param [Hash] params ({})
-    def describe_workspace_image_permissions(params = {}, options = {})
+    def describe_workspace_image_permissions(params = {}, **options)
       req = build_request(:describe_workspace_image_permissions, params)
       req.send_request(options)
     end
@@ -1423,9 +1423,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspaceImages AWS API Documentation
     #
-    # @overload describe_workspace_images(params = {})
+    # @overload describe_workspace_images(**params)
     # @param [Hash] params ({})
-    def describe_workspace_images(params = {}, options = {})
+    def describe_workspace_images(params = {}, **options)
       req = build_request(:describe_workspace_images, params)
       req.send_request(options)
     end
@@ -1455,9 +1455,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspaceSnapshots AWS API Documentation
     #
-    # @overload describe_workspace_snapshots(params = {})
+    # @overload describe_workspace_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_workspace_snapshots(params = {}, options = {})
+    def describe_workspace_snapshots(params = {}, **options)
       req = build_request(:describe_workspace_snapshots, params)
       req.send_request(options)
     end
@@ -1542,9 +1542,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspaces AWS API Documentation
     #
-    # @overload describe_workspaces(params = {})
+    # @overload describe_workspaces(**params)
     # @param [Hash] params ({})
-    def describe_workspaces(params = {}, options = {})
+    def describe_workspaces(params = {}, **options)
       req = build_request(:describe_workspaces, params)
       req.send_request(options)
     end
@@ -1582,9 +1582,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeWorkspacesConnectionStatus AWS API Documentation
     #
-    # @overload describe_workspaces_connection_status(params = {})
+    # @overload describe_workspaces_connection_status(**params)
     # @param [Hash] params ({})
-    def describe_workspaces_connection_status(params = {}, options = {})
+    def describe_workspaces_connection_status(params = {}, **options)
       req = build_request(:describe_workspaces_connection_status, params)
       req.send_request(options)
     end
@@ -1618,9 +1618,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DisassociateConnectionAlias AWS API Documentation
     #
-    # @overload disassociate_connection_alias(params = {})
+    # @overload disassociate_connection_alias(**params)
     # @param [Hash] params ({})
-    def disassociate_connection_alias(params = {}, options = {})
+    def disassociate_connection_alias(params = {}, **options)
       req = build_request(:disassociate_connection_alias, params)
       req.send_request(options)
     end
@@ -1645,9 +1645,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DisassociateIpGroups AWS API Documentation
     #
-    # @overload disassociate_ip_groups(params = {})
+    # @overload disassociate_ip_groups(**params)
     # @param [Hash] params ({})
-    def disassociate_ip_groups(params = {}, options = {})
+    def disassociate_ip_groups(params = {}, **options)
       req = build_request(:disassociate_ip_groups, params)
       req.send_request(options)
     end
@@ -1726,9 +1726,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ImportWorkspaceImage AWS API Documentation
     #
-    # @overload import_workspace_image(params = {})
+    # @overload import_workspace_image(**params)
     # @param [Hash] params ({})
-    def import_workspace_image(params = {}, options = {})
+    def import_workspace_image(params = {}, **options)
       req = build_request(:import_workspace_image, params)
       req.send_request(options)
     end
@@ -1779,9 +1779,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ListAvailableManagementCidrRanges AWS API Documentation
     #
-    # @overload list_available_management_cidr_ranges(params = {})
+    # @overload list_available_management_cidr_ranges(**params)
     # @param [Hash] params ({})
-    def list_available_management_cidr_ranges(params = {}, options = {})
+    def list_available_management_cidr_ranges(params = {}, **options)
       req = build_request(:list_available_management_cidr_ranges, params)
       req.send_request(options)
     end
@@ -1829,9 +1829,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/MigrateWorkspace AWS API Documentation
     #
-    # @overload migrate_workspace(params = {})
+    # @overload migrate_workspace(**params)
     # @param [Hash] params ({})
-    def migrate_workspace(params = {}, options = {})
+    def migrate_workspace(params = {}, **options)
       req = build_request(:migrate_workspace, params)
       req.send_request(options)
     end
@@ -1861,9 +1861,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyAccount AWS API Documentation
     #
-    # @overload modify_account(params = {})
+    # @overload modify_account(**params)
     # @param [Hash] params ({})
-    def modify_account(params = {}, options = {})
+    def modify_account(params = {}, **options)
       req = build_request(:modify_account, params)
       req.send_request(options)
     end
@@ -1889,9 +1889,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyClientProperties AWS API Documentation
     #
-    # @overload modify_client_properties(params = {})
+    # @overload modify_client_properties(**params)
     # @param [Hash] params ({})
-    def modify_client_properties(params = {}, options = {})
+    def modify_client_properties(params = {}, **options)
       req = build_request(:modify_client_properties, params)
       req.send_request(options)
     end
@@ -1927,9 +1927,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifySelfservicePermissions AWS API Documentation
     #
-    # @overload modify_selfservice_permissions(params = {})
+    # @overload modify_selfservice_permissions(**params)
     # @param [Hash] params ({})
-    def modify_selfservice_permissions(params = {}, options = {})
+    def modify_selfservice_permissions(params = {}, **options)
       req = build_request(:modify_selfservice_permissions, params)
       req.send_request(options)
     end
@@ -1968,9 +1968,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyWorkspaceAccessProperties AWS API Documentation
     #
-    # @overload modify_workspace_access_properties(params = {})
+    # @overload modify_workspace_access_properties(**params)
     # @param [Hash] params ({})
-    def modify_workspace_access_properties(params = {}, options = {})
+    def modify_workspace_access_properties(params = {}, **options)
       req = build_request(:modify_workspace_access_properties, params)
       req.send_request(options)
     end
@@ -2001,9 +2001,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyWorkspaceCreationProperties AWS API Documentation
     #
-    # @overload modify_workspace_creation_properties(params = {})
+    # @overload modify_workspace_creation_properties(**params)
     # @param [Hash] params ({})
-    def modify_workspace_creation_properties(params = {}, options = {})
+    def modify_workspace_creation_properties(params = {}, **options)
       req = build_request(:modify_workspace_creation_properties, params)
       req.send_request(options)
     end
@@ -2039,9 +2039,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyWorkspaceProperties AWS API Documentation
     #
-    # @overload modify_workspace_properties(params = {})
+    # @overload modify_workspace_properties(**params)
     # @param [Hash] params ({})
-    def modify_workspace_properties(params = {}, options = {})
+    def modify_workspace_properties(params = {}, **options)
       req = build_request(:modify_workspace_properties, params)
       req.send_request(options)
     end
@@ -2071,9 +2071,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyWorkspaceState AWS API Documentation
     #
-    # @overload modify_workspace_state(params = {})
+    # @overload modify_workspace_state(**params)
     # @param [Hash] params ({})
-    def modify_workspace_state(params = {}, options = {})
+    def modify_workspace_state(params = {}, **options)
       req = build_request(:modify_workspace_state, params)
       req.send_request(options)
     end
@@ -2112,9 +2112,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebootWorkspaces AWS API Documentation
     #
-    # @overload reboot_workspaces(params = {})
+    # @overload reboot_workspaces(**params)
     # @param [Hash] params ({})
-    def reboot_workspaces(params = {}, options = {})
+    def reboot_workspaces(params = {}, **options)
       req = build_request(:reboot_workspaces, params)
       req.send_request(options)
     end
@@ -2161,9 +2161,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebuildWorkspaces AWS API Documentation
     #
-    # @overload rebuild_workspaces(params = {})
+    # @overload rebuild_workspaces(**params)
     # @param [Hash] params ({})
-    def rebuild_workspaces(params = {}, options = {})
+    def rebuild_workspaces(params = {}, **options)
       req = build_request(:rebuild_workspaces, params)
       req.send_request(options)
     end
@@ -2239,9 +2239,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RegisterWorkspaceDirectory AWS API Documentation
     #
-    # @overload register_workspace_directory(params = {})
+    # @overload register_workspace_directory(**params)
     # @param [Hash] params ({})
-    def register_workspace_directory(params = {}, options = {})
+    def register_workspace_directory(params = {}, **options)
       req = build_request(:register_workspace_directory, params)
       req.send_request(options)
     end
@@ -2275,9 +2275,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RestoreWorkspace AWS API Documentation
     #
-    # @overload restore_workspace(params = {})
+    # @overload restore_workspace(**params)
     # @param [Hash] params ({})
-    def restore_workspace(params = {}, options = {})
+    def restore_workspace(params = {}, **options)
       req = build_request(:restore_workspace, params)
       req.send_request(options)
     end
@@ -2301,9 +2301,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RevokeIpRules AWS API Documentation
     #
-    # @overload revoke_ip_rules(params = {})
+    # @overload revoke_ip_rules(**params)
     # @param [Hash] params ({})
-    def revoke_ip_rules(params = {}, options = {})
+    def revoke_ip_rules(params = {}, **options)
       req = build_request(:revoke_ip_rules, params)
       req.send_request(options)
     end
@@ -2339,9 +2339,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StartWorkspaces AWS API Documentation
     #
-    # @overload start_workspaces(params = {})
+    # @overload start_workspaces(**params)
     # @param [Hash] params ({})
-    def start_workspaces(params = {}, options = {})
+    def start_workspaces(params = {}, **options)
       req = build_request(:start_workspaces, params)
       req.send_request(options)
     end
@@ -2377,9 +2377,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StopWorkspaces AWS API Documentation
     #
-    # @overload stop_workspaces(params = {})
+    # @overload stop_workspaces(**params)
     # @param [Hash] params ({})
-    def stop_workspaces(params = {}, options = {})
+    def stop_workspaces(params = {}, **options)
       req = build_request(:stop_workspaces, params)
       req.send_request(options)
     end
@@ -2446,9 +2446,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/TerminateWorkspaces AWS API Documentation
     #
-    # @overload terminate_workspaces(params = {})
+    # @overload terminate_workspaces(**params)
     # @param [Hash] params ({})
-    def terminate_workspaces(params = {}, options = {})
+    def terminate_workspaces(params = {}, **options)
       req = build_request(:terminate_workspaces, params)
       req.send_request(options)
     end
@@ -2501,9 +2501,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateConnectionAliasPermission AWS API Documentation
     #
-    # @overload update_connection_alias_permission(params = {})
+    # @overload update_connection_alias_permission(**params)
     # @param [Hash] params ({})
-    def update_connection_alias_permission(params = {}, options = {})
+    def update_connection_alias_permission(params = {}, **options)
       req = build_request(:update_connection_alias_permission, params)
       req.send_request(options)
     end
@@ -2533,9 +2533,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateRulesOfIpGroup AWS API Documentation
     #
-    # @overload update_rules_of_ip_group(params = {})
+    # @overload update_rules_of_ip_group(**params)
     # @param [Hash] params ({})
-    def update_rules_of_ip_group(params = {}, options = {})
+    def update_rules_of_ip_group(params = {}, **options)
       req = build_request(:update_rules_of_ip_group, params)
       req.send_request(options)
     end
@@ -2599,9 +2599,9 @@ module Aws::WorkSpaces
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateWorkspaceImagePermission AWS API Documentation
     #
-    # @overload update_workspace_image_permission(params = {})
+    # @overload update_workspace_image_permission(**params)
     # @param [Hash] params ({})
-    def update_workspace_image_permission(params = {}, options = {})
+    def update_workspace_image_permission(params = {}, **options)
       req = build_request(:update_workspace_image_permission, params)
       req.send_request(options)
     end
@@ -2610,7 +2610,7 @@ module Aws::WorkSpaces
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2618,15 +2618,15 @@ module Aws::WorkSpaces
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-workspaces'
-      context[:gem_version] = '1.49.0'
+      context[:gem_name] = "aws-sdk-workspaces"
+      context[:gem_version] = "1.49.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

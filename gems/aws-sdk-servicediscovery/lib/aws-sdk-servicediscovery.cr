@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-servicediscovery/types'
-require_relative 'aws-sdk-servicediscovery/client_api'
-require_relative 'aws-sdk-servicediscovery/client'
-require_relative 'aws-sdk-servicediscovery/errors'
-require_relative 'aws-sdk-servicediscovery/resource'
-require_relative 'aws-sdk-servicediscovery/customizations'
+require_relative "aws-sdk-servicediscovery/types"
+require_relative "aws-sdk-servicediscovery/client_api"
+require_relative "aws-sdk-servicediscovery/client"
+require_relative "aws-sdk-servicediscovery/errors"
+require_relative "aws-sdk-servicediscovery/resource"
+require_relative "aws-sdk-servicediscovery/customizations"
 
 # This module provides support for AWS Cloud Map. This module is available in the
 # `aws-sdk-servicediscovery` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-servicediscovery/customizations'
 # @!group service
 module Aws::ServiceDiscovery
 
-  GEM_VERSION = '1.31.0'
+  GEM_VERSION = "1.31.0"
 
 end

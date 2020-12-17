@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-organizations/types'
-require_relative 'aws-sdk-organizations/client_api'
-require_relative 'aws-sdk-organizations/client'
-require_relative 'aws-sdk-organizations/errors'
-require_relative 'aws-sdk-organizations/resource'
-require_relative 'aws-sdk-organizations/customizations'
+require_relative "aws-sdk-organizations/types"
+require_relative "aws-sdk-organizations/client_api"
+require_relative "aws-sdk-organizations/client"
+require_relative "aws-sdk-organizations/errors"
+require_relative "aws-sdk-organizations/resource"
+require_relative "aws-sdk-organizations/customizations"
 
 # This module provides support for AWS Organizations. This module is available in the
 # `aws-sdk-organizations` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-organizations/customizations'
 # @!group service
 module Aws::Organizations
 
-  GEM_VERSION = '1.55.0'
+  GEM_VERSION = "1.55.0"
 
 end

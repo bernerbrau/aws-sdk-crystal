@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudwatchevents/types'
-require_relative 'aws-sdk-cloudwatchevents/client_api'
-require_relative 'aws-sdk-cloudwatchevents/client'
-require_relative 'aws-sdk-cloudwatchevents/errors'
-require_relative 'aws-sdk-cloudwatchevents/resource'
-require_relative 'aws-sdk-cloudwatchevents/customizations'
+require_relative "aws-sdk-cloudwatchevents/types"
+require_relative "aws-sdk-cloudwatchevents/client_api"
+require_relative "aws-sdk-cloudwatchevents/client"
+require_relative "aws-sdk-cloudwatchevents/errors"
+require_relative "aws-sdk-cloudwatchevents/resource"
+require_relative "aws-sdk-cloudwatchevents/customizations"
 
 # This module provides support for Amazon CloudWatch Events. This module is available in the
 # `aws-sdk-cloudwatchevents` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cloudwatchevents/customizations'
 # @!group service
 module Aws::CloudWatchEvents
 
-  GEM_VERSION = '1.40.0'
+  GEM_VERSION = "1.40.0"
 
 end

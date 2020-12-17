@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:personalize)
 
@@ -290,7 +290,7 @@ module Aws::Personalize
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -409,9 +409,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateBatchInferenceJob AWS API Documentation
     #
-    # @overload create_batch_inference_job(params = {})
+    # @overload create_batch_inference_job(**params)
     # @param [Hash] params ({})
-    def create_batch_inference_job(params = {}, options = {})
+    def create_batch_inference_job(params = {}, **options)
       req = build_request(:create_batch_inference_job, params)
       req.send_request(options)
     end
@@ -503,9 +503,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateCampaign AWS API Documentation
     #
-    # @overload create_campaign(params = {})
+    # @overload create_campaign(**params)
     # @param [Hash] params ({})
-    def create_campaign(params = {}, options = {})
+    def create_campaign(params = {}, **options)
       req = build_request(:create_campaign, params)
       req.send_request(options)
     end
@@ -585,9 +585,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDataset AWS API Documentation
     #
-    # @overload create_dataset(params = {})
+    # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, options = {})
+    def create_dataset(params = {}, **options)
       req = build_request(:create_dataset, params)
       req.send_request(options)
     end
@@ -672,9 +672,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDatasetGroup AWS API Documentation
     #
-    # @overload create_dataset_group(params = {})
+    # @overload create_dataset_group(**params)
     # @param [Hash] params ({})
-    def create_dataset_group(params = {}, options = {})
+    def create_dataset_group(params = {}, **options)
       req = build_request(:create_dataset_group, params)
       req.send_request(options)
     end
@@ -748,9 +748,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDatasetImportJob AWS API Documentation
     #
-    # @overload create_dataset_import_job(params = {})
+    # @overload create_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def create_dataset_import_job(params = {}, options = {})
+    def create_dataset_import_job(params = {}, **options)
       req = build_request(:create_dataset_import_job, params)
       req.send_request(options)
     end
@@ -825,9 +825,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateEventTracker AWS API Documentation
     #
-    # @overload create_event_tracker(params = {})
+    # @overload create_event_tracker(**params)
     # @param [Hash] params ({})
-    def create_event_tracker(params = {}, options = {})
+    def create_event_tracker(params = {}, **options)
       req = build_request(:create_event_tracker, params)
       req.send_request(options)
     end
@@ -879,9 +879,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateFilter AWS API Documentation
     #
-    # @overload create_filter(params = {})
+    # @overload create_filter(**params)
     # @param [Hash] params ({})
-    def create_filter(params = {}, options = {})
+    def create_filter(params = {}, **options)
       req = build_request(:create_filter, params)
       req.send_request(options)
     end
@@ -924,9 +924,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateSchema AWS API Documentation
     #
-    # @overload create_schema(params = {})
+    # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, options = {})
+    def create_schema(params = {}, **options)
       req = build_request(:create_schema, params)
       req.send_request(options)
     end
@@ -1087,9 +1087,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateSolution AWS API Documentation
     #
-    # @overload create_solution(params = {})
+    # @overload create_solution(**params)
     # @param [Hash] params ({})
-    def create_solution(params = {}, options = {})
+    def create_solution(params = {}, **options)
       req = build_request(:create_solution, params)
       req.send_request(options)
     end
@@ -1163,9 +1163,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateSolutionVersion AWS API Documentation
     #
-    # @overload create_solution_version(params = {})
+    # @overload create_solution_version(**params)
     # @param [Hash] params ({})
-    def create_solution_version(params = {}, options = {})
+    def create_solution_version(params = {}, **options)
       req = build_request(:create_solution_version, params)
       req.send_request(options)
     end
@@ -1193,9 +1193,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteCampaign AWS API Documentation
     #
-    # @overload delete_campaign(params = {})
+    # @overload delete_campaign(**params)
     # @param [Hash] params ({})
-    def delete_campaign(params = {}, options = {})
+    def delete_campaign(params = {}, **options)
       req = build_request(:delete_campaign, params)
       req.send_request(options)
     end
@@ -1217,9 +1217,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteDataset AWS API Documentation
     #
-    # @overload delete_dataset(params = {})
+    # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, options = {})
+    def delete_dataset(params = {}, **options)
       req = build_request(:delete_dataset, params)
       req.send_request(options)
     end
@@ -1246,9 +1246,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteDatasetGroup AWS API Documentation
     #
-    # @overload delete_dataset_group(params = {})
+    # @overload delete_dataset_group(**params)
     # @param [Hash] params ({})
-    def delete_dataset_group(params = {}, options = {})
+    def delete_dataset_group(params = {}, **options)
       req = build_request(:delete_dataset_group, params)
       req.send_request(options)
     end
@@ -1270,9 +1270,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteEventTracker AWS API Documentation
     #
-    # @overload delete_event_tracker(params = {})
+    # @overload delete_event_tracker(**params)
     # @param [Hash] params ({})
-    def delete_event_tracker(params = {}, options = {})
+    def delete_event_tracker(params = {}, **options)
       req = build_request(:delete_event_tracker, params)
       req.send_request(options)
     end
@@ -1292,9 +1292,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteFilter AWS API Documentation
     #
-    # @overload delete_filter(params = {})
+    # @overload delete_filter(**params)
     # @param [Hash] params ({})
-    def delete_filter(params = {}, options = {})
+    def delete_filter(params = {}, **options)
       req = build_request(:delete_filter, params)
       req.send_request(options)
     end
@@ -1316,9 +1316,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteSchema AWS API Documentation
     #
-    # @overload delete_schema(params = {})
+    # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, options = {})
+    def delete_schema(params = {}, **options)
       req = build_request(:delete_schema, params)
       req.send_request(options)
     end
@@ -1344,9 +1344,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteSolution AWS API Documentation
     #
-    # @overload delete_solution(params = {})
+    # @overload delete_solution(**params)
     # @param [Hash] params ({})
-    def delete_solution(params = {}, options = {})
+    def delete_solution(params = {}, **options)
       req = build_request(:delete_solution, params)
       req.send_request(options)
     end
@@ -1398,9 +1398,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeAlgorithm AWS API Documentation
     #
-    # @overload describe_algorithm(params = {})
+    # @overload describe_algorithm(**params)
     # @param [Hash] params ({})
-    def describe_algorithm(params = {}, options = {})
+    def describe_algorithm(params = {}, **options)
       req = build_request(:describe_algorithm, params)
       req.send_request(options)
     end
@@ -1443,9 +1443,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeBatchInferenceJob AWS API Documentation
     #
-    # @overload describe_batch_inference_job(params = {})
+    # @overload describe_batch_inference_job(**params)
     # @param [Hash] params ({})
-    def describe_batch_inference_job(params = {}, options = {})
+    def describe_batch_inference_job(params = {}, **options)
       req = build_request(:describe_batch_inference_job, params)
       req.send_request(options)
     end
@@ -1500,9 +1500,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeCampaign AWS API Documentation
     #
-    # @overload describe_campaign(params = {})
+    # @overload describe_campaign(**params)
     # @param [Hash] params ({})
-    def describe_campaign(params = {}, options = {})
+    def describe_campaign(params = {}, **options)
       req = build_request(:describe_campaign, params)
       req.send_request(options)
     end
@@ -1536,9 +1536,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeDataset AWS API Documentation
     #
-    # @overload describe_dataset(params = {})
+    # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, options = {})
+    def describe_dataset(params = {}, **options)
       req = build_request(:describe_dataset, params)
       req.send_request(options)
     end
@@ -1572,9 +1572,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeDatasetGroup AWS API Documentation
     #
-    # @overload describe_dataset_group(params = {})
+    # @overload describe_dataset_group(**params)
     # @param [Hash] params ({})
-    def describe_dataset_group(params = {}, options = {})
+    def describe_dataset_group(params = {}, **options)
       req = build_request(:describe_dataset_group, params)
       req.send_request(options)
     end
@@ -1609,9 +1609,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeDatasetImportJob AWS API Documentation
     #
-    # @overload describe_dataset_import_job(params = {})
+    # @overload describe_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def describe_dataset_import_job(params = {}, options = {})
+    def describe_dataset_import_job(params = {}, **options)
       req = build_request(:describe_dataset_import_job, params)
       req.send_request(options)
     end
@@ -1646,9 +1646,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeEventTracker AWS API Documentation
     #
-    # @overload describe_event_tracker(params = {})
+    # @overload describe_event_tracker(**params)
     # @param [Hash] params ({})
-    def describe_event_tracker(params = {}, options = {})
+    def describe_event_tracker(params = {}, **options)
       req = build_request(:describe_event_tracker, params)
       req.send_request(options)
     end
@@ -1681,9 +1681,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeFeatureTransformation AWS API Documentation
     #
-    # @overload describe_feature_transformation(params = {})
+    # @overload describe_feature_transformation(**params)
     # @param [Hash] params ({})
-    def describe_feature_transformation(params = {}, options = {})
+    def describe_feature_transformation(params = {}, **options)
       req = build_request(:describe_feature_transformation, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeFilter AWS API Documentation
     #
-    # @overload describe_filter(params = {})
+    # @overload describe_filter(**params)
     # @param [Hash] params ({})
-    def describe_filter(params = {}, options = {})
+    def describe_filter(params = {}, **options)
       req = build_request(:describe_filter, params)
       req.send_request(options)
     end
@@ -1772,9 +1772,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeRecipe AWS API Documentation
     #
-    # @overload describe_recipe(params = {})
+    # @overload describe_recipe(**params)
     # @param [Hash] params ({})
-    def describe_recipe(params = {}, options = {})
+    def describe_recipe(params = {}, **options)
       req = build_request(:describe_recipe, params)
       req.send_request(options)
     end
@@ -1804,9 +1804,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeSchema AWS API Documentation
     #
-    # @overload describe_schema(params = {})
+    # @overload describe_schema(**params)
     # @param [Hash] params ({})
-    def describe_schema(params = {}, options = {})
+    def describe_schema(params = {}, **options)
       req = build_request(:describe_schema, params)
       req.send_request(options)
     end
@@ -1873,9 +1873,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeSolution AWS API Documentation
     #
-    # @overload describe_solution(params = {})
+    # @overload describe_solution(**params)
     # @param [Hash] params ({})
-    def describe_solution(params = {}, options = {})
+    def describe_solution(params = {}, **options)
       req = build_request(:describe_solution, params)
       req.send_request(options)
     end
@@ -1941,9 +1941,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeSolutionVersion AWS API Documentation
     #
-    # @overload describe_solution_version(params = {})
+    # @overload describe_solution_version(**params)
     # @param [Hash] params ({})
-    def describe_solution_version(params = {}, options = {})
+    def describe_solution_version(params = {}, **options)
       req = build_request(:describe_solution_version, params)
       req.send_request(options)
     end
@@ -1973,9 +1973,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/GetSolutionMetrics AWS API Documentation
     #
-    # @overload get_solution_metrics(params = {})
+    # @overload get_solution_metrics(**params)
     # @param [Hash] params ({})
-    def get_solution_metrics(params = {}, options = {})
+    def get_solution_metrics(params = {}, **options)
       req = build_request(:get_solution_metrics, params)
       req.send_request(options)
     end
@@ -2023,9 +2023,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListBatchInferenceJobs AWS API Documentation
     #
-    # @overload list_batch_inference_jobs(params = {})
+    # @overload list_batch_inference_jobs(**params)
     # @param [Hash] params ({})
-    def list_batch_inference_jobs(params = {}, options = {})
+    def list_batch_inference_jobs(params = {}, **options)
       req = build_request(:list_batch_inference_jobs, params)
       req.send_request(options)
     end
@@ -2076,9 +2076,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListCampaigns AWS API Documentation
     #
-    # @overload list_campaigns(params = {})
+    # @overload list_campaigns(**params)
     # @param [Hash] params ({})
-    def list_campaigns(params = {}, options = {})
+    def list_campaigns(params = {}, **options)
       req = build_request(:list_campaigns, params)
       req.send_request(options)
     end
@@ -2121,9 +2121,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListDatasetGroups AWS API Documentation
     #
-    # @overload list_dataset_groups(params = {})
+    # @overload list_dataset_groups(**params)
     # @param [Hash] params ({})
-    def list_dataset_groups(params = {}, options = {})
+    def list_dataset_groups(params = {}, **options)
       req = build_request(:list_dataset_groups, params)
       req.send_request(options)
     end
@@ -2174,9 +2174,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListDatasetImportJobs AWS API Documentation
     #
-    # @overload list_dataset_import_jobs(params = {})
+    # @overload list_dataset_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_dataset_import_jobs(params = {}, options = {})
+    def list_dataset_import_jobs(params = {}, **options)
       req = build_request(:list_dataset_import_jobs, params)
       req.send_request(options)
     end
@@ -2225,9 +2225,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListDatasets AWS API Documentation
     #
-    # @overload list_datasets(params = {})
+    # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, options = {})
+    def list_datasets(params = {}, **options)
       req = build_request(:list_datasets, params)
       req.send_request(options)
     end
@@ -2274,9 +2274,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListEventTrackers AWS API Documentation
     #
-    # @overload list_event_trackers(params = {})
+    # @overload list_event_trackers(**params)
     # @param [Hash] params ({})
-    def list_event_trackers(params = {}, options = {})
+    def list_event_trackers(params = {}, **options)
       req = build_request(:list_event_trackers, params)
       req.send_request(options)
     end
@@ -2320,9 +2320,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListFilters AWS API Documentation
     #
-    # @overload list_filters(params = {})
+    # @overload list_filters(**params)
     # @param [Hash] params ({})
-    def list_filters(params = {}, options = {})
+    def list_filters(params = {}, **options)
       req = build_request(:list_filters, params)
       req.send_request(options)
     end
@@ -2368,9 +2368,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListRecipes AWS API Documentation
     #
-    # @overload list_recipes(params = {})
+    # @overload list_recipes(**params)
     # @param [Hash] params ({})
-    def list_recipes(params = {}, options = {})
+    def list_recipes(params = {}, **options)
       req = build_request(:list_recipes, params)
       req.send_request(options)
     end
@@ -2411,9 +2411,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListSchemas AWS API Documentation
     #
-    # @overload list_schemas(params = {})
+    # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, options = {})
+    def list_schemas(params = {}, **options)
       req = build_request(:list_schemas, params)
       req.send_request(options)
     end
@@ -2461,9 +2461,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListSolutionVersions AWS API Documentation
     #
-    # @overload list_solution_versions(params = {})
+    # @overload list_solution_versions(**params)
     # @param [Hash] params ({})
-    def list_solution_versions(params = {}, options = {})
+    def list_solution_versions(params = {}, **options)
       req = build_request(:list_solution_versions, params)
       req.send_request(options)
     end
@@ -2511,9 +2511,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListSolutions AWS API Documentation
     #
-    # @overload list_solutions(params = {})
+    # @overload list_solutions(**params)
     # @param [Hash] params ({})
-    def list_solutions(params = {}, options = {})
+    def list_solutions(params = {}, **options)
       req = build_request(:list_solutions, params)
       req.send_request(options)
     end
@@ -2567,9 +2567,9 @@ module Aws::Personalize
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/UpdateCampaign AWS API Documentation
     #
-    # @overload update_campaign(params = {})
+    # @overload update_campaign(**params)
     # @param [Hash] params ({})
-    def update_campaign(params = {}, options = {})
+    def update_campaign(params = {}, **options)
       req = build_request(:update_campaign, params)
       req.send_request(options)
     end
@@ -2578,7 +2578,7 @@ module Aws::Personalize
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2586,15 +2586,15 @@ module Aws::Personalize
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-personalize'
-      context[:gem_version] = '1.19.0'
+      context[:gem_name] = "aws-sdk-personalize"
+      context[:gem_version] = "1.19.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cognitosync)
 
@@ -280,7 +280,7 @@ module Aws::CognitoSync
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -358,9 +358,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/BulkPublish AWS API Documentation
     #
-    # @overload bulk_publish(params = {})
+    # @overload bulk_publish(**params)
     # @param [Hash] params ({})
-    def bulk_publish(params = {}, options = {})
+    def bulk_publish(params = {}, **options)
       req = build_request(:bulk_publish, params)
       req.send_request(options)
     end
@@ -411,9 +411,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/DeleteDataset AWS API Documentation
     #
-    # @overload delete_dataset(params = {})
+    # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, options = {})
+    def delete_dataset(params = {}, **options)
       req = build_request(:delete_dataset, params)
       req.send_request(options)
     end
@@ -465,9 +465,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/DescribeDataset AWS API Documentation
     #
-    # @overload describe_dataset(params = {})
+    # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, options = {})
+    def describe_dataset(params = {}, **options)
       req = build_request(:describe_dataset, params)
       req.send_request(options)
     end
@@ -503,9 +503,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/DescribeIdentityPoolUsage AWS API Documentation
     #
-    # @overload describe_identity_pool_usage(params = {})
+    # @overload describe_identity_pool_usage(**params)
     # @param [Hash] params ({})
-    def describe_identity_pool_usage(params = {}, options = {})
+    def describe_identity_pool_usage(params = {}, **options)
       req = build_request(:describe_identity_pool_usage, params)
       req.send_request(options)
     end
@@ -547,9 +547,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/DescribeIdentityUsage AWS API Documentation
     #
-    # @overload describe_identity_usage(params = {})
+    # @overload describe_identity_usage(**params)
     # @param [Hash] params ({})
-    def describe_identity_usage(params = {}, options = {})
+    def describe_identity_usage(params = {}, **options)
       req = build_request(:describe_identity_usage, params)
       req.send_request(options)
     end
@@ -589,9 +589,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/GetBulkPublishDetails AWS API Documentation
     #
-    # @overload get_bulk_publish_details(params = {})
+    # @overload get_bulk_publish_details(**params)
     # @param [Hash] params ({})
-    def get_bulk_publish_details(params = {}, options = {})
+    def get_bulk_publish_details(params = {}, **options)
       req = build_request(:get_bulk_publish_details, params)
       req.send_request(options)
     end
@@ -623,9 +623,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/GetCognitoEvents AWS API Documentation
     #
-    # @overload get_cognito_events(params = {})
+    # @overload get_cognito_events(**params)
     # @param [Hash] params ({})
-    def get_cognito_events(params = {}, options = {})
+    def get_cognito_events(params = {}, **options)
       req = build_request(:get_cognito_events, params)
       req.send_request(options)
     end
@@ -666,9 +666,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/GetIdentityPoolConfiguration AWS API Documentation
     #
-    # @overload get_identity_pool_configuration(params = {})
+    # @overload get_identity_pool_configuration(**params)
     # @param [Hash] params ({})
-    def get_identity_pool_configuration(params = {}, options = {})
+    def get_identity_pool_configuration(params = {}, **options)
       req = build_request(:get_identity_pool_configuration, params)
       req.send_request(options)
     end
@@ -727,9 +727,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/ListDatasets AWS API Documentation
     #
-    # @overload list_datasets(params = {})
+    # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, options = {})
+    def list_datasets(params = {}, **options)
       req = build_request(:list_datasets, params)
       req.send_request(options)
     end
@@ -773,9 +773,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/ListIdentityPoolUsage AWS API Documentation
     #
-    # @overload list_identity_pool_usage(params = {})
+    # @overload list_identity_pool_usage(**params)
     # @param [Hash] params ({})
-    def list_identity_pool_usage(params = {}, options = {})
+    def list_identity_pool_usage(params = {}, **options)
       req = build_request(:list_identity_pool_usage, params)
       req.send_request(options)
     end
@@ -860,9 +860,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/ListRecords AWS API Documentation
     #
-    # @overload list_records(params = {})
+    # @overload list_records(**params)
     # @param [Hash] params ({})
-    def list_records(params = {}, options = {})
+    def list_records(params = {}, **options)
       req = build_request(:list_records, params)
       req.send_request(options)
     end
@@ -905,9 +905,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/RegisterDevice AWS API Documentation
     #
-    # @overload register_device(params = {})
+    # @overload register_device(**params)
     # @param [Hash] params ({})
-    def register_device(params = {}, options = {})
+    def register_device(params = {}, **options)
       req = build_request(:register_device, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/SetCognitoEvents AWS API Documentation
     #
-    # @overload set_cognito_events(params = {})
+    # @overload set_cognito_events(**params)
     # @param [Hash] params ({})
-    def set_cognito_events(params = {}, options = {})
+    def set_cognito_events(params = {}, **options)
       req = build_request(:set_cognito_events, params)
       req.send_request(options)
     end
@@ -997,9 +997,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/SetIdentityPoolConfiguration AWS API Documentation
     #
-    # @overload set_identity_pool_configuration(params = {})
+    # @overload set_identity_pool_configuration(**params)
     # @param [Hash] params ({})
-    def set_identity_pool_configuration(params = {}, options = {})
+    def set_identity_pool_configuration(params = {}, **options)
       req = build_request(:set_identity_pool_configuration, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/SubscribeToDataset AWS API Documentation
     #
-    # @overload subscribe_to_dataset(params = {})
+    # @overload subscribe_to_dataset(**params)
     # @param [Hash] params ({})
-    def subscribe_to_dataset(params = {}, options = {})
+    def subscribe_to_dataset(params = {}, **options)
       req = build_request(:subscribe_to_dataset, params)
       req.send_request(options)
     end
@@ -1077,9 +1077,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/UnsubscribeFromDataset AWS API Documentation
     #
-    # @overload unsubscribe_from_dataset(params = {})
+    # @overload unsubscribe_from_dataset(**params)
     # @param [Hash] params ({})
-    def unsubscribe_from_dataset(params = {}, options = {})
+    def unsubscribe_from_dataset(params = {}, **options)
       req = build_request(:unsubscribe_from_dataset, params)
       req.send_request(options)
     end
@@ -1168,9 +1168,9 @@ module Aws::CognitoSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-sync-2014-06-30/UpdateRecords AWS API Documentation
     #
-    # @overload update_records(params = {})
+    # @overload update_records(**params)
     # @param [Hash] params ({})
-    def update_records(params = {}, options = {})
+    def update_records(params = {}, **options)
       req = build_request(:update_records, params)
       req.send_request(options)
     end
@@ -1179,7 +1179,7 @@ module Aws::CognitoSync
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1187,15 +1187,15 @@ module Aws::CognitoSync
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cognitosync'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-cognitosync"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

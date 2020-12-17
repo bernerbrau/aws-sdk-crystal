@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-forecastservice/types'
-require_relative 'aws-sdk-forecastservice/client_api'
-require_relative 'aws-sdk-forecastservice/client'
-require_relative 'aws-sdk-forecastservice/errors'
-require_relative 'aws-sdk-forecastservice/resource'
-require_relative 'aws-sdk-forecastservice/customizations'
+require_relative "aws-sdk-forecastservice/types"
+require_relative "aws-sdk-forecastservice/client_api"
+require_relative "aws-sdk-forecastservice/client"
+require_relative "aws-sdk-forecastservice/errors"
+require_relative "aws-sdk-forecastservice/resource"
+require_relative "aws-sdk-forecastservice/customizations"
 
 # This module provides support for Amazon Forecast Service. This module is available in the
 # `aws-sdk-forecastservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-forecastservice/customizations'
 # @!group service
 module Aws::ForecastService
 
-  GEM_VERSION = '1.14.0'
+  GEM_VERSION = "1.14.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:synthetics)
 
@@ -280,7 +280,7 @@ module Aws::Synthetics
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -516,9 +516,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/CreateCanary AWS API Documentation
     #
-    # @overload create_canary(params = {})
+    # @overload create_canary(**params)
     # @param [Hash] params ({})
-    def create_canary(params = {}, options = {})
+    def create_canary(params = {}, **options)
       req = build_request(:create_canary, params)
       req.send_request(options)
     end
@@ -568,9 +568,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/DeleteCanary AWS API Documentation
     #
-    # @overload delete_canary(params = {})
+    # @overload delete_canary(**params)
     # @param [Hash] params ({})
-    def delete_canary(params = {}, options = {})
+    def delete_canary(params = {}, **options)
       req = build_request(:delete_canary, params)
       req.send_request(options)
     end
@@ -643,9 +643,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/DescribeCanaries AWS API Documentation
     #
-    # @overload describe_canaries(params = {})
+    # @overload describe_canaries(**params)
     # @param [Hash] params ({})
-    def describe_canaries(params = {}, options = {})
+    def describe_canaries(params = {}, **options)
       req = build_request(:describe_canaries, params)
       req.send_request(options)
     end
@@ -693,9 +693,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/DescribeCanariesLastRun AWS API Documentation
     #
-    # @overload describe_canaries_last_run(params = {})
+    # @overload describe_canaries_last_run(**params)
     # @param [Hash] params ({})
-    def describe_canaries_last_run(params = {}, options = {})
+    def describe_canaries_last_run(params = {}, **options)
       req = build_request(:describe_canaries_last_run, params)
       req.send_request(options)
     end
@@ -742,9 +742,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/DescribeRuntimeVersions AWS API Documentation
     #
-    # @overload describe_runtime_versions(params = {})
+    # @overload describe_runtime_versions(**params)
     # @param [Hash] params ({})
-    def describe_runtime_versions(params = {}, options = {})
+    def describe_runtime_versions(params = {}, **options)
       req = build_request(:describe_runtime_versions, params)
       req.send_request(options)
     end
@@ -804,9 +804,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/GetCanary AWS API Documentation
     #
-    # @overload get_canary(params = {})
+    # @overload get_canary(**params)
     # @param [Hash] params ({})
-    def get_canary(params = {}, options = {})
+    def get_canary(params = {}, **options)
       req = build_request(:get_canary, params)
       req.send_request(options)
     end
@@ -856,9 +856,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/GetCanaryRuns AWS API Documentation
     #
-    # @overload get_canary_runs(params = {})
+    # @overload get_canary_runs(**params)
     # @param [Hash] params ({})
-    def get_canary_runs(params = {}, options = {})
+    def get_canary_runs(params = {}, **options)
       req = build_request(:get_canary_runs, params)
       req.send_request(options)
     end
@@ -888,9 +888,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -921,9 +921,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/StartCanary AWS API Documentation
     #
-    # @overload start_canary(params = {})
+    # @overload start_canary(**params)
     # @param [Hash] params ({})
-    def start_canary(params = {}, options = {})
+    def start_canary(params = {}, **options)
       req = build_request(:start_canary, params)
       req.send_request(options)
     end
@@ -955,9 +955,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/StopCanary AWS API Documentation
     #
-    # @overload stop_canary(params = {})
+    # @overload stop_canary(**params)
     # @param [Hash] params ({})
-    def stop_canary(params = {}, options = {})
+    def stop_canary(params = {}, **options)
       req = build_request(:stop_canary, params)
       req.send_request(options)
     end
@@ -1001,9 +1001,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1030,9 +1030,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1153,9 +1153,9 @@ module Aws::Synthetics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/synthetics-2017-10-11/UpdateCanary AWS API Documentation
     #
-    # @overload update_canary(params = {})
+    # @overload update_canary(**params)
     # @param [Hash] params ({})
-    def update_canary(params = {}, options = {})
+    def update_canary(params = {}, **options)
       req = build_request(:update_canary, params)
       req.send_request(options)
     end
@@ -1164,7 +1164,7 @@ module Aws::Synthetics
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1172,15 +1172,15 @@ module Aws::Synthetics
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-synthetics'
-      context[:gem_version] = '1.10.0'
+      context[:gem_name] = "aws-sdk-synthetics"
+      context[:gem_version] = "1.10.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

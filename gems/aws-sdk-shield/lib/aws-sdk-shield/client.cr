@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:shield)
 
@@ -290,7 +290,7 @@ module Aws::Shield
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -363,9 +363,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/AssociateDRTLogBucket AWS API Documentation
     #
-    # @overload associate_drt_log_bucket(params = {})
+    # @overload associate_drt_log_bucket(**params)
     # @param [Hash] params ({})
-    def associate_drt_log_bucket(params = {}, options = {})
+    def associate_drt_log_bucket(params = {}, **options)
       req = build_request(:associate_drt_log_bucket, params)
       req.send_request(options)
     end
@@ -434,9 +434,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/AssociateDRTRole AWS API Documentation
     #
-    # @overload associate_drt_role(params = {})
+    # @overload associate_drt_role(**params)
     # @param [Hash] params ({})
-    def associate_drt_role(params = {}, options = {})
+    def associate_drt_role(params = {}, **options)
       req = build_request(:associate_drt_role, params)
       req.send_request(options)
     end
@@ -475,9 +475,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/AssociateHealthCheck AWS API Documentation
     #
-    # @overload associate_health_check(params = {})
+    # @overload associate_health_check(**params)
     # @param [Hash] params ({})
-    def associate_health_check(params = {}, options = {})
+    def associate_health_check(params = {}, **options)
       req = build_request(:associate_health_check, params)
       req.send_request(options)
     end
@@ -532,9 +532,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/AssociateProactiveEngagementDetails AWS API Documentation
     #
-    # @overload associate_proactive_engagement_details(params = {})
+    # @overload associate_proactive_engagement_details(**params)
     # @param [Hash] params ({})
-    def associate_proactive_engagement_details(params = {}, options = {})
+    def associate_proactive_engagement_details(params = {}, **options)
       req = build_request(:associate_proactive_engagement_details, params)
       req.send_request(options)
     end
@@ -600,9 +600,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateProtection AWS API Documentation
     #
-    # @overload create_protection(params = {})
+    # @overload create_protection(**params)
     # @param [Hash] params ({})
-    def create_protection(params = {}, options = {})
+    def create_protection(params = {}, **options)
       req = build_request(:create_protection, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateProtectionGroup AWS API Documentation
     #
-    # @overload create_protection_group(params = {})
+    # @overload create_protection_group(**params)
     # @param [Hash] params ({})
-    def create_protection_group(params = {}, options = {})
+    def create_protection_group(params = {}, **options)
       req = build_request(:create_protection_group, params)
       req.send_request(options)
     end
@@ -683,9 +683,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateSubscription AWS API Documentation
     #
-    # @overload create_subscription(params = {})
+    # @overload create_subscription(**params)
     # @param [Hash] params ({})
-    def create_subscription(params = {}, options = {})
+    def create_subscription(params = {}, **options)
       req = build_request(:create_subscription, params)
       req.send_request(options)
     end
@@ -705,9 +705,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteProtection AWS API Documentation
     #
-    # @overload delete_protection(params = {})
+    # @overload delete_protection(**params)
     # @param [Hash] params ({})
-    def delete_protection(params = {}, options = {})
+    def delete_protection(params = {}, **options)
       req = build_request(:delete_protection, params)
       req.send_request(options)
     end
@@ -729,9 +729,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteProtectionGroup AWS API Documentation
     #
-    # @overload delete_protection_group(params = {})
+    # @overload delete_protection_group(**params)
     # @param [Hash] params ({})
-    def delete_protection_group(params = {}, options = {})
+    def delete_protection_group(params = {}, **options)
       req = build_request(:delete_protection_group, params)
       req.send_request(options)
     end
@@ -744,9 +744,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteSubscription AWS API Documentation
     #
-    # @overload delete_subscription(params = {})
+    # @overload delete_subscription(**params)
     # @param [Hash] params ({})
-    def delete_subscription(params = {}, options = {})
+    def delete_subscription(params = {}, **options)
       req = build_request(:delete_subscription, params)
       req.send_request(options)
     end
@@ -811,9 +811,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeAttack AWS API Documentation
     #
-    # @overload describe_attack(params = {})
+    # @overload describe_attack(**params)
     # @param [Hash] params ({})
-    def describe_attack(params = {}, options = {})
+    def describe_attack(params = {}, **options)
       req = build_request(:describe_attack, params)
       req.send_request(options)
     end
@@ -850,9 +850,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeAttackStatistics AWS API Documentation
     #
-    # @overload describe_attack_statistics(params = {})
+    # @overload describe_attack_statistics(**params)
     # @param [Hash] params ({})
-    def describe_attack_statistics(params = {}, options = {})
+    def describe_attack_statistics(params = {}, **options)
       req = build_request(:describe_attack_statistics, params)
       req.send_request(options)
     end
@@ -874,9 +874,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeDRTAccess AWS API Documentation
     #
-    # @overload describe_drt_access(params = {})
+    # @overload describe_drt_access(**params)
     # @param [Hash] params ({})
-    def describe_drt_access(params = {}, options = {})
+    def describe_drt_access(params = {}, **options)
       req = build_request(:describe_drt_access, params)
       req.send_request(options)
     end
@@ -899,9 +899,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeEmergencyContactSettings AWS API Documentation
     #
-    # @overload describe_emergency_contact_settings(params = {})
+    # @overload describe_emergency_contact_settings(**params)
     # @param [Hash] params ({})
-    def describe_emergency_contact_settings(params = {}, options = {})
+    def describe_emergency_contact_settings(params = {}, **options)
       req = build_request(:describe_emergency_contact_settings, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeProtection AWS API Documentation
     #
-    # @overload describe_protection(params = {})
+    # @overload describe_protection(**params)
     # @param [Hash] params ({})
-    def describe_protection(params = {}, options = {})
+    def describe_protection(params = {}, **options)
       req = build_request(:describe_protection, params)
       req.send_request(options)
     end
@@ -975,9 +975,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeProtectionGroup AWS API Documentation
     #
-    # @overload describe_protection_group(params = {})
+    # @overload describe_protection_group(**params)
     # @param [Hash] params ({})
-    def describe_protection_group(params = {}, options = {})
+    def describe_protection_group(params = {}, **options)
       req = build_request(:describe_protection_group, params)
       req.send_request(options)
     end
@@ -1007,9 +1007,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeSubscription AWS API Documentation
     #
-    # @overload describe_subscription(params = {})
+    # @overload describe_subscription(**params)
     # @param [Hash] params ({})
-    def describe_subscription(params = {}, options = {})
+    def describe_subscription(params = {}, **options)
       req = build_request(:describe_subscription, params)
       req.send_request(options)
     end
@@ -1022,9 +1022,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DisableProactiveEngagement AWS API Documentation
     #
-    # @overload disable_proactive_engagement(params = {})
+    # @overload disable_proactive_engagement(**params)
     # @param [Hash] params ({})
-    def disable_proactive_engagement(params = {}, options = {})
+    def disable_proactive_engagement(params = {}, **options)
       req = build_request(:disable_proactive_engagement, params)
       req.send_request(options)
     end
@@ -1057,9 +1057,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DisassociateDRTLogBucket AWS API Documentation
     #
-    # @overload disassociate_drt_log_bucket(params = {})
+    # @overload disassociate_drt_log_bucket(**params)
     # @param [Hash] params ({})
-    def disassociate_drt_log_bucket(params = {}, options = {})
+    def disassociate_drt_log_bucket(params = {}, **options)
       req = build_request(:disassociate_drt_log_bucket, params)
       req.send_request(options)
     end
@@ -1081,9 +1081,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DisassociateDRTRole AWS API Documentation
     #
-    # @overload disassociate_drt_role(params = {})
+    # @overload disassociate_drt_role(**params)
     # @param [Hash] params ({})
-    def disassociate_drt_role(params = {}, options = {})
+    def disassociate_drt_role(params = {}, **options)
       req = build_request(:disassociate_drt_role, params)
       req.send_request(options)
     end
@@ -1122,9 +1122,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DisassociateHealthCheck AWS API Documentation
     #
-    # @overload disassociate_health_check(params = {})
+    # @overload disassociate_health_check(**params)
     # @param [Hash] params ({})
-    def disassociate_health_check(params = {}, options = {})
+    def disassociate_health_check(params = {}, **options)
       req = build_request(:disassociate_health_check, params)
       req.send_request(options)
     end
@@ -1137,9 +1137,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/EnableProactiveEngagement AWS API Documentation
     #
-    # @overload enable_proactive_engagement(params = {})
+    # @overload enable_proactive_engagement(**params)
     # @param [Hash] params ({})
-    def enable_proactive_engagement(params = {}, options = {})
+    def enable_proactive_engagement(params = {}, **options)
       req = build_request(:enable_proactive_engagement, params)
       req.send_request(options)
     end
@@ -1156,9 +1156,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/GetSubscriptionState AWS API Documentation
     #
-    # @overload get_subscription_state(params = {})
+    # @overload get_subscription_state(**params)
     # @param [Hash] params ({})
-    def get_subscription_state(params = {}, options = {})
+    def get_subscription_state(params = {}, **options)
       req = build_request(:get_subscription_state, params)
       req.send_request(options)
     end
@@ -1242,9 +1242,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListAttacks AWS API Documentation
     #
-    # @overload list_attacks(params = {})
+    # @overload list_attacks(**params)
     # @param [Hash] params ({})
-    def list_attacks(params = {}, options = {})
+    def list_attacks(params = {}, **options)
       req = build_request(:list_attacks, params)
       req.send_request(options)
     end
@@ -1293,9 +1293,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtectionGroups AWS API Documentation
     #
-    # @overload list_protection_groups(params = {})
+    # @overload list_protection_groups(**params)
     # @param [Hash] params ({})
-    def list_protection_groups(params = {}, options = {})
+    def list_protection_groups(params = {}, **options)
       req = build_request(:list_protection_groups, params)
       req.send_request(options)
     end
@@ -1343,9 +1343,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtections AWS API Documentation
     #
-    # @overload list_protections(params = {})
+    # @overload list_protections(**params)
     # @param [Hash] params ({})
-    def list_protections(params = {}, options = {})
+    def list_protections(params = {}, **options)
       req = build_request(:list_protections, params)
       req.send_request(options)
     end
@@ -1395,9 +1395,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListResourcesInProtectionGroup AWS API Documentation
     #
-    # @overload list_resources_in_protection_group(params = {})
+    # @overload list_resources_in_protection_group(**params)
     # @param [Hash] params ({})
-    def list_resources_in_protection_group(params = {}, options = {})
+    def list_resources_in_protection_group(params = {}, **options)
       req = build_request(:list_resources_in_protection_group, params)
       req.send_request(options)
     end
@@ -1432,9 +1432,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/UpdateEmergencyContactSettings AWS API Documentation
     #
-    # @overload update_emergency_contact_settings(params = {})
+    # @overload update_emergency_contact_settings(**params)
     # @param [Hash] params ({})
-    def update_emergency_contact_settings(params = {}, options = {})
+    def update_emergency_contact_settings(params = {}, **options)
       req = build_request(:update_emergency_contact_settings, params)
       req.send_request(options)
     end
@@ -1497,9 +1497,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/UpdateProtectionGroup AWS API Documentation
     #
-    # @overload update_protection_group(params = {})
+    # @overload update_protection_group(**params)
     # @param [Hash] params ({})
-    def update_protection_group(params = {}, options = {})
+    def update_protection_group(params = {}, **options)
       req = build_request(:update_protection_group, params)
       req.send_request(options)
     end
@@ -1525,9 +1525,9 @@ module Aws::Shield
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/UpdateSubscription AWS API Documentation
     #
-    # @overload update_subscription(params = {})
+    # @overload update_subscription(**params)
     # @param [Hash] params ({})
-    def update_subscription(params = {}, options = {})
+    def update_subscription(params = {}, **options)
       req = build_request(:update_subscription, params)
       req.send_request(options)
     end
@@ -1536,7 +1536,7 @@ module Aws::Shield
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1544,15 +1544,15 @@ module Aws::Shield
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-shield'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-shield"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-forecastqueryservice/types'
-require_relative 'aws-sdk-forecastqueryservice/client_api'
-require_relative 'aws-sdk-forecastqueryservice/client'
-require_relative 'aws-sdk-forecastqueryservice/errors'
-require_relative 'aws-sdk-forecastqueryservice/resource'
-require_relative 'aws-sdk-forecastqueryservice/customizations'
+require_relative "aws-sdk-forecastqueryservice/types"
+require_relative "aws-sdk-forecastqueryservice/client_api"
+require_relative "aws-sdk-forecastqueryservice/client"
+require_relative "aws-sdk-forecastqueryservice/errors"
+require_relative "aws-sdk-forecastqueryservice/resource"
+require_relative "aws-sdk-forecastqueryservice/customizations"
 
 # This module provides support for Amazon Forecast Query Service. This module is available in the
 # `aws-sdk-forecastqueryservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-forecastqueryservice/customizations'
 # @!group service
 module Aws::ForecastQueryService
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:acm)
 
@@ -290,7 +290,7 @@ module Aws::ACM
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -393,9 +393,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/AddTagsToCertificate AWS API Documentation
     #
-    # @overload add_tags_to_certificate(params = {})
+    # @overload add_tags_to_certificate(**params)
     # @param [Hash] params ({})
-    def add_tags_to_certificate(params = {}, options = {})
+    def add_tags_to_certificate(params = {}, **options)
       req = build_request(:add_tags_to_certificate, params)
       req.send_request(options)
     end
@@ -435,9 +435,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/DeleteCertificate AWS API Documentation
     #
-    # @overload delete_certificate(params = {})
+    # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, options = {})
+    def delete_certificate(params = {}, **options)
       req = build_request(:delete_certificate, params)
       req.send_request(options)
     end
@@ -529,9 +529,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/DescribeCertificate AWS API Documentation
     #
-    # @overload describe_certificate(params = {})
+    # @overload describe_certificate(**params)
     # @param [Hash] params ({})
-    def describe_certificate(params = {}, options = {})
+    def describe_certificate(params = {}, **options)
       req = build_request(:describe_certificate, params)
       req.send_request(options)
     end
@@ -585,9 +585,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/ExportCertificate AWS API Documentation
     #
-    # @overload export_certificate(params = {})
+    # @overload export_certificate(**params)
     # @param [Hash] params ({})
-    def export_certificate(params = {}, options = {})
+    def export_certificate(params = {}, **options)
       req = build_request(:export_certificate, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/GetCertificate AWS API Documentation
     #
-    # @overload get_certificate(params = {})
+    # @overload get_certificate(**params)
     # @param [Hash] params ({})
-    def get_certificate(params = {}, options = {})
+    def get_certificate(params = {}, **options)
       req = build_request(:get_certificate, params)
       req.send_request(options)
     end
@@ -753,9 +753,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/ImportCertificate AWS API Documentation
     #
-    # @overload import_certificate(params = {})
+    # @overload import_certificate(**params)
     # @param [Hash] params ({})
-    def import_certificate(params = {}, options = {})
+    def import_certificate(params = {}, **options)
       req = build_request(:import_certificate, params)
       req.send_request(options)
     end
@@ -815,9 +815,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/ListCertificates AWS API Documentation
     #
-    # @overload list_certificates(params = {})
+    # @overload list_certificates(**params)
     # @param [Hash] params ({})
-    def list_certificates(params = {}, options = {})
+    def list_certificates(params = {}, **options)
       req = build_request(:list_certificates, params)
       req.send_request(options)
     end
@@ -858,9 +858,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/ListTagsForCertificate AWS API Documentation
     #
-    # @overload list_tags_for_certificate(params = {})
+    # @overload list_tags_for_certificate(**params)
     # @param [Hash] params ({})
-    def list_tags_for_certificate(params = {}, options = {})
+    def list_tags_for_certificate(params = {}, **options)
       req = build_request(:list_tags_for_certificate, params)
       req.send_request(options)
     end
@@ -907,9 +907,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/RemoveTagsFromCertificate AWS API Documentation
     #
-    # @overload remove_tags_from_certificate(params = {})
+    # @overload remove_tags_from_certificate(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_certificate(params = {}, options = {})
+    def remove_tags_from_certificate(params = {}, **options)
       req = build_request(:remove_tags_from_certificate, params)
       req.send_request(options)
     end
@@ -948,9 +948,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/RenewCertificate AWS API Documentation
     #
-    # @overload renew_certificate(params = {})
+    # @overload renew_certificate(**params)
     # @param [Hash] params ({})
-    def renew_certificate(params = {}, options = {})
+    def renew_certificate(params = {}, **options)
       req = build_request(:renew_certificate, params)
       req.send_request(options)
     end
@@ -1101,9 +1101,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/RequestCertificate AWS API Documentation
     #
-    # @overload request_certificate(params = {})
+    # @overload request_certificate(**params)
     # @param [Hash] params ({})
-    def request_certificate(params = {}, options = {})
+    def request_certificate(params = {}, **options)
       req = build_request(:request_certificate, params)
       req.send_request(options)
     end
@@ -1170,9 +1170,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/ResendValidationEmail AWS API Documentation
     #
-    # @overload resend_validation_email(params = {})
+    # @overload resend_validation_email(**params)
     # @param [Hash] params ({})
-    def resend_validation_email(params = {}, options = {})
+    def resend_validation_email(params = {}, **options)
       req = build_request(:resend_validation_email, params)
       req.send_request(options)
     end
@@ -1213,9 +1213,9 @@ module Aws::ACM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-2015-12-08/UpdateCertificateOptions AWS API Documentation
     #
-    # @overload update_certificate_options(params = {})
+    # @overload update_certificate_options(**params)
     # @param [Hash] params ({})
-    def update_certificate_options(params = {}, options = {})
+    def update_certificate_options(params = {}, **options)
       req = build_request(:update_certificate_options, params)
       req.send_request(options)
     end
@@ -1224,7 +1224,7 @@ module Aws::ACM
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1232,8 +1232,8 @@ module Aws::ACM
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-acm'
-      context[:gem_version] = '1.38.0'
+      context[:gem_name] = "aws-sdk-acm"
+      context[:gem_version] = "1.38.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -1325,7 +1325,7 @@ module Aws::ACM
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -1341,7 +1341,7 @@ module Aws::ACM
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

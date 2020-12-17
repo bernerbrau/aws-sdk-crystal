@@ -8,11 +8,11 @@
 Feature: Smoke tests for OpsWorks
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @opsworks @smoke
   Scenario: Call Aws::OpsWorks::Client#describe_stacks and expect it to succeed
-  When I call the operation 'describe_stacks' with params:
+  When I call the operation "describe_stacks" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @opsworks @smoke
   Scenario: Call Aws::Aws::OpsWorks::Client#describe_layers and expect it to fail
-  When I call the operation 'describe_layers' with params:
+  When I call the operation "describe_layers" with params:
     """
 {"stack_id":"fake_stack"}
     """

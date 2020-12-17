@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ssoadmin/types'
-require_relative 'aws-sdk-ssoadmin/client_api'
-require_relative 'aws-sdk-ssoadmin/client'
-require_relative 'aws-sdk-ssoadmin/errors'
-require_relative 'aws-sdk-ssoadmin/resource'
-require_relative 'aws-sdk-ssoadmin/customizations'
+require_relative "aws-sdk-ssoadmin/types"
+require_relative "aws-sdk-ssoadmin/client_api"
+require_relative "aws-sdk-ssoadmin/client"
+require_relative "aws-sdk-ssoadmin/errors"
+require_relative "aws-sdk-ssoadmin/resource"
+require_relative "aws-sdk-ssoadmin/customizations"
 
 # This module provides support for AWS Single Sign-On Admin. This module is available in the
 # `aws-sdk-ssoadmin` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ssoadmin/customizations'
 # @!group service
 module Aws::SSOAdmin
 
-  GEM_VERSION = '1.4.0'
+  GEM_VERSION = "1.4.0"
 
 end

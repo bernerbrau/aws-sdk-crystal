@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:chime)
 
@@ -280,7 +280,7 @@ module Aws::Chime
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -350,9 +350,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/AssociatePhoneNumberWithUser AWS API Documentation
     #
-    # @overload associate_phone_number_with_user(params = {})
+    # @overload associate_phone_number_with_user(**params)
     # @param [Hash] params ({})
-    def associate_phone_number_with_user(params = {}, options = {})
+    def associate_phone_number_with_user(params = {}, **options)
       req = build_request(:associate_phone_number_with_user, params)
       req.send_request(options)
     end
@@ -393,9 +393,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/AssociatePhoneNumbersWithVoiceConnector AWS API Documentation
     #
-    # @overload associate_phone_numbers_with_voice_connector(params = {})
+    # @overload associate_phone_numbers_with_voice_connector(**params)
     # @param [Hash] params ({})
-    def associate_phone_numbers_with_voice_connector(params = {}, options = {})
+    def associate_phone_numbers_with_voice_connector(params = {}, **options)
       req = build_request(:associate_phone_numbers_with_voice_connector, params)
       req.send_request(options)
     end
@@ -436,9 +436,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/AssociatePhoneNumbersWithVoiceConnectorGroup AWS API Documentation
     #
-    # @overload associate_phone_numbers_with_voice_connector_group(params = {})
+    # @overload associate_phone_numbers_with_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def associate_phone_numbers_with_voice_connector_group(params = {}, options = {})
+    def associate_phone_numbers_with_voice_connector_group(params = {}, **options)
       req = build_request(:associate_phone_numbers_with_voice_connector_group, params)
       req.send_request(options)
     end
@@ -467,9 +467,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/AssociateSigninDelegateGroupsWithAccount AWS API Documentation
     #
-    # @overload associate_signin_delegate_groups_with_account(params = {})
+    # @overload associate_signin_delegate_groups_with_account(**params)
     # @param [Hash] params ({})
-    def associate_signin_delegate_groups_with_account(params = {}, options = {})
+    def associate_signin_delegate_groups_with_account(params = {}, **options)
       req = build_request(:associate_signin_delegate_groups_with_account, params)
       req.send_request(options)
     end
@@ -523,9 +523,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchCreateAttendee AWS API Documentation
     #
-    # @overload batch_create_attendee(params = {})
+    # @overload batch_create_attendee(**params)
     # @param [Hash] params ({})
-    def batch_create_attendee(params = {}, options = {})
+    def batch_create_attendee(params = {}, **options)
       req = build_request(:batch_create_attendee, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchCreateRoomMembership AWS API Documentation
     #
-    # @overload batch_create_room_membership(params = {})
+    # @overload batch_create_room_membership(**params)
     # @param [Hash] params ({})
-    def batch_create_room_membership(params = {}, options = {})
+    def batch_create_room_membership(params = {}, **options)
       req = build_request(:batch_create_room_membership, params)
       req.send_request(options)
     end
@@ -606,9 +606,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchDeletePhoneNumber AWS API Documentation
     #
-    # @overload batch_delete_phone_number(params = {})
+    # @overload batch_delete_phone_number(**params)
     # @param [Hash] params ({})
-    def batch_delete_phone_number(params = {}, options = {})
+    def batch_delete_phone_number(params = {}, **options)
       req = build_request(:batch_delete_phone_number, params)
       req.send_request(options)
     end
@@ -661,9 +661,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchSuspendUser AWS API Documentation
     #
-    # @overload batch_suspend_user(params = {})
+    # @overload batch_suspend_user(**params)
     # @param [Hash] params ({})
-    def batch_suspend_user(params = {}, options = {})
+    def batch_suspend_user(params = {}, **options)
       req = build_request(:batch_suspend_user, params)
       req.send_request(options)
     end
@@ -708,9 +708,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchUnsuspendUser AWS API Documentation
     #
-    # @overload batch_unsuspend_user(params = {})
+    # @overload batch_unsuspend_user(**params)
     # @param [Hash] params ({})
-    def batch_unsuspend_user(params = {}, options = {})
+    def batch_unsuspend_user(params = {}, **options)
       req = build_request(:batch_unsuspend_user, params)
       req.send_request(options)
     end
@@ -756,9 +756,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchUpdatePhoneNumber AWS API Documentation
     #
-    # @overload batch_update_phone_number(params = {})
+    # @overload batch_update_phone_number(**params)
     # @param [Hash] params ({})
-    def batch_update_phone_number(params = {}, options = {})
+    def batch_update_phone_number(params = {}, **options)
       req = build_request(:batch_update_phone_number, params)
       req.send_request(options)
     end
@@ -803,9 +803,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/BatchUpdateUser AWS API Documentation
     #
-    # @overload batch_update_user(params = {})
+    # @overload batch_update_user(**params)
     # @param [Hash] params ({})
-    def batch_update_user(params = {}, options = {})
+    def batch_update_user(params = {}, **options)
       req = build_request(:batch_update_user, params)
       req.send_request(options)
     end
@@ -848,9 +848,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateAccount AWS API Documentation
     #
-    # @overload create_account(params = {})
+    # @overload create_account(**params)
     # @param [Hash] params ({})
-    def create_account(params = {}, options = {})
+    def create_account(params = {}, **options)
       req = build_request(:create_account, params)
       req.send_request(options)
     end
@@ -890,9 +890,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateAppInstance AWS API Documentation
     #
-    # @overload create_app_instance(params = {})
+    # @overload create_app_instance(**params)
     # @param [Hash] params ({})
-    def create_app_instance(params = {}, options = {})
+    def create_app_instance(params = {}, **options)
       req = build_request(:create_app_instance, params)
       req.send_request(options)
     end
@@ -933,9 +933,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateAppInstanceAdmin AWS API Documentation
     #
-    # @overload create_app_instance_admin(params = {})
+    # @overload create_app_instance_admin(**params)
     # @param [Hash] params ({})
-    def create_app_instance_admin(params = {}, options = {})
+    def create_app_instance_admin(params = {}, **options)
       req = build_request(:create_app_instance_admin, params)
       req.send_request(options)
     end
@@ -981,9 +981,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateAppInstanceUser AWS API Documentation
     #
-    # @overload create_app_instance_user(params = {})
+    # @overload create_app_instance_user(**params)
     # @param [Hash] params ({})
-    def create_app_instance_user(params = {}, options = {})
+    def create_app_instance_user(params = {}, **options)
       req = build_request(:create_app_instance_user, params)
       req.send_request(options)
     end
@@ -1033,9 +1033,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateAttendee AWS API Documentation
     #
-    # @overload create_attendee(params = {})
+    # @overload create_attendee(**params)
     # @param [Hash] params ({})
-    def create_attendee(params = {}, options = {})
+    def create_attendee(params = {}, **options)
       req = build_request(:create_attendee, params)
       req.send_request(options)
     end
@@ -1077,9 +1077,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateBot AWS API Documentation
     #
-    # @overload create_bot(params = {})
+    # @overload create_bot(**params)
     # @param [Hash] params ({})
-    def create_bot(params = {}, options = {})
+    def create_bot(params = {}, **options)
       req = build_request(:create_bot, params)
       req.send_request(options)
     end
@@ -1143,9 +1143,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateChannel AWS API Documentation
     #
-    # @overload create_channel(params = {})
+    # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, options = {})
+    def create_channel(params = {}, **options)
       req = build_request(:create_channel, params)
       req.send_request(options)
     end
@@ -1184,9 +1184,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateChannelBan AWS API Documentation
     #
-    # @overload create_channel_ban(params = {})
+    # @overload create_channel_ban(**params)
     # @param [Hash] params ({})
-    def create_channel_ban(params = {}, options = {})
+    def create_channel_ban(params = {}, **options)
       req = build_request(:create_channel_ban, params)
       req.send_request(options)
     end
@@ -1245,9 +1245,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateChannelMembership AWS API Documentation
     #
-    # @overload create_channel_membership(params = {})
+    # @overload create_channel_membership(**params)
     # @param [Hash] params ({})
-    def create_channel_membership(params = {}, options = {})
+    def create_channel_membership(params = {}, **options)
       req = build_request(:create_channel_membership, params)
       req.send_request(options)
     end
@@ -1290,9 +1290,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateChannelModerator AWS API Documentation
     #
-    # @overload create_channel_moderator(params = {})
+    # @overload create_channel_moderator(**params)
     # @param [Hash] params ({})
-    def create_channel_moderator(params = {}, options = {})
+    def create_channel_moderator(params = {}, **options)
       req = build_request(:create_channel_moderator, params)
       req.send_request(options)
     end
@@ -1375,9 +1375,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateMeeting AWS API Documentation
     #
-    # @overload create_meeting(params = {})
+    # @overload create_meeting(**params)
     # @param [Hash] params ({})
-    def create_meeting(params = {}, options = {})
+    def create_meeting(params = {}, **options)
       req = build_request(:create_meeting, params)
       req.send_request(options)
     end
@@ -1435,9 +1435,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateMeetingDialOut AWS API Documentation
     #
-    # @overload create_meeting_dial_out(params = {})
+    # @overload create_meeting_dial_out(**params)
     # @param [Hash] params ({})
-    def create_meeting_dial_out(params = {}, options = {})
+    def create_meeting_dial_out(params = {}, **options)
       req = build_request(:create_meeting_dial_out, params)
       req.send_request(options)
     end
@@ -1546,9 +1546,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateMeetingWithAttendees AWS API Documentation
     #
-    # @overload create_meeting_with_attendees(params = {})
+    # @overload create_meeting_with_attendees(**params)
     # @param [Hash] params ({})
-    def create_meeting_with_attendees(params = {}, options = {})
+    def create_meeting_with_attendees(params = {}, **options)
       req = build_request(:create_meeting_with_attendees, params)
       req.send_request(options)
     end
@@ -1588,9 +1588,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreatePhoneNumberOrder AWS API Documentation
     #
-    # @overload create_phone_number_order(params = {})
+    # @overload create_phone_number_order(**params)
     # @param [Hash] params ({})
-    def create_phone_number_order(params = {}, options = {})
+    def create_phone_number_order(params = {}, **options)
       req = build_request(:create_phone_number_order, params)
       req.send_request(options)
     end
@@ -1666,9 +1666,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateProxySession AWS API Documentation
     #
-    # @overload create_proxy_session(params = {})
+    # @overload create_proxy_session(**params)
     # @param [Hash] params ({})
-    def create_proxy_session(params = {}, options = {})
+    def create_proxy_session(params = {}, **options)
       req = build_request(:create_proxy_session, params)
       req.send_request(options)
     end
@@ -1710,9 +1710,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateRoom AWS API Documentation
     #
-    # @overload create_room(params = {})
+    # @overload create_room(**params)
     # @param [Hash] params ({})
-    def create_room(params = {}, options = {})
+    def create_room(params = {}, **options)
       req = build_request(:create_room, params)
       req.send_request(options)
     end
@@ -1761,9 +1761,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateRoomMembership AWS API Documentation
     #
-    # @overload create_room_membership(params = {})
+    # @overload create_room_membership(**params)
     # @param [Hash] params ({})
-    def create_room_membership(params = {}, options = {})
+    def create_room_membership(params = {}, **options)
       req = build_request(:create_room_membership, params)
       req.send_request(options)
     end
@@ -1808,9 +1808,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateSipMediaApplication AWS API Documentation
     #
-    # @overload create_sip_media_application(params = {})
+    # @overload create_sip_media_application(**params)
     # @param [Hash] params ({})
-    def create_sip_media_application(params = {}, options = {})
+    def create_sip_media_application(params = {}, **options)
       req = build_request(:create_sip_media_application, params)
       req.send_request(options)
     end
@@ -1846,9 +1846,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateSipMediaApplicationCall AWS API Documentation
     #
-    # @overload create_sip_media_application_call(params = {})
+    # @overload create_sip_media_application_call(**params)
     # @param [Hash] params ({})
-    def create_sip_media_application_call(params = {}, options = {})
+    def create_sip_media_application_call(params = {}, **options)
       req = build_request(:create_sip_media_application_call, params)
       req.send_request(options)
     end
@@ -1920,9 +1920,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateSipRule AWS API Documentation
     #
-    # @overload create_sip_rule(params = {})
+    # @overload create_sip_rule(**params)
     # @param [Hash] params ({})
-    def create_sip_rule(params = {}, options = {})
+    def create_sip_rule(params = {}, **options)
       req = build_request(:create_sip_rule, params)
       req.send_request(options)
     end
@@ -1973,9 +1973,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -2024,9 +2024,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateVoiceConnector AWS API Documentation
     #
-    # @overload create_voice_connector(params = {})
+    # @overload create_voice_connector(**params)
     # @param [Hash] params ({})
-    def create_voice_connector(params = {}, options = {})
+    def create_voice_connector(params = {}, **options)
       req = build_request(:create_voice_connector, params)
       req.send_request(options)
     end
@@ -2074,9 +2074,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/CreateVoiceConnectorGroup AWS API Documentation
     #
-    # @overload create_voice_connector_group(params = {})
+    # @overload create_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def create_voice_connector_group(params = {}, options = {})
+    def create_voice_connector_group(params = {}, **options)
       req = build_request(:create_voice_connector_group, params)
       req.send_request(options)
     end
@@ -2109,9 +2109,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteAccount AWS API Documentation
     #
-    # @overload delete_account(params = {})
+    # @overload delete_account(**params)
     # @param [Hash] params ({})
-    def delete_account(params = {}, options = {})
+    def delete_account(params = {}, **options)
       req = build_request(:delete_account, params)
       req.send_request(options)
     end
@@ -2131,9 +2131,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteAppInstance AWS API Documentation
     #
-    # @overload delete_app_instance(params = {})
+    # @overload delete_app_instance(**params)
     # @param [Hash] params ({})
-    def delete_app_instance(params = {}, options = {})
+    def delete_app_instance(params = {}, **options)
       req = build_request(:delete_app_instance, params)
       req.send_request(options)
     end
@@ -2158,9 +2158,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteAppInstanceAdmin AWS API Documentation
     #
-    # @overload delete_app_instance_admin(params = {})
+    # @overload delete_app_instance_admin(**params)
     # @param [Hash] params ({})
-    def delete_app_instance_admin(params = {}, options = {})
+    def delete_app_instance_admin(params = {}, **options)
       req = build_request(:delete_app_instance_admin, params)
       req.send_request(options)
     end
@@ -2180,9 +2180,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteAppInstanceStreamingConfigurations AWS API Documentation
     #
-    # @overload delete_app_instance_streaming_configurations(params = {})
+    # @overload delete_app_instance_streaming_configurations(**params)
     # @param [Hash] params ({})
-    def delete_app_instance_streaming_configurations(params = {}, options = {})
+    def delete_app_instance_streaming_configurations(params = {}, **options)
       req = build_request(:delete_app_instance_streaming_configurations, params)
       req.send_request(options)
     end
@@ -2202,9 +2202,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteAppInstanceUser AWS API Documentation
     #
-    # @overload delete_app_instance_user(params = {})
+    # @overload delete_app_instance_user(**params)
     # @param [Hash] params ({})
-    def delete_app_instance_user(params = {}, options = {})
+    def delete_app_instance_user(params = {}, **options)
       req = build_request(:delete_app_instance_user, params)
       req.send_request(options)
     end
@@ -2236,9 +2236,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteAttendee AWS API Documentation
     #
-    # @overload delete_attendee(params = {})
+    # @overload delete_attendee(**params)
     # @param [Hash] params ({})
-    def delete_attendee(params = {}, options = {})
+    def delete_attendee(params = {}, **options)
       req = build_request(:delete_attendee, params)
       req.send_request(options)
     end
@@ -2259,9 +2259,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteChannel AWS API Documentation
     #
-    # @overload delete_channel(params = {})
+    # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, options = {})
+    def delete_channel(params = {}, **options)
       req = build_request(:delete_channel, params)
       req.send_request(options)
     end
@@ -2285,9 +2285,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteChannelBan AWS API Documentation
     #
-    # @overload delete_channel_ban(params = {})
+    # @overload delete_channel_ban(**params)
     # @param [Hash] params ({})
-    def delete_channel_ban(params = {}, options = {})
+    def delete_channel_ban(params = {}, **options)
       req = build_request(:delete_channel_ban, params)
       req.send_request(options)
     end
@@ -2311,9 +2311,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteChannelMembership AWS API Documentation
     #
-    # @overload delete_channel_membership(params = {})
+    # @overload delete_channel_membership(**params)
     # @param [Hash] params ({})
-    def delete_channel_membership(params = {}, options = {})
+    def delete_channel_membership(params = {}, **options)
       req = build_request(:delete_channel_membership, params)
       req.send_request(options)
     end
@@ -2339,9 +2339,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteChannelMessage AWS API Documentation
     #
-    # @overload delete_channel_message(params = {})
+    # @overload delete_channel_message(**params)
     # @param [Hash] params ({})
-    def delete_channel_message(params = {}, options = {})
+    def delete_channel_message(params = {}, **options)
       req = build_request(:delete_channel_message, params)
       req.send_request(options)
     end
@@ -2365,9 +2365,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteChannelModerator AWS API Documentation
     #
-    # @overload delete_channel_moderator(params = {})
+    # @overload delete_channel_moderator(**params)
     # @param [Hash] params ({})
-    def delete_channel_moderator(params = {}, options = {})
+    def delete_channel_moderator(params = {}, **options)
       req = build_request(:delete_channel_moderator, params)
       req.send_request(options)
     end
@@ -2392,9 +2392,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteEventsConfiguration AWS API Documentation
     #
-    # @overload delete_events_configuration(params = {})
+    # @overload delete_events_configuration(**params)
     # @param [Hash] params ({})
-    def delete_events_configuration(params = {}, options = {})
+    def delete_events_configuration(params = {}, **options)
       req = build_request(:delete_events_configuration, params)
       req.send_request(options)
     end
@@ -2421,9 +2421,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteMeeting AWS API Documentation
     #
-    # @overload delete_meeting(params = {})
+    # @overload delete_meeting(**params)
     # @param [Hash] params ({})
-    def delete_meeting(params = {}, options = {})
+    def delete_meeting(params = {}, **options)
       req = build_request(:delete_meeting, params)
       req.send_request(options)
     end
@@ -2448,9 +2448,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeletePhoneNumber AWS API Documentation
     #
-    # @overload delete_phone_number(params = {})
+    # @overload delete_phone_number(**params)
     # @param [Hash] params ({})
-    def delete_phone_number(params = {}, options = {})
+    def delete_phone_number(params = {}, **options)
       req = build_request(:delete_phone_number, params)
       req.send_request(options)
     end
@@ -2475,9 +2475,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteProxySession AWS API Documentation
     #
-    # @overload delete_proxy_session(params = {})
+    # @overload delete_proxy_session(**params)
     # @param [Hash] params ({})
-    def delete_proxy_session(params = {}, options = {})
+    def delete_proxy_session(params = {}, **options)
       req = build_request(:delete_proxy_session, params)
       req.send_request(options)
     end
@@ -2501,9 +2501,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteRoom AWS API Documentation
     #
-    # @overload delete_room(params = {})
+    # @overload delete_room(**params)
     # @param [Hash] params ({})
-    def delete_room(params = {}, options = {})
+    def delete_room(params = {}, **options)
       req = build_request(:delete_room, params)
       req.send_request(options)
     end
@@ -2532,9 +2532,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteRoomMembership AWS API Documentation
     #
-    # @overload delete_room_membership(params = {})
+    # @overload delete_room_membership(**params)
     # @param [Hash] params ({})
-    def delete_room_membership(params = {}, options = {})
+    def delete_room_membership(params = {}, **options)
       req = build_request(:delete_room_membership, params)
       req.send_request(options)
     end
@@ -2554,9 +2554,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteSipMediaApplication AWS API Documentation
     #
-    # @overload delete_sip_media_application(params = {})
+    # @overload delete_sip_media_application(**params)
     # @param [Hash] params ({})
-    def delete_sip_media_application(params = {}, options = {})
+    def delete_sip_media_application(params = {}, **options)
       req = build_request(:delete_sip_media_application, params)
       req.send_request(options)
     end
@@ -2577,9 +2577,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteSipRule AWS API Documentation
     #
-    # @overload delete_sip_rule(params = {})
+    # @overload delete_sip_rule(**params)
     # @param [Hash] params ({})
-    def delete_sip_rule(params = {}, options = {})
+    def delete_sip_rule(params = {}, **options)
       req = build_request(:delete_sip_rule, params)
       req.send_request(options)
     end
@@ -2601,9 +2601,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnector AWS API Documentation
     #
-    # @overload delete_voice_connector(params = {})
+    # @overload delete_voice_connector(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector(params = {}, options = {})
+    def delete_voice_connector(params = {}, **options)
       req = build_request(:delete_voice_connector, params)
       req.send_request(options)
     end
@@ -2624,9 +2624,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorEmergencyCallingConfiguration AWS API Documentation
     #
-    # @overload delete_voice_connector_emergency_calling_configuration(params = {})
+    # @overload delete_voice_connector_emergency_calling_configuration(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_emergency_calling_configuration(params = {}, options = {})
+    def delete_voice_connector_emergency_calling_configuration(params = {}, **options)
       req = build_request(:delete_voice_connector_emergency_calling_configuration, params)
       req.send_request(options)
     end
@@ -2648,9 +2648,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorGroup AWS API Documentation
     #
-    # @overload delete_voice_connector_group(params = {})
+    # @overload delete_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_group(params = {}, options = {})
+    def delete_voice_connector_group(params = {}, **options)
       req = build_request(:delete_voice_connector_group, params)
       req.send_request(options)
     end
@@ -2677,9 +2677,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorOrigination AWS API Documentation
     #
-    # @overload delete_voice_connector_origination(params = {})
+    # @overload delete_voice_connector_origination(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_origination(params = {}, options = {})
+    def delete_voice_connector_origination(params = {}, **options)
       req = build_request(:delete_voice_connector_origination, params)
       req.send_request(options)
     end
@@ -2700,9 +2700,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorProxy AWS API Documentation
     #
-    # @overload delete_voice_connector_proxy(params = {})
+    # @overload delete_voice_connector_proxy(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_proxy(params = {}, options = {})
+    def delete_voice_connector_proxy(params = {}, **options)
       req = build_request(:delete_voice_connector_proxy, params)
       req.send_request(options)
     end
@@ -2723,9 +2723,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorStreamingConfiguration AWS API Documentation
     #
-    # @overload delete_voice_connector_streaming_configuration(params = {})
+    # @overload delete_voice_connector_streaming_configuration(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_streaming_configuration(params = {}, options = {})
+    def delete_voice_connector_streaming_configuration(params = {}, **options)
       req = build_request(:delete_voice_connector_streaming_configuration, params)
       req.send_request(options)
     end
@@ -2752,9 +2752,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorTermination AWS API Documentation
     #
-    # @overload delete_voice_connector_termination(params = {})
+    # @overload delete_voice_connector_termination(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_termination(params = {}, options = {})
+    def delete_voice_connector_termination(params = {}, **options)
       req = build_request(:delete_voice_connector_termination, params)
       req.send_request(options)
     end
@@ -2780,9 +2780,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DeleteVoiceConnectorTerminationCredentials AWS API Documentation
     #
-    # @overload delete_voice_connector_termination_credentials(params = {})
+    # @overload delete_voice_connector_termination_credentials(**params)
     # @param [Hash] params ({})
-    def delete_voice_connector_termination_credentials(params = {}, options = {})
+    def delete_voice_connector_termination_credentials(params = {}, **options)
       req = build_request(:delete_voice_connector_termination_credentials, params)
       req.send_request(options)
     end
@@ -2812,9 +2812,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeAppInstance AWS API Documentation
     #
-    # @overload describe_app_instance(params = {})
+    # @overload describe_app_instance(**params)
     # @param [Hash] params ({})
-    def describe_app_instance(params = {}, options = {})
+    def describe_app_instance(params = {}, **options)
       req = build_request(:describe_app_instance, params)
       req.send_request(options)
     end
@@ -2847,9 +2847,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeAppInstanceAdmin AWS API Documentation
     #
-    # @overload describe_app_instance_admin(params = {})
+    # @overload describe_app_instance_admin(**params)
     # @param [Hash] params ({})
-    def describe_app_instance_admin(params = {}, options = {})
+    def describe_app_instance_admin(params = {}, **options)
       req = build_request(:describe_app_instance_admin, params)
       req.send_request(options)
     end
@@ -2879,9 +2879,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeAppInstanceUser AWS API Documentation
     #
-    # @overload describe_app_instance_user(params = {})
+    # @overload describe_app_instance_user(**params)
     # @param [Hash] params ({})
-    def describe_app_instance_user(params = {}, options = {})
+    def describe_app_instance_user(params = {}, **options)
       req = build_request(:describe_app_instance_user, params)
       req.send_request(options)
     end
@@ -2916,9 +2916,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeChannel AWS API Documentation
     #
-    # @overload describe_channel(params = {})
+    # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, options = {})
+    def describe_channel(params = {}, **options)
       req = build_request(:describe_channel, params)
       req.send_request(options)
     end
@@ -2953,9 +2953,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeChannelBan AWS API Documentation
     #
-    # @overload describe_channel_ban(params = {})
+    # @overload describe_channel_ban(**params)
     # @param [Hash] params ({})
-    def describe_channel_ban(params = {}, options = {})
+    def describe_channel_ban(params = {}, **options)
       req = build_request(:describe_channel_ban, params)
       req.send_request(options)
     end
@@ -2992,9 +2992,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeChannelMembership AWS API Documentation
     #
-    # @overload describe_channel_membership(params = {})
+    # @overload describe_channel_membership(**params)
     # @param [Hash] params ({})
-    def describe_channel_membership(params = {}, options = {})
+    def describe_channel_membership(params = {}, **options)
       req = build_request(:describe_channel_membership, params)
       req.send_request(options)
     end
@@ -3032,9 +3032,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeChannelMembershipForAppInstanceUser AWS API Documentation
     #
-    # @overload describe_channel_membership_for_app_instance_user(params = {})
+    # @overload describe_channel_membership_for_app_instance_user(**params)
     # @param [Hash] params ({})
-    def describe_channel_membership_for_app_instance_user(params = {}, options = {})
+    def describe_channel_membership_for_app_instance_user(params = {}, **options)
       req = build_request(:describe_channel_membership_for_app_instance_user, params)
       req.send_request(options)
     end
@@ -3070,9 +3070,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeChannelModeratedByAppInstanceUser AWS API Documentation
     #
-    # @overload describe_channel_moderated_by_app_instance_user(params = {})
+    # @overload describe_channel_moderated_by_app_instance_user(**params)
     # @param [Hash] params ({})
-    def describe_channel_moderated_by_app_instance_user(params = {}, options = {})
+    def describe_channel_moderated_by_app_instance_user(params = {}, **options)
       req = build_request(:describe_channel_moderated_by_app_instance_user, params)
       req.send_request(options)
     end
@@ -3107,9 +3107,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DescribeChannelModerator AWS API Documentation
     #
-    # @overload describe_channel_moderator(params = {})
+    # @overload describe_channel_moderator(**params)
     # @param [Hash] params ({})
-    def describe_channel_moderator(params = {}, options = {})
+    def describe_channel_moderator(params = {}, **options)
       req = build_request(:describe_channel_moderator, params)
       req.send_request(options)
     end
@@ -3134,9 +3134,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DisassociatePhoneNumberFromUser AWS API Documentation
     #
-    # @overload disassociate_phone_number_from_user(params = {})
+    # @overload disassociate_phone_number_from_user(**params)
     # @param [Hash] params ({})
-    def disassociate_phone_number_from_user(params = {}, options = {})
+    def disassociate_phone_number_from_user(params = {}, **options)
       req = build_request(:disassociate_phone_number_from_user, params)
       req.send_request(options)
     end
@@ -3170,9 +3170,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DisassociatePhoneNumbersFromVoiceConnector AWS API Documentation
     #
-    # @overload disassociate_phone_numbers_from_voice_connector(params = {})
+    # @overload disassociate_phone_numbers_from_voice_connector(**params)
     # @param [Hash] params ({})
-    def disassociate_phone_numbers_from_voice_connector(params = {}, options = {})
+    def disassociate_phone_numbers_from_voice_connector(params = {}, **options)
       req = build_request(:disassociate_phone_numbers_from_voice_connector, params)
       req.send_request(options)
     end
@@ -3206,9 +3206,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DisassociatePhoneNumbersFromVoiceConnectorGroup AWS API Documentation
     #
-    # @overload disassociate_phone_numbers_from_voice_connector_group(params = {})
+    # @overload disassociate_phone_numbers_from_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def disassociate_phone_numbers_from_voice_connector_group(params = {}, options = {})
+    def disassociate_phone_numbers_from_voice_connector_group(params = {}, **options)
       req = build_request(:disassociate_phone_numbers_from_voice_connector_group, params)
       req.send_request(options)
     end
@@ -3233,9 +3233,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/DisassociateSigninDelegateGroupsFromAccount AWS API Documentation
     #
-    # @overload disassociate_signin_delegate_groups_from_account(params = {})
+    # @overload disassociate_signin_delegate_groups_from_account(**params)
     # @param [Hash] params ({})
-    def disassociate_signin_delegate_groups_from_account(params = {}, options = {})
+    def disassociate_signin_delegate_groups_from_account(params = {}, **options)
       req = build_request(:disassociate_signin_delegate_groups_from_account, params)
       req.send_request(options)
     end
@@ -3271,9 +3271,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetAccount AWS API Documentation
     #
-    # @overload get_account(params = {})
+    # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, options = {})
+    def get_account(params = {}, **options)
       req = build_request(:get_account, params)
       req.send_request(options)
     end
@@ -3307,9 +3307,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetAccountSettings AWS API Documentation
     #
-    # @overload get_account_settings(params = {})
+    # @overload get_account_settings(**params)
     # @param [Hash] params ({})
-    def get_account_settings(params = {}, options = {})
+    def get_account_settings(params = {}, **options)
       req = build_request(:get_account_settings, params)
       req.send_request(options)
     end
@@ -3337,9 +3337,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetAppInstanceRetentionSettings AWS API Documentation
     #
-    # @overload get_app_instance_retention_settings(params = {})
+    # @overload get_app_instance_retention_settings(**params)
     # @param [Hash] params ({})
-    def get_app_instance_retention_settings(params = {}, options = {})
+    def get_app_instance_retention_settings(params = {}, **options)
       req = build_request(:get_app_instance_retention_settings, params)
       req.send_request(options)
     end
@@ -3367,9 +3367,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetAppInstanceStreamingConfigurations AWS API Documentation
     #
-    # @overload get_app_instance_streaming_configurations(params = {})
+    # @overload get_app_instance_streaming_configurations(**params)
     # @param [Hash] params ({})
-    def get_app_instance_streaming_configurations(params = {}, options = {})
+    def get_app_instance_streaming_configurations(params = {}, **options)
       req = build_request(:get_app_instance_streaming_configurations, params)
       req.send_request(options)
     end
@@ -3407,9 +3407,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetAttendee AWS API Documentation
     #
-    # @overload get_attendee(params = {})
+    # @overload get_attendee(**params)
     # @param [Hash] params ({})
-    def get_attendee(params = {}, options = {})
+    def get_attendee(params = {}, **options)
       req = build_request(:get_attendee, params)
       req.send_request(options)
     end
@@ -3448,9 +3448,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetBot AWS API Documentation
     #
-    # @overload get_bot(params = {})
+    # @overload get_bot(**params)
     # @param [Hash] params ({})
-    def get_bot(params = {}, options = {})
+    def get_bot(params = {}, **options)
       req = build_request(:get_bot, params)
       req.send_request(options)
     end
@@ -3491,9 +3491,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetChannelMessage AWS API Documentation
     #
-    # @overload get_channel_message(params = {})
+    # @overload get_channel_message(**params)
     # @param [Hash] params ({})
-    def get_channel_message(params = {}, options = {})
+    def get_channel_message(params = {}, **options)
       req = build_request(:get_channel_message, params)
       req.send_request(options)
     end
@@ -3526,9 +3526,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetEventsConfiguration AWS API Documentation
     #
-    # @overload get_events_configuration(params = {})
+    # @overload get_events_configuration(**params)
     # @param [Hash] params ({})
-    def get_events_configuration(params = {}, options = {})
+    def get_events_configuration(params = {}, **options)
       req = build_request(:get_events_configuration, params)
       req.send_request(options)
     end
@@ -3549,9 +3549,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetGlobalSettings AWS API Documentation
     #
-    # @overload get_global_settings(params = {})
+    # @overload get_global_settings(**params)
     # @param [Hash] params ({})
-    def get_global_settings(params = {}, options = {})
+    def get_global_settings(params = {}, **options)
       req = build_request(:get_global_settings, params)
       req.send_request(options)
     end
@@ -3592,9 +3592,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetMeeting AWS API Documentation
     #
-    # @overload get_meeting(params = {})
+    # @overload get_meeting(**params)
     # @param [Hash] params ({})
-    def get_meeting(params = {}, options = {})
+    def get_meeting(params = {}, **options)
       req = build_request(:get_meeting, params)
       req.send_request(options)
     end
@@ -3611,9 +3611,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetMessagingSessionEndpoint AWS API Documentation
     #
-    # @overload get_messaging_session_endpoint(params = {})
+    # @overload get_messaging_session_endpoint(**params)
     # @param [Hash] params ({})
-    def get_messaging_session_endpoint(params = {}, options = {})
+    def get_messaging_session_endpoint(params = {}, **options)
       req = build_request(:get_messaging_session_endpoint, params)
       req.send_request(options)
     end
@@ -3659,9 +3659,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetPhoneNumber AWS API Documentation
     #
-    # @overload get_phone_number(params = {})
+    # @overload get_phone_number(**params)
     # @param [Hash] params ({})
-    def get_phone_number(params = {}, options = {})
+    def get_phone_number(params = {}, **options)
       req = build_request(:get_phone_number, params)
       req.send_request(options)
     end
@@ -3696,9 +3696,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetPhoneNumberOrder AWS API Documentation
     #
-    # @overload get_phone_number_order(params = {})
+    # @overload get_phone_number_order(**params)
     # @param [Hash] params ({})
-    def get_phone_number_order(params = {}, options = {})
+    def get_phone_number_order(params = {}, **options)
       req = build_request(:get_phone_number_order, params)
       req.send_request(options)
     end
@@ -3718,9 +3718,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetPhoneNumberSettings AWS API Documentation
     #
-    # @overload get_phone_number_settings(params = {})
+    # @overload get_phone_number_settings(**params)
     # @param [Hash] params ({})
-    def get_phone_number_settings(params = {}, options = {})
+    def get_phone_number_settings(params = {}, **options)
       req = build_request(:get_phone_number_settings, params)
       req.send_request(options)
     end
@@ -3767,9 +3767,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetProxySession AWS API Documentation
     #
-    # @overload get_proxy_session(params = {})
+    # @overload get_proxy_session(**params)
     # @param [Hash] params ({})
-    def get_proxy_session(params = {}, options = {})
+    def get_proxy_session(params = {}, **options)
       req = build_request(:get_proxy_session, params)
       req.send_request(options)
     end
@@ -3805,9 +3805,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetRetentionSettings AWS API Documentation
     #
-    # @overload get_retention_settings(params = {})
+    # @overload get_retention_settings(**params)
     # @param [Hash] params ({})
-    def get_retention_settings(params = {}, options = {})
+    def get_retention_settings(params = {}, **options)
       req = build_request(:get_retention_settings, params)
       req.send_request(options)
     end
@@ -3843,9 +3843,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetRoom AWS API Documentation
     #
-    # @overload get_room(params = {})
+    # @overload get_room(**params)
     # @param [Hash] params ({})
-    def get_room(params = {}, options = {})
+    def get_room(params = {}, **options)
       req = build_request(:get_room, params)
       req.send_request(options)
     end
@@ -3878,9 +3878,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetSipMediaApplication AWS API Documentation
     #
-    # @overload get_sip_media_application(params = {})
+    # @overload get_sip_media_application(**params)
     # @param [Hash] params ({})
-    def get_sip_media_application(params = {}, options = {})
+    def get_sip_media_application(params = {}, **options)
       req = build_request(:get_sip_media_application, params)
       req.send_request(options)
     end
@@ -3907,9 +3907,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetSipMediaApplicationLoggingConfiguration AWS API Documentation
     #
-    # @overload get_sip_media_application_logging_configuration(params = {})
+    # @overload get_sip_media_application_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_sip_media_application_logging_configuration(params = {}, options = {})
+    def get_sip_media_application_logging_configuration(params = {}, **options)
       req = build_request(:get_sip_media_application_logging_configuration, params)
       req.send_request(options)
     end
@@ -3946,9 +3946,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetSipRule AWS API Documentation
     #
-    # @overload get_sip_rule(params = {})
+    # @overload get_sip_rule(**params)
     # @param [Hash] params ({})
-    def get_sip_rule(params = {}, options = {})
+    def get_sip_rule(params = {}, **options)
       req = build_request(:get_sip_rule, params)
       req.send_request(options)
     end
@@ -3995,9 +3995,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetUser AWS API Documentation
     #
-    # @overload get_user(params = {})
+    # @overload get_user(**params)
     # @param [Hash] params ({})
-    def get_user(params = {}, options = {})
+    def get_user(params = {}, **options)
       req = build_request(:get_user, params)
       req.send_request(options)
     end
@@ -4030,9 +4030,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetUserSettings AWS API Documentation
     #
-    # @overload get_user_settings(params = {})
+    # @overload get_user_settings(**params)
     # @param [Hash] params ({})
-    def get_user_settings(params = {}, options = {})
+    def get_user_settings(params = {}, **options)
       req = build_request(:get_user_settings, params)
       req.send_request(options)
     end
@@ -4065,9 +4065,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnector AWS API Documentation
     #
-    # @overload get_voice_connector(params = {})
+    # @overload get_voice_connector(**params)
     # @param [Hash] params ({})
-    def get_voice_connector(params = {}, options = {})
+    def get_voice_connector(params = {}, **options)
       req = build_request(:get_voice_connector, params)
       req.send_request(options)
     end
@@ -4097,9 +4097,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorEmergencyCallingConfiguration AWS API Documentation
     #
-    # @overload get_voice_connector_emergency_calling_configuration(params = {})
+    # @overload get_voice_connector_emergency_calling_configuration(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_emergency_calling_configuration(params = {}, options = {})
+    def get_voice_connector_emergency_calling_configuration(params = {}, **options)
       req = build_request(:get_voice_connector_emergency_calling_configuration, params)
       req.send_request(options)
     end
@@ -4132,9 +4132,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorGroup AWS API Documentation
     #
-    # @overload get_voice_connector_group(params = {})
+    # @overload get_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_group(params = {}, options = {})
+    def get_voice_connector_group(params = {}, **options)
       req = build_request(:get_voice_connector_group, params)
       req.send_request(options)
     end
@@ -4162,9 +4162,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorLoggingConfiguration AWS API Documentation
     #
-    # @overload get_voice_connector_logging_configuration(params = {})
+    # @overload get_voice_connector_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_logging_configuration(params = {}, options = {})
+    def get_voice_connector_logging_configuration(params = {}, **options)
       req = build_request(:get_voice_connector_logging_configuration, params)
       req.send_request(options)
     end
@@ -4197,9 +4197,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorOrigination AWS API Documentation
     #
-    # @overload get_voice_connector_origination(params = {})
+    # @overload get_voice_connector_origination(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_origination(params = {}, options = {})
+    def get_voice_connector_origination(params = {}, **options)
       req = build_request(:get_voice_connector_origination, params)
       req.send_request(options)
     end
@@ -4230,9 +4230,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorProxy AWS API Documentation
     #
-    # @overload get_voice_connector_proxy(params = {})
+    # @overload get_voice_connector_proxy(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_proxy(params = {}, options = {})
+    def get_voice_connector_proxy(params = {}, **options)
       req = build_request(:get_voice_connector_proxy, params)
       req.send_request(options)
     end
@@ -4264,9 +4264,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorStreamingConfiguration AWS API Documentation
     #
-    # @overload get_voice_connector_streaming_configuration(params = {})
+    # @overload get_voice_connector_streaming_configuration(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_streaming_configuration(params = {}, options = {})
+    def get_voice_connector_streaming_configuration(params = {}, **options)
       req = build_request(:get_voice_connector_streaming_configuration, params)
       req.send_request(options)
     end
@@ -4299,9 +4299,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorTermination AWS API Documentation
     #
-    # @overload get_voice_connector_termination(params = {})
+    # @overload get_voice_connector_termination(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_termination(params = {}, options = {})
+    def get_voice_connector_termination(params = {}, **options)
       req = build_request(:get_voice_connector_termination, params)
       req.send_request(options)
     end
@@ -4330,9 +4330,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/GetVoiceConnectorTerminationHealth AWS API Documentation
     #
-    # @overload get_voice_connector_termination_health(params = {})
+    # @overload get_voice_connector_termination_health(**params)
     # @param [Hash] params ({})
-    def get_voice_connector_termination_health(params = {}, options = {})
+    def get_voice_connector_termination_health(params = {}, **options)
       req = build_request(:get_voice_connector_termination_health, params)
       req.send_request(options)
     end
@@ -4372,9 +4372,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/InviteUsers AWS API Documentation
     #
-    # @overload invite_users(params = {})
+    # @overload invite_users(**params)
     # @param [Hash] params ({})
-    def invite_users(params = {}, options = {})
+    def invite_users(params = {}, **options)
       req = build_request(:invite_users, params)
       req.send_request(options)
     end
@@ -4430,9 +4430,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListAccounts AWS API Documentation
     #
-    # @overload list_accounts(params = {})
+    # @overload list_accounts(**params)
     # @param [Hash] params ({})
-    def list_accounts(params = {}, options = {})
+    def list_accounts(params = {}, **options)
       req = build_request(:list_accounts, params)
       req.send_request(options)
     end
@@ -4475,9 +4475,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListAppInstanceAdmins AWS API Documentation
     #
-    # @overload list_app_instance_admins(params = {})
+    # @overload list_app_instance_admins(**params)
     # @param [Hash] params ({})
-    def list_app_instance_admins(params = {}, options = {})
+    def list_app_instance_admins(params = {}, **options)
       req = build_request(:list_app_instance_admins, params)
       req.send_request(options)
     end
@@ -4521,9 +4521,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListAppInstanceUsers AWS API Documentation
     #
-    # @overload list_app_instance_users(params = {})
+    # @overload list_app_instance_users(**params)
     # @param [Hash] params ({})
-    def list_app_instance_users(params = {}, options = {})
+    def list_app_instance_users(params = {}, **options)
       req = build_request(:list_app_instance_users, params)
       req.send_request(options)
     end
@@ -4562,9 +4562,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListAppInstances AWS API Documentation
     #
-    # @overload list_app_instances(params = {})
+    # @overload list_app_instances(**params)
     # @param [Hash] params ({})
-    def list_app_instances(params = {}, options = {})
+    def list_app_instances(params = {}, **options)
       req = build_request(:list_app_instances, params)
       req.send_request(options)
     end
@@ -4596,9 +4596,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListAttendeeTags AWS API Documentation
     #
-    # @overload list_attendee_tags(params = {})
+    # @overload list_attendee_tags(**params)
     # @param [Hash] params ({})
-    def list_attendee_tags(params = {}, options = {})
+    def list_attendee_tags(params = {}, **options)
       req = build_request(:list_attendee_tags, params)
       req.send_request(options)
     end
@@ -4645,9 +4645,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListAttendees AWS API Documentation
     #
-    # @overload list_attendees(params = {})
+    # @overload list_attendees(**params)
     # @param [Hash] params ({})
-    def list_attendees(params = {}, options = {})
+    def list_attendees(params = {}, **options)
       req = build_request(:list_attendees, params)
       req.send_request(options)
     end
@@ -4696,9 +4696,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListBots AWS API Documentation
     #
-    # @overload list_bots(params = {})
+    # @overload list_bots(**params)
     # @param [Hash] params ({})
-    def list_bots(params = {}, options = {})
+    def list_bots(params = {}, **options)
       req = build_request(:list_bots, params)
       req.send_request(options)
     end
@@ -4741,9 +4741,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannelBans AWS API Documentation
     #
-    # @overload list_channel_bans(params = {})
+    # @overload list_channel_bans(**params)
     # @param [Hash] params ({})
-    def list_channel_bans(params = {}, options = {})
+    def list_channel_bans(params = {}, **options)
       req = build_request(:list_channel_bans, params)
       req.send_request(options)
     end
@@ -4794,9 +4794,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannelMemberships AWS API Documentation
     #
-    # @overload list_channel_memberships(params = {})
+    # @overload list_channel_memberships(**params)
     # @param [Hash] params ({})
-    def list_channel_memberships(params = {}, options = {})
+    def list_channel_memberships(params = {}, **options)
       req = build_request(:list_channel_memberships, params)
       req.send_request(options)
     end
@@ -4845,9 +4845,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannelMembershipsForAppInstanceUser AWS API Documentation
     #
-    # @overload list_channel_memberships_for_app_instance_user(params = {})
+    # @overload list_channel_memberships_for_app_instance_user(**params)
     # @param [Hash] params ({})
-    def list_channel_memberships_for_app_instance_user(params = {}, options = {})
+    def list_channel_memberships_for_app_instance_user(params = {}, **options)
       req = build_request(:list_channel_memberships_for_app_instance_user, params)
       req.send_request(options)
     end
@@ -4919,9 +4919,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannelMessages AWS API Documentation
     #
-    # @overload list_channel_messages(params = {})
+    # @overload list_channel_messages(**params)
     # @param [Hash] params ({})
-    def list_channel_messages(params = {}, options = {})
+    def list_channel_messages(params = {}, **options)
       req = build_request(:list_channel_messages, params)
       req.send_request(options)
     end
@@ -4964,9 +4964,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannelModerators AWS API Documentation
     #
-    # @overload list_channel_moderators(params = {})
+    # @overload list_channel_moderators(**params)
     # @param [Hash] params ({})
-    def list_channel_moderators(params = {}, options = {})
+    def list_channel_moderators(params = {}, **options)
       req = build_request(:list_channel_moderators, params)
       req.send_request(options)
     end
@@ -5026,9 +5026,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannels AWS API Documentation
     #
-    # @overload list_channels(params = {})
+    # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, options = {})
+    def list_channels(params = {}, **options)
       req = build_request(:list_channels, params)
       req.send_request(options)
     end
@@ -5073,9 +5073,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListChannelsModeratedByAppInstanceUser AWS API Documentation
     #
-    # @overload list_channels_moderated_by_app_instance_user(params = {})
+    # @overload list_channels_moderated_by_app_instance_user(**params)
     # @param [Hash] params ({})
-    def list_channels_moderated_by_app_instance_user(params = {}, options = {})
+    def list_channels_moderated_by_app_instance_user(params = {}, **options)
       req = build_request(:list_channels_moderated_by_app_instance_user, params)
       req.send_request(options)
     end
@@ -5103,9 +5103,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListMeetingTags AWS API Documentation
     #
-    # @overload list_meeting_tags(params = {})
+    # @overload list_meeting_tags(**params)
     # @param [Hash] params ({})
-    def list_meeting_tags(params = {}, options = {})
+    def list_meeting_tags(params = {}, **options)
       req = build_request(:list_meeting_tags, params)
       req.send_request(options)
     end
@@ -5155,9 +5155,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListMeetings AWS API Documentation
     #
-    # @overload list_meetings(params = {})
+    # @overload list_meetings(**params)
     # @param [Hash] params ({})
-    def list_meetings(params = {}, options = {})
+    def list_meetings(params = {}, **options)
       req = build_request(:list_meetings, params)
       req.send_request(options)
     end
@@ -5200,9 +5200,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListPhoneNumberOrders AWS API Documentation
     #
-    # @overload list_phone_number_orders(params = {})
+    # @overload list_phone_number_orders(**params)
     # @param [Hash] params ({})
-    def list_phone_number_orders(params = {}, options = {})
+    def list_phone_number_orders(params = {}, **options)
       req = build_request(:list_phone_number_orders, params)
       req.send_request(options)
     end
@@ -5274,9 +5274,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListPhoneNumbers AWS API Documentation
     #
-    # @overload list_phone_numbers(params = {})
+    # @overload list_phone_numbers(**params)
     # @param [Hash] params ({})
-    def list_phone_numbers(params = {}, options = {})
+    def list_phone_numbers(params = {}, **options)
       req = build_request(:list_phone_numbers, params)
       req.send_request(options)
     end
@@ -5336,9 +5336,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListProxySessions AWS API Documentation
     #
-    # @overload list_proxy_sessions(params = {})
+    # @overload list_proxy_sessions(**params)
     # @param [Hash] params ({})
-    def list_proxy_sessions(params = {}, options = {})
+    def list_proxy_sessions(params = {}, **options)
       req = build_request(:list_proxy_sessions, params)
       req.send_request(options)
     end
@@ -5391,9 +5391,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListRoomMemberships AWS API Documentation
     #
-    # @overload list_room_memberships(params = {})
+    # @overload list_room_memberships(**params)
     # @param [Hash] params ({})
-    def list_room_memberships(params = {}, options = {})
+    def list_room_memberships(params = {}, **options)
       req = build_request(:list_room_memberships, params)
       req.send_request(options)
     end
@@ -5443,9 +5443,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListRooms AWS API Documentation
     #
-    # @overload list_rooms(params = {})
+    # @overload list_rooms(**params)
     # @param [Hash] params ({})
-    def list_rooms(params = {}, options = {})
+    def list_rooms(params = {}, **options)
       req = build_request(:list_rooms, params)
       req.send_request(options)
     end
@@ -5488,9 +5488,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListSipMediaApplications AWS API Documentation
     #
-    # @overload list_sip_media_applications(params = {})
+    # @overload list_sip_media_applications(**params)
     # @param [Hash] params ({})
-    def list_sip_media_applications(params = {}, options = {})
+    def list_sip_media_applications(params = {}, **options)
       req = build_request(:list_sip_media_applications, params)
       req.send_request(options)
     end
@@ -5540,9 +5540,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListSipRules AWS API Documentation
     #
-    # @overload list_sip_rules(params = {})
+    # @overload list_sip_rules(**params)
     # @param [Hash] params ({})
-    def list_sip_rules(params = {}, options = {})
+    def list_sip_rules(params = {}, **options)
       req = build_request(:list_sip_rules, params)
       req.send_request(options)
     end
@@ -5570,9 +5570,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -5635,9 +5635,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -5679,9 +5679,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListVoiceConnectorGroups AWS API Documentation
     #
-    # @overload list_voice_connector_groups(params = {})
+    # @overload list_voice_connector_groups(**params)
     # @param [Hash] params ({})
-    def list_voice_connector_groups(params = {}, options = {})
+    def list_voice_connector_groups(params = {}, **options)
       req = build_request(:list_voice_connector_groups, params)
       req.send_request(options)
     end
@@ -5709,9 +5709,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListVoiceConnectorTerminationCredentials AWS API Documentation
     #
-    # @overload list_voice_connector_termination_credentials(params = {})
+    # @overload list_voice_connector_termination_credentials(**params)
     # @param [Hash] params ({})
-    def list_voice_connector_termination_credentials(params = {}, options = {})
+    def list_voice_connector_termination_credentials(params = {}, **options)
       req = build_request(:list_voice_connector_termination_credentials, params)
       req.send_request(options)
     end
@@ -5753,9 +5753,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ListVoiceConnectors AWS API Documentation
     #
-    # @overload list_voice_connectors(params = {})
+    # @overload list_voice_connectors(**params)
     # @param [Hash] params ({})
-    def list_voice_connectors(params = {}, options = {})
+    def list_voice_connectors(params = {}, **options)
       req = build_request(:list_voice_connectors, params)
       req.send_request(options)
     end
@@ -5780,9 +5780,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/LogoutUser AWS API Documentation
     #
-    # @overload logout_user(params = {})
+    # @overload logout_user(**params)
     # @param [Hash] params ({})
-    def logout_user(params = {}, options = {})
+    def logout_user(params = {}, **options)
       req = build_request(:logout_user, params)
       req.send_request(options)
     end
@@ -5819,9 +5819,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutAppInstanceRetentionSettings AWS API Documentation
     #
-    # @overload put_app_instance_retention_settings(params = {})
+    # @overload put_app_instance_retention_settings(**params)
     # @param [Hash] params ({})
-    def put_app_instance_retention_settings(params = {}, options = {})
+    def put_app_instance_retention_settings(params = {}, **options)
       req = build_request(:put_app_instance_retention_settings, params)
       req.send_request(options)
     end
@@ -5858,9 +5858,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutAppInstanceStreamingConfigurations AWS API Documentation
     #
-    # @overload put_app_instance_streaming_configurations(params = {})
+    # @overload put_app_instance_streaming_configurations(**params)
     # @param [Hash] params ({})
-    def put_app_instance_streaming_configurations(params = {}, options = {})
+    def put_app_instance_streaming_configurations(params = {}, **options)
       req = build_request(:put_app_instance_streaming_configurations, params)
       req.send_request(options)
     end
@@ -5902,9 +5902,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutEventsConfiguration AWS API Documentation
     #
-    # @overload put_events_configuration(params = {})
+    # @overload put_events_configuration(**params)
     # @param [Hash] params ({})
-    def put_events_configuration(params = {}, options = {})
+    def put_events_configuration(params = {}, **options)
       req = build_request(:put_events_configuration, params)
       req.send_request(options)
     end
@@ -5959,9 +5959,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutRetentionSettings AWS API Documentation
     #
-    # @overload put_retention_settings(params = {})
+    # @overload put_retention_settings(**params)
     # @param [Hash] params ({})
-    def put_retention_settings(params = {}, options = {})
+    def put_retention_settings(params = {}, **options)
       req = build_request(:put_retention_settings, params)
       req.send_request(options)
     end
@@ -5994,9 +5994,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutSipMediaApplicationLoggingConfiguration AWS API Documentation
     #
-    # @overload put_sip_media_application_logging_configuration(params = {})
+    # @overload put_sip_media_application_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_sip_media_application_logging_configuration(params = {}, options = {})
+    def put_sip_media_application_logging_configuration(params = {}, **options)
       req = build_request(:put_sip_media_application_logging_configuration, params)
       req.send_request(options)
     end
@@ -6041,9 +6041,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorEmergencyCallingConfiguration AWS API Documentation
     #
-    # @overload put_voice_connector_emergency_calling_configuration(params = {})
+    # @overload put_voice_connector_emergency_calling_configuration(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_emergency_calling_configuration(params = {}, options = {})
+    def put_voice_connector_emergency_calling_configuration(params = {}, **options)
       req = build_request(:put_voice_connector_emergency_calling_configuration, params)
       req.send_request(options)
     end
@@ -6077,9 +6077,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorLoggingConfiguration AWS API Documentation
     #
-    # @overload put_voice_connector_logging_configuration(params = {})
+    # @overload put_voice_connector_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_logging_configuration(params = {}, options = {})
+    def put_voice_connector_logging_configuration(params = {}, **options)
       req = build_request(:put_voice_connector_logging_configuration, params)
       req.send_request(options)
     end
@@ -6133,9 +6133,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorOrigination AWS API Documentation
     #
-    # @overload put_voice_connector_origination(params = {})
+    # @overload put_voice_connector_origination(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_origination(params = {}, options = {})
+    def put_voice_connector_origination(params = {}, **options)
       req = build_request(:put_voice_connector_origination, params)
       req.send_request(options)
     end
@@ -6183,9 +6183,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorProxy AWS API Documentation
     #
-    # @overload put_voice_connector_proxy(params = {})
+    # @overload put_voice_connector_proxy(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_proxy(params = {}, options = {})
+    def put_voice_connector_proxy(params = {}, **options)
       req = build_request(:put_voice_connector_proxy, params)
       req.send_request(options)
     end
@@ -6229,9 +6229,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorStreamingConfiguration AWS API Documentation
     #
-    # @overload put_voice_connector_streaming_configuration(params = {})
+    # @overload put_voice_connector_streaming_configuration(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_streaming_configuration(params = {}, options = {})
+    def put_voice_connector_streaming_configuration(params = {}, **options)
       req = build_request(:put_voice_connector_streaming_configuration, params)
       req.send_request(options)
     end
@@ -6280,9 +6280,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorTermination AWS API Documentation
     #
-    # @overload put_voice_connector_termination(params = {})
+    # @overload put_voice_connector_termination(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_termination(params = {}, options = {})
+    def put_voice_connector_termination(params = {}, **options)
       req = build_request(:put_voice_connector_termination, params)
       req.send_request(options)
     end
@@ -6312,9 +6312,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/PutVoiceConnectorTerminationCredentials AWS API Documentation
     #
-    # @overload put_voice_connector_termination_credentials(params = {})
+    # @overload put_voice_connector_termination_credentials(**params)
     # @param [Hash] params ({})
-    def put_voice_connector_termination_credentials(params = {}, options = {})
+    def put_voice_connector_termination_credentials(params = {}, **options)
       req = build_request(:put_voice_connector_termination_credentials, params)
       req.send_request(options)
     end
@@ -6349,9 +6349,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/RedactChannelMessage AWS API Documentation
     #
-    # @overload redact_channel_message(params = {})
+    # @overload redact_channel_message(**params)
     # @param [Hash] params ({})
-    def redact_channel_message(params = {}, options = {})
+    def redact_channel_message(params = {}, **options)
       req = build_request(:redact_channel_message, params)
       req.send_request(options)
     end
@@ -6380,9 +6380,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/RedactConversationMessage AWS API Documentation
     #
-    # @overload redact_conversation_message(params = {})
+    # @overload redact_conversation_message(**params)
     # @param [Hash] params ({})
-    def redact_conversation_message(params = {}, options = {})
+    def redact_conversation_message(params = {}, **options)
       req = build_request(:redact_conversation_message, params)
       req.send_request(options)
     end
@@ -6410,9 +6410,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/RedactRoomMessage AWS API Documentation
     #
-    # @overload redact_room_message(params = {})
+    # @overload redact_room_message(**params)
     # @param [Hash] params ({})
-    def redact_room_message(params = {}, options = {})
+    def redact_room_message(params = {}, **options)
       req = build_request(:redact_room_message, params)
       req.send_request(options)
     end
@@ -6450,9 +6450,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/RegenerateSecurityToken AWS API Documentation
     #
-    # @overload regenerate_security_token(params = {})
+    # @overload regenerate_security_token(**params)
     # @param [Hash] params ({})
-    def regenerate_security_token(params = {}, options = {})
+    def regenerate_security_token(params = {}, **options)
       req = build_request(:regenerate_security_token, params)
       req.send_request(options)
     end
@@ -6497,9 +6497,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/ResetPersonalPIN AWS API Documentation
     #
-    # @overload reset_personal_pin(params = {})
+    # @overload reset_personal_pin(**params)
     # @param [Hash] params ({})
-    def reset_personal_pin(params = {}, options = {})
+    def reset_personal_pin(params = {}, **options)
       req = build_request(:reset_personal_pin, params)
       req.send_request(options)
     end
@@ -6545,9 +6545,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/RestorePhoneNumber AWS API Documentation
     #
-    # @overload restore_phone_number(params = {})
+    # @overload restore_phone_number(**params)
     # @param [Hash] params ({})
-    def restore_phone_number(params = {}, options = {})
+    def restore_phone_number(params = {}, **options)
       req = build_request(:restore_phone_number, params)
       req.send_request(options)
     end
@@ -6598,9 +6598,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/SearchAvailablePhoneNumbers AWS API Documentation
     #
-    # @overload search_available_phone_numbers(params = {})
+    # @overload search_available_phone_numbers(**params)
     # @param [Hash] params ({})
-    def search_available_phone_numbers(params = {}, options = {})
+    def search_available_phone_numbers(params = {}, **options)
       req = build_request(:search_available_phone_numbers, params)
       req.send_request(options)
     end
@@ -6657,9 +6657,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/SendChannelMessage AWS API Documentation
     #
-    # @overload send_channel_message(params = {})
+    # @overload send_channel_message(**params)
     # @param [Hash] params ({})
-    def send_channel_message(params = {}, options = {})
+    def send_channel_message(params = {}, **options)
       req = build_request(:send_channel_message, params)
       req.send_request(options)
     end
@@ -6692,9 +6692,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/TagAttendee AWS API Documentation
     #
-    # @overload tag_attendee(params = {})
+    # @overload tag_attendee(**params)
     # @param [Hash] params ({})
-    def tag_attendee(params = {}, options = {})
+    def tag_attendee(params = {}, **options)
       req = build_request(:tag_attendee, params)
       req.send_request(options)
     end
@@ -6723,9 +6723,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/TagMeeting AWS API Documentation
     #
-    # @overload tag_meeting(params = {})
+    # @overload tag_meeting(**params)
     # @param [Hash] params ({})
-    def tag_meeting(params = {}, options = {})
+    def tag_meeting(params = {}, **options)
       req = build_request(:tag_meeting, params)
       req.send_request(options)
     end
@@ -6755,9 +6755,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -6786,9 +6786,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UntagAttendee AWS API Documentation
     #
-    # @overload untag_attendee(params = {})
+    # @overload untag_attendee(**params)
     # @param [Hash] params ({})
-    def untag_attendee(params = {}, options = {})
+    def untag_attendee(params = {}, **options)
       req = build_request(:untag_attendee, params)
       req.send_request(options)
     end
@@ -6812,9 +6812,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UntagMeeting AWS API Documentation
     #
-    # @overload untag_meeting(params = {})
+    # @overload untag_meeting(**params)
     # @param [Hash] params ({})
-    def untag_meeting(params = {}, options = {})
+    def untag_meeting(params = {}, **options)
       req = build_request(:untag_meeting, params)
       req.send_request(options)
     end
@@ -6839,9 +6839,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -6881,9 +6881,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateAccount AWS API Documentation
     #
-    # @overload update_account(params = {})
+    # @overload update_account(**params)
     # @param [Hash] params ({})
-    def update_account(params = {}, options = {})
+    def update_account(params = {}, **options)
       req = build_request(:update_account, params)
       req.send_request(options)
     end
@@ -6917,9 +6917,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateAccountSettings AWS API Documentation
     #
-    # @overload update_account_settings(params = {})
+    # @overload update_account_settings(**params)
     # @param [Hash] params ({})
-    def update_account_settings(params = {}, options = {})
+    def update_account_settings(params = {}, **options)
       req = build_request(:update_account_settings, params)
       req.send_request(options)
     end
@@ -6953,9 +6953,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateAppInstance AWS API Documentation
     #
-    # @overload update_app_instance(params = {})
+    # @overload update_app_instance(**params)
     # @param [Hash] params ({})
-    def update_app_instance(params = {}, options = {})
+    def update_app_instance(params = {}, **options)
       req = build_request(:update_app_instance, params)
       req.send_request(options)
     end
@@ -6990,9 +6990,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateAppInstanceUser AWS API Documentation
     #
-    # @overload update_app_instance_user(params = {})
+    # @overload update_app_instance_user(**params)
     # @param [Hash] params ({})
-    def update_app_instance_user(params = {}, options = {})
+    def update_app_instance_user(params = {}, **options)
       req = build_request(:update_app_instance_user, params)
       req.send_request(options)
     end
@@ -7035,9 +7035,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateBot AWS API Documentation
     #
-    # @overload update_bot(params = {})
+    # @overload update_bot(**params)
     # @param [Hash] params ({})
-    def update_bot(params = {}, options = {})
+    def update_bot(params = {}, **options)
       req = build_request(:update_bot, params)
       req.send_request(options)
     end
@@ -7077,9 +7077,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateChannel AWS API Documentation
     #
-    # @overload update_channel(params = {})
+    # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, options = {})
+    def update_channel(params = {}, **options)
       req = build_request(:update_channel, params)
       req.send_request(options)
     end
@@ -7119,9 +7119,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateChannelMessage AWS API Documentation
     #
-    # @overload update_channel_message(params = {})
+    # @overload update_channel_message(**params)
     # @param [Hash] params ({})
-    def update_channel_message(params = {}, options = {})
+    def update_channel_message(params = {}, **options)
       req = build_request(:update_channel_message, params)
       req.send_request(options)
     end
@@ -7148,9 +7148,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateChannelReadMarker AWS API Documentation
     #
-    # @overload update_channel_read_marker(params = {})
+    # @overload update_channel_read_marker(**params)
     # @param [Hash] params ({})
-    def update_channel_read_marker(params = {}, options = {})
+    def update_channel_read_marker(params = {}, **options)
       req = build_request(:update_channel_read_marker, params)
       req.send_request(options)
     end
@@ -7180,9 +7180,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateGlobalSettings AWS API Documentation
     #
-    # @overload update_global_settings(params = {})
+    # @overload update_global_settings(**params)
     # @param [Hash] params ({})
-    def update_global_settings(params = {}, options = {})
+    def update_global_settings(params = {}, **options)
       req = build_request(:update_global_settings, params)
       req.send_request(options)
     end
@@ -7245,9 +7245,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdatePhoneNumber AWS API Documentation
     #
-    # @overload update_phone_number(params = {})
+    # @overload update_phone_number(**params)
     # @param [Hash] params ({})
-    def update_phone_number(params = {}, options = {})
+    def update_phone_number(params = {}, **options)
       req = build_request(:update_phone_number, params)
       req.send_request(options)
     end
@@ -7270,9 +7270,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdatePhoneNumberSettings AWS API Documentation
     #
-    # @overload update_phone_number_settings(params = {})
+    # @overload update_phone_number_settings(**params)
     # @param [Hash] params ({})
-    def update_phone_number_settings(params = {}, options = {})
+    def update_phone_number_settings(params = {}, **options)
       req = build_request(:update_phone_number_settings, params)
       req.send_request(options)
     end
@@ -7327,9 +7327,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateProxySession AWS API Documentation
     #
-    # @overload update_proxy_session(params = {})
+    # @overload update_proxy_session(**params)
     # @param [Hash] params ({})
-    def update_proxy_session(params = {}, options = {})
+    def update_proxy_session(params = {}, **options)
       req = build_request(:update_proxy_session, params)
       req.send_request(options)
     end
@@ -7369,9 +7369,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateRoom AWS API Documentation
     #
-    # @overload update_room(params = {})
+    # @overload update_room(**params)
     # @param [Hash] params ({})
-    def update_room(params = {}, options = {})
+    def update_room(params = {}, **options)
       req = build_request(:update_room, params)
       req.send_request(options)
     end
@@ -7420,9 +7420,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateRoomMembership AWS API Documentation
     #
-    # @overload update_room_membership(params = {})
+    # @overload update_room_membership(**params)
     # @param [Hash] params ({})
-    def update_room_membership(params = {}, options = {})
+    def update_room_membership(params = {}, **options)
       req = build_request(:update_room_membership, params)
       req.send_request(options)
     end
@@ -7466,9 +7466,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateSipMediaApplication AWS API Documentation
     #
-    # @overload update_sip_media_application(params = {})
+    # @overload update_sip_media_application(**params)
     # @param [Hash] params ({})
-    def update_sip_media_application(params = {}, options = {})
+    def update_sip_media_application(params = {}, **options)
       req = build_request(:update_sip_media_application, params)
       req.send_request(options)
     end
@@ -7522,9 +7522,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateSipRule AWS API Documentation
     #
-    # @overload update_sip_rule(params = {})
+    # @overload update_sip_rule(**params)
     # @param [Hash] params ({})
-    def update_sip_rule(params = {}, options = {})
+    def update_sip_rule(params = {}, **options)
       req = build_request(:update_sip_rule, params)
       req.send_request(options)
     end
@@ -7584,9 +7584,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateUser AWS API Documentation
     #
-    # @overload update_user(params = {})
+    # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, options = {})
+    def update_user(params = {}, **options)
       req = build_request(:update_user, params)
       req.send_request(options)
     end
@@ -7621,9 +7621,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateUserSettings AWS API Documentation
     #
-    # @overload update_user_settings(params = {})
+    # @overload update_user_settings(**params)
     # @param [Hash] params ({})
-    def update_user_settings(params = {}, options = {})
+    def update_user_settings(params = {}, **options)
       req = build_request(:update_user_settings, params)
       req.send_request(options)
     end
@@ -7664,9 +7664,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateVoiceConnector AWS API Documentation
     #
-    # @overload update_voice_connector(params = {})
+    # @overload update_voice_connector(**params)
     # @param [Hash] params ({})
-    def update_voice_connector(params = {}, options = {})
+    def update_voice_connector(params = {}, **options)
       req = build_request(:update_voice_connector, params)
       req.send_request(options)
     end
@@ -7712,9 +7712,9 @@ module Aws::Chime
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/chime-2018-05-01/UpdateVoiceConnectorGroup AWS API Documentation
     #
-    # @overload update_voice_connector_group(params = {})
+    # @overload update_voice_connector_group(**params)
     # @param [Hash] params ({})
-    def update_voice_connector_group(params = {}, options = {})
+    def update_voice_connector_group(params = {}, **options)
       req = build_request(:update_voice_connector_group, params)
       req.send_request(options)
     end
@@ -7723,7 +7723,7 @@ module Aws::Chime
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -7731,15 +7731,15 @@ module Aws::Chime
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-chime'
-      context[:gem_version] = '1.39.0'
+      context[:gem_name] = "aws-sdk-chime"
+      context[:gem_version] = "1.39.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

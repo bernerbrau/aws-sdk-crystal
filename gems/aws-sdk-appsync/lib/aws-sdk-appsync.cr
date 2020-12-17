@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appsync/types'
-require_relative 'aws-sdk-appsync/client_api'
-require_relative 'aws-sdk-appsync/client'
-require_relative 'aws-sdk-appsync/errors'
-require_relative 'aws-sdk-appsync/resource'
-require_relative 'aws-sdk-appsync/customizations'
+require_relative "aws-sdk-appsync/types"
+require_relative "aws-sdk-appsync/client_api"
+require_relative "aws-sdk-appsync/client"
+require_relative "aws-sdk-appsync/errors"
+require_relative "aws-sdk-appsync/resource"
+require_relative "aws-sdk-appsync/customizations"
 
 # This module provides support for AWS AppSync. This module is available in the
 # `aws-sdk-appsync` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-appsync/customizations'
 # @!group service
 module Aws::AppSync
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

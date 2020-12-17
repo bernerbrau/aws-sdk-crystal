@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-clouddirectory/types'
-require_relative 'aws-sdk-clouddirectory/client_api'
-require_relative 'aws-sdk-clouddirectory/client'
-require_relative 'aws-sdk-clouddirectory/errors'
-require_relative 'aws-sdk-clouddirectory/resource'
-require_relative 'aws-sdk-clouddirectory/customizations'
+require_relative "aws-sdk-clouddirectory/types"
+require_relative "aws-sdk-clouddirectory/client_api"
+require_relative "aws-sdk-clouddirectory/client"
+require_relative "aws-sdk-clouddirectory/errors"
+require_relative "aws-sdk-clouddirectory/resource"
+require_relative "aws-sdk-clouddirectory/customizations"
 
 # This module provides support for Amazon CloudDirectory. This module is available in the
 # `aws-sdk-clouddirectory` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-clouddirectory/customizations'
 # @!group service
 module Aws::CloudDirectory
 
-  GEM_VERSION = '1.29.0'
+  GEM_VERSION = "1.29.0"
 
 end

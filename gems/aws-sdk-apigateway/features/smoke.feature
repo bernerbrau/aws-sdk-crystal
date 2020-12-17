@@ -8,11 +8,11 @@
 Feature: Smoke tests for APIGateway
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @apigateway @smoke
   Scenario: Call Aws::APIGateway::Client#get_domain_names and expect it to succeed
-  When I call the operation 'get_domain_names' with params:
+  When I call the operation "get_domain_names" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @apigateway @smoke
   Scenario: Call Aws::Aws::APIGateway::Client#create_usage_plan_key and expect it to fail
-  When I call the operation 'create_usage_plan_key' with params:
+  When I call the operation "create_usage_plan_key" with params:
     """
 {"usage_plan_id":"foo","key_id":"bar","key_type":"fixx"}
     """

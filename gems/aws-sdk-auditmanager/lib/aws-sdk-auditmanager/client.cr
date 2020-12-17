@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:auditmanager)
 
@@ -280,7 +280,7 @@ module Aws::AuditManager
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -347,9 +347,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssociateAssessmentReportEvidenceFolder AWS API Documentation
     #
-    # @overload associate_assessment_report_evidence_folder(params = {})
+    # @overload associate_assessment_report_evidence_folder(**params)
     # @param [Hash] params ({})
-    def associate_assessment_report_evidence_folder(params = {}, options = {})
+    def associate_assessment_report_evidence_folder(params = {}, **options)
       req = build_request(:associate_assessment_report_evidence_folder, params)
       req.send_request(options)
     end
@@ -390,9 +390,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchAssociateAssessmentReportEvidence AWS API Documentation
     #
-    # @overload batch_associate_assessment_report_evidence(params = {})
+    # @overload batch_associate_assessment_report_evidence(**params)
     # @param [Hash] params ({})
-    def batch_associate_assessment_report_evidence(params = {}, options = {})
+    def batch_associate_assessment_report_evidence(params = {}, **options)
       req = build_request(:batch_associate_assessment_report_evidence, params)
       req.send_request(options)
     end
@@ -449,9 +449,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchCreateDelegationByAssessment AWS API Documentation
     #
-    # @overload batch_create_delegation_by_assessment(params = {})
+    # @overload batch_create_delegation_by_assessment(**params)
     # @param [Hash] params ({})
-    def batch_create_delegation_by_assessment(params = {}, options = {})
+    def batch_create_delegation_by_assessment(params = {}, **options)
       req = build_request(:batch_create_delegation_by_assessment, params)
       req.send_request(options)
     end
@@ -484,9 +484,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDeleteDelegationByAssessment AWS API Documentation
     #
-    # @overload batch_delete_delegation_by_assessment(params = {})
+    # @overload batch_delete_delegation_by_assessment(**params)
     # @param [Hash] params ({})
-    def batch_delete_delegation_by_assessment(params = {}, options = {})
+    def batch_delete_delegation_by_assessment(params = {}, **options)
       req = build_request(:batch_delete_delegation_by_assessment, params)
       req.send_request(options)
     end
@@ -527,9 +527,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDisassociateAssessmentReportEvidence AWS API Documentation
     #
-    # @overload batch_disassociate_assessment_report_evidence(params = {})
+    # @overload batch_disassociate_assessment_report_evidence(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_assessment_report_evidence(params = {}, options = {})
+    def batch_disassociate_assessment_report_evidence(params = {}, **options)
       req = build_request(:batch_disassociate_assessment_report_evidence, params)
       req.send_request(options)
     end
@@ -575,9 +575,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchImportEvidenceToAssessmentControl AWS API Documentation
     #
-    # @overload batch_import_evidence_to_assessment_control(params = {})
+    # @overload batch_import_evidence_to_assessment_control(**params)
     # @param [Hash] params ({})
-    def batch_import_evidence_to_assessment_control(params = {}, options = {})
+    def batch_import_evidence_to_assessment_control(params = {}, **options)
       req = build_request(:batch_import_evidence_to_assessment_control, params)
       req.send_request(options)
     end
@@ -728,9 +728,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessment AWS API Documentation
     #
-    # @overload create_assessment(params = {})
+    # @overload create_assessment(**params)
     # @param [Hash] params ({})
-    def create_assessment(params = {}, options = {})
+    def create_assessment(params = {}, **options)
       req = build_request(:create_assessment, params)
       req.send_request(options)
     end
@@ -818,9 +818,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentFramework AWS API Documentation
     #
-    # @overload create_assessment_framework(params = {})
+    # @overload create_assessment_framework(**params)
     # @param [Hash] params ({})
-    def create_assessment_framework(params = {}, options = {})
+    def create_assessment_framework(params = {}, **options)
       req = build_request(:create_assessment_framework, params)
       req.send_request(options)
     end
@@ -862,9 +862,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentReport AWS API Documentation
     #
-    # @overload create_assessment_report(params = {})
+    # @overload create_assessment_report(**params)
     # @param [Hash] params ({})
-    def create_assessment_report(params = {}, options = {})
+    def create_assessment_report(params = {}, **options)
       req = build_request(:create_assessment_report, params)
       req.send_request(options)
     end
@@ -954,9 +954,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateControl AWS API Documentation
     #
-    # @overload create_control(params = {})
+    # @overload create_control(**params)
     # @param [Hash] params ({})
-    def create_control(params = {}, options = {})
+    def create_control(params = {}, **options)
       req = build_request(:create_control, params)
       req.send_request(options)
     end
@@ -976,9 +976,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessment AWS API Documentation
     #
-    # @overload delete_assessment(params = {})
+    # @overload delete_assessment(**params)
     # @param [Hash] params ({})
-    def delete_assessment(params = {}, options = {})
+    def delete_assessment(params = {}, **options)
       req = build_request(:delete_assessment, params)
       req.send_request(options)
     end
@@ -998,9 +998,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFramework AWS API Documentation
     #
-    # @overload delete_assessment_framework(params = {})
+    # @overload delete_assessment_framework(**params)
     # @param [Hash] params ({})
-    def delete_assessment_framework(params = {}, options = {})
+    def delete_assessment_framework(params = {}, **options)
       req = build_request(:delete_assessment_framework, params)
       req.send_request(options)
     end
@@ -1024,9 +1024,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentReport AWS API Documentation
     #
-    # @overload delete_assessment_report(params = {})
+    # @overload delete_assessment_report(**params)
     # @param [Hash] params ({})
-    def delete_assessment_report(params = {}, options = {})
+    def delete_assessment_report(params = {}, **options)
       req = build_request(:delete_assessment_report, params)
       req.send_request(options)
     end
@@ -1046,9 +1046,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteControl AWS API Documentation
     #
-    # @overload delete_control(params = {})
+    # @overload delete_control(**params)
     # @param [Hash] params ({})
-    def delete_control(params = {}, options = {})
+    def delete_control(params = {}, **options)
       req = build_request(:delete_control, params)
       req.send_request(options)
     end
@@ -1065,9 +1065,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterAccount AWS API Documentation
     #
-    # @overload deregister_account(params = {})
+    # @overload deregister_account(**params)
     # @param [Hash] params ({})
-    def deregister_account(params = {}, options = {})
+    def deregister_account(params = {}, **options)
       req = build_request(:deregister_account, params)
       req.send_request(options)
     end
@@ -1088,9 +1088,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterOrganizationAdminAccount AWS API Documentation
     #
-    # @overload deregister_organization_admin_account(params = {})
+    # @overload deregister_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def deregister_organization_admin_account(params = {}, options = {})
+    def deregister_organization_admin_account(params = {}, **options)
       req = build_request(:deregister_organization_admin_account, params)
       req.send_request(options)
     end
@@ -1115,9 +1115,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DisassociateAssessmentReportEvidenceFolder AWS API Documentation
     #
-    # @overload disassociate_assessment_report_evidence_folder(params = {})
+    # @overload disassociate_assessment_report_evidence_folder(**params)
     # @param [Hash] params ({})
-    def disassociate_assessment_report_evidence_folder(params = {}, options = {})
+    def disassociate_assessment_report_evidence_folder(params = {}, **options)
       req = build_request(:disassociate_assessment_report_evidence_folder, params)
       req.send_request(options)
     end
@@ -1134,9 +1134,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAccountStatus AWS API Documentation
     #
-    # @overload get_account_status(params = {})
+    # @overload get_account_status(**params)
     # @param [Hash] params ({})
-    def get_account_status(params = {}, options = {})
+    def get_account_status(params = {}, **options)
       req = build_request(:get_account_status, params)
       req.send_request(options)
     end
@@ -1238,9 +1238,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessment AWS API Documentation
     #
-    # @overload get_assessment(params = {})
+    # @overload get_assessment(**params)
     # @param [Hash] params ({})
-    def get_assessment(params = {}, options = {})
+    def get_assessment(params = {}, **options)
       req = build_request(:get_assessment, params)
       req.send_request(options)
     end
@@ -1306,9 +1306,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentFramework AWS API Documentation
     #
-    # @overload get_assessment_framework(params = {})
+    # @overload get_assessment_framework(**params)
     # @param [Hash] params ({})
-    def get_assessment_framework(params = {}, options = {})
+    def get_assessment_framework(params = {}, **options)
       req = build_request(:get_assessment_framework, params)
       req.send_request(options)
     end
@@ -1339,9 +1339,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentReportUrl AWS API Documentation
     #
-    # @overload get_assessment_report_url(params = {})
+    # @overload get_assessment_report_url(**params)
     # @param [Hash] params ({})
-    def get_assessment_report_url(params = {}, options = {})
+    def get_assessment_report_url(params = {}, **options)
       req = build_request(:get_assessment_report_url, params)
       req.send_request(options)
     end
@@ -1393,9 +1393,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetChangeLogs AWS API Documentation
     #
-    # @overload get_change_logs(params = {})
+    # @overload get_change_logs(**params)
     # @param [Hash] params ({})
-    def get_change_logs(params = {}, options = {})
+    def get_change_logs(params = {}, **options)
       req = build_request(:get_change_logs, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetControl AWS API Documentation
     #
-    # @overload get_control(params = {})
+    # @overload get_control(**params)
     # @param [Hash] params ({})
-    def get_control(params = {}, options = {})
+    def get_control(params = {}, **options)
       req = build_request(:get_control, params)
       req.send_request(options)
     end
@@ -1489,9 +1489,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetDelegations AWS API Documentation
     #
-    # @overload get_delegations(params = {})
+    # @overload get_delegations(**params)
     # @param [Hash] params ({})
-    def get_delegations(params = {}, options = {})
+    def get_delegations(params = {}, **options)
       req = build_request(:get_delegations, params)
       req.send_request(options)
     end
@@ -1546,9 +1546,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidence AWS API Documentation
     #
-    # @overload get_evidence(params = {})
+    # @overload get_evidence(**params)
     # @param [Hash] params ({})
-    def get_evidence(params = {}, options = {})
+    def get_evidence(params = {}, **options)
       req = build_request(:get_evidence, params)
       req.send_request(options)
     end
@@ -1614,9 +1614,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceByEvidenceFolder AWS API Documentation
     #
-    # @overload get_evidence_by_evidence_folder(params = {})
+    # @overload get_evidence_by_evidence_folder(**params)
     # @param [Hash] params ({})
-    def get_evidence_by_evidence_folder(params = {}, options = {})
+    def get_evidence_by_evidence_folder(params = {}, **options)
       req = build_request(:get_evidence_by_evidence_folder, params)
       req.send_request(options)
     end
@@ -1668,9 +1668,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFolder AWS API Documentation
     #
-    # @overload get_evidence_folder(params = {})
+    # @overload get_evidence_folder(**params)
     # @param [Hash] params ({})
-    def get_evidence_folder(params = {}, options = {})
+    def get_evidence_folder(params = {}, **options)
       req = build_request(:get_evidence_folder, params)
       req.send_request(options)
     end
@@ -1728,9 +1728,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessment AWS API Documentation
     #
-    # @overload get_evidence_folders_by_assessment(params = {})
+    # @overload get_evidence_folders_by_assessment(**params)
     # @param [Hash] params ({})
-    def get_evidence_folders_by_assessment(params = {}, options = {})
+    def get_evidence_folders_by_assessment(params = {}, **options)
       req = build_request(:get_evidence_folders_by_assessment, params)
       req.send_request(options)
     end
@@ -1796,9 +1796,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessmentControl AWS API Documentation
     #
-    # @overload get_evidence_folders_by_assessment_control(params = {})
+    # @overload get_evidence_folders_by_assessment_control(**params)
     # @param [Hash] params ({})
-    def get_evidence_folders_by_assessment_control(params = {}, options = {})
+    def get_evidence_folders_by_assessment_control(params = {}, **options)
       req = build_request(:get_evidence_folders_by_assessment_control, params)
       req.send_request(options)
     end
@@ -1818,9 +1818,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetOrganizationAdminAccount AWS API Documentation
     #
-    # @overload get_organization_admin_account(params = {})
+    # @overload get_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def get_organization_admin_account(params = {}, options = {})
+    def get_organization_admin_account(params = {}, **options)
       req = build_request(:get_organization_admin_account, params)
       req.send_request(options)
     end
@@ -1842,9 +1842,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetServicesInScope AWS API Documentation
     #
-    # @overload get_services_in_scope(params = {})
+    # @overload get_services_in_scope(**params)
     # @param [Hash] params ({})
-    def get_services_in_scope(params = {}, options = {})
+    def get_services_in_scope(params = {}, **options)
       req = build_request(:get_services_in_scope, params)
       req.send_request(options)
     end
@@ -1877,9 +1877,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetSettings AWS API Documentation
     #
-    # @overload get_settings(params = {})
+    # @overload get_settings(**params)
     # @param [Hash] params ({})
-    def get_settings(params = {}, options = {})
+    def get_settings(params = {}, **options)
       req = build_request(:get_settings, params)
       req.send_request(options)
     end
@@ -1929,9 +1929,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworks AWS API Documentation
     #
-    # @overload list_assessment_frameworks(params = {})
+    # @overload list_assessment_frameworks(**params)
     # @param [Hash] params ({})
-    def list_assessment_frameworks(params = {}, options = {})
+    def list_assessment_frameworks(params = {}, **options)
       req = build_request(:list_assessment_frameworks, params)
       req.send_request(options)
     end
@@ -1974,9 +1974,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentReports AWS API Documentation
     #
-    # @overload list_assessment_reports(params = {})
+    # @overload list_assessment_reports(**params)
     # @param [Hash] params ({})
-    def list_assessment_reports(params = {}, options = {})
+    def list_assessment_reports(params = {}, **options)
       req = build_request(:list_assessment_reports, params)
       req.send_request(options)
     end
@@ -2032,9 +2032,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessments AWS API Documentation
     #
-    # @overload list_assessments(params = {})
+    # @overload list_assessments(**params)
     # @param [Hash] params ({})
-    def list_assessments(params = {}, options = {})
+    def list_assessments(params = {}, **options)
       req = build_request(:list_assessments, params)
       req.send_request(options)
     end
@@ -2079,9 +2079,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControls AWS API Documentation
     #
-    # @overload list_controls(params = {})
+    # @overload list_controls(**params)
     # @param [Hash] params ({})
-    def list_controls(params = {}, options = {})
+    def list_controls(params = {}, **options)
       req = build_request(:list_controls, params)
       req.send_request(options)
     end
@@ -2122,9 +2122,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListKeywordsForDataSource AWS API Documentation
     #
-    # @overload list_keywords_for_data_source(params = {})
+    # @overload list_keywords_for_data_source(**params)
     # @param [Hash] params ({})
-    def list_keywords_for_data_source(params = {}, options = {})
+    def list_keywords_for_data_source(params = {}, **options)
       req = build_request(:list_keywords_for_data_source, params)
       req.send_request(options)
     end
@@ -2167,9 +2167,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListNotifications AWS API Documentation
     #
-    # @overload list_notifications(params = {})
+    # @overload list_notifications(**params)
     # @param [Hash] params ({})
-    def list_notifications(params = {}, options = {})
+    def list_notifications(params = {}, **options)
       req = build_request(:list_notifications, params)
       req.send_request(options)
     end
@@ -2197,9 +2197,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2229,9 +2229,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterAccount AWS API Documentation
     #
-    # @overload register_account(params = {})
+    # @overload register_account(**params)
     # @param [Hash] params ({})
-    def register_account(params = {}, options = {})
+    def register_account(params = {}, **options)
       req = build_request(:register_account, params)
       req.send_request(options)
     end
@@ -2260,9 +2260,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterOrganizationAdminAccount AWS API Documentation
     #
-    # @overload register_organization_admin_account(params = {})
+    # @overload register_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def register_organization_admin_account(params = {}, options = {})
+    def register_organization_admin_account(params = {}, **options)
       req = build_request(:register_organization_admin_account, params)
       req.send_request(options)
     end
@@ -2288,9 +2288,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2314,9 +2314,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2460,9 +2460,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessment AWS API Documentation
     #
-    # @overload update_assessment(params = {})
+    # @overload update_assessment(**params)
     # @param [Hash] params ({})
-    def update_assessment(params = {}, options = {})
+    def update_assessment(params = {}, **options)
       req = build_request(:update_assessment, params)
       req.send_request(options)
     end
@@ -2516,9 +2516,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControl AWS API Documentation
     #
-    # @overload update_assessment_control(params = {})
+    # @overload update_assessment_control(**params)
     # @param [Hash] params ({})
-    def update_assessment_control(params = {}, options = {})
+    def update_assessment_control(params = {}, **options)
       req = build_request(:update_assessment_control, params)
       req.send_request(options)
     end
@@ -2590,9 +2590,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControlSetStatus AWS API Documentation
     #
-    # @overload update_assessment_control_set_status(params = {})
+    # @overload update_assessment_control_set_status(**params)
     # @param [Hash] params ({})
-    def update_assessment_control_set_status(params = {}, options = {})
+    def update_assessment_control_set_status(params = {}, **options)
       req = build_request(:update_assessment_control_set_status, params)
       req.send_request(options)
     end
@@ -2685,9 +2685,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFramework AWS API Documentation
     #
-    # @overload update_assessment_framework(params = {})
+    # @overload update_assessment_framework(**params)
     # @param [Hash] params ({})
-    def update_assessment_framework(params = {}, options = {})
+    def update_assessment_framework(params = {}, **options)
       req = build_request(:update_assessment_framework, params)
       req.send_request(options)
     end
@@ -2793,9 +2793,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentStatus AWS API Documentation
     #
-    # @overload update_assessment_status(params = {})
+    # @overload update_assessment_status(**params)
     # @param [Hash] params ({})
-    def update_assessment_status(params = {}, options = {})
+    def update_assessment_status(params = {}, **options)
       req = build_request(:update_assessment_status, params)
       req.send_request(options)
     end
@@ -2885,9 +2885,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateControl AWS API Documentation
     #
-    # @overload update_control(params = {})
+    # @overload update_control(**params)
     # @param [Hash] params ({})
-    def update_control(params = {}, options = {})
+    def update_control(params = {}, **options)
       req = build_request(:update_control, params)
       req.send_request(options)
     end
@@ -2941,9 +2941,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateSettings AWS API Documentation
     #
-    # @overload update_settings(params = {})
+    # @overload update_settings(**params)
     # @param [Hash] params ({})
-    def update_settings(params = {}, options = {})
+    def update_settings(params = {}, **options)
       req = build_request(:update_settings, params)
       req.send_request(options)
     end
@@ -2979,9 +2979,9 @@ module Aws::AuditManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ValidateAssessmentReportIntegrity AWS API Documentation
     #
-    # @overload validate_assessment_report_integrity(params = {})
+    # @overload validate_assessment_report_integrity(**params)
     # @param [Hash] params ({})
-    def validate_assessment_report_integrity(params = {}, options = {})
+    def validate_assessment_report_integrity(params = {}, **options)
       req = build_request(:validate_assessment_report_integrity, params)
       req.send_request(options)
     end
@@ -2990,7 +2990,7 @@ module Aws::AuditManager
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2998,15 +2998,15 @@ module Aws::AuditManager
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-auditmanager'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-auditmanager"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,29 +7,29 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_xml.rb'
-require 'aws-sdk-route53/plugins/id_fix.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_xml.rb"
+require "aws-sdk-route53/plugins/id_fix.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:route53)
 
@@ -282,7 +282,7 @@ module Aws::Route53
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -406,9 +406,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/AssociateVPCWithHostedZone AWS API Documentation
     #
-    # @overload associate_vpc_with_hosted_zone(params = {})
+    # @overload associate_vpc_with_hosted_zone(**params)
     # @param [Hash] params ({})
-    def associate_vpc_with_hosted_zone(params = {}, options = {})
+    def associate_vpc_with_hosted_zone(params = {}, **options)
       req = build_request(:associate_vpc_with_hosted_zone, params)
       req.send_request(options)
     end
@@ -1157,9 +1157,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ChangeResourceRecordSets AWS API Documentation
     #
-    # @overload change_resource_record_sets(params = {})
+    # @overload change_resource_record_sets(**params)
     # @param [Hash] params ({})
-    def change_resource_record_sets(params = {}, options = {})
+    def change_resource_record_sets(params = {}, **options)
       req = build_request(:change_resource_record_sets, params)
       req.send_request(options)
     end
@@ -1242,9 +1242,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ChangeTagsForResource AWS API Documentation
     #
-    # @overload change_tags_for_resource(params = {})
+    # @overload change_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def change_tags_for_resource(params = {}, options = {})
+    def change_tags_for_resource(params = {}, **options)
       req = build_request(:change_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1390,9 +1390,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateHealthCheck AWS API Documentation
     #
-    # @overload create_health_check(params = {})
+    # @overload create_health_check(**params)
     # @param [Hash] params ({})
-    def create_health_check(params = {}, options = {})
+    def create_health_check(params = {}, **options)
       req = build_request(:create_health_check, params)
       req.send_request(options)
     end
@@ -1546,9 +1546,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateHostedZone AWS API Documentation
     #
-    # @overload create_hosted_zone(params = {})
+    # @overload create_hosted_zone(**params)
     # @param [Hash] params ({})
-    def create_hosted_zone(params = {}, options = {})
+    def create_hosted_zone(params = {}, **options)
       req = build_request(:create_hosted_zone, params)
       req.send_request(options)
     end
@@ -1720,9 +1720,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateQueryLoggingConfig AWS API Documentation
     #
-    # @overload create_query_logging_config(params = {})
+    # @overload create_query_logging_config(**params)
     # @param [Hash] params ({})
-    def create_query_logging_config(params = {}, options = {})
+    def create_query_logging_config(params = {}, **options)
       req = build_request(:create_query_logging_config, params)
       req.send_request(options)
     end
@@ -1818,9 +1818,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateReusableDelegationSet AWS API Documentation
     #
-    # @overload create_reusable_delegation_set(params = {})
+    # @overload create_reusable_delegation_set(**params)
     # @param [Hash] params ({})
-    def create_reusable_delegation_set(params = {}, options = {})
+    def create_reusable_delegation_set(params = {}, **options)
       req = build_request(:create_reusable_delegation_set, params)
       req.send_request(options)
     end
@@ -1869,9 +1869,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateTrafficPolicy AWS API Documentation
     #
-    # @overload create_traffic_policy(params = {})
+    # @overload create_traffic_policy(**params)
     # @param [Hash] params ({})
-    def create_traffic_policy(params = {}, options = {})
+    def create_traffic_policy(params = {}, **options)
       req = build_request(:create_traffic_policy, params)
       req.send_request(options)
     end
@@ -1937,9 +1937,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateTrafficPolicyInstance AWS API Documentation
     #
-    # @overload create_traffic_policy_instance(params = {})
+    # @overload create_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def create_traffic_policy_instance(params = {}, options = {})
+    def create_traffic_policy_instance(params = {}, **options)
       req = build_request(:create_traffic_policy_instance, params)
       req.send_request(options)
     end
@@ -1996,9 +1996,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateTrafficPolicyVersion AWS API Documentation
     #
-    # @overload create_traffic_policy_version(params = {})
+    # @overload create_traffic_policy_version(**params)
     # @param [Hash] params ({})
-    def create_traffic_policy_version(params = {}, options = {})
+    def create_traffic_policy_version(params = {}, **options)
       req = build_request(:create_traffic_policy_version, params)
       req.send_request(options)
     end
@@ -2048,9 +2048,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateVPCAssociationAuthorization AWS API Documentation
     #
-    # @overload create_vpc_association_authorization(params = {})
+    # @overload create_vpc_association_authorization(**params)
     # @param [Hash] params ({})
-    def create_vpc_association_authorization(params = {}, options = {})
+    def create_vpc_association_authorization(params = {}, **options)
       req = build_request(:create_vpc_association_authorization, params)
       req.send_request(options)
     end
@@ -2090,9 +2090,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteHealthCheck AWS API Documentation
     #
-    # @overload delete_health_check(params = {})
+    # @overload delete_health_check(**params)
     # @param [Hash] params ({})
-    def delete_health_check(params = {}, options = {})
+    def delete_health_check(params = {}, **options)
       req = build_request(:delete_health_check, params)
       req.send_request(options)
     end
@@ -2175,9 +2175,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteHostedZone AWS API Documentation
     #
-    # @overload delete_hosted_zone(params = {})
+    # @overload delete_hosted_zone(**params)
     # @param [Hash] params ({})
-    def delete_hosted_zone(params = {}, options = {})
+    def delete_hosted_zone(params = {}, **options)
       req = build_request(:delete_hosted_zone, params)
       req.send_request(options)
     end
@@ -2207,9 +2207,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteQueryLoggingConfig AWS API Documentation
     #
-    # @overload delete_query_logging_config(params = {})
+    # @overload delete_query_logging_config(**params)
     # @param [Hash] params ({})
-    def delete_query_logging_config(params = {}, options = {})
+    def delete_query_logging_config(params = {}, **options)
       req = build_request(:delete_query_logging_config, params)
       req.send_request(options)
     end
@@ -2240,9 +2240,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteReusableDelegationSet AWS API Documentation
     #
-    # @overload delete_reusable_delegation_set(params = {})
+    # @overload delete_reusable_delegation_set(**params)
     # @param [Hash] params ({})
-    def delete_reusable_delegation_set(params = {}, options = {})
+    def delete_reusable_delegation_set(params = {}, **options)
       req = build_request(:delete_reusable_delegation_set, params)
       req.send_request(options)
     end
@@ -2284,9 +2284,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteTrafficPolicy AWS API Documentation
     #
-    # @overload delete_traffic_policy(params = {})
+    # @overload delete_traffic_policy(**params)
     # @param [Hash] params ({})
-    def delete_traffic_policy(params = {}, options = {})
+    def delete_traffic_policy(params = {}, **options)
       req = build_request(:delete_traffic_policy, params)
       req.send_request(options)
     end
@@ -2316,9 +2316,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteTrafficPolicyInstance AWS API Documentation
     #
-    # @overload delete_traffic_policy_instance(params = {})
+    # @overload delete_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def delete_traffic_policy_instance(params = {}, options = {})
+    def delete_traffic_policy_instance(params = {}, **options)
       req = build_request(:delete_traffic_policy_instance, params)
       req.send_request(options)
     end
@@ -2360,9 +2360,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteVPCAssociationAuthorization AWS API Documentation
     #
-    # @overload delete_vpc_association_authorization(params = {})
+    # @overload delete_vpc_association_authorization(**params)
     # @param [Hash] params ({})
-    def delete_vpc_association_authorization(params = {}, options = {})
+    def delete_vpc_association_authorization(params = {}, **options)
       req = build_request(:delete_vpc_association_authorization, params)
       req.send_request(options)
     end
@@ -2430,9 +2430,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisassociateVPCFromHostedZone AWS API Documentation
     #
-    # @overload disassociate_vpc_from_hosted_zone(params = {})
+    # @overload disassociate_vpc_from_hosted_zone(**params)
     # @param [Hash] params ({})
-    def disassociate_vpc_from_hosted_zone(params = {}, options = {})
+    def disassociate_vpc_from_hosted_zone(params = {}, **options)
       req = build_request(:disassociate_vpc_from_hosted_zone, params)
       req.send_request(options)
     end
@@ -2496,9 +2496,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetAccountLimit AWS API Documentation
     #
-    # @overload get_account_limit(params = {})
+    # @overload get_account_limit(**params)
     # @param [Hash] params ({})
-    def get_account_limit(params = {}, options = {})
+    def get_account_limit(params = {}, **options)
       req = build_request(:get_account_limit, params)
       req.send_request(options)
     end
@@ -2542,9 +2542,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetChange AWS API Documentation
     #
-    # @overload get_change(params = {})
+    # @overload get_change(**params)
     # @param [Hash] params ({})
-    def get_change(params = {}, options = {})
+    def get_change(params = {}, **options)
       req = build_request(:get_change, params)
       req.send_request(options)
     end
@@ -2569,9 +2569,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetCheckerIpRanges AWS API Documentation
     #
-    # @overload get_checker_ip_ranges(params = {})
+    # @overload get_checker_ip_ranges(**params)
     # @param [Hash] params ({})
-    def get_checker_ip_ranges(params = {}, options = {})
+    def get_checker_ip_ranges(params = {}, **options)
       req = build_request(:get_checker_ip_ranges, params)
       req.send_request(options)
     end
@@ -2659,9 +2659,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetGeoLocation AWS API Documentation
     #
-    # @overload get_geo_location(params = {})
+    # @overload get_geo_location(**params)
     # @param [Hash] params ({})
-    def get_geo_location(params = {}, options = {})
+    def get_geo_location(params = {}, **options)
       req = build_request(:get_geo_location, params)
       req.send_request(options)
     end
@@ -2724,9 +2724,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheck AWS API Documentation
     #
-    # @overload get_health_check(params = {})
+    # @overload get_health_check(**params)
     # @param [Hash] params ({})
-    def get_health_check(params = {}, options = {})
+    def get_health_check(params = {}, **options)
       req = build_request(:get_health_check, params)
       req.send_request(options)
     end
@@ -2744,9 +2744,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckCount AWS API Documentation
     #
-    # @overload get_health_check_count(params = {})
+    # @overload get_health_check_count(**params)
     # @param [Hash] params ({})
-    def get_health_check_count(params = {}, options = {})
+    def get_health_check_count(params = {}, **options)
       req = build_request(:get_health_check_count, params)
       req.send_request(options)
     end
@@ -2785,9 +2785,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckLastFailureReason AWS API Documentation
     #
-    # @overload get_health_check_last_failure_reason(params = {})
+    # @overload get_health_check_last_failure_reason(**params)
     # @param [Hash] params ({})
-    def get_health_check_last_failure_reason(params = {}, options = {})
+    def get_health_check_last_failure_reason(params = {}, **options)
       req = build_request(:get_health_check_last_failure_reason, params)
       req.send_request(options)
     end
@@ -2826,9 +2826,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckStatus AWS API Documentation
     #
-    # @overload get_health_check_status(params = {})
+    # @overload get_health_check_status(**params)
     # @param [Hash] params ({})
-    def get_health_check_status(params = {}, options = {})
+    def get_health_check_status(params = {}, **options)
       req = build_request(:get_health_check_status, params)
       req.send_request(options)
     end
@@ -2901,9 +2901,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZone AWS API Documentation
     #
-    # @overload get_hosted_zone(params = {})
+    # @overload get_hosted_zone(**params)
     # @param [Hash] params ({})
-    def get_hosted_zone(params = {}, options = {})
+    def get_hosted_zone(params = {}, **options)
       req = build_request(:get_hosted_zone, params)
       req.send_request(options)
     end
@@ -2921,9 +2921,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZoneCount AWS API Documentation
     #
-    # @overload get_hosted_zone_count(params = {})
+    # @overload get_hosted_zone_count(**params)
     # @param [Hash] params ({})
-    def get_hosted_zone_count(params = {}, options = {})
+    def get_hosted_zone_count(params = {}, **options)
       req = build_request(:get_hosted_zone_count, params)
       req.send_request(options)
     end
@@ -2971,9 +2971,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZoneLimit AWS API Documentation
     #
-    # @overload get_hosted_zone_limit(params = {})
+    # @overload get_hosted_zone_limit(**params)
     # @param [Hash] params ({})
-    def get_hosted_zone_limit(params = {}, options = {})
+    def get_hosted_zone_limit(params = {}, **options)
       req = build_request(:get_hosted_zone_limit, params)
       req.send_request(options)
     end
@@ -3011,9 +3011,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetQueryLoggingConfig AWS API Documentation
     #
-    # @overload get_query_logging_config(params = {})
+    # @overload get_query_logging_config(**params)
     # @param [Hash] params ({})
-    def get_query_logging_config(params = {}, options = {})
+    def get_query_logging_config(params = {}, **options)
       req = build_request(:get_query_logging_config, params)
       req.send_request(options)
     end
@@ -3045,9 +3045,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetReusableDelegationSet AWS API Documentation
     #
-    # @overload get_reusable_delegation_set(params = {})
+    # @overload get_reusable_delegation_set(**params)
     # @param [Hash] params ({})
-    def get_reusable_delegation_set(params = {}, options = {})
+    def get_reusable_delegation_set(params = {}, **options)
       req = build_request(:get_reusable_delegation_set, params)
       req.send_request(options)
     end
@@ -3091,9 +3091,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetReusableDelegationSetLimit AWS API Documentation
     #
-    # @overload get_reusable_delegation_set_limit(params = {})
+    # @overload get_reusable_delegation_set_limit(**params)
     # @param [Hash] params ({})
-    def get_reusable_delegation_set_limit(params = {}, options = {})
+    def get_reusable_delegation_set_limit(params = {}, **options)
       req = build_request(:get_reusable_delegation_set_limit, params)
       req.send_request(options)
     end
@@ -3136,9 +3136,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetTrafficPolicy AWS API Documentation
     #
-    # @overload get_traffic_policy(params = {})
+    # @overload get_traffic_policy(**params)
     # @param [Hash] params ({})
-    def get_traffic_policy(params = {}, options = {})
+    def get_traffic_policy(params = {}, **options)
       req = build_request(:get_traffic_policy, params)
       req.send_request(options)
     end
@@ -3186,9 +3186,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetTrafficPolicyInstance AWS API Documentation
     #
-    # @overload get_traffic_policy_instance(params = {})
+    # @overload get_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def get_traffic_policy_instance(params = {}, options = {})
+    def get_traffic_policy_instance(params = {}, **options)
       req = build_request(:get_traffic_policy_instance, params)
       req.send_request(options)
     end
@@ -3206,9 +3206,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetTrafficPolicyInstanceCount AWS API Documentation
     #
-    # @overload get_traffic_policy_instance_count(params = {})
+    # @overload get_traffic_policy_instance_count(**params)
     # @param [Hash] params ({})
-    def get_traffic_policy_instance_count(params = {}, options = {})
+    def get_traffic_policy_instance_count(params = {}, **options)
       req = build_request(:get_traffic_policy_instance_count, params)
       req.send_request(options)
     end
@@ -3299,9 +3299,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListGeoLocations AWS API Documentation
     #
-    # @overload list_geo_locations(params = {})
+    # @overload list_geo_locations(**params)
     # @param [Hash] params ({})
-    def list_geo_locations(params = {}, options = {})
+    def list_geo_locations(params = {}, **options)
       req = build_request(:list_geo_locations, params)
       req.send_request(options)
     end
@@ -3389,9 +3389,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHealthChecks AWS API Documentation
     #
-    # @overload list_health_checks(params = {})
+    # @overload list_health_checks(**params)
     # @param [Hash] params ({})
-    def list_health_checks(params = {}, options = {})
+    def list_health_checks(params = {}, **options)
       req = build_request(:list_health_checks, params)
       req.send_request(options)
     end
@@ -3464,9 +3464,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZones AWS API Documentation
     #
-    # @overload list_hosted_zones(params = {})
+    # @overload list_hosted_zones(**params)
     # @param [Hash] params ({})
-    def list_hosted_zones(params = {}, options = {})
+    def list_hosted_zones(params = {}, **options)
       req = build_request(:list_hosted_zones, params)
       req.send_request(options)
     end
@@ -3597,9 +3597,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByName AWS API Documentation
     #
-    # @overload list_hosted_zones_by_name(params = {})
+    # @overload list_hosted_zones_by_name(**params)
     # @param [Hash] params ({})
-    def list_hosted_zones_by_name(params = {}, options = {})
+    def list_hosted_zones_by_name(params = {}, **options)
       req = build_request(:list_hosted_zones_by_name, params)
       req.send_request(options)
     end
@@ -3671,9 +3671,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByVPC AWS API Documentation
     #
-    # @overload list_hosted_zones_by_vpc(params = {})
+    # @overload list_hosted_zones_by_vpc(**params)
     # @param [Hash] params ({})
-    def list_hosted_zones_by_vpc(params = {}, options = {})
+    def list_hosted_zones_by_vpc(params = {}, **options)
       req = build_request(:list_hosted_zones_by_vpc, params)
       req.send_request(options)
     end
@@ -3750,9 +3750,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListQueryLoggingConfigs AWS API Documentation
     #
-    # @overload list_query_logging_configs(params = {})
+    # @overload list_query_logging_configs(**params)
     # @param [Hash] params ({})
-    def list_query_logging_configs(params = {}, options = {})
+    def list_query_logging_configs(params = {}, **options)
       req = build_request(:list_query_logging_configs, params)
       req.send_request(options)
     end
@@ -3934,9 +3934,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListResourceRecordSets AWS API Documentation
     #
-    # @overload list_resource_record_sets(params = {})
+    # @overload list_resource_record_sets(**params)
     # @param [Hash] params ({})
-    def list_resource_record_sets(params = {}, options = {})
+    def list_resource_record_sets(params = {}, **options)
       req = build_request(:list_resource_record_sets, params)
       req.send_request(options)
     end
@@ -3991,9 +3991,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListReusableDelegationSets AWS API Documentation
     #
-    # @overload list_reusable_delegation_sets(params = {})
+    # @overload list_reusable_delegation_sets(**params)
     # @param [Hash] params ({})
-    def list_reusable_delegation_sets(params = {}, options = {})
+    def list_reusable_delegation_sets(params = {}, **options)
       req = build_request(:list_reusable_delegation_sets, params)
       req.send_request(options)
     end
@@ -4039,9 +4039,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4089,9 +4089,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResources AWS API Documentation
     #
-    # @overload list_tags_for_resources(params = {})
+    # @overload list_tags_for_resources(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resources(params = {}, options = {})
+    def list_tags_for_resources(params = {}, **options)
       req = build_request(:list_tags_for_resources, params)
       req.send_request(options)
     end
@@ -4154,9 +4154,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicies AWS API Documentation
     #
-    # @overload list_traffic_policies(params = {})
+    # @overload list_traffic_policies(**params)
     # @param [Hash] params ({})
-    def list_traffic_policies(params = {}, options = {})
+    def list_traffic_policies(params = {}, **options)
       req = build_request(:list_traffic_policies, params)
       req.send_request(options)
     end
@@ -4258,9 +4258,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicyInstances AWS API Documentation
     #
-    # @overload list_traffic_policy_instances(params = {})
+    # @overload list_traffic_policy_instances(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_instances(params = {}, options = {})
+    def list_traffic_policy_instances(params = {}, **options)
       req = build_request(:list_traffic_policy_instances, params)
       req.send_request(options)
     end
@@ -4354,9 +4354,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicyInstancesByHostedZone AWS API Documentation
     #
-    # @overload list_traffic_policy_instances_by_hosted_zone(params = {})
+    # @overload list_traffic_policy_instances_by_hosted_zone(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_instances_by_hosted_zone(params = {}, options = {})
+    def list_traffic_policy_instances_by_hosted_zone(params = {}, **options)
       req = build_request(:list_traffic_policy_instances_by_hosted_zone, params)
       req.send_request(options)
     end
@@ -4477,9 +4477,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicyInstancesByPolicy AWS API Documentation
     #
-    # @overload list_traffic_policy_instances_by_policy(params = {})
+    # @overload list_traffic_policy_instances_by_policy(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_instances_by_policy(params = {}, options = {})
+    def list_traffic_policy_instances_by_policy(params = {}, **options)
       req = build_request(:list_traffic_policy_instances_by_policy, params)
       req.send_request(options)
     end
@@ -4543,9 +4543,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicyVersions AWS API Documentation
     #
-    # @overload list_traffic_policy_versions(params = {})
+    # @overload list_traffic_policy_versions(**params)
     # @param [Hash] params ({})
-    def list_traffic_policy_versions(params = {}, options = {})
+    def list_traffic_policy_versions(params = {}, **options)
       req = build_request(:list_traffic_policy_versions, params)
       req.send_request(options)
     end
@@ -4597,9 +4597,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListVPCAssociationAuthorizations AWS API Documentation
     #
-    # @overload list_vpc_association_authorizations(params = {})
+    # @overload list_vpc_association_authorizations(**params)
     # @param [Hash] params ({})
-    def list_vpc_association_authorizations(params = {}, options = {})
+    def list_vpc_association_authorizations(params = {}, **options)
       req = build_request(:list_vpc_association_authorizations, params)
       req.send_request(options)
     end
@@ -4679,9 +4679,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/TestDNSAnswer AWS API Documentation
     #
-    # @overload test_dns_answer(params = {})
+    # @overload test_dns_answer(**params)
     # @param [Hash] params ({})
-    def test_dns_answer(params = {}, options = {})
+    def test_dns_answer(params = {}, **options)
       req = build_request(:test_dns_answer, params)
       req.send_request(options)
     end
@@ -5089,9 +5089,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/UpdateHealthCheck AWS API Documentation
     #
-    # @overload update_health_check(params = {})
+    # @overload update_health_check(**params)
     # @param [Hash] params ({})
-    def update_health_check(params = {}, options = {})
+    def update_health_check(params = {}, **options)
       req = build_request(:update_health_check, params)
       req.send_request(options)
     end
@@ -5130,9 +5130,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/UpdateHostedZoneComment AWS API Documentation
     #
-    # @overload update_hosted_zone_comment(params = {})
+    # @overload update_hosted_zone_comment(**params)
     # @param [Hash] params ({})
-    def update_hosted_zone_comment(params = {}, options = {})
+    def update_hosted_zone_comment(params = {}, **options)
       req = build_request(:update_hosted_zone_comment, params)
       req.send_request(options)
     end
@@ -5173,9 +5173,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/UpdateTrafficPolicyComment AWS API Documentation
     #
-    # @overload update_traffic_policy_comment(params = {})
+    # @overload update_traffic_policy_comment(**params)
     # @param [Hash] params ({})
-    def update_traffic_policy_comment(params = {}, options = {})
+    def update_traffic_policy_comment(params = {}, **options)
       req = build_request(:update_traffic_policy_comment, params)
       req.send_request(options)
     end
@@ -5244,9 +5244,9 @@ module Aws::Route53
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/UpdateTrafficPolicyInstance AWS API Documentation
     #
-    # @overload update_traffic_policy_instance(params = {})
+    # @overload update_traffic_policy_instance(**params)
     # @param [Hash] params ({})
-    def update_traffic_policy_instance(params = {}, options = {})
+    def update_traffic_policy_instance(params = {}, **options)
       req = build_request(:update_traffic_policy_instance, params)
       req.send_request(options)
     end
@@ -5255,7 +5255,7 @@ module Aws::Route53
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5263,8 +5263,8 @@ module Aws::Route53
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-route53'
-      context[:gem_version] = '1.44.0'
+      context[:gem_name] = "aws-sdk-route53"
+      context[:gem_version] = "1.44.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -5356,7 +5356,7 @@ module Aws::Route53
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -5372,7 +5372,7 @@ module Aws::Route53
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

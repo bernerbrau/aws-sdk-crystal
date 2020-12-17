@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-alexaforbusiness/types'
-require_relative 'aws-sdk-alexaforbusiness/client_api'
-require_relative 'aws-sdk-alexaforbusiness/client'
-require_relative 'aws-sdk-alexaforbusiness/errors'
-require_relative 'aws-sdk-alexaforbusiness/resource'
-require_relative 'aws-sdk-alexaforbusiness/customizations'
+require_relative "aws-sdk-alexaforbusiness/types"
+require_relative "aws-sdk-alexaforbusiness/client_api"
+require_relative "aws-sdk-alexaforbusiness/client"
+require_relative "aws-sdk-alexaforbusiness/errors"
+require_relative "aws-sdk-alexaforbusiness/resource"
+require_relative "aws-sdk-alexaforbusiness/customizations"
 
 # This module provides support for Alexa For Business. This module is available in the
 # `aws-sdk-alexaforbusiness` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-alexaforbusiness/customizations'
 # @!group service
 module Aws::AlexaForBusiness
 
-  GEM_VERSION = '1.43.0'
+  GEM_VERSION = "1.43.0"
 
 end

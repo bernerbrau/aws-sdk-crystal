@@ -13,10 +13,10 @@ module Aws::SNS
 
     extend Aws::Deprecations
 
-    # @overload def initialize(arn, options = {})
+    # @overload def initialize(arn, **options)
     #   @param [String] arn
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :arn
     #   @option options [Client] :client
     def initialize(*args)

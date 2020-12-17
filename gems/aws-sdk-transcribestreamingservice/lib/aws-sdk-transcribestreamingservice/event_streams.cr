@@ -19,7 +19,7 @@ module Aws::TranscribeStreamingService
       #   An audio blob that contains the next part of the audio that you want
       #   to transcribe.
       #
-      def signal_audio_event_event(params = {})
+      def signal_audio_event_event(**params)
         @event_emitter.emit(:audio_event, params)
       end
 
@@ -43,7 +43,7 @@ module Aws::TranscribeStreamingService
       #   An audio blob that contains the next part of the audio that you want
       #   to transcribe.
       #
-      def signal_audio_event_event(params = {})
+      def signal_audio_event_event(**params)
         @event_emitter.emit(:audio_event, params)
       end
 

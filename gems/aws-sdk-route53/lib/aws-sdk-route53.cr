@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-route53/types'
-require_relative 'aws-sdk-route53/client_api'
-require_relative 'aws-sdk-route53/client'
-require_relative 'aws-sdk-route53/errors'
-require_relative 'aws-sdk-route53/waiters'
-require_relative 'aws-sdk-route53/resource'
-require_relative 'aws-sdk-route53/customizations'
+require_relative "aws-sdk-route53/types"
+require_relative "aws-sdk-route53/client_api"
+require_relative "aws-sdk-route53/client"
+require_relative "aws-sdk-route53/errors"
+require_relative "aws-sdk-route53/waiters"
+require_relative "aws-sdk-route53/resource"
+require_relative "aws-sdk-route53/customizations"
 
 # This module provides support for Amazon Route 53. This module is available in the
 # `aws-sdk-route53` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-route53/customizations'
 # @!group service
 module Aws::Route53
 
-  GEM_VERSION = '1.44.0'
+  GEM_VERSION = "1.44.0"
 
 end

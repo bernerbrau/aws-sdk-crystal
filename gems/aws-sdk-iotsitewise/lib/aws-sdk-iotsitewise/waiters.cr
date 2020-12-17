@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::IoTSiteWise
   # Waiters are utility methods that poll for a particular state to occur
@@ -113,7 +113,7 @@ module Aws::IoTSiteWise
 
       # @option (see Client#describe_asset)
       # @return (see Client#describe_asset)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -157,7 +157,7 @@ module Aws::IoTSiteWise
 
       # @option (see Client#describe_asset_model)
       # @return (see Client#describe_asset_model)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -192,7 +192,7 @@ module Aws::IoTSiteWise
 
       # @option (see Client#describe_asset_model)
       # @return (see Client#describe_asset_model)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -227,7 +227,7 @@ module Aws::IoTSiteWise
 
       # @option (see Client#describe_asset)
       # @return (see Client#describe_asset)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -263,7 +263,7 @@ module Aws::IoTSiteWise
 
       # @option (see Client#describe_portal)
       # @return (see Client#describe_portal)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -298,7 +298,7 @@ module Aws::IoTSiteWise
 
       # @option (see Client#describe_portal)
       # @return (see Client#describe_portal)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

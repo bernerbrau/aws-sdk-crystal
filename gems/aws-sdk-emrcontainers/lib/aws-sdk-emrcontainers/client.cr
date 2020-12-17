@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:emrcontainers)
 
@@ -280,7 +280,7 @@ module Aws::EMRContainers
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -356,9 +356,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CancelJobRun AWS API Documentation
     #
-    # @overload cancel_job_run(params = {})
+    # @overload cancel_job_run(**params)
     # @param [Hash] params ({})
-    def cancel_job_run(params = {}, options = {})
+    def cancel_job_run(params = {}, **options)
       req = build_request(:cancel_job_run, params)
       req.send_request(options)
     end
@@ -452,9 +452,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CreateManagedEndpoint AWS API Documentation
     #
-    # @overload create_managed_endpoint(params = {})
+    # @overload create_managed_endpoint(**params)
     # @param [Hash] params ({})
-    def create_managed_endpoint(params = {}, options = {})
+    def create_managed_endpoint(params = {}, **options)
       req = build_request(:create_managed_endpoint, params)
       req.send_request(options)
     end
@@ -514,9 +514,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CreateVirtualCluster AWS API Documentation
     #
-    # @overload create_virtual_cluster(params = {})
+    # @overload create_virtual_cluster(**params)
     # @param [Hash] params ({})
-    def create_virtual_cluster(params = {}, options = {})
+    def create_virtual_cluster(params = {}, **options)
       req = build_request(:create_virtual_cluster, params)
       req.send_request(options)
     end
@@ -550,9 +550,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DeleteManagedEndpoint AWS API Documentation
     #
-    # @overload delete_managed_endpoint(params = {})
+    # @overload delete_managed_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_managed_endpoint(params = {}, options = {})
+    def delete_managed_endpoint(params = {}, **options)
       req = build_request(:delete_managed_endpoint, params)
       req.send_request(options)
     end
@@ -583,9 +583,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DeleteVirtualCluster AWS API Documentation
     #
-    # @overload delete_virtual_cluster(params = {})
+    # @overload delete_virtual_cluster(**params)
     # @param [Hash] params ({})
-    def delete_virtual_cluster(params = {}, options = {})
+    def delete_virtual_cluster(params = {}, **options)
       req = build_request(:delete_virtual_cluster, params)
       req.send_request(options)
     end
@@ -644,9 +644,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DescribeJobRun AWS API Documentation
     #
-    # @overload describe_job_run(params = {})
+    # @overload describe_job_run(**params)
     # @param [Hash] params ({})
-    def describe_job_run(params = {}, options = {})
+    def describe_job_run(params = {}, **options)
       req = build_request(:describe_job_run, params)
       req.send_request(options)
     end
@@ -702,9 +702,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DescribeManagedEndpoint AWS API Documentation
     #
-    # @overload describe_managed_endpoint(params = {})
+    # @overload describe_managed_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_managed_endpoint(params = {}, options = {})
+    def describe_managed_endpoint(params = {}, **options)
       req = build_request(:describe_managed_endpoint, params)
       req.send_request(options)
     end
@@ -745,9 +745,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DescribeVirtualCluster AWS API Documentation
     #
-    # @overload describe_virtual_cluster(params = {})
+    # @overload describe_virtual_cluster(**params)
     # @param [Hash] params ({})
-    def describe_virtual_cluster(params = {}, options = {})
+    def describe_virtual_cluster(params = {}, **options)
       req = build_request(:describe_virtual_cluster, params)
       req.send_request(options)
     end
@@ -831,9 +831,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListJobRuns AWS API Documentation
     #
-    # @overload list_job_runs(params = {})
+    # @overload list_job_runs(**params)
     # @param [Hash] params ({})
-    def list_job_runs(params = {}, options = {})
+    def list_job_runs(params = {}, **options)
       req = build_request(:list_job_runs, params)
       req.send_request(options)
     end
@@ -914,9 +914,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListManagedEndpoints AWS API Documentation
     #
-    # @overload list_managed_endpoints(params = {})
+    # @overload list_managed_endpoints(**params)
     # @param [Hash] params ({})
-    def list_managed_endpoints(params = {}, options = {})
+    def list_managed_endpoints(params = {}, **options)
       req = build_request(:list_managed_endpoints, params)
       req.send_request(options)
     end
@@ -943,9 +943,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1016,9 +1016,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListVirtualClusters AWS API Documentation
     #
-    # @overload list_virtual_clusters(params = {})
+    # @overload list_virtual_clusters(**params)
     # @param [Hash] params ({})
-    def list_virtual_clusters(params = {}, options = {})
+    def list_virtual_clusters(params = {}, **options)
       req = build_request(:list_virtual_clusters, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/StartJobRun AWS API Documentation
     #
-    # @overload start_job_run(params = {})
+    # @overload start_job_run(**params)
     # @param [Hash] params ({})
-    def start_job_run(params = {}, options = {})
+    def start_job_run(params = {}, **options)
       req = build_request(:start_job_run, params)
       req.send_request(options)
     end
@@ -1150,9 +1150,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::EMRContainers
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1187,7 +1187,7 @@ module Aws::EMRContainers
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1195,15 +1195,15 @@ module Aws::EMRContainers
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-emrcontainers'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-emrcontainers"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

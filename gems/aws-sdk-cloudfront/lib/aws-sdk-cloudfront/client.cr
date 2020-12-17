@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_xml.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_xml.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudfront)
 
@@ -280,7 +280,7 @@ module Aws::CloudFront
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -429,9 +429,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateCachePolicy2020_05_31 AWS API Documentation
     #
-    # @overload create_cache_policy(params = {})
+    # @overload create_cache_policy(**params)
     # @param [Hash] params ({})
-    def create_cache_policy(params = {}, options = {})
+    def create_cache_policy(params = {}, **options)
       req = build_request(:create_cache_policy, params)
       req.send_request(options)
     end
@@ -476,9 +476,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateCloudFrontOriginAccessIdentity2020_05_31 AWS API Documentation
     #
-    # @overload create_cloud_front_origin_access_identity(params = {})
+    # @overload create_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def create_cloud_front_origin_access_identity(params = {}, options = {})
+    def create_cloud_front_origin_access_identity(params = {}, **options)
       req = build_request(:create_cloud_front_origin_access_identity, params)
       req.send_request(options)
     end
@@ -927,9 +927,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateDistribution2020_05_31 AWS API Documentation
     #
-    # @overload create_distribution(params = {})
+    # @overload create_distribution(**params)
     # @param [Hash] params ({})
-    def create_distribution(params = {}, options = {})
+    def create_distribution(params = {}, **options)
       req = build_request(:create_distribution, params)
       req.send_request(options)
     end
@@ -1370,9 +1370,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateDistributionWithTags2020_05_31 AWS API Documentation
     #
-    # @overload create_distribution_with_tags(params = {})
+    # @overload create_distribution_with_tags(**params)
     # @param [Hash] params ({})
-    def create_distribution_with_tags(params = {}, options = {})
+    def create_distribution_with_tags(params = {}, **options)
       req = build_request(:create_distribution_with_tags, params)
       req.send_request(options)
     end
@@ -1444,9 +1444,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateFieldLevelEncryptionConfig2020_05_31 AWS API Documentation
     #
-    # @overload create_field_level_encryption_config(params = {})
+    # @overload create_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def create_field_level_encryption_config(params = {}, options = {})
+    def create_field_level_encryption_config(params = {}, **options)
       req = build_request(:create_field_level_encryption_config, params)
       req.send_request(options)
     end
@@ -1504,9 +1504,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateFieldLevelEncryptionProfile2020_05_31 AWS API Documentation
     #
-    # @overload create_field_level_encryption_profile(params = {})
+    # @overload create_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def create_field_level_encryption_profile(params = {}, options = {})
+    def create_field_level_encryption_profile(params = {}, **options)
       req = build_request(:create_field_level_encryption_profile, params)
       req.send_request(options)
     end
@@ -1550,9 +1550,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateInvalidation2020_05_31 AWS API Documentation
     #
-    # @overload create_invalidation(params = {})
+    # @overload create_invalidation(**params)
     # @param [Hash] params ({})
-    def create_invalidation(params = {}, options = {})
+    def create_invalidation(params = {}, **options)
       req = build_request(:create_invalidation, params)
       req.send_request(options)
     end
@@ -1607,9 +1607,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateKeyGroup2020_05_31 AWS API Documentation
     #
-    # @overload create_key_group(params = {})
+    # @overload create_key_group(**params)
     # @param [Hash] params ({})
-    def create_key_group(params = {}, options = {})
+    def create_key_group(params = {}, **options)
       req = build_request(:create_key_group, params)
       req.send_request(options)
     end
@@ -1653,9 +1653,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateMonitoringSubscription2020_05_31 AWS API Documentation
     #
-    # @overload create_monitoring_subscription(params = {})
+    # @overload create_monitoring_subscription(**params)
     # @param [Hash] params ({})
-    def create_monitoring_subscription(params = {}, options = {})
+    def create_monitoring_subscription(params = {}, **options)
       req = build_request(:create_monitoring_subscription, params)
       req.send_request(options)
     end
@@ -1752,9 +1752,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateOriginRequestPolicy2020_05_31 AWS API Documentation
     #
-    # @overload create_origin_request_policy(params = {})
+    # @overload create_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def create_origin_request_policy(params = {}, options = {})
+    def create_origin_request_policy(params = {}, **options)
       req = build_request(:create_origin_request_policy, params)
       req.send_request(options)
     end
@@ -1800,9 +1800,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreatePublicKey2020_05_31 AWS API Documentation
     #
-    # @overload create_public_key(params = {})
+    # @overload create_public_key(**params)
     # @param [Hash] params ({})
-    def create_public_key(params = {}, options = {})
+    def create_public_key(params = {}, **options)
       req = build_request(:create_public_key, params)
       req.send_request(options)
     end
@@ -1878,9 +1878,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateRealtimeLogConfig2020_05_31 AWS API Documentation
     #
-    # @overload create_realtime_log_config(params = {})
+    # @overload create_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def create_realtime_log_config(params = {}, options = {})
+    def create_realtime_log_config(params = {}, **options)
       req = build_request(:create_realtime_log_config, params)
       req.send_request(options)
     end
@@ -1993,9 +1993,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateStreamingDistribution2020_05_31 AWS API Documentation
     #
-    # @overload create_streaming_distribution(params = {})
+    # @overload create_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def create_streaming_distribution(params = {}, options = {})
+    def create_streaming_distribution(params = {}, **options)
       req = build_request(:create_streaming_distribution, params)
       req.send_request(options)
     end
@@ -2085,9 +2085,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateStreamingDistributionWithTags2020_05_31 AWS API Documentation
     #
-    # @overload create_streaming_distribution_with_tags(params = {})
+    # @overload create_streaming_distribution_with_tags(**params)
     # @param [Hash] params ({})
-    def create_streaming_distribution_with_tags(params = {}, options = {})
+    def create_streaming_distribution_with_tags(params = {}, **options)
       req = build_request(:create_streaming_distribution_with_tags, params)
       req.send_request(options)
     end
@@ -2122,9 +2122,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteCachePolicy2020_05_31 AWS API Documentation
     #
-    # @overload delete_cache_policy(params = {})
+    # @overload delete_cache_policy(**params)
     # @param [Hash] params ({})
-    def delete_cache_policy(params = {}, options = {})
+    def delete_cache_policy(params = {}, **options)
       req = build_request(:delete_cache_policy, params)
       req.send_request(options)
     end
@@ -2149,9 +2149,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteCloudFrontOriginAccessIdentity2020_05_31 AWS API Documentation
     #
-    # @overload delete_cloud_front_origin_access_identity(params = {})
+    # @overload delete_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def delete_cloud_front_origin_access_identity(params = {}, options = {})
+    def delete_cloud_front_origin_access_identity(params = {}, **options)
       req = build_request(:delete_cloud_front_origin_access_identity, params)
       req.send_request(options)
     end
@@ -2176,9 +2176,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteDistribution2020_05_31 AWS API Documentation
     #
-    # @overload delete_distribution(params = {})
+    # @overload delete_distribution(**params)
     # @param [Hash] params ({})
-    def delete_distribution(params = {}, options = {})
+    def delete_distribution(params = {}, **options)
       req = build_request(:delete_distribution, params)
       req.send_request(options)
     end
@@ -2203,9 +2203,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteFieldLevelEncryptionConfig2020_05_31 AWS API Documentation
     #
-    # @overload delete_field_level_encryption_config(params = {})
+    # @overload delete_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def delete_field_level_encryption_config(params = {}, options = {})
+    def delete_field_level_encryption_config(params = {}, **options)
       req = build_request(:delete_field_level_encryption_config, params)
       req.send_request(options)
     end
@@ -2230,9 +2230,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteFieldLevelEncryptionProfile2020_05_31 AWS API Documentation
     #
-    # @overload delete_field_level_encryption_profile(params = {})
+    # @overload delete_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def delete_field_level_encryption_profile(params = {}, options = {})
+    def delete_field_level_encryption_profile(params = {}, **options)
       req = build_request(:delete_field_level_encryption_profile, params)
       req.send_request(options)
     end
@@ -2267,9 +2267,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteKeyGroup2020_05_31 AWS API Documentation
     #
-    # @overload delete_key_group(params = {})
+    # @overload delete_key_group(**params)
     # @param [Hash] params ({})
-    def delete_key_group(params = {}, options = {})
+    def delete_key_group(params = {}, **options)
       req = build_request(:delete_key_group, params)
       req.send_request(options)
     end
@@ -2290,9 +2290,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteMonitoringSubscription2020_05_31 AWS API Documentation
     #
-    # @overload delete_monitoring_subscription(params = {})
+    # @overload delete_monitoring_subscription(**params)
     # @param [Hash] params ({})
-    def delete_monitoring_subscription(params = {}, options = {})
+    def delete_monitoring_subscription(params = {}, **options)
       req = build_request(:delete_monitoring_subscription, params)
       req.send_request(options)
     end
@@ -2330,9 +2330,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteOriginRequestPolicy2020_05_31 AWS API Documentation
     #
-    # @overload delete_origin_request_policy(params = {})
+    # @overload delete_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def delete_origin_request_policy(params = {}, options = {})
+    def delete_origin_request_policy(params = {}, **options)
       req = build_request(:delete_origin_request_policy, params)
       req.send_request(options)
     end
@@ -2357,9 +2357,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeletePublicKey2020_05_31 AWS API Documentation
     #
-    # @overload delete_public_key(params = {})
+    # @overload delete_public_key(**params)
     # @param [Hash] params ({})
-    def delete_public_key(params = {}, options = {})
+    def delete_public_key(params = {}, **options)
       req = build_request(:delete_public_key, params)
       req.send_request(options)
     end
@@ -2394,9 +2394,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteRealtimeLogConfig2020_05_31 AWS API Documentation
     #
-    # @overload delete_realtime_log_config(params = {})
+    # @overload delete_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def delete_realtime_log_config(params = {}, options = {})
+    def delete_realtime_log_config(params = {}, **options)
       req = build_request(:delete_realtime_log_config, params)
       req.send_request(options)
     end
@@ -2464,9 +2464,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteStreamingDistribution2020_05_31 AWS API Documentation
     #
-    # @overload delete_streaming_distribution(params = {})
+    # @overload delete_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def delete_streaming_distribution(params = {}, options = {})
+    def delete_streaming_distribution(params = {}, **options)
       req = build_request(:delete_streaming_distribution, params)
       req.send_request(options)
     end
@@ -2528,9 +2528,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetCachePolicy2020_05_31 AWS API Documentation
     #
-    # @overload get_cache_policy(params = {})
+    # @overload get_cache_policy(**params)
     # @param [Hash] params ({})
-    def get_cache_policy(params = {}, options = {})
+    def get_cache_policy(params = {}, **options)
       req = build_request(:get_cache_policy, params)
       req.send_request(options)
     end
@@ -2587,9 +2587,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetCachePolicyConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_cache_policy_config(params = {})
+    # @overload get_cache_policy_config(**params)
     # @param [Hash] params ({})
-    def get_cache_policy_config(params = {}, options = {})
+    def get_cache_policy_config(params = {}, **options)
       req = build_request(:get_cache_policy_config, params)
       req.send_request(options)
     end
@@ -2620,9 +2620,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetCloudFrontOriginAccessIdentity2020_05_31 AWS API Documentation
     #
-    # @overload get_cloud_front_origin_access_identity(params = {})
+    # @overload get_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def get_cloud_front_origin_access_identity(params = {}, options = {})
+    def get_cloud_front_origin_access_identity(params = {}, **options)
       req = build_request(:get_cloud_front_origin_access_identity, params)
       req.send_request(options)
     end
@@ -2651,9 +2651,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetCloudFrontOriginAccessIdentityConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_cloud_front_origin_access_identity_config(params = {})
+    # @overload get_cloud_front_origin_access_identity_config(**params)
     # @param [Hash] params ({})
-    def get_cloud_front_origin_access_identity_config(params = {}, options = {})
+    def get_cloud_front_origin_access_identity_config(params = {}, **options)
       req = build_request(:get_cloud_front_origin_access_identity_config, params)
       req.send_request(options)
     end
@@ -2857,9 +2857,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetDistribution2020_05_31 AWS API Documentation
     #
-    # @overload get_distribution(params = {})
+    # @overload get_distribution(**params)
     # @param [Hash] params ({})
-    def get_distribution(params = {}, options = {})
+    def get_distribution(params = {}, **options)
       req = build_request(:get_distribution, params)
       req.send_request(options)
     end
@@ -3035,9 +3035,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetDistributionConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_distribution_config(params = {})
+    # @overload get_distribution_config(**params)
     # @param [Hash] params ({})
-    def get_distribution_config(params = {}, options = {})
+    def get_distribution_config(params = {}, **options)
       req = build_request(:get_distribution_config, params)
       req.send_request(options)
     end
@@ -3080,9 +3080,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetFieldLevelEncryption2020_05_31 AWS API Documentation
     #
-    # @overload get_field_level_encryption(params = {})
+    # @overload get_field_level_encryption(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption(params = {}, options = {})
+    def get_field_level_encryption(params = {}, **options)
       req = build_request(:get_field_level_encryption, params)
       req.send_request(options)
     end
@@ -3123,9 +3123,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetFieldLevelEncryptionConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_field_level_encryption_config(params = {})
+    # @overload get_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption_config(params = {}, options = {})
+    def get_field_level_encryption_config(params = {}, **options)
       req = build_request(:get_field_level_encryption_config, params)
       req.send_request(options)
     end
@@ -3164,9 +3164,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetFieldLevelEncryptionProfile2020_05_31 AWS API Documentation
     #
-    # @overload get_field_level_encryption_profile(params = {})
+    # @overload get_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption_profile(params = {}, options = {})
+    def get_field_level_encryption_profile(params = {}, **options)
       req = build_request(:get_field_level_encryption_profile, params)
       req.send_request(options)
     end
@@ -3204,9 +3204,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetFieldLevelEncryptionProfileConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_field_level_encryption_profile_config(params = {})
+    # @overload get_field_level_encryption_profile_config(**params)
     # @param [Hash] params ({})
-    def get_field_level_encryption_profile_config(params = {}, options = {})
+    def get_field_level_encryption_profile_config(params = {}, **options)
       req = build_request(:get_field_level_encryption_profile_config, params)
       req.send_request(options)
     end
@@ -3248,9 +3248,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetInvalidation2020_05_31 AWS API Documentation
     #
-    # @overload get_invalidation(params = {})
+    # @overload get_invalidation(**params)
     # @param [Hash] params ({})
-    def get_invalidation(params = {}, options = {})
+    def get_invalidation(params = {}, **options)
       req = build_request(:get_invalidation, params)
       req.send_request(options)
     end
@@ -3291,9 +3291,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetKeyGroup2020_05_31 AWS API Documentation
     #
-    # @overload get_key_group(params = {})
+    # @overload get_key_group(**params)
     # @param [Hash] params ({})
-    def get_key_group(params = {}, options = {})
+    def get_key_group(params = {}, **options)
       req = build_request(:get_key_group, params)
       req.send_request(options)
     end
@@ -3332,9 +3332,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetKeyGroupConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_key_group_config(params = {})
+    # @overload get_key_group_config(**params)
     # @param [Hash] params ({})
-    def get_key_group_config(params = {}, options = {})
+    def get_key_group_config(params = {}, **options)
       req = build_request(:get_key_group_config, params)
       req.send_request(options)
     end
@@ -3362,9 +3362,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetMonitoringSubscription2020_05_31 AWS API Documentation
     #
-    # @overload get_monitoring_subscription(params = {})
+    # @overload get_monitoring_subscription(**params)
     # @param [Hash] params ({})
-    def get_monitoring_subscription(params = {}, options = {})
+    def get_monitoring_subscription(params = {}, **options)
       req = build_request(:get_monitoring_subscription, params)
       req.send_request(options)
     end
@@ -3423,9 +3423,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetOriginRequestPolicy2020_05_31 AWS API Documentation
     #
-    # @overload get_origin_request_policy(params = {})
+    # @overload get_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def get_origin_request_policy(params = {}, options = {})
+    def get_origin_request_policy(params = {}, **options)
       req = build_request(:get_origin_request_policy, params)
       req.send_request(options)
     end
@@ -3478,9 +3478,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetOriginRequestPolicyConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_origin_request_policy_config(params = {})
+    # @overload get_origin_request_policy_config(**params)
     # @param [Hash] params ({})
-    def get_origin_request_policy_config(params = {}, options = {})
+    def get_origin_request_policy_config(params = {}, **options)
       req = build_request(:get_origin_request_policy_config, params)
       req.send_request(options)
     end
@@ -3513,9 +3513,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetPublicKey2020_05_31 AWS API Documentation
     #
-    # @overload get_public_key(params = {})
+    # @overload get_public_key(**params)
     # @param [Hash] params ({})
-    def get_public_key(params = {}, options = {})
+    def get_public_key(params = {}, **options)
       req = build_request(:get_public_key, params)
       req.send_request(options)
     end
@@ -3546,9 +3546,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetPublicKeyConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_public_key_config(params = {})
+    # @overload get_public_key_config(**params)
     # @param [Hash] params ({})
-    def get_public_key_config(params = {}, options = {})
+    def get_public_key_config(params = {}, **options)
       req = build_request(:get_public_key_config, params)
       req.send_request(options)
     end
@@ -3592,9 +3592,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetRealtimeLogConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_realtime_log_config(params = {})
+    # @overload get_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def get_realtime_log_config(params = {}, options = {})
+    def get_realtime_log_config(params = {}, **options)
       req = build_request(:get_realtime_log_config, params)
       req.send_request(options)
     end
@@ -3655,9 +3655,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetStreamingDistribution2020_05_31 AWS API Documentation
     #
-    # @overload get_streaming_distribution(params = {})
+    # @overload get_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def get_streaming_distribution(params = {}, options = {})
+    def get_streaming_distribution(params = {}, **options)
       req = build_request(:get_streaming_distribution, params)
       req.send_request(options)
     end
@@ -3700,9 +3700,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetStreamingDistributionConfig2020_05_31 AWS API Documentation
     #
-    # @overload get_streaming_distribution_config(params = {})
+    # @overload get_streaming_distribution_config(**params)
     # @param [Hash] params ({})
-    def get_streaming_distribution_config(params = {}, options = {})
+    def get_streaming_distribution_config(params = {}, **options)
       req = build_request(:get_streaming_distribution_config, params)
       req.send_request(options)
     end
@@ -3782,9 +3782,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListCachePolicies2020_05_31 AWS API Documentation
     #
-    # @overload list_cache_policies(params = {})
+    # @overload list_cache_policies(**params)
     # @param [Hash] params ({})
-    def list_cache_policies(params = {}, options = {})
+    def list_cache_policies(params = {}, **options)
       req = build_request(:list_cache_policies, params)
       req.send_request(options)
     end
@@ -3830,9 +3830,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListCloudFrontOriginAccessIdentities2020_05_31 AWS API Documentation
     #
-    # @overload list_cloud_front_origin_access_identities(params = {})
+    # @overload list_cloud_front_origin_access_identities(**params)
     # @param [Hash] params ({})
-    def list_cloud_front_origin_access_identities(params = {}, options = {})
+    def list_cloud_front_origin_access_identities(params = {}, **options)
       req = build_request(:list_cloud_front_origin_access_identities, params)
       req.send_request(options)
     end
@@ -4023,9 +4023,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListDistributions2020_05_31 AWS API Documentation
     #
-    # @overload list_distributions(params = {})
+    # @overload list_distributions(**params)
     # @param [Hash] params ({})
-    def list_distributions(params = {}, options = {})
+    def list_distributions(params = {}, **options)
       req = build_request(:list_distributions, params)
       req.send_request(options)
     end
@@ -4078,9 +4078,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListDistributionsByCachePolicyId2020_05_31 AWS API Documentation
     #
-    # @overload list_distributions_by_cache_policy_id(params = {})
+    # @overload list_distributions_by_cache_policy_id(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_cache_policy_id(params = {}, options = {})
+    def list_distributions_by_cache_policy_id(params = {}, **options)
       req = build_request(:list_distributions_by_cache_policy_id, params)
       req.send_request(options)
     end
@@ -4133,9 +4133,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListDistributionsByKeyGroup2020_05_31 AWS API Documentation
     #
-    # @overload list_distributions_by_key_group(params = {})
+    # @overload list_distributions_by_key_group(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_key_group(params = {}, options = {})
+    def list_distributions_by_key_group(params = {}, **options)
       req = build_request(:list_distributions_by_key_group, params)
       req.send_request(options)
     end
@@ -4188,9 +4188,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListDistributionsByOriginRequestPolicyId2020_05_31 AWS API Documentation
     #
-    # @overload list_distributions_by_origin_request_policy_id(params = {})
+    # @overload list_distributions_by_origin_request_policy_id(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_origin_request_policy_id(params = {}, options = {})
+    def list_distributions_by_origin_request_policy_id(params = {}, **options)
       req = build_request(:list_distributions_by_origin_request_policy_id, params)
       req.send_request(options)
     end
@@ -4402,9 +4402,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListDistributionsByRealtimeLogConfig2020_05_31 AWS API Documentation
     #
-    # @overload list_distributions_by_realtime_log_config(params = {})
+    # @overload list_distributions_by_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_realtime_log_config(params = {}, options = {})
+    def list_distributions_by_realtime_log_config(params = {}, **options)
       req = build_request(:list_distributions_by_realtime_log_config, params)
       req.send_request(options)
     end
@@ -4602,9 +4602,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListDistributionsByWebACLId2020_05_31 AWS API Documentation
     #
-    # @overload list_distributions_by_web_acl_id(params = {})
+    # @overload list_distributions_by_web_acl_id(**params)
     # @param [Hash] params ({})
-    def list_distributions_by_web_acl_id(params = {}, options = {})
+    def list_distributions_by_web_acl_id(params = {}, **options)
       req = build_request(:list_distributions_by_web_acl_id, params)
       req.send_request(options)
     end
@@ -4658,9 +4658,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListFieldLevelEncryptionConfigs2020_05_31 AWS API Documentation
     #
-    # @overload list_field_level_encryption_configs(params = {})
+    # @overload list_field_level_encryption_configs(**params)
     # @param [Hash] params ({})
-    def list_field_level_encryption_configs(params = {}, options = {})
+    def list_field_level_encryption_configs(params = {}, **options)
       req = build_request(:list_field_level_encryption_configs, params)
       req.send_request(options)
     end
@@ -4710,9 +4710,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListFieldLevelEncryptionProfiles2020_05_31 AWS API Documentation
     #
-    # @overload list_field_level_encryption_profiles(params = {})
+    # @overload list_field_level_encryption_profiles(**params)
     # @param [Hash] params ({})
-    def list_field_level_encryption_profiles(params = {}, options = {})
+    def list_field_level_encryption_profiles(params = {}, **options)
       req = build_request(:list_field_level_encryption_profiles, params)
       req.send_request(options)
     end
@@ -4764,9 +4764,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListInvalidations2020_05_31 AWS API Documentation
     #
-    # @overload list_invalidations(params = {})
+    # @overload list_invalidations(**params)
     # @param [Hash] params ({})
-    def list_invalidations(params = {}, options = {})
+    def list_invalidations(params = {}, **options)
       req = build_request(:list_invalidations, params)
       req.send_request(options)
     end
@@ -4816,9 +4816,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListKeyGroups2020_05_31 AWS API Documentation
     #
-    # @overload list_key_groups(params = {})
+    # @overload list_key_groups(**params)
     # @param [Hash] params ({})
-    def list_key_groups(params = {}, options = {})
+    def list_key_groups(params = {}, **options)
       req = build_request(:list_key_groups, params)
       req.send_request(options)
     end
@@ -4894,9 +4894,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListOriginRequestPolicies2020_05_31 AWS API Documentation
     #
-    # @overload list_origin_request_policies(params = {})
+    # @overload list_origin_request_policies(**params)
     # @param [Hash] params ({})
-    def list_origin_request_policies(params = {}, options = {})
+    def list_origin_request_policies(params = {}, **options)
       req = build_request(:list_origin_request_policies, params)
       req.send_request(options)
     end
@@ -4939,9 +4939,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListPublicKeys2020_05_31 AWS API Documentation
     #
-    # @overload list_public_keys(params = {})
+    # @overload list_public_keys(**params)
     # @param [Hash] params ({})
-    def list_public_keys(params = {}, options = {})
+    def list_public_keys(params = {}, **options)
       req = build_request(:list_public_keys, params)
       req.send_request(options)
     end
@@ -4996,9 +4996,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListRealtimeLogConfigs2020_05_31 AWS API Documentation
     #
-    # @overload list_realtime_log_configs(params = {})
+    # @overload list_realtime_log_configs(**params)
     # @param [Hash] params ({})
-    def list_realtime_log_configs(params = {}, options = {})
+    def list_realtime_log_configs(params = {}, **options)
       req = build_request(:list_realtime_log_configs, params)
       req.send_request(options)
     end
@@ -5052,9 +5052,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListStreamingDistributions2020_05_31 AWS API Documentation
     #
-    # @overload list_streaming_distributions(params = {})
+    # @overload list_streaming_distributions(**params)
     # @param [Hash] params ({})
-    def list_streaming_distributions(params = {}, options = {})
+    def list_streaming_distributions(params = {}, **options)
       req = build_request(:list_streaming_distributions, params)
       req.send_request(options)
     end
@@ -5082,9 +5082,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListTagsForResource2020_05_31 AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -5115,9 +5115,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/TagResource2020_05_31 AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5143,9 +5143,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UntagResource2020_05_31 AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5250,9 +5250,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateCachePolicy2020_05_31 AWS API Documentation
     #
-    # @overload update_cache_policy(params = {})
+    # @overload update_cache_policy(**params)
     # @param [Hash] params ({})
-    def update_cache_policy(params = {}, options = {})
+    def update_cache_policy(params = {}, **options)
       req = build_request(:update_cache_policy, params)
       req.send_request(options)
     end
@@ -5295,9 +5295,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateCloudFrontOriginAccessIdentity2020_05_31 AWS API Documentation
     #
-    # @overload update_cloud_front_origin_access_identity(params = {})
+    # @overload update_cloud_front_origin_access_identity(**params)
     # @param [Hash] params ({})
-    def update_cloud_front_origin_access_identity(params = {}, options = {})
+    def update_cloud_front_origin_access_identity(params = {}, **options)
       req = build_request(:update_cloud_front_origin_access_identity, params)
       req.send_request(options)
     end
@@ -5810,9 +5810,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateDistribution2020_05_31 AWS API Documentation
     #
-    # @overload update_distribution(params = {})
+    # @overload update_distribution(**params)
     # @param [Hash] params ({})
-    def update_distribution(params = {}, options = {})
+    def update_distribution(params = {}, **options)
       req = build_request(:update_distribution, params)
       req.send_request(options)
     end
@@ -5891,9 +5891,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateFieldLevelEncryptionConfig2020_05_31 AWS API Documentation
     #
-    # @overload update_field_level_encryption_config(params = {})
+    # @overload update_field_level_encryption_config(**params)
     # @param [Hash] params ({})
-    def update_field_level_encryption_config(params = {}, options = {})
+    def update_field_level_encryption_config(params = {}, **options)
       req = build_request(:update_field_level_encryption_config, params)
       req.send_request(options)
     end
@@ -5958,9 +5958,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateFieldLevelEncryptionProfile2020_05_31 AWS API Documentation
     #
-    # @overload update_field_level_encryption_profile(params = {})
+    # @overload update_field_level_encryption_profile(**params)
     # @param [Hash] params ({})
-    def update_field_level_encryption_profile(params = {}, options = {})
+    def update_field_level_encryption_profile(params = {}, **options)
       req = build_request(:update_field_level_encryption_profile, params)
       req.send_request(options)
     end
@@ -6019,9 +6019,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateKeyGroup2020_05_31 AWS API Documentation
     #
-    # @overload update_key_group(params = {})
+    # @overload update_key_group(**params)
     # @param [Hash] params ({})
-    def update_key_group(params = {}, options = {})
+    def update_key_group(params = {}, **options)
       req = build_request(:update_key_group, params)
       req.send_request(options)
     end
@@ -6116,9 +6116,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateOriginRequestPolicy2020_05_31 AWS API Documentation
     #
-    # @overload update_origin_request_policy(params = {})
+    # @overload update_origin_request_policy(**params)
     # @param [Hash] params ({})
-    def update_origin_request_policy(params = {}, options = {})
+    def update_origin_request_policy(params = {}, **options)
       req = build_request(:update_origin_request_policy, params)
       req.send_request(options)
     end
@@ -6166,9 +6166,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdatePublicKey2020_05_31 AWS API Documentation
     #
-    # @overload update_public_key(params = {})
+    # @overload update_public_key(**params)
     # @param [Hash] params ({})
-    def update_public_key(params = {}, options = {})
+    def update_public_key(params = {}, **options)
       req = build_request(:update_public_key, params)
       req.send_request(options)
     end
@@ -6254,9 +6254,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateRealtimeLogConfig2020_05_31 AWS API Documentation
     #
-    # @overload update_realtime_log_config(params = {})
+    # @overload update_realtime_log_config(**params)
     # @param [Hash] params ({})
-    def update_realtime_log_config(params = {}, options = {})
+    def update_realtime_log_config(params = {}, **options)
       req = build_request(:update_realtime_log_config, params)
       req.send_request(options)
     end
@@ -6344,9 +6344,9 @@ module Aws::CloudFront
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateStreamingDistribution2020_05_31 AWS API Documentation
     #
-    # @overload update_streaming_distribution(params = {})
+    # @overload update_streaming_distribution(**params)
     # @param [Hash] params ({})
-    def update_streaming_distribution(params = {}, options = {})
+    def update_streaming_distribution(params = {}, **options)
       req = build_request(:update_streaming_distribution, params)
       req.send_request(options)
     end
@@ -6355,7 +6355,7 @@ module Aws::CloudFront
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -6363,8 +6363,8 @@ module Aws::CloudFront
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudfront'
-      context[:gem_version] = '1.46.0'
+      context[:gem_name] = "aws-sdk-cloudfront"
+      context[:gem_version] = "1.46.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -6458,7 +6458,7 @@ module Aws::CloudFront
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -6474,7 +6474,7 @@ module Aws::CloudFront
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

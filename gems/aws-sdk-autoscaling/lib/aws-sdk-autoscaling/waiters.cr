@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::AutoScaling
   # Waiters are utility methods that poll for a particular state to occur
@@ -110,7 +110,7 @@ module Aws::AutoScaling
 
       # @option (see Client#describe_auto_scaling_groups)
       # @return (see Client#describe_auto_scaling_groups)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -154,7 +154,7 @@ module Aws::AutoScaling
 
       # @option (see Client#describe_auto_scaling_groups)
       # @return (see Client#describe_auto_scaling_groups)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -198,7 +198,7 @@ module Aws::AutoScaling
 
       # @option (see Client#describe_auto_scaling_groups)
       # @return (see Client#describe_auto_scaling_groups)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

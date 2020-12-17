@@ -8,11 +8,11 @@
 Feature: Smoke tests for CodeCommit
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @codecommit @smoke
   Scenario: Call Aws::CodeCommit::Client#list_repositories and expect it to succeed
-  When I call the operation 'list_repositories' with params:
+  When I call the operation "list_repositories" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @codecommit @smoke
   Scenario: Call Aws::Aws::CodeCommit::Client#list_branches and expect it to fail
-  When I call the operation 'list_branches' with params:
+  When I call the operation "list_branches" with params:
     """
 {"repository_name":"fake-repo"}
     """

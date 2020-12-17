@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:devicefarm)
 
@@ -290,7 +290,7 @@ module Aws::DeviceFarm
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -414,9 +414,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateDevicePool AWS API Documentation
     #
-    # @overload create_device_pool(params = {})
+    # @overload create_device_pool(**params)
     # @param [Hash] params ({})
-    def create_device_pool(params = {}, options = {})
+    def create_device_pool(params = {}, **options)
       req = build_request(:create_device_pool, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateInstanceProfile AWS API Documentation
     #
-    # @overload create_instance_profile(params = {})
+    # @overload create_instance_profile(**params)
     # @param [Hash] params ({})
-    def create_instance_profile(params = {}, options = {})
+    def create_instance_profile(params = {}, **options)
       req = build_request(:create_instance_profile, params)
       req.send_request(options)
     end
@@ -563,9 +563,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateNetworkProfile AWS API Documentation
     #
-    # @overload create_network_profile(params = {})
+    # @overload create_network_profile(**params)
     # @param [Hash] params ({})
-    def create_network_profile(params = {}, options = {})
+    def create_network_profile(params = {}, **options)
       req = build_request(:create_network_profile, params)
       req.send_request(options)
     end
@@ -618,9 +618,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -821,9 +821,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateRemoteAccessSession AWS API Documentation
     #
-    # @overload create_remote_access_session(params = {})
+    # @overload create_remote_access_session(**params)
     # @param [Hash] params ({})
-    def create_remote_access_session(params = {}, options = {})
+    def create_remote_access_session(params = {}, **options)
       req = build_request(:create_remote_access_session, params)
       req.send_request(options)
     end
@@ -857,9 +857,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateTestGridProject AWS API Documentation
     #
-    # @overload create_test_grid_project(params = {})
+    # @overload create_test_grid_project(**params)
     # @param [Hash] params ({})
-    def create_test_grid_project(params = {}, options = {})
+    def create_test_grid_project(params = {}, **options)
       req = build_request(:create_test_grid_project, params)
       req.send_request(options)
     end
@@ -893,9 +893,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateTestGridUrl AWS API Documentation
     #
-    # @overload create_test_grid_url(params = {})
+    # @overload create_test_grid_url(**params)
     # @param [Hash] params ({})
-    def create_test_grid_url(params = {}, options = {})
+    def create_test_grid_url(params = {}, **options)
       req = build_request(:create_test_grid_url, params)
       req.send_request(options)
     end
@@ -1038,9 +1038,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateUpload AWS API Documentation
     #
-    # @overload create_upload(params = {})
+    # @overload create_upload(**params)
     # @param [Hash] params ({})
-    def create_upload(params = {}, options = {})
+    def create_upload(params = {}, **options)
       req = build_request(:create_upload, params)
       req.send_request(options)
     end
@@ -1087,9 +1087,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/CreateVPCEConfiguration AWS API Documentation
     #
-    # @overload create_vpce_configuration(params = {})
+    # @overload create_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def create_vpce_configuration(params = {}, options = {})
+    def create_vpce_configuration(params = {}, **options)
       req = build_request(:create_vpce_configuration, params)
       req.send_request(options)
     end
@@ -1124,9 +1124,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteDevicePool AWS API Documentation
     #
-    # @overload delete_device_pool(params = {})
+    # @overload delete_device_pool(**params)
     # @param [Hash] params ({})
-    def delete_device_pool(params = {}, options = {})
+    def delete_device_pool(params = {}, **options)
       req = build_request(:delete_device_pool, params)
       req.send_request(options)
     end
@@ -1148,9 +1148,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteInstanceProfile AWS API Documentation
     #
-    # @overload delete_instance_profile(params = {})
+    # @overload delete_instance_profile(**params)
     # @param [Hash] params ({})
-    def delete_instance_profile(params = {}, options = {})
+    def delete_instance_profile(params = {}, **options)
       req = build_request(:delete_instance_profile, params)
       req.send_request(options)
     end
@@ -1170,9 +1170,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteNetworkProfile AWS API Documentation
     #
-    # @overload delete_network_profile(params = {})
+    # @overload delete_network_profile(**params)
     # @param [Hash] params ({})
-    def delete_network_profile(params = {}, options = {})
+    def delete_network_profile(params = {}, **options)
       req = build_request(:delete_network_profile, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -1244,9 +1244,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteRemoteAccessSession AWS API Documentation
     #
-    # @overload delete_remote_access_session(params = {})
+    # @overload delete_remote_access_session(**params)
     # @param [Hash] params ({})
-    def delete_remote_access_session(params = {}, options = {})
+    def delete_remote_access_session(params = {}, **options)
       req = build_request(:delete_remote_access_session, params)
       req.send_request(options)
     end
@@ -1281,9 +1281,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteRun AWS API Documentation
     #
-    # @overload delete_run(params = {})
+    # @overload delete_run(**params)
     # @param [Hash] params ({})
-    def delete_run(params = {}, options = {})
+    def delete_run(params = {}, **options)
       req = build_request(:delete_run, params)
       req.send_request(options)
     end
@@ -1310,9 +1310,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteTestGridProject AWS API Documentation
     #
-    # @overload delete_test_grid_project(params = {})
+    # @overload delete_test_grid_project(**params)
     # @param [Hash] params ({})
-    def delete_test_grid_project(params = {}, options = {})
+    def delete_test_grid_project(params = {}, **options)
       req = build_request(:delete_test_grid_project, params)
       req.send_request(options)
     end
@@ -1346,9 +1346,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteUpload AWS API Documentation
     #
-    # @overload delete_upload(params = {})
+    # @overload delete_upload(**params)
     # @param [Hash] params ({})
-    def delete_upload(params = {}, options = {})
+    def delete_upload(params = {}, **options)
       req = build_request(:delete_upload, params)
       req.send_request(options)
     end
@@ -1370,9 +1370,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/DeleteVPCEConfiguration AWS API Documentation
     #
-    # @overload delete_vpce_configuration(params = {})
+    # @overload delete_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def delete_vpce_configuration(params = {}, options = {})
+    def delete_vpce_configuration(params = {}, **options)
       req = build_request(:delete_vpce_configuration, params)
       req.send_request(options)
     end
@@ -1420,9 +1420,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetAccountSettings AWS API Documentation
     #
-    # @overload get_account_settings(params = {})
+    # @overload get_account_settings(**params)
     # @param [Hash] params ({})
-    def get_account_settings(params = {}, options = {})
+    def get_account_settings(params = {}, **options)
       req = build_request(:get_account_settings, params)
       req.send_request(options)
     end
@@ -1518,9 +1518,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetDevice AWS API Documentation
     #
-    # @overload get_device(params = {})
+    # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, options = {})
+    def get_device(params = {}, **options)
       req = build_request(:get_device, params)
       req.send_request(options)
     end
@@ -1560,9 +1560,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetDeviceInstance AWS API Documentation
     #
-    # @overload get_device_instance(params = {})
+    # @overload get_device_instance(**params)
     # @param [Hash] params ({})
-    def get_device_instance(params = {}, options = {})
+    def get_device_instance(params = {}, **options)
       req = build_request(:get_device_instance, params)
       req.send_request(options)
     end
@@ -1611,9 +1611,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetDevicePool AWS API Documentation
     #
-    # @overload get_device_pool(params = {})
+    # @overload get_device_pool(**params)
     # @param [Hash] params ({})
-    def get_device_pool(params = {}, options = {})
+    def get_device_pool(params = {}, **options)
       req = build_request(:get_device_pool, params)
       req.send_request(options)
     end
@@ -1828,9 +1828,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetDevicePoolCompatibility AWS API Documentation
     #
-    # @overload get_device_pool_compatibility(params = {})
+    # @overload get_device_pool_compatibility(**params)
     # @param [Hash] params ({})
-    def get_device_pool_compatibility(params = {}, options = {})
+    def get_device_pool_compatibility(params = {}, **options)
       req = build_request(:get_device_pool_compatibility, params)
       req.send_request(options)
     end
@@ -1862,9 +1862,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetInstanceProfile AWS API Documentation
     #
-    # @overload get_instance_profile(params = {})
+    # @overload get_instance_profile(**params)
     # @param [Hash] params ({})
-    def get_instance_profile(params = {}, options = {})
+    def get_instance_profile(params = {}, **options)
       req = build_request(:get_instance_profile, params)
       req.send_request(options)
     end
@@ -1963,9 +1963,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetJob AWS API Documentation
     #
-    # @overload get_job(params = {})
+    # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, options = {})
+    def get_job(params = {}, **options)
       req = build_request(:get_job, params)
       req.send_request(options)
     end
@@ -2002,9 +2002,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetNetworkProfile AWS API Documentation
     #
-    # @overload get_network_profile(params = {})
+    # @overload get_network_profile(**params)
     # @param [Hash] params ({})
-    def get_network_profile(params = {}, options = {})
+    def get_network_profile(params = {}, **options)
       req = build_request(:get_network_profile, params)
       req.send_request(options)
     end
@@ -2102,9 +2102,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetOfferingStatus AWS API Documentation
     #
-    # @overload get_offering_status(params = {})
+    # @overload get_offering_status(**params)
     # @param [Hash] params ({})
-    def get_offering_status(params = {}, options = {})
+    def get_offering_status(params = {}, **options)
       req = build_request(:get_offering_status, params)
       req.send_request(options)
     end
@@ -2151,9 +2151,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetProject AWS API Documentation
     #
-    # @overload get_project(params = {})
+    # @overload get_project(**params)
     # @param [Hash] params ({})
-    def get_project(params = {}, options = {})
+    def get_project(params = {}, **options)
       req = build_request(:get_project, params)
       req.send_request(options)
     end
@@ -2253,9 +2253,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetRemoteAccessSession AWS API Documentation
     #
-    # @overload get_remote_access_session(params = {})
+    # @overload get_remote_access_session(**params)
     # @param [Hash] params ({})
-    def get_remote_access_session(params = {}, options = {})
+    def get_remote_access_session(params = {}, **options)
       req = build_request(:get_remote_access_session, params)
       req.send_request(options)
     end
@@ -2384,9 +2384,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetRun AWS API Documentation
     #
-    # @overload get_run(params = {})
+    # @overload get_run(**params)
     # @param [Hash] params ({})
-    def get_run(params = {}, options = {})
+    def get_run(params = {}, **options)
       req = build_request(:get_run, params)
       req.send_request(options)
     end
@@ -2445,9 +2445,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetSuite AWS API Documentation
     #
-    # @overload get_suite(params = {})
+    # @overload get_suite(**params)
     # @param [Hash] params ({})
-    def get_suite(params = {}, options = {})
+    def get_suite(params = {}, **options)
       req = build_request(:get_suite, params)
       req.send_request(options)
     end
@@ -2506,9 +2506,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetTest AWS API Documentation
     #
-    # @overload get_test(params = {})
+    # @overload get_test(**params)
     # @param [Hash] params ({})
-    def get_test(params = {}, options = {})
+    def get_test(params = {}, **options)
       req = build_request(:get_test, params)
       req.send_request(options)
     end
@@ -2538,9 +2538,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetTestGridProject AWS API Documentation
     #
-    # @overload get_test_grid_project(params = {})
+    # @overload get_test_grid_project(**params)
     # @param [Hash] params ({})
-    def get_test_grid_project(params = {}, options = {})
+    def get_test_grid_project(params = {}, **options)
       req = build_request(:get_test_grid_project, params)
       req.send_request(options)
     end
@@ -2588,9 +2588,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetTestGridSession AWS API Documentation
     #
-    # @overload get_test_grid_session(params = {})
+    # @overload get_test_grid_session(**params)
     # @param [Hash] params ({})
-    def get_test_grid_session(params = {}, options = {})
+    def get_test_grid_session(params = {}, **options)
       req = build_request(:get_test_grid_session, params)
       req.send_request(options)
     end
@@ -2640,9 +2640,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetUpload AWS API Documentation
     #
-    # @overload get_upload(params = {})
+    # @overload get_upload(**params)
     # @param [Hash] params ({})
-    def get_upload(params = {}, options = {})
+    def get_upload(params = {}, **options)
       req = build_request(:get_upload, params)
       req.send_request(options)
     end
@@ -2674,9 +2674,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/GetVPCEConfiguration AWS API Documentation
     #
-    # @overload get_vpce_configuration(params = {})
+    # @overload get_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def get_vpce_configuration(params = {}, options = {})
+    def get_vpce_configuration(params = {}, **options)
       req = build_request(:get_vpce_configuration, params)
       req.send_request(options)
     end
@@ -2734,9 +2734,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/InstallToRemoteAccessSession AWS API Documentation
     #
-    # @overload install_to_remote_access_session(params = {})
+    # @overload install_to_remote_access_session(**params)
     # @param [Hash] params ({})
-    def install_to_remote_access_session(params = {}, options = {})
+    def install_to_remote_access_session(params = {}, **options)
       req = build_request(:install_to_remote_access_session, params)
       req.send_request(options)
     end
@@ -2799,9 +2799,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListArtifacts AWS API Documentation
     #
-    # @overload list_artifacts(params = {})
+    # @overload list_artifacts(**params)
     # @param [Hash] params ({})
-    def list_artifacts(params = {}, options = {})
+    def list_artifacts(params = {}, **options)
       req = build_request(:list_artifacts, params)
       req.send_request(options)
     end
@@ -2850,9 +2850,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListDeviceInstances AWS API Documentation
     #
-    # @overload list_device_instances(params = {})
+    # @overload list_device_instances(**params)
     # @param [Hash] params ({})
-    def list_device_instances(params = {}, options = {})
+    def list_device_instances(params = {}, **options)
       req = build_request(:list_device_instances, params)
       req.send_request(options)
     end
@@ -2949,9 +2949,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListDevicePools AWS API Documentation
     #
-    # @overload list_device_pools(params = {})
+    # @overload list_device_pools(**params)
     # @param [Hash] params ({})
-    def list_device_pools(params = {}, options = {})
+    def list_device_pools(params = {}, **options)
       req = build_request(:list_device_pools, params)
       req.send_request(options)
     end
@@ -3115,9 +3115,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListDevices AWS API Documentation
     #
-    # @overload list_devices(params = {})
+    # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, options = {})
+    def list_devices(params = {}, **options)
       req = build_request(:list_devices, params)
       req.send_request(options)
     end
@@ -3159,9 +3159,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListInstanceProfiles AWS API Documentation
     #
-    # @overload list_instance_profiles(params = {})
+    # @overload list_instance_profiles(**params)
     # @param [Hash] params ({})
-    def list_instance_profiles(params = {}, options = {})
+    def list_instance_profiles(params = {}, **options)
       req = build_request(:list_instance_profiles, params)
       req.send_request(options)
     end
@@ -3265,9 +3265,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -3319,9 +3319,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListNetworkProfiles AWS API Documentation
     #
-    # @overload list_network_profiles(params = {})
+    # @overload list_network_profiles(**params)
     # @param [Hash] params ({})
-    def list_network_profiles(params = {}, options = {})
+    def list_network_profiles(params = {}, **options)
       req = build_request(:list_network_profiles, params)
       req.send_request(options)
     end
@@ -3358,9 +3358,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListOfferingPromotions AWS API Documentation
     #
-    # @overload list_offering_promotions(params = {})
+    # @overload list_offering_promotions(**params)
     # @param [Hash] params ({})
-    def list_offering_promotions(params = {}, options = {})
+    def list_offering_promotions(params = {}, **options)
       req = build_request(:list_offering_promotions, params)
       req.send_request(options)
     end
@@ -3505,9 +3505,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListOfferingTransactions AWS API Documentation
     #
-    # @overload list_offering_transactions(params = {})
+    # @overload list_offering_transactions(**params)
     # @param [Hash] params ({})
-    def list_offering_transactions(params = {}, options = {})
+    def list_offering_transactions(params = {}, **options)
       req = build_request(:list_offering_transactions, params)
       req.send_request(options)
     end
@@ -3627,9 +3627,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListOfferings AWS API Documentation
     #
-    # @overload list_offerings(params = {})
+    # @overload list_offerings(**params)
     # @param [Hash] params ({})
-    def list_offerings(params = {}, options = {})
+    def list_offerings(params = {}, **options)
       req = build_request(:list_offerings, params)
       req.send_request(options)
     end
@@ -3697,9 +3697,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -3809,9 +3809,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListRemoteAccessSessions AWS API Documentation
     #
-    # @overload list_remote_access_sessions(params = {})
+    # @overload list_remote_access_sessions(**params)
     # @param [Hash] params ({})
-    def list_remote_access_sessions(params = {}, options = {})
+    def list_remote_access_sessions(params = {}, **options)
       req = build_request(:list_remote_access_sessions, params)
       req.send_request(options)
     end
@@ -3955,9 +3955,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListRuns AWS API Documentation
     #
-    # @overload list_runs(params = {})
+    # @overload list_runs(**params)
     # @param [Hash] params ({})
-    def list_runs(params = {}, options = {})
+    def list_runs(params = {}, **options)
       req = build_request(:list_runs, params)
       req.send_request(options)
     end
@@ -4012,9 +4012,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListSamples AWS API Documentation
     #
-    # @overload list_samples(params = {})
+    # @overload list_samples(**params)
     # @param [Hash] params ({})
-    def list_samples(params = {}, options = {})
+    def list_samples(params = {}, **options)
       req = build_request(:list_samples, params)
       req.send_request(options)
     end
@@ -4085,9 +4085,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListSuites AWS API Documentation
     #
-    # @overload list_suites(params = {})
+    # @overload list_suites(**params)
     # @param [Hash] params ({})
-    def list_suites(params = {}, options = {})
+    def list_suites(params = {}, **options)
       req = build_request(:list_suites, params)
       req.send_request(options)
     end
@@ -4119,9 +4119,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4159,9 +4159,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListTestGridProjects AWS API Documentation
     #
-    # @overload list_test_grid_projects(params = {})
+    # @overload list_test_grid_projects(**params)
     # @param [Hash] params ({})
-    def list_test_grid_projects(params = {}, options = {})
+    def list_test_grid_projects(params = {}, **options)
       req = build_request(:list_test_grid_projects, params)
       req.send_request(options)
     end
@@ -4204,9 +4204,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListTestGridSessionActions AWS API Documentation
     #
-    # @overload list_test_grid_session_actions(params = {})
+    # @overload list_test_grid_session_actions(**params)
     # @param [Hash] params ({})
-    def list_test_grid_session_actions(params = {}, options = {})
+    def list_test_grid_session_actions(params = {}, **options)
       req = build_request(:list_test_grid_session_actions, params)
       req.send_request(options)
     end
@@ -4251,9 +4251,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListTestGridSessionArtifacts AWS API Documentation
     #
-    # @overload list_test_grid_session_artifacts(params = {})
+    # @overload list_test_grid_session_artifacts(**params)
     # @param [Hash] params ({})
-    def list_test_grid_session_artifacts(params = {}, options = {})
+    def list_test_grid_session_artifacts(params = {}, **options)
       req = build_request(:list_test_grid_session_artifacts, params)
       req.send_request(options)
     end
@@ -4317,9 +4317,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListTestGridSessions AWS API Documentation
     #
-    # @overload list_test_grid_sessions(params = {})
+    # @overload list_test_grid_sessions(**params)
     # @param [Hash] params ({})
-    def list_test_grid_sessions(params = {}, options = {})
+    def list_test_grid_sessions(params = {}, **options)
       req = build_request(:list_test_grid_sessions, params)
       req.send_request(options)
     end
@@ -4390,9 +4390,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListTests AWS API Documentation
     #
-    # @overload list_tests(params = {})
+    # @overload list_tests(**params)
     # @param [Hash] params ({})
-    def list_tests(params = {}, options = {})
+    def list_tests(params = {}, **options)
       req = build_request(:list_tests, params)
       req.send_request(options)
     end
@@ -4500,9 +4500,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListUniqueProblems AWS API Documentation
     #
-    # @overload list_unique_problems(params = {})
+    # @overload list_unique_problems(**params)
     # @param [Hash] params ({})
-    def list_unique_problems(params = {}, options = {})
+    def list_unique_problems(params = {}, **options)
       req = build_request(:list_unique_problems, params)
       req.send_request(options)
     end
@@ -4635,9 +4635,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListUploads AWS API Documentation
     #
-    # @overload list_uploads(params = {})
+    # @overload list_uploads(**params)
     # @param [Hash] params ({})
-    def list_uploads(params = {}, options = {})
+    def list_uploads(params = {}, **options)
       req = build_request(:list_uploads, params)
       req.send_request(options)
     end
@@ -4678,9 +4678,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ListVPCEConfigurations AWS API Documentation
     #
-    # @overload list_vpce_configurations(params = {})
+    # @overload list_vpce_configurations(**params)
     # @param [Hash] params ({})
-    def list_vpce_configurations(params = {}, options = {})
+    def list_vpce_configurations(params = {}, **options)
       req = build_request(:list_vpce_configurations, params)
       req.send_request(options)
     end
@@ -4767,9 +4767,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/PurchaseOffering AWS API Documentation
     #
-    # @overload purchase_offering(params = {})
+    # @overload purchase_offering(**params)
     # @param [Hash] params ({})
-    def purchase_offering(params = {}, options = {})
+    def purchase_offering(params = {}, **options)
       req = build_request(:purchase_offering, params)
       req.send_request(options)
     end
@@ -4851,9 +4851,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/RenewOffering AWS API Documentation
     #
-    # @overload renew_offering(params = {})
+    # @overload renew_offering(**params)
     # @param [Hash] params ({})
-    def renew_offering(params = {}, options = {})
+    def renew_offering(params = {}, **options)
       req = build_request(:renew_offering, params)
       req.send_request(options)
     end
@@ -5044,9 +5044,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/ScheduleRun AWS API Documentation
     #
-    # @overload schedule_run(params = {})
+    # @overload schedule_run(**params)
     # @param [Hash] params ({})
-    def schedule_run(params = {}, options = {})
+    def schedule_run(params = {}, **options)
       req = build_request(:schedule_run, params)
       req.send_request(options)
     end
@@ -5136,9 +5136,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/StopJob AWS API Documentation
     #
-    # @overload stop_job(params = {})
+    # @overload stop_job(**params)
     # @param [Hash] params ({})
-    def stop_job(params = {}, options = {})
+    def stop_job(params = {}, **options)
       req = build_request(:stop_job, params)
       req.send_request(options)
     end
@@ -5222,9 +5222,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/StopRemoteAccessSession AWS API Documentation
     #
-    # @overload stop_remote_access_session(params = {})
+    # @overload stop_remote_access_session(**params)
     # @param [Hash] params ({})
-    def stop_remote_access_session(params = {}, options = {})
+    def stop_remote_access_session(params = {}, **options)
       req = build_request(:stop_remote_access_session, params)
       req.send_request(options)
     end
@@ -5335,9 +5335,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/StopRun AWS API Documentation
     #
-    # @overload stop_run(params = {})
+    # @overload stop_run(**params)
     # @param [Hash] params ({})
-    def stop_run(params = {}, options = {})
+    def stop_run(params = {}, **options)
       req = build_request(:stop_run, params)
       req.send_request(options)
     end
@@ -5375,9 +5375,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5405,9 +5405,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5455,9 +5455,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateDeviceInstance AWS API Documentation
     #
-    # @overload update_device_instance(params = {})
+    # @overload update_device_instance(**params)
     # @param [Hash] params ({})
-    def update_device_instance(params = {}, options = {})
+    def update_device_instance(params = {}, **options)
       req = build_request(:update_device_instance, params)
       req.send_request(options)
     end
@@ -5565,9 +5565,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateDevicePool AWS API Documentation
     #
-    # @overload update_device_pool(params = {})
+    # @overload update_device_pool(**params)
     # @param [Hash] params ({})
-    def update_device_pool(params = {}, options = {})
+    def update_device_pool(params = {}, **options)
       req = build_request(:update_device_pool, params)
       req.send_request(options)
     end
@@ -5625,9 +5625,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateInstanceProfile AWS API Documentation
     #
-    # @overload update_instance_profile(params = {})
+    # @overload update_instance_profile(**params)
     # @param [Hash] params ({})
-    def update_instance_profile(params = {}, options = {})
+    def update_instance_profile(params = {}, **options)
       req = build_request(:update_instance_profile, params)
       req.send_request(options)
     end
@@ -5720,9 +5720,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateNetworkProfile AWS API Documentation
     #
-    # @overload update_network_profile(params = {})
+    # @overload update_network_profile(**params)
     # @param [Hash] params ({})
-    def update_network_profile(params = {}, options = {})
+    def update_network_profile(params = {}, **options)
       req = build_request(:update_network_profile, params)
       req.send_request(options)
     end
@@ -5781,9 +5781,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateProject AWS API Documentation
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -5820,9 +5820,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateTestGridProject AWS API Documentation
     #
-    # @overload update_test_grid_project(params = {})
+    # @overload update_test_grid_project(**params)
     # @param [Hash] params ({})
-    def update_test_grid_project(params = {}, options = {})
+    def update_test_grid_project(params = {}, **options)
       req = build_request(:update_test_grid_project, params)
       req.send_request(options)
     end
@@ -5872,9 +5872,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateUpload AWS API Documentation
     #
-    # @overload update_upload(params = {})
+    # @overload update_upload(**params)
     # @param [Hash] params ({})
-    def update_upload(params = {}, options = {})
+    def update_upload(params = {}, **options)
       req = build_request(:update_upload, params)
       req.send_request(options)
     end
@@ -5926,9 +5926,9 @@ module Aws::DeviceFarm
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devicefarm-2015-06-23/UpdateVPCEConfiguration AWS API Documentation
     #
-    # @overload update_vpce_configuration(params = {})
+    # @overload update_vpce_configuration(**params)
     # @param [Hash] params ({})
-    def update_vpce_configuration(params = {}, options = {})
+    def update_vpce_configuration(params = {}, **options)
       req = build_request(:update_vpce_configuration, params)
       req.send_request(options)
     end
@@ -5937,7 +5937,7 @@ module Aws::DeviceFarm
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5945,15 +5945,15 @@ module Aws::DeviceFarm
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-devicefarm'
-      context[:gem_version] = '1.39.0'
+      context[:gem_name] = "aws-sdk-devicefarm"
+      context[:gem_version] = "1.39.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

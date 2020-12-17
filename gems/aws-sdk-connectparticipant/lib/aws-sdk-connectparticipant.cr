@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-connectparticipant/types'
-require_relative 'aws-sdk-connectparticipant/client_api'
-require_relative 'aws-sdk-connectparticipant/client'
-require_relative 'aws-sdk-connectparticipant/errors'
-require_relative 'aws-sdk-connectparticipant/resource'
-require_relative 'aws-sdk-connectparticipant/customizations'
+require_relative "aws-sdk-connectparticipant/types"
+require_relative "aws-sdk-connectparticipant/client_api"
+require_relative "aws-sdk-connectparticipant/client"
+require_relative "aws-sdk-connectparticipant/errors"
+require_relative "aws-sdk-connectparticipant/resource"
+require_relative "aws-sdk-connectparticipant/customizations"
 
 # This module provides support for Amazon Connect Participant Service. This module is available in the
 # `aws-sdk-connectparticipant` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-connectparticipant/customizations'
 # @!group service
 module Aws::ConnectParticipant
 
-  GEM_VERSION = '1.8.0'
+  GEM_VERSION = "1.8.0"
 
 end

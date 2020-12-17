@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-configservice/types'
-require_relative 'aws-sdk-configservice/client_api'
-require_relative 'aws-sdk-configservice/client'
-require_relative 'aws-sdk-configservice/errors'
-require_relative 'aws-sdk-configservice/resource'
-require_relative 'aws-sdk-configservice/customizations'
+require_relative "aws-sdk-configservice/types"
+require_relative "aws-sdk-configservice/client_api"
+require_relative "aws-sdk-configservice/client"
+require_relative "aws-sdk-configservice/errors"
+require_relative "aws-sdk-configservice/resource"
+require_relative "aws-sdk-configservice/customizations"
 
 # This module provides support for AWS Config. This module is available in the
 # `aws-sdk-configservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-configservice/customizations'
 # @!group service
 module Aws::ConfigService
 
-  GEM_VERSION = '1.53.0'
+  GEM_VERSION = "1.53.0"
 
 end

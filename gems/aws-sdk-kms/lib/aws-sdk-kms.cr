@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-kms/types'
-require_relative 'aws-sdk-kms/client_api'
-require_relative 'aws-sdk-kms/client'
-require_relative 'aws-sdk-kms/errors'
-require_relative 'aws-sdk-kms/resource'
-require_relative 'aws-sdk-kms/customizations'
+require_relative "aws-sdk-kms/types"
+require_relative "aws-sdk-kms/client_api"
+require_relative "aws-sdk-kms/client"
+require_relative "aws-sdk-kms/errors"
+require_relative "aws-sdk-kms/resource"
+require_relative "aws-sdk-kms/customizations"
 
 # This module provides support for AWS Key Management Service. This module is available in the
 # `aws-sdk-kms` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-kms/customizations'
 # @!group service
 module Aws::KMS
 
-  GEM_VERSION = '1.39.0'
+  GEM_VERSION = "1.39.0"
 
 end

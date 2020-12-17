@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-migrationhubconfig/types'
-require_relative 'aws-sdk-migrationhubconfig/client_api'
-require_relative 'aws-sdk-migrationhubconfig/client'
-require_relative 'aws-sdk-migrationhubconfig/errors'
-require_relative 'aws-sdk-migrationhubconfig/resource'
-require_relative 'aws-sdk-migrationhubconfig/customizations'
+require_relative "aws-sdk-migrationhubconfig/types"
+require_relative "aws-sdk-migrationhubconfig/client_api"
+require_relative "aws-sdk-migrationhubconfig/client"
+require_relative "aws-sdk-migrationhubconfig/errors"
+require_relative "aws-sdk-migrationhubconfig/resource"
+require_relative "aws-sdk-migrationhubconfig/customizations"
 
 # This module provides support for AWS Migration Hub Config. This module is available in the
 # `aws-sdk-migrationhubconfig` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-migrationhubconfig/customizations'
 # @!group service
 module Aws::MigrationHubConfig
 
-  GEM_VERSION = '1.9.0'
+  GEM_VERSION = "1.9.0"
 
 end

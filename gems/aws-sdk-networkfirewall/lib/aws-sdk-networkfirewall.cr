@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-networkfirewall/types'
-require_relative 'aws-sdk-networkfirewall/client_api'
-require_relative 'aws-sdk-networkfirewall/client'
-require_relative 'aws-sdk-networkfirewall/errors'
-require_relative 'aws-sdk-networkfirewall/resource'
-require_relative 'aws-sdk-networkfirewall/customizations'
+require_relative "aws-sdk-networkfirewall/types"
+require_relative "aws-sdk-networkfirewall/client_api"
+require_relative "aws-sdk-networkfirewall/client"
+require_relative "aws-sdk-networkfirewall/errors"
+require_relative "aws-sdk-networkfirewall/resource"
+require_relative "aws-sdk-networkfirewall/customizations"
 
 # This module provides support for AWS Network Firewall. This module is available in the
 # `aws-sdk-networkfirewall` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-networkfirewall/customizations'
 # @!group service
 module Aws::NetworkFirewall
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

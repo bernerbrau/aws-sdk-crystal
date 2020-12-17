@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:sagemaker)
 
@@ -290,7 +290,7 @@ module Aws::SageMaker
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -391,9 +391,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AddAssociation AWS API Documentation
     #
-    # @overload add_association(params = {})
+    # @overload add_association(**params)
     # @param [Hash] params ({})
-    def add_association(params = {}, options = {})
+    def add_association(params = {}, **options)
       req = build_request(:add_association, params)
       req.send_request(options)
     end
@@ -459,9 +459,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AddTags AWS API Documentation
     #
-    # @overload add_tags(params = {})
+    # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, options = {})
+    def add_tags(params = {}, **options)
       req = build_request(:add_tags, params)
       req.send_request(options)
     end
@@ -495,9 +495,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AssociateTrialComponent AWS API Documentation
     #
-    # @overload associate_trial_component(params = {})
+    # @overload associate_trial_component(**params)
     # @param [Hash] params ({})
-    def associate_trial_component(params = {}, options = {})
+    def associate_trial_component(params = {}, **options)
       req = build_request(:associate_trial_component, params)
       req.send_request(options)
     end
@@ -576,9 +576,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAction AWS API Documentation
     #
-    # @overload create_action(params = {})
+    # @overload create_action(**params)
     # @param [Hash] params ({})
-    def create_action(params = {}, options = {})
+    def create_action(params = {}, **options)
       req = build_request(:create_action, params)
       req.send_request(options)
     end
@@ -820,9 +820,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAlgorithm AWS API Documentation
     #
-    # @overload create_algorithm(params = {})
+    # @overload create_algorithm(**params)
     # @param [Hash] params ({})
-    def create_algorithm(params = {}, options = {})
+    def create_algorithm(params = {}, **options)
       req = build_request(:create_algorithm, params)
       req.send_request(options)
     end
@@ -883,9 +883,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateApp AWS API Documentation
     #
-    # @overload create_app(params = {})
+    # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, options = {})
+    def create_app(params = {}, **options)
       req = build_request(:create_app, params)
       req.send_request(options)
     end
@@ -939,9 +939,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAppImageConfig AWS API Documentation
     #
-    # @overload create_app_image_config(params = {})
+    # @overload create_app_image_config(**params)
     # @param [Hash] params ({})
-    def create_app_image_config(params = {}, options = {})
+    def create_app_image_config(params = {}, **options)
       req = build_request(:create_app_image_config, params)
       req.send_request(options)
     end
@@ -1015,9 +1015,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateArtifact AWS API Documentation
     #
-    # @overload create_artifact(params = {})
+    # @overload create_artifact(**params)
     # @param [Hash] params ({})
-    def create_artifact(params = {}, options = {})
+    def create_artifact(params = {}, **options)
       req = build_request(:create_artifact, params)
       req.send_request(options)
     end
@@ -1133,9 +1133,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJob AWS API Documentation
     #
-    # @overload create_auto_ml_job(params = {})
+    # @overload create_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def create_auto_ml_job(params = {}, options = {})
+    def create_auto_ml_job(params = {}, **options)
       req = build_request(:create_auto_ml_job, params)
       req.send_request(options)
     end
@@ -1200,9 +1200,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCodeRepository AWS API Documentation
     #
-    # @overload create_code_repository(params = {})
+    # @overload create_code_repository(**params)
     # @param [Hash] params ({})
-    def create_code_repository(params = {}, options = {})
+    def create_code_repository(params = {}, **options)
       req = build_request(:create_code_repository, params)
       req.send_request(options)
     end
@@ -1330,9 +1330,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCompilationJob AWS API Documentation
     #
-    # @overload create_compilation_job(params = {})
+    # @overload create_compilation_job(**params)
     # @param [Hash] params ({})
-    def create_compilation_job(params = {}, options = {})
+    def create_compilation_job(params = {}, **options)
       req = build_request(:create_compilation_job, params)
       req.send_request(options)
     end
@@ -1397,9 +1397,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateContext AWS API Documentation
     #
-    # @overload create_context(params = {})
+    # @overload create_context(**params)
     # @param [Hash] params ({})
-    def create_context(params = {}, options = {})
+    def create_context(params = {}, **options)
       req = build_request(:create_context, params)
       req.send_request(options)
     end
@@ -1538,9 +1538,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateDataQualityJobDefinition AWS API Documentation
     #
-    # @overload create_data_quality_job_definition(params = {})
+    # @overload create_data_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def create_data_quality_job_definition(params = {}, options = {})
+    def create_data_quality_job_definition(params = {}, **options)
       req = build_request(:create_data_quality_job_definition, params)
       req.send_request(options)
     end
@@ -1586,9 +1586,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateDeviceFleet AWS API Documentation
     #
-    # @overload create_device_fleet(params = {})
+    # @overload create_device_fleet(**params)
     # @param [Hash] params ({})
-    def create_device_fleet(params = {}, options = {})
+    def create_device_fleet(params = {}, **options)
       req = build_request(:create_device_fleet, params)
       req.send_request(options)
     end
@@ -1749,9 +1749,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateDomain AWS API Documentation
     #
-    # @overload create_domain(params = {})
+    # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, options = {})
+    def create_domain(params = {}, **options)
       req = build_request(:create_domain, params)
       req.send_request(options)
     end
@@ -1814,9 +1814,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgePackagingJob AWS API Documentation
     #
-    # @overload create_edge_packaging_job(params = {})
+    # @overload create_edge_packaging_job(**params)
     # @param [Hash] params ({})
-    def create_edge_packaging_job(params = {}, options = {})
+    def create_edge_packaging_job(params = {}, **options)
       req = build_request(:create_edge_packaging_job, params)
       req.send_request(options)
     end
@@ -1953,9 +1953,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEndpoint AWS API Documentation
     #
-    # @overload create_endpoint(params = {})
+    # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, options = {})
+    def create_endpoint(params = {}, **options)
       req = build_request(:create_endpoint, params)
       req.send_request(options)
     end
@@ -2119,9 +2119,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEndpointConfig AWS API Documentation
     #
-    # @overload create_endpoint_config(params = {})
+    # @overload create_endpoint_config(**params)
     # @param [Hash] params ({})
-    def create_endpoint_config(params = {}, options = {})
+    def create_endpoint_config(params = {}, **options)
       req = build_request(:create_endpoint_config, params)
       req.send_request(options)
     end
@@ -2193,9 +2193,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateExperiment AWS API Documentation
     #
-    # @overload create_experiment(params = {})
+    # @overload create_experiment(**params)
     # @param [Hash] params ({})
-    def create_experiment(params = {}, options = {})
+    def create_experiment(params = {}, **options)
       req = build_request(:create_experiment, params)
       req.send_request(options)
     end
@@ -2360,9 +2360,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateFeatureGroup AWS API Documentation
     #
-    # @overload create_feature_group(params = {})
+    # @overload create_feature_group(**params)
     # @param [Hash] params ({})
-    def create_feature_group(params = {}, options = {})
+    def create_feature_group(params = {}, **options)
       req = build_request(:create_feature_group, params)
       req.send_request(options)
     end
@@ -2451,9 +2451,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateFlowDefinition AWS API Documentation
     #
-    # @overload create_flow_definition(params = {})
+    # @overload create_flow_definition(**params)
     # @param [Hash] params ({})
-    def create_flow_definition(params = {}, options = {})
+    def create_flow_definition(params = {}, **options)
       req = build_request(:create_flow_definition, params)
       req.send_request(options)
     end
@@ -2498,9 +2498,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateHumanTaskUi AWS API Documentation
     #
-    # @overload create_human_task_ui(params = {})
+    # @overload create_human_task_ui(**params)
     # @param [Hash] params ({})
-    def create_human_task_ui(params = {}, options = {})
+    def create_human_task_ui(params = {}, **options)
       req = build_request(:create_human_task_ui, params)
       req.send_request(options)
     end
@@ -2838,9 +2838,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateHyperParameterTuningJob AWS API Documentation
     #
-    # @overload create_hyper_parameter_tuning_job(params = {})
+    # @overload create_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def create_hyper_parameter_tuning_job(params = {}, options = {})
+    def create_hyper_parameter_tuning_job(params = {}, **options)
       req = build_request(:create_hyper_parameter_tuning_job, params)
       req.send_request(options)
     end
@@ -2896,9 +2896,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateImage AWS API Documentation
     #
-    # @overload create_image(params = {})
+    # @overload create_image(**params)
     # @param [Hash] params ({})
-    def create_image(params = {}, options = {})
+    def create_image(params = {}, **options)
       req = build_request(:create_image, params)
       req.send_request(options)
     end
@@ -2943,9 +2943,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateImageVersion AWS API Documentation
     #
-    # @overload create_image_version(params = {})
+    # @overload create_image_version(**params)
     # @param [Hash] params ({})
-    def create_image_version(params = {}, options = {})
+    def create_image_version(params = {}, **options)
       req = build_request(:create_image_version, params)
       req.send_request(options)
     end
@@ -3163,9 +3163,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateLabelingJob AWS API Documentation
     #
-    # @overload create_labeling_job(params = {})
+    # @overload create_labeling_job(**params)
     # @param [Hash] params ({})
-    def create_labeling_job(params = {}, options = {})
+    def create_labeling_job(params = {}, **options)
       req = build_request(:create_labeling_job, params)
       req.send_request(options)
     end
@@ -3316,9 +3316,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModel AWS API Documentation
     #
-    # @overload create_model(params = {})
+    # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, options = {})
+    def create_model(params = {}, **options)
       req = build_request(:create_model, params)
       req.send_request(options)
     end
@@ -3449,9 +3449,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelBiasJobDefinition AWS API Documentation
     #
-    # @overload create_model_bias_job_definition(params = {})
+    # @overload create_model_bias_job_definition(**params)
     # @param [Hash] params ({})
-    def create_model_bias_job_definition(params = {}, options = {})
+    def create_model_bias_job_definition(params = {}, **options)
       req = build_request(:create_model_bias_job_definition, params)
       req.send_request(options)
     end
@@ -3579,9 +3579,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelExplainabilityJobDefinition AWS API Documentation
     #
-    # @overload create_model_explainability_job_definition(params = {})
+    # @overload create_model_explainability_job_definition(**params)
     # @param [Hash] params ({})
-    def create_model_explainability_job_definition(params = {}, options = {})
+    def create_model_explainability_job_definition(params = {}, **options)
       req = build_request(:create_model_explainability_job_definition, params)
       req.send_request(options)
     end
@@ -3813,9 +3813,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelPackage AWS API Documentation
     #
-    # @overload create_model_package(params = {})
+    # @overload create_model_package(**params)
     # @param [Hash] params ({})
-    def create_model_package(params = {}, options = {})
+    def create_model_package(params = {}, **options)
       req = build_request(:create_model_package, params)
       req.send_request(options)
     end
@@ -3861,9 +3861,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelPackageGroup AWS API Documentation
     #
-    # @overload create_model_package_group(params = {})
+    # @overload create_model_package_group(**params)
     # @param [Hash] params ({})
-    def create_model_package_group(params = {}, options = {})
+    def create_model_package_group(params = {}, **options)
       req = build_request(:create_model_package_group, params)
       req.send_request(options)
     end
@@ -4003,9 +4003,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelQualityJobDefinition AWS API Documentation
     #
-    # @overload create_model_quality_job_definition(params = {})
+    # @overload create_model_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def create_model_quality_job_definition(params = {}, options = {})
+    def create_model_quality_job_definition(params = {}, **options)
       req = build_request(:create_model_quality_job_definition, params)
       req.send_request(options)
     end
@@ -4125,9 +4125,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateMonitoringSchedule AWS API Documentation
     #
-    # @overload create_monitoring_schedule(params = {})
+    # @overload create_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def create_monitoring_schedule(params = {}, options = {})
+    def create_monitoring_schedule(params = {}, **options)
       req = build_request(:create_monitoring_schedule, params)
       req.send_request(options)
     end
@@ -4342,9 +4342,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateNotebookInstance AWS API Documentation
     #
-    # @overload create_notebook_instance(params = {})
+    # @overload create_notebook_instance(**params)
     # @param [Hash] params ({})
-    def create_notebook_instance(params = {}, options = {})
+    def create_notebook_instance(params = {}, **options)
       req = build_request(:create_notebook_instance, params)
       req.send_request(options)
     end
@@ -4411,9 +4411,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateNotebookInstanceLifecycleConfig AWS API Documentation
     #
-    # @overload create_notebook_instance_lifecycle_config(params = {})
+    # @overload create_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def create_notebook_instance_lifecycle_config(params = {}, options = {})
+    def create_notebook_instance_lifecycle_config(params = {}, **options)
       req = build_request(:create_notebook_instance_lifecycle_config, params)
       req.send_request(options)
     end
@@ -4474,9 +4474,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePipeline AWS API Documentation
     #
-    # @overload create_pipeline(params = {})
+    # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, options = {})
+    def create_pipeline(params = {}, **options)
       req = build_request(:create_pipeline, params)
       req.send_request(options)
     end
@@ -4521,9 +4521,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedDomainUrl AWS API Documentation
     #
-    # @overload create_presigned_domain_url(params = {})
+    # @overload create_presigned_domain_url(**params)
     # @param [Hash] params ({})
-    def create_presigned_domain_url(params = {}, options = {})
+    def create_presigned_domain_url(params = {}, **options)
       req = build_request(:create_presigned_domain_url, params)
       req.send_request(options)
     end
@@ -4582,9 +4582,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedNotebookInstanceUrl AWS API Documentation
     #
-    # @overload create_presigned_notebook_instance_url(params = {})
+    # @overload create_presigned_notebook_instance_url(**params)
     # @param [Hash] params ({})
-    def create_presigned_notebook_instance_url(params = {}, options = {})
+    def create_presigned_notebook_instance_url(params = {}, **options)
       req = build_request(:create_presigned_notebook_instance_url, params)
       req.send_request(options)
     end
@@ -4754,9 +4754,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateProcessingJob AWS API Documentation
     #
-    # @overload create_processing_job(params = {})
+    # @overload create_processing_job(**params)
     # @param [Hash] params ({})
-    def create_processing_job(params = {}, options = {})
+    def create_processing_job(params = {}, **options)
       req = build_request(:create_processing_job, params)
       req.send_request(options)
     end
@@ -4824,9 +4824,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -5220,9 +5220,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrainingJob AWS API Documentation
     #
-    # @overload create_training_job(params = {})
+    # @overload create_training_job(**params)
     # @param [Hash] params ({})
-    def create_training_job(params = {}, options = {})
+    def create_training_job(params = {}, **options)
       req = build_request(:create_training_job, params)
       req.send_request(options)
     end
@@ -5430,9 +5430,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTransformJob AWS API Documentation
     #
-    # @overload create_transform_job(params = {})
+    # @overload create_transform_job(**params)
     # @param [Hash] params ({})
-    def create_transform_job(params = {}, options = {})
+    def create_transform_job(params = {}, **options)
       req = build_request(:create_transform_job, params)
       req.send_request(options)
     end
@@ -5501,9 +5501,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrial AWS API Documentation
     #
-    # @overload create_trial(params = {})
+    # @overload create_trial(**params)
     # @param [Hash] params ({})
-    def create_trial(params = {}, options = {})
+    def create_trial(params = {}, **options)
       req = build_request(:create_trial, params)
       req.send_request(options)
     end
@@ -5627,9 +5627,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrialComponent AWS API Documentation
     #
-    # @overload create_trial_component(params = {})
+    # @overload create_trial_component(**params)
     # @param [Hash] params ({})
-    def create_trial_component(params = {}, options = {})
+    def create_trial_component(params = {}, **options)
       req = build_request(:create_trial_component, params)
       req.send_request(options)
     end
@@ -5730,9 +5730,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateUserProfile AWS API Documentation
     #
-    # @overload create_user_profile(params = {})
+    # @overload create_user_profile(**params)
     # @param [Hash] params ({})
-    def create_user_profile(params = {}, options = {})
+    def create_user_profile(params = {}, **options)
       req = build_request(:create_user_profile, params)
       req.send_request(options)
     end
@@ -5836,9 +5836,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateWorkforce AWS API Documentation
     #
-    # @overload create_workforce(params = {})
+    # @overload create_workforce(**params)
     # @param [Hash] params ({})
-    def create_workforce(params = {}, options = {})
+    def create_workforce(params = {}, **options)
       req = build_request(:create_workforce, params)
       req.send_request(options)
     end
@@ -5938,9 +5938,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateWorkteam AWS API Documentation
     #
-    # @overload create_workteam(params = {})
+    # @overload create_workteam(**params)
     # @param [Hash] params ({})
-    def create_workteam(params = {}, options = {})
+    def create_workteam(params = {}, **options)
       req = build_request(:create_workteam, params)
       req.send_request(options)
     end
@@ -5966,9 +5966,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteAction AWS API Documentation
     #
-    # @overload delete_action(params = {})
+    # @overload delete_action(**params)
     # @param [Hash] params ({})
-    def delete_action(params = {}, options = {})
+    def delete_action(params = {}, **options)
       req = build_request(:delete_action, params)
       req.send_request(options)
     end
@@ -5988,9 +5988,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteAlgorithm AWS API Documentation
     #
-    # @overload delete_algorithm(params = {})
+    # @overload delete_algorithm(**params)
     # @param [Hash] params ({})
-    def delete_algorithm(params = {}, options = {})
+    def delete_algorithm(params = {}, **options)
       req = build_request(:delete_algorithm, params)
       req.send_request(options)
     end
@@ -6022,9 +6022,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteApp AWS API Documentation
     #
-    # @overload delete_app(params = {})
+    # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, options = {})
+    def delete_app(params = {}, **options)
       req = build_request(:delete_app, params)
       req.send_request(options)
     end
@@ -6044,9 +6044,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteAppImageConfig AWS API Documentation
     #
-    # @overload delete_app_image_config(params = {})
+    # @overload delete_app_image_config(**params)
     # @param [Hash] params ({})
-    def delete_app_image_config(params = {}, options = {})
+    def delete_app_image_config(params = {}, **options)
       req = build_request(:delete_app_image_config, params)
       req.send_request(options)
     end
@@ -6085,9 +6085,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteArtifact AWS API Documentation
     #
-    # @overload delete_artifact(params = {})
+    # @overload delete_artifact(**params)
     # @param [Hash] params ({})
-    def delete_artifact(params = {}, options = {})
+    def delete_artifact(params = {}, **options)
       req = build_request(:delete_artifact, params)
       req.send_request(options)
     end
@@ -6119,9 +6119,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteAssociation AWS API Documentation
     #
-    # @overload delete_association(params = {})
+    # @overload delete_association(**params)
     # @param [Hash] params ({})
-    def delete_association(params = {}, options = {})
+    def delete_association(params = {}, **options)
       req = build_request(:delete_association, params)
       req.send_request(options)
     end
@@ -6141,9 +6141,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteCodeRepository AWS API Documentation
     #
-    # @overload delete_code_repository(params = {})
+    # @overload delete_code_repository(**params)
     # @param [Hash] params ({})
-    def delete_code_repository(params = {}, options = {})
+    def delete_code_repository(params = {}, **options)
       req = build_request(:delete_code_repository, params)
       req.send_request(options)
     end
@@ -6169,9 +6169,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteContext AWS API Documentation
     #
-    # @overload delete_context(params = {})
+    # @overload delete_context(**params)
     # @param [Hash] params ({})
-    def delete_context(params = {}, options = {})
+    def delete_context(params = {}, **options)
       req = build_request(:delete_context, params)
       req.send_request(options)
     end
@@ -6191,9 +6191,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteDataQualityJobDefinition AWS API Documentation
     #
-    # @overload delete_data_quality_job_definition(params = {})
+    # @overload delete_data_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_data_quality_job_definition(params = {}, options = {})
+    def delete_data_quality_job_definition(params = {}, **options)
       req = build_request(:delete_data_quality_job_definition, params)
       req.send_request(options)
     end
@@ -6213,9 +6213,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteDeviceFleet AWS API Documentation
     #
-    # @overload delete_device_fleet(params = {})
+    # @overload delete_device_fleet(**params)
     # @param [Hash] params ({})
-    def delete_device_fleet(params = {}, options = {})
+    def delete_device_fleet(params = {}, **options)
       req = build_request(:delete_device_fleet, params)
       req.send_request(options)
     end
@@ -6246,9 +6246,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteDomain AWS API Documentation
     #
-    # @overload delete_domain(params = {})
+    # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, options = {})
+    def delete_domain(params = {}, **options)
       req = build_request(:delete_domain, params)
       req.send_request(options)
     end
@@ -6277,9 +6277,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEndpoint AWS API Documentation
     #
-    # @overload delete_endpoint(params = {})
+    # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, options = {})
+    def delete_endpoint(params = {}, **options)
       req = build_request(:delete_endpoint, params)
       req.send_request(options)
     end
@@ -6308,9 +6308,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEndpointConfig AWS API Documentation
     #
-    # @overload delete_endpoint_config(params = {})
+    # @overload delete_endpoint_config(**params)
     # @param [Hash] params ({})
-    def delete_endpoint_config(params = {}, options = {})
+    def delete_endpoint_config(params = {}, **options)
       req = build_request(:delete_endpoint_config, params)
       req.send_request(options)
     end
@@ -6338,9 +6338,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteExperiment AWS API Documentation
     #
-    # @overload delete_experiment(params = {})
+    # @overload delete_experiment(**params)
     # @param [Hash] params ({})
-    def delete_experiment(params = {}, options = {})
+    def delete_experiment(params = {}, **options)
       req = build_request(:delete_experiment, params)
       req.send_request(options)
     end
@@ -6367,9 +6367,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteFeatureGroup AWS API Documentation
     #
-    # @overload delete_feature_group(params = {})
+    # @overload delete_feature_group(**params)
     # @param [Hash] params ({})
-    def delete_feature_group(params = {}, options = {})
+    def delete_feature_group(params = {}, **options)
       req = build_request(:delete_feature_group, params)
       req.send_request(options)
     end
@@ -6389,9 +6389,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteFlowDefinition AWS API Documentation
     #
-    # @overload delete_flow_definition(params = {})
+    # @overload delete_flow_definition(**params)
     # @param [Hash] params ({})
-    def delete_flow_definition(params = {}, options = {})
+    def delete_flow_definition(params = {}, **options)
       req = build_request(:delete_flow_definition, params)
       req.send_request(options)
     end
@@ -6417,9 +6417,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHumanTaskUi AWS API Documentation
     #
-    # @overload delete_human_task_ui(params = {})
+    # @overload delete_human_task_ui(**params)
     # @param [Hash] params ({})
-    def delete_human_task_ui(params = {}, options = {})
+    def delete_human_task_ui(params = {}, **options)
       req = build_request(:delete_human_task_ui, params)
       req.send_request(options)
     end
@@ -6440,9 +6440,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteImage AWS API Documentation
     #
-    # @overload delete_image(params = {})
+    # @overload delete_image(**params)
     # @param [Hash] params ({})
-    def delete_image(params = {}, options = {})
+    def delete_image(params = {}, **options)
       req = build_request(:delete_image, params)
       req.send_request(options)
     end
@@ -6467,9 +6467,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteImageVersion AWS API Documentation
     #
-    # @overload delete_image_version(params = {})
+    # @overload delete_image_version(**params)
     # @param [Hash] params ({})
-    def delete_image_version(params = {}, options = {})
+    def delete_image_version(params = {}, **options)
       req = build_request(:delete_image_version, params)
       req.send_request(options)
     end
@@ -6492,9 +6492,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModel AWS API Documentation
     #
-    # @overload delete_model(params = {})
+    # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, options = {})
+    def delete_model(params = {}, **options)
       req = build_request(:delete_model, params)
       req.send_request(options)
     end
@@ -6514,9 +6514,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelBiasJobDefinition AWS API Documentation
     #
-    # @overload delete_model_bias_job_definition(params = {})
+    # @overload delete_model_bias_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_model_bias_job_definition(params = {}, options = {})
+    def delete_model_bias_job_definition(params = {}, **options)
       req = build_request(:delete_model_bias_job_definition, params)
       req.send_request(options)
     end
@@ -6536,9 +6536,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelExplainabilityJobDefinition AWS API Documentation
     #
-    # @overload delete_model_explainability_job_definition(params = {})
+    # @overload delete_model_explainability_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_model_explainability_job_definition(params = {}, options = {})
+    def delete_model_explainability_job_definition(params = {}, **options)
       req = build_request(:delete_model_explainability_job_definition, params)
       req.send_request(options)
     end
@@ -6563,9 +6563,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelPackage AWS API Documentation
     #
-    # @overload delete_model_package(params = {})
+    # @overload delete_model_package(**params)
     # @param [Hash] params ({})
-    def delete_model_package(params = {}, options = {})
+    def delete_model_package(params = {}, **options)
       req = build_request(:delete_model_package, params)
       req.send_request(options)
     end
@@ -6585,9 +6585,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelPackageGroup AWS API Documentation
     #
-    # @overload delete_model_package_group(params = {})
+    # @overload delete_model_package_group(**params)
     # @param [Hash] params ({})
-    def delete_model_package_group(params = {}, options = {})
+    def delete_model_package_group(params = {}, **options)
       req = build_request(:delete_model_package_group, params)
       req.send_request(options)
     end
@@ -6607,9 +6607,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelPackageGroupPolicy AWS API Documentation
     #
-    # @overload delete_model_package_group_policy(params = {})
+    # @overload delete_model_package_group_policy(**params)
     # @param [Hash] params ({})
-    def delete_model_package_group_policy(params = {}, options = {})
+    def delete_model_package_group_policy(params = {}, **options)
       req = build_request(:delete_model_package_group_policy, params)
       req.send_request(options)
     end
@@ -6629,9 +6629,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelQualityJobDefinition AWS API Documentation
     #
-    # @overload delete_model_quality_job_definition(params = {})
+    # @overload delete_model_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def delete_model_quality_job_definition(params = {}, options = {})
+    def delete_model_quality_job_definition(params = {}, **options)
       req = build_request(:delete_model_quality_job_definition, params)
       req.send_request(options)
     end
@@ -6653,9 +6653,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteMonitoringSchedule AWS API Documentation
     #
-    # @overload delete_monitoring_schedule(params = {})
+    # @overload delete_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def delete_monitoring_schedule(params = {}, options = {})
+    def delete_monitoring_schedule(params = {}, **options)
       req = build_request(:delete_monitoring_schedule, params)
       req.send_request(options)
     end
@@ -6681,9 +6681,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteNotebookInstance AWS API Documentation
     #
-    # @overload delete_notebook_instance(params = {})
+    # @overload delete_notebook_instance(**params)
     # @param [Hash] params ({})
-    def delete_notebook_instance(params = {}, options = {})
+    def delete_notebook_instance(params = {}, **options)
       req = build_request(:delete_notebook_instance, params)
       req.send_request(options)
     end
@@ -6703,9 +6703,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteNotebookInstanceLifecycleConfig AWS API Documentation
     #
-    # @overload delete_notebook_instance_lifecycle_config(params = {})
+    # @overload delete_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def delete_notebook_instance_lifecycle_config(params = {}, options = {})
+    def delete_notebook_instance_lifecycle_config(params = {}, **options)
       req = build_request(:delete_notebook_instance_lifecycle_config, params)
       req.send_request(options)
     end
@@ -6740,9 +6740,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeletePipeline AWS API Documentation
     #
-    # @overload delete_pipeline(params = {})
+    # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, options = {})
+    def delete_pipeline(params = {}, **options)
       req = build_request(:delete_pipeline, params)
       req.send_request(options)
     end
@@ -6762,9 +6762,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -6797,9 +6797,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -6827,9 +6827,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteTrial AWS API Documentation
     #
-    # @overload delete_trial(params = {})
+    # @overload delete_trial(**params)
     # @param [Hash] params ({})
-    def delete_trial(params = {}, options = {})
+    def delete_trial(params = {}, **options)
       req = build_request(:delete_trial, params)
       req.send_request(options)
     end
@@ -6858,9 +6858,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteTrialComponent AWS API Documentation
     #
-    # @overload delete_trial_component(params = {})
+    # @overload delete_trial_component(**params)
     # @param [Hash] params ({})
-    def delete_trial_component(params = {}, options = {})
+    def delete_trial_component(params = {}, **options)
       req = build_request(:delete_trial_component, params)
       req.send_request(options)
     end
@@ -6886,9 +6886,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteUserProfile AWS API Documentation
     #
-    # @overload delete_user_profile(params = {})
+    # @overload delete_user_profile(**params)
     # @param [Hash] params ({})
-    def delete_user_profile(params = {}, options = {})
+    def delete_user_profile(params = {}, **options)
       req = build_request(:delete_user_profile, params)
       req.send_request(options)
     end
@@ -6917,9 +6917,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteWorkforce AWS API Documentation
     #
-    # @overload delete_workforce(params = {})
+    # @overload delete_workforce(**params)
     # @param [Hash] params ({})
-    def delete_workforce(params = {}, options = {})
+    def delete_workforce(params = {}, **options)
       req = build_request(:delete_workforce, params)
       req.send_request(options)
     end
@@ -6945,9 +6945,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteWorkteam AWS API Documentation
     #
-    # @overload delete_workteam(params = {})
+    # @overload delete_workteam(**params)
     # @param [Hash] params ({})
-    def delete_workteam(params = {}, options = {})
+    def delete_workteam(params = {}, **options)
       req = build_request(:delete_workteam, params)
       req.send_request(options)
     end
@@ -6972,9 +6972,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeregisterDevices AWS API Documentation
     #
-    # @overload deregister_devices(params = {})
+    # @overload deregister_devices(**params)
     # @param [Hash] params ({})
-    def deregister_devices(params = {}, options = {})
+    def deregister_devices(params = {}, **options)
       req = build_request(:deregister_devices, params)
       req.send_request(options)
     end
@@ -7032,9 +7032,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAction AWS API Documentation
     #
-    # @overload describe_action(params = {})
+    # @overload describe_action(**params)
     # @param [Hash] params ({})
-    def describe_action(params = {}, options = {})
+    def describe_action(params = {}, **options)
       req = build_request(:describe_action, params)
       req.send_request(options)
     end
@@ -7180,9 +7180,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAlgorithm AWS API Documentation
     #
-    # @overload describe_algorithm(params = {})
+    # @overload describe_algorithm(**params)
     # @param [Hash] params ({})
-    def describe_algorithm(params = {}, options = {})
+    def describe_algorithm(params = {}, **options)
       req = build_request(:describe_algorithm, params)
       req.send_request(options)
     end
@@ -7242,9 +7242,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeApp AWS API Documentation
     #
-    # @overload describe_app(params = {})
+    # @overload describe_app(**params)
     # @param [Hash] params ({})
-    def describe_app(params = {}, options = {})
+    def describe_app(params = {}, **options)
       req = build_request(:describe_app, params)
       req.send_request(options)
     end
@@ -7283,9 +7283,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAppImageConfig AWS API Documentation
     #
-    # @overload describe_app_image_config(params = {})
+    # @overload describe_app_image_config(**params)
     # @param [Hash] params ({})
-    def describe_app_image_config(params = {}, options = {})
+    def describe_app_image_config(params = {}, **options)
       req = build_request(:describe_app_image_config, params)
       req.send_request(options)
     end
@@ -7340,9 +7340,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeArtifact AWS API Documentation
     #
-    # @overload describe_artifact(params = {})
+    # @overload describe_artifact(**params)
     # @param [Hash] params ({})
-    def describe_artifact(params = {}, options = {})
+    def describe_artifact(params = {}, **options)
       req = build_request(:describe_artifact, params)
       req.send_request(options)
     end
@@ -7438,9 +7438,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJob AWS API Documentation
     #
-    # @overload describe_auto_ml_job(params = {})
+    # @overload describe_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def describe_auto_ml_job(params = {}, options = {})
+    def describe_auto_ml_job(params = {}, **options)
       req = build_request(:describe_auto_ml_job, params)
       req.send_request(options)
     end
@@ -7476,9 +7476,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeCodeRepository AWS API Documentation
     #
-    # @overload describe_code_repository(params = {})
+    # @overload describe_code_repository(**params)
     # @param [Hash] params ({})
-    def describe_code_repository(params = {}, options = {})
+    def describe_code_repository(params = {}, **options)
       req = build_request(:describe_code_repository, params)
       req.send_request(options)
     end
@@ -7543,9 +7543,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeCompilationJob AWS API Documentation
     #
-    # @overload describe_compilation_job(params = {})
+    # @overload describe_compilation_job(**params)
     # @param [Hash] params ({})
-    def describe_compilation_job(params = {}, options = {})
+    def describe_compilation_job(params = {}, **options)
       req = build_request(:describe_compilation_job, params)
       req.send_request(options)
     end
@@ -7596,9 +7596,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeContext AWS API Documentation
     #
-    # @overload describe_context(params = {})
+    # @overload describe_context(**params)
     # @param [Hash] params ({})
-    def describe_context(params = {}, options = {})
+    def describe_context(params = {}, **options)
       req = build_request(:describe_context, params)
       req.send_request(options)
     end
@@ -7675,9 +7675,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeDataQualityJobDefinition AWS API Documentation
     #
-    # @overload describe_data_quality_job_definition(params = {})
+    # @overload describe_data_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_data_quality_job_definition(params = {}, options = {})
+    def describe_data_quality_job_definition(params = {}, **options)
       req = build_request(:describe_data_quality_job_definition, params)
       req.send_request(options)
     end
@@ -7733,9 +7733,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeDevice AWS API Documentation
     #
-    # @overload describe_device(params = {})
+    # @overload describe_device(**params)
     # @param [Hash] params ({})
-    def describe_device(params = {}, options = {})
+    def describe_device(params = {}, **options)
       req = build_request(:describe_device, params)
       req.send_request(options)
     end
@@ -7776,9 +7776,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeDeviceFleet AWS API Documentation
     #
-    # @overload describe_device_fleet(params = {})
+    # @overload describe_device_fleet(**params)
     # @param [Hash] params ({})
-    def describe_device_fleet(params = {}, options = {})
+    def describe_device_fleet(params = {}, **options)
       req = build_request(:describe_device_fleet, params)
       req.send_request(options)
     end
@@ -7855,9 +7855,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeDomain AWS API Documentation
     #
-    # @overload describe_domain(params = {})
+    # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, options = {})
+    def describe_domain(params = {}, **options)
       req = build_request(:describe_domain, params)
       req.send_request(options)
     end
@@ -7910,9 +7910,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeEdgePackagingJob AWS API Documentation
     #
-    # @overload describe_edge_packaging_job(params = {})
+    # @overload describe_edge_packaging_job(**params)
     # @param [Hash] params ({})
-    def describe_edge_packaging_job(params = {}, options = {})
+    def describe_edge_packaging_job(params = {}, **options)
       req = build_request(:describe_edge_packaging_job, params)
       req.send_request(options)
     end
@@ -7982,9 +7982,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeEndpoint AWS API Documentation
     #
-    # @overload describe_endpoint(params = {})
+    # @overload describe_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_endpoint(params = {}, options = {})
+    def describe_endpoint(params = {}, **options)
       req = build_request(:describe_endpoint, params)
       req.send_request(options)
     end
@@ -8036,9 +8036,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeEndpointConfig AWS API Documentation
     #
-    # @overload describe_endpoint_config(params = {})
+    # @overload describe_endpoint_config(**params)
     # @param [Hash] params ({})
-    def describe_endpoint_config(params = {}, options = {})
+    def describe_endpoint_config(params = {}, **options)
       req = build_request(:describe_endpoint_config, params)
       req.send_request(options)
     end
@@ -8085,9 +8085,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeExperiment AWS API Documentation
     #
-    # @overload describe_experiment(params = {})
+    # @overload describe_experiment(**params)
     # @param [Hash] params ({})
-    def describe_experiment(params = {}, options = {})
+    def describe_experiment(params = {}, **options)
       req = build_request(:describe_experiment, params)
       req.send_request(options)
     end
@@ -8155,9 +8155,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeFeatureGroup AWS API Documentation
     #
-    # @overload describe_feature_group(params = {})
+    # @overload describe_feature_group(**params)
     # @param [Hash] params ({})
-    def describe_feature_group(params = {}, options = {})
+    def describe_feature_group(params = {}, **options)
       req = build_request(:describe_feature_group, params)
       req.send_request(options)
     end
@@ -8213,9 +8213,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeFlowDefinition AWS API Documentation
     #
-    # @overload describe_flow_definition(params = {})
+    # @overload describe_flow_definition(**params)
     # @param [Hash] params ({})
-    def describe_flow_definition(params = {}, options = {})
+    def describe_flow_definition(params = {}, **options)
       req = build_request(:describe_flow_definition, params)
       req.send_request(options)
     end
@@ -8252,9 +8252,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeHumanTaskUi AWS API Documentation
     #
-    # @overload describe_human_task_ui(params = {})
+    # @overload describe_human_task_ui(**params)
     # @param [Hash] params ({})
-    def describe_human_task_ui(params = {}, options = {})
+    def describe_human_task_ui(params = {}, **options)
       req = build_request(:describe_human_task_ui, params)
       req.send_request(options)
     end
@@ -8481,9 +8481,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeHyperParameterTuningJob AWS API Documentation
     #
-    # @overload describe_hyper_parameter_tuning_job(params = {})
+    # @overload describe_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def describe_hyper_parameter_tuning_job(params = {}, options = {})
+    def describe_hyper_parameter_tuning_job(params = {}, **options)
       req = build_request(:describe_hyper_parameter_tuning_job, params)
       req.send_request(options)
     end
@@ -8525,9 +8525,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeImage AWS API Documentation
     #
-    # @overload describe_image(params = {})
+    # @overload describe_image(**params)
     # @param [Hash] params ({})
-    def describe_image(params = {}, options = {})
+    def describe_image(params = {}, **options)
       req = build_request(:describe_image, params)
       req.send_request(options)
     end
@@ -8574,9 +8574,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeImageVersion AWS API Documentation
     #
-    # @overload describe_image_version(params = {})
+    # @overload describe_image_version(**params)
     # @param [Hash] params ({})
-    def describe_image_version(params = {}, options = {})
+    def describe_image_version(params = {}, **options)
       req = build_request(:describe_image_version, params)
       req.send_request(options)
     end
@@ -8666,9 +8666,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLabelingJob AWS API Documentation
     #
-    # @overload describe_labeling_job(params = {})
+    # @overload describe_labeling_job(**params)
     # @param [Hash] params ({})
-    def describe_labeling_job(params = {}, options = {})
+    def describe_labeling_job(params = {}, **options)
       req = build_request(:describe_labeling_job, params)
       req.send_request(options)
     end
@@ -8726,9 +8726,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModel AWS API Documentation
     #
-    # @overload describe_model(params = {})
+    # @overload describe_model(**params)
     # @param [Hash] params ({})
-    def describe_model(params = {}, options = {})
+    def describe_model(params = {}, **options)
       req = build_request(:describe_model, params)
       req.send_request(options)
     end
@@ -8801,9 +8801,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelBiasJobDefinition AWS API Documentation
     #
-    # @overload describe_model_bias_job_definition(params = {})
+    # @overload describe_model_bias_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_model_bias_job_definition(params = {}, options = {})
+    def describe_model_bias_job_definition(params = {}, **options)
       req = build_request(:describe_model_bias_job_definition, params)
       req.send_request(options)
     end
@@ -8875,9 +8875,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelExplainabilityJobDefinition AWS API Documentation
     #
-    # @overload describe_model_explainability_job_definition(params = {})
+    # @overload describe_model_explainability_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_model_explainability_job_definition(params = {}, options = {})
+    def describe_model_explainability_job_definition(params = {}, **options)
       req = build_request(:describe_model_explainability_job_definition, params)
       req.send_request(options)
     end
@@ -9008,9 +9008,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelPackage AWS API Documentation
     #
-    # @overload describe_model_package(params = {})
+    # @overload describe_model_package(**params)
     # @param [Hash] params ({})
-    def describe_model_package(params = {}, options = {})
+    def describe_model_package(params = {}, **options)
       req = build_request(:describe_model_package, params)
       req.send_request(options)
     end
@@ -9048,9 +9048,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelPackageGroup AWS API Documentation
     #
-    # @overload describe_model_package_group(params = {})
+    # @overload describe_model_package_group(**params)
     # @param [Hash] params ({})
-    def describe_model_package_group(params = {}, options = {})
+    def describe_model_package_group(params = {}, **options)
       req = build_request(:describe_model_package_group, params)
       req.send_request(options)
     end
@@ -9129,9 +9129,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelQualityJobDefinition AWS API Documentation
     #
-    # @overload describe_model_quality_job_definition(params = {})
+    # @overload describe_model_quality_job_definition(**params)
     # @param [Hash] params ({})
-    def describe_model_quality_job_definition(params = {}, options = {})
+    def describe_model_quality_job_definition(params = {}, **options)
       req = build_request(:describe_model_quality_job_definition, params)
       req.send_request(options)
     end
@@ -9226,9 +9226,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeMonitoringSchedule AWS API Documentation
     #
-    # @overload describe_monitoring_schedule(params = {})
+    # @overload describe_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def describe_monitoring_schedule(params = {}, options = {})
+    def describe_monitoring_schedule(params = {}, **options)
       req = build_request(:describe_monitoring_schedule, params)
       req.send_request(options)
     end
@@ -9302,9 +9302,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeNotebookInstance AWS API Documentation
     #
-    # @overload describe_notebook_instance(params = {})
+    # @overload describe_notebook_instance(**params)
     # @param [Hash] params ({})
-    def describe_notebook_instance(params = {}, options = {})
+    def describe_notebook_instance(params = {}, **options)
       req = build_request(:describe_notebook_instance, params)
       req.send_request(options)
     end
@@ -9349,9 +9349,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeNotebookInstanceLifecycleConfig AWS API Documentation
     #
-    # @overload describe_notebook_instance_lifecycle_config(params = {})
+    # @overload describe_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def describe_notebook_instance_lifecycle_config(params = {}, options = {})
+    def describe_notebook_instance_lifecycle_config(params = {}, **options)
       req = build_request(:describe_notebook_instance_lifecycle_config, params)
       req.send_request(options)
     end
@@ -9403,9 +9403,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribePipeline AWS API Documentation
     #
-    # @overload describe_pipeline(params = {})
+    # @overload describe_pipeline(**params)
     # @param [Hash] params ({})
-    def describe_pipeline(params = {}, options = {})
+    def describe_pipeline(params = {}, **options)
       req = build_request(:describe_pipeline, params)
       req.send_request(options)
     end
@@ -9433,9 +9433,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribePipelineDefinitionForExecution AWS API Documentation
     #
-    # @overload describe_pipeline_definition_for_execution(params = {})
+    # @overload describe_pipeline_definition_for_execution(**params)
     # @param [Hash] params ({})
-    def describe_pipeline_definition_for_execution(params = {}, options = {})
+    def describe_pipeline_definition_for_execution(params = {}, **options)
       req = build_request(:describe_pipeline_definition_for_execution, params)
       req.send_request(options)
     end
@@ -9481,9 +9481,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribePipelineExecution AWS API Documentation
     #
-    # @overload describe_pipeline_execution(params = {})
+    # @overload describe_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def describe_pipeline_execution(params = {}, options = {})
+    def describe_pipeline_execution(params = {}, **options)
       req = build_request(:describe_pipeline_execution, params)
       req.send_request(options)
     end
@@ -9605,9 +9605,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeProcessingJob AWS API Documentation
     #
-    # @overload describe_processing_job(params = {})
+    # @overload describe_processing_job(**params)
     # @param [Hash] params ({})
-    def describe_processing_job(params = {}, options = {})
+    def describe_processing_job(params = {}, **options)
       req = build_request(:describe_processing_job, params)
       req.send_request(options)
     end
@@ -9657,9 +9657,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeProject AWS API Documentation
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -9691,9 +9691,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeSubscribedWorkteam AWS API Documentation
     #
-    # @overload describe_subscribed_workteam(params = {})
+    # @overload describe_subscribed_workteam(**params)
     # @param [Hash] params ({})
-    def describe_subscribed_workteam(params = {}, options = {})
+    def describe_subscribed_workteam(params = {}, **options)
       req = build_request(:describe_subscribed_workteam, params)
       req.send_request(options)
     end
@@ -9875,9 +9875,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTrainingJob AWS API Documentation
     #
-    # @overload describe_training_job(params = {})
+    # @overload describe_training_job(**params)
     # @param [Hash] params ({})
-    def describe_training_job(params = {}, options = {})
+    def describe_training_job(params = {}, **options)
       req = build_request(:describe_training_job, params)
       req.send_request(options)
     end
@@ -9961,9 +9961,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTransformJob AWS API Documentation
     #
-    # @overload describe_transform_job(params = {})
+    # @overload describe_transform_job(**params)
     # @param [Hash] params ({})
-    def describe_transform_job(params = {}, options = {})
+    def describe_transform_job(params = {}, **options)
       req = build_request(:describe_transform_job, params)
       req.send_request(options)
     end
@@ -10015,9 +10015,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTrial AWS API Documentation
     #
-    # @overload describe_trial(params = {})
+    # @overload describe_trial(**params)
     # @param [Hash] params ({})
-    def describe_trial(params = {}, options = {})
+    def describe_trial(params = {}, **options)
       req = build_request(:describe_trial, params)
       req.send_request(options)
     end
@@ -10097,9 +10097,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTrialComponent AWS API Documentation
     #
-    # @overload describe_trial_component(params = {})
+    # @overload describe_trial_component(**params)
     # @param [Hash] params ({})
-    def describe_trial_component(params = {}, options = {})
+    def describe_trial_component(params = {}, **options)
       req = build_request(:describe_trial_component, params)
       req.send_request(options)
     end
@@ -10168,9 +10168,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeUserProfile AWS API Documentation
     #
-    # @overload describe_user_profile(params = {})
+    # @overload describe_user_profile(**params)
     # @param [Hash] params ({})
-    def describe_user_profile(params = {}, options = {})
+    def describe_user_profile(params = {}, **options)
       req = build_request(:describe_user_profile, params)
       req.send_request(options)
     end
@@ -10222,9 +10222,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeWorkforce AWS API Documentation
     #
-    # @overload describe_workforce(params = {})
+    # @overload describe_workforce(**params)
     # @param [Hash] params ({})
-    def describe_workforce(params = {}, options = {})
+    def describe_workforce(params = {}, **options)
       req = build_request(:describe_workforce, params)
       req.send_request(options)
     end
@@ -10267,9 +10267,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeWorkteam AWS API Documentation
     #
-    # @overload describe_workteam(params = {})
+    # @overload describe_workteam(**params)
     # @param [Hash] params ({})
-    def describe_workteam(params = {}, options = {})
+    def describe_workteam(params = {}, **options)
       req = build_request(:describe_workteam, params)
       req.send_request(options)
     end
@@ -10281,9 +10281,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DisableSagemakerServicecatalogPortfolio AWS API Documentation
     #
-    # @overload disable_sagemaker_servicecatalog_portfolio(params = {})
+    # @overload disable_sagemaker_servicecatalog_portfolio(**params)
     # @param [Hash] params ({})
-    def disable_sagemaker_servicecatalog_portfolio(params = {}, options = {})
+    def disable_sagemaker_servicecatalog_portfolio(params = {}, **options)
       req = build_request(:disable_sagemaker_servicecatalog_portfolio, params)
       req.send_request(options)
     end
@@ -10324,9 +10324,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DisassociateTrialComponent AWS API Documentation
     #
-    # @overload disassociate_trial_component(params = {})
+    # @overload disassociate_trial_component(**params)
     # @param [Hash] params ({})
-    def disassociate_trial_component(params = {}, options = {})
+    def disassociate_trial_component(params = {}, **options)
       req = build_request(:disassociate_trial_component, params)
       req.send_request(options)
     end
@@ -10338,9 +10338,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/EnableSagemakerServicecatalogPortfolio AWS API Documentation
     #
-    # @overload enable_sagemaker_servicecatalog_portfolio(params = {})
+    # @overload enable_sagemaker_servicecatalog_portfolio(**params)
     # @param [Hash] params ({})
-    def enable_sagemaker_servicecatalog_portfolio(params = {}, options = {})
+    def enable_sagemaker_servicecatalog_portfolio(params = {}, **options)
       req = build_request(:enable_sagemaker_servicecatalog_portfolio, params)
       req.send_request(options)
     end
@@ -10390,9 +10390,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetDeviceFleetReport AWS API Documentation
     #
-    # @overload get_device_fleet_report(params = {})
+    # @overload get_device_fleet_report(**params)
     # @param [Hash] params ({})
-    def get_device_fleet_report(params = {}, options = {})
+    def get_device_fleet_report(params = {}, **options)
       req = build_request(:get_device_fleet_report, params)
       req.send_request(options)
     end
@@ -10425,9 +10425,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetModelPackageGroupPolicy AWS API Documentation
     #
-    # @overload get_model_package_group_policy(params = {})
+    # @overload get_model_package_group_policy(**params)
     # @param [Hash] params ({})
-    def get_model_package_group_policy(params = {}, options = {})
+    def get_model_package_group_policy(params = {}, **options)
       req = build_request(:get_model_package_group_policy, params)
       req.send_request(options)
     end
@@ -10445,9 +10445,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetSagemakerServicecatalogPortfolioStatus AWS API Documentation
     #
-    # @overload get_sagemaker_servicecatalog_portfolio_status(params = {})
+    # @overload get_sagemaker_servicecatalog_portfolio_status(**params)
     # @param [Hash] params ({})
-    def get_sagemaker_servicecatalog_portfolio_status(params = {}, options = {})
+    def get_sagemaker_servicecatalog_portfolio_status(params = {}, **options)
       req = build_request(:get_sagemaker_servicecatalog_portfolio_status, params)
       req.send_request(options)
     end
@@ -10485,9 +10485,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetSearchSuggestions AWS API Documentation
     #
-    # @overload get_search_suggestions(params = {})
+    # @overload get_search_suggestions(**params)
     # @param [Hash] params ({})
-    def get_search_suggestions(params = {}, options = {})
+    def get_search_suggestions(params = {}, **options)
       req = build_request(:get_search_suggestions, params)
       req.send_request(options)
     end
@@ -10559,9 +10559,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListActions AWS API Documentation
     #
-    # @overload list_actions(params = {})
+    # @overload list_actions(**params)
     # @param [Hash] params ({})
-    def list_actions(params = {}, options = {})
+    def list_actions(params = {}, **options)
       req = build_request(:list_actions, params)
       req.send_request(options)
     end
@@ -10626,9 +10626,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListAlgorithms AWS API Documentation
     #
-    # @overload list_algorithms(params = {})
+    # @overload list_algorithms(**params)
     # @param [Hash] params ({})
-    def list_algorithms(params = {}, options = {})
+    def list_algorithms(params = {}, **options)
       req = build_request(:list_algorithms, params)
       req.send_request(options)
     end
@@ -10711,9 +10711,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListAppImageConfigs AWS API Documentation
     #
-    # @overload list_app_image_configs(params = {})
+    # @overload list_app_image_configs(**params)
     # @param [Hash] params ({})
-    def list_app_image_configs(params = {}, options = {})
+    def list_app_image_configs(params = {}, **options)
       req = build_request(:list_app_image_configs, params)
       req.send_request(options)
     end
@@ -10771,9 +10771,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListApps AWS API Documentation
     #
-    # @overload list_apps(params = {})
+    # @overload list_apps(**params)
     # @param [Hash] params ({})
-    def list_apps(params = {}, options = {})
+    def list_apps(params = {}, **options)
       req = build_request(:list_apps, params)
       req.send_request(options)
     end
@@ -10846,9 +10846,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListArtifacts AWS API Documentation
     #
-    # @overload list_artifacts(params = {})
+    # @overload list_artifacts(**params)
     # @param [Hash] params ({})
-    def list_artifacts(params = {}, options = {})
+    def list_artifacts(params = {}, **options)
       req = build_request(:list_artifacts, params)
       req.send_request(options)
     end
@@ -10938,9 +10938,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListAssociations AWS API Documentation
     #
-    # @overload list_associations(params = {})
+    # @overload list_associations(**params)
     # @param [Hash] params ({})
-    def list_associations(params = {}, options = {})
+    def list_associations(params = {}, **options)
       req = build_request(:list_associations, params)
       req.send_request(options)
     end
@@ -11016,9 +11016,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListAutoMLJobs AWS API Documentation
     #
-    # @overload list_auto_ml_jobs(params = {})
+    # @overload list_auto_ml_jobs(**params)
     # @param [Hash] params ({})
-    def list_auto_ml_jobs(params = {}, options = {})
+    def list_auto_ml_jobs(params = {}, **options)
       req = build_request(:list_auto_ml_jobs, params)
       req.send_request(options)
     end
@@ -11092,9 +11092,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListCandidatesForAutoMLJob AWS API Documentation
     #
-    # @overload list_candidates_for_auto_ml_job(params = {})
+    # @overload list_candidates_for_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def list_candidates_for_auto_ml_job(params = {}, options = {})
+    def list_candidates_for_auto_ml_job(params = {}, **options)
       req = build_request(:list_candidates_for_auto_ml_job, params)
       req.send_request(options)
     end
@@ -11170,9 +11170,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListCodeRepositories AWS API Documentation
     #
-    # @overload list_code_repositories(params = {})
+    # @overload list_code_repositories(**params)
     # @param [Hash] params ({})
-    def list_code_repositories(params = {}, options = {})
+    def list_code_repositories(params = {}, **options)
       req = build_request(:list_code_repositories, params)
       req.send_request(options)
     end
@@ -11262,9 +11262,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListCompilationJobs AWS API Documentation
     #
-    # @overload list_compilation_jobs(params = {})
+    # @overload list_compilation_jobs(**params)
     # @param [Hash] params ({})
-    def list_compilation_jobs(params = {}, options = {})
+    def list_compilation_jobs(params = {}, **options)
       req = build_request(:list_compilation_jobs, params)
       req.send_request(options)
     end
@@ -11336,9 +11336,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListContexts AWS API Documentation
     #
-    # @overload list_contexts(params = {})
+    # @overload list_contexts(**params)
     # @param [Hash] params ({})
-    def list_contexts(params = {}, options = {})
+    def list_contexts(params = {}, **options)
       req = build_request(:list_contexts, params)
       req.send_request(options)
     end
@@ -11408,9 +11408,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListDataQualityJobDefinitions AWS API Documentation
     #
-    # @overload list_data_quality_job_definitions(params = {})
+    # @overload list_data_quality_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_data_quality_job_definitions(params = {}, options = {})
+    def list_data_quality_job_definitions(params = {}, **options)
       req = build_request(:list_data_quality_job_definitions, params)
       req.send_request(options)
     end
@@ -11478,9 +11478,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListDeviceFleets AWS API Documentation
     #
-    # @overload list_device_fleets(params = {})
+    # @overload list_device_fleets(**params)
     # @param [Hash] params ({})
-    def list_device_fleets(params = {}, options = {})
+    def list_device_fleets(params = {}, **options)
       req = build_request(:list_device_fleets, params)
       req.send_request(options)
     end
@@ -11538,9 +11538,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListDevices AWS API Documentation
     #
-    # @overload list_devices(params = {})
+    # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, options = {})
+    def list_devices(params = {}, **options)
       req = build_request(:list_devices, params)
       req.send_request(options)
     end
@@ -11582,9 +11582,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListDomains AWS API Documentation
     #
-    # @overload list_domains(params = {})
+    # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, options = {})
+    def list_domains(params = {}, **options)
       req = build_request(:list_domains, params)
       req.send_request(options)
     end
@@ -11663,9 +11663,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListEdgePackagingJobs AWS API Documentation
     #
-    # @overload list_edge_packaging_jobs(params = {})
+    # @overload list_edge_packaging_jobs(**params)
     # @param [Hash] params ({})
-    def list_edge_packaging_jobs(params = {}, options = {})
+    def list_edge_packaging_jobs(params = {}, **options)
       req = build_request(:list_edge_packaging_jobs, params)
       req.send_request(options)
     end
@@ -11727,9 +11727,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListEndpointConfigs AWS API Documentation
     #
-    # @overload list_endpoint_configs(params = {})
+    # @overload list_endpoint_configs(**params)
     # @param [Hash] params ({})
-    def list_endpoint_configs(params = {}, options = {})
+    def list_endpoint_configs(params = {}, **options)
       req = build_request(:list_endpoint_configs, params)
       req.send_request(options)
     end
@@ -11807,9 +11807,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListEndpoints AWS API Documentation
     #
-    # @overload list_endpoints(params = {})
+    # @overload list_endpoints(**params)
     # @param [Hash] params ({})
-    def list_endpoints(params = {}, options = {})
+    def list_endpoints(params = {}, **options)
       req = build_request(:list_endpoints, params)
       req.send_request(options)
     end
@@ -11874,9 +11874,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListExperiments AWS API Documentation
     #
-    # @overload list_experiments(params = {})
+    # @overload list_experiments(**params)
     # @param [Hash] params ({})
-    def list_experiments(params = {}, options = {})
+    def list_experiments(params = {}, **options)
       req = build_request(:list_experiments, params)
       req.send_request(options)
     end
@@ -11947,9 +11947,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListFeatureGroups AWS API Documentation
     #
-    # @overload list_feature_groups(params = {})
+    # @overload list_feature_groups(**params)
     # @param [Hash] params ({})
-    def list_feature_groups(params = {}, options = {})
+    def list_feature_groups(params = {}, **options)
       req = build_request(:list_feature_groups, params)
       req.send_request(options)
     end
@@ -12006,9 +12006,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListFlowDefinitions AWS API Documentation
     #
-    # @overload list_flow_definitions(params = {})
+    # @overload list_flow_definitions(**params)
     # @param [Hash] params ({})
-    def list_flow_definitions(params = {}, options = {})
+    def list_flow_definitions(params = {}, **options)
       req = build_request(:list_flow_definitions, params)
       req.send_request(options)
     end
@@ -12064,9 +12064,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListHumanTaskUis AWS API Documentation
     #
-    # @overload list_human_task_uis(params = {})
+    # @overload list_human_task_uis(**params)
     # @param [Hash] params ({})
-    def list_human_task_uis(params = {}, options = {})
+    def list_human_task_uis(params = {}, **options)
       req = build_request(:list_human_task_uis, params)
       req.send_request(options)
     end
@@ -12157,9 +12157,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListHyperParameterTuningJobs AWS API Documentation
     #
-    # @overload list_hyper_parameter_tuning_jobs(params = {})
+    # @overload list_hyper_parameter_tuning_jobs(**params)
     # @param [Hash] params ({})
-    def list_hyper_parameter_tuning_jobs(params = {}, options = {})
+    def list_hyper_parameter_tuning_jobs(params = {}, **options)
       req = build_request(:list_hyper_parameter_tuning_jobs, params)
       req.send_request(options)
     end
@@ -12237,9 +12237,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListImageVersions AWS API Documentation
     #
-    # @overload list_image_versions(params = {})
+    # @overload list_image_versions(**params)
     # @param [Hash] params ({})
-    def list_image_versions(params = {}, options = {})
+    def list_image_versions(params = {}, **options)
       req = build_request(:list_image_versions, params)
       req.send_request(options)
     end
@@ -12319,9 +12319,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListImages AWS API Documentation
     #
-    # @overload list_images(params = {})
+    # @overload list_images(**params)
     # @param [Hash] params ({})
-    def list_images(params = {}, options = {})
+    def list_images(params = {}, **options)
       req = build_request(:list_images, params)
       req.send_request(options)
     end
@@ -12415,9 +12415,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLabelingJobs AWS API Documentation
     #
-    # @overload list_labeling_jobs(params = {})
+    # @overload list_labeling_jobs(**params)
     # @param [Hash] params ({})
-    def list_labeling_jobs(params = {}, options = {})
+    def list_labeling_jobs(params = {}, **options)
       req = build_request(:list_labeling_jobs, params)
       req.send_request(options)
     end
@@ -12490,9 +12490,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLabelingJobsForWorkteam AWS API Documentation
     #
-    # @overload list_labeling_jobs_for_workteam(params = {})
+    # @overload list_labeling_jobs_for_workteam(**params)
     # @param [Hash] params ({})
-    def list_labeling_jobs_for_workteam(params = {}, options = {})
+    def list_labeling_jobs_for_workteam(params = {}, **options)
       req = build_request(:list_labeling_jobs_for_workteam, params)
       req.send_request(options)
     end
@@ -12560,9 +12560,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelBiasJobDefinitions AWS API Documentation
     #
-    # @overload list_model_bias_job_definitions(params = {})
+    # @overload list_model_bias_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_model_bias_job_definitions(params = {}, options = {})
+    def list_model_bias_job_definitions(params = {}, **options)
       req = build_request(:list_model_bias_job_definitions, params)
       req.send_request(options)
     end
@@ -12632,9 +12632,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelExplainabilityJobDefinitions AWS API Documentation
     #
-    # @overload list_model_explainability_job_definitions(params = {})
+    # @overload list_model_explainability_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_model_explainability_job_definitions(params = {}, options = {})
+    def list_model_explainability_job_definitions(params = {}, **options)
       req = build_request(:list_model_explainability_job_definitions, params)
       req.send_request(options)
     end
@@ -12698,9 +12698,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelPackageGroups AWS API Documentation
     #
-    # @overload list_model_package_groups(params = {})
+    # @overload list_model_package_groups(**params)
     # @param [Hash] params ({})
-    def list_model_package_groups(params = {}, options = {})
+    def list_model_package_groups(params = {}, **options)
       req = build_request(:list_model_package_groups, params)
       req.send_request(options)
     end
@@ -12789,9 +12789,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelPackages AWS API Documentation
     #
-    # @overload list_model_packages(params = {})
+    # @overload list_model_packages(**params)
     # @param [Hash] params ({})
-    def list_model_packages(params = {}, options = {})
+    def list_model_packages(params = {}, **options)
       req = build_request(:list_model_packages, params)
       req.send_request(options)
     end
@@ -12863,9 +12863,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelQualityJobDefinitions AWS API Documentation
     #
-    # @overload list_model_quality_job_definitions(params = {})
+    # @overload list_model_quality_job_definitions(**params)
     # @param [Hash] params ({})
-    def list_model_quality_job_definitions(params = {}, options = {})
+    def list_model_quality_job_definitions(params = {}, **options)
       req = build_request(:list_model_quality_job_definitions, params)
       req.send_request(options)
     end
@@ -12927,9 +12927,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModels AWS API Documentation
     #
-    # @overload list_models(params = {})
+    # @overload list_models(**params)
     # @param [Hash] params ({})
-    def list_models(params = {}, options = {})
+    def list_models(params = {}, **options)
       req = build_request(:list_models, params)
       req.send_request(options)
     end
@@ -13031,9 +13031,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListMonitoringExecutions AWS API Documentation
     #
-    # @overload list_monitoring_executions(params = {})
+    # @overload list_monitoring_executions(**params)
     # @param [Hash] params ({})
-    def list_monitoring_executions(params = {}, options = {})
+    def list_monitoring_executions(params = {}, **options)
       req = build_request(:list_monitoring_executions, params)
       req.send_request(options)
     end
@@ -13131,9 +13131,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListMonitoringSchedules AWS API Documentation
     #
-    # @overload list_monitoring_schedules(params = {})
+    # @overload list_monitoring_schedules(**params)
     # @param [Hash] params ({})
-    def list_monitoring_schedules(params = {}, options = {})
+    def list_monitoring_schedules(params = {}, **options)
       req = build_request(:list_monitoring_schedules, params)
       req.send_request(options)
     end
@@ -13208,9 +13208,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListNotebookInstanceLifecycleConfigs AWS API Documentation
     #
-    # @overload list_notebook_instance_lifecycle_configs(params = {})
+    # @overload list_notebook_instance_lifecycle_configs(**params)
     # @param [Hash] params ({})
-    def list_notebook_instance_lifecycle_configs(params = {}, options = {})
+    def list_notebook_instance_lifecycle_configs(params = {}, **options)
       req = build_request(:list_notebook_instance_lifecycle_configs, params)
       req.send_request(options)
     end
@@ -13322,9 +13322,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListNotebookInstances AWS API Documentation
     #
-    # @overload list_notebook_instances(params = {})
+    # @overload list_notebook_instances(**params)
     # @param [Hash] params ({})
-    def list_notebook_instances(params = {}, options = {})
+    def list_notebook_instances(params = {}, **options)
       req = build_request(:list_notebook_instances, params)
       req.send_request(options)
     end
@@ -13381,9 +13381,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListPipelineExecutionSteps AWS API Documentation
     #
-    # @overload list_pipeline_execution_steps(params = {})
+    # @overload list_pipeline_execution_steps(**params)
     # @param [Hash] params ({})
-    def list_pipeline_execution_steps(params = {}, options = {})
+    def list_pipeline_execution_steps(params = {}, **options)
       req = build_request(:list_pipeline_execution_steps, params)
       req.send_request(options)
     end
@@ -13446,9 +13446,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListPipelineExecutions AWS API Documentation
     #
-    # @overload list_pipeline_executions(params = {})
+    # @overload list_pipeline_executions(**params)
     # @param [Hash] params ({})
-    def list_pipeline_executions(params = {}, options = {})
+    def list_pipeline_executions(params = {}, **options)
       req = build_request(:list_pipeline_executions, params)
       req.send_request(options)
     end
@@ -13491,9 +13491,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListPipelineParametersForExecution AWS API Documentation
     #
-    # @overload list_pipeline_parameters_for_execution(params = {})
+    # @overload list_pipeline_parameters_for_execution(**params)
     # @param [Hash] params ({})
-    def list_pipeline_parameters_for_execution(params = {}, options = {})
+    def list_pipeline_parameters_for_execution(params = {}, **options)
       req = build_request(:list_pipeline_parameters_for_execution, params)
       req.send_request(options)
     end
@@ -13559,9 +13559,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListPipelines AWS API Documentation
     #
-    # @overload list_pipelines(params = {})
+    # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, options = {})
+    def list_pipelines(params = {}, **options)
       req = build_request(:list_pipelines, params)
       req.send_request(options)
     end
@@ -13642,9 +13642,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListProcessingJobs AWS API Documentation
     #
-    # @overload list_processing_jobs(params = {})
+    # @overload list_processing_jobs(**params)
     # @param [Hash] params ({})
-    def list_processing_jobs(params = {}, options = {})
+    def list_processing_jobs(params = {}, **options)
       req = build_request(:list_processing_jobs, params)
       req.send_request(options)
     end
@@ -13709,9 +13709,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -13760,9 +13760,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListSubscribedWorkteams AWS API Documentation
     #
-    # @overload list_subscribed_workteams(params = {})
+    # @overload list_subscribed_workteams(**params)
     # @param [Hash] params ({})
-    def list_subscribed_workteams(params = {}, options = {})
+    def list_subscribed_workteams(params = {}, **options)
       req = build_request(:list_subscribed_workteams, params)
       req.send_request(options)
     end
@@ -13805,9 +13805,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -13886,9 +13886,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrainingJobs AWS API Documentation
     #
-    # @overload list_training_jobs(params = {})
+    # @overload list_training_jobs(**params)
     # @param [Hash] params ({})
-    def list_training_jobs(params = {}, options = {})
+    def list_training_jobs(params = {}, **options)
       req = build_request(:list_training_jobs, params)
       req.send_request(options)
     end
@@ -13961,9 +13961,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrainingJobsForHyperParameterTuningJob AWS API Documentation
     #
-    # @overload list_training_jobs_for_hyper_parameter_tuning_job(params = {})
+    # @overload list_training_jobs_for_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def list_training_jobs_for_hyper_parameter_tuning_job(params = {}, options = {})
+    def list_training_jobs_for_hyper_parameter_tuning_job(params = {}, **options)
       req = build_request(:list_training_jobs_for_hyper_parameter_tuning_job, params)
       req.send_request(options)
     end
@@ -14044,9 +14044,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTransformJobs AWS API Documentation
     #
-    # @overload list_transform_jobs(params = {})
+    # @overload list_transform_jobs(**params)
     # @param [Hash] params ({})
-    def list_transform_jobs(params = {}, options = {})
+    def list_transform_jobs(params = {}, **options)
       req = build_request(:list_transform_jobs, params)
       req.send_request(options)
     end
@@ -14146,9 +14146,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrialComponents AWS API Documentation
     #
-    # @overload list_trial_components(params = {})
+    # @overload list_trial_components(**params)
     # @param [Hash] params ({})
-    def list_trial_components(params = {}, options = {})
+    def list_trial_components(params = {}, **options)
       req = build_request(:list_trial_components, params)
       req.send_request(options)
     end
@@ -14223,9 +14223,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrials AWS API Documentation
     #
-    # @overload list_trials(params = {})
+    # @overload list_trials(**params)
     # @param [Hash] params ({})
-    def list_trials(params = {}, options = {})
+    def list_trials(params = {}, **options)
       req = build_request(:list_trials, params)
       req.send_request(options)
     end
@@ -14282,9 +14282,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListUserProfiles AWS API Documentation
     #
-    # @overload list_user_profiles(params = {})
+    # @overload list_user_profiles(**params)
     # @param [Hash] params ({})
-    def list_user_profiles(params = {}, options = {})
+    def list_user_profiles(params = {}, **options)
       req = build_request(:list_user_profiles, params)
       req.send_request(options)
     end
@@ -14349,9 +14349,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListWorkforces AWS API Documentation
     #
-    # @overload list_workforces(params = {})
+    # @overload list_workforces(**params)
     # @param [Hash] params ({})
-    def list_workforces(params = {}, options = {})
+    def list_workforces(params = {}, **options)
       req = build_request(:list_workforces, params)
       req.send_request(options)
     end
@@ -14419,9 +14419,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListWorkteams AWS API Documentation
     #
-    # @overload list_workteams(params = {})
+    # @overload list_workteams(**params)
     # @param [Hash] params ({})
-    def list_workteams(params = {}, options = {})
+    def list_workteams(params = {}, **options)
       req = build_request(:list_workteams, params)
       req.send_request(options)
     end
@@ -14458,9 +14458,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/PutModelPackageGroupPolicy AWS API Documentation
     #
-    # @overload put_model_package_group_policy(params = {})
+    # @overload put_model_package_group_policy(**params)
     # @param [Hash] params ({})
-    def put_model_package_group_policy(params = {}, options = {})
+    def put_model_package_group_policy(params = {}, **options)
       req = build_request(:put_model_package_group_policy, params)
       req.send_request(options)
     end
@@ -14499,9 +14499,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/RegisterDevices AWS API Documentation
     #
-    # @overload register_devices(params = {})
+    # @overload register_devices(**params)
     # @param [Hash] params ({})
-    def register_devices(params = {}, options = {})
+    def register_devices(params = {}, **options)
       req = build_request(:register_devices, params)
       req.send_request(options)
     end
@@ -14553,9 +14553,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/RenderUiTemplate AWS API Documentation
     #
-    # @overload render_ui_template(params = {})
+    # @overload render_ui_template(**params)
     # @param [Hash] params ({})
-    def render_ui_template(params = {}, options = {})
+    def render_ui_template(params = {}, **options)
       req = build_request(:render_ui_template, params)
       req.send_request(options)
     end
@@ -15295,9 +15295,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/Search AWS API Documentation
     #
-    # @overload search(params = {})
+    # @overload search(**params)
     # @param [Hash] params ({})
-    def search(params = {}, options = {})
+    def search(params = {}, **options)
       req = build_request(:search, params)
       req.send_request(options)
     end
@@ -15322,9 +15322,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartMonitoringSchedule AWS API Documentation
     #
-    # @overload start_monitoring_schedule(params = {})
+    # @overload start_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def start_monitoring_schedule(params = {}, options = {})
+    def start_monitoring_schedule(params = {}, **options)
       req = build_request(:start_monitoring_schedule, params)
       req.send_request(options)
     end
@@ -15348,9 +15348,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartNotebookInstance AWS API Documentation
     #
-    # @overload start_notebook_instance(params = {})
+    # @overload start_notebook_instance(**params)
     # @param [Hash] params ({})
-    def start_notebook_instance(params = {}, options = {})
+    def start_notebook_instance(params = {}, **options)
       req = build_request(:start_notebook_instance, params)
       req.send_request(options)
     end
@@ -15402,9 +15402,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartPipelineExecution AWS API Documentation
     #
-    # @overload start_pipeline_execution(params = {})
+    # @overload start_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def start_pipeline_execution(params = {}, options = {})
+    def start_pipeline_execution(params = {}, **options)
       req = build_request(:start_pipeline_execution, params)
       req.send_request(options)
     end
@@ -15424,9 +15424,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopAutoMLJob AWS API Documentation
     #
-    # @overload stop_auto_ml_job(params = {})
+    # @overload stop_auto_ml_job(**params)
     # @param [Hash] params ({})
-    def stop_auto_ml_job(params = {}, options = {})
+    def stop_auto_ml_job(params = {}, **options)
       req = build_request(:stop_auto_ml_job, params)
       req.send_request(options)
     end
@@ -15455,9 +15455,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopCompilationJob AWS API Documentation
     #
-    # @overload stop_compilation_job(params = {})
+    # @overload stop_compilation_job(**params)
     # @param [Hash] params ({})
-    def stop_compilation_job(params = {}, options = {})
+    def stop_compilation_job(params = {}, **options)
       req = build_request(:stop_compilation_job, params)
       req.send_request(options)
     end
@@ -15477,9 +15477,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopEdgePackagingJob AWS API Documentation
     #
-    # @overload stop_edge_packaging_job(params = {})
+    # @overload stop_edge_packaging_job(**params)
     # @param [Hash] params ({})
-    def stop_edge_packaging_job(params = {}, options = {})
+    def stop_edge_packaging_job(params = {}, **options)
       req = build_request(:stop_edge_packaging_job, params)
       req.send_request(options)
     end
@@ -15506,9 +15506,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopHyperParameterTuningJob AWS API Documentation
     #
-    # @overload stop_hyper_parameter_tuning_job(params = {})
+    # @overload stop_hyper_parameter_tuning_job(**params)
     # @param [Hash] params ({})
-    def stop_hyper_parameter_tuning_job(params = {}, options = {})
+    def stop_hyper_parameter_tuning_job(params = {}, **options)
       req = build_request(:stop_hyper_parameter_tuning_job, params)
       req.send_request(options)
     end
@@ -15530,9 +15530,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopLabelingJob AWS API Documentation
     #
-    # @overload stop_labeling_job(params = {})
+    # @overload stop_labeling_job(**params)
     # @param [Hash] params ({})
-    def stop_labeling_job(params = {}, options = {})
+    def stop_labeling_job(params = {}, **options)
       req = build_request(:stop_labeling_job, params)
       req.send_request(options)
     end
@@ -15552,9 +15552,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopMonitoringSchedule AWS API Documentation
     #
-    # @overload stop_monitoring_schedule(params = {})
+    # @overload stop_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def stop_monitoring_schedule(params = {}, options = {})
+    def stop_monitoring_schedule(params = {}, **options)
       req = build_request(:stop_monitoring_schedule, params)
       req.send_request(options)
     end
@@ -15584,9 +15584,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopNotebookInstance AWS API Documentation
     #
-    # @overload stop_notebook_instance(params = {})
+    # @overload stop_notebook_instance(**params)
     # @param [Hash] params ({})
-    def stop_notebook_instance(params = {}, options = {})
+    def stop_notebook_instance(params = {}, **options)
       req = build_request(:stop_notebook_instance, params)
       req.send_request(options)
     end
@@ -15621,9 +15621,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopPipelineExecution AWS API Documentation
     #
-    # @overload stop_pipeline_execution(params = {})
+    # @overload stop_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def stop_pipeline_execution(params = {}, options = {})
+    def stop_pipeline_execution(params = {}, **options)
       req = build_request(:stop_pipeline_execution, params)
       req.send_request(options)
     end
@@ -15643,9 +15643,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopProcessingJob AWS API Documentation
     #
-    # @overload stop_processing_job(params = {})
+    # @overload stop_processing_job(**params)
     # @param [Hash] params ({})
-    def stop_processing_job(params = {}, options = {})
+    def stop_processing_job(params = {}, **options)
       req = build_request(:stop_processing_job, params)
       req.send_request(options)
     end
@@ -15672,9 +15672,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopTrainingJob AWS API Documentation
     #
-    # @overload stop_training_job(params = {})
+    # @overload stop_training_job(**params)
     # @param [Hash] params ({})
-    def stop_training_job(params = {}, options = {})
+    def stop_training_job(params = {}, **options)
       req = build_request(:stop_training_job, params)
       req.send_request(options)
     end
@@ -15700,9 +15700,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopTransformJob AWS API Documentation
     #
-    # @overload stop_transform_job(params = {})
+    # @overload stop_transform_job(**params)
     # @param [Hash] params ({})
-    def stop_transform_job(params = {}, options = {})
+    def stop_transform_job(params = {}, **options)
       req = build_request(:stop_transform_job, params)
       req.send_request(options)
     end
@@ -15746,9 +15746,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateAction AWS API Documentation
     #
-    # @overload update_action(params = {})
+    # @overload update_action(**params)
     # @param [Hash] params ({})
-    def update_action(params = {}, options = {})
+    def update_action(params = {}, **options)
       req = build_request(:update_action, params)
       req.send_request(options)
     end
@@ -15790,9 +15790,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateAppImageConfig AWS API Documentation
     #
-    # @overload update_app_image_config(params = {})
+    # @overload update_app_image_config(**params)
     # @param [Hash] params ({})
-    def update_app_image_config(params = {}, options = {})
+    def update_app_image_config(params = {}, **options)
       req = build_request(:update_app_image_config, params)
       req.send_request(options)
     end
@@ -15832,9 +15832,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateArtifact AWS API Documentation
     #
-    # @overload update_artifact(params = {})
+    # @overload update_artifact(**params)
     # @param [Hash] params ({})
-    def update_artifact(params = {}, options = {})
+    def update_artifact(params = {}, **options)
       req = build_request(:update_artifact, params)
       req.send_request(options)
     end
@@ -15872,9 +15872,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateCodeRepository AWS API Documentation
     #
-    # @overload update_code_repository(params = {})
+    # @overload update_code_repository(**params)
     # @param [Hash] params ({})
-    def update_code_repository(params = {}, options = {})
+    def update_code_repository(params = {}, **options)
       req = build_request(:update_code_repository, params)
       req.send_request(options)
     end
@@ -15914,9 +15914,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateContext AWS API Documentation
     #
-    # @overload update_context(params = {})
+    # @overload update_context(**params)
     # @param [Hash] params ({})
-    def update_context(params = {}, options = {})
+    def update_context(params = {}, **options)
       req = build_request(:update_context, params)
       req.send_request(options)
     end
@@ -15951,9 +15951,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateDeviceFleet AWS API Documentation
     #
-    # @overload update_device_fleet(params = {})
+    # @overload update_device_fleet(**params)
     # @param [Hash] params ({})
-    def update_device_fleet(params = {}, options = {})
+    def update_device_fleet(params = {}, **options)
       req = build_request(:update_device_fleet, params)
       req.send_request(options)
     end
@@ -15983,9 +15983,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateDevices AWS API Documentation
     #
-    # @overload update_devices(params = {})
+    # @overload update_devices(**params)
     # @param [Hash] params ({})
-    def update_devices(params = {}, options = {})
+    def update_devices(params = {}, **options)
       req = build_request(:update_devices, params)
       req.send_request(options)
     end
@@ -16051,9 +16051,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateDomain AWS API Documentation
     #
-    # @overload update_domain(params = {})
+    # @overload update_domain(**params)
     # @param [Hash] params ({})
-    def update_domain(params = {}, options = {})
+    def update_domain(params = {}, **options)
       req = build_request(:update_domain, params)
       req.send_request(options)
     end
@@ -16154,9 +16154,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateEndpoint AWS API Documentation
     #
-    # @overload update_endpoint(params = {})
+    # @overload update_endpoint(**params)
     # @param [Hash] params ({})
-    def update_endpoint(params = {}, options = {})
+    def update_endpoint(params = {}, **options)
       req = build_request(:update_endpoint, params)
       req.send_request(options)
     end
@@ -16197,9 +16197,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateEndpointWeightsAndCapacities AWS API Documentation
     #
-    # @overload update_endpoint_weights_and_capacities(params = {})
+    # @overload update_endpoint_weights_and_capacities(**params)
     # @param [Hash] params ({})
-    def update_endpoint_weights_and_capacities(params = {}, options = {})
+    def update_endpoint_weights_and_capacities(params = {}, **options)
       req = build_request(:update_endpoint_weights_and_capacities, params)
       req.send_request(options)
     end
@@ -16236,9 +16236,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateExperiment AWS API Documentation
     #
-    # @overload update_experiment(params = {})
+    # @overload update_experiment(**params)
     # @param [Hash] params ({})
-    def update_experiment(params = {}, options = {})
+    def update_experiment(params = {}, **options)
       req = build_request(:update_experiment, params)
       req.send_request(options)
     end
@@ -16283,9 +16283,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateImage AWS API Documentation
     #
-    # @overload update_image(params = {})
+    # @overload update_image(**params)
     # @param [Hash] params ({})
-    def update_image(params = {}, options = {})
+    def update_image(params = {}, **options)
       req = build_request(:update_image, params)
       req.send_request(options)
     end
@@ -16319,9 +16319,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateModelPackage AWS API Documentation
     #
-    # @overload update_model_package(params = {})
+    # @overload update_model_package(**params)
     # @param [Hash] params ({})
-    def update_model_package(params = {}, options = {})
+    def update_model_package(params = {}, **options)
       req = build_request(:update_model_package, params)
       req.send_request(options)
     end
@@ -16428,9 +16428,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateMonitoringSchedule AWS API Documentation
     #
-    # @overload update_monitoring_schedule(params = {})
+    # @overload update_monitoring_schedule(**params)
     # @param [Hash] params ({})
-    def update_monitoring_schedule(params = {}, options = {})
+    def update_monitoring_schedule(params = {}, **options)
       req = build_request(:update_monitoring_schedule, params)
       req.send_request(options)
     end
@@ -16573,9 +16573,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateNotebookInstance AWS API Documentation
     #
-    # @overload update_notebook_instance(params = {})
+    # @overload update_notebook_instance(**params)
     # @param [Hash] params ({})
-    def update_notebook_instance(params = {}, options = {})
+    def update_notebook_instance(params = {}, **options)
       req = build_request(:update_notebook_instance, params)
       req.send_request(options)
     end
@@ -16615,9 +16615,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateNotebookInstanceLifecycleConfig AWS API Documentation
     #
-    # @overload update_notebook_instance_lifecycle_config(params = {})
+    # @overload update_notebook_instance_lifecycle_config(**params)
     # @param [Hash] params ({})
-    def update_notebook_instance_lifecycle_config(params = {}, options = {})
+    def update_notebook_instance_lifecycle_config(params = {}, **options)
       req = build_request(:update_notebook_instance_lifecycle_config, params)
       req.send_request(options)
     end
@@ -16659,9 +16659,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdatePipeline AWS API Documentation
     #
-    # @overload update_pipeline(params = {})
+    # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, options = {})
+    def update_pipeline(params = {}, **options)
       req = build_request(:update_pipeline, params)
       req.send_request(options)
     end
@@ -16695,9 +16695,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdatePipelineExecution AWS API Documentation
     #
-    # @overload update_pipeline_execution(params = {})
+    # @overload update_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def update_pipeline_execution(params = {}, options = {})
+    def update_pipeline_execution(params = {}, **options)
       req = build_request(:update_pipeline_execution, params)
       req.send_request(options)
     end
@@ -16754,9 +16754,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateTrainingJob AWS API Documentation
     #
-    # @overload update_training_job(params = {})
+    # @overload update_training_job(**params)
     # @param [Hash] params ({})
-    def update_training_job(params = {}, options = {})
+    def update_training_job(params = {}, **options)
       req = build_request(:update_training_job, params)
       req.send_request(options)
     end
@@ -16787,9 +16787,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateTrial AWS API Documentation
     #
-    # @overload update_trial(params = {})
+    # @overload update_trial(**params)
     # @param [Hash] params ({})
-    def update_trial(params = {}, options = {})
+    def update_trial(params = {}, **options)
       req = build_request(:update_trial, params)
       req.send_request(options)
     end
@@ -16878,9 +16878,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateTrialComponent AWS API Documentation
     #
-    # @overload update_trial_component(params = {})
+    # @overload update_trial_component(**params)
     # @param [Hash] params ({})
-    def update_trial_component(params = {}, options = {})
+    def update_trial_component(params = {}, **options)
       req = build_request(:update_trial_component, params)
       req.send_request(options)
     end
@@ -16950,9 +16950,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateUserProfile AWS API Documentation
     #
-    # @overload update_user_profile(params = {})
+    # @overload update_user_profile(**params)
     # @param [Hash] params ({})
-    def update_user_profile(params = {}, options = {})
+    def update_user_profile(params = {}, **options)
       req = build_request(:update_user_profile, params)
       req.send_request(options)
     end
@@ -17049,9 +17049,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateWorkforce AWS API Documentation
     #
-    # @overload update_workforce(params = {})
+    # @overload update_workforce(**params)
     # @param [Hash] params ({})
-    def update_workforce(params = {}, options = {})
+    def update_workforce(params = {}, **options)
       req = build_request(:update_workforce, params)
       req.send_request(options)
     end
@@ -17147,9 +17147,9 @@ module Aws::SageMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateWorkteam AWS API Documentation
     #
-    # @overload update_workteam(params = {})
+    # @overload update_workteam(**params)
     # @param [Hash] params ({})
-    def update_workteam(params = {}, options = {})
+    def update_workteam(params = {}, **options)
       req = build_request(:update_workteam, params)
       req.send_request(options)
     end
@@ -17158,7 +17158,7 @@ module Aws::SageMaker
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -17166,8 +17166,8 @@ module Aws::SageMaker
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-sagemaker'
-      context[:gem_version] = '1.74.0'
+      context[:gem_name] = "aws-sdk-sagemaker"
+      context[:gem_version] = "1.74.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -17266,7 +17266,7 @@ module Aws::SageMaker
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -17282,7 +17282,7 @@ module Aws::SageMaker
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

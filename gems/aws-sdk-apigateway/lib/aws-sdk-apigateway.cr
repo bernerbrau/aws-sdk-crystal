@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-apigateway/types'
-require_relative 'aws-sdk-apigateway/client_api'
-require_relative 'aws-sdk-apigateway/client'
-require_relative 'aws-sdk-apigateway/errors'
-require_relative 'aws-sdk-apigateway/resource'
-require_relative 'aws-sdk-apigateway/customizations'
+require_relative "aws-sdk-apigateway/types"
+require_relative "aws-sdk-apigateway/client_api"
+require_relative "aws-sdk-apigateway/client"
+require_relative "aws-sdk-apigateway/errors"
+require_relative "aws-sdk-apigateway/resource"
+require_relative "aws-sdk-apigateway/customizations"
 
 # This module provides support for Amazon API Gateway. This module is available in the
 # `aws-sdk-apigateway` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-apigateway/customizations'
 # @!group service
 module Aws::APIGateway
 
-  GEM_VERSION = '1.57.0'
+  GEM_VERSION = "1.57.0"
 
 end

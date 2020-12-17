@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-groundstation/types'
-require_relative 'aws-sdk-groundstation/client_api'
-require_relative 'aws-sdk-groundstation/client'
-require_relative 'aws-sdk-groundstation/errors'
-require_relative 'aws-sdk-groundstation/resource'
-require_relative 'aws-sdk-groundstation/customizations'
+require_relative "aws-sdk-groundstation/types"
+require_relative "aws-sdk-groundstation/client_api"
+require_relative "aws-sdk-groundstation/client"
+require_relative "aws-sdk-groundstation/errors"
+require_relative "aws-sdk-groundstation/resource"
+require_relative "aws-sdk-groundstation/customizations"
 
 # This module provides support for AWS Ground Station. This module is available in the
 # `aws-sdk-groundstation` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-groundstation/customizations'
 # @!group service
 module Aws::GroundStation
 
-  GEM_VERSION = '1.15.0'
+  GEM_VERSION = "1.15.0"
 
 end

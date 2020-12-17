@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ssooidc/types'
-require_relative 'aws-sdk-ssooidc/client_api'
-require_relative 'aws-sdk-ssooidc/client'
-require_relative 'aws-sdk-ssooidc/errors'
-require_relative 'aws-sdk-ssooidc/resource'
-require_relative 'aws-sdk-ssooidc/customizations'
+require_relative "aws-sdk-ssooidc/types"
+require_relative "aws-sdk-ssooidc/client_api"
+require_relative "aws-sdk-ssooidc/client"
+require_relative "aws-sdk-ssooidc/errors"
+require_relative "aws-sdk-ssooidc/resource"
+require_relative "aws-sdk-ssooidc/customizations"
 
 # This module provides support for AWS SSO OIDC. This module is available in the
 # `aws-sdk-ssooidc` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ssooidc/customizations'
 # @!group service
 module Aws::SSOOIDC
 
-  GEM_VERSION = '1.8.0'
+  GEM_VERSION = "1.8.0"
 
 end

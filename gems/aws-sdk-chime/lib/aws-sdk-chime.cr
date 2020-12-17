@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-chime/types'
-require_relative 'aws-sdk-chime/client_api'
-require_relative 'aws-sdk-chime/client'
-require_relative 'aws-sdk-chime/errors'
-require_relative 'aws-sdk-chime/resource'
-require_relative 'aws-sdk-chime/customizations'
+require_relative "aws-sdk-chime/types"
+require_relative "aws-sdk-chime/client_api"
+require_relative "aws-sdk-chime/client"
+require_relative "aws-sdk-chime/errors"
+require_relative "aws-sdk-chime/resource"
+require_relative "aws-sdk-chime/customizations"
 
 # This module provides support for Amazon Chime. This module is available in the
 # `aws-sdk-chime` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-chime/customizations'
 # @!group service
 module Aws::Chime
 
-  GEM_VERSION = '1.39.0'
+  GEM_VERSION = "1.39.0"
 
 end

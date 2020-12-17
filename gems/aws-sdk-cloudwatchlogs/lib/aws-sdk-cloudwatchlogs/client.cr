@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudwatchlogs)
 
@@ -290,7 +290,7 @@ module Aws::CloudWatchLogs
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -387,9 +387,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/AssociateKmsKey AWS API Documentation
     #
-    # @overload associate_kms_key(params = {})
+    # @overload associate_kms_key(**params)
     # @param [Hash] params ({})
-    def associate_kms_key(params = {}, options = {})
+    def associate_kms_key(params = {}, **options)
       req = build_request(:associate_kms_key, params)
       req.send_request(options)
     end
@@ -411,9 +411,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CancelExportTask AWS API Documentation
     #
-    # @overload cancel_export_task(params = {})
+    # @overload cancel_export_task(**params)
     # @param [Hash] params ({})
-    def cancel_export_task(params = {}, options = {})
+    def cancel_export_task(params = {}, **options)
       req = build_request(:cancel_export_task, params)
       req.send_request(options)
     end
@@ -494,9 +494,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateExportTask AWS API Documentation
     #
-    # @overload create_export_task(params = {})
+    # @overload create_export_task(**params)
     # @param [Hash] params ({})
-    def create_export_task(params = {}, options = {})
+    def create_export_task(params = {}, **options)
       req = build_request(:create_export_task, params)
       req.send_request(options)
     end
@@ -566,9 +566,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateLogGroup AWS API Documentation
     #
-    # @overload create_log_group(params = {})
+    # @overload create_log_group(**params)
     # @param [Hash] params ({})
-    def create_log_group(params = {}, options = {})
+    def create_log_group(params = {}, **options)
       req = build_request(:create_log_group, params)
       req.send_request(options)
     end
@@ -606,9 +606,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateLogStream AWS API Documentation
     #
-    # @overload create_log_stream(params = {})
+    # @overload create_log_stream(**params)
     # @param [Hash] params ({})
-    def create_log_stream(params = {}, options = {})
+    def create_log_stream(params = {}, **options)
       req = build_request(:create_log_stream, params)
       req.send_request(options)
     end
@@ -630,9 +630,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDestination AWS API Documentation
     #
-    # @overload delete_destination(params = {})
+    # @overload delete_destination(**params)
     # @param [Hash] params ({})
-    def delete_destination(params = {}, options = {})
+    def delete_destination(params = {}, **options)
       req = build_request(:delete_destination, params)
       req.send_request(options)
     end
@@ -653,9 +653,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteLogGroup AWS API Documentation
     #
-    # @overload delete_log_group(params = {})
+    # @overload delete_log_group(**params)
     # @param [Hash] params ({})
-    def delete_log_group(params = {}, options = {})
+    def delete_log_group(params = {}, **options)
       req = build_request(:delete_log_group, params)
       req.send_request(options)
     end
@@ -680,9 +680,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteLogStream AWS API Documentation
     #
-    # @overload delete_log_stream(params = {})
+    # @overload delete_log_stream(**params)
     # @param [Hash] params ({})
-    def delete_log_stream(params = {}, options = {})
+    def delete_log_stream(params = {}, **options)
       req = build_request(:delete_log_stream, params)
       req.send_request(options)
     end
@@ -706,9 +706,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteMetricFilter AWS API Documentation
     #
-    # @overload delete_metric_filter(params = {})
+    # @overload delete_metric_filter(**params)
     # @param [Hash] params ({})
-    def delete_metric_filter(params = {}, options = {})
+    def delete_metric_filter(params = {}, **options)
       req = build_request(:delete_metric_filter, params)
       req.send_request(options)
     end
@@ -748,9 +748,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteQueryDefinition AWS API Documentation
     #
-    # @overload delete_query_definition(params = {})
+    # @overload delete_query_definition(**params)
     # @param [Hash] params ({})
-    def delete_query_definition(params = {}, options = {})
+    def delete_query_definition(params = {}, **options)
       req = build_request(:delete_query_definition, params)
       req.send_request(options)
     end
@@ -771,9 +771,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteResourcePolicy AWS API Documentation
     #
-    # @overload delete_resource_policy(params = {})
+    # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, options = {})
+    def delete_resource_policy(params = {}, **options)
       req = build_request(:delete_resource_policy, params)
       req.send_request(options)
     end
@@ -796,9 +796,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteRetentionPolicy AWS API Documentation
     #
-    # @overload delete_retention_policy(params = {})
+    # @overload delete_retention_policy(**params)
     # @param [Hash] params ({})
-    def delete_retention_policy(params = {}, options = {})
+    def delete_retention_policy(params = {}, **options)
       req = build_request(:delete_retention_policy, params)
       req.send_request(options)
     end
@@ -822,9 +822,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteSubscriptionFilter AWS API Documentation
     #
-    # @overload delete_subscription_filter(params = {})
+    # @overload delete_subscription_filter(**params)
     # @param [Hash] params ({})
-    def delete_subscription_filter(params = {}, options = {})
+    def delete_subscription_filter(params = {}, **options)
       req = build_request(:delete_subscription_filter, params)
       req.send_request(options)
     end
@@ -872,9 +872,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDestinations AWS API Documentation
     #
-    # @overload describe_destinations(params = {})
+    # @overload describe_destinations(**params)
     # @param [Hash] params ({})
-    def describe_destinations(params = {}, options = {})
+    def describe_destinations(params = {}, **options)
       req = build_request(:describe_destinations, params)
       req.send_request(options)
     end
@@ -930,9 +930,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeExportTasks AWS API Documentation
     #
-    # @overload describe_export_tasks(params = {})
+    # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, options = {})
+    def describe_export_tasks(params = {}, **options)
       req = build_request(:describe_export_tasks, params)
       req.send_request(options)
     end
@@ -981,9 +981,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeLogGroups AWS API Documentation
     #
-    # @overload describe_log_groups(params = {})
+    # @overload describe_log_groups(**params)
     # @param [Hash] params ({})
-    def describe_log_groups(params = {}, options = {})
+    def describe_log_groups(params = {}, **options)
       req = build_request(:describe_log_groups, params)
       req.send_request(options)
     end
@@ -1064,9 +1064,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeLogStreams AWS API Documentation
     #
-    # @overload describe_log_streams(params = {})
+    # @overload describe_log_streams(**params)
     # @param [Hash] params ({})
-    def describe_log_streams(params = {}, options = {})
+    def describe_log_streams(params = {}, **options)
       req = build_request(:describe_log_streams, params)
       req.send_request(options)
     end
@@ -1134,9 +1134,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeMetricFilters AWS API Documentation
     #
-    # @overload describe_metric_filters(params = {})
+    # @overload describe_metric_filters(**params)
     # @param [Hash] params ({})
-    def describe_metric_filters(params = {}, options = {})
+    def describe_metric_filters(params = {}, **options)
       req = build_request(:describe_metric_filters, params)
       req.send_request(options)
     end
@@ -1187,9 +1187,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeQueries AWS API Documentation
     #
-    # @overload describe_queries(params = {})
+    # @overload describe_queries(**params)
     # @param [Hash] params ({})
-    def describe_queries(params = {}, options = {})
+    def describe_queries(params = {}, **options)
       req = build_request(:describe_queries, params)
       req.send_request(options)
     end
@@ -1239,9 +1239,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeQueryDefinitions AWS API Documentation
     #
-    # @overload describe_query_definitions(params = {})
+    # @overload describe_query_definitions(**params)
     # @param [Hash] params ({})
-    def describe_query_definitions(params = {}, options = {})
+    def describe_query_definitions(params = {}, **options)
       req = build_request(:describe_query_definitions, params)
       req.send_request(options)
     end
@@ -1278,9 +1278,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeResourcePolicies AWS API Documentation
     #
-    # @overload describe_resource_policies(params = {})
+    # @overload describe_resource_policies(**params)
     # @param [Hash] params ({})
-    def describe_resource_policies(params = {}, options = {})
+    def describe_resource_policies(params = {}, **options)
       req = build_request(:describe_resource_policies, params)
       req.send_request(options)
     end
@@ -1334,9 +1334,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeSubscriptionFilters AWS API Documentation
     #
-    # @overload describe_subscription_filters(params = {})
+    # @overload describe_subscription_filters(**params)
     # @param [Hash] params ({})
-    def describe_subscription_filters(params = {}, options = {})
+    def describe_subscription_filters(params = {}, **options)
       req = build_request(:describe_subscription_filters, params)
       req.send_request(options)
     end
@@ -1366,9 +1366,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DisassociateKmsKey AWS API Documentation
     #
-    # @overload disassociate_kms_key(params = {})
+    # @overload disassociate_kms_key(**params)
     # @param [Hash] params ({})
-    def disassociate_kms_key(params = {}, options = {})
+    def disassociate_kms_key(params = {}, **options)
       req = build_request(:disassociate_kms_key, params)
       req.send_request(options)
     end
@@ -1487,9 +1487,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/FilterLogEvents AWS API Documentation
     #
-    # @overload filter_log_events(params = {})
+    # @overload filter_log_events(**params)
     # @param [Hash] params ({})
-    def filter_log_events(params = {}, options = {})
+    def filter_log_events(params = {}, **options)
       req = build_request(:filter_log_events, params)
       req.send_request(options)
     end
@@ -1571,9 +1571,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetLogEvents AWS API Documentation
     #
-    # @overload get_log_events(params = {})
+    # @overload get_log_events(**params)
     # @param [Hash] params ({})
-    def get_log_events(params = {}, options = {})
+    def get_log_events(params = {}, **options)
       req = build_request(:get_log_events, params)
       req.send_request(options)
     end
@@ -1625,9 +1625,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetLogGroupFields AWS API Documentation
     #
-    # @overload get_log_group_fields(params = {})
+    # @overload get_log_group_fields(**params)
     # @param [Hash] params ({})
-    def get_log_group_fields(params = {}, options = {})
+    def get_log_group_fields(params = {}, **options)
       req = build_request(:get_log_group_fields, params)
       req.send_request(options)
     end
@@ -1663,9 +1663,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetLogRecord AWS API Documentation
     #
-    # @overload get_log_record(params = {})
+    # @overload get_log_record(**params)
     # @param [Hash] params ({})
-    def get_log_record(params = {}, options = {})
+    def get_log_record(params = {}, **options)
       req = build_request(:get_log_record, params)
       req.send_request(options)
     end
@@ -1718,9 +1718,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetQueryResults AWS API Documentation
     #
-    # @overload get_query_results(params = {})
+    # @overload get_query_results(**params)
     # @param [Hash] params ({})
-    def get_query_results(params = {}, options = {})
+    def get_query_results(params = {}, **options)
       req = build_request(:get_query_results, params)
       req.send_request(options)
     end
@@ -1747,9 +1747,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/ListTagsLogGroup AWS API Documentation
     #
-    # @overload list_tags_log_group(params = {})
+    # @overload list_tags_log_group(**params)
     # @param [Hash] params ({})
-    def list_tags_log_group(params = {}, options = {})
+    def list_tags_log_group(params = {}, **options)
       req = build_request(:list_tags_log_group, params)
       req.send_request(options)
     end
@@ -1811,9 +1811,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDestination AWS API Documentation
     #
-    # @overload put_destination(params = {})
+    # @overload put_destination(**params)
     # @param [Hash] params ({})
-    def put_destination(params = {}, options = {})
+    def put_destination(params = {}, **options)
       req = build_request(:put_destination, params)
       req.send_request(options)
     end
@@ -1846,9 +1846,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDestinationPolicy AWS API Documentation
     #
-    # @overload put_destination_policy(params = {})
+    # @overload put_destination_policy(**params)
     # @param [Hash] params ({})
-    def put_destination_policy(params = {}, options = {})
+    def put_destination_policy(params = {}, **options)
       req = build_request(:put_destination_policy, params)
       req.send_request(options)
     end
@@ -1942,9 +1942,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutLogEvents AWS API Documentation
     #
-    # @overload put_log_events(params = {})
+    # @overload put_log_events(**params)
     # @param [Hash] params ({})
-    def put_log_events(params = {}, options = {})
+    def put_log_events(params = {}, **options)
       req = build_request(:put_log_events, params)
       req.send_request(options)
     end
@@ -1994,9 +1994,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutMetricFilter AWS API Documentation
     #
-    # @overload put_metric_filter(params = {})
+    # @overload put_metric_filter(**params)
     # @param [Hash] params ({})
-    def put_metric_filter(params = {}, options = {})
+    def put_metric_filter(params = {}, **options)
       req = build_request(:put_metric_filter, params)
       req.send_request(options)
     end
@@ -2080,9 +2080,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutQueryDefinition AWS API Documentation
     #
-    # @overload put_query_definition(params = {})
+    # @overload put_query_definition(**params)
     # @param [Hash] params ({})
-    def put_query_definition(params = {}, options = {})
+    def put_query_definition(params = {}, **options)
       req = build_request(:put_query_definition, params)
       req.send_request(options)
     end
@@ -2128,9 +2128,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutResourcePolicy AWS API Documentation
     #
-    # @overload put_resource_policy(params = {})
+    # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, options = {})
+    def put_resource_policy(params = {}, **options)
       req = build_request(:put_resource_policy, params)
       req.send_request(options)
     end
@@ -2161,9 +2161,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutRetentionPolicy AWS API Documentation
     #
-    # @overload put_retention_policy(params = {})
+    # @overload put_retention_policy(**params)
     # @param [Hash] params ({})
-    def put_retention_policy(params = {}, options = {})
+    def put_retention_policy(params = {}, **options)
       req = build_request(:put_retention_policy, params)
       req.send_request(options)
     end
@@ -2261,9 +2261,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutSubscriptionFilter AWS API Documentation
     #
-    # @overload put_subscription_filter(params = {})
+    # @overload put_subscription_filter(**params)
     # @param [Hash] params ({})
-    def put_subscription_filter(params = {}, options = {})
+    def put_subscription_filter(params = {}, **options)
       req = build_request(:put_subscription_filter, params)
       req.send_request(options)
     end
@@ -2339,9 +2339,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/StartQuery AWS API Documentation
     #
-    # @overload start_query(params = {})
+    # @overload start_query(**params)
     # @param [Hash] params ({})
-    def start_query(params = {}, options = {})
+    def start_query(params = {}, **options)
       req = build_request(:start_query, params)
       req.send_request(options)
     end
@@ -2370,9 +2370,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/StopQuery AWS API Documentation
     #
-    # @overload stop_query(params = {})
+    # @overload stop_query(**params)
     # @param [Hash] params ({})
-    def stop_query(params = {}, options = {})
+    def stop_query(params = {}, **options)
       req = build_request(:stop_query, params)
       req.send_request(options)
     end
@@ -2410,9 +2410,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/TagLogGroup AWS API Documentation
     #
-    # @overload tag_log_group(params = {})
+    # @overload tag_log_group(**params)
     # @param [Hash] params ({})
-    def tag_log_group(params = {}, options = {})
+    def tag_log_group(params = {}, **options)
       req = build_request(:tag_log_group, params)
       req.send_request(options)
     end
@@ -2451,9 +2451,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/TestMetricFilter AWS API Documentation
     #
-    # @overload test_metric_filter(params = {})
+    # @overload test_metric_filter(**params)
     # @param [Hash] params ({})
-    def test_metric_filter(params = {}, options = {})
+    def test_metric_filter(params = {}, **options)
       req = build_request(:test_metric_filter, params)
       req.send_request(options)
     end
@@ -2485,9 +2485,9 @@ module Aws::CloudWatchLogs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/UntagLogGroup AWS API Documentation
     #
-    # @overload untag_log_group(params = {})
+    # @overload untag_log_group(**params)
     # @param [Hash] params ({})
-    def untag_log_group(params = {}, options = {})
+    def untag_log_group(params = {}, **options)
       req = build_request(:untag_log_group, params)
       req.send_request(options)
     end
@@ -2496,7 +2496,7 @@ module Aws::CloudWatchLogs
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2504,15 +2504,15 @@ module Aws::CloudWatchLogs
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudwatchlogs'
-      context[:gem_version] = '1.38.0'
+      context[:gem_name] = "aws-sdk-cloudwatchlogs"
+      context[:gem_version] = "1.38.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

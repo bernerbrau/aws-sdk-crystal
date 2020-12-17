@@ -7,30 +7,30 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/ec2.rb'
-require 'aws-sdk-ec2/plugins/copy_encrypted_snapshot.rb'
-require 'aws-sdk-ec2/plugins/region_validation.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/ec2.rb"
+require "aws-sdk-ec2/plugins/copy_encrypted_snapshot.rb"
+require "aws-sdk-ec2/plugins/region_validation.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ec2)
 
@@ -284,7 +284,7 @@ module Aws::EC2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -371,9 +371,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptReservedInstancesExchangeQuote AWS API Documentation
     #
-    # @overload accept_reserved_instances_exchange_quote(params = {})
+    # @overload accept_reserved_instances_exchange_quote(**params)
     # @param [Hash] params ({})
-    def accept_reserved_instances_exchange_quote(params = {}, options = {})
+    def accept_reserved_instances_exchange_quote(params = {}, **options)
       req = build_request(:accept_reserved_instances_exchange_quote, params)
       req.send_request(options)
     end
@@ -423,9 +423,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptTransitGatewayMulticastDomainAssociations AWS API Documentation
     #
-    # @overload accept_transit_gateway_multicast_domain_associations(params = {})
+    # @overload accept_transit_gateway_multicast_domain_associations(**params)
     # @param [Hash] params ({})
-    def accept_transit_gateway_multicast_domain_associations(params = {}, options = {})
+    def accept_transit_gateway_multicast_domain_associations(params = {}, **options)
       req = build_request(:accept_transit_gateway_multicast_domain_associations, params)
       req.send_request(options)
     end
@@ -472,9 +472,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptTransitGatewayPeeringAttachment AWS API Documentation
     #
-    # @overload accept_transit_gateway_peering_attachment(params = {})
+    # @overload accept_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def accept_transit_gateway_peering_attachment(params = {}, options = {})
+    def accept_transit_gateway_peering_attachment(params = {}, **options)
       req = build_request(:accept_transit_gateway_peering_attachment, params)
       req.send_request(options)
     end
@@ -525,9 +525,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptTransitGatewayVpcAttachment AWS API Documentation
     #
-    # @overload accept_transit_gateway_vpc_attachment(params = {})
+    # @overload accept_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def accept_transit_gateway_vpc_attachment(params = {}, options = {})
+    def accept_transit_gateway_vpc_attachment(params = {}, **options)
       req = build_request(:accept_transit_gateway_vpc_attachment, params)
       req.send_request(options)
     end
@@ -568,9 +568,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptVpcEndpointConnections AWS API Documentation
     #
-    # @overload accept_vpc_endpoint_connections(params = {})
+    # @overload accept_vpc_endpoint_connections(**params)
     # @param [Hash] params ({})
-    def accept_vpc_endpoint_connections(params = {}, options = {})
+    def accept_vpc_endpoint_connections(params = {}, **options)
       req = build_request(:accept_vpc_endpoint_connections, params)
       req.send_request(options)
     end
@@ -638,9 +638,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptVpcPeeringConnection AWS API Documentation
     #
-    # @overload accept_vpc_peering_connection(params = {})
+    # @overload accept_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def accept_vpc_peering_connection(params = {}, options = {})
+    def accept_vpc_peering_connection(params = {}, **options)
       req = build_request(:accept_vpc_peering_connection, params)
       req.send_request(options)
     end
@@ -693,9 +693,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AdvertiseByoipCidr AWS API Documentation
     #
-    # @overload advertise_byoip_cidr(params = {})
+    # @overload advertise_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def advertise_byoip_cidr(params = {}, options = {})
+    def advertise_byoip_cidr(params = {}, **options)
       req = build_request(:advertise_byoip_cidr, params)
       req.send_request(options)
     end
@@ -848,9 +848,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AllocateAddress AWS API Documentation
     #
-    # @overload allocate_address(params = {})
+    # @overload allocate_address(**params)
     # @param [Hash] params ({})
-    def allocate_address(params = {}, options = {})
+    def allocate_address(params = {}, **options)
       req = build_request(:allocate_address, params)
       req.send_request(options)
     end
@@ -956,9 +956,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AllocateHosts AWS API Documentation
     #
-    # @overload allocate_hosts(params = {})
+    # @overload allocate_hosts(**params)
     # @param [Hash] params ({})
-    def allocate_hosts(params = {}, options = {})
+    def allocate_hosts(params = {}, **options)
       req = build_request(:allocate_hosts, params)
       req.send_request(options)
     end
@@ -1004,9 +1004,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ApplySecurityGroupsToClientVpnTargetNetwork AWS API Documentation
     #
-    # @overload apply_security_groups_to_client_vpn_target_network(params = {})
+    # @overload apply_security_groups_to_client_vpn_target_network(**params)
     # @param [Hash] params ({})
-    def apply_security_groups_to_client_vpn_target_network(params = {}, options = {})
+    def apply_security_groups_to_client_vpn_target_network(params = {}, **options)
       req = build_request(:apply_security_groups_to_client_vpn_target_network, params)
       req.send_request(options)
     end
@@ -1062,9 +1062,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssignIpv6Addresses AWS API Documentation
     #
-    # @overload assign_ipv_6_addresses(params = {})
+    # @overload assign_ipv_6_addresses(**params)
     # @param [Hash] params ({})
-    def assign_ipv_6_addresses(params = {}, options = {})
+    def assign_ipv_6_addresses(params = {}, **options)
       req = build_request(:assign_ipv_6_addresses, params)
       req.send_request(options)
     end
@@ -1164,9 +1164,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssignPrivateIpAddresses AWS API Documentation
     #
-    # @overload assign_private_ip_addresses(params = {})
+    # @overload assign_private_ip_addresses(**params)
     # @param [Hash] params ({})
-    def assign_private_ip_addresses(params = {}, options = {})
+    def assign_private_ip_addresses(params = {}, **options)
       req = build_request(:assign_private_ip_addresses, params)
       req.send_request(options)
     end
@@ -1314,9 +1314,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateAddress AWS API Documentation
     #
-    # @overload associate_address(params = {})
+    # @overload associate_address(**params)
     # @param [Hash] params ({})
-    def associate_address(params = {}, options = {})
+    def associate_address(params = {}, **options)
       req = build_request(:associate_address, params)
       req.send_request(options)
     end
@@ -1379,9 +1379,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateClientVpnTargetNetwork AWS API Documentation
     #
-    # @overload associate_client_vpn_target_network(params = {})
+    # @overload associate_client_vpn_target_network(**params)
     # @param [Hash] params ({})
-    def associate_client_vpn_target_network(params = {}, options = {})
+    def associate_client_vpn_target_network(params = {}, **options)
       req = build_request(:associate_client_vpn_target_network, params)
       req.send_request(options)
     end
@@ -1447,9 +1447,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateDhcpOptions AWS API Documentation
     #
-    # @overload associate_dhcp_options(params = {})
+    # @overload associate_dhcp_options(**params)
     # @param [Hash] params ({})
-    def associate_dhcp_options(params = {}, options = {})
+    def associate_dhcp_options(params = {}, **options)
       req = build_request(:associate_dhcp_options, params)
       req.send_request(options)
     end
@@ -1514,9 +1514,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateEnclaveCertificateIamRole AWS API Documentation
     #
-    # @overload associate_enclave_certificate_iam_role(params = {})
+    # @overload associate_enclave_certificate_iam_role(**params)
     # @param [Hash] params ({})
-    def associate_enclave_certificate_iam_role(params = {}, options = {})
+    def associate_enclave_certificate_iam_role(params = {}, **options)
       req = build_request(:associate_enclave_certificate_iam_role, params)
       req.send_request(options)
     end
@@ -1581,9 +1581,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIamInstanceProfile AWS API Documentation
     #
-    # @overload associate_iam_instance_profile(params = {})
+    # @overload associate_iam_instance_profile(**params)
     # @param [Hash] params ({})
-    def associate_iam_instance_profile(params = {}, options = {})
+    def associate_iam_instance_profile(params = {}, **options)
       req = build_request(:associate_iam_instance_profile, params)
       req.send_request(options)
     end
@@ -1654,9 +1654,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateRouteTable AWS API Documentation
     #
-    # @overload associate_route_table(params = {})
+    # @overload associate_route_table(**params)
     # @param [Hash] params ({})
-    def associate_route_table(params = {}, options = {})
+    def associate_route_table(params = {}, **options)
       req = build_request(:associate_route_table, params)
       req.send_request(options)
     end
@@ -1694,9 +1694,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateSubnetCidrBlock AWS API Documentation
     #
-    # @overload associate_subnet_cidr_block(params = {})
+    # @overload associate_subnet_cidr_block(**params)
     # @param [Hash] params ({})
-    def associate_subnet_cidr_block(params = {}, options = {})
+    def associate_subnet_cidr_block(params = {}, **options)
       req = build_request(:associate_subnet_cidr_block, params)
       req.send_request(options)
     end
@@ -1755,9 +1755,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateTransitGatewayMulticastDomain AWS API Documentation
     #
-    # @overload associate_transit_gateway_multicast_domain(params = {})
+    # @overload associate_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def associate_transit_gateway_multicast_domain(params = {}, options = {})
+    def associate_transit_gateway_multicast_domain(params = {}, **options)
       req = build_request(:associate_transit_gateway_multicast_domain, params)
       req.send_request(options)
     end
@@ -1800,9 +1800,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateTransitGatewayRouteTable AWS API Documentation
     #
-    # @overload associate_transit_gateway_route_table(params = {})
+    # @overload associate_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def associate_transit_gateway_route_table(params = {}, options = {})
+    def associate_transit_gateway_route_table(params = {}, **options)
       req = build_request(:associate_transit_gateway_route_table, params)
       req.send_request(options)
     end
@@ -1888,9 +1888,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateVpcCidrBlock AWS API Documentation
     #
-    # @overload associate_vpc_cidr_block(params = {})
+    # @overload associate_vpc_cidr_block(**params)
     # @param [Hash] params ({})
-    def associate_vpc_cidr_block(params = {}, options = {})
+    def associate_vpc_cidr_block(params = {}, **options)
       req = build_request(:associate_vpc_cidr_block, params)
       req.send_request(options)
     end
@@ -1945,9 +1945,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AttachClassicLinkVpc AWS API Documentation
     #
-    # @overload attach_classic_link_vpc(params = {})
+    # @overload attach_classic_link_vpc(**params)
     # @param [Hash] params ({})
-    def attach_classic_link_vpc(params = {}, options = {})
+    def attach_classic_link_vpc(params = {}, **options)
       req = build_request(:attach_classic_link_vpc, params)
       req.send_request(options)
     end
@@ -1995,9 +1995,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AttachInternetGateway AWS API Documentation
     #
-    # @overload attach_internet_gateway(params = {})
+    # @overload attach_internet_gateway(**params)
     # @param [Hash] params ({})
-    def attach_internet_gateway(params = {}, options = {})
+    def attach_internet_gateway(params = {}, **options)
       req = build_request(:attach_internet_gateway, params)
       req.send_request(options)
     end
@@ -2062,9 +2062,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AttachNetworkInterface AWS API Documentation
     #
-    # @overload attach_network_interface(params = {})
+    # @overload attach_network_interface(**params)
     # @param [Hash] params ({})
-    def attach_network_interface(params = {}, options = {})
+    def attach_network_interface(params = {}, **options)
       req = build_request(:attach_network_interface, params)
       req.send_request(options)
     end
@@ -2166,9 +2166,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AttachVolume AWS API Documentation
     #
-    # @overload attach_volume(params = {})
+    # @overload attach_volume(**params)
     # @param [Hash] params ({})
-    def attach_volume(params = {}, options = {})
+    def attach_volume(params = {}, **options)
       req = build_request(:attach_volume, params)
       req.send_request(options)
     end
@@ -2214,9 +2214,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AttachVpnGateway AWS API Documentation
     #
-    # @overload attach_vpn_gateway(params = {})
+    # @overload attach_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def attach_vpn_gateway(params = {}, options = {})
+    def attach_vpn_gateway(params = {}, **options)
       req = build_request(:attach_vpn_gateway, params)
       req.send_request(options)
     end
@@ -2288,9 +2288,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AuthorizeClientVpnIngress AWS API Documentation
     #
-    # @overload authorize_client_vpn_ingress(params = {})
+    # @overload authorize_client_vpn_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_client_vpn_ingress(params = {}, options = {})
+    def authorize_client_vpn_ingress(params = {}, **options)
       req = build_request(:authorize_client_vpn_ingress, params)
       req.send_request(options)
     end
@@ -2454,9 +2454,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AuthorizeSecurityGroupEgress AWS API Documentation
     #
-    # @overload authorize_security_group_egress(params = {})
+    # @overload authorize_security_group_egress(**params)
     # @param [Hash] params ({})
-    def authorize_security_group_egress(params = {}, options = {})
+    def authorize_security_group_egress(params = {}, **options)
       req = build_request(:authorize_security_group_egress, params)
       req.send_request(options)
     end
@@ -2692,9 +2692,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AuthorizeSecurityGroupIngress AWS API Documentation
     #
-    # @overload authorize_security_group_ingress(params = {})
+    # @overload authorize_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_security_group_ingress(params = {}, options = {})
+    def authorize_security_group_ingress(params = {}, **options)
       req = build_request(:authorize_security_group_ingress, params)
       req.send_request(options)
     end
@@ -2768,9 +2768,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/BundleInstance AWS API Documentation
     #
-    # @overload bundle_instance(params = {})
+    # @overload bundle_instance(**params)
     # @param [Hash] params ({})
-    def bundle_instance(params = {}, options = {})
+    def bundle_instance(params = {}, **options)
       req = build_request(:bundle_instance, params)
       req.send_request(options)
     end
@@ -2816,9 +2816,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelBundleTask AWS API Documentation
     #
-    # @overload cancel_bundle_task(params = {})
+    # @overload cancel_bundle_task(**params)
     # @param [Hash] params ({})
-    def cancel_bundle_task(params = {}, options = {})
+    def cancel_bundle_task(params = {}, **options)
       req = build_request(:cancel_bundle_task, params)
       req.send_request(options)
     end
@@ -2860,9 +2860,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelCapacityReservation AWS API Documentation
     #
-    # @overload cancel_capacity_reservation(params = {})
+    # @overload cancel_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def cancel_capacity_reservation(params = {}, options = {})
+    def cancel_capacity_reservation(params = {}, **options)
       req = build_request(:cancel_capacity_reservation, params)
       req.send_request(options)
     end
@@ -2904,9 +2904,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelConversionTask AWS API Documentation
     #
-    # @overload cancel_conversion_task(params = {})
+    # @overload cancel_conversion_task(**params)
     # @param [Hash] params ({})
-    def cancel_conversion_task(params = {}, options = {})
+    def cancel_conversion_task(params = {}, **options)
       req = build_request(:cancel_conversion_task, params)
       req.send_request(options)
     end
@@ -2930,9 +2930,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelExportTask AWS API Documentation
     #
-    # @overload cancel_export_task(params = {})
+    # @overload cancel_export_task(**params)
     # @param [Hash] params ({})
-    def cancel_export_task(params = {}, options = {})
+    def cancel_export_task(params = {}, **options)
       req = build_request(:cancel_export_task, params)
       req.send_request(options)
     end
@@ -2973,9 +2973,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelImportTask AWS API Documentation
     #
-    # @overload cancel_import_task(params = {})
+    # @overload cancel_import_task(**params)
     # @param [Hash] params ({})
-    def cancel_import_task(params = {}, options = {})
+    def cancel_import_task(params = {}, **options)
       req = build_request(:cancel_import_task, params)
       req.send_request(options)
     end
@@ -3027,9 +3027,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelReservedInstancesListing AWS API Documentation
     #
-    # @overload cancel_reserved_instances_listing(params = {})
+    # @overload cancel_reserved_instances_listing(**params)
     # @param [Hash] params ({})
-    def cancel_reserved_instances_listing(params = {}, options = {})
+    def cancel_reserved_instances_listing(params = {}, **options)
       req = build_request(:cancel_reserved_instances_listing, params)
       req.send_request(options)
     end
@@ -3128,9 +3128,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelSpotFleetRequests AWS API Documentation
     #
-    # @overload cancel_spot_fleet_requests(params = {})
+    # @overload cancel_spot_fleet_requests(**params)
     # @param [Hash] params ({})
-    def cancel_spot_fleet_requests(params = {}, options = {})
+    def cancel_spot_fleet_requests(params = {}, **options)
       req = build_request(:cancel_spot_fleet_requests, params)
       req.send_request(options)
     end
@@ -3189,9 +3189,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CancelSpotInstanceRequests AWS API Documentation
     #
-    # @overload cancel_spot_instance_requests(params = {})
+    # @overload cancel_spot_instance_requests(**params)
     # @param [Hash] params ({})
-    def cancel_spot_instance_requests(params = {}, options = {})
+    def cancel_spot_instance_requests(params = {}, **options)
       req = build_request(:cancel_spot_instance_requests, params)
       req.send_request(options)
     end
@@ -3248,9 +3248,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ConfirmProductInstance AWS API Documentation
     #
-    # @overload confirm_product_instance(params = {})
+    # @overload confirm_product_instance(**params)
     # @param [Hash] params ({})
-    def confirm_product_instance(params = {}, options = {})
+    def confirm_product_instance(params = {}, **options)
       req = build_request(:confirm_product_instance, params)
       req.send_request(options)
     end
@@ -3305,9 +3305,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CopyFpgaImage AWS API Documentation
     #
-    # @overload copy_fpga_image(params = {})
+    # @overload copy_fpga_image(**params)
     # @param [Hash] params ({})
-    def copy_fpga_image(params = {}, options = {})
+    def copy_fpga_image(params = {}, **options)
       req = build_request(:copy_fpga_image, params)
       req.send_request(options)
     end
@@ -3435,9 +3435,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CopyImage AWS API Documentation
     #
-    # @overload copy_image(params = {})
+    # @overload copy_image(**params)
     # @param [Hash] params ({})
-    def copy_image(params = {}, options = {})
+    def copy_image(params = {}, **options)
       req = build_request(:copy_image, params)
       req.send_request(options)
     end
@@ -3607,9 +3607,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CopySnapshot AWS API Documentation
     #
-    # @overload copy_snapshot(params = {})
+    # @overload copy_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_snapshot(params = {}, options = {})
+    def copy_snapshot(params = {}, **options)
       req = build_request(:copy_snapshot, params)
       req.send_request(options)
     end
@@ -3809,9 +3809,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCapacityReservation AWS API Documentation
     #
-    # @overload create_capacity_reservation(params = {})
+    # @overload create_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def create_capacity_reservation(params = {}, options = {})
+    def create_capacity_reservation(params = {}, **options)
       req = build_request(:create_capacity_reservation, params)
       req.send_request(options)
     end
@@ -3883,9 +3883,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCarrierGateway AWS API Documentation
     #
-    # @overload create_carrier_gateway(params = {})
+    # @overload create_carrier_gateway(**params)
     # @param [Hash] params ({})
-    def create_carrier_gateway(params = {}, options = {})
+    def create_carrier_gateway(params = {}, **options)
       req = build_request(:create_carrier_gateway, params)
       req.send_request(options)
     end
@@ -4074,9 +4074,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateClientVpnEndpoint AWS API Documentation
     #
-    # @overload create_client_vpn_endpoint(params = {})
+    # @overload create_client_vpn_endpoint(**params)
     # @param [Hash] params ({})
-    def create_client_vpn_endpoint(params = {}, options = {})
+    def create_client_vpn_endpoint(params = {}, **options)
       req = build_request(:create_client_vpn_endpoint, params)
       req.send_request(options)
     end
@@ -4154,9 +4154,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateClientVpnRoute AWS API Documentation
     #
-    # @overload create_client_vpn_route(params = {})
+    # @overload create_client_vpn_route(**params)
     # @param [Hash] params ({})
-    def create_client_vpn_route(params = {}, options = {})
+    def create_client_vpn_route(params = {}, **options)
       req = build_request(:create_client_vpn_route, params)
       req.send_request(options)
     end
@@ -4292,9 +4292,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCustomerGateway AWS API Documentation
     #
-    # @overload create_customer_gateway(params = {})
+    # @overload create_customer_gateway(**params)
     # @param [Hash] params ({})
-    def create_customer_gateway(params = {}, options = {})
+    def create_customer_gateway(params = {}, **options)
       req = build_request(:create_customer_gateway, params)
       req.send_request(options)
     end
@@ -4357,9 +4357,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateDefaultSubnet AWS API Documentation
     #
-    # @overload create_default_subnet(params = {})
+    # @overload create_default_subnet(**params)
     # @param [Hash] params ({})
-    def create_default_subnet(params = {}, options = {})
+    def create_default_subnet(params = {}, **options)
       req = build_request(:create_default_subnet, params)
       req.send_request(options)
     end
@@ -4427,9 +4427,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateDefaultVpc AWS API Documentation
     #
-    # @overload create_default_vpc(params = {})
+    # @overload create_default_vpc(**params)
     # @param [Hash] params ({})
-    def create_default_vpc(params = {}, options = {})
+    def create_default_vpc(params = {}, **options)
       req = build_request(:create_default_vpc, params)
       req.send_request(options)
     end
@@ -4574,9 +4574,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateDhcpOptions AWS API Documentation
     #
-    # @overload create_dhcp_options(params = {})
+    # @overload create_dhcp_options(**params)
     # @param [Hash] params ({})
-    def create_dhcp_options(params = {}, options = {})
+    def create_dhcp_options(params = {}, **options)
       req = build_request(:create_dhcp_options, params)
       req.send_request(options)
     end
@@ -4646,9 +4646,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateEgressOnlyInternetGateway AWS API Documentation
     #
-    # @overload create_egress_only_internet_gateway(params = {})
+    # @overload create_egress_only_internet_gateway(**params)
     # @param [Hash] params ({})
-    def create_egress_only_internet_gateway(params = {}, options = {})
+    def create_egress_only_internet_gateway(params = {}, **options)
       req = build_request(:create_egress_only_internet_gateway, params)
       req.send_request(options)
     end
@@ -4876,9 +4876,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateFleet AWS API Documentation
     #
-    # @overload create_fleet(params = {})
+    # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, options = {})
+    def create_fleet(params = {}, **options)
       req = build_request(:create_fleet, params)
       req.send_request(options)
     end
@@ -5059,9 +5059,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateFlowLogs AWS API Documentation
     #
-    # @overload create_flow_logs(params = {})
+    # @overload create_flow_logs(**params)
     # @param [Hash] params ({})
-    def create_flow_logs(params = {}, options = {})
+    def create_flow_logs(params = {}, **options)
       req = build_request(:create_flow_logs, params)
       req.send_request(options)
     end
@@ -5152,9 +5152,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateFpgaImage AWS API Documentation
     #
-    # @overload create_fpga_image(params = {})
+    # @overload create_fpga_image(**params)
     # @param [Hash] params ({})
-    def create_fpga_image(params = {}, options = {})
+    def create_fpga_image(params = {}, **options)
       req = build_request(:create_fpga_image, params)
       req.send_request(options)
     end
@@ -5304,9 +5304,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateImage AWS API Documentation
     #
-    # @overload create_image(params = {})
+    # @overload create_image(**params)
     # @param [Hash] params ({})
-    def create_image(params = {}, options = {})
+    def create_image(params = {}, **options)
       req = build_request(:create_image, params)
       req.send_request(options)
     end
@@ -5385,9 +5385,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateInstanceExportTask AWS API Documentation
     #
-    # @overload create_instance_export_task(params = {})
+    # @overload create_instance_export_task(**params)
     # @param [Hash] params ({})
-    def create_instance_export_task(params = {}, options = {})
+    def create_instance_export_task(params = {}, **options)
       req = build_request(:create_instance_export_task, params)
       req.send_request(options)
     end
@@ -5464,9 +5464,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateInternetGateway AWS API Documentation
     #
-    # @overload create_internet_gateway(params = {})
+    # @overload create_internet_gateway(**params)
     # @param [Hash] params ({})
-    def create_internet_gateway(params = {}, options = {})
+    def create_internet_gateway(params = {}, **options)
       req = build_request(:create_internet_gateway, params)
       req.send_request(options)
     end
@@ -5551,9 +5551,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateKeyPair AWS API Documentation
     #
-    # @overload create_key_pair(params = {})
+    # @overload create_key_pair(**params)
     # @param [Hash] params ({})
-    def create_key_pair(params = {}, options = {})
+    def create_key_pair(params = {}, **options)
       req = build_request(:create_key_pair, params)
       req.send_request(options)
     end
@@ -5823,9 +5823,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLaunchTemplate AWS API Documentation
     #
-    # @overload create_launch_template(params = {})
+    # @overload create_launch_template(**params)
     # @param [Hash] params ({})
-    def create_launch_template(params = {}, options = {})
+    def create_launch_template(params = {}, **options)
       req = build_request(:create_launch_template, params)
       req.send_request(options)
     end
@@ -6182,9 +6182,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLaunchTemplateVersion AWS API Documentation
     #
-    # @overload create_launch_template_version(params = {})
+    # @overload create_launch_template_version(**params)
     # @param [Hash] params ({})
-    def create_launch_template_version(params = {}, options = {})
+    def create_launch_template_version(params = {}, **options)
       req = build_request(:create_launch_template_version, params)
       req.send_request(options)
     end
@@ -6232,9 +6232,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRoute AWS API Documentation
     #
-    # @overload create_local_gateway_route(params = {})
+    # @overload create_local_gateway_route(**params)
     # @param [Hash] params ({})
-    def create_local_gateway_route(params = {}, options = {})
+    def create_local_gateway_route(params = {}, **options)
       req = build_request(:create_local_gateway_route, params)
       req.send_request(options)
     end
@@ -6295,9 +6295,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTableVpcAssociation AWS API Documentation
     #
-    # @overload create_local_gateway_route_table_vpc_association(params = {})
+    # @overload create_local_gateway_route_table_vpc_association(**params)
     # @param [Hash] params ({})
-    def create_local_gateway_route_table_vpc_association(params = {}, options = {})
+    def create_local_gateway_route_table_vpc_association(params = {}, **options)
       req = build_request(:create_local_gateway_route_table_vpc_association, params)
       req.send_request(options)
     end
@@ -6397,9 +6397,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateManagedPrefixList AWS API Documentation
     #
-    # @overload create_managed_prefix_list(params = {})
+    # @overload create_managed_prefix_list(**params)
     # @param [Hash] params ({})
-    def create_managed_prefix_list(params = {}, options = {})
+    def create_managed_prefix_list(params = {}, **options)
       req = build_request(:create_managed_prefix_list, params)
       req.send_request(options)
     end
@@ -6526,9 +6526,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNatGateway AWS API Documentation
     #
-    # @overload create_nat_gateway(params = {})
+    # @overload create_nat_gateway(**params)
     # @param [Hash] params ({})
-    def create_nat_gateway(params = {}, options = {})
+    def create_nat_gateway(params = {}, **options)
       req = build_request(:create_nat_gateway, params)
       req.send_request(options)
     end
@@ -6643,9 +6643,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkAcl AWS API Documentation
     #
-    # @overload create_network_acl(params = {})
+    # @overload create_network_acl(**params)
     # @param [Hash] params ({})
-    def create_network_acl(params = {}, options = {})
+    def create_network_acl(params = {}, **options)
       req = build_request(:create_network_acl, params)
       req.send_request(options)
     end
@@ -6769,9 +6769,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkAclEntry AWS API Documentation
     #
-    # @overload create_network_acl_entry(params = {})
+    # @overload create_network_acl_entry(**params)
     # @param [Hash] params ({})
-    def create_network_acl_entry(params = {}, options = {})
+    def create_network_acl_entry(params = {}, **options)
       req = build_request(:create_network_acl_entry, params)
       req.send_request(options)
     end
@@ -6871,9 +6871,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInsightsPath AWS API Documentation
     #
-    # @overload create_network_insights_path(params = {})
+    # @overload create_network_insights_path(**params)
     # @param [Hash] params ({})
-    def create_network_insights_path(params = {}, options = {})
+    def create_network_insights_path(params = {}, **options)
       req = build_request(:create_network_insights_path, params)
       req.send_request(options)
     end
@@ -7090,9 +7090,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInterface AWS API Documentation
     #
-    # @overload create_network_interface(params = {})
+    # @overload create_network_interface(**params)
     # @param [Hash] params ({})
-    def create_network_interface(params = {}, options = {})
+    def create_network_interface(params = {}, **options)
       req = build_request(:create_network_interface, params)
       req.send_request(options)
     end
@@ -7147,9 +7147,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateNetworkInterfacePermission AWS API Documentation
     #
-    # @overload create_network_interface_permission(params = {})
+    # @overload create_network_interface_permission(**params)
     # @param [Hash] params ({})
-    def create_network_interface_permission(params = {}, options = {})
+    def create_network_interface_permission(params = {}, **options)
       req = build_request(:create_network_interface_permission, params)
       req.send_request(options)
     end
@@ -7245,9 +7245,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreatePlacementGroup AWS API Documentation
     #
-    # @overload create_placement_group(params = {})
+    # @overload create_placement_group(**params)
     # @param [Hash] params ({})
-    def create_placement_group(params = {}, options = {})
+    def create_placement_group(params = {}, **options)
       req = build_request(:create_placement_group, params)
       req.send_request(options)
     end
@@ -7350,9 +7350,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateReservedInstancesListing AWS API Documentation
     #
-    # @overload create_reserved_instances_listing(params = {})
+    # @overload create_reserved_instances_listing(**params)
     # @param [Hash] params ({})
-    def create_reserved_instances_listing(params = {}, options = {})
+    def create_reserved_instances_listing(params = {}, **options)
       req = build_request(:create_reserved_instances_listing, params)
       req.send_request(options)
     end
@@ -7486,9 +7486,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateRoute AWS API Documentation
     #
-    # @overload create_route(params = {})
+    # @overload create_route(**params)
     # @param [Hash] params ({})
-    def create_route(params = {}, options = {})
+    def create_route(params = {}, **options)
       req = build_request(:create_route, params)
       req.send_request(options)
     end
@@ -7604,9 +7604,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateRouteTable AWS API Documentation
     #
-    # @overload create_route_table(params = {})
+    # @overload create_route_table(**params)
     # @param [Hash] params ({})
-    def create_route_table(params = {}, options = {})
+    def create_route_table(params = {}, **options)
       req = build_request(:create_route_table, params)
       req.send_request(options)
     end
@@ -7727,9 +7727,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateSecurityGroup AWS API Documentation
     #
-    # @overload create_security_group(params = {})
+    # @overload create_security_group(**params)
     # @param [Hash] params ({})
-    def create_security_group(params = {}, options = {})
+    def create_security_group(params = {}, **options)
       req = build_request(:create_security_group, params)
       req.send_request(options)
     end
@@ -7869,9 +7869,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateSnapshot AWS API Documentation
     #
-    # @overload create_snapshot(params = {})
+    # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, options = {})
+    def create_snapshot(params = {}, **options)
       req = build_request(:create_snapshot, params)
       req.send_request(options)
     end
@@ -7946,9 +7946,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateSnapshots AWS API Documentation
     #
-    # @overload create_snapshots(params = {})
+    # @overload create_snapshots(**params)
     # @param [Hash] params ({})
-    def create_snapshots(params = {}, options = {})
+    def create_snapshots(params = {}, **options)
       req = build_request(:create_snapshots, params)
       req.send_request(options)
     end
@@ -8023,9 +8023,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateSpotDatafeedSubscription AWS API Documentation
     #
-    # @overload create_spot_datafeed_subscription(params = {})
+    # @overload create_spot_datafeed_subscription(**params)
     # @param [Hash] params ({})
-    def create_spot_datafeed_subscription(params = {}, options = {})
+    def create_spot_datafeed_subscription(params = {}, **options)
       req = build_request(:create_spot_datafeed_subscription, params)
       req.send_request(options)
     end
@@ -8186,9 +8186,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateSubnet AWS API Documentation
     #
-    # @overload create_subnet(params = {})
+    # @overload create_subnet(**params)
     # @param [Hash] params ({})
-    def create_subnet(params = {}, options = {})
+    def create_subnet(params = {}, **options)
       req = build_request(:create_subnet, params)
       req.send_request(options)
     end
@@ -8262,9 +8262,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTags AWS API Documentation
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -8374,9 +8374,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTrafficMirrorFilter AWS API Documentation
     #
-    # @overload create_traffic_mirror_filter(params = {})
+    # @overload create_traffic_mirror_filter(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_filter(params = {}, options = {})
+    def create_traffic_mirror_filter(params = {}, **options)
       req = build_request(:create_traffic_mirror_filter, params)
       req.send_request(options)
     end
@@ -8492,9 +8492,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTrafficMirrorFilterRule AWS API Documentation
     #
-    # @overload create_traffic_mirror_filter_rule(params = {})
+    # @overload create_traffic_mirror_filter_rule(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_filter_rule(params = {}, options = {})
+    def create_traffic_mirror_filter_rule(params = {}, **options)
       req = build_request(:create_traffic_mirror_filter_rule, params)
       req.send_request(options)
     end
@@ -8625,9 +8625,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTrafficMirrorSession AWS API Documentation
     #
-    # @overload create_traffic_mirror_session(params = {})
+    # @overload create_traffic_mirror_session(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_session(params = {}, options = {})
+    def create_traffic_mirror_session(params = {}, **options)
       req = build_request(:create_traffic_mirror_session, params)
       req.send_request(options)
     end
@@ -8721,9 +8721,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTrafficMirrorTarget AWS API Documentation
     #
-    # @overload create_traffic_mirror_target(params = {})
+    # @overload create_traffic_mirror_target(**params)
     # @param [Hash] params ({})
-    def create_traffic_mirror_target(params = {}, options = {})
+    def create_traffic_mirror_target(params = {}, **options)
       req = build_request(:create_traffic_mirror_target, params)
       req.send_request(options)
     end
@@ -8824,9 +8824,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGateway AWS API Documentation
     #
-    # @overload create_transit_gateway(params = {})
+    # @overload create_transit_gateway(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway(params = {}, options = {})
+    def create_transit_gateway(params = {}, **options)
       req = build_request(:create_transit_gateway, params)
       req.send_request(options)
     end
@@ -8894,9 +8894,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayConnect AWS API Documentation
     #
-    # @overload create_transit_gateway_connect(params = {})
+    # @overload create_transit_gateway_connect(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_connect(params = {}, options = {})
+    def create_transit_gateway_connect(params = {}, **options)
       req = build_request(:create_transit_gateway_connect, params)
       req.send_request(options)
     end
@@ -8997,9 +8997,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayConnectPeer AWS API Documentation
     #
-    # @overload create_transit_gateway_connect_peer(params = {})
+    # @overload create_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_connect_peer(params = {}, options = {})
+    def create_transit_gateway_connect_peer(params = {}, **options)
       req = build_request(:create_transit_gateway_connect_peer, params)
       req.send_request(options)
     end
@@ -9073,9 +9073,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayMulticastDomain AWS API Documentation
     #
-    # @overload create_transit_gateway_multicast_domain(params = {})
+    # @overload create_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_multicast_domain(params = {}, options = {})
+    def create_transit_gateway_multicast_domain(params = {}, **options)
       req = build_request(:create_transit_gateway_multicast_domain, params)
       req.send_request(options)
     end
@@ -9154,9 +9154,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPeeringAttachment AWS API Documentation
     #
-    # @overload create_transit_gateway_peering_attachment(params = {})
+    # @overload create_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_peering_attachment(params = {}, options = {})
+    def create_transit_gateway_peering_attachment(params = {}, **options)
       req = build_request(:create_transit_gateway_peering_attachment, params)
       req.send_request(options)
     end
@@ -9209,9 +9209,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPrefixListReference AWS API Documentation
     #
-    # @overload create_transit_gateway_prefix_list_reference(params = {})
+    # @overload create_transit_gateway_prefix_list_reference(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_prefix_list_reference(params = {}, options = {})
+    def create_transit_gateway_prefix_list_reference(params = {}, **options)
       req = build_request(:create_transit_gateway_prefix_list_reference, params)
       req.send_request(options)
     end
@@ -9264,9 +9264,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayRoute AWS API Documentation
     #
-    # @overload create_transit_gateway_route(params = {})
+    # @overload create_transit_gateway_route(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_route(params = {}, options = {})
+    def create_transit_gateway_route(params = {}, **options)
       req = build_request(:create_transit_gateway_route, params)
       req.send_request(options)
     end
@@ -9321,9 +9321,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayRouteTable AWS API Documentation
     #
-    # @overload create_transit_gateway_route_table(params = {})
+    # @overload create_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_route_table(params = {}, options = {})
+    def create_transit_gateway_route_table(params = {}, **options)
       req = build_request(:create_transit_gateway_route_table, params)
       req.send_request(options)
     end
@@ -9409,9 +9409,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayVpcAttachment AWS API Documentation
     #
-    # @overload create_transit_gateway_vpc_attachment(params = {})
+    # @overload create_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def create_transit_gateway_vpc_attachment(params = {}, options = {})
+    def create_transit_gateway_vpc_attachment(params = {}, **options)
       req = build_request(:create_transit_gateway_vpc_attachment, params)
       req.send_request(options)
     end
@@ -9713,9 +9713,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVolume AWS API Documentation
     #
-    # @overload create_volume(params = {})
+    # @overload create_volume(**params)
     # @param [Hash] params ({})
-    def create_volume(params = {}, options = {})
+    def create_volume(params = {}, **options)
       req = build_request(:create_volume, params)
       req.send_request(options)
     end
@@ -9872,9 +9872,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpc AWS API Documentation
     #
-    # @overload create_vpc(params = {})
+    # @overload create_vpc(**params)
     # @param [Hash] params ({})
-    def create_vpc(params = {}, options = {})
+    def create_vpc(params = {}, **options)
       req = build_request(:create_vpc, params)
       req.send_request(options)
     end
@@ -10035,9 +10035,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpcEndpoint AWS API Documentation
     #
-    # @overload create_vpc_endpoint(params = {})
+    # @overload create_vpc_endpoint(**params)
     # @param [Hash] params ({})
-    def create_vpc_endpoint(params = {}, options = {})
+    def create_vpc_endpoint(params = {}, **options)
       req = build_request(:create_vpc_endpoint, params)
       req.send_request(options)
     end
@@ -10112,9 +10112,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpcEndpointConnectionNotification AWS API Documentation
     #
-    # @overload create_vpc_endpoint_connection_notification(params = {})
+    # @overload create_vpc_endpoint_connection_notification(**params)
     # @param [Hash] params ({})
-    def create_vpc_endpoint_connection_notification(params = {}, options = {})
+    def create_vpc_endpoint_connection_notification(params = {}, **options)
       req = build_request(:create_vpc_endpoint_connection_notification, params)
       req.send_request(options)
     end
@@ -10237,9 +10237,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpcEndpointServiceConfiguration AWS API Documentation
     #
-    # @overload create_vpc_endpoint_service_configuration(params = {})
+    # @overload create_vpc_endpoint_service_configuration(**params)
     # @param [Hash] params ({})
-    def create_vpc_endpoint_service_configuration(params = {}, options = {})
+    def create_vpc_endpoint_service_configuration(params = {}, **options)
       req = build_request(:create_vpc_endpoint_service_configuration, params)
       req.send_request(options)
     end
@@ -10355,9 +10355,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpcPeeringConnection AWS API Documentation
     #
-    # @overload create_vpc_peering_connection(params = {})
+    # @overload create_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def create_vpc_peering_connection(params = {}, options = {})
+    def create_vpc_peering_connection(params = {}, **options)
       req = build_request(:create_vpc_peering_connection, params)
       req.send_request(options)
     end
@@ -10558,9 +10558,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpnConnection AWS API Documentation
     #
-    # @overload create_vpn_connection(params = {})
+    # @overload create_vpn_connection(**params)
     # @param [Hash] params ({})
-    def create_vpn_connection(params = {}, options = {})
+    def create_vpn_connection(params = {}, **options)
       req = build_request(:create_vpn_connection, params)
       req.send_request(options)
     end
@@ -10595,9 +10595,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpnConnectionRoute AWS API Documentation
     #
-    # @overload create_vpn_connection_route(params = {})
+    # @overload create_vpn_connection_route(**params)
     # @param [Hash] params ({})
-    def create_vpn_connection_route(params = {}, options = {})
+    def create_vpn_connection_route(params = {}, **options)
       req = build_request(:create_vpn_connection_route, params)
       req.send_request(options)
     end
@@ -10676,9 +10676,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateVpnGateway AWS API Documentation
     #
-    # @overload create_vpn_gateway(params = {})
+    # @overload create_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def create_vpn_gateway(params = {}, options = {})
+    def create_vpn_gateway(params = {}, **options)
       req = build_request(:create_vpn_gateway, params)
       req.send_request(options)
     end
@@ -10725,9 +10725,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCarrierGateway AWS API Documentation
     #
-    # @overload delete_carrier_gateway(params = {})
+    # @overload delete_carrier_gateway(**params)
     # @param [Hash] params ({})
-    def delete_carrier_gateway(params = {}, options = {})
+    def delete_carrier_gateway(params = {}, **options)
       req = build_request(:delete_carrier_gateway, params)
       req.send_request(options)
     end
@@ -10762,9 +10762,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteClientVpnEndpoint AWS API Documentation
     #
-    # @overload delete_client_vpn_endpoint(params = {})
+    # @overload delete_client_vpn_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_client_vpn_endpoint(params = {}, options = {})
+    def delete_client_vpn_endpoint(params = {}, **options)
       req = build_request(:delete_client_vpn_endpoint, params)
       req.send_request(options)
     end
@@ -10811,9 +10811,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteClientVpnRoute AWS API Documentation
     #
-    # @overload delete_client_vpn_route(params = {})
+    # @overload delete_client_vpn_route(**params)
     # @param [Hash] params ({})
-    def delete_client_vpn_route(params = {}, options = {})
+    def delete_client_vpn_route(params = {}, **options)
       req = build_request(:delete_client_vpn_route, params)
       req.send_request(options)
     end
@@ -10850,9 +10850,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCustomerGateway AWS API Documentation
     #
-    # @overload delete_customer_gateway(params = {})
+    # @overload delete_customer_gateway(**params)
     # @param [Hash] params ({})
-    def delete_customer_gateway(params = {}, options = {})
+    def delete_customer_gateway(params = {}, **options)
       req = build_request(:delete_customer_gateway, params)
       req.send_request(options)
     end
@@ -10891,9 +10891,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteDhcpOptions AWS API Documentation
     #
-    # @overload delete_dhcp_options(params = {})
+    # @overload delete_dhcp_options(**params)
     # @param [Hash] params ({})
-    def delete_dhcp_options(params = {}, options = {})
+    def delete_dhcp_options(params = {}, **options)
       req = build_request(:delete_dhcp_options, params)
       req.send_request(options)
     end
@@ -10926,9 +10926,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteEgressOnlyInternetGateway AWS API Documentation
     #
-    # @overload delete_egress_only_internet_gateway(params = {})
+    # @overload delete_egress_only_internet_gateway(**params)
     # @param [Hash] params ({})
-    def delete_egress_only_internet_gateway(params = {}, options = {})
+    def delete_egress_only_internet_gateway(params = {}, **options)
       req = build_request(:delete_egress_only_internet_gateway, params)
       req.send_request(options)
     end
@@ -11010,9 +11010,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteFleets AWS API Documentation
     #
-    # @overload delete_fleets(params = {})
+    # @overload delete_fleets(**params)
     # @param [Hash] params ({})
-    def delete_fleets(params = {}, options = {})
+    def delete_fleets(params = {}, **options)
       req = build_request(:delete_fleets, params)
       req.send_request(options)
     end
@@ -11050,9 +11050,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteFlowLogs AWS API Documentation
     #
-    # @overload delete_flow_logs(params = {})
+    # @overload delete_flow_logs(**params)
     # @param [Hash] params ({})
-    def delete_flow_logs(params = {}, options = {})
+    def delete_flow_logs(params = {}, **options)
       req = build_request(:delete_flow_logs, params)
       req.send_request(options)
     end
@@ -11085,9 +11085,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteFpgaImage AWS API Documentation
     #
-    # @overload delete_fpga_image(params = {})
+    # @overload delete_fpga_image(**params)
     # @param [Hash] params ({})
-    def delete_fpga_image(params = {}, options = {})
+    def delete_fpga_image(params = {}, **options)
       req = build_request(:delete_fpga_image, params)
       req.send_request(options)
     end
@@ -11124,9 +11124,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteInternetGateway AWS API Documentation
     #
-    # @overload delete_internet_gateway(params = {})
+    # @overload delete_internet_gateway(**params)
     # @param [Hash] params ({})
-    def delete_internet_gateway(params = {}, options = {})
+    def delete_internet_gateway(params = {}, **options)
       req = build_request(:delete_internet_gateway, params)
       req.send_request(options)
     end
@@ -11167,9 +11167,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteKeyPair AWS API Documentation
     #
-    # @overload delete_key_pair(params = {})
+    # @overload delete_key_pair(**params)
     # @param [Hash] params ({})
-    def delete_key_pair(params = {}, options = {})
+    def delete_key_pair(params = {}, **options)
       req = build_request(:delete_key_pair, params)
       req.send_request(options)
     end
@@ -11238,9 +11238,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLaunchTemplate AWS API Documentation
     #
-    # @overload delete_launch_template(params = {})
+    # @overload delete_launch_template(**params)
     # @param [Hash] params ({})
-    def delete_launch_template(params = {}, options = {})
+    def delete_launch_template(params = {}, **options)
       req = build_request(:delete_launch_template, params)
       req.send_request(options)
     end
@@ -11322,9 +11322,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLaunchTemplateVersions AWS API Documentation
     #
-    # @overload delete_launch_template_versions(params = {})
+    # @overload delete_launch_template_versions(**params)
     # @param [Hash] params ({})
-    def delete_launch_template_versions(params = {}, options = {})
+    def delete_launch_template_versions(params = {}, **options)
       req = build_request(:delete_launch_template_versions, params)
       req.send_request(options)
     end
@@ -11369,9 +11369,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRoute AWS API Documentation
     #
-    # @overload delete_local_gateway_route(params = {})
+    # @overload delete_local_gateway_route(**params)
     # @param [Hash] params ({})
-    def delete_local_gateway_route(params = {}, options = {})
+    def delete_local_gateway_route(params = {}, **options)
       req = build_request(:delete_local_gateway_route, params)
       req.send_request(options)
     end
@@ -11414,9 +11414,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTableVpcAssociation AWS API Documentation
     #
-    # @overload delete_local_gateway_route_table_vpc_association(params = {})
+    # @overload delete_local_gateway_route_table_vpc_association(**params)
     # @param [Hash] params ({})
-    def delete_local_gateway_route_table_vpc_association(params = {}, options = {})
+    def delete_local_gateway_route_table_vpc_association(params = {}, **options)
       req = build_request(:delete_local_gateway_route_table_vpc_association, params)
       req.send_request(options)
     end
@@ -11461,9 +11461,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteManagedPrefixList AWS API Documentation
     #
-    # @overload delete_managed_prefix_list(params = {})
+    # @overload delete_managed_prefix_list(**params)
     # @param [Hash] params ({})
-    def delete_managed_prefix_list(params = {}, options = {})
+    def delete_managed_prefix_list(params = {}, **options)
       req = build_request(:delete_managed_prefix_list, params)
       req.send_request(options)
     end
@@ -11513,9 +11513,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNatGateway AWS API Documentation
     #
-    # @overload delete_nat_gateway(params = {})
+    # @overload delete_nat_gateway(**params)
     # @param [Hash] params ({})
-    def delete_nat_gateway(params = {}, options = {})
+    def delete_nat_gateway(params = {}, **options)
       req = build_request(:delete_nat_gateway, params)
       req.send_request(options)
     end
@@ -11553,9 +11553,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkAcl AWS API Documentation
     #
-    # @overload delete_network_acl(params = {})
+    # @overload delete_network_acl(**params)
     # @param [Hash] params ({})
-    def delete_network_acl(params = {}, options = {})
+    def delete_network_acl(params = {}, **options)
       req = build_request(:delete_network_acl, params)
       req.send_request(options)
     end
@@ -11602,9 +11602,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkAclEntry AWS API Documentation
     #
-    # @overload delete_network_acl_entry(params = {})
+    # @overload delete_network_acl_entry(**params)
     # @param [Hash] params ({})
-    def delete_network_acl_entry(params = {}, options = {})
+    def delete_network_acl_entry(params = {}, **options)
       req = build_request(:delete_network_acl_entry, params)
       req.send_request(options)
     end
@@ -11637,9 +11637,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsAnalysis AWS API Documentation
     #
-    # @overload delete_network_insights_analysis(params = {})
+    # @overload delete_network_insights_analysis(**params)
     # @param [Hash] params ({})
-    def delete_network_insights_analysis(params = {}, options = {})
+    def delete_network_insights_analysis(params = {}, **options)
       req = build_request(:delete_network_insights_analysis, params)
       req.send_request(options)
     end
@@ -11672,9 +11672,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInsightsPath AWS API Documentation
     #
-    # @overload delete_network_insights_path(params = {})
+    # @overload delete_network_insights_path(**params)
     # @param [Hash] params ({})
-    def delete_network_insights_path(params = {}, options = {})
+    def delete_network_insights_path(params = {}, **options)
       req = build_request(:delete_network_insights_path, params)
       req.send_request(options)
     end
@@ -11711,9 +11711,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInterface AWS API Documentation
     #
-    # @overload delete_network_interface(params = {})
+    # @overload delete_network_interface(**params)
     # @param [Hash] params ({})
-    def delete_network_interface(params = {}, options = {})
+    def delete_network_interface(params = {}, **options)
       req = build_request(:delete_network_interface, params)
       req.send_request(options)
     end
@@ -11754,9 +11754,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteNetworkInterfacePermission AWS API Documentation
     #
-    # @overload delete_network_interface_permission(params = {})
+    # @overload delete_network_interface_permission(**params)
     # @param [Hash] params ({})
-    def delete_network_interface_permission(params = {}, options = {})
+    def delete_network_interface_permission(params = {}, **options)
       req = build_request(:delete_network_interface_permission, params)
       req.send_request(options)
     end
@@ -11803,9 +11803,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeletePlacementGroup AWS API Documentation
     #
-    # @overload delete_placement_group(params = {})
+    # @overload delete_placement_group(**params)
     # @param [Hash] params ({})
-    def delete_placement_group(params = {}, options = {})
+    def delete_placement_group(params = {}, **options)
       req = build_request(:delete_placement_group, params)
       req.send_request(options)
     end
@@ -11844,9 +11844,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteQueuedReservedInstances AWS API Documentation
     #
-    # @overload delete_queued_reserved_instances(params = {})
+    # @overload delete_queued_reserved_instances(**params)
     # @param [Hash] params ({})
-    def delete_queued_reserved_instances(params = {}, options = {})
+    def delete_queued_reserved_instances(params = {}, **options)
       req = build_request(:delete_queued_reserved_instances, params)
       req.send_request(options)
     end
@@ -11897,9 +11897,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteRoute AWS API Documentation
     #
-    # @overload delete_route(params = {})
+    # @overload delete_route(**params)
     # @param [Hash] params ({})
-    def delete_route(params = {}, options = {})
+    def delete_route(params = {}, **options)
       req = build_request(:delete_route, params)
       req.send_request(options)
     end
@@ -11937,9 +11937,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteRouteTable AWS API Documentation
     #
-    # @overload delete_route_table(params = {})
+    # @overload delete_route_table(**params)
     # @param [Hash] params ({})
-    def delete_route_table(params = {}, options = {})
+    def delete_route_table(params = {}, **options)
       req = build_request(:delete_route_table, params)
       req.send_request(options)
     end
@@ -11989,9 +11989,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteSecurityGroup AWS API Documentation
     #
-    # @overload delete_security_group(params = {})
+    # @overload delete_security_group(**params)
     # @param [Hash] params ({})
-    def delete_security_group(params = {}, options = {})
+    def delete_security_group(params = {}, **options)
       req = build_request(:delete_security_group, params)
       req.send_request(options)
     end
@@ -12051,9 +12051,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteSnapshot AWS API Documentation
     #
-    # @overload delete_snapshot(params = {})
+    # @overload delete_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_snapshot(params = {}, options = {})
+    def delete_snapshot(params = {}, **options)
       req = build_request(:delete_snapshot, params)
       req.send_request(options)
     end
@@ -12084,9 +12084,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteSpotDatafeedSubscription AWS API Documentation
     #
-    # @overload delete_spot_datafeed_subscription(params = {})
+    # @overload delete_spot_datafeed_subscription(**params)
     # @param [Hash] params ({})
-    def delete_spot_datafeed_subscription(params = {}, options = {})
+    def delete_spot_datafeed_subscription(params = {}, **options)
       req = build_request(:delete_spot_datafeed_subscription, params)
       req.send_request(options)
     end
@@ -12123,9 +12123,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteSubnet AWS API Documentation
     #
-    # @overload delete_subnet(params = {})
+    # @overload delete_subnet(**params)
     # @param [Hash] params ({})
-    def delete_subnet(params = {}, options = {})
+    def delete_subnet(params = {}, **options)
       req = build_request(:delete_subnet, params)
       req.send_request(options)
     end
@@ -12197,9 +12197,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -12235,9 +12235,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTrafficMirrorFilter AWS API Documentation
     #
-    # @overload delete_traffic_mirror_filter(params = {})
+    # @overload delete_traffic_mirror_filter(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_filter(params = {}, options = {})
+    def delete_traffic_mirror_filter(params = {}, **options)
       req = build_request(:delete_traffic_mirror_filter, params)
       req.send_request(options)
     end
@@ -12270,9 +12270,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTrafficMirrorFilterRule AWS API Documentation
     #
-    # @overload delete_traffic_mirror_filter_rule(params = {})
+    # @overload delete_traffic_mirror_filter_rule(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_filter_rule(params = {}, options = {})
+    def delete_traffic_mirror_filter_rule(params = {}, **options)
       req = build_request(:delete_traffic_mirror_filter_rule, params)
       req.send_request(options)
     end
@@ -12305,9 +12305,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTrafficMirrorSession AWS API Documentation
     #
-    # @overload delete_traffic_mirror_session(params = {})
+    # @overload delete_traffic_mirror_session(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_session(params = {}, options = {})
+    def delete_traffic_mirror_session(params = {}, **options)
       req = build_request(:delete_traffic_mirror_session, params)
       req.send_request(options)
     end
@@ -12343,9 +12343,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTrafficMirrorTarget AWS API Documentation
     #
-    # @overload delete_traffic_mirror_target(params = {})
+    # @overload delete_traffic_mirror_target(**params)
     # @param [Hash] params ({})
-    def delete_traffic_mirror_target(params = {}, options = {})
+    def delete_traffic_mirror_target(params = {}, **options)
       req = build_request(:delete_traffic_mirror_target, params)
       req.send_request(options)
     end
@@ -12397,9 +12397,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGateway AWS API Documentation
     #
-    # @overload delete_transit_gateway(params = {})
+    # @overload delete_transit_gateway(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway(params = {}, options = {})
+    def delete_transit_gateway(params = {}, **options)
       req = build_request(:delete_transit_gateway, params)
       req.send_request(options)
     end
@@ -12441,9 +12441,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayConnect AWS API Documentation
     #
-    # @overload delete_transit_gateway_connect(params = {})
+    # @overload delete_transit_gateway_connect(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_connect(params = {}, options = {})
+    def delete_transit_gateway_connect(params = {}, **options)
       req = build_request(:delete_transit_gateway_connect, params)
       req.send_request(options)
     end
@@ -12493,9 +12493,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayConnectPeer AWS API Documentation
     #
-    # @overload delete_transit_gateway_connect_peer(params = {})
+    # @overload delete_transit_gateway_connect_peer(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_connect_peer(params = {}, options = {})
+    def delete_transit_gateway_connect_peer(params = {}, **options)
       req = build_request(:delete_transit_gateway_connect_peer, params)
       req.send_request(options)
     end
@@ -12539,9 +12539,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayMulticastDomain AWS API Documentation
     #
-    # @overload delete_transit_gateway_multicast_domain(params = {})
+    # @overload delete_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_multicast_domain(params = {}, options = {})
+    def delete_transit_gateway_multicast_domain(params = {}, **options)
       req = build_request(:delete_transit_gateway_multicast_domain, params)
       req.send_request(options)
     end
@@ -12587,9 +12587,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayPeeringAttachment AWS API Documentation
     #
-    # @overload delete_transit_gateway_peering_attachment(params = {})
+    # @overload delete_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_peering_attachment(params = {}, options = {})
+    def delete_transit_gateway_peering_attachment(params = {}, **options)
       req = build_request(:delete_transit_gateway_peering_attachment, params)
       req.send_request(options)
     end
@@ -12634,9 +12634,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayPrefixListReference AWS API Documentation
     #
-    # @overload delete_transit_gateway_prefix_list_reference(params = {})
+    # @overload delete_transit_gateway_prefix_list_reference(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_prefix_list_reference(params = {}, options = {})
+    def delete_transit_gateway_prefix_list_reference(params = {}, **options)
       req = build_request(:delete_transit_gateway_prefix_list_reference, params)
       req.send_request(options)
     end
@@ -12682,9 +12682,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayRoute AWS API Documentation
     #
-    # @overload delete_transit_gateway_route(params = {})
+    # @overload delete_transit_gateway_route(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_route(params = {}, options = {})
+    def delete_transit_gateway_route(params = {}, **options)
       req = build_request(:delete_transit_gateway_route, params)
       req.send_request(options)
     end
@@ -12727,9 +12727,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayRouteTable AWS API Documentation
     #
-    # @overload delete_transit_gateway_route_table(params = {})
+    # @overload delete_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_route_table(params = {}, options = {})
+    def delete_transit_gateway_route_table(params = {}, **options)
       req = build_request(:delete_transit_gateway_route_table, params)
       req.send_request(options)
     end
@@ -12775,9 +12775,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayVpcAttachment AWS API Documentation
     #
-    # @overload delete_transit_gateway_vpc_attachment(params = {})
+    # @overload delete_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def delete_transit_gateway_vpc_attachment(params = {}, options = {})
+    def delete_transit_gateway_vpc_attachment(params = {}, **options)
       req = build_request(:delete_transit_gateway_vpc_attachment, params)
       req.send_request(options)
     end
@@ -12828,9 +12828,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVolume AWS API Documentation
     #
-    # @overload delete_volume(params = {})
+    # @overload delete_volume(**params)
     # @param [Hash] params ({})
-    def delete_volume(params = {}, options = {})
+    def delete_volume(params = {}, **options)
       req = build_request(:delete_volume, params)
       req.send_request(options)
     end
@@ -12871,9 +12871,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpc AWS API Documentation
     #
-    # @overload delete_vpc(params = {})
+    # @overload delete_vpc(**params)
     # @param [Hash] params ({})
-    def delete_vpc(params = {}, options = {})
+    def delete_vpc(params = {}, **options)
       req = build_request(:delete_vpc, params)
       req.send_request(options)
     end
@@ -12909,9 +12909,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpcEndpointConnectionNotifications AWS API Documentation
     #
-    # @overload delete_vpc_endpoint_connection_notifications(params = {})
+    # @overload delete_vpc_endpoint_connection_notifications(**params)
     # @param [Hash] params ({})
-    def delete_vpc_endpoint_connection_notifications(params = {}, options = {})
+    def delete_vpc_endpoint_connection_notifications(params = {}, **options)
       req = build_request(:delete_vpc_endpoint_connection_notifications, params)
       req.send_request(options)
     end
@@ -12950,9 +12950,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpcEndpointServiceConfigurations AWS API Documentation
     #
-    # @overload delete_vpc_endpoint_service_configurations(params = {})
+    # @overload delete_vpc_endpoint_service_configurations(**params)
     # @param [Hash] params ({})
-    def delete_vpc_endpoint_service_configurations(params = {}, options = {})
+    def delete_vpc_endpoint_service_configurations(params = {}, **options)
       req = build_request(:delete_vpc_endpoint_service_configurations, params)
       req.send_request(options)
     end
@@ -12993,9 +12993,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpcEndpoints AWS API Documentation
     #
-    # @overload delete_vpc_endpoints(params = {})
+    # @overload delete_vpc_endpoints(**params)
     # @param [Hash] params ({})
-    def delete_vpc_endpoints(params = {}, options = {})
+    def delete_vpc_endpoints(params = {}, **options)
       req = build_request(:delete_vpc_endpoints, params)
       req.send_request(options)
     end
@@ -13033,9 +13033,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpcPeeringConnection AWS API Documentation
     #
-    # @overload delete_vpc_peering_connection(params = {})
+    # @overload delete_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def delete_vpc_peering_connection(params = {}, options = {})
+    def delete_vpc_peering_connection(params = {}, **options)
       req = build_request(:delete_vpc_peering_connection, params)
       req.send_request(options)
     end
@@ -13076,9 +13076,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpnConnection AWS API Documentation
     #
-    # @overload delete_vpn_connection(params = {})
+    # @overload delete_vpn_connection(**params)
     # @param [Hash] params ({})
-    def delete_vpn_connection(params = {}, options = {})
+    def delete_vpn_connection(params = {}, **options)
       req = build_request(:delete_vpn_connection, params)
       req.send_request(options)
     end
@@ -13106,9 +13106,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpnConnectionRoute AWS API Documentation
     #
-    # @overload delete_vpn_connection_route(params = {})
+    # @overload delete_vpn_connection_route(**params)
     # @param [Hash] params ({})
-    def delete_vpn_connection_route(params = {}, options = {})
+    def delete_vpn_connection_route(params = {}, **options)
       req = build_request(:delete_vpn_connection_route, params)
       req.send_request(options)
     end
@@ -13138,9 +13138,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteVpnGateway AWS API Documentation
     #
-    # @overload delete_vpn_gateway(params = {})
+    # @overload delete_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def delete_vpn_gateway(params = {}, options = {})
+    def delete_vpn_gateway(params = {}, **options)
       req = build_request(:delete_vpn_gateway, params)
       req.send_request(options)
     end
@@ -13183,9 +13183,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionByoipCidr AWS API Documentation
     #
-    # @overload deprovision_byoip_cidr(params = {})
+    # @overload deprovision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def deprovision_byoip_cidr(params = {}, options = {})
+    def deprovision_byoip_cidr(params = {}, **options)
       req = build_request(:deprovision_byoip_cidr, params)
       req.send_request(options)
     end
@@ -13221,9 +13221,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeregisterImage AWS API Documentation
     #
-    # @overload deregister_image(params = {})
+    # @overload deregister_image(**params)
     # @param [Hash] params ({})
-    def deregister_image(params = {}, options = {})
+    def deregister_image(params = {}, **options)
       req = build_request(:deregister_image, params)
       req.send_request(options)
     end
@@ -13263,9 +13263,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeregisterInstanceEventNotificationAttributes AWS API Documentation
     #
-    # @overload deregister_instance_event_notification_attributes(params = {})
+    # @overload deregister_instance_event_notification_attributes(**params)
     # @param [Hash] params ({})
-    def deregister_instance_event_notification_attributes(params = {}, options = {})
+    def deregister_instance_event_notification_attributes(params = {}, **options)
       req = build_request(:deregister_instance_event_notification_attributes, params)
       req.send_request(options)
     end
@@ -13310,9 +13310,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeregisterTransitGatewayMulticastGroupMembers AWS API Documentation
     #
-    # @overload deregister_transit_gateway_multicast_group_members(params = {})
+    # @overload deregister_transit_gateway_multicast_group_members(**params)
     # @param [Hash] params ({})
-    def deregister_transit_gateway_multicast_group_members(params = {}, options = {})
+    def deregister_transit_gateway_multicast_group_members(params = {}, **options)
       req = build_request(:deregister_transit_gateway_multicast_group_members, params)
       req.send_request(options)
     end
@@ -13357,9 +13357,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeregisterTransitGatewayMulticastGroupSources AWS API Documentation
     #
-    # @overload deregister_transit_gateway_multicast_group_sources(params = {})
+    # @overload deregister_transit_gateway_multicast_group_sources(**params)
     # @param [Hash] params ({})
-    def deregister_transit_gateway_multicast_group_sources(params = {}, options = {})
+    def deregister_transit_gateway_multicast_group_sources(params = {}, **options)
       req = build_request(:deregister_transit_gateway_multicast_group_sources, params)
       req.send_request(options)
     end
@@ -13512,9 +13512,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAccountAttributes AWS API Documentation
     #
-    # @overload describe_account_attributes(params = {})
+    # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, options = {})
+    def describe_account_attributes(params = {}, **options)
       req = build_request(:describe_account_attributes, params)
       req.send_request(options)
     end
@@ -13706,9 +13706,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAddresses AWS API Documentation
     #
-    # @overload describe_addresses(params = {})
+    # @overload describe_addresses(**params)
     # @param [Hash] params ({})
-    def describe_addresses(params = {}, options = {})
+    def describe_addresses(params = {}, **options)
       req = build_request(:describe_addresses, params)
       req.send_request(options)
     end
@@ -13760,9 +13760,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAggregateIdFormat AWS API Documentation
     #
-    # @overload describe_aggregate_id_format(params = {})
+    # @overload describe_aggregate_id_format(**params)
     # @param [Hash] params ({})
-    def describe_aggregate_id_format(params = {}, options = {})
+    def describe_aggregate_id_format(params = {}, **options)
       req = build_request(:describe_aggregate_id_format, params)
       req.send_request(options)
     end
@@ -13921,9 +13921,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAvailabilityZones AWS API Documentation
     #
-    # @overload describe_availability_zones(params = {})
+    # @overload describe_availability_zones(**params)
     # @param [Hash] params ({})
-    def describe_availability_zones(params = {}, options = {})
+    def describe_availability_zones(params = {}, **options)
       req = build_request(:describe_availability_zones, params)
       req.send_request(options)
     end
@@ -14016,9 +14016,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeBundleTasks AWS API Documentation
     #
-    # @overload describe_bundle_tasks(params = {})
+    # @overload describe_bundle_tasks(**params)
     # @param [Hash] params ({})
-    def describe_bundle_tasks(params = {}, options = {})
+    def describe_bundle_tasks(params = {}, **options)
       req = build_request(:describe_bundle_tasks, params)
       req.send_request(options)
     end
@@ -14069,9 +14069,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeByoipCidrs AWS API Documentation
     #
-    # @overload describe_byoip_cidrs(params = {})
+    # @overload describe_byoip_cidrs(**params)
     # @param [Hash] params ({})
-    def describe_byoip_cidrs(params = {}, options = {})
+    def describe_byoip_cidrs(params = {}, **options)
       req = build_request(:describe_byoip_cidrs, params)
       req.send_request(options)
     end
@@ -14227,9 +14227,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeCapacityReservations AWS API Documentation
     #
-    # @overload describe_capacity_reservations(params = {})
+    # @overload describe_capacity_reservations(**params)
     # @param [Hash] params ({})
-    def describe_capacity_reservations(params = {}, options = {})
+    def describe_capacity_reservations(params = {}, **options)
       req = build_request(:describe_capacity_reservations, params)
       req.send_request(options)
     end
@@ -14311,9 +14311,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeCarrierGateways AWS API Documentation
     #
-    # @overload describe_carrier_gateways(params = {})
+    # @overload describe_carrier_gateways(**params)
     # @param [Hash] params ({})
-    def describe_carrier_gateways(params = {}, options = {})
+    def describe_carrier_gateways(params = {}, **options)
       req = build_request(:describe_carrier_gateways, params)
       req.send_request(options)
     end
@@ -14403,9 +14403,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeClassicLinkInstances AWS API Documentation
     #
-    # @overload describe_classic_link_instances(params = {})
+    # @overload describe_classic_link_instances(**params)
     # @param [Hash] params ({})
-    def describe_classic_link_instances(params = {}, options = {})
+    def describe_classic_link_instances(params = {}, **options)
       req = build_request(:describe_classic_link_instances, params)
       req.send_request(options)
     end
@@ -14476,9 +14476,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeClientVpnAuthorizationRules AWS API Documentation
     #
-    # @overload describe_client_vpn_authorization_rules(params = {})
+    # @overload describe_client_vpn_authorization_rules(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_authorization_rules(params = {}, options = {})
+    def describe_client_vpn_authorization_rules(params = {}, **options)
       req = build_request(:describe_client_vpn_authorization_rules, params)
       req.send_request(options)
     end
@@ -14557,9 +14557,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeClientVpnConnections AWS API Documentation
     #
-    # @overload describe_client_vpn_connections(params = {})
+    # @overload describe_client_vpn_connections(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_connections(params = {}, options = {})
+    def describe_client_vpn_connections(params = {}, **options)
       req = build_request(:describe_client_vpn_connections, params)
       req.send_request(options)
     end
@@ -14657,9 +14657,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeClientVpnEndpoints AWS API Documentation
     #
-    # @overload describe_client_vpn_endpoints(params = {})
+    # @overload describe_client_vpn_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_endpoints(params = {}, options = {})
+    def describe_client_vpn_endpoints(params = {}, **options)
       req = build_request(:describe_client_vpn_endpoints, params)
       req.send_request(options)
     end
@@ -14731,9 +14731,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeClientVpnRoutes AWS API Documentation
     #
-    # @overload describe_client_vpn_routes(params = {})
+    # @overload describe_client_vpn_routes(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_routes(params = {}, options = {})
+    def describe_client_vpn_routes(params = {}, **options)
       req = build_request(:describe_client_vpn_routes, params)
       req.send_request(options)
     end
@@ -14809,9 +14809,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeClientVpnTargetNetworks AWS API Documentation
     #
-    # @overload describe_client_vpn_target_networks(params = {})
+    # @overload describe_client_vpn_target_networks(**params)
     # @param [Hash] params ({})
-    def describe_client_vpn_target_networks(params = {}, options = {})
+    def describe_client_vpn_target_networks(params = {}, **options)
       req = build_request(:describe_client_vpn_target_networks, params)
       req.send_request(options)
     end
@@ -14885,9 +14885,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeCoipPools AWS API Documentation
     #
-    # @overload describe_coip_pools(params = {})
+    # @overload describe_coip_pools(**params)
     # @param [Hash] params ({})
-    def describe_coip_pools(params = {}, options = {})
+    def describe_coip_pools(params = {}, **options)
       req = build_request(:describe_coip_pools, params)
       req.send_request(options)
     end
@@ -14967,9 +14967,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeConversionTasks AWS API Documentation
     #
-    # @overload describe_conversion_tasks(params = {})
+    # @overload describe_conversion_tasks(**params)
     # @param [Hash] params ({})
-    def describe_conversion_tasks(params = {}, options = {})
+    def describe_conversion_tasks(params = {}, **options)
       req = build_request(:describe_conversion_tasks, params)
       req.send_request(options)
     end
@@ -15083,9 +15083,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeCustomerGateways AWS API Documentation
     #
-    # @overload describe_customer_gateways(params = {})
+    # @overload describe_customer_gateways(**params)
     # @param [Hash] params ({})
-    def describe_customer_gateways(params = {}, options = {})
+    def describe_customer_gateways(params = {}, **options)
       req = build_request(:describe_customer_gateways, params)
       req.send_request(options)
     end
@@ -15211,9 +15211,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeDhcpOptions AWS API Documentation
     #
-    # @overload describe_dhcp_options(params = {})
+    # @overload describe_dhcp_options(**params)
     # @param [Hash] params ({})
-    def describe_dhcp_options(params = {}, options = {})
+    def describe_dhcp_options(params = {}, **options)
       req = build_request(:describe_dhcp_options, params)
       req.send_request(options)
     end
@@ -15286,9 +15286,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeEgressOnlyInternetGateways AWS API Documentation
     #
-    # @overload describe_egress_only_internet_gateways(params = {})
+    # @overload describe_egress_only_internet_gateways(**params)
     # @param [Hash] params ({})
-    def describe_egress_only_internet_gateways(params = {}, options = {})
+    def describe_egress_only_internet_gateways(params = {}, **options)
       req = build_request(:describe_egress_only_internet_gateways, params)
       req.send_request(options)
     end
@@ -15374,9 +15374,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeElasticGpus AWS API Documentation
     #
-    # @overload describe_elastic_gpus(params = {})
+    # @overload describe_elastic_gpus(**params)
     # @param [Hash] params ({})
-    def describe_elastic_gpus(params = {}, options = {})
+    def describe_elastic_gpus(params = {}, **options)
       req = build_request(:describe_elastic_gpus, params)
       req.send_request(options)
     end
@@ -15443,9 +15443,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeExportImageTasks AWS API Documentation
     #
-    # @overload describe_export_image_tasks(params = {})
+    # @overload describe_export_image_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_image_tasks(params = {}, options = {})
+    def describe_export_image_tasks(params = {}, **options)
       req = build_request(:describe_export_image_tasks, params)
       req.send_request(options)
     end
@@ -15500,9 +15500,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeExportTasks AWS API Documentation
     #
-    # @overload describe_export_tasks(params = {})
+    # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, options = {})
+    def describe_export_tasks(params = {}, **options)
       req = build_request(:describe_export_tasks, params)
       req.send_request(options)
     end
@@ -15576,9 +15576,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFastSnapshotRestores AWS API Documentation
     #
-    # @overload describe_fast_snapshot_restores(params = {})
+    # @overload describe_fast_snapshot_restores(**params)
     # @param [Hash] params ({})
-    def describe_fast_snapshot_restores(params = {}, options = {})
+    def describe_fast_snapshot_restores(params = {}, **options)
       req = build_request(:describe_fast_snapshot_restores, params)
       req.send_request(options)
     end
@@ -15650,9 +15650,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFleetHistory AWS API Documentation
     #
-    # @overload describe_fleet_history(params = {})
+    # @overload describe_fleet_history(**params)
     # @param [Hash] params ({})
-    def describe_fleet_history(params = {}, options = {})
+    def describe_fleet_history(params = {}, **options)
       req = build_request(:describe_fleet_history, params)
       req.send_request(options)
     end
@@ -15717,9 +15717,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFleetInstances AWS API Documentation
     #
-    # @overload describe_fleet_instances(params = {})
+    # @overload describe_fleet_instances(**params)
     # @param [Hash] params ({})
-    def describe_fleet_instances(params = {}, options = {})
+    def describe_fleet_instances(params = {}, **options)
       req = build_request(:describe_fleet_instances, params)
       req.send_request(options)
     end
@@ -15868,9 +15868,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFleets AWS API Documentation
     #
-    # @overload describe_fleets(params = {})
+    # @overload describe_fleets(**params)
     # @param [Hash] params ({})
-    def describe_fleets(params = {}, options = {})
+    def describe_fleets(params = {}, **options)
       req = build_request(:describe_fleets, params)
       req.send_request(options)
     end
@@ -15972,9 +15972,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFlowLogs AWS API Documentation
     #
-    # @overload describe_flow_logs(params = {})
+    # @overload describe_flow_logs(**params)
     # @param [Hash] params ({})
-    def describe_flow_logs(params = {}, options = {})
+    def describe_flow_logs(params = {}, **options)
       req = build_request(:describe_flow_logs, params)
       req.send_request(options)
     end
@@ -16020,9 +16020,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFpgaImageAttribute AWS API Documentation
     #
-    # @overload describe_fpga_image_attribute(params = {})
+    # @overload describe_fpga_image_attribute(**params)
     # @param [Hash] params ({})
-    def describe_fpga_image_attribute(params = {}, options = {})
+    def describe_fpga_image_attribute(params = {}, **options)
       req = build_request(:describe_fpga_image_attribute, params)
       req.send_request(options)
     end
@@ -16137,9 +16137,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFpgaImages AWS API Documentation
     #
-    # @overload describe_fpga_images(params = {})
+    # @overload describe_fpga_images(**params)
     # @param [Hash] params ({})
-    def describe_fpga_images(params = {}, options = {})
+    def describe_fpga_images(params = {}, **options)
       req = build_request(:describe_fpga_images, params)
       req.send_request(options)
     end
@@ -16232,9 +16232,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeHostReservationOfferings AWS API Documentation
     #
-    # @overload describe_host_reservation_offerings(params = {})
+    # @overload describe_host_reservation_offerings(**params)
     # @param [Hash] params ({})
-    def describe_host_reservation_offerings(params = {}, options = {})
+    def describe_host_reservation_offerings(params = {}, **options)
       req = build_request(:describe_host_reservation_offerings, params)
       req.send_request(options)
     end
@@ -16321,9 +16321,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeHostReservations AWS API Documentation
     #
-    # @overload describe_host_reservations(params = {})
+    # @overload describe_host_reservations(**params)
     # @param [Hash] params ({})
-    def describe_host_reservations(params = {}, options = {})
+    def describe_host_reservations(params = {}, **options)
       req = build_request(:describe_host_reservations, params)
       req.send_request(options)
     end
@@ -16435,9 +16435,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeHosts AWS API Documentation
     #
-    # @overload describe_hosts(params = {})
+    # @overload describe_hosts(**params)
     # @param [Hash] params ({})
-    def describe_hosts(params = {}, options = {})
+    def describe_hosts(params = {}, **options)
       req = build_request(:describe_hosts, params)
       req.send_request(options)
     end
@@ -16523,9 +16523,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIamInstanceProfileAssociations AWS API Documentation
     #
-    # @overload describe_iam_instance_profile_associations(params = {})
+    # @overload describe_iam_instance_profile_associations(**params)
     # @param [Hash] params ({})
-    def describe_iam_instance_profile_associations(params = {}, options = {})
+    def describe_iam_instance_profile_associations(params = {}, **options)
       req = build_request(:describe_iam_instance_profile_associations, params)
       req.send_request(options)
     end
@@ -16587,9 +16587,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIdFormat AWS API Documentation
     #
-    # @overload describe_id_format(params = {})
+    # @overload describe_id_format(**params)
     # @param [Hash] params ({})
-    def describe_id_format(params = {}, options = {})
+    def describe_id_format(params = {}, **options)
       req = build_request(:describe_id_format, params)
       req.send_request(options)
     end
@@ -16657,9 +16657,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIdentityIdFormat AWS API Documentation
     #
-    # @overload describe_identity_id_format(params = {})
+    # @overload describe_identity_id_format(**params)
     # @param [Hash] params ({})
-    def describe_identity_id_format(params = {}, options = {})
+    def describe_identity_id_format(params = {}, **options)
       req = build_request(:describe_identity_id_format, params)
       req.send_request(options)
     end
@@ -16751,9 +16751,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeImageAttribute AWS API Documentation
     #
-    # @overload describe_image_attribute(params = {})
+    # @overload describe_image_attribute(**params)
     # @param [Hash] params ({})
-    def describe_image_attribute(params = {}, options = {})
+    def describe_image_attribute(params = {}, **options)
       req = build_request(:describe_image_attribute, params)
       req.send_request(options)
     end
@@ -17001,9 +17001,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeImages AWS API Documentation
     #
-    # @overload describe_images(params = {})
+    # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, options = {})
+    def describe_images(params = {}, **options)
       req = build_request(:describe_images, params)
       req.send_request(options)
     end
@@ -17088,9 +17088,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeImportImageTasks AWS API Documentation
     #
-    # @overload describe_import_image_tasks(params = {})
+    # @overload describe_import_image_tasks(**params)
     # @param [Hash] params ({})
-    def describe_import_image_tasks(params = {}, options = {})
+    def describe_import_image_tasks(params = {}, **options)
       req = build_request(:describe_import_image_tasks, params)
       req.send_request(options)
     end
@@ -17163,9 +17163,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeImportSnapshotTasks AWS API Documentation
     #
-    # @overload describe_import_snapshot_tasks(params = {})
+    # @overload describe_import_snapshot_tasks(**params)
     # @param [Hash] params ({})
-    def describe_import_snapshot_tasks(params = {}, options = {})
+    def describe_import_snapshot_tasks(params = {}, **options)
       req = build_request(:describe_import_snapshot_tasks, params)
       req.send_request(options)
     end
@@ -17317,9 +17317,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceAttribute AWS API Documentation
     #
-    # @overload describe_instance_attribute(params = {})
+    # @overload describe_instance_attribute(**params)
     # @param [Hash] params ({})
-    def describe_instance_attribute(params = {}, options = {})
+    def describe_instance_attribute(params = {}, **options)
       req = build_request(:describe_instance_attribute, params)
       req.send_request(options)
     end
@@ -17415,9 +17415,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceCreditSpecifications AWS API Documentation
     #
-    # @overload describe_instance_credit_specifications(params = {})
+    # @overload describe_instance_credit_specifications(**params)
     # @param [Hash] params ({})
-    def describe_instance_credit_specifications(params = {}, options = {})
+    def describe_instance_credit_specifications(params = {}, **options)
       req = build_request(:describe_instance_credit_specifications, params)
       req.send_request(options)
     end
@@ -17449,9 +17449,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceEventNotificationAttributes AWS API Documentation
     #
-    # @overload describe_instance_event_notification_attributes(params = {})
+    # @overload describe_instance_event_notification_attributes(**params)
     # @param [Hash] params ({})
-    def describe_instance_event_notification_attributes(params = {}, options = {})
+    def describe_instance_event_notification_attributes(params = {}, **options)
       req = build_request(:describe_instance_event_notification_attributes, params)
       req.send_request(options)
     end
@@ -17664,9 +17664,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceStatus AWS API Documentation
     #
-    # @overload describe_instance_status(params = {})
+    # @overload describe_instance_status(**params)
     # @param [Hash] params ({})
-    def describe_instance_status(params = {}, options = {})
+    def describe_instance_status(params = {}, **options)
       req = build_request(:describe_instance_status, params)
       req.send_request(options)
     end
@@ -17734,9 +17734,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceTypeOfferings AWS API Documentation
     #
-    # @overload describe_instance_type_offerings(params = {})
+    # @overload describe_instance_type_offerings(**params)
     # @param [Hash] params ({})
-    def describe_instance_type_offerings(params = {}, options = {})
+    def describe_instance_type_offerings(params = {}, **options)
       req = build_request(:describe_instance_type_offerings, params)
       req.send_request(options)
     end
@@ -18002,9 +18002,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceTypes AWS API Documentation
     #
-    # @overload describe_instance_types(params = {})
+    # @overload describe_instance_types(**params)
     # @param [Hash] params ({})
-    def describe_instance_types(params = {}, options = {})
+    def describe_instance_types(params = {}, **options)
       req = build_request(:describe_instance_types, params)
       req.send_request(options)
     end
@@ -18542,9 +18542,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstances AWS API Documentation
     #
-    # @overload describe_instances(params = {})
+    # @overload describe_instances(**params)
     # @param [Hash] params ({})
-    def describe_instances(params = {}, options = {})
+    def describe_instances(params = {}, **options)
       req = build_request(:describe_instances, params)
       req.send_request(options)
     end
@@ -18664,9 +18664,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInternetGateways AWS API Documentation
     #
-    # @overload describe_internet_gateways(params = {})
+    # @overload describe_internet_gateways(**params)
     # @param [Hash] params ({})
-    def describe_internet_gateways(params = {}, options = {})
+    def describe_internet_gateways(params = {}, **options)
       req = build_request(:describe_internet_gateways, params)
       req.send_request(options)
     end
@@ -18739,9 +18739,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpv6Pools AWS API Documentation
     #
-    # @overload describe_ipv_6_pools(params = {})
+    # @overload describe_ipv_6_pools(**params)
     # @param [Hash] params ({})
-    def describe_ipv_6_pools(params = {}, options = {})
+    def describe_ipv_6_pools(params = {}, **options)
       req = build_request(:describe_ipv_6_pools, params)
       req.send_request(options)
     end
@@ -18844,9 +18844,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeKeyPairs AWS API Documentation
     #
-    # @overload describe_key_pairs(params = {})
+    # @overload describe_key_pairs(**params)
     # @param [Hash] params ({})
-    def describe_key_pairs(params = {}, options = {})
+    def describe_key_pairs(params = {}, **options)
       req = build_request(:describe_key_pairs, params)
       req.send_request(options)
     end
@@ -19113,9 +19113,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLaunchTemplateVersions AWS API Documentation
     #
-    # @overload describe_launch_template_versions(params = {})
+    # @overload describe_launch_template_versions(**params)
     # @param [Hash] params ({})
-    def describe_launch_template_versions(params = {}, options = {})
+    def describe_launch_template_versions(params = {}, **options)
       req = build_request(:describe_launch_template_versions, params)
       req.send_request(options)
     end
@@ -19223,9 +19223,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLaunchTemplates AWS API Documentation
     #
-    # @overload describe_launch_templates(params = {})
+    # @overload describe_launch_templates(**params)
     # @param [Hash] params ({})
-    def describe_launch_templates(params = {}, options = {})
+    def describe_launch_templates(params = {}, **options)
       req = build_request(:describe_launch_templates, params)
       req.send_request(options)
     end
@@ -19305,9 +19305,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations AWS API Documentation
     #
-    # @overload describe_local_gateway_route_table_virtual_interface_group_associations(params = {})
+    # @overload describe_local_gateway_route_table_virtual_interface_group_associations(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_route_table_virtual_interface_group_associations(params = {}, options = {})
+    def describe_local_gateway_route_table_virtual_interface_group_associations(params = {}, **options)
       req = build_request(:describe_local_gateway_route_table_virtual_interface_group_associations, params)
       req.send_request(options)
     end
@@ -19386,9 +19386,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLocalGatewayRouteTableVpcAssociations AWS API Documentation
     #
-    # @overload describe_local_gateway_route_table_vpc_associations(params = {})
+    # @overload describe_local_gateway_route_table_vpc_associations(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_route_table_vpc_associations(params = {}, options = {})
+    def describe_local_gateway_route_table_vpc_associations(params = {}, **options)
       req = build_request(:describe_local_gateway_route_table_vpc_associations, params)
       req.send_request(options)
     end
@@ -19464,9 +19464,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLocalGatewayRouteTables AWS API Documentation
     #
-    # @overload describe_local_gateway_route_tables(params = {})
+    # @overload describe_local_gateway_route_tables(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_route_tables(params = {}, options = {})
+    def describe_local_gateway_route_tables(params = {}, **options)
       req = build_request(:describe_local_gateway_route_tables, params)
       req.send_request(options)
     end
@@ -19538,9 +19538,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLocalGatewayVirtualInterfaceGroups AWS API Documentation
     #
-    # @overload describe_local_gateway_virtual_interface_groups(params = {})
+    # @overload describe_local_gateway_virtual_interface_groups(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_virtual_interface_groups(params = {}, options = {})
+    def describe_local_gateway_virtual_interface_groups(params = {}, **options)
       req = build_request(:describe_local_gateway_virtual_interface_groups, params)
       req.send_request(options)
     end
@@ -19607,9 +19607,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLocalGatewayVirtualInterfaces AWS API Documentation
     #
-    # @overload describe_local_gateway_virtual_interfaces(params = {})
+    # @overload describe_local_gateway_virtual_interfaces(**params)
     # @param [Hash] params ({})
-    def describe_local_gateway_virtual_interfaces(params = {}, options = {})
+    def describe_local_gateway_virtual_interfaces(params = {}, **options)
       req = build_request(:describe_local_gateway_virtual_interfaces, params)
       req.send_request(options)
     end
@@ -19688,9 +19688,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLocalGateways AWS API Documentation
     #
-    # @overload describe_local_gateways(params = {})
+    # @overload describe_local_gateways(**params)
     # @param [Hash] params ({})
-    def describe_local_gateways(params = {}, options = {})
+    def describe_local_gateways(params = {}, **options)
       req = build_request(:describe_local_gateways, params)
       req.send_request(options)
     end
@@ -19767,9 +19767,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeManagedPrefixLists AWS API Documentation
     #
-    # @overload describe_managed_prefix_lists(params = {})
+    # @overload describe_managed_prefix_lists(**params)
     # @param [Hash] params ({})
-    def describe_managed_prefix_lists(params = {}, options = {})
+    def describe_managed_prefix_lists(params = {}, **options)
       req = build_request(:describe_managed_prefix_lists, params)
       req.send_request(options)
     end
@@ -19857,9 +19857,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeMovingAddresses AWS API Documentation
     #
-    # @overload describe_moving_addresses(params = {})
+    # @overload describe_moving_addresses(**params)
     # @param [Hash] params ({})
-    def describe_moving_addresses(params = {}, options = {})
+    def describe_moving_addresses(params = {}, **options)
       req = build_request(:describe_moving_addresses, params)
       req.send_request(options)
     end
@@ -19997,9 +19997,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNatGateways AWS API Documentation
     #
-    # @overload describe_nat_gateways(params = {})
+    # @overload describe_nat_gateways(**params)
     # @param [Hash] params ({})
-    def describe_nat_gateways(params = {}, options = {})
+    def describe_nat_gateways(params = {}, **options)
       req = build_request(:describe_nat_gateways, params)
       req.send_request(options)
     end
@@ -20184,9 +20184,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkAcls AWS API Documentation
     #
-    # @overload describe_network_acls(params = {})
+    # @overload describe_network_acls(**params)
     # @param [Hash] params ({})
-    def describe_network_acls(params = {}, options = {})
+    def describe_network_acls(params = {}, **options)
       req = build_request(:describe_network_acls, params)
       req.send_request(options)
     end
@@ -20497,9 +20497,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsAnalyses AWS API Documentation
     #
-    # @overload describe_network_insights_analyses(params = {})
+    # @overload describe_network_insights_analyses(**params)
     # @param [Hash] params ({})
-    def describe_network_insights_analyses(params = {}, options = {})
+    def describe_network_insights_analyses(params = {}, **options)
       req = build_request(:describe_network_insights_analyses, params)
       req.send_request(options)
     end
@@ -20577,9 +20577,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInsightsPaths AWS API Documentation
     #
-    # @overload describe_network_insights_paths(params = {})
+    # @overload describe_network_insights_paths(**params)
     # @param [Hash] params ({})
-    def describe_network_insights_paths(params = {}, options = {})
+    def describe_network_insights_paths(params = {}, **options)
       req = build_request(:describe_network_insights_paths, params)
       req.send_request(options)
     end
@@ -20712,9 +20712,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInterfaceAttribute AWS API Documentation
     #
-    # @overload describe_network_interface_attribute(params = {})
+    # @overload describe_network_interface_attribute(**params)
     # @param [Hash] params ({})
-    def describe_network_interface_attribute(params = {}, options = {})
+    def describe_network_interface_attribute(params = {}, **options)
       req = build_request(:describe_network_interface_attribute, params)
       req.send_request(options)
     end
@@ -20784,9 +20784,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInterfacePermissions AWS API Documentation
     #
-    # @overload describe_network_interface_permissions(params = {})
+    # @overload describe_network_interface_permissions(**params)
     # @param [Hash] params ({})
-    def describe_network_interface_permissions(params = {}, options = {})
+    def describe_network_interface_permissions(params = {}, **options)
       req = build_request(:describe_network_interface_permissions, params)
       req.send_request(options)
     end
@@ -21071,9 +21071,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeNetworkInterfaces AWS API Documentation
     #
-    # @overload describe_network_interfaces(params = {})
+    # @overload describe_network_interfaces(**params)
     # @param [Hash] params ({})
-    def describe_network_interfaces(params = {}, options = {})
+    def describe_network_interfaces(params = {}, **options)
       req = build_request(:describe_network_interfaces, params)
       req.send_request(options)
     end
@@ -21154,9 +21154,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribePlacementGroups AWS API Documentation
     #
-    # @overload describe_placement_groups(params = {})
+    # @overload describe_placement_groups(**params)
     # @param [Hash] params ({})
-    def describe_placement_groups(params = {}, options = {})
+    def describe_placement_groups(params = {}, **options)
       req = build_request(:describe_placement_groups, params)
       req.send_request(options)
     end
@@ -21224,9 +21224,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribePrefixLists AWS API Documentation
     #
-    # @overload describe_prefix_lists(params = {})
+    # @overload describe_prefix_lists(**params)
     # @param [Hash] params ({})
-    def describe_prefix_lists(params = {}, options = {})
+    def describe_prefix_lists(params = {}, **options)
       req = build_request(:describe_prefix_lists, params)
       req.send_request(options)
     end
@@ -21306,9 +21306,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribePrincipalIdFormat AWS API Documentation
     #
-    # @overload describe_principal_id_format(params = {})
+    # @overload describe_principal_id_format(**params)
     # @param [Hash] params ({})
-    def describe_principal_id_format(params = {}, options = {})
+    def describe_principal_id_format(params = {}, **options)
       req = build_request(:describe_principal_id_format, params)
       req.send_request(options)
     end
@@ -21380,9 +21380,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribePublicIpv4Pools AWS API Documentation
     #
-    # @overload describe_public_ipv_4_pools(params = {})
+    # @overload describe_public_ipv_4_pools(**params)
     # @param [Hash] params ({})
-    def describe_public_ipv_4_pools(params = {}, options = {})
+    def describe_public_ipv_4_pools(params = {}, **options)
       req = build_request(:describe_public_ipv_4_pools, params)
       req.send_request(options)
     end
@@ -21511,9 +21511,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeRegions AWS API Documentation
     #
-    # @overload describe_regions(params = {})
+    # @overload describe_regions(**params)
     # @param [Hash] params ({})
-    def describe_regions(params = {}, options = {})
+    def describe_regions(params = {}, **options)
       req = build_request(:describe_regions, params)
       req.send_request(options)
     end
@@ -21648,9 +21648,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeReservedInstances AWS API Documentation
     #
-    # @overload describe_reserved_instances(params = {})
+    # @overload describe_reserved_instances(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances(params = {}, options = {})
+    def describe_reserved_instances(params = {}, **options)
       req = build_request(:describe_reserved_instances, params)
       req.send_request(options)
     end
@@ -21743,9 +21743,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeReservedInstancesListings AWS API Documentation
     #
-    # @overload describe_reserved_instances_listings(params = {})
+    # @overload describe_reserved_instances_listings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances_listings(params = {}, options = {})
+    def describe_reserved_instances_listings(params = {}, **options)
       req = build_request(:describe_reserved_instances_listings, params)
       req.send_request(options)
     end
@@ -21850,9 +21850,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeReservedInstancesModifications AWS API Documentation
     #
-    # @overload describe_reserved_instances_modifications(params = {})
+    # @overload describe_reserved_instances_modifications(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances_modifications(params = {}, options = {})
+    def describe_reserved_instances_modifications(params = {}, **options)
       req = build_request(:describe_reserved_instances_modifications, params)
       req.send_request(options)
     end
@@ -22050,9 +22050,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeReservedInstancesOfferings AWS API Documentation
     #
-    # @overload describe_reserved_instances_offerings(params = {})
+    # @overload describe_reserved_instances_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_instances_offerings(params = {}, options = {})
+    def describe_reserved_instances_offerings(params = {}, **options)
       req = build_request(:describe_reserved_instances_offerings, params)
       req.send_request(options)
     end
@@ -22260,9 +22260,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeRouteTables AWS API Documentation
     #
-    # @overload describe_route_tables(params = {})
+    # @overload describe_route_tables(**params)
     # @param [Hash] params ({})
-    def describe_route_tables(params = {}, options = {})
+    def describe_route_tables(params = {}, **options)
       req = build_request(:describe_route_tables, params)
       req.send_request(options)
     end
@@ -22430,9 +22430,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeScheduledInstanceAvailability AWS API Documentation
     #
-    # @overload describe_scheduled_instance_availability(params = {})
+    # @overload describe_scheduled_instance_availability(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_instance_availability(params = {}, options = {})
+    def describe_scheduled_instance_availability(params = {}, **options)
       req = build_request(:describe_scheduled_instance_availability, params)
       req.send_request(options)
     end
@@ -22568,9 +22568,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeScheduledInstances AWS API Documentation
     #
-    # @overload describe_scheduled_instances(params = {})
+    # @overload describe_scheduled_instances(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_instances(params = {}, options = {})
+    def describe_scheduled_instances(params = {}, **options)
       req = build_request(:describe_scheduled_instances, params)
       req.send_request(options)
     end
@@ -22630,9 +22630,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSecurityGroupReferences AWS API Documentation
     #
-    # @overload describe_security_group_references(params = {})
+    # @overload describe_security_group_references(**params)
     # @param [Hash] params ({})
-    def describe_security_group_references(params = {}, options = {})
+    def describe_security_group_references(params = {}, **options)
       req = build_request(:describe_security_group_references, params)
       req.send_request(options)
     end
@@ -22879,9 +22879,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSecurityGroups AWS API Documentation
     #
-    # @overload describe_security_groups(params = {})
+    # @overload describe_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_security_groups(params = {}, options = {})
+    def describe_security_groups(params = {}, **options)
       req = build_request(:describe_security_groups, params)
       req.send_request(options)
     end
@@ -22952,9 +22952,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSnapshotAttribute AWS API Documentation
     #
-    # @overload describe_snapshot_attribute(params = {})
+    # @overload describe_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_attribute(params = {}, options = {})
+    def describe_snapshot_attribute(params = {}, **options)
       req = build_request(:describe_snapshot_attribute, params)
       req.send_request(options)
     end
@@ -23210,9 +23210,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSnapshots AWS API Documentation
     #
-    # @overload describe_snapshots(params = {})
+    # @overload describe_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_snapshots(params = {}, options = {})
+    def describe_snapshots(params = {}, **options)
       req = build_request(:describe_snapshots, params)
       req.send_request(options)
     end
@@ -23270,9 +23270,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSpotDatafeedSubscription AWS API Documentation
     #
-    # @overload describe_spot_datafeed_subscription(params = {})
+    # @overload describe_spot_datafeed_subscription(**params)
     # @param [Hash] params ({})
-    def describe_spot_datafeed_subscription(params = {}, options = {})
+    def describe_spot_datafeed_subscription(params = {}, **options)
       req = build_request(:describe_spot_datafeed_subscription, params)
       req.send_request(options)
     end
@@ -23345,9 +23345,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSpotFleetInstances AWS API Documentation
     #
-    # @overload describe_spot_fleet_instances(params = {})
+    # @overload describe_spot_fleet_instances(**params)
     # @param [Hash] params ({})
-    def describe_spot_fleet_instances(params = {}, options = {})
+    def describe_spot_fleet_instances(params = {}, **options)
       req = build_request(:describe_spot_fleet_instances, params)
       req.send_request(options)
     end
@@ -23468,9 +23468,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSpotFleetRequestHistory AWS API Documentation
     #
-    # @overload describe_spot_fleet_request_history(params = {})
+    # @overload describe_spot_fleet_request_history(**params)
     # @param [Hash] params ({})
-    def describe_spot_fleet_request_history(params = {}, options = {})
+    def describe_spot_fleet_request_history(params = {}, **options)
       req = build_request(:describe_spot_fleet_request_history, params)
       req.send_request(options)
     end
@@ -23682,9 +23682,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSpotFleetRequests AWS API Documentation
     #
-    # @overload describe_spot_fleet_requests(params = {})
+    # @overload describe_spot_fleet_requests(**params)
     # @param [Hash] params ({})
-    def describe_spot_fleet_requests(params = {}, options = {})
+    def describe_spot_fleet_requests(params = {}, **options)
       req = build_request(:describe_spot_fleet_requests, params)
       req.send_request(options)
     end
@@ -24014,9 +24014,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSpotInstanceRequests AWS API Documentation
     #
-    # @overload describe_spot_instance_requests(params = {})
+    # @overload describe_spot_instance_requests(**params)
     # @param [Hash] params ({})
-    def describe_spot_instance_requests(params = {}, options = {})
+    def describe_spot_instance_requests(params = {}, **options)
       req = build_request(:describe_spot_instance_requests, params)
       req.send_request(options)
     end
@@ -24166,9 +24166,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSpotPriceHistory AWS API Documentation
     #
-    # @overload describe_spot_price_history(params = {})
+    # @overload describe_spot_price_history(**params)
     # @param [Hash] params ({})
-    def describe_spot_price_history(params = {}, options = {})
+    def describe_spot_price_history(params = {}, **options)
       req = build_request(:describe_spot_price_history, params)
       req.send_request(options)
     end
@@ -24255,9 +24255,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeStaleSecurityGroups AWS API Documentation
     #
-    # @overload describe_stale_security_groups(params = {})
+    # @overload describe_stale_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_stale_security_groups(params = {}, options = {})
+    def describe_stale_security_groups(params = {}, **options)
       req = build_request(:describe_stale_security_groups, params)
       req.send_request(options)
     end
@@ -24429,9 +24429,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeSubnets AWS API Documentation
     #
-    # @overload describe_subnets(params = {})
+    # @overload describe_subnets(**params)
     # @param [Hash] params ({})
-    def describe_subnets(params = {}, options = {})
+    def describe_subnets(params = {}, **options)
       req = build_request(:describe_subnets, params)
       req.send_request(options)
     end
@@ -24549,9 +24549,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -24646,9 +24646,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTrafficMirrorFilters AWS API Documentation
     #
-    # @overload describe_traffic_mirror_filters(params = {})
+    # @overload describe_traffic_mirror_filters(**params)
     # @param [Hash] params ({})
-    def describe_traffic_mirror_filters(params = {}, options = {})
+    def describe_traffic_mirror_filters(params = {}, **options)
       req = build_request(:describe_traffic_mirror_filters, params)
       req.send_request(options)
     end
@@ -24739,9 +24739,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTrafficMirrorSessions AWS API Documentation
     #
-    # @overload describe_traffic_mirror_sessions(params = {})
+    # @overload describe_traffic_mirror_sessions(**params)
     # @param [Hash] params ({})
-    def describe_traffic_mirror_sessions(params = {}, options = {})
+    def describe_traffic_mirror_sessions(params = {}, **options)
       req = build_request(:describe_traffic_mirror_sessions, params)
       req.send_request(options)
     end
@@ -24819,9 +24819,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTrafficMirrorTargets AWS API Documentation
     #
-    # @overload describe_traffic_mirror_targets(params = {})
+    # @overload describe_traffic_mirror_targets(**params)
     # @param [Hash] params ({})
-    def describe_traffic_mirror_targets(params = {}, options = {})
+    def describe_traffic_mirror_targets(params = {}, **options)
       req = build_request(:describe_traffic_mirror_targets, params)
       req.send_request(options)
     end
@@ -24919,9 +24919,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayAttachments AWS API Documentation
     #
-    # @overload describe_transit_gateway_attachments(params = {})
+    # @overload describe_transit_gateway_attachments(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_attachments(params = {}, options = {})
+    def describe_transit_gateway_attachments(params = {}, **options)
       req = build_request(:describe_transit_gateway_attachments, params)
       req.send_request(options)
     end
@@ -25002,9 +25002,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayConnectPeers AWS API Documentation
     #
-    # @overload describe_transit_gateway_connect_peers(params = {})
+    # @overload describe_transit_gateway_connect_peers(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_connect_peers(params = {}, options = {})
+    def describe_transit_gateway_connect_peers(params = {}, **options)
       req = build_request(:describe_transit_gateway_connect_peers, params)
       req.send_request(options)
     end
@@ -25083,9 +25083,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayConnects AWS API Documentation
     #
-    # @overload describe_transit_gateway_connects(params = {})
+    # @overload describe_transit_gateway_connects(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_connects(params = {}, options = {})
+    def describe_transit_gateway_connects(params = {}, **options)
       req = build_request(:describe_transit_gateway_connects, params)
       req.send_request(options)
     end
@@ -25161,9 +25161,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayMulticastDomains AWS API Documentation
     #
-    # @overload describe_transit_gateway_multicast_domains(params = {})
+    # @overload describe_transit_gateway_multicast_domains(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_multicast_domains(params = {}, options = {})
+    def describe_transit_gateway_multicast_domains(params = {}, **options)
       req = build_request(:describe_transit_gateway_multicast_domains, params)
       req.send_request(options)
     end
@@ -25258,9 +25258,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayPeeringAttachments AWS API Documentation
     #
-    # @overload describe_transit_gateway_peering_attachments(params = {})
+    # @overload describe_transit_gateway_peering_attachments(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_peering_attachments(params = {}, options = {})
+    def describe_transit_gateway_peering_attachments(params = {}, **options)
       req = build_request(:describe_transit_gateway_peering_attachments, params)
       req.send_request(options)
     end
@@ -25343,9 +25343,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayRouteTables AWS API Documentation
     #
-    # @overload describe_transit_gateway_route_tables(params = {})
+    # @overload describe_transit_gateway_route_tables(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_route_tables(params = {}, options = {})
+    def describe_transit_gateway_route_tables(params = {}, **options)
       req = build_request(:describe_transit_gateway_route_tables, params)
       req.send_request(options)
     end
@@ -25427,9 +25427,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayVpcAttachments AWS API Documentation
     #
-    # @overload describe_transit_gateway_vpc_attachments(params = {})
+    # @overload describe_transit_gateway_vpc_attachments(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateway_vpc_attachments(params = {}, options = {})
+    def describe_transit_gateway_vpc_attachments(params = {}, **options)
       req = build_request(:describe_transit_gateway_vpc_attachments, params)
       req.send_request(options)
     end
@@ -25541,9 +25541,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGateways AWS API Documentation
     #
-    # @overload describe_transit_gateways(params = {})
+    # @overload describe_transit_gateways(**params)
     # @param [Hash] params ({})
-    def describe_transit_gateways(params = {}, options = {})
+    def describe_transit_gateways(params = {}, **options)
       req = build_request(:describe_transit_gateways, params)
       req.send_request(options)
     end
@@ -25612,9 +25612,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVolumeAttribute AWS API Documentation
     #
-    # @overload describe_volume_attribute(params = {})
+    # @overload describe_volume_attribute(**params)
     # @param [Hash] params ({})
-    def describe_volume_attribute(params = {}, options = {})
+    def describe_volume_attribute(params = {}, **options)
       req = build_request(:describe_volume_attribute, params)
       req.send_request(options)
     end
@@ -25839,9 +25839,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVolumeStatus AWS API Documentation
     #
-    # @overload describe_volume_status(params = {})
+    # @overload describe_volume_status(**params)
     # @param [Hash] params ({})
-    def describe_volume_status(params = {}, options = {})
+    def describe_volume_status(params = {}, **options)
       req = build_request(:describe_volume_status, params)
       req.send_request(options)
     end
@@ -26087,9 +26087,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVolumes AWS API Documentation
     #
-    # @overload describe_volumes(params = {})
+    # @overload describe_volumes(**params)
     # @param [Hash] params ({})
-    def describe_volumes(params = {}, options = {})
+    def describe_volumes(params = {}, **options)
       req = build_request(:describe_volumes, params)
       req.send_request(options)
     end
@@ -26201,9 +26201,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVolumesModifications AWS API Documentation
     #
-    # @overload describe_volumes_modifications(params = {})
+    # @overload describe_volumes_modifications(**params)
     # @param [Hash] params ({})
-    def describe_volumes_modifications(params = {}, options = {})
+    def describe_volumes_modifications(params = {}, **options)
       req = build_request(:describe_volumes_modifications, params)
       req.send_request(options)
     end
@@ -26283,9 +26283,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcAttribute AWS API Documentation
     #
-    # @overload describe_vpc_attribute(params = {})
+    # @overload describe_vpc_attribute(**params)
     # @param [Hash] params ({})
-    def describe_vpc_attribute(params = {}, options = {})
+    def describe_vpc_attribute(params = {}, **options)
       req = build_request(:describe_vpc_attribute, params)
       req.send_request(options)
     end
@@ -26346,9 +26346,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcClassicLink AWS API Documentation
     #
-    # @overload describe_vpc_classic_link(params = {})
+    # @overload describe_vpc_classic_link(**params)
     # @param [Hash] params ({})
-    def describe_vpc_classic_link(params = {}, options = {})
+    def describe_vpc_classic_link(params = {}, **options)
       req = build_request(:describe_vpc_classic_link, params)
       req.send_request(options)
     end
@@ -26400,9 +26400,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcClassicLinkDnsSupport AWS API Documentation
     #
-    # @overload describe_vpc_classic_link_dns_support(params = {})
+    # @overload describe_vpc_classic_link_dns_support(**params)
     # @param [Hash] params ({})
-    def describe_vpc_classic_link_dns_support(params = {}, options = {})
+    def describe_vpc_classic_link_dns_support(params = {}, **options)
       req = build_request(:describe_vpc_classic_link_dns_support, params)
       req.send_request(options)
     end
@@ -26481,9 +26481,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcEndpointConnectionNotifications AWS API Documentation
     #
-    # @overload describe_vpc_endpoint_connection_notifications(params = {})
+    # @overload describe_vpc_endpoint_connection_notifications(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_connection_notifications(params = {}, options = {})
+    def describe_vpc_endpoint_connection_notifications(params = {}, **options)
       req = build_request(:describe_vpc_endpoint_connection_notifications, params)
       req.send_request(options)
     end
@@ -26561,9 +26561,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcEndpointConnections AWS API Documentation
     #
-    # @overload describe_vpc_endpoint_connections(params = {})
+    # @overload describe_vpc_endpoint_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_connections(params = {}, options = {})
+    def describe_vpc_endpoint_connections(params = {}, **options)
       req = build_request(:describe_vpc_endpoint_connections, params)
       req.send_request(options)
     end
@@ -26662,9 +26662,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcEndpointServiceConfigurations AWS API Documentation
     #
-    # @overload describe_vpc_endpoint_service_configurations(params = {})
+    # @overload describe_vpc_endpoint_service_configurations(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_service_configurations(params = {}, options = {})
+    def describe_vpc_endpoint_service_configurations(params = {}, **options)
       req = build_request(:describe_vpc_endpoint_service_configurations, params)
       req.send_request(options)
     end
@@ -26730,9 +26730,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcEndpointServicePermissions AWS API Documentation
     #
-    # @overload describe_vpc_endpoint_service_permissions(params = {})
+    # @overload describe_vpc_endpoint_service_permissions(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_service_permissions(params = {}, options = {})
+    def describe_vpc_endpoint_service_permissions(params = {}, **options)
       req = build_request(:describe_vpc_endpoint_service_permissions, params)
       req.send_request(options)
     end
@@ -26832,9 +26832,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcEndpointServices AWS API Documentation
     #
-    # @overload describe_vpc_endpoint_services(params = {})
+    # @overload describe_vpc_endpoint_services(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoint_services(params = {}, options = {})
+    def describe_vpc_endpoint_services(params = {}, **options)
       req = build_request(:describe_vpc_endpoint_services, params)
       req.send_request(options)
     end
@@ -26944,9 +26944,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcEndpoints AWS API Documentation
     #
-    # @overload describe_vpc_endpoints(params = {})
+    # @overload describe_vpc_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_vpc_endpoints(params = {}, options = {})
+    def describe_vpc_endpoints(params = {}, **options)
       req = build_request(:describe_vpc_endpoints, params)
       req.send_request(options)
     end
@@ -27077,9 +27077,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcPeeringConnections AWS API Documentation
     #
-    # @overload describe_vpc_peering_connections(params = {})
+    # @overload describe_vpc_peering_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpc_peering_connections(params = {}, options = {})
+    def describe_vpc_peering_connections(params = {}, **options)
       req = build_request(:describe_vpc_peering_connections, params)
       req.send_request(options)
     end
@@ -27242,9 +27242,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpcs AWS API Documentation
     #
-    # @overload describe_vpcs(params = {})
+    # @overload describe_vpcs(**params)
     # @param [Hash] params ({})
-    def describe_vpcs(params = {}, options = {})
+    def describe_vpcs(params = {}, **options)
       req = build_request(:describe_vpcs, params)
       req.send_request(options)
     end
@@ -27397,9 +27397,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpnConnections AWS API Documentation
     #
-    # @overload describe_vpn_connections(params = {})
+    # @overload describe_vpn_connections(**params)
     # @param [Hash] params ({})
-    def describe_vpn_connections(params = {}, options = {})
+    def describe_vpn_connections(params = {}, **options)
       req = build_request(:describe_vpn_connections, params)
       req.send_request(options)
     end
@@ -27491,9 +27491,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeVpnGateways AWS API Documentation
     #
-    # @overload describe_vpn_gateways(params = {})
+    # @overload describe_vpn_gateways(**params)
     # @param [Hash] params ({})
-    def describe_vpn_gateways(params = {}, options = {})
+    def describe_vpn_gateways(params = {}, **options)
       req = build_request(:describe_vpn_gateways, params)
       req.send_request(options)
     end
@@ -27533,9 +27533,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DetachClassicLinkVpc AWS API Documentation
     #
-    # @overload detach_classic_link_vpc(params = {})
+    # @overload detach_classic_link_vpc(**params)
     # @param [Hash] params ({})
-    def detach_classic_link_vpc(params = {}, options = {})
+    def detach_classic_link_vpc(params = {}, **options)
       req = build_request(:detach_classic_link_vpc, params)
       req.send_request(options)
     end
@@ -27578,9 +27578,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DetachInternetGateway AWS API Documentation
     #
-    # @overload detach_internet_gateway(params = {})
+    # @overload detach_internet_gateway(**params)
     # @param [Hash] params ({})
-    def detach_internet_gateway(params = {}, options = {})
+    def detach_internet_gateway(params = {}, **options)
       req = build_request(:detach_internet_gateway, params)
       req.send_request(options)
     end
@@ -27640,9 +27640,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DetachNetworkInterface AWS API Documentation
     #
-    # @overload detach_network_interface(params = {})
+    # @overload detach_network_interface(**params)
     # @param [Hash] params ({})
-    def detach_network_interface(params = {}, options = {})
+    def detach_network_interface(params = {}, **options)
       req = build_request(:detach_network_interface, params)
       req.send_request(options)
     end
@@ -27740,9 +27740,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DetachVolume AWS API Documentation
     #
-    # @overload detach_volume(params = {})
+    # @overload detach_volume(**params)
     # @param [Hash] params ({})
-    def detach_volume(params = {}, options = {})
+    def detach_volume(params = {}, **options)
       req = build_request(:detach_volume, params)
       req.send_request(options)
     end
@@ -27781,9 +27781,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DetachVpnGateway AWS API Documentation
     #
-    # @overload detach_vpn_gateway(params = {})
+    # @overload detach_vpn_gateway(**params)
     # @param [Hash] params ({})
-    def detach_vpn_gateway(params = {}, options = {})
+    def detach_vpn_gateway(params = {}, **options)
       req = build_request(:detach_vpn_gateway, params)
       req.send_request(options)
     end
@@ -27826,9 +27826,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableEbsEncryptionByDefault AWS API Documentation
     #
-    # @overload disable_ebs_encryption_by_default(params = {})
+    # @overload disable_ebs_encryption_by_default(**params)
     # @param [Hash] params ({})
-    def disable_ebs_encryption_by_default(params = {}, options = {})
+    def disable_ebs_encryption_by_default(params = {}, **options)
       req = build_request(:disable_ebs_encryption_by_default, params)
       req.send_request(options)
     end
@@ -27885,9 +27885,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableFastSnapshotRestores AWS API Documentation
     #
-    # @overload disable_fast_snapshot_restores(params = {})
+    # @overload disable_fast_snapshot_restores(**params)
     # @param [Hash] params ({})
-    def disable_fast_snapshot_restores(params = {}, options = {})
+    def disable_fast_snapshot_restores(params = {}, **options)
       req = build_request(:disable_fast_snapshot_restores, params)
       req.send_request(options)
     end
@@ -27929,9 +27929,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableTransitGatewayRouteTablePropagation AWS API Documentation
     #
-    # @overload disable_transit_gateway_route_table_propagation(params = {})
+    # @overload disable_transit_gateway_route_table_propagation(**params)
     # @param [Hash] params ({})
-    def disable_transit_gateway_route_table_propagation(params = {}, options = {})
+    def disable_transit_gateway_route_table_propagation(params = {}, **options)
       req = build_request(:disable_transit_gateway_route_table_propagation, params)
       req.send_request(options)
     end
@@ -27973,9 +27973,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableVgwRoutePropagation AWS API Documentation
     #
-    # @overload disable_vgw_route_propagation(params = {})
+    # @overload disable_vgw_route_propagation(**params)
     # @param [Hash] params ({})
-    def disable_vgw_route_propagation(params = {}, options = {})
+    def disable_vgw_route_propagation(params = {}, **options)
       req = build_request(:disable_vgw_route_propagation, params)
       req.send_request(options)
     end
@@ -28009,9 +28009,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableVpcClassicLink AWS API Documentation
     #
-    # @overload disable_vpc_classic_link(params = {})
+    # @overload disable_vpc_classic_link(**params)
     # @param [Hash] params ({})
-    def disable_vpc_classic_link(params = {}, options = {})
+    def disable_vpc_classic_link(params = {}, **options)
       req = build_request(:disable_vpc_classic_link, params)
       req.send_request(options)
     end
@@ -28047,9 +28047,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableVpcClassicLinkDnsSupport AWS API Documentation
     #
-    # @overload disable_vpc_classic_link_dns_support(params = {})
+    # @overload disable_vpc_classic_link_dns_support(**params)
     # @param [Hash] params ({})
-    def disable_vpc_classic_link_dns_support(params = {}, options = {})
+    def disable_vpc_classic_link_dns_support(params = {}, **options)
       req = build_request(:disable_vpc_classic_link_dns_support, params)
       req.send_request(options)
     end
@@ -28109,9 +28109,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateAddress AWS API Documentation
     #
-    # @overload disassociate_address(params = {})
+    # @overload disassociate_address(**params)
     # @param [Hash] params ({})
-    def disassociate_address(params = {}, options = {})
+    def disassociate_address(params = {}, **options)
       req = build_request(:disassociate_address, params)
       req.send_request(options)
     end
@@ -28162,9 +28162,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateClientVpnTargetNetwork AWS API Documentation
     #
-    # @overload disassociate_client_vpn_target_network(params = {})
+    # @overload disassociate_client_vpn_target_network(**params)
     # @param [Hash] params ({})
-    def disassociate_client_vpn_target_network(params = {}, options = {})
+    def disassociate_client_vpn_target_network(params = {}, **options)
       req = build_request(:disassociate_client_vpn_target_network, params)
       req.send_request(options)
     end
@@ -28209,9 +28209,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateEnclaveCertificateIamRole AWS API Documentation
     #
-    # @overload disassociate_enclave_certificate_iam_role(params = {})
+    # @overload disassociate_enclave_certificate_iam_role(**params)
     # @param [Hash] params ({})
-    def disassociate_enclave_certificate_iam_role(params = {}, options = {})
+    def disassociate_enclave_certificate_iam_role(params = {}, **options)
       req = build_request(:disassociate_enclave_certificate_iam_role, params)
       req.send_request(options)
     end
@@ -28267,9 +28267,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIamInstanceProfile AWS API Documentation
     #
-    # @overload disassociate_iam_instance_profile(params = {})
+    # @overload disassociate_iam_instance_profile(**params)
     # @param [Hash] params ({})
-    def disassociate_iam_instance_profile(params = {}, options = {})
+    def disassociate_iam_instance_profile(params = {}, **options)
       req = build_request(:disassociate_iam_instance_profile, params)
       req.send_request(options)
     end
@@ -28315,9 +28315,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateRouteTable AWS API Documentation
     #
-    # @overload disassociate_route_table(params = {})
+    # @overload disassociate_route_table(**params)
     # @param [Hash] params ({})
-    def disassociate_route_table(params = {}, options = {})
+    def disassociate_route_table(params = {}, **options)
       req = build_request(:disassociate_route_table, params)
       req.send_request(options)
     end
@@ -28351,9 +28351,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateSubnetCidrBlock AWS API Documentation
     #
-    # @overload disassociate_subnet_cidr_block(params = {})
+    # @overload disassociate_subnet_cidr_block(**params)
     # @param [Hash] params ({})
-    def disassociate_subnet_cidr_block(params = {}, options = {})
+    def disassociate_subnet_cidr_block(params = {}, **options)
       req = build_request(:disassociate_subnet_cidr_block, params)
       req.send_request(options)
     end
@@ -28402,9 +28402,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateTransitGatewayMulticastDomain AWS API Documentation
     #
-    # @overload disassociate_transit_gateway_multicast_domain(params = {})
+    # @overload disassociate_transit_gateway_multicast_domain(**params)
     # @param [Hash] params ({})
-    def disassociate_transit_gateway_multicast_domain(params = {}, options = {})
+    def disassociate_transit_gateway_multicast_domain(params = {}, **options)
       req = build_request(:disassociate_transit_gateway_multicast_domain, params)
       req.send_request(options)
     end
@@ -28446,9 +28446,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateTransitGatewayRouteTable AWS API Documentation
     #
-    # @overload disassociate_transit_gateway_route_table(params = {})
+    # @overload disassociate_transit_gateway_route_table(**params)
     # @param [Hash] params ({})
-    def disassociate_transit_gateway_route_table(params = {}, options = {})
+    def disassociate_transit_gateway_route_table(params = {}, **options)
       req = build_request(:disassociate_transit_gateway_route_table, params)
       req.send_request(options)
     end
@@ -28493,9 +28493,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateVpcCidrBlock AWS API Documentation
     #
-    # @overload disassociate_vpc_cidr_block(params = {})
+    # @overload disassociate_vpc_cidr_block(**params)
     # @param [Hash] params ({})
-    def disassociate_vpc_cidr_block(params = {}, options = {})
+    def disassociate_vpc_cidr_block(params = {}, **options)
       req = build_request(:disassociate_vpc_cidr_block, params)
       req.send_request(options)
     end
@@ -28546,9 +28546,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableEbsEncryptionByDefault AWS API Documentation
     #
-    # @overload enable_ebs_encryption_by_default(params = {})
+    # @overload enable_ebs_encryption_by_default(**params)
     # @param [Hash] params ({})
-    def enable_ebs_encryption_by_default(params = {}, options = {})
+    def enable_ebs_encryption_by_default(params = {}, **options)
       req = build_request(:enable_ebs_encryption_by_default, params)
       req.send_request(options)
     end
@@ -28618,9 +28618,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableFastSnapshotRestores AWS API Documentation
     #
-    # @overload enable_fast_snapshot_restores(params = {})
+    # @overload enable_fast_snapshot_restores(**params)
     # @param [Hash] params ({})
-    def enable_fast_snapshot_restores(params = {}, options = {})
+    def enable_fast_snapshot_restores(params = {}, **options)
       req = build_request(:enable_fast_snapshot_restores, params)
       req.send_request(options)
     end
@@ -28662,9 +28662,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableTransitGatewayRouteTablePropagation AWS API Documentation
     #
-    # @overload enable_transit_gateway_route_table_propagation(params = {})
+    # @overload enable_transit_gateway_route_table_propagation(**params)
     # @param [Hash] params ({})
-    def enable_transit_gateway_route_table_propagation(params = {}, options = {})
+    def enable_transit_gateway_route_table_propagation(params = {}, **options)
       req = build_request(:enable_transit_gateway_route_table_propagation, params)
       req.send_request(options)
     end
@@ -28709,9 +28709,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableVgwRoutePropagation AWS API Documentation
     #
-    # @overload enable_vgw_route_propagation(params = {})
+    # @overload enable_vgw_route_propagation(**params)
     # @param [Hash] params ({})
-    def enable_vgw_route_propagation(params = {}, options = {})
+    def enable_vgw_route_propagation(params = {}, **options)
       req = build_request(:enable_vgw_route_propagation, params)
       req.send_request(options)
     end
@@ -28748,9 +28748,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableVolumeIO AWS API Documentation
     #
-    # @overload enable_volume_io(params = {})
+    # @overload enable_volume_io(**params)
     # @param [Hash] params ({})
-    def enable_volume_io(params = {}, options = {})
+    def enable_volume_io(params = {}, **options)
       req = build_request(:enable_volume_io, params)
       req.send_request(options)
     end
@@ -28794,9 +28794,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableVpcClassicLink AWS API Documentation
     #
-    # @overload enable_vpc_classic_link(params = {})
+    # @overload enable_vpc_classic_link(**params)
     # @param [Hash] params ({})
-    def enable_vpc_classic_link(params = {}, options = {})
+    def enable_vpc_classic_link(params = {}, **options)
       req = build_request(:enable_vpc_classic_link, params)
       req.send_request(options)
     end
@@ -28834,9 +28834,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableVpcClassicLinkDnsSupport AWS API Documentation
     #
-    # @overload enable_vpc_classic_link_dns_support(params = {})
+    # @overload enable_vpc_classic_link_dns_support(**params)
     # @param [Hash] params ({})
-    def enable_vpc_classic_link_dns_support(params = {}, options = {})
+    def enable_vpc_classic_link_dns_support(params = {}, **options)
       req = build_request(:enable_vpc_classic_link_dns_support, params)
       req.send_request(options)
     end
@@ -28873,9 +28873,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ExportClientVpnClientCertificateRevocationList AWS API Documentation
     #
-    # @overload export_client_vpn_client_certificate_revocation_list(params = {})
+    # @overload export_client_vpn_client_certificate_revocation_list(**params)
     # @param [Hash] params ({})
-    def export_client_vpn_client_certificate_revocation_list(params = {}, options = {})
+    def export_client_vpn_client_certificate_revocation_list(params = {}, **options)
       req = build_request(:export_client_vpn_client_certificate_revocation_list, params)
       req.send_request(options)
     end
@@ -28912,9 +28912,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ExportClientVpnClientConfiguration AWS API Documentation
     #
-    # @overload export_client_vpn_client_configuration(params = {})
+    # @overload export_client_vpn_client_configuration(**params)
     # @param [Hash] params ({})
-    def export_client_vpn_client_configuration(params = {}, options = {})
+    def export_client_vpn_client_configuration(params = {}, **options)
       req = build_request(:export_client_vpn_client_configuration, params)
       req.send_request(options)
     end
@@ -29019,9 +29019,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ExportImage AWS API Documentation
     #
-    # @overload export_image(params = {})
+    # @overload export_image(**params)
     # @param [Hash] params ({})
-    def export_image(params = {}, options = {})
+    def export_image(params = {}, **options)
       req = build_request(:export_image, params)
       req.send_request(options)
     end
@@ -29104,9 +29104,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ExportTransitGatewayRoutes AWS API Documentation
     #
-    # @overload export_transit_gateway_routes(params = {})
+    # @overload export_transit_gateway_routes(**params)
     # @param [Hash] params ({})
-    def export_transit_gateway_routes(params = {}, options = {})
+    def export_transit_gateway_routes(params = {}, **options)
       req = build_request(:export_transit_gateway_routes, params)
       req.send_request(options)
     end
@@ -29149,9 +29149,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetAssociatedEnclaveCertificateIamRoles AWS API Documentation
     #
-    # @overload get_associated_enclave_certificate_iam_roles(params = {})
+    # @overload get_associated_enclave_certificate_iam_roles(**params)
     # @param [Hash] params ({})
-    def get_associated_enclave_certificate_iam_roles(params = {}, options = {})
+    def get_associated_enclave_certificate_iam_roles(params = {}, **options)
       req = build_request(:get_associated_enclave_certificate_iam_roles, params)
       req.send_request(options)
     end
@@ -29201,9 +29201,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetAssociatedIpv6PoolCidrs AWS API Documentation
     #
-    # @overload get_associated_ipv_6_pool_cidrs(params = {})
+    # @overload get_associated_ipv_6_pool_cidrs(**params)
     # @param [Hash] params ({})
-    def get_associated_ipv_6_pool_cidrs(params = {}, options = {})
+    def get_associated_ipv_6_pool_cidrs(params = {}, **options)
       req = build_request(:get_associated_ipv_6_pool_cidrs, params)
       req.send_request(options)
     end
@@ -29268,9 +29268,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetCapacityReservationUsage AWS API Documentation
     #
-    # @overload get_capacity_reservation_usage(params = {})
+    # @overload get_capacity_reservation_usage(**params)
     # @param [Hash] params ({})
-    def get_capacity_reservation_usage(params = {}, options = {})
+    def get_capacity_reservation_usage(params = {}, **options)
       req = build_request(:get_capacity_reservation_usage, params)
       req.send_request(options)
     end
@@ -29350,9 +29350,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetCoipPoolUsage AWS API Documentation
     #
-    # @overload get_coip_pool_usage(params = {})
+    # @overload get_coip_pool_usage(**params)
     # @param [Hash] params ({})
-    def get_coip_pool_usage(params = {}, options = {})
+    def get_coip_pool_usage(params = {}, **options)
       req = build_request(:get_coip_pool_usage, params)
       req.send_request(options)
     end
@@ -29432,9 +29432,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetConsoleOutput AWS API Documentation
     #
-    # @overload get_console_output(params = {})
+    # @overload get_console_output(**params)
     # @param [Hash] params ({})
-    def get_console_output(params = {}, options = {})
+    def get_console_output(params = {}, **options)
       req = build_request(:get_console_output, params)
       req.send_request(options)
     end
@@ -29477,9 +29477,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetConsoleScreenshot AWS API Documentation
     #
-    # @overload get_console_screenshot(params = {})
+    # @overload get_console_screenshot(**params)
     # @param [Hash] params ({})
-    def get_console_screenshot(params = {}, options = {})
+    def get_console_screenshot(params = {}, **options)
       req = build_request(:get_console_screenshot, params)
       req.send_request(options)
     end
@@ -29521,9 +29521,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetDefaultCreditSpecification AWS API Documentation
     #
-    # @overload get_default_credit_specification(params = {})
+    # @overload get_default_credit_specification(**params)
     # @param [Hash] params ({})
-    def get_default_credit_specification(params = {}, options = {})
+    def get_default_credit_specification(params = {}, **options)
       req = build_request(:get_default_credit_specification, params)
       req.send_request(options)
     end
@@ -29562,9 +29562,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetEbsDefaultKmsKeyId AWS API Documentation
     #
-    # @overload get_ebs_default_kms_key_id(params = {})
+    # @overload get_ebs_default_kms_key_id(**params)
     # @param [Hash] params ({})
-    def get_ebs_default_kms_key_id(params = {}, options = {})
+    def get_ebs_default_kms_key_id(params = {}, **options)
       req = build_request(:get_ebs_default_kms_key_id, params)
       req.send_request(options)
     end
@@ -29601,9 +29601,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetEbsEncryptionByDefault AWS API Documentation
     #
-    # @overload get_ebs_encryption_by_default(params = {})
+    # @overload get_ebs_encryption_by_default(**params)
     # @param [Hash] params ({})
-    def get_ebs_encryption_by_default(params = {}, options = {})
+    def get_ebs_encryption_by_default(params = {}, **options)
       req = build_request(:get_ebs_encryption_by_default, params)
       req.send_request(options)
     end
@@ -29655,9 +29655,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetGroupsForCapacityReservation AWS API Documentation
     #
-    # @overload get_groups_for_capacity_reservation(params = {})
+    # @overload get_groups_for_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def get_groups_for_capacity_reservation(params = {}, options = {})
+    def get_groups_for_capacity_reservation(params = {}, **options)
       req = build_request(:get_groups_for_capacity_reservation, params)
       req.send_request(options)
     end
@@ -29708,9 +29708,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetHostReservationPurchasePreview AWS API Documentation
     #
-    # @overload get_host_reservation_purchase_preview(params = {})
+    # @overload get_host_reservation_purchase_preview(**params)
     # @param [Hash] params ({})
-    def get_host_reservation_purchase_preview(params = {}, options = {})
+    def get_host_reservation_purchase_preview(params = {}, **options)
       req = build_request(:get_host_reservation_purchase_preview, params)
       req.send_request(options)
     end
@@ -29898,9 +29898,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetLaunchTemplateData AWS API Documentation
     #
-    # @overload get_launch_template_data(params = {})
+    # @overload get_launch_template_data(**params)
     # @param [Hash] params ({})
-    def get_launch_template_data(params = {}, options = {})
+    def get_launch_template_data(params = {}, **options)
       req = build_request(:get_launch_template_data, params)
       req.send_request(options)
     end
@@ -29950,9 +29950,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetManagedPrefixListAssociations AWS API Documentation
     #
-    # @overload get_managed_prefix_list_associations(params = {})
+    # @overload get_managed_prefix_list_associations(**params)
     # @param [Hash] params ({})
-    def get_managed_prefix_list_associations(params = {}, options = {})
+    def get_managed_prefix_list_associations(params = {}, **options)
       req = build_request(:get_managed_prefix_list_associations, params)
       req.send_request(options)
     end
@@ -30007,9 +30007,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetManagedPrefixListEntries AWS API Documentation
     #
-    # @overload get_managed_prefix_list_entries(params = {})
+    # @overload get_managed_prefix_list_entries(**params)
     # @param [Hash] params ({})
-    def get_managed_prefix_list_entries(params = {}, options = {})
+    def get_managed_prefix_list_entries(params = {}, **options)
       req = build_request(:get_managed_prefix_list_entries, params)
       req.send_request(options)
     end
@@ -30076,9 +30076,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetPasswordData AWS API Documentation
     #
-    # @overload get_password_data(params = {})
+    # @overload get_password_data(**params)
     # @param [Hash] params ({})
-    def get_password_data(params = {}, options = {})
+    def get_password_data(params = {}, **options)
       req = build_request(:get_password_data, params)
       req.send_request(options)
     end
@@ -30154,9 +30154,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetReservedInstancesExchangeQuote AWS API Documentation
     #
-    # @overload get_reserved_instances_exchange_quote(params = {})
+    # @overload get_reserved_instances_exchange_quote(**params)
     # @param [Hash] params ({})
-    def get_reserved_instances_exchange_quote(params = {}, options = {})
+    def get_reserved_instances_exchange_quote(params = {}, **options)
       req = build_request(:get_reserved_instances_exchange_quote, params)
       req.send_request(options)
     end
@@ -30220,9 +30220,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayAttachmentPropagations AWS API Documentation
     #
-    # @overload get_transit_gateway_attachment_propagations(params = {})
+    # @overload get_transit_gateway_attachment_propagations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_attachment_propagations(params = {}, options = {})
+    def get_transit_gateway_attachment_propagations(params = {}, **options)
       req = build_request(:get_transit_gateway_attachment_propagations, params)
       req.send_request(options)
     end
@@ -30298,9 +30298,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayMulticastDomainAssociations AWS API Documentation
     #
-    # @overload get_transit_gateway_multicast_domain_associations(params = {})
+    # @overload get_transit_gateway_multicast_domain_associations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_multicast_domain_associations(params = {}, options = {})
+    def get_transit_gateway_multicast_domain_associations(params = {}, **options)
       req = build_request(:get_transit_gateway_multicast_domain_associations, params)
       req.send_request(options)
     end
@@ -30385,9 +30385,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPrefixListReferences AWS API Documentation
     #
-    # @overload get_transit_gateway_prefix_list_references(params = {})
+    # @overload get_transit_gateway_prefix_list_references(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_prefix_list_references(params = {}, options = {})
+    def get_transit_gateway_prefix_list_references(params = {}, **options)
       req = build_request(:get_transit_gateway_prefix_list_references, params)
       req.send_request(options)
     end
@@ -30455,9 +30455,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayRouteTableAssociations AWS API Documentation
     #
-    # @overload get_transit_gateway_route_table_associations(params = {})
+    # @overload get_transit_gateway_route_table_associations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_route_table_associations(params = {}, options = {})
+    def get_transit_gateway_route_table_associations(params = {}, **options)
       req = build_request(:get_transit_gateway_route_table_associations, params)
       req.send_request(options)
     end
@@ -30525,9 +30525,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayRouteTablePropagations AWS API Documentation
     #
-    # @overload get_transit_gateway_route_table_propagations(params = {})
+    # @overload get_transit_gateway_route_table_propagations(**params)
     # @param [Hash] params ({})
-    def get_transit_gateway_route_table_propagations(params = {}, options = {})
+    def get_transit_gateway_route_table_propagations(params = {}, **options)
       req = build_request(:get_transit_gateway_route_table_propagations, params)
       req.send_request(options)
     end
@@ -30576,9 +30576,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ImportClientVpnClientCertificateRevocationList AWS API Documentation
     #
-    # @overload import_client_vpn_client_certificate_revocation_list(params = {})
+    # @overload import_client_vpn_client_certificate_revocation_list(**params)
     # @param [Hash] params ({})
-    def import_client_vpn_client_certificate_revocation_list(params = {}, options = {})
+    def import_client_vpn_client_certificate_revocation_list(params = {}, **options)
       req = build_request(:import_client_vpn_client_certificate_revocation_list, params)
       req.send_request(options)
     end
@@ -30802,9 +30802,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ImportImage AWS API Documentation
     #
-    # @overload import_image(params = {})
+    # @overload import_image(**params)
     # @param [Hash] params ({})
-    def import_image(params = {}, options = {})
+    def import_image(params = {}, **options)
       req = build_request(:import_image, params)
       req.send_request(options)
     end
@@ -30925,9 +30925,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ImportInstance AWS API Documentation
     #
-    # @overload import_instance(params = {})
+    # @overload import_instance(**params)
     # @param [Hash] params ({})
-    def import_instance(params = {}, options = {})
+    def import_instance(params = {}, **options)
       req = build_request(:import_instance, params)
       req.send_request(options)
     end
@@ -30999,9 +30999,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ImportKeyPair AWS API Documentation
     #
-    # @overload import_key_pair(params = {})
+    # @overload import_key_pair(**params)
     # @param [Hash] params ({})
-    def import_key_pair(params = {}, options = {})
+    def import_key_pair(params = {}, **options)
       req = build_request(:import_key_pair, params)
       req.send_request(options)
     end
@@ -31146,9 +31146,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ImportSnapshot AWS API Documentation
     #
-    # @overload import_snapshot(params = {})
+    # @overload import_snapshot(**params)
     # @param [Hash] params ({})
-    def import_snapshot(params = {}, options = {})
+    def import_snapshot(params = {}, **options)
       req = build_request(:import_snapshot, params)
       req.send_request(options)
     end
@@ -31238,9 +31238,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ImportVolume AWS API Documentation
     #
-    # @overload import_volume(params = {})
+    # @overload import_volume(**params)
     # @param [Hash] params ({})
-    def import_volume(params = {}, options = {})
+    def import_volume(params = {}, **options)
       req = build_request(:import_volume, params)
       req.send_request(options)
     end
@@ -31292,9 +31292,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyAvailabilityZoneGroup AWS API Documentation
     #
-    # @overload modify_availability_zone_group(params = {})
+    # @overload modify_availability_zone_group(**params)
     # @param [Hash] params ({})
-    def modify_availability_zone_group(params = {}, options = {})
+    def modify_availability_zone_group(params = {}, **options)
       req = build_request(:modify_availability_zone_group, params)
       req.send_request(options)
     end
@@ -31366,9 +31366,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyCapacityReservation AWS API Documentation
     #
-    # @overload modify_capacity_reservation(params = {})
+    # @overload modify_capacity_reservation(**params)
     # @param [Hash] params ({})
-    def modify_capacity_reservation(params = {}, options = {})
+    def modify_capacity_reservation(params = {}, **options)
       req = build_request(:modify_capacity_reservation, params)
       req.send_request(options)
     end
@@ -31481,9 +31481,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyClientVpnEndpoint AWS API Documentation
     #
-    # @overload modify_client_vpn_endpoint(params = {})
+    # @overload modify_client_vpn_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_client_vpn_endpoint(params = {}, options = {})
+    def modify_client_vpn_endpoint(params = {}, **options)
       req = build_request(:modify_client_vpn_endpoint, params)
       req.send_request(options)
     end
@@ -31543,9 +31543,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyDefaultCreditSpecification AWS API Documentation
     #
-    # @overload modify_default_credit_specification(params = {})
+    # @overload modify_default_credit_specification(**params)
     # @param [Hash] params ({})
-    def modify_default_credit_specification(params = {}, options = {})
+    def modify_default_credit_specification(params = {}, **options)
       req = build_request(:modify_default_credit_specification, params)
       req.send_request(options)
     end
@@ -31617,9 +31617,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyEbsDefaultKmsKeyId AWS API Documentation
     #
-    # @overload modify_ebs_default_kms_key_id(params = {})
+    # @overload modify_ebs_default_kms_key_id(**params)
     # @param [Hash] params ({})
-    def modify_ebs_default_kms_key_id(params = {}, options = {})
+    def modify_ebs_default_kms_key_id(params = {}, **options)
       req = build_request(:modify_ebs_default_kms_key_id, params)
       req.send_request(options)
     end
@@ -31731,9 +31731,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyFleet AWS API Documentation
     #
-    # @overload modify_fleet(params = {})
+    # @overload modify_fleet(**params)
     # @param [Hash] params ({})
-    def modify_fleet(params = {}, options = {})
+    def modify_fleet(params = {}, **options)
       req = build_request(:modify_fleet, params)
       req.send_request(options)
     end
@@ -31824,9 +31824,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyFpgaImageAttribute AWS API Documentation
     #
-    # @overload modify_fpga_image_attribute(params = {})
+    # @overload modify_fpga_image_attribute(**params)
     # @param [Hash] params ({})
-    def modify_fpga_image_attribute(params = {}, options = {})
+    def modify_fpga_image_attribute(params = {}, **options)
       req = build_request(:modify_fpga_image_attribute, params)
       req.send_request(options)
     end
@@ -31905,9 +31905,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyHosts AWS API Documentation
     #
-    # @overload modify_hosts(params = {})
+    # @overload modify_hosts(**params)
     # @param [Hash] params ({})
-    def modify_hosts(params = {}, options = {})
+    def modify_hosts(params = {}, **options)
       req = build_request(:modify_hosts, params)
       req.send_request(options)
     end
@@ -31976,9 +31976,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIdFormat AWS API Documentation
     #
-    # @overload modify_id_format(params = {})
+    # @overload modify_id_format(**params)
     # @param [Hash] params ({})
-    def modify_id_format(params = {}, options = {})
+    def modify_id_format(params = {}, **options)
       req = build_request(:modify_id_format, params)
       req.send_request(options)
     end
@@ -32052,9 +32052,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIdentityIdFormat AWS API Documentation
     #
-    # @overload modify_identity_id_format(params = {})
+    # @overload modify_identity_id_format(**params)
     # @param [Hash] params ({})
-    def modify_identity_id_format(params = {}, options = {})
+    def modify_identity_id_format(params = {}, **options)
       req = build_request(:modify_identity_id_format, params)
       req.send_request(options)
     end
@@ -32182,9 +32182,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyImageAttribute AWS API Documentation
     #
-    # @overload modify_image_attribute(params = {})
+    # @overload modify_image_attribute(**params)
     # @param [Hash] params ({})
-    def modify_image_attribute(params = {}, options = {})
+    def modify_image_attribute(params = {}, **options)
       req = build_request(:modify_image_attribute, params)
       req.send_request(options)
     end
@@ -32393,9 +32393,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceAttribute AWS API Documentation
     #
-    # @overload modify_instance_attribute(params = {})
+    # @overload modify_instance_attribute(**params)
     # @param [Hash] params ({})
-    def modify_instance_attribute(params = {}, options = {})
+    def modify_instance_attribute(params = {}, **options)
       req = build_request(:modify_instance_attribute, params)
       req.send_request(options)
     end
@@ -32441,9 +32441,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceCapacityReservationAttributes AWS API Documentation
     #
-    # @overload modify_instance_capacity_reservation_attributes(params = {})
+    # @overload modify_instance_capacity_reservation_attributes(**params)
     # @param [Hash] params ({})
-    def modify_instance_capacity_reservation_attributes(params = {}, options = {})
+    def modify_instance_capacity_reservation_attributes(params = {}, **options)
       req = build_request(:modify_instance_capacity_reservation_attributes, params)
       req.send_request(options)
     end
@@ -32506,9 +32506,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceCreditSpecification AWS API Documentation
     #
-    # @overload modify_instance_credit_specification(params = {})
+    # @overload modify_instance_credit_specification(**params)
     # @param [Hash] params ({})
-    def modify_instance_credit_specification(params = {}, options = {})
+    def modify_instance_credit_specification(params = {}, **options)
       req = build_request(:modify_instance_credit_specification, params)
       req.send_request(options)
     end
@@ -32554,9 +32554,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceEventStartTime AWS API Documentation
     #
-    # @overload modify_instance_event_start_time(params = {})
+    # @overload modify_instance_event_start_time(**params)
     # @param [Hash] params ({})
-    def modify_instance_event_start_time(params = {}, options = {})
+    def modify_instance_event_start_time(params = {}, **options)
       req = build_request(:modify_instance_event_start_time, params)
       req.send_request(options)
     end
@@ -32643,9 +32643,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMetadataOptions AWS API Documentation
     #
-    # @overload modify_instance_metadata_options(params = {})
+    # @overload modify_instance_metadata_options(**params)
     # @param [Hash] params ({})
-    def modify_instance_metadata_options(params = {}, options = {})
+    def modify_instance_metadata_options(params = {}, **options)
       req = build_request(:modify_instance_metadata_options, params)
       req.send_request(options)
     end
@@ -32728,9 +32728,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstancePlacement AWS API Documentation
     #
-    # @overload modify_instance_placement(params = {})
+    # @overload modify_instance_placement(**params)
     # @param [Hash] params ({})
-    def modify_instance_placement(params = {}, options = {})
+    def modify_instance_placement(params = {}, **options)
       req = build_request(:modify_instance_placement, params)
       req.send_request(options)
     end
@@ -32819,9 +32819,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyLaunchTemplate AWS API Documentation
     #
-    # @overload modify_launch_template(params = {})
+    # @overload modify_launch_template(**params)
     # @param [Hash] params ({})
-    def modify_launch_template(params = {}, options = {})
+    def modify_launch_template(params = {}, **options)
       req = build_request(:modify_launch_template, params)
       req.send_request(options)
     end
@@ -32897,9 +32897,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyManagedPrefixList AWS API Documentation
     #
-    # @overload modify_managed_prefix_list(params = {})
+    # @overload modify_managed_prefix_list(**params)
     # @param [Hash] params ({})
-    def modify_managed_prefix_list(params = {}, options = {})
+    def modify_managed_prefix_list(params = {}, **options)
       req = build_request(:modify_managed_prefix_list, params)
       req.send_request(options)
     end
@@ -33009,9 +33009,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyNetworkInterfaceAttribute AWS API Documentation
     #
-    # @overload modify_network_interface_attribute(params = {})
+    # @overload modify_network_interface_attribute(**params)
     # @param [Hash] params ({})
-    def modify_network_interface_attribute(params = {}, options = {})
+    def modify_network_interface_attribute(params = {}, **options)
       req = build_request(:modify_network_interface_attribute, params)
       req.send_request(options)
     end
@@ -33069,9 +33069,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyReservedInstances AWS API Documentation
     #
-    # @overload modify_reserved_instances(params = {})
+    # @overload modify_reserved_instances(**params)
     # @param [Hash] params ({})
-    def modify_reserved_instances(params = {}, options = {})
+    def modify_reserved_instances(params = {}, **options)
       req = build_request(:modify_reserved_instances, params)
       req.send_request(options)
     end
@@ -33185,9 +33185,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySnapshotAttribute AWS API Documentation
     #
-    # @overload modify_snapshot_attribute(params = {})
+    # @overload modify_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_snapshot_attribute(params = {}, options = {})
+    def modify_snapshot_attribute(params = {}, **options)
       req = build_request(:modify_snapshot_attribute, params)
       req.send_request(options)
     end
@@ -33316,9 +33316,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySpotFleetRequest AWS API Documentation
     #
-    # @overload modify_spot_fleet_request(params = {})
+    # @overload modify_spot_fleet_request(**params)
     # @param [Hash] params ({})
-    def modify_spot_fleet_request(params = {}, options = {})
+    def modify_spot_fleet_request(params = {}, **options)
       req = build_request(:modify_spot_fleet_request, params)
       req.send_request(options)
     end
@@ -33391,9 +33391,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifySubnetAttribute AWS API Documentation
     #
-    # @overload modify_subnet_attribute(params = {})
+    # @overload modify_subnet_attribute(**params)
     # @param [Hash] params ({})
-    def modify_subnet_attribute(params = {}, options = {})
+    def modify_subnet_attribute(params = {}, **options)
       req = build_request(:modify_subnet_attribute, params)
       req.send_request(options)
     end
@@ -33484,9 +33484,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyTrafficMirrorFilterNetworkServices AWS API Documentation
     #
-    # @overload modify_traffic_mirror_filter_network_services(params = {})
+    # @overload modify_traffic_mirror_filter_network_services(**params)
     # @param [Hash] params ({})
-    def modify_traffic_mirror_filter_network_services(params = {}, options = {})
+    def modify_traffic_mirror_filter_network_services(params = {}, **options)
       req = build_request(:modify_traffic_mirror_filter_network_services, params)
       req.send_request(options)
     end
@@ -33587,9 +33587,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyTrafficMirrorFilterRule AWS API Documentation
     #
-    # @overload modify_traffic_mirror_filter_rule(params = {})
+    # @overload modify_traffic_mirror_filter_rule(**params)
     # @param [Hash] params ({})
-    def modify_traffic_mirror_filter_rule(params = {}, options = {})
+    def modify_traffic_mirror_filter_rule(params = {}, **options)
       req = build_request(:modify_traffic_mirror_filter_rule, params)
       req.send_request(options)
     end
@@ -33675,9 +33675,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyTrafficMirrorSession AWS API Documentation
     #
-    # @overload modify_traffic_mirror_session(params = {})
+    # @overload modify_traffic_mirror_session(**params)
     # @param [Hash] params ({})
-    def modify_traffic_mirror_session(params = {}, options = {})
+    def modify_traffic_mirror_session(params = {}, **options)
       req = build_request(:modify_traffic_mirror_session, params)
       req.send_request(options)
     end
@@ -33750,9 +33750,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyTransitGateway AWS API Documentation
     #
-    # @overload modify_transit_gateway(params = {})
+    # @overload modify_transit_gateway(**params)
     # @param [Hash] params ({})
-    def modify_transit_gateway(params = {}, options = {})
+    def modify_transit_gateway(params = {}, **options)
       req = build_request(:modify_transit_gateway, params)
       req.send_request(options)
     end
@@ -33805,9 +33805,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyTransitGatewayPrefixListReference AWS API Documentation
     #
-    # @overload modify_transit_gateway_prefix_list_reference(params = {})
+    # @overload modify_transit_gateway_prefix_list_reference(**params)
     # @param [Hash] params ({})
-    def modify_transit_gateway_prefix_list_reference(params = {}, options = {})
+    def modify_transit_gateway_prefix_list_reference(params = {}, **options)
       req = build_request(:modify_transit_gateway_prefix_list_reference, params)
       req.send_request(options)
     end
@@ -33874,9 +33874,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyTransitGatewayVpcAttachment AWS API Documentation
     #
-    # @overload modify_transit_gateway_vpc_attachment(params = {})
+    # @overload modify_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def modify_transit_gateway_vpc_attachment(params = {}, options = {})
+    def modify_transit_gateway_vpc_attachment(params = {}, **options)
       req = build_request(:modify_transit_gateway_vpc_attachment, params)
       req.send_request(options)
     end
@@ -34019,9 +34019,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVolume AWS API Documentation
     #
-    # @overload modify_volume(params = {})
+    # @overload modify_volume(**params)
     # @param [Hash] params ({})
-    def modify_volume(params = {}, options = {})
+    def modify_volume(params = {}, **options)
       req = build_request(:modify_volume, params)
       req.send_request(options)
     end
@@ -34083,9 +34083,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVolumeAttribute AWS API Documentation
     #
-    # @overload modify_volume_attribute(params = {})
+    # @overload modify_volume_attribute(**params)
     # @param [Hash] params ({})
-    def modify_volume_attribute(params = {}, options = {})
+    def modify_volume_attribute(params = {}, **options)
       req = build_request(:modify_volume_attribute, params)
       req.send_request(options)
     end
@@ -34157,9 +34157,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcAttribute AWS API Documentation
     #
-    # @overload modify_vpc_attribute(params = {})
+    # @overload modify_vpc_attribute(**params)
     # @param [Hash] params ({})
-    def modify_vpc_attribute(params = {}, options = {})
+    def modify_vpc_attribute(params = {}, **options)
       req = build_request(:modify_vpc_attribute, params)
       req.send_request(options)
     end
@@ -34246,9 +34246,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpoint AWS API Documentation
     #
-    # @overload modify_vpc_endpoint(params = {})
+    # @overload modify_vpc_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint(params = {}, options = {})
+    def modify_vpc_endpoint(params = {}, **options)
       req = build_request(:modify_vpc_endpoint, params)
       req.send_request(options)
     end
@@ -34292,9 +34292,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointConnectionNotification AWS API Documentation
     #
-    # @overload modify_vpc_endpoint_connection_notification(params = {})
+    # @overload modify_vpc_endpoint_connection_notification(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint_connection_notification(params = {}, options = {})
+    def modify_vpc_endpoint_connection_notification(params = {}, **options)
       req = build_request(:modify_vpc_endpoint_connection_notification, params)
       req.send_request(options)
     end
@@ -34375,9 +34375,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointServiceConfiguration AWS API Documentation
     #
-    # @overload modify_vpc_endpoint_service_configuration(params = {})
+    # @overload modify_vpc_endpoint_service_configuration(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint_service_configuration(params = {}, options = {})
+    def modify_vpc_endpoint_service_configuration(params = {}, **options)
       req = build_request(:modify_vpc_endpoint_service_configuration, params)
       req.send_request(options)
     end
@@ -34432,9 +34432,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcEndpointServicePermissions AWS API Documentation
     #
-    # @overload modify_vpc_endpoint_service_permissions(params = {})
+    # @overload modify_vpc_endpoint_service_permissions(**params)
     # @param [Hash] params ({})
-    def modify_vpc_endpoint_service_permissions(params = {}, options = {})
+    def modify_vpc_endpoint_service_permissions(params = {}, **options)
       req = build_request(:modify_vpc_endpoint_service_permissions, params)
       req.send_request(options)
     end
@@ -34514,9 +34514,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcPeeringConnectionOptions AWS API Documentation
     #
-    # @overload modify_vpc_peering_connection_options(params = {})
+    # @overload modify_vpc_peering_connection_options(**params)
     # @param [Hash] params ({})
-    def modify_vpc_peering_connection_options(params = {}, options = {})
+    def modify_vpc_peering_connection_options(params = {}, **options)
       req = build_request(:modify_vpc_peering_connection_options, params)
       req.send_request(options)
     end
@@ -34567,9 +34567,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpcTenancy AWS API Documentation
     #
-    # @overload modify_vpc_tenancy(params = {})
+    # @overload modify_vpc_tenancy(**params)
     # @param [Hash] params ({})
-    def modify_vpc_tenancy(params = {}, options = {})
+    def modify_vpc_tenancy(params = {}, **options)
       req = build_request(:modify_vpc_tenancy, params)
       req.send_request(options)
     end
@@ -34715,9 +34715,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpnConnection AWS API Documentation
     #
-    # @overload modify_vpn_connection(params = {})
+    # @overload modify_vpn_connection(**params)
     # @param [Hash] params ({})
-    def modify_vpn_connection(params = {}, options = {})
+    def modify_vpn_connection(params = {}, **options)
       req = build_request(:modify_vpn_connection, params)
       req.send_request(options)
     end
@@ -34836,9 +34836,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpnConnectionOptions AWS API Documentation
     #
-    # @overload modify_vpn_connection_options(params = {})
+    # @overload modify_vpn_connection_options(**params)
     # @param [Hash] params ({})
-    def modify_vpn_connection_options(params = {}, options = {})
+    def modify_vpn_connection_options(params = {}, **options)
       req = build_request(:modify_vpn_connection_options, params)
       req.send_request(options)
     end
@@ -34930,9 +34930,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpnTunnelCertificate AWS API Documentation
     #
-    # @overload modify_vpn_tunnel_certificate(params = {})
+    # @overload modify_vpn_tunnel_certificate(**params)
     # @param [Hash] params ({})
-    def modify_vpn_tunnel_certificate(params = {}, options = {})
+    def modify_vpn_tunnel_certificate(params = {}, **options)
       req = build_request(:modify_vpn_tunnel_certificate, params)
       req.send_request(options)
     end
@@ -35084,9 +35084,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyVpnTunnelOptions AWS API Documentation
     #
-    # @overload modify_vpn_tunnel_options(params = {})
+    # @overload modify_vpn_tunnel_options(**params)
     # @param [Hash] params ({})
-    def modify_vpn_tunnel_options(params = {}, options = {})
+    def modify_vpn_tunnel_options(params = {}, **options)
       req = build_request(:modify_vpn_tunnel_options, params)
       req.send_request(options)
     end
@@ -35130,9 +35130,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/MonitorInstances AWS API Documentation
     #
-    # @overload monitor_instances(params = {})
+    # @overload monitor_instances(**params)
     # @param [Hash] params ({})
-    def monitor_instances(params = {}, options = {})
+    def monitor_instances(params = {}, **options)
       req = build_request(:monitor_instances, params)
       req.send_request(options)
     end
@@ -35188,9 +35188,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/MoveAddressToVpc AWS API Documentation
     #
-    # @overload move_address_to_vpc(params = {})
+    # @overload move_address_to_vpc(**params)
     # @param [Hash] params ({})
-    def move_address_to_vpc(params = {}, options = {})
+    def move_address_to_vpc(params = {}, **options)
       req = build_request(:move_address_to_vpc, params)
       req.send_request(options)
     end
@@ -35285,9 +35285,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionByoipCidr AWS API Documentation
     #
-    # @overload provision_byoip_cidr(params = {})
+    # @overload provision_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def provision_byoip_cidr(params = {}, options = {})
+    def provision_byoip_cidr(params = {}, **options)
       req = build_request(:provision_byoip_cidr, params)
       req.send_request(options)
     end
@@ -35378,9 +35378,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/PurchaseHostReservation AWS API Documentation
     #
-    # @overload purchase_host_reservation(params = {})
+    # @overload purchase_host_reservation(**params)
     # @param [Hash] params ({})
-    def purchase_host_reservation(params = {}, options = {})
+    def purchase_host_reservation(params = {}, **options)
       req = build_request(:purchase_host_reservation, params)
       req.send_request(options)
     end
@@ -35451,9 +35451,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/PurchaseReservedInstancesOffering AWS API Documentation
     #
-    # @overload purchase_reserved_instances_offering(params = {})
+    # @overload purchase_reserved_instances_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_instances_offering(params = {}, options = {})
+    def purchase_reserved_instances_offering(params = {}, **options)
       req = build_request(:purchase_reserved_instances_offering, params)
       req.send_request(options)
     end
@@ -35577,9 +35577,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/PurchaseScheduledInstances AWS API Documentation
     #
-    # @overload purchase_scheduled_instances(params = {})
+    # @overload purchase_scheduled_instances(**params)
     # @param [Hash] params ({})
-    def purchase_scheduled_instances(params = {}, options = {})
+    def purchase_scheduled_instances(params = {}, **options)
       req = build_request(:purchase_scheduled_instances, params)
       req.send_request(options)
     end
@@ -35635,9 +35635,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RebootInstances AWS API Documentation
     #
-    # @overload reboot_instances(params = {})
+    # @overload reboot_instances(**params)
     # @param [Hash] params ({})
-    def reboot_instances(params = {}, options = {})
+    def reboot_instances(params = {}, **options)
       req = build_request(:reboot_instances, params)
       req.send_request(options)
     end
@@ -35811,9 +35811,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RegisterImage AWS API Documentation
     #
-    # @overload register_image(params = {})
+    # @overload register_image(**params)
     # @param [Hash] params ({})
-    def register_image(params = {}, options = {})
+    def register_image(params = {}, **options)
       req = build_request(:register_image, params)
       req.send_request(options)
     end
@@ -35854,9 +35854,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RegisterInstanceEventNotificationAttributes AWS API Documentation
     #
-    # @overload register_instance_event_notification_attributes(params = {})
+    # @overload register_instance_event_notification_attributes(**params)
     # @param [Hash] params ({})
-    def register_instance_event_notification_attributes(params = {}, options = {})
+    def register_instance_event_notification_attributes(params = {}, **options)
       req = build_request(:register_instance_event_notification_attributes, params)
       req.send_request(options)
     end
@@ -35914,9 +35914,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RegisterTransitGatewayMulticastGroupMembers AWS API Documentation
     #
-    # @overload register_transit_gateway_multicast_group_members(params = {})
+    # @overload register_transit_gateway_multicast_group_members(**params)
     # @param [Hash] params ({})
-    def register_transit_gateway_multicast_group_members(params = {}, options = {})
+    def register_transit_gateway_multicast_group_members(params = {}, **options)
       req = build_request(:register_transit_gateway_multicast_group_members, params)
       req.send_request(options)
     end
@@ -35975,9 +35975,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RegisterTransitGatewayMulticastGroupSources AWS API Documentation
     #
-    # @overload register_transit_gateway_multicast_group_sources(params = {})
+    # @overload register_transit_gateway_multicast_group_sources(**params)
     # @param [Hash] params ({})
-    def register_transit_gateway_multicast_group_sources(params = {}, options = {})
+    def register_transit_gateway_multicast_group_sources(params = {}, **options)
       req = build_request(:register_transit_gateway_multicast_group_sources, params)
       req.send_request(options)
     end
@@ -36027,9 +36027,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RejectTransitGatewayMulticastDomainAssociations AWS API Documentation
     #
-    # @overload reject_transit_gateway_multicast_domain_associations(params = {})
+    # @overload reject_transit_gateway_multicast_domain_associations(**params)
     # @param [Hash] params ({})
-    def reject_transit_gateway_multicast_domain_associations(params = {}, options = {})
+    def reject_transit_gateway_multicast_domain_associations(params = {}, **options)
       req = build_request(:reject_transit_gateway_multicast_domain_associations, params)
       req.send_request(options)
     end
@@ -36075,9 +36075,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RejectTransitGatewayPeeringAttachment AWS API Documentation
     #
-    # @overload reject_transit_gateway_peering_attachment(params = {})
+    # @overload reject_transit_gateway_peering_attachment(**params)
     # @param [Hash] params ({})
-    def reject_transit_gateway_peering_attachment(params = {}, options = {})
+    def reject_transit_gateway_peering_attachment(params = {}, **options)
       req = build_request(:reject_transit_gateway_peering_attachment, params)
       req.send_request(options)
     end
@@ -36128,9 +36128,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RejectTransitGatewayVpcAttachment AWS API Documentation
     #
-    # @overload reject_transit_gateway_vpc_attachment(params = {})
+    # @overload reject_transit_gateway_vpc_attachment(**params)
     # @param [Hash] params ({})
-    def reject_transit_gateway_vpc_attachment(params = {}, options = {})
+    def reject_transit_gateway_vpc_attachment(params = {}, **options)
       req = build_request(:reject_transit_gateway_vpc_attachment, params)
       req.send_request(options)
     end
@@ -36171,9 +36171,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RejectVpcEndpointConnections AWS API Documentation
     #
-    # @overload reject_vpc_endpoint_connections(params = {})
+    # @overload reject_vpc_endpoint_connections(**params)
     # @param [Hash] params ({})
-    def reject_vpc_endpoint_connections(params = {}, options = {})
+    def reject_vpc_endpoint_connections(params = {}, **options)
       req = build_request(:reject_vpc_endpoint_connections, params)
       req.send_request(options)
     end
@@ -36211,9 +36211,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RejectVpcPeeringConnection AWS API Documentation
     #
-    # @overload reject_vpc_peering_connection(params = {})
+    # @overload reject_vpc_peering_connection(**params)
     # @param [Hash] params ({})
-    def reject_vpc_peering_connection(params = {}, options = {})
+    def reject_vpc_peering_connection(params = {}, **options)
       req = build_request(:reject_vpc_peering_connection, params)
       req.send_request(options)
     end
@@ -36301,9 +36301,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReleaseAddress AWS API Documentation
     #
-    # @overload release_address(params = {})
+    # @overload release_address(**params)
     # @param [Hash] params ({})
-    def release_address(params = {}, options = {})
+    def release_address(params = {}, **options)
       req = build_request(:release_address, params)
       req.send_request(options)
     end
@@ -36347,9 +36347,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReleaseHosts AWS API Documentation
     #
-    # @overload release_hosts(params = {})
+    # @overload release_hosts(**params)
     # @param [Hash] params ({})
-    def release_hosts(params = {}, options = {})
+    def release_hosts(params = {}, **options)
       req = build_request(:release_hosts, params)
       req.send_request(options)
     end
@@ -36392,9 +36392,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceIamInstanceProfileAssociation AWS API Documentation
     #
-    # @overload replace_iam_instance_profile_association(params = {})
+    # @overload replace_iam_instance_profile_association(**params)
     # @param [Hash] params ({})
-    def replace_iam_instance_profile_association(params = {}, options = {})
+    def replace_iam_instance_profile_association(params = {}, **options)
       req = build_request(:replace_iam_instance_profile_association, params)
       req.send_request(options)
     end
@@ -36456,9 +36456,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceNetworkAclAssociation AWS API Documentation
     #
-    # @overload replace_network_acl_association(params = {})
+    # @overload replace_network_acl_association(**params)
     # @param [Hash] params ({})
-    def replace_network_acl_association(params = {}, options = {})
+    def replace_network_acl_association(params = {}, **options)
       req = build_request(:replace_network_acl_association, params)
       req.send_request(options)
     end
@@ -36561,9 +36561,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceNetworkAclEntry AWS API Documentation
     #
-    # @overload replace_network_acl_entry(params = {})
+    # @overload replace_network_acl_entry(**params)
     # @param [Hash] params ({})
-    def replace_network_acl_entry(params = {}, options = {})
+    def replace_network_acl_entry(params = {}, **options)
       req = build_request(:replace_network_acl_entry, params)
       req.send_request(options)
     end
@@ -36674,9 +36674,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceRoute AWS API Documentation
     #
-    # @overload replace_route(params = {})
+    # @overload replace_route(**params)
     # @param [Hash] params ({})
-    def replace_route(params = {}, options = {})
+    def replace_route(params = {}, **options)
       req = build_request(:replace_route, params)
       req.send_request(options)
     end
@@ -36743,9 +36743,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceRouteTableAssociation AWS API Documentation
     #
-    # @overload replace_route_table_association(params = {})
+    # @overload replace_route_table_association(**params)
     # @param [Hash] params ({})
-    def replace_route_table_association(params = {}, options = {})
+    def replace_route_table_association(params = {}, **options)
       req = build_request(:replace_route_table_association, params)
       req.send_request(options)
     end
@@ -36799,9 +36799,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceTransitGatewayRoute AWS API Documentation
     #
-    # @overload replace_transit_gateway_route(params = {})
+    # @overload replace_transit_gateway_route(**params)
     # @param [Hash] params ({})
-    def replace_transit_gateway_route(params = {}, options = {})
+    def replace_transit_gateway_route(params = {}, **options)
       req = build_request(:replace_transit_gateway_route, params)
       req.send_request(options)
     end
@@ -36881,9 +36881,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReportInstanceStatus AWS API Documentation
     #
-    # @overload report_instance_status(params = {})
+    # @overload report_instance_status(**params)
     # @param [Hash] params ({})
-    def report_instance_status(params = {}, options = {})
+    def report_instance_status(params = {}, **options)
       req = build_request(:report_instance_status, params)
       req.send_request(options)
     end
@@ -37259,9 +37259,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RequestSpotFleet AWS API Documentation
     #
-    # @overload request_spot_fleet(params = {})
+    # @overload request_spot_fleet(**params)
     # @param [Hash] params ({})
-    def request_spot_fleet(params = {}, options = {})
+    def request_spot_fleet(params = {}, **options)
       req = build_request(:request_spot_fleet, params)
       req.send_request(options)
     end
@@ -37623,9 +37623,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RequestSpotInstances AWS API Documentation
     #
-    # @overload request_spot_instances(params = {})
+    # @overload request_spot_instances(**params)
     # @param [Hash] params ({})
-    def request_spot_instances(params = {}, options = {})
+    def request_spot_instances(params = {}, **options)
       req = build_request(:request_spot_instances, params)
       req.send_request(options)
     end
@@ -37664,9 +37664,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ResetEbsDefaultKmsKeyId AWS API Documentation
     #
-    # @overload reset_ebs_default_kms_key_id(params = {})
+    # @overload reset_ebs_default_kms_key_id(**params)
     # @param [Hash] params ({})
-    def reset_ebs_default_kms_key_id(params = {}, options = {})
+    def reset_ebs_default_kms_key_id(params = {}, **options)
       req = build_request(:reset_ebs_default_kms_key_id, params)
       req.send_request(options)
     end
@@ -37705,9 +37705,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ResetFpgaImageAttribute AWS API Documentation
     #
-    # @overload reset_fpga_image_attribute(params = {})
+    # @overload reset_fpga_image_attribute(**params)
     # @param [Hash] params ({})
-    def reset_fpga_image_attribute(params = {}, options = {})
+    def reset_fpga_image_attribute(params = {}, **options)
       req = build_request(:reset_fpga_image_attribute, params)
       req.send_request(options)
     end
@@ -37757,9 +37757,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ResetImageAttribute AWS API Documentation
     #
-    # @overload reset_image_attribute(params = {})
+    # @overload reset_image_attribute(**params)
     # @param [Hash] params ({})
-    def reset_image_attribute(params = {}, options = {})
+    def reset_image_attribute(params = {}, **options)
       req = build_request(:reset_image_attribute, params)
       req.send_request(options)
     end
@@ -37821,9 +37821,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ResetInstanceAttribute AWS API Documentation
     #
-    # @overload reset_instance_attribute(params = {})
+    # @overload reset_instance_attribute(**params)
     # @param [Hash] params ({})
-    def reset_instance_attribute(params = {}, options = {})
+    def reset_instance_attribute(params = {}, **options)
       req = build_request(:reset_instance_attribute, params)
       req.send_request(options)
     end
@@ -37855,9 +37855,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ResetNetworkInterfaceAttribute AWS API Documentation
     #
-    # @overload reset_network_interface_attribute(params = {})
+    # @overload reset_network_interface_attribute(**params)
     # @param [Hash] params ({})
-    def reset_network_interface_attribute(params = {}, options = {})
+    def reset_network_interface_attribute(params = {}, **options)
       req = build_request(:reset_network_interface_attribute, params)
       req.send_request(options)
     end
@@ -37912,9 +37912,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ResetSnapshotAttribute AWS API Documentation
     #
-    # @overload reset_snapshot_attribute(params = {})
+    # @overload reset_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def reset_snapshot_attribute(params = {}, options = {})
+    def reset_snapshot_attribute(params = {}, **options)
       req = build_request(:reset_snapshot_attribute, params)
       req.send_request(options)
     end
@@ -37968,9 +37968,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreAddressToClassic AWS API Documentation
     #
-    # @overload restore_address_to_classic(params = {})
+    # @overload restore_address_to_classic(**params)
     # @param [Hash] params ({})
-    def restore_address_to_classic(params = {}, options = {})
+    def restore_address_to_classic(params = {}, **options)
       req = build_request(:restore_address_to_classic, params)
       req.send_request(options)
     end
@@ -38023,9 +38023,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreManagedPrefixListVersion AWS API Documentation
     #
-    # @overload restore_managed_prefix_list_version(params = {})
+    # @overload restore_managed_prefix_list_version(**params)
     # @param [Hash] params ({})
-    def restore_managed_prefix_list_version(params = {}, options = {})
+    def restore_managed_prefix_list_version(params = {}, **options)
       req = build_request(:restore_managed_prefix_list_version, params)
       req.send_request(options)
     end
@@ -38073,9 +38073,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RevokeClientVpnIngress AWS API Documentation
     #
-    # @overload revoke_client_vpn_ingress(params = {})
+    # @overload revoke_client_vpn_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_client_vpn_ingress(params = {}, options = {})
+    def revoke_client_vpn_ingress(params = {}, **options)
       req = build_request(:revoke_client_vpn_ingress, params)
       req.send_request(options)
     end
@@ -38219,9 +38219,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RevokeSecurityGroupEgress AWS API Documentation
     #
-    # @overload revoke_security_group_egress(params = {})
+    # @overload revoke_security_group_egress(**params)
     # @param [Hash] params ({})
-    def revoke_security_group_egress(params = {}, options = {})
+    def revoke_security_group_egress(params = {}, **options)
       req = build_request(:revoke_security_group_egress, params)
       req.send_request(options)
     end
@@ -38389,9 +38389,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RevokeSecurityGroupIngress AWS API Documentation
     #
-    # @overload revoke_security_group_ingress(params = {})
+    # @overload revoke_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_security_group_ingress(params = {}, options = {})
+    def revoke_security_group_ingress(params = {}, **options)
       req = build_request(:revoke_security_group_ingress, params)
       req.send_request(options)
     end
@@ -39136,9 +39136,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RunInstances AWS API Documentation
     #
-    # @overload run_instances(params = {})
+    # @overload run_instances(**params)
     # @param [Hash] params ({})
-    def run_instances(params = {}, options = {})
+    def run_instances(params = {}, **options)
       req = build_request(:run_instances, params)
       req.send_request(options)
     end
@@ -39336,9 +39336,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RunScheduledInstances AWS API Documentation
     #
-    # @overload run_scheduled_instances(params = {})
+    # @overload run_scheduled_instances(**params)
     # @param [Hash] params ({})
-    def run_scheduled_instances(params = {}, options = {})
+    def run_scheduled_instances(params = {}, **options)
       req = build_request(:run_scheduled_instances, params)
       req.send_request(options)
     end
@@ -39401,9 +39401,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/SearchLocalGatewayRoutes AWS API Documentation
     #
-    # @overload search_local_gateway_routes(params = {})
+    # @overload search_local_gateway_routes(**params)
     # @param [Hash] params ({})
-    def search_local_gateway_routes(params = {}, options = {})
+    def search_local_gateway_routes(params = {}, **options)
       req = build_request(:search_local_gateway_routes, params)
       req.send_request(options)
     end
@@ -39499,9 +39499,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/SearchTransitGatewayMulticastGroups AWS API Documentation
     #
-    # @overload search_transit_gateway_multicast_groups(params = {})
+    # @overload search_transit_gateway_multicast_groups(**params)
     # @param [Hash] params ({})
-    def search_transit_gateway_multicast_groups(params = {}, options = {})
+    def search_transit_gateway_multicast_groups(params = {}, **options)
       req = build_request(:search_transit_gateway_multicast_groups, params)
       req.send_request(options)
     end
@@ -39588,9 +39588,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/SearchTransitGatewayRoutes AWS API Documentation
     #
-    # @overload search_transit_gateway_routes(params = {})
+    # @overload search_transit_gateway_routes(**params)
     # @param [Hash] params ({})
-    def search_transit_gateway_routes(params = {}, options = {})
+    def search_transit_gateway_routes(params = {}, **options)
       req = build_request(:search_transit_gateway_routes, params)
       req.send_request(options)
     end
@@ -39640,9 +39640,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/SendDiagnosticInterrupt AWS API Documentation
     #
-    # @overload send_diagnostic_interrupt(params = {})
+    # @overload send_diagnostic_interrupt(**params)
     # @param [Hash] params ({})
-    def send_diagnostic_interrupt(params = {}, options = {})
+    def send_diagnostic_interrupt(params = {}, **options)
       req = build_request(:send_diagnostic_interrupt, params)
       req.send_request(options)
     end
@@ -39740,9 +39740,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartInstances AWS API Documentation
     #
-    # @overload start_instances(params = {})
+    # @overload start_instances(**params)
     # @param [Hash] params ({})
-    def start_instances(params = {}, options = {})
+    def start_instances(params = {}, **options)
       req = build_request(:start_instances, params)
       req.send_request(options)
     end
@@ -40043,9 +40043,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartNetworkInsightsAnalysis AWS API Documentation
     #
-    # @overload start_network_insights_analysis(params = {})
+    # @overload start_network_insights_analysis(**params)
     # @param [Hash] params ({})
-    def start_network_insights_analysis(params = {}, options = {})
+    def start_network_insights_analysis(params = {}, **options)
       req = build_request(:start_network_insights_analysis, params)
       req.send_request(options)
     end
@@ -40090,9 +40090,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StartVpcEndpointServicePrivateDnsVerification AWS API Documentation
     #
-    # @overload start_vpc_endpoint_service_private_dns_verification(params = {})
+    # @overload start_vpc_endpoint_service_private_dns_verification(**params)
     # @param [Hash] params ({})
-    def start_vpc_endpoint_service_private_dns_verification(params = {}, options = {})
+    def start_vpc_endpoint_service_private_dns_verification(params = {}, **options)
       req = build_request(:start_vpc_endpoint_service_private_dns_verification, params)
       req.send_request(options)
     end
@@ -40233,9 +40233,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/StopInstances AWS API Documentation
     #
-    # @overload stop_instances(params = {})
+    # @overload stop_instances(**params)
     # @param [Hash] params ({})
-    def stop_instances(params = {}, options = {})
+    def stop_instances(params = {}, **options)
       req = build_request(:stop_instances, params)
       req.send_request(options)
     end
@@ -40289,9 +40289,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/TerminateClientVpnConnections AWS API Documentation
     #
-    # @overload terminate_client_vpn_connections(params = {})
+    # @overload terminate_client_vpn_connections(**params)
     # @param [Hash] params ({})
-    def terminate_client_vpn_connections(params = {}, options = {})
+    def terminate_client_vpn_connections(params = {}, **options)
       req = build_request(:terminate_client_vpn_connections, params)
       req.send_request(options)
     end
@@ -40392,9 +40392,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/TerminateInstances AWS API Documentation
     #
-    # @overload terminate_instances(params = {})
+    # @overload terminate_instances(**params)
     # @param [Hash] params ({})
-    def terminate_instances(params = {}, options = {})
+    def terminate_instances(params = {}, **options)
       req = build_request(:terminate_instances, params)
       req.send_request(options)
     end
@@ -40427,9 +40427,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnassignIpv6Addresses AWS API Documentation
     #
-    # @overload unassign_ipv_6_addresses(params = {})
+    # @overload unassign_ipv_6_addresses(**params)
     # @param [Hash] params ({})
-    def unassign_ipv_6_addresses(params = {}, options = {})
+    def unassign_ipv_6_addresses(params = {}, **options)
       req = build_request(:unassign_ipv_6_addresses, params)
       req.send_request(options)
     end
@@ -40468,9 +40468,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnassignPrivateIpAddresses AWS API Documentation
     #
-    # @overload unassign_private_ip_addresses(params = {})
+    # @overload unassign_private_ip_addresses(**params)
     # @param [Hash] params ({})
-    def unassign_private_ip_addresses(params = {}, options = {})
+    def unassign_private_ip_addresses(params = {}, **options)
       req = build_request(:unassign_private_ip_addresses, params)
       req.send_request(options)
     end
@@ -40511,9 +40511,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnmonitorInstances AWS API Documentation
     #
-    # @overload unmonitor_instances(params = {})
+    # @overload unmonitor_instances(**params)
     # @param [Hash] params ({})
-    def unmonitor_instances(params = {}, options = {})
+    def unmonitor_instances(params = {}, **options)
       req = build_request(:unmonitor_instances, params)
       req.send_request(options)
     end
@@ -40625,9 +40625,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UpdateSecurityGroupRuleDescriptionsEgress AWS API Documentation
     #
-    # @overload update_security_group_rule_descriptions_egress(params = {})
+    # @overload update_security_group_rule_descriptions_egress(**params)
     # @param [Hash] params ({})
-    def update_security_group_rule_descriptions_egress(params = {}, options = {})
+    def update_security_group_rule_descriptions_egress(params = {}, **options)
       req = build_request(:update_security_group_rule_descriptions_egress, params)
       req.send_request(options)
     end
@@ -40739,9 +40739,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UpdateSecurityGroupRuleDescriptionsIngress AWS API Documentation
     #
-    # @overload update_security_group_rule_descriptions_ingress(params = {})
+    # @overload update_security_group_rule_descriptions_ingress(**params)
     # @param [Hash] params ({})
-    def update_security_group_rule_descriptions_ingress(params = {}, options = {})
+    def update_security_group_rule_descriptions_ingress(params = {}, **options)
       req = build_request(:update_security_group_rule_descriptions_ingress, params)
       req.send_request(options)
     end
@@ -40784,9 +40784,9 @@ module Aws::EC2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/WithdrawByoipCidr AWS API Documentation
     #
-    # @overload withdraw_byoip_cidr(params = {})
+    # @overload withdraw_byoip_cidr(**params)
     # @param [Hash] params ({})
-    def withdraw_byoip_cidr(params = {}, options = {})
+    def withdraw_byoip_cidr(params = {}, **options)
       req = build_request(:withdraw_byoip_cidr, params)
       req.send_request(options)
     end
@@ -40795,7 +40795,7 @@ module Aws::EC2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -40803,8 +40803,8 @@ module Aws::EC2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ec2'
-      context[:gem_version] = '1.217.0'
+      context[:gem_name] = "aws-sdk-ec2"
+      context[:gem_version] = "1.217.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -40927,7 +40927,7 @@ module Aws::EC2
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -40943,7 +40943,7 @@ module Aws::EC2
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

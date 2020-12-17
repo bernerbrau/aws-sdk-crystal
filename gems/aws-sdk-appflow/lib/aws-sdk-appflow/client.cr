@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:appflow)
 
@@ -280,7 +280,7 @@ module Aws::Appflow
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -515,9 +515,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/CreateConnectorProfile AWS API Documentation
     #
-    # @overload create_connector_profile(params = {})
+    # @overload create_connector_profile(**params)
     # @param [Hash] params ({})
-    def create_connector_profile(params = {}, options = {})
+    def create_connector_profile(params = {}, **options)
       req = build_request(:create_connector_profile, params)
       req.send_request(options)
     end
@@ -749,9 +749,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/CreateFlow AWS API Documentation
     #
-    # @overload create_flow(params = {})
+    # @overload create_flow(**params)
     # @param [Hash] params ({})
-    def create_flow(params = {}, options = {})
+    def create_flow(params = {}, **options)
       req = build_request(:create_flow, params)
       req.send_request(options)
     end
@@ -777,9 +777,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DeleteConnectorProfile AWS API Documentation
     #
-    # @overload delete_connector_profile(params = {})
+    # @overload delete_connector_profile(**params)
     # @param [Hash] params ({})
-    def delete_connector_profile(params = {}, options = {})
+    def delete_connector_profile(params = {}, **options)
       req = build_request(:delete_connector_profile, params)
       req.send_request(options)
     end
@@ -807,9 +807,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DeleteFlow AWS API Documentation
     #
-    # @overload delete_flow(params = {})
+    # @overload delete_flow(**params)
     # @param [Hash] params ({})
-    def delete_flow(params = {}, options = {})
+    def delete_flow(params = {}, **options)
       req = build_request(:delete_flow, params)
       req.send_request(options)
     end
@@ -862,9 +862,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnectorEntity AWS API Documentation
     #
-    # @overload describe_connector_entity(params = {})
+    # @overload describe_connector_entity(**params)
     # @param [Hash] params ({})
-    def describe_connector_entity(params = {}, options = {})
+    def describe_connector_entity(params = {}, **options)
       req = build_request(:describe_connector_entity, params)
       req.send_request(options)
     end
@@ -943,9 +943,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnectorProfiles AWS API Documentation
     #
-    # @overload describe_connector_profiles(params = {})
+    # @overload describe_connector_profiles(**params)
     # @param [Hash] params ({})
-    def describe_connector_profiles(params = {}, options = {})
+    def describe_connector_profiles(params = {}, **options)
       req = build_request(:describe_connector_profiles, params)
       req.send_request(options)
     end
@@ -1005,9 +1005,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnectors AWS API Documentation
     #
-    # @overload describe_connectors(params = {})
+    # @overload describe_connectors(**params)
     # @param [Hash] params ({})
-    def describe_connectors(params = {}, options = {})
+    def describe_connectors(params = {}, **options)
       req = build_request(:describe_connectors, params)
       req.send_request(options)
     end
@@ -1148,9 +1148,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeFlow AWS API Documentation
     #
-    # @overload describe_flow(params = {})
+    # @overload describe_flow(**params)
     # @param [Hash] params ({})
-    def describe_flow(params = {}, options = {})
+    def describe_flow(params = {}, **options)
       req = build_request(:describe_flow, params)
       req.send_request(options)
     end
@@ -1200,9 +1200,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeFlowExecutionRecords AWS API Documentation
     #
-    # @overload describe_flow_execution_records(params = {})
+    # @overload describe_flow_execution_records(**params)
     # @param [Hash] params ({})
-    def describe_flow_execution_records(params = {}, options = {})
+    def describe_flow_execution_records(params = {}, **options)
       req = build_request(:describe_flow_execution_records, params)
       req.send_request(options)
     end
@@ -1250,9 +1250,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListConnectorEntities AWS API Documentation
     #
-    # @overload list_connector_entities(params = {})
+    # @overload list_connector_entities(**params)
     # @param [Hash] params ({})
-    def list_connector_entities(params = {}, options = {})
+    def list_connector_entities(params = {}, **options)
       req = build_request(:list_connector_entities, params)
       req.send_request(options)
     end
@@ -1303,9 +1303,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListFlows AWS API Documentation
     #
-    # @overload list_flows(params = {})
+    # @overload list_flows(**params)
     # @param [Hash] params ({})
-    def list_flows(params = {}, options = {})
+    def list_flows(params = {}, **options)
       req = build_request(:list_flows, params)
       req.send_request(options)
     end
@@ -1332,9 +1332,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1367,9 +1367,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/StartFlow AWS API Documentation
     #
-    # @overload start_flow(params = {})
+    # @overload start_flow(**params)
     # @param [Hash] params ({})
-    def start_flow(params = {}, options = {})
+    def start_flow(params = {}, **options)
       req = build_request(:start_flow, params)
       req.send_request(options)
     end
@@ -1400,9 +1400,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/StopFlow AWS API Documentation
     #
-    # @overload stop_flow(params = {})
+    # @overload stop_flow(**params)
     # @param [Hash] params ({})
-    def stop_flow(params = {}, options = {})
+    def stop_flow(params = {}, **options)
       req = build_request(:stop_flow, params)
       req.send_request(options)
     end
@@ -1428,9 +1428,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1455,9 +1455,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1633,9 +1633,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UpdateConnectorProfile AWS API Documentation
     #
-    # @overload update_connector_profile(params = {})
+    # @overload update_connector_profile(**params)
     # @param [Hash] params ({})
-    def update_connector_profile(params = {}, options = {})
+    def update_connector_profile(params = {}, **options)
       req = build_request(:update_connector_profile, params)
       req.send_request(options)
     end
@@ -1847,9 +1847,9 @@ module Aws::Appflow
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UpdateFlow AWS API Documentation
     #
-    # @overload update_flow(params = {})
+    # @overload update_flow(**params)
     # @param [Hash] params ({})
-    def update_flow(params = {}, options = {})
+    def update_flow(params = {}, **options)
       req = build_request(:update_flow, params)
       req.send_request(options)
     end
@@ -1858,7 +1858,7 @@ module Aws::Appflow
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1866,15 +1866,15 @@ module Aws::Appflow
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-appflow'
-      context[:gem_version] = '1.4.0'
+      context[:gem_name] = "aws-sdk-appflow"
+      context[:gem_version] = "1.4.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

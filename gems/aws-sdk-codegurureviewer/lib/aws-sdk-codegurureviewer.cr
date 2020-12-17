@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codegurureviewer/types'
-require_relative 'aws-sdk-codegurureviewer/client_api'
-require_relative 'aws-sdk-codegurureviewer/client'
-require_relative 'aws-sdk-codegurureviewer/errors'
-require_relative 'aws-sdk-codegurureviewer/resource'
-require_relative 'aws-sdk-codegurureviewer/customizations'
+require_relative "aws-sdk-codegurureviewer/types"
+require_relative "aws-sdk-codegurureviewer/client_api"
+require_relative "aws-sdk-codegurureviewer/client"
+require_relative "aws-sdk-codegurureviewer/errors"
+require_relative "aws-sdk-codegurureviewer/resource"
+require_relative "aws-sdk-codegurureviewer/customizations"
 
 # This module provides support for Amazon CodeGuru Reviewer. This module is available in the
 # `aws-sdk-codegurureviewer` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-codegurureviewer/customizations'
 # @!group service
 module Aws::CodeGuruReviewer
 
-  GEM_VERSION = '1.14.0'
+  GEM_VERSION = "1.14.0"
 
 end

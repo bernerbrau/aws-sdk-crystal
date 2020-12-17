@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mediastoredata/types'
-require_relative 'aws-sdk-mediastoredata/client_api'
-require_relative 'aws-sdk-mediastoredata/client'
-require_relative 'aws-sdk-mediastoredata/errors'
-require_relative 'aws-sdk-mediastoredata/resource'
-require_relative 'aws-sdk-mediastoredata/customizations'
+require_relative "aws-sdk-mediastoredata/types"
+require_relative "aws-sdk-mediastoredata/client_api"
+require_relative "aws-sdk-mediastoredata/client"
+require_relative "aws-sdk-mediastoredata/errors"
+require_relative "aws-sdk-mediastoredata/resource"
+require_relative "aws-sdk-mediastoredata/customizations"
 
 # This module provides support for AWS Elemental MediaStore Data Plane. This module is available in the
 # `aws-sdk-mediastoredata` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mediastoredata/customizations'
 # @!group service
 module Aws::MediaStoreData
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

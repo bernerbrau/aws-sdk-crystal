@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-pricing/types'
-require_relative 'aws-sdk-pricing/client_api'
-require_relative 'aws-sdk-pricing/client'
-require_relative 'aws-sdk-pricing/errors'
-require_relative 'aws-sdk-pricing/resource'
-require_relative 'aws-sdk-pricing/customizations'
+require_relative "aws-sdk-pricing/types"
+require_relative "aws-sdk-pricing/client_api"
+require_relative "aws-sdk-pricing/client"
+require_relative "aws-sdk-pricing/errors"
+require_relative "aws-sdk-pricing/resource"
+require_relative "aws-sdk-pricing/customizations"
 
 # This module provides support for AWS Price List Service. This module is available in the
 # `aws-sdk-pricing` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-pricing/customizations'
 # @!group service
 module Aws::Pricing
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

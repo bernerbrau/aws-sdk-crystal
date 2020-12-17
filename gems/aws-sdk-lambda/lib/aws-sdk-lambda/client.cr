@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:lambda)
 
@@ -280,7 +280,7 @@ module Aws::Lambda
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -408,9 +408,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/AddLayerVersionPermission AWS API Documentation
     #
-    # @overload add_layer_version_permission(params = {})
+    # @overload add_layer_version_permission(**params)
     # @param [Hash] params ({})
-    def add_layer_version_permission(params = {}, options = {})
+    def add_layer_version_permission(params = {}, **options)
       req = build_request(:add_layer_version_permission, params)
       req.send_request(options)
     end
@@ -551,9 +551,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/AddPermission AWS API Documentation
     #
-    # @overload add_permission(params = {})
+    # @overload add_permission(**params)
     # @param [Hash] params ({})
-    def add_permission(params = {}, options = {})
+    def add_permission(params = {}, **options)
       req = build_request(:add_permission, params)
       req.send_request(options)
     end
@@ -657,9 +657,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateAlias AWS API Documentation
     #
-    # @overload create_alias(params = {})
+    # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, options = {})
+    def create_alias(params = {}, **options)
       req = build_request(:create_alias, params)
       req.send_request(options)
     end
@@ -711,9 +711,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateCodeSigningConfig AWS API Documentation
     #
-    # @overload create_code_signing_config(params = {})
+    # @overload create_code_signing_config(**params)
     # @param [Hash] params ({})
-    def create_code_signing_config(params = {}, options = {})
+    def create_code_signing_config(params = {}, **options)
       req = build_request(:create_code_signing_config, params)
       req.send_request(options)
     end
@@ -990,9 +990,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateEventSourceMapping AWS API Documentation
     #
-    # @overload create_event_source_mapping(params = {})
+    # @overload create_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def create_event_source_mapping(params = {}, options = {})
+    def create_event_source_mapping(params = {}, **options)
       req = build_request(:create_event_source_mapping, params)
       req.send_request(options)
     end
@@ -1375,9 +1375,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateFunction AWS API Documentation
     #
-    # @overload create_function(params = {})
+    # @overload create_function(**params)
     # @param [Hash] params ({})
-    def create_function(params = {}, options = {})
+    def create_function(params = {}, **options)
       req = build_request(:create_function, params)
       req.send_request(options)
     end
@@ -1427,9 +1427,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteAlias AWS API Documentation
     #
-    # @overload delete_alias(params = {})
+    # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, options = {})
+    def delete_alias(params = {}, **options)
       req = build_request(:delete_alias, params)
       req.send_request(options)
     end
@@ -1450,9 +1450,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteCodeSigningConfig AWS API Documentation
     #
-    # @overload delete_code_signing_config(params = {})
+    # @overload delete_code_signing_config(**params)
     # @param [Hash] params ({})
-    def delete_code_signing_config(params = {}, options = {})
+    def delete_code_signing_config(params = {}, **options)
       req = build_request(:delete_code_signing_config, params)
       req.send_request(options)
     end
@@ -1556,9 +1556,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteEventSourceMapping AWS API Documentation
     #
-    # @overload delete_event_source_mapping(params = {})
+    # @overload delete_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def delete_event_source_mapping(params = {}, options = {})
+    def delete_event_source_mapping(params = {}, **options)
       req = build_request(:delete_event_source_mapping, params)
       req.send_request(options)
     end
@@ -1614,9 +1614,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunction AWS API Documentation
     #
-    # @overload delete_function(params = {})
+    # @overload delete_function(**params)
     # @param [Hash] params ({})
-    def delete_function(params = {}, options = {})
+    def delete_function(params = {}, **options)
       req = build_request(:delete_function, params)
       req.send_request(options)
     end
@@ -1648,9 +1648,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionCodeSigningConfig AWS API Documentation
     #
-    # @overload delete_function_code_signing_config(params = {})
+    # @overload delete_function_code_signing_config(**params)
     # @param [Hash] params ({})
-    def delete_function_code_signing_config(params = {}, options = {})
+    def delete_function_code_signing_config(params = {}, **options)
       req = build_request(:delete_function_code_signing_config, params)
       req.send_request(options)
     end
@@ -1691,9 +1691,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionConcurrency AWS API Documentation
     #
-    # @overload delete_function_concurrency(params = {})
+    # @overload delete_function_concurrency(**params)
     # @param [Hash] params ({})
-    def delete_function_concurrency(params = {}, options = {})
+    def delete_function_concurrency(params = {}, **options)
       req = build_request(:delete_function_concurrency, params)
       req.send_request(options)
     end
@@ -1746,9 +1746,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionEventInvokeConfig AWS API Documentation
     #
-    # @overload delete_function_event_invoke_config(params = {})
+    # @overload delete_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def delete_function_event_invoke_config(params = {}, options = {})
+    def delete_function_event_invoke_config(params = {}, **options)
       req = build_request(:delete_function_event_invoke_config, params)
       req.send_request(options)
     end
@@ -1788,9 +1788,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteLayerVersion AWS API Documentation
     #
-    # @overload delete_layer_version(params = {})
+    # @overload delete_layer_version(**params)
     # @param [Hash] params ({})
-    def delete_layer_version(params = {}, options = {})
+    def delete_layer_version(params = {}, **options)
       req = build_request(:delete_layer_version, params)
       req.send_request(options)
     end
@@ -1837,9 +1837,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteProvisionedConcurrencyConfig AWS API Documentation
     #
-    # @overload delete_provisioned_concurrency_config(params = {})
+    # @overload delete_provisioned_concurrency_config(**params)
     # @param [Hash] params ({})
-    def delete_provisioned_concurrency_config(params = {}, options = {})
+    def delete_provisioned_concurrency_config(params = {}, **options)
       req = build_request(:delete_provisioned_concurrency_config, params)
       req.send_request(options)
     end
@@ -1891,9 +1891,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetAccountSettings AWS API Documentation
     #
-    # @overload get_account_settings(params = {})
+    # @overload get_account_settings(**params)
     # @param [Hash] params ({})
-    def get_account_settings(params = {}, options = {})
+    def get_account_settings(params = {}, **options)
       req = build_request(:get_account_settings, params)
       req.send_request(options)
     end
@@ -1969,9 +1969,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetAlias AWS API Documentation
     #
-    # @overload get_alias(params = {})
+    # @overload get_alias(**params)
     # @param [Hash] params ({})
-    def get_alias(params = {}, options = {})
+    def get_alias(params = {}, **options)
       req = build_request(:get_alias, params)
       req.send_request(options)
     end
@@ -2003,9 +2003,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetCodeSigningConfig AWS API Documentation
     #
-    # @overload get_code_signing_config(params = {})
+    # @overload get_code_signing_config(**params)
     # @param [Hash] params ({})
-    def get_code_signing_config(params = {}, options = {})
+    def get_code_signing_config(params = {}, **options)
       req = build_request(:get_code_signing_config, params)
       req.send_request(options)
     end
@@ -2109,9 +2109,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetEventSourceMapping AWS API Documentation
     #
-    # @overload get_event_source_mapping(params = {})
+    # @overload get_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def get_event_source_mapping(params = {}, options = {})
+    def get_event_source_mapping(params = {}, **options)
       req = build_request(:get_event_source_mapping, params)
       req.send_request(options)
     end
@@ -2271,9 +2271,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunction AWS API Documentation
     #
-    # @overload get_function(params = {})
+    # @overload get_function(**params)
     # @param [Hash] params ({})
-    def get_function(params = {}, options = {})
+    def get_function(params = {}, **options)
       req = build_request(:get_function, params)
       req.send_request(options)
     end
@@ -2313,9 +2313,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionCodeSigningConfig AWS API Documentation
     #
-    # @overload get_function_code_signing_config(params = {})
+    # @overload get_function_code_signing_config(**params)
     # @param [Hash] params ({})
-    def get_function_code_signing_config(params = {}, options = {})
+    def get_function_code_signing_config(params = {}, **options)
       req = build_request(:get_function_code_signing_config, params)
       req.send_request(options)
     end
@@ -2369,9 +2369,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionConcurrency AWS API Documentation
     #
-    # @overload get_function_concurrency(params = {})
+    # @overload get_function_concurrency(**params)
     # @param [Hash] params ({})
-    def get_function_concurrency(params = {}, options = {})
+    def get_function_concurrency(params = {}, **options)
       req = build_request(:get_function_concurrency, params)
       req.send_request(options)
     end
@@ -2545,9 +2545,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionConfiguration AWS API Documentation
     #
-    # @overload get_function_configuration(params = {})
+    # @overload get_function_configuration(**params)
     # @param [Hash] params ({})
-    def get_function_configuration(params = {}, options = {})
+    def get_function_configuration(params = {}, **options)
       req = build_request(:get_function_configuration, params)
       req.send_request(options)
     end
@@ -2630,9 +2630,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionEventInvokeConfig AWS API Documentation
     #
-    # @overload get_function_event_invoke_config(params = {})
+    # @overload get_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def get_function_event_invoke_config(params = {}, options = {})
+    def get_function_event_invoke_config(params = {}, **options)
       req = build_request(:get_function_event_invoke_config, params)
       req.send_request(options)
     end
@@ -2715,9 +2715,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetLayerVersion AWS API Documentation
     #
-    # @overload get_layer_version(params = {})
+    # @overload get_layer_version(**params)
     # @param [Hash] params ({})
-    def get_layer_version(params = {}, options = {})
+    def get_layer_version(params = {}, **options)
       req = build_request(:get_layer_version, params)
       req.send_request(options)
     end
@@ -2793,9 +2793,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetLayerVersionByArn AWS API Documentation
     #
-    # @overload get_layer_version_by_arn(params = {})
+    # @overload get_layer_version_by_arn(**params)
     # @param [Hash] params ({})
-    def get_layer_version_by_arn(params = {}, options = {})
+    def get_layer_version_by_arn(params = {}, **options)
       req = build_request(:get_layer_version_by_arn, params)
       req.send_request(options)
     end
@@ -2832,9 +2832,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetLayerVersionPolicy AWS API Documentation
     #
-    # @overload get_layer_version_policy(params = {})
+    # @overload get_layer_version_policy(**params)
     # @param [Hash] params ({})
-    def get_layer_version_policy(params = {}, options = {})
+    def get_layer_version_policy(params = {}, **options)
       req = build_request(:get_layer_version_policy, params)
       req.send_request(options)
     end
@@ -2901,9 +2901,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetPolicy AWS API Documentation
     #
-    # @overload get_policy(params = {})
+    # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, options = {})
+    def get_policy(params = {}, **options)
       req = build_request(:get_policy, params)
       req.send_request(options)
     end
@@ -2995,9 +2995,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetProvisionedConcurrencyConfig AWS API Documentation
     #
-    # @overload get_provisioned_concurrency_config(params = {})
+    # @overload get_provisioned_concurrency_config(**params)
     # @param [Hash] params ({})
-    def get_provisioned_concurrency_config(params = {}, options = {})
+    def get_provisioned_concurrency_config(params = {}, **options)
       req = build_request(:get_provisioned_concurrency_config, params)
       req.send_request(options)
     end
@@ -3161,9 +3161,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/Invoke AWS API Documentation
     #
-    # @overload invoke(params = {})
+    # @overload invoke(**params)
     # @param [Hash] params ({})
-    def invoke(params = {}, options = {})
+    def invoke(params = {}, **options)
       req = build_request(:invoke, params)
       req.send_request(options)
     end
@@ -3222,9 +3222,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/InvokeAsync AWS API Documentation
     #
-    # @overload invoke_async(params = {})
+    # @overload invoke_async(**params)
     # @param [Hash] params ({})
-    def invoke_async(params = {}, options = {})
+    def invoke_async(params = {}, **options)
       req = build_request(:invoke_async, params)
       req.send_request(options)
     end
@@ -3325,9 +3325,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListAliases AWS API Documentation
     #
-    # @overload list_aliases(params = {})
+    # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, options = {})
+    def list_aliases(params = {}, **options)
       req = build_request(:list_aliases, params)
       req.send_request(options)
     end
@@ -3375,9 +3375,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListCodeSigningConfigs AWS API Documentation
     #
-    # @overload list_code_signing_configs(params = {})
+    # @overload list_code_signing_configs(**params)
     # @param [Hash] params ({})
-    def list_code_signing_configs(params = {}, options = {})
+    def list_code_signing_configs(params = {}, **options)
       req = build_request(:list_code_signing_configs, params)
       req.send_request(options)
     end
@@ -3499,9 +3499,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListEventSourceMappings AWS API Documentation
     #
-    # @overload list_event_source_mappings(params = {})
+    # @overload list_event_source_mappings(**params)
     # @param [Hash] params ({})
-    def list_event_source_mappings(params = {}, options = {})
+    def list_event_source_mappings(params = {}, **options)
       req = build_request(:list_event_source_mappings, params)
       req.send_request(options)
     end
@@ -3589,9 +3589,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctionEventInvokeConfigs AWS API Documentation
     #
-    # @overload list_function_event_invoke_configs(params = {})
+    # @overload list_function_event_invoke_configs(**params)
     # @param [Hash] params ({})
-    def list_function_event_invoke_configs(params = {}, options = {})
+    def list_function_event_invoke_configs(params = {}, **options)
       req = build_request(:list_function_event_invoke_configs, params)
       req.send_request(options)
     end
@@ -3751,9 +3751,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctions AWS API Documentation
     #
-    # @overload list_functions(params = {})
+    # @overload list_functions(**params)
     # @param [Hash] params ({})
-    def list_functions(params = {}, options = {})
+    def list_functions(params = {}, **options)
       req = build_request(:list_functions, params)
       req.send_request(options)
     end
@@ -3795,9 +3795,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctionsByCodeSigningConfig AWS API Documentation
     #
-    # @overload list_functions_by_code_signing_config(params = {})
+    # @overload list_functions_by_code_signing_config(**params)
     # @param [Hash] params ({})
-    def list_functions_by_code_signing_config(params = {}, options = {})
+    def list_functions_by_code_signing_config(params = {}, **options)
       req = build_request(:list_functions_by_code_signing_config, params)
       req.send_request(options)
     end
@@ -3887,9 +3887,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListLayerVersions AWS API Documentation
     #
-    # @overload list_layer_versions(params = {})
+    # @overload list_layer_versions(**params)
     # @param [Hash] params ({})
-    def list_layer_versions(params = {}, options = {})
+    def list_layer_versions(params = {}, **options)
       req = build_request(:list_layer_versions, params)
       req.send_request(options)
     end
@@ -3972,9 +3972,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListLayers AWS API Documentation
     #
-    # @overload list_layers(params = {})
+    # @overload list_layers(**params)
     # @param [Hash] params ({})
-    def list_layers(params = {}, options = {})
+    def list_layers(params = {}, **options)
       req = build_request(:list_layers, params)
       req.send_request(options)
     end
@@ -4064,9 +4064,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListProvisionedConcurrencyConfigs AWS API Documentation
     #
-    # @overload list_provisioned_concurrency_configs(params = {})
+    # @overload list_provisioned_concurrency_configs(**params)
     # @param [Hash] params ({})
-    def list_provisioned_concurrency_configs(params = {}, options = {})
+    def list_provisioned_concurrency_configs(params = {}, **options)
       req = build_request(:list_provisioned_concurrency_configs, params)
       req.send_request(options)
     end
@@ -4115,9 +4115,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -4288,9 +4288,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListVersionsByFunction AWS API Documentation
     #
-    # @overload list_versions_by_function(params = {})
+    # @overload list_versions_by_function(**params)
     # @param [Hash] params ({})
-    def list_versions_by_function(params = {}, options = {})
+    def list_versions_by_function(params = {}, **options)
       req = build_request(:list_versions_by_function, params)
       req.send_request(options)
     end
@@ -4420,9 +4420,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PublishLayerVersion AWS API Documentation
     #
-    # @overload publish_layer_version(params = {})
+    # @overload publish_layer_version(**params)
     # @param [Hash] params ({})
-    def publish_layer_version(params = {}, options = {})
+    def publish_layer_version(params = {}, **options)
       req = build_request(:publish_layer_version, params)
       req.send_request(options)
     end
@@ -4612,9 +4612,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PublishVersion AWS API Documentation
     #
-    # @overload publish_version(params = {})
+    # @overload publish_version(**params)
     # @param [Hash] params ({})
-    def publish_version(params = {}, options = {})
+    def publish_version(params = {}, **options)
       req = build_request(:publish_version, params)
       req.send_request(options)
     end
@@ -4660,9 +4660,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PutFunctionCodeSigningConfig AWS API Documentation
     #
-    # @overload put_function_code_signing_config(params = {})
+    # @overload put_function_code_signing_config(**params)
     # @param [Hash] params ({})
-    def put_function_code_signing_config(params = {}, options = {})
+    def put_function_code_signing_config(params = {}, **options)
       req = build_request(:put_function_code_signing_config, params)
       req.send_request(options)
     end
@@ -4736,9 +4736,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PutFunctionConcurrency AWS API Documentation
     #
-    # @overload put_function_concurrency(params = {})
+    # @overload put_function_concurrency(**params)
     # @param [Hash] params ({})
-    def put_function_concurrency(params = {}, options = {})
+    def put_function_concurrency(params = {}, **options)
       req = build_request(:put_function_concurrency, params)
       req.send_request(options)
     end
@@ -4871,9 +4871,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PutFunctionEventInvokeConfig AWS API Documentation
     #
-    # @overload put_function_event_invoke_config(params = {})
+    # @overload put_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def put_function_event_invoke_config(params = {}, options = {})
+    def put_function_event_invoke_config(params = {}, **options)
       req = build_request(:put_function_event_invoke_config, params)
       req.send_request(options)
     end
@@ -4950,9 +4950,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PutProvisionedConcurrencyConfig AWS API Documentation
     #
-    # @overload put_provisioned_concurrency_config(params = {})
+    # @overload put_provisioned_concurrency_config(**params)
     # @param [Hash] params ({})
-    def put_provisioned_concurrency_config(params = {}, options = {})
+    def put_provisioned_concurrency_config(params = {}, **options)
       req = build_request(:put_provisioned_concurrency_config, params)
       req.send_request(options)
     end
@@ -5003,9 +5003,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/RemoveLayerVersionPermission AWS API Documentation
     #
-    # @overload remove_layer_version_permission(params = {})
+    # @overload remove_layer_version_permission(**params)
     # @param [Hash] params ({})
-    def remove_layer_version_permission(params = {}, options = {})
+    def remove_layer_version_permission(params = {}, **options)
       req = build_request(:remove_layer_version_permission, params)
       req.send_request(options)
     end
@@ -5068,9 +5068,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/RemovePermission AWS API Documentation
     #
-    # @overload remove_permission(params = {})
+    # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, options = {})
+    def remove_permission(params = {}, **options)
       req = build_request(:remove_permission, params)
       req.send_request(options)
     end
@@ -5113,9 +5113,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5155,9 +5155,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5270,9 +5270,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateAlias AWS API Documentation
     #
-    # @overload update_alias(params = {})
+    # @overload update_alias(**params)
     # @param [Hash] params ({})
-    def update_alias(params = {}, options = {})
+    def update_alias(params = {}, **options)
       req = build_request(:update_alias, params)
       req.send_request(options)
     end
@@ -5322,9 +5322,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateCodeSigningConfig AWS API Documentation
     #
-    # @overload update_code_signing_config(params = {})
+    # @overload update_code_signing_config(**params)
     # @param [Hash] params ({})
-    def update_code_signing_config(params = {}, options = {})
+    def update_code_signing_config(params = {}, **options)
       req = build_request(:update_code_signing_config, params)
       req.send_request(options)
     end
@@ -5544,9 +5544,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateEventSourceMapping AWS API Documentation
     #
-    # @overload update_event_source_mapping(params = {})
+    # @overload update_event_source_mapping(**params)
     # @param [Hash] params ({})
-    def update_event_source_mapping(params = {}, options = {})
+    def update_event_source_mapping(params = {}, **options)
       req = build_request(:update_event_source_mapping, params)
       req.send_request(options)
     end
@@ -5750,9 +5750,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionCode AWS API Documentation
     #
-    # @overload update_function_code(params = {})
+    # @overload update_function_code(**params)
     # @param [Hash] params ({})
-    def update_function_code(params = {}, options = {})
+    def update_function_code(params = {}, **options)
       req = build_request(:update_function_code, params)
       req.send_request(options)
     end
@@ -6041,9 +6041,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionConfiguration AWS API Documentation
     #
-    # @overload update_function_configuration(params = {})
+    # @overload update_function_configuration(**params)
     # @param [Hash] params ({})
-    def update_function_configuration(params = {}, options = {})
+    def update_function_configuration(params = {}, **options)
       req = build_request(:update_function_configuration, params)
       req.send_request(options)
     end
@@ -6162,9 +6162,9 @@ module Aws::Lambda
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionEventInvokeConfig AWS API Documentation
     #
-    # @overload update_function_event_invoke_config(params = {})
+    # @overload update_function_event_invoke_config(**params)
     # @param [Hash] params ({})
-    def update_function_event_invoke_config(params = {}, options = {})
+    def update_function_event_invoke_config(params = {}, **options)
       req = build_request(:update_function_event_invoke_config, params)
       req.send_request(options)
     end
@@ -6173,7 +6173,7 @@ module Aws::Lambda
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -6181,8 +6181,8 @@ module Aws::Lambda
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-lambda'
-      context[:gem_version] = '1.57.0'
+      context[:gem_name] = "aws-sdk-lambda"
+      context[:gem_version] = "1.57.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -6276,7 +6276,7 @@ module Aws::Lambda
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -6292,7 +6292,7 @@ module Aws::Lambda
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

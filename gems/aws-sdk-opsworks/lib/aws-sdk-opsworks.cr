@@ -8,19 +8,19 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-opsworks/types'
-require_relative 'aws-sdk-opsworks/client_api'
-require_relative 'aws-sdk-opsworks/client'
-require_relative 'aws-sdk-opsworks/errors'
-require_relative 'aws-sdk-opsworks/waiters'
-require_relative 'aws-sdk-opsworks/resource'
-require_relative 'aws-sdk-opsworks/layer'
-require_relative 'aws-sdk-opsworks/stack'
-require_relative 'aws-sdk-opsworks/stack_summary'
-require_relative 'aws-sdk-opsworks/customizations'
+require_relative "aws-sdk-opsworks/types"
+require_relative "aws-sdk-opsworks/client_api"
+require_relative "aws-sdk-opsworks/client"
+require_relative "aws-sdk-opsworks/errors"
+require_relative "aws-sdk-opsworks/waiters"
+require_relative "aws-sdk-opsworks/resource"
+require_relative "aws-sdk-opsworks/layer"
+require_relative "aws-sdk-opsworks/stack"
+require_relative "aws-sdk-opsworks/stack_summary"
+require_relative "aws-sdk-opsworks/customizations"
 
 # This module provides support for AWS OpsWorks. This module is available in the
 # `aws-sdk-opsworks` gem.
@@ -52,6 +52,6 @@ require_relative 'aws-sdk-opsworks/customizations'
 # @!group service
 module Aws::OpsWorks
 
-  GEM_VERSION = '1.30.0'
+  GEM_VERSION = "1.30.0"
 
 end

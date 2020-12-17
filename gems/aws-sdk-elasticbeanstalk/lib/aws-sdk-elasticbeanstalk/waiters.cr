@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ElasticBeanstalk
   # Waiters are utility methods that poll for a particular state to occur
@@ -110,7 +110,7 @@ module Aws::ElasticBeanstalk
 
       # @option (see Client#describe_environments)
       # @return (see Client#describe_environments)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -154,7 +154,7 @@ module Aws::ElasticBeanstalk
 
       # @option (see Client#describe_environments)
       # @return (see Client#describe_environments)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -198,7 +198,7 @@ module Aws::ElasticBeanstalk
 
       # @option (see Client#describe_environments)
       # @return (see Client#describe_environments)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

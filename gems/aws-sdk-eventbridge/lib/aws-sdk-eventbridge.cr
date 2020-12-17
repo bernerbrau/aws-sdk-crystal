@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-eventbridge/types'
-require_relative 'aws-sdk-eventbridge/client_api'
-require_relative 'aws-sdk-eventbridge/client'
-require_relative 'aws-sdk-eventbridge/errors'
-require_relative 'aws-sdk-eventbridge/resource'
-require_relative 'aws-sdk-eventbridge/customizations'
+require_relative "aws-sdk-eventbridge/types"
+require_relative "aws-sdk-eventbridge/client_api"
+require_relative "aws-sdk-eventbridge/client"
+require_relative "aws-sdk-eventbridge/errors"
+require_relative "aws-sdk-eventbridge/resource"
+require_relative "aws-sdk-eventbridge/customizations"
 
 # This module provides support for Amazon EventBridge. This module is available in the
 # `aws-sdk-eventbridge` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-eventbridge/customizations'
 # @!group service
 module Aws::EventBridge
 
-  GEM_VERSION = '1.18.0'
+  GEM_VERSION = "1.18.0"
 
 end

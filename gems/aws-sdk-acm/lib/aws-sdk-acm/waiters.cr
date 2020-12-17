@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ACM
   # Waiters are utility methods that poll for a particular state to occur
@@ -119,7 +119,7 @@ module Aws::ACM
 
       # @option (see Client#describe_certificate)
       # @return (see Client#describe_certificate)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

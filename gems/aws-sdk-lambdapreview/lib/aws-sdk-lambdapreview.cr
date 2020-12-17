@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lambdapreview/types'
-require_relative 'aws-sdk-lambdapreview/client_api'
-require_relative 'aws-sdk-lambdapreview/client'
-require_relative 'aws-sdk-lambdapreview/errors'
-require_relative 'aws-sdk-lambdapreview/resource'
-require_relative 'aws-sdk-lambdapreview/customizations'
+require_relative "aws-sdk-lambdapreview/types"
+require_relative "aws-sdk-lambdapreview/client_api"
+require_relative "aws-sdk-lambdapreview/client"
+require_relative "aws-sdk-lambdapreview/errors"
+require_relative "aws-sdk-lambdapreview/resource"
+require_relative "aws-sdk-lambdapreview/customizations"
 
 # This module provides support for AWS Lambda. This module is available in the
 # `aws-sdk-lambdapreview` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-lambdapreview/customizations'
 # @!group service
 module Aws::LambdaPreview
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

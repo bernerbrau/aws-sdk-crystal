@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudfront/types'
-require_relative 'aws-sdk-cloudfront/client_api'
-require_relative 'aws-sdk-cloudfront/client'
-require_relative 'aws-sdk-cloudfront/errors'
-require_relative 'aws-sdk-cloudfront/waiters'
-require_relative 'aws-sdk-cloudfront/resource'
-require_relative 'aws-sdk-cloudfront/customizations'
+require_relative "aws-sdk-cloudfront/types"
+require_relative "aws-sdk-cloudfront/client_api"
+require_relative "aws-sdk-cloudfront/client"
+require_relative "aws-sdk-cloudfront/errors"
+require_relative "aws-sdk-cloudfront/waiters"
+require_relative "aws-sdk-cloudfront/resource"
+require_relative "aws-sdk-cloudfront/customizations"
 
 # This module provides support for Amazon CloudFront. This module is available in the
 # `aws-sdk-cloudfront` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-cloudfront/customizations'
 # @!group service
 module Aws::CloudFront
 
-  GEM_VERSION = '1.46.0'
+  GEM_VERSION = "1.46.0"
 
 end

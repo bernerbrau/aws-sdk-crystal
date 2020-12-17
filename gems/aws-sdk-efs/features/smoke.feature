@@ -8,11 +8,11 @@
 Feature: Smoke tests for EFS
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @efs @smoke
   Scenario: Call Aws::EFS::Client#describe_file_systems and expect it to succeed
-  When I call the operation 'describe_file_systems' with params:
+  When I call the operation "describe_file_systems" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @efs @smoke
   Scenario: Call Aws::Aws::EFS::Client#delete_file_system and expect it to fail
-  When I call the operation 'delete_file_system' with params:
+  When I call the operation "delete_file_system" with params:
     """
 {"file_system_id":"fs-c5a1446c"}
     """

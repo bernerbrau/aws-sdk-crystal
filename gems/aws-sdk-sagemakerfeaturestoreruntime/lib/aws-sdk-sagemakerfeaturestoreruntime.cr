@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sagemakerfeaturestoreruntime/types'
-require_relative 'aws-sdk-sagemakerfeaturestoreruntime/client_api'
-require_relative 'aws-sdk-sagemakerfeaturestoreruntime/client'
-require_relative 'aws-sdk-sagemakerfeaturestoreruntime/errors'
-require_relative 'aws-sdk-sagemakerfeaturestoreruntime/resource'
-require_relative 'aws-sdk-sagemakerfeaturestoreruntime/customizations'
+require_relative "aws-sdk-sagemakerfeaturestoreruntime/types"
+require_relative "aws-sdk-sagemakerfeaturestoreruntime/client_api"
+require_relative "aws-sdk-sagemakerfeaturestoreruntime/client"
+require_relative "aws-sdk-sagemakerfeaturestoreruntime/errors"
+require_relative "aws-sdk-sagemakerfeaturestoreruntime/resource"
+require_relative "aws-sdk-sagemakerfeaturestoreruntime/customizations"
 
 # This module provides support for Amazon SageMaker Feature Store Runtime. This module is available in the
 # `aws-sdk-sagemakerfeaturestoreruntime` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-sagemakerfeaturestoreruntime/customizations'
 # @!group service
 module Aws::SageMakerFeatureStoreRuntime
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

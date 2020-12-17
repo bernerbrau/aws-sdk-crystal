@@ -7,29 +7,25 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-if RUBY_VERSION >= '2.1'
-  begin
-    require 'http/2'
-  rescue LoadError; end
-end
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/invocation_id.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
-require 'aws-sdk-core/plugins/event_stream_configuration.rb'
+
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/invocation_id.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
+require "aws-sdk-core/plugins/event_stream_configuration.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:transcribestreamingservice)
 
@@ -467,9 +463,9 @@ module Aws::TranscribeStreamingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-streaming-2017-10-26/StartMedicalStreamTranscription AWS API Documentation
     #
-    # @overload start_medical_stream_transcription(params = {})
+    # @overload start_medical_stream_transcription(**params)
     # @param [Hash] params ({})
-    def start_medical_stream_transcription(params = {}, options = {}, &block)
+    def start_medical_stream_transcription(params = {}, **options, &block)
       params = params.dup
       input_event_stream_handler = _event_stream_handler(
         :input,
@@ -738,9 +734,9 @@ module Aws::TranscribeStreamingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-streaming-2017-10-26/StartStreamTranscription AWS API Documentation
     #
-    # @overload start_stream_transcription(params = {})
+    # @overload start_stream_transcription(**params)
     # @param [Hash] params ({})
-    def start_stream_transcription(params = {}, options = {}, &block)
+    def start_stream_transcription(params = {}, **options, &block)
       params = params.dup
       input_event_stream_handler = _event_stream_handler(
         :input,
@@ -769,7 +765,7 @@ module Aws::TranscribeStreamingService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -778,8 +774,8 @@ module Aws::TranscribeStreamingService
         params: params,
         http_response: Seahorse::Client::Http::AsyncResponse.new,
         config: config)
-      context[:gem_name] = 'aws-sdk-transcribestreamingservice'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-transcribestreamingservice"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 

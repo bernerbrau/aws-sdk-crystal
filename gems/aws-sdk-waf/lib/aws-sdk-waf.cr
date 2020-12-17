@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-waf/types'
-require_relative 'aws-sdk-waf/client_api'
-require_relative 'aws-sdk-waf/client'
-require_relative 'aws-sdk-waf/errors'
-require_relative 'aws-sdk-waf/resource'
-require_relative 'aws-sdk-waf/customizations'
+require_relative "aws-sdk-waf/types"
+require_relative "aws-sdk-waf/client_api"
+require_relative "aws-sdk-waf/client"
+require_relative "aws-sdk-waf/errors"
+require_relative "aws-sdk-waf/resource"
+require_relative "aws-sdk-waf/customizations"
 
 # This module provides support for AWS WAF. This module is available in the
 # `aws-sdk-waf` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-waf/customizations'
 # @!group service
 module Aws::WAF
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

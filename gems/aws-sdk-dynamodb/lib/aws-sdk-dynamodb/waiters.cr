@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::DynamoDB
   # Waiters are utility methods that poll for a particular state to occur
@@ -108,7 +108,7 @@ module Aws::DynamoDB
 
       # @option (see Client#describe_table)
       # @return (see Client#describe_table)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -143,7 +143,7 @@ module Aws::DynamoDB
 
       # @option (see Client#describe_table)
       # @return (see Client#describe_table)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

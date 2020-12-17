@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-locationservice/types'
-require_relative 'aws-sdk-locationservice/client_api'
-require_relative 'aws-sdk-locationservice/client'
-require_relative 'aws-sdk-locationservice/errors'
-require_relative 'aws-sdk-locationservice/resource'
-require_relative 'aws-sdk-locationservice/customizations'
+require_relative "aws-sdk-locationservice/types"
+require_relative "aws-sdk-locationservice/client_api"
+require_relative "aws-sdk-locationservice/client"
+require_relative "aws-sdk-locationservice/errors"
+require_relative "aws-sdk-locationservice/resource"
+require_relative "aws-sdk-locationservice/customizations"
 
 # This module provides support for Amazon Location Service. This module is available in the
 # `aws-sdk-locationservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-locationservice/customizations'
 # @!group service
 module Aws::LocationService
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

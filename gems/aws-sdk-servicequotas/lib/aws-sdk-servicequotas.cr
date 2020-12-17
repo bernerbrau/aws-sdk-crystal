@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-servicequotas/types'
-require_relative 'aws-sdk-servicequotas/client_api'
-require_relative 'aws-sdk-servicequotas/client'
-require_relative 'aws-sdk-servicequotas/errors'
-require_relative 'aws-sdk-servicequotas/resource'
-require_relative 'aws-sdk-servicequotas/customizations'
+require_relative "aws-sdk-servicequotas/types"
+require_relative "aws-sdk-servicequotas/client_api"
+require_relative "aws-sdk-servicequotas/client"
+require_relative "aws-sdk-servicequotas/errors"
+require_relative "aws-sdk-servicequotas/resource"
+require_relative "aws-sdk-servicequotas/customizations"
 
 # This module provides support for Service Quotas. This module is available in the
 # `aws-sdk-servicequotas` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-servicequotas/customizations'
 # @!group service
 module Aws::ServiceQuotas
 
-  GEM_VERSION = '1.11.0'
+  GEM_VERSION = "1.11.0"
 
 end

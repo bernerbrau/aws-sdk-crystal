@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sagemaker/types'
-require_relative 'aws-sdk-sagemaker/client_api'
-require_relative 'aws-sdk-sagemaker/client'
-require_relative 'aws-sdk-sagemaker/errors'
-require_relative 'aws-sdk-sagemaker/waiters'
-require_relative 'aws-sdk-sagemaker/resource'
-require_relative 'aws-sdk-sagemaker/customizations'
+require_relative "aws-sdk-sagemaker/types"
+require_relative "aws-sdk-sagemaker/client_api"
+require_relative "aws-sdk-sagemaker/client"
+require_relative "aws-sdk-sagemaker/errors"
+require_relative "aws-sdk-sagemaker/waiters"
+require_relative "aws-sdk-sagemaker/resource"
+require_relative "aws-sdk-sagemaker/customizations"
 
 # This module provides support for Amazon SageMaker Service. This module is available in the
 # `aws-sdk-sagemaker` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-sagemaker/customizations'
 # @!group service
 module Aws::SageMaker
 
-  GEM_VERSION = '1.74.0'
+  GEM_VERSION = "1.74.0"
 
 end

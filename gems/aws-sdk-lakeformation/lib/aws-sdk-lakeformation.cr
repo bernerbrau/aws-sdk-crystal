@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lakeformation/types'
-require_relative 'aws-sdk-lakeformation/client_api'
-require_relative 'aws-sdk-lakeformation/client'
-require_relative 'aws-sdk-lakeformation/errors'
-require_relative 'aws-sdk-lakeformation/resource'
-require_relative 'aws-sdk-lakeformation/customizations'
+require_relative "aws-sdk-lakeformation/types"
+require_relative "aws-sdk-lakeformation/client_api"
+require_relative "aws-sdk-lakeformation/client"
+require_relative "aws-sdk-lakeformation/errors"
+require_relative "aws-sdk-lakeformation/resource"
+require_relative "aws-sdk-lakeformation/customizations"
 
 # This module provides support for AWS Lake Formation. This module is available in the
 # `aws-sdk-lakeformation` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-lakeformation/customizations'
 # @!group service
 module Aws::LakeFormation
 
-  GEM_VERSION = '1.11.0'
+  GEM_VERSION = "1.11.0"
 
 end

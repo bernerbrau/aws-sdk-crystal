@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-secretsmanager/types'
-require_relative 'aws-sdk-secretsmanager/client_api'
-require_relative 'aws-sdk-secretsmanager/client'
-require_relative 'aws-sdk-secretsmanager/errors'
-require_relative 'aws-sdk-secretsmanager/resource'
-require_relative 'aws-sdk-secretsmanager/customizations'
+require_relative "aws-sdk-secretsmanager/types"
+require_relative "aws-sdk-secretsmanager/client_api"
+require_relative "aws-sdk-secretsmanager/client"
+require_relative "aws-sdk-secretsmanager/errors"
+require_relative "aws-sdk-secretsmanager/resource"
+require_relative "aws-sdk-secretsmanager/customizations"
 
 # This module provides support for AWS Secrets Manager. This module is available in the
 # `aws-sdk-secretsmanager` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-secretsmanager/customizations'
 # @!group service
 module Aws::SecretsManager
 
-  GEM_VERSION = '1.43.0'
+  GEM_VERSION = "1.43.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-marketplacecatalog/types'
-require_relative 'aws-sdk-marketplacecatalog/client_api'
-require_relative 'aws-sdk-marketplacecatalog/client'
-require_relative 'aws-sdk-marketplacecatalog/errors'
-require_relative 'aws-sdk-marketplacecatalog/resource'
-require_relative 'aws-sdk-marketplacecatalog/customizations'
+require_relative "aws-sdk-marketplacecatalog/types"
+require_relative "aws-sdk-marketplacecatalog/client_api"
+require_relative "aws-sdk-marketplacecatalog/client"
+require_relative "aws-sdk-marketplacecatalog/errors"
+require_relative "aws-sdk-marketplacecatalog/resource"
+require_relative "aws-sdk-marketplacecatalog/customizations"
 
 # This module provides support for AWS Marketplace Catalog Service. This module is available in the
 # `aws-sdk-marketplacecatalog` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-marketplacecatalog/customizations'
 # @!group service
 module Aws::MarketplaceCatalog
 
-  GEM_VERSION = '1.9.0'
+  GEM_VERSION = "1.9.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mediaconvert)
 
@@ -280,7 +280,7 @@ module Aws::MediaConvert
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -344,9 +344,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/AssociateCertificate AWS API Documentation
     #
-    # @overload associate_certificate(params = {})
+    # @overload associate_certificate(**params)
     # @param [Hash] params ({})
-    def associate_certificate(params = {}, options = {})
+    def associate_certificate(params = {}, **options)
       req = build_request(:associate_certificate, params)
       req.send_request(options)
     end
@@ -367,9 +367,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CancelJob AWS API Documentation
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -2361,9 +2361,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreateJob AWS API Documentation
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -4282,9 +4282,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreateJobTemplate AWS API Documentation
     #
-    # @overload create_job_template(params = {})
+    # @overload create_job_template(**params)
     # @param [Hash] params ({})
-    def create_job_template(params = {}, options = {})
+    def create_job_template(params = {}, **options)
       req = build_request(:create_job_template, params)
       req.send_request(options)
     end
@@ -5445,9 +5445,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreatePreset AWS API Documentation
     #
-    # @overload create_preset(params = {})
+    # @overload create_preset(**params)
     # @param [Hash] params ({})
-    def create_preset(params = {}, options = {})
+    def create_preset(params = {}, **options)
       req = build_request(:create_preset, params)
       req.send_request(options)
     end
@@ -5524,9 +5524,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreateQueue AWS API Documentation
     #
-    # @overload create_queue(params = {})
+    # @overload create_queue(**params)
     # @param [Hash] params ({})
-    def create_queue(params = {}, options = {})
+    def create_queue(params = {}, **options)
       req = build_request(:create_queue, params)
       req.send_request(options)
     end
@@ -5546,9 +5546,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeleteJobTemplate AWS API Documentation
     #
-    # @overload delete_job_template(params = {})
+    # @overload delete_job_template(**params)
     # @param [Hash] params ({})
-    def delete_job_template(params = {}, options = {})
+    def delete_job_template(params = {}, **options)
       req = build_request(:delete_job_template, params)
       req.send_request(options)
     end
@@ -5568,9 +5568,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeletePreset AWS API Documentation
     #
-    # @overload delete_preset(params = {})
+    # @overload delete_preset(**params)
     # @param [Hash] params ({})
-    def delete_preset(params = {}, options = {})
+    def delete_preset(params = {}, **options)
       req = build_request(:delete_preset, params)
       req.send_request(options)
     end
@@ -5590,9 +5590,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeleteQueue AWS API Documentation
     #
-    # @overload delete_queue(params = {})
+    # @overload delete_queue(**params)
     # @param [Hash] params ({})
-    def delete_queue(params = {}, options = {})
+    def delete_queue(params = {}, **options)
       req = build_request(:delete_queue, params)
       req.send_request(options)
     end
@@ -5638,9 +5638,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DescribeEndpoints AWS API Documentation
     #
-    # @overload describe_endpoints(params = {})
+    # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, options = {})
+    def describe_endpoints(params = {}, **options)
       req = build_request(:describe_endpoints, params)
       req.send_request(options)
     end
@@ -5663,9 +5663,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DisassociateCertificate AWS API Documentation
     #
-    # @overload disassociate_certificate(params = {})
+    # @overload disassociate_certificate(**params)
     # @param [Hash] params ({})
-    def disassociate_certificate(params = {}, options = {})
+    def disassociate_certificate(params = {}, **options)
       req = build_request(:disassociate_certificate, params)
       req.send_request(options)
     end
@@ -6491,9 +6491,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetJob AWS API Documentation
     #
-    # @overload get_job(params = {})
+    # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, options = {})
+    def get_job(params = {}, **options)
       req = build_request(:get_job, params)
       req.send_request(options)
     end
@@ -7287,9 +7287,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetJobTemplate AWS API Documentation
     #
-    # @overload get_job_template(params = {})
+    # @overload get_job_template(**params)
     # @param [Hash] params ({})
-    def get_job_template(params = {}, options = {})
+    def get_job_template(params = {}, **options)
       req = build_request(:get_job_template, params)
       req.send_request(options)
     end
@@ -7804,9 +7804,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetPreset AWS API Documentation
     #
-    # @overload get_preset(params = {})
+    # @overload get_preset(**params)
     # @param [Hash] params ({})
-    def get_preset(params = {}, options = {})
+    def get_preset(params = {}, **options)
       req = build_request(:get_preset, params)
       req.send_request(options)
     end
@@ -7847,9 +7847,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetQueue AWS API Documentation
     #
-    # @overload get_queue(params = {})
+    # @overload get_queue(**params)
     # @param [Hash] params ({})
-    def get_queue(params = {}, options = {})
+    def get_queue(params = {}, **options)
       req = build_request(:get_queue, params)
       req.send_request(options)
     end
@@ -8674,9 +8674,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListJobTemplates AWS API Documentation
     #
-    # @overload list_job_templates(params = {})
+    # @overload list_job_templates(**params)
     # @param [Hash] params ({})
-    def list_job_templates(params = {}, options = {})
+    def list_job_templates(params = {}, **options)
       req = build_request(:list_job_templates, params)
       req.send_request(options)
     end
@@ -9532,9 +9532,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -10080,9 +10080,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListPresets AWS API Documentation
     #
-    # @overload list_presets(params = {})
+    # @overload list_presets(**params)
     # @param [Hash] params ({})
-    def list_presets(params = {}, options = {})
+    def list_presets(params = {}, **options)
       req = build_request(:list_presets, params)
       req.send_request(options)
     end
@@ -10148,9 +10148,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListQueues AWS API Documentation
     #
-    # @overload list_queues(params = {})
+    # @overload list_queues(**params)
     # @param [Hash] params ({})
-    def list_queues(params = {}, options = {})
+    def list_queues(params = {}, **options)
       req = build_request(:list_queues, params)
       req.send_request(options)
     end
@@ -10179,9 +10179,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -10211,9 +10211,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -10240,9 +10240,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -12147,9 +12147,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UpdateJobTemplate AWS API Documentation
     #
-    # @overload update_job_template(params = {})
+    # @overload update_job_template(**params)
     # @param [Hash] params ({})
-    def update_job_template(params = {}, options = {})
+    def update_job_template(params = {}, **options)
       req = build_request(:update_job_template, params)
       req.send_request(options)
     end
@@ -13301,9 +13301,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UpdatePreset AWS API Documentation
     #
-    # @overload update_preset(params = {})
+    # @overload update_preset(**params)
     # @param [Hash] params ({})
-    def update_preset(params = {}, options = {})
+    def update_preset(params = {}, **options)
       req = build_request(:update_preset, params)
       req.send_request(options)
     end
@@ -13368,9 +13368,9 @@ module Aws::MediaConvert
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UpdateQueue AWS API Documentation
     #
-    # @overload update_queue(params = {})
+    # @overload update_queue(**params)
     # @param [Hash] params ({})
-    def update_queue(params = {}, options = {})
+    def update_queue(params = {}, **options)
       req = build_request(:update_queue, params)
       req.send_request(options)
     end
@@ -13379,7 +13379,7 @@ module Aws::MediaConvert
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -13387,15 +13387,15 @@ module Aws::MediaConvert
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mediaconvert'
-      context[:gem_version] = '1.60.0'
+      context[:gem_name] = "aws-sdk-mediaconvert"
+      context[:gem_version] = "1.60.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

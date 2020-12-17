@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-states/types'
-require_relative 'aws-sdk-states/client_api'
-require_relative 'aws-sdk-states/client'
-require_relative 'aws-sdk-states/errors'
-require_relative 'aws-sdk-states/resource'
-require_relative 'aws-sdk-states/customizations'
+require_relative "aws-sdk-states/types"
+require_relative "aws-sdk-states/client_api"
+require_relative "aws-sdk-states/client"
+require_relative "aws-sdk-states/errors"
+require_relative "aws-sdk-states/resource"
+require_relative "aws-sdk-states/customizations"
 
 # This module provides support for AWS Step Functions. This module is available in the
 # `aws-sdk-states` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-states/customizations'
 # @!group service
 module Aws::States
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

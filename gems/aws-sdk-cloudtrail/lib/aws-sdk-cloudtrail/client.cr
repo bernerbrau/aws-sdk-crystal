@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudtrail)
 
@@ -290,7 +290,7 @@ module Aws::CloudTrail
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -371,9 +371,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/AddTags AWS API Documentation
     #
-    # @overload add_tags(params = {})
+    # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, options = {})
+    def add_tags(params = {}, **options)
       req = build_request(:add_tags, params)
       req.send_request(options)
     end
@@ -537,9 +537,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateTrail AWS API Documentation
     #
-    # @overload create_trail(params = {})
+    # @overload create_trail(**params)
     # @param [Hash] params ({})
-    def create_trail(params = {}, options = {})
+    def create_trail(params = {}, **options)
       req = build_request(:create_trail, params)
       req.send_request(options)
     end
@@ -564,9 +564,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteTrail AWS API Documentation
     #
-    # @overload delete_trail(params = {})
+    # @overload delete_trail(**params)
     # @param [Hash] params ({})
-    def delete_trail(params = {}, options = {})
+    def delete_trail(params = {}, **options)
       req = build_request(:delete_trail, params)
       req.send_request(options)
     end
@@ -638,9 +638,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DescribeTrails AWS API Documentation
     #
-    # @overload describe_trails(params = {})
+    # @overload describe_trails(**params)
     # @param [Hash] params ({})
-    def describe_trails(params = {}, options = {})
+    def describe_trails(params = {}, **options)
       req = build_request(:describe_trails, params)
       req.send_request(options)
     end
@@ -728,9 +728,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetEventSelectors AWS API Documentation
     #
-    # @overload get_event_selectors(params = {})
+    # @overload get_event_selectors(**params)
     # @param [Hash] params ({})
-    def get_event_selectors(params = {}, options = {})
+    def get_event_selectors(params = {}, **options)
       req = build_request(:get_event_selectors, params)
       req.send_request(options)
     end
@@ -788,9 +788,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetInsightSelectors AWS API Documentation
     #
-    # @overload get_insight_selectors(params = {})
+    # @overload get_insight_selectors(**params)
     # @param [Hash] params ({})
-    def get_insight_selectors(params = {}, options = {})
+    def get_insight_selectors(params = {}, **options)
       req = build_request(:get_insight_selectors, params)
       req.send_request(options)
     end
@@ -832,9 +832,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetTrail AWS API Documentation
     #
-    # @overload get_trail(params = {})
+    # @overload get_trail(**params)
     # @param [Hash] params ({})
-    def get_trail(params = {}, options = {})
+    def get_trail(params = {}, **options)
       req = build_request(:get_trail, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetTrailStatus AWS API Documentation
     #
-    # @overload get_trail_status(params = {})
+    # @overload get_trail_status(**params)
     # @param [Hash] params ({})
-    def get_trail_status(params = {}, options = {})
+    def get_trail_status(params = {}, **options)
       req = build_request(:get_trail_status, params)
       req.send_request(options)
     end
@@ -960,9 +960,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListPublicKeys AWS API Documentation
     #
-    # @overload list_public_keys(params = {})
+    # @overload list_public_keys(**params)
     # @param [Hash] params ({})
-    def list_public_keys(params = {}, options = {})
+    def list_public_keys(params = {}, **options)
       req = build_request(:list_public_keys, params)
       req.send_request(options)
     end
@@ -1003,9 +1003,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListTrails AWS API Documentation
     #
-    # @overload list_trails(params = {})
+    # @overload list_trails(**params)
     # @param [Hash] params ({})
-    def list_trails(params = {}, options = {})
+    def list_trails(params = {}, **options)
       req = build_request(:list_trails, params)
       req.send_request(options)
     end
@@ -1162,9 +1162,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/LookupEvents AWS API Documentation
     #
-    # @overload lookup_events(params = {})
+    # @overload lookup_events(**params)
     # @param [Hash] params ({})
-    def lookup_events(params = {}, options = {})
+    def lookup_events(params = {}, **options)
       req = build_request(:lookup_events, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/PutEventSelectors AWS API Documentation
     #
-    # @overload put_event_selectors(params = {})
+    # @overload put_event_selectors(**params)
     # @param [Hash] params ({})
-    def put_event_selectors(params = {}, options = {})
+    def put_event_selectors(params = {}, **options)
       req = build_request(:put_event_selectors, params)
       req.send_request(options)
     end
@@ -1379,9 +1379,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/PutInsightSelectors AWS API Documentation
     #
-    # @overload put_insight_selectors(params = {})
+    # @overload put_insight_selectors(**params)
     # @param [Hash] params ({})
-    def put_insight_selectors(params = {}, options = {})
+    def put_insight_selectors(params = {}, **options)
       req = build_request(:put_insight_selectors, params)
       req.send_request(options)
     end
@@ -1413,9 +1413,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/RemoveTags AWS API Documentation
     #
-    # @overload remove_tags(params = {})
+    # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, options = {})
+    def remove_tags(params = {}, **options)
       req = build_request(:remove_tags, params)
       req.send_request(options)
     end
@@ -1442,9 +1442,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StartLogging AWS API Documentation
     #
-    # @overload start_logging(params = {})
+    # @overload start_logging(**params)
     # @param [Hash] params ({})
-    def start_logging(params = {}, options = {})
+    def start_logging(params = {}, **options)
       req = build_request(:start_logging, params)
       req.send_request(options)
     end
@@ -1475,9 +1475,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StopLogging AWS API Documentation
     #
-    # @overload stop_logging(params = {})
+    # @overload stop_logging(**params)
     # @param [Hash] params ({})
-    def stop_logging(params = {}, options = {})
+    def stop_logging(params = {}, **options)
       req = build_request(:stop_logging, params)
       req.send_request(options)
     end
@@ -1650,9 +1650,9 @@ module Aws::CloudTrail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/UpdateTrail AWS API Documentation
     #
-    # @overload update_trail(params = {})
+    # @overload update_trail(**params)
     # @param [Hash] params ({})
-    def update_trail(params = {}, options = {})
+    def update_trail(params = {}, **options)
       req = build_request(:update_trail, params)
       req.send_request(options)
     end
@@ -1661,7 +1661,7 @@ module Aws::CloudTrail
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1669,15 +1669,15 @@ module Aws::CloudTrail
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudtrail'
-      context[:gem_version] = '1.31.0'
+      context[:gem_name] = "aws-sdk-cloudtrail"
+      context[:gem_version] = "1.31.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

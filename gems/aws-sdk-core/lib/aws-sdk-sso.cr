@@ -9,16 +9,16 @@
 
 
 unless Module.const_defined?(:Aws)
-  require 'aws-sdk-core'
-  require 'aws-sigv4'
+  require "aws-sdk-core"
+  require "aws-sigv4"
 end
 
-require_relative 'aws-sdk-sso/types'
-require_relative 'aws-sdk-sso/client_api'
-require_relative 'aws-sdk-sso/client'
-require_relative 'aws-sdk-sso/errors'
-require_relative 'aws-sdk-sso/resource'
-require_relative 'aws-sdk-sso/customizations'
+require_relative "aws-sdk-sso/types"
+require_relative "aws-sdk-sso/client_api"
+require_relative "aws-sdk-sso/client"
+require_relative "aws-sdk-sso/errors"
+require_relative "aws-sdk-sso/resource"
+require_relative "aws-sdk-sso/customizations"
 
 # This module provides support for AWS Single Sign-On. This module is available in the
 # `aws-sdk-core` gem.
@@ -50,6 +50,6 @@ require_relative 'aws-sdk-sso/customizations'
 # @!group service
 module Aws::SSO
 
-  GEM_VERSION = '3.110.0'
+  GEM_VERSION = "3.110.0"
 
 end

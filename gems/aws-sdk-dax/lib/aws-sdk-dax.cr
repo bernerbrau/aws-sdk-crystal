@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-dax/types'
-require_relative 'aws-sdk-dax/client_api'
-require_relative 'aws-sdk-dax/client'
-require_relative 'aws-sdk-dax/errors'
-require_relative 'aws-sdk-dax/resource'
-require_relative 'aws-sdk-dax/customizations'
+require_relative "aws-sdk-dax/types"
+require_relative "aws-sdk-dax/client_api"
+require_relative "aws-sdk-dax/client"
+require_relative "aws-sdk-dax/errors"
+require_relative "aws-sdk-dax/resource"
+require_relative "aws-sdk-dax/customizations"
 
 # This module provides support for Amazon DynamoDB Accelerator (DAX). This module is available in the
 # `aws-sdk-dax` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-dax/customizations'
 # @!group service
 module Aws::DAX
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

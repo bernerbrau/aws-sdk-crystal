@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-apigatewayv2/types'
-require_relative 'aws-sdk-apigatewayv2/client_api'
-require_relative 'aws-sdk-apigatewayv2/client'
-require_relative 'aws-sdk-apigatewayv2/errors'
-require_relative 'aws-sdk-apigatewayv2/resource'
-require_relative 'aws-sdk-apigatewayv2/customizations'
+require_relative "aws-sdk-apigatewayv2/types"
+require_relative "aws-sdk-apigatewayv2/client_api"
+require_relative "aws-sdk-apigatewayv2/client"
+require_relative "aws-sdk-apigatewayv2/errors"
+require_relative "aws-sdk-apigatewayv2/resource"
+require_relative "aws-sdk-apigatewayv2/customizations"
 
 # This module provides support for AmazonApiGatewayV2. This module is available in the
 # `aws-sdk-apigatewayv2` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-apigatewayv2/customizations'
 # @!group service
 module Aws::ApiGatewayV2
 
-  GEM_VERSION = '1.29.0'
+  GEM_VERSION = "1.29.0"
 
 end

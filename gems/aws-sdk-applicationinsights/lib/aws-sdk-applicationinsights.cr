@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-applicationinsights/types'
-require_relative 'aws-sdk-applicationinsights/client_api'
-require_relative 'aws-sdk-applicationinsights/client'
-require_relative 'aws-sdk-applicationinsights/errors'
-require_relative 'aws-sdk-applicationinsights/resource'
-require_relative 'aws-sdk-applicationinsights/customizations'
+require_relative "aws-sdk-applicationinsights/types"
+require_relative "aws-sdk-applicationinsights/client_api"
+require_relative "aws-sdk-applicationinsights/client"
+require_relative "aws-sdk-applicationinsights/errors"
+require_relative "aws-sdk-applicationinsights/resource"
+require_relative "aws-sdk-applicationinsights/customizations"
 
 # This module provides support for Amazon CloudWatch Application Insights. This module is available in the
 # `aws-sdk-applicationinsights` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-applicationinsights/customizations'
 # @!group service
 module Aws::ApplicationInsights
 
-  GEM_VERSION = '1.16.0'
+  GEM_VERSION = "1.16.0"
 
 end

@@ -5,16 +5,16 @@ Feature: Smoke tests for {{service}}
 
 Background:
 {{#client_endpoint}}
-  Given I create a client with endpoint '{{client_endpoint}}'
+  Given I create a client with endpoint "{{client_endpoint}}"
 {{/client_endpoint}}
 {{^client_endpoint}}
-  Given I create a client in region '{{client_region}}'
+  Given I create a client in region "{{client_region}}"
 {{/client_endpoint}}
 {{#smoke_tests}}
 
   {{smoke_test_tags}}
   Scenario: {{scenario_string}}
-  When I call the operation '{{operation}}' with params:
+  When I call the operation "{{operation}}" with params:
     """
 {{&param_hash}}
     """

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iot1clickprojects/types'
-require_relative 'aws-sdk-iot1clickprojects/client_api'
-require_relative 'aws-sdk-iot1clickprojects/client'
-require_relative 'aws-sdk-iot1clickprojects/errors'
-require_relative 'aws-sdk-iot1clickprojects/resource'
-require_relative 'aws-sdk-iot1clickprojects/customizations'
+require_relative "aws-sdk-iot1clickprojects/types"
+require_relative "aws-sdk-iot1clickprojects/client_api"
+require_relative "aws-sdk-iot1clickprojects/client"
+require_relative "aws-sdk-iot1clickprojects/errors"
+require_relative "aws-sdk-iot1clickprojects/resource"
+require_relative "aws-sdk-iot1clickprojects/customizations"
 
 # This module provides support for AWS IoT 1-Click Projects Service. This module is available in the
 # `aws-sdk-iot1clickprojects` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iot1clickprojects/customizations'
 # @!group service
 module Aws::IoT1ClickProjects
 
-  GEM_VERSION = '1.26.0'
+  GEM_VERSION = "1.26.0"
 
 end

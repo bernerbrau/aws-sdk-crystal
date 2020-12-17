@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:servicequotas)
 
@@ -290,7 +290,7 @@ module Aws::ServiceQuotas
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -348,9 +348,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/AssociateServiceQuotaTemplate AWS API Documentation
     #
-    # @overload associate_service_quota_template(params = {})
+    # @overload associate_service_quota_template(**params)
     # @param [Hash] params ({})
-    def associate_service_quota_template(params = {}, options = {})
+    def associate_service_quota_template(params = {}, **options)
       req = build_request(:associate_service_quota_template, params)
       req.send_request(options)
     end
@@ -379,9 +379,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/DeleteServiceQuotaIncreaseRequestFromTemplate AWS API Documentation
     #
-    # @overload delete_service_quota_increase_request_from_template(params = {})
+    # @overload delete_service_quota_increase_request_from_template(**params)
     # @param [Hash] params ({})
-    def delete_service_quota_increase_request_from_template(params = {}, options = {})
+    def delete_service_quota_increase_request_from_template(params = {}, **options)
       req = build_request(:delete_service_quota_increase_request_from_template, params)
       req.send_request(options)
     end
@@ -402,9 +402,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/DisassociateServiceQuotaTemplate AWS API Documentation
     #
-    # @overload disassociate_service_quota_template(params = {})
+    # @overload disassociate_service_quota_template(**params)
     # @param [Hash] params ({})
-    def disassociate_service_quota_template(params = {}, options = {})
+    def disassociate_service_quota_template(params = {}, **options)
       req = build_request(:disassociate_service_quota_template, params)
       req.send_request(options)
     end
@@ -453,9 +453,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/GetAWSDefaultServiceQuota AWS API Documentation
     #
-    # @overload get_aws_default_service_quota(params = {})
+    # @overload get_aws_default_service_quota(**params)
     # @param [Hash] params ({})
-    def get_aws_default_service_quota(params = {}, options = {})
+    def get_aws_default_service_quota(params = {}, **options)
       req = build_request(:get_aws_default_service_quota, params)
       req.send_request(options)
     end
@@ -474,9 +474,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/GetAssociationForServiceQuotaTemplate AWS API Documentation
     #
-    # @overload get_association_for_service_quota_template(params = {})
+    # @overload get_association_for_service_quota_template(**params)
     # @param [Hash] params ({})
-    def get_association_for_service_quota_template(params = {}, options = {})
+    def get_association_for_service_quota_template(params = {}, **options)
       req = build_request(:get_association_for_service_quota_template, params)
       req.send_request(options)
     end
@@ -515,9 +515,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/GetRequestedServiceQuotaChange AWS API Documentation
     #
-    # @overload get_requested_service_quota_change(params = {})
+    # @overload get_requested_service_quota_change(**params)
     # @param [Hash] params ({})
-    def get_requested_service_quota_change(params = {}, options = {})
+    def get_requested_service_quota_change(params = {}, **options)
       req = build_request(:get_requested_service_quota_change, params)
       req.send_request(options)
     end
@@ -568,9 +568,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/GetServiceQuota AWS API Documentation
     #
-    # @overload get_service_quota(params = {})
+    # @overload get_service_quota(**params)
     # @param [Hash] params ({})
-    def get_service_quota(params = {}, options = {})
+    def get_service_quota(params = {}, **options)
       req = build_request(:get_service_quota, params)
       req.send_request(options)
     end
@@ -612,9 +612,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/GetServiceQuotaIncreaseRequestFromTemplate AWS API Documentation
     #
-    # @overload get_service_quota_increase_request_from_template(params = {})
+    # @overload get_service_quota_increase_request_from_template(**params)
     # @param [Hash] params ({})
-    def get_service_quota_increase_request_from_template(params = {}, options = {})
+    def get_service_quota_increase_request_from_template(params = {}, **options)
       req = build_request(:get_service_quota_increase_request_from_template, params)
       req.send_request(options)
     end
@@ -700,9 +700,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/ListAWSDefaultServiceQuotas AWS API Documentation
     #
-    # @overload list_aws_default_service_quotas(params = {})
+    # @overload list_aws_default_service_quotas(**params)
     # @param [Hash] params ({})
-    def list_aws_default_service_quotas(params = {}, options = {})
+    def list_aws_default_service_quotas(params = {}, **options)
       req = build_request(:list_aws_default_service_quotas, params)
       req.send_request(options)
     end
@@ -769,9 +769,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/ListRequestedServiceQuotaChangeHistory AWS API Documentation
     #
-    # @overload list_requested_service_quota_change_history(params = {})
+    # @overload list_requested_service_quota_change_history(**params)
     # @param [Hash] params ({})
-    def list_requested_service_quota_change_history(params = {}, options = {})
+    def list_requested_service_quota_change_history(params = {}, **options)
       req = build_request(:list_requested_service_quota_change_history, params)
       req.send_request(options)
     end
@@ -846,9 +846,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/ListRequestedServiceQuotaChangeHistoryByQuota AWS API Documentation
     #
-    # @overload list_requested_service_quota_change_history_by_quota(params = {})
+    # @overload list_requested_service_quota_change_history_by_quota(**params)
     # @param [Hash] params ({})
-    def list_requested_service_quota_change_history_by_quota(params = {}, options = {})
+    def list_requested_service_quota_change_history_by_quota(params = {}, **options)
       req = build_request(:list_requested_service_quota_change_history_by_quota, params)
       req.send_request(options)
     end
@@ -910,9 +910,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/ListServiceQuotaIncreaseRequestsInTemplate AWS API Documentation
     #
-    # @overload list_service_quota_increase_requests_in_template(params = {})
+    # @overload list_service_quota_increase_requests_in_template(**params)
     # @param [Hash] params ({})
-    def list_service_quota_increase_requests_in_template(params = {}, options = {})
+    def list_service_quota_increase_requests_in_template(params = {}, **options)
       req = build_request(:list_service_quota_increase_requests_in_template, params)
       req.send_request(options)
     end
@@ -991,9 +991,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/ListServiceQuotas AWS API Documentation
     #
-    # @overload list_service_quotas(params = {})
+    # @overload list_service_quotas(**params)
     # @param [Hash] params ({})
-    def list_service_quotas(params = {}, options = {})
+    def list_service_quotas(params = {}, **options)
       req = build_request(:list_service_quotas, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/ListServices AWS API Documentation
     #
-    # @overload list_services(params = {})
+    # @overload list_services(**params)
     # @param [Hash] params ({})
-    def list_services(params = {}, options = {})
+    def list_services(params = {}, **options)
       req = build_request(:list_services, params)
       req.send_request(options)
     end
@@ -1093,9 +1093,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/PutServiceQuotaIncreaseRequestIntoTemplate AWS API Documentation
     #
-    # @overload put_service_quota_increase_request_into_template(params = {})
+    # @overload put_service_quota_increase_request_into_template(**params)
     # @param [Hash] params ({})
-    def put_service_quota_increase_request_into_template(params = {}, options = {})
+    def put_service_quota_increase_request_into_template(params = {}, **options)
       req = build_request(:put_service_quota_increase_request_into_template, params)
       req.send_request(options)
     end
@@ -1144,9 +1144,9 @@ module Aws::ServiceQuotas
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/service-quotas-2019-06-24/RequestServiceQuotaIncrease AWS API Documentation
     #
-    # @overload request_service_quota_increase(params = {})
+    # @overload request_service_quota_increase(**params)
     # @param [Hash] params ({})
-    def request_service_quota_increase(params = {}, options = {})
+    def request_service_quota_increase(params = {}, **options)
       req = build_request(:request_service_quota_increase, params)
       req.send_request(options)
     end
@@ -1155,7 +1155,7 @@ module Aws::ServiceQuotas
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1163,15 +1163,15 @@ module Aws::ServiceQuotas
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-servicequotas'
-      context[:gem_version] = '1.11.0'
+      context[:gem_name] = "aws-sdk-servicequotas"
+      context[:gem_version] = "1.11.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

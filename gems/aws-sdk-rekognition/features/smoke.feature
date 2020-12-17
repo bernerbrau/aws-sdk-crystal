@@ -8,11 +8,11 @@
 Feature: Smoke tests for Rekognition
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @rekognition @smoke
   Scenario: Call Aws::Rekognition::Client#list_collections and expect it to succeed
-  When I call the operation 'list_collections' with params:
+  When I call the operation "list_collections" with params:
     """
 {}
     """

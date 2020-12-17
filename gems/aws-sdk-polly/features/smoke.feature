@@ -8,11 +8,11 @@
 Feature: Smoke tests for Polly
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @polly @smoke
   Scenario: Call Aws::Polly::Client#describe_voices and expect it to succeed
-  When I call the operation 'describe_voices' with params:
+  When I call the operation "describe_voices" with params:
     """
 {}
     """

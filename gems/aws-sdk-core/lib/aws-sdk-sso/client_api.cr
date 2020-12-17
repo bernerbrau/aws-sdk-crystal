@@ -126,7 +126,7 @@ module Aws::SSO
         o.name = "GetRoleCredentials"
         o.http_method = "GET"
         o.http_request_uri = "/federation/credentials"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: GetRoleCredentialsRequest)
         o.output = Shapes::ShapeRef.new(shape: GetRoleCredentialsResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)
@@ -139,7 +139,7 @@ module Aws::SSO
         o.name = "ListAccountRoles"
         o.http_method = "GET"
         o.http_request_uri = "/assignment/roles"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ListAccountRolesRequest)
         o.output = Shapes::ShapeRef.new(shape: ListAccountRolesResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)
@@ -158,7 +158,7 @@ module Aws::SSO
         o.name = "ListAccounts"
         o.http_method = "GET"
         o.http_request_uri = "/assignment/accounts"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ListAccountsRequest)
         o.output = Shapes::ShapeRef.new(shape: ListAccountsResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)
@@ -177,7 +177,7 @@ module Aws::SSO
         o.name = "Logout"
         o.http_method = "POST"
         o.http_request_uri = "/logout"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: LogoutRequest)
         o.output = Shapes::ShapeRef.new(shape: Shapes::StructureShape.new(struct_class: Aws::EmptyStructure))
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)

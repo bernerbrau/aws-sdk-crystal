@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:macie)
 
@@ -290,7 +290,7 @@ module Aws::Macie
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -354,9 +354,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/AssociateMemberAccount AWS API Documentation
     #
-    # @overload associate_member_account(params = {})
+    # @overload associate_member_account(**params)
     # @param [Hash] params ({})
-    def associate_member_account(params = {}, options = {})
+    def associate_member_account(params = {}, **options)
       req = build_request(:associate_member_account, params)
       req.send_request(options)
     end
@@ -406,9 +406,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/AssociateS3Resources AWS API Documentation
     #
-    # @overload associate_s3_resources(params = {})
+    # @overload associate_s3_resources(**params)
     # @param [Hash] params ({})
-    def associate_s3_resources(params = {}, options = {})
+    def associate_s3_resources(params = {}, **options)
       req = build_request(:associate_s3_resources, params)
       req.send_request(options)
     end
@@ -429,9 +429,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/DisassociateMemberAccount AWS API Documentation
     #
-    # @overload disassociate_member_account(params = {})
+    # @overload disassociate_member_account(**params)
     # @param [Hash] params ({})
-    def disassociate_member_account(params = {}, options = {})
+    def disassociate_member_account(params = {}, **options)
       req = build_request(:disassociate_member_account, params)
       req.send_request(options)
     end
@@ -476,9 +476,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/DisassociateS3Resources AWS API Documentation
     #
-    # @overload disassociate_s3_resources(params = {})
+    # @overload disassociate_s3_resources(**params)
     # @param [Hash] params ({})
-    def disassociate_s3_resources(params = {}, options = {})
+    def disassociate_s3_resources(params = {}, **options)
       req = build_request(:disassociate_s3_resources, params)
       req.send_request(options)
     end
@@ -519,9 +519,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/ListMemberAccounts AWS API Documentation
     #
-    # @overload list_member_accounts(params = {})
+    # @overload list_member_accounts(**params)
     # @param [Hash] params ({})
-    def list_member_accounts(params = {}, options = {})
+    def list_member_accounts(params = {}, **options)
       req = build_request(:list_member_accounts, params)
       req.send_request(options)
     end
@@ -572,9 +572,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/ListS3Resources AWS API Documentation
     #
-    # @overload list_s3_resources(params = {})
+    # @overload list_s3_resources(**params)
     # @param [Hash] params ({})
-    def list_s3_resources(params = {}, options = {})
+    def list_s3_resources(params = {}, **options)
       req = build_request(:list_s3_resources, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::Macie
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/UpdateS3Resources AWS API Documentation
     #
-    # @overload update_s3_resources(params = {})
+    # @overload update_s3_resources(**params)
     # @param [Hash] params ({})
-    def update_s3_resources(params = {}, options = {})
+    def update_s3_resources(params = {}, **options)
       req = build_request(:update_s3_resources, params)
       req.send_request(options)
     end
@@ -635,7 +635,7 @@ module Aws::Macie
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -643,15 +643,15 @@ module Aws::Macie
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-macie'
-      context[:gem_version] = '1.25.0'
+      context[:gem_name] = "aws-sdk-macie"
+      context[:gem_version] = "1.25.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

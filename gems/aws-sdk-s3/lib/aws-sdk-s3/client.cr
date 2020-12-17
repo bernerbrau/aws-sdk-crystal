@@ -7,45 +7,45 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/protocols/rest_xml.rb'
-require 'aws-sdk-s3/plugins/accelerate.rb'
-require 'aws-sdk-s3/plugins/arn.rb'
-require 'aws-sdk-s3/plugins/bucket_dns.rb'
-require 'aws-sdk-s3/plugins/bucket_name_restrictions.rb'
-require 'aws-sdk-s3/plugins/dualstack.rb'
-require 'aws-sdk-s3/plugins/expect_100_continue.rb'
-require 'aws-sdk-s3/plugins/get_bucket_location_fix.rb'
-require 'aws-sdk-s3/plugins/http_200_errors.rb'
-require 'aws-sdk-s3/plugins/iad_regional_endpoint.rb'
-require 'aws-sdk-s3/plugins/location_constraint.rb'
-require 'aws-sdk-s3/plugins/md5s.rb'
-require 'aws-sdk-s3/plugins/redirects.rb'
-require 'aws-sdk-s3/plugins/s3_host_id.rb'
-require 'aws-sdk-s3/plugins/s3_signer.rb'
-require 'aws-sdk-s3/plugins/sse_cpk.rb'
-require 'aws-sdk-s3/plugins/streaming_retry.rb'
-require 'aws-sdk-s3/plugins/url_encoded_keys.rb'
-require 'aws-sdk-core/plugins/event_stream_configuration.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/protocols/rest_xml.rb"
+require "aws-sdk-s3/plugins/accelerate.rb"
+require "aws-sdk-s3/plugins/arn.rb"
+require "aws-sdk-s3/plugins/bucket_dns.rb"
+require "aws-sdk-s3/plugins/bucket_name_restrictions.rb"
+require "aws-sdk-s3/plugins/dualstack.rb"
+require "aws-sdk-s3/plugins/expect_100_continue.rb"
+require "aws-sdk-s3/plugins/get_bucket_location_fix.rb"
+require "aws-sdk-s3/plugins/http_200_errors.rb"
+require "aws-sdk-s3/plugins/iad_regional_endpoint.rb"
+require "aws-sdk-s3/plugins/location_constraint.rb"
+require "aws-sdk-s3/plugins/md5s.rb"
+require "aws-sdk-s3/plugins/redirects.rb"
+require "aws-sdk-s3/plugins/s3_host_id.rb"
+require "aws-sdk-s3/plugins/s3_signer.rb"
+require "aws-sdk-s3/plugins/sse_cpk.rb"
+require "aws-sdk-s3/plugins/streaming_retry.rb"
+require "aws-sdk-s3/plugins/url_encoded_keys.rb"
+require "aws-sdk-core/plugins/event_stream_configuration.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:s3)
 
@@ -361,7 +361,7 @@ module Aws::S3
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -526,9 +526,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/AbortMultipartUpload AWS API Documentation
     #
-    # @overload abort_multipart_upload(params = {})
+    # @overload abort_multipart_upload(**params)
     # @param [Hash] params ({})
-    def abort_multipart_upload(params = {}, options = {})
+    def abort_multipart_upload(params = {}, **options)
       req = build_request(:abort_multipart_upload, params)
       req.send_request(options)
     end
@@ -726,9 +726,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CompleteMultipartUpload AWS API Documentation
     #
-    # @overload complete_multipart_upload(params = {})
+    # @overload complete_multipart_upload(**params)
     # @param [Hash] params ({})
-    def complete_multipart_upload(params = {}, options = {})
+    def complete_multipart_upload(params = {}, **options)
       req = build_request(:complete_multipart_upload, params)
       req.send_request(options)
     end
@@ -1266,9 +1266,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CopyObject AWS API Documentation
     #
-    # @overload copy_object(params = {})
+    # @overload copy_object(**params)
     # @param [Hash] params ({})
-    def copy_object(params = {}, options = {})
+    def copy_object(params = {}, **options)
       req = build_request(:copy_object, params)
       req.send_request(options)
     end
@@ -1469,9 +1469,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CreateBucket AWS API Documentation
     #
-    # @overload create_bucket(params = {})
+    # @overload create_bucket(**params)
     # @param [Hash] params ({})
-    def create_bucket(params = {}, options = {})
+    def create_bucket(params = {}, **options)
       req = build_request(:create_bucket, params)
       req.send_request(options)
     end
@@ -1965,9 +1965,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CreateMultipartUpload AWS API Documentation
     #
-    # @overload create_multipart_upload(params = {})
+    # @overload create_multipart_upload(**params)
     # @param [Hash] params ({})
-    def create_multipart_upload(params = {}, options = {})
+    def create_multipart_upload(params = {}, **options)
       req = build_request(:create_multipart_upload, params)
       req.send_request(options)
     end
@@ -2015,9 +2015,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucket AWS API Documentation
     #
-    # @overload delete_bucket(params = {})
+    # @overload delete_bucket(**params)
     # @param [Hash] params ({})
-    def delete_bucket(params = {}, options = {})
+    def delete_bucket(params = {}, **options)
       req = build_request(:delete_bucket, params)
       req.send_request(options)
     end
@@ -2077,9 +2077,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketAnalyticsConfiguration AWS API Documentation
     #
-    # @overload delete_bucket_analytics_configuration(params = {})
+    # @overload delete_bucket_analytics_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_analytics_configuration(params = {}, options = {})
+    def delete_bucket_analytics_configuration(params = {}, **options)
       req = build_request(:delete_bucket_analytics_configuration, params)
       req.send_request(options)
     end
@@ -2133,9 +2133,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketCors AWS API Documentation
     #
-    # @overload delete_bucket_cors(params = {})
+    # @overload delete_bucket_cors(**params)
     # @param [Hash] params ({})
-    def delete_bucket_cors(params = {}, options = {})
+    def delete_bucket_cors(params = {}, **options)
       req = build_request(:delete_bucket_cors, params)
       req.send_request(options)
     end
@@ -2187,9 +2187,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketEncryption AWS API Documentation
     #
-    # @overload delete_bucket_encryption(params = {})
+    # @overload delete_bucket_encryption(**params)
     # @param [Hash] params ({})
-    def delete_bucket_encryption(params = {}, options = {})
+    def delete_bucket_encryption(params = {}, **options)
       req = build_request(:delete_bucket_encryption, params)
       req.send_request(options)
     end
@@ -2249,9 +2249,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketIntelligentTieringConfiguration AWS API Documentation
     #
-    # @overload delete_bucket_intelligent_tiering_configuration(params = {})
+    # @overload delete_bucket_intelligent_tiering_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_intelligent_tiering_configuration(params = {}, options = {})
+    def delete_bucket_intelligent_tiering_configuration(params = {}, **options)
       req = build_request(:delete_bucket_intelligent_tiering_configuration, params)
       req.send_request(options)
     end
@@ -2310,9 +2310,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketInventoryConfiguration AWS API Documentation
     #
-    # @overload delete_bucket_inventory_configuration(params = {})
+    # @overload delete_bucket_inventory_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_inventory_configuration(params = {}, options = {})
+    def delete_bucket_inventory_configuration(params = {}, **options)
       req = build_request(:delete_bucket_inventory_configuration, params)
       req.send_request(options)
     end
@@ -2374,9 +2374,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketLifecycle AWS API Documentation
     #
-    # @overload delete_bucket_lifecycle(params = {})
+    # @overload delete_bucket_lifecycle(**params)
     # @param [Hash] params ({})
-    def delete_bucket_lifecycle(params = {}, options = {})
+    def delete_bucket_lifecycle(params = {}, **options)
       req = build_request(:delete_bucket_lifecycle, params)
       req.send_request(options)
     end
@@ -2438,9 +2438,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketMetricsConfiguration AWS API Documentation
     #
-    # @overload delete_bucket_metrics_configuration(params = {})
+    # @overload delete_bucket_metrics_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_metrics_configuration(params = {}, options = {})
+    def delete_bucket_metrics_configuration(params = {}, **options)
       req = build_request(:delete_bucket_metrics_configuration, params)
       req.send_request(options)
     end
@@ -2484,9 +2484,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketOwnershipControls AWS API Documentation
     #
-    # @overload delete_bucket_ownership_controls(params = {})
+    # @overload delete_bucket_ownership_controls(**params)
     # @param [Hash] params ({})
-    def delete_bucket_ownership_controls(params = {}, options = {})
+    def delete_bucket_ownership_controls(params = {}, **options)
       req = build_request(:delete_bucket_ownership_controls, params)
       req.send_request(options)
     end
@@ -2550,9 +2550,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketPolicy AWS API Documentation
     #
-    # @overload delete_bucket_policy(params = {})
+    # @overload delete_bucket_policy(**params)
     # @param [Hash] params ({})
-    def delete_bucket_policy(params = {}, options = {})
+    def delete_bucket_policy(params = {}, **options)
       req = build_request(:delete_bucket_policy, params)
       req.send_request(options)
     end
@@ -2616,9 +2616,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketReplication AWS API Documentation
     #
-    # @overload delete_bucket_replication(params = {})
+    # @overload delete_bucket_replication(**params)
     # @param [Hash] params ({})
-    def delete_bucket_replication(params = {}, options = {})
+    def delete_bucket_replication(params = {}, **options)
       req = build_request(:delete_bucket_replication, params)
       req.send_request(options)
     end
@@ -2668,9 +2668,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketTagging AWS API Documentation
     #
-    # @overload delete_bucket_tagging(params = {})
+    # @overload delete_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def delete_bucket_tagging(params = {}, options = {})
+    def delete_bucket_tagging(params = {}, **options)
       req = build_request(:delete_bucket_tagging, params)
       req.send_request(options)
     end
@@ -2732,9 +2732,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketWebsite AWS API Documentation
     #
-    # @overload delete_bucket_website(params = {})
+    # @overload delete_bucket_website(**params)
     # @param [Hash] params ({})
-    def delete_bucket_website(params = {}, options = {})
+    def delete_bucket_website(params = {}, **options)
       req = build_request(:delete_bucket_website, params)
       req.send_request(options)
     end
@@ -2883,9 +2883,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteObject AWS API Documentation
     #
-    # @overload delete_object(params = {})
+    # @overload delete_object(**params)
     # @param [Hash] params ({})
-    def delete_object(params = {}, options = {})
+    def delete_object(params = {}, **options)
       req = build_request(:delete_object, params)
       req.send_request(options)
     end
@@ -3000,9 +3000,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteObjectTagging AWS API Documentation
     #
-    # @overload delete_object_tagging(params = {})
+    # @overload delete_object_tagging(**params)
     # @param [Hash] params ({})
-    def delete_object_tagging(params = {}, options = {})
+    def delete_object_tagging(params = {}, **options)
       req = build_request(:delete_object_tagging, params)
       req.send_request(options)
     end
@@ -3229,9 +3229,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteObjects AWS API Documentation
     #
-    # @overload delete_objects(params = {})
+    # @overload delete_objects(**params)
     # @param [Hash] params ({})
-    def delete_objects(params = {}, options = {})
+    def delete_objects(params = {}, **options)
       req = build_request(:delete_objects, params)
       req.send_request(options)
     end
@@ -3282,9 +3282,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeletePublicAccessBlock AWS API Documentation
     #
-    # @overload delete_public_access_block(params = {})
+    # @overload delete_public_access_block(**params)
     # @param [Hash] params ({})
-    def delete_public_access_block(params = {}, options = {})
+    def delete_public_access_block(params = {}, **options)
       req = build_request(:delete_public_access_block, params)
       req.send_request(options)
     end
@@ -3353,9 +3353,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketAccelerateConfiguration AWS API Documentation
     #
-    # @overload get_bucket_accelerate_configuration(params = {})
+    # @overload get_bucket_accelerate_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_accelerate_configuration(params = {}, options = {})
+    def get_bucket_accelerate_configuration(params = {}, **options)
       req = build_request(:get_bucket_accelerate_configuration, params)
       req.send_request(options)
     end
@@ -3411,9 +3411,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketAcl AWS API Documentation
     #
-    # @overload get_bucket_acl(params = {})
+    # @overload get_bucket_acl(**params)
     # @param [Hash] params ({})
-    def get_bucket_acl(params = {}, options = {})
+    def get_bucket_acl(params = {}, **options)
       req = build_request(:get_bucket_acl, params)
       req.send_request(options)
     end
@@ -3493,9 +3493,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketAnalyticsConfiguration AWS API Documentation
     #
-    # @overload get_bucket_analytics_configuration(params = {})
+    # @overload get_bucket_analytics_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_analytics_configuration(params = {}, options = {})
+    def get_bucket_analytics_configuration(params = {}, **options)
       req = build_request(:get_bucket_analytics_configuration, params)
       req.send_request(options)
     end
@@ -3582,9 +3582,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketCors AWS API Documentation
     #
-    # @overload get_bucket_cors(params = {})
+    # @overload get_bucket_cors(**params)
     # @param [Hash] params ({})
-    def get_bucket_cors(params = {}, options = {})
+    def get_bucket_cors(params = {}, **options)
       req = build_request(:get_bucket_cors, params)
       req.send_request(options)
     end
@@ -3643,9 +3643,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketEncryption AWS API Documentation
     #
-    # @overload get_bucket_encryption(params = {})
+    # @overload get_bucket_encryption(**params)
     # @param [Hash] params ({})
-    def get_bucket_encryption(params = {}, options = {})
+    def get_bucket_encryption(params = {}, **options)
       req = build_request(:get_bucket_encryption, params)
       req.send_request(options)
     end
@@ -3722,9 +3722,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketIntelligentTieringConfiguration AWS API Documentation
     #
-    # @overload get_bucket_intelligent_tiering_configuration(params = {})
+    # @overload get_bucket_intelligent_tiering_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_intelligent_tiering_configuration(params = {}, options = {})
+    def get_bucket_intelligent_tiering_configuration(params = {}, **options)
       req = build_request(:get_bucket_intelligent_tiering_configuration, params)
       req.send_request(options)
     end
@@ -3801,9 +3801,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketInventoryConfiguration AWS API Documentation
     #
-    # @overload get_bucket_inventory_configuration(params = {})
+    # @overload get_bucket_inventory_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_inventory_configuration(params = {}, options = {})
+    def get_bucket_inventory_configuration(params = {}, **options)
       req = build_request(:get_bucket_inventory_configuration, params)
       req.send_request(options)
     end
@@ -3913,9 +3913,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketLifecycle AWS API Documentation
     #
-    # @overload get_bucket_lifecycle(params = {})
+    # @overload get_bucket_lifecycle(**params)
     # @param [Hash] params ({})
-    def get_bucket_lifecycle(params = {}, options = {})
+    def get_bucket_lifecycle(params = {}, **options)
       req = build_request(:get_bucket_lifecycle, params)
       req.send_request(options)
     end
@@ -4043,9 +4043,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketLifecycleConfiguration AWS API Documentation
     #
-    # @overload get_bucket_lifecycle_configuration(params = {})
+    # @overload get_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_lifecycle_configuration(params = {}, options = {})
+    def get_bucket_lifecycle_configuration(params = {}, **options)
       req = build_request(:get_bucket_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -4107,9 +4107,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketLocation AWS API Documentation
     #
-    # @overload get_bucket_location(params = {})
+    # @overload get_bucket_location(**params)
     # @param [Hash] params ({})
-    def get_bucket_location(params = {}, options = {})
+    def get_bucket_location(params = {}, **options)
       req = build_request(:get_bucket_location, params)
       req.send_request(options)
     end
@@ -4162,9 +4162,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketLogging AWS API Documentation
     #
-    # @overload get_bucket_logging(params = {})
+    # @overload get_bucket_logging(**params)
     # @param [Hash] params ({})
-    def get_bucket_logging(params = {}, options = {})
+    def get_bucket_logging(params = {}, **options)
       req = build_request(:get_bucket_logging, params)
       req.send_request(options)
     end
@@ -4240,9 +4240,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketMetricsConfiguration AWS API Documentation
     #
-    # @overload get_bucket_metrics_configuration(params = {})
+    # @overload get_bucket_metrics_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_metrics_configuration(params = {}, options = {})
+    def get_bucket_metrics_configuration(params = {}, **options)
       req = build_request(:get_bucket_metrics_configuration, params)
       req.send_request(options)
     end
@@ -4353,9 +4353,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketNotification AWS API Documentation
     #
-    # @overload get_bucket_notification(params = {})
+    # @overload get_bucket_notification(**params)
     # @param [Hash] params ({})
-    def get_bucket_notification(params = {}, options = {})
+    def get_bucket_notification(params = {}, **options)
       req = build_request(:get_bucket_notification, params)
       req.send_request(options)
     end
@@ -4438,9 +4438,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketNotificationConfiguration AWS API Documentation
     #
-    # @overload get_bucket_notification_configuration(params = {})
+    # @overload get_bucket_notification_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_notification_configuration(params = {}, options = {})
+    def get_bucket_notification_configuration(params = {}, **options)
       req = build_request(:get_bucket_notification_configuration, params)
       req.send_request(options)
     end
@@ -4491,9 +4491,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketOwnershipControls AWS API Documentation
     #
-    # @overload get_bucket_ownership_controls(params = {})
+    # @overload get_bucket_ownership_controls(**params)
     # @param [Hash] params ({})
-    def get_bucket_ownership_controls(params = {}, options = {})
+    def get_bucket_ownership_controls(params = {}, **options)
       req = build_request(:get_bucket_ownership_controls, params)
       req.send_request(options)
     end
@@ -4566,9 +4566,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketPolicy AWS API Documentation
     #
-    # @overload get_bucket_policy(params = {})
+    # @overload get_bucket_policy(**params)
     # @param [Hash] params ({})
-    def get_bucket_policy(params = {}, options = {}, &block)
+    def get_bucket_policy(params = {}, **options, &block)
       req = build_request(:get_bucket_policy, params)
       req.send_request(options, &block)
     end
@@ -4627,9 +4627,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketPolicyStatus AWS API Documentation
     #
-    # @overload get_bucket_policy_status(params = {})
+    # @overload get_bucket_policy_status(**params)
     # @param [Hash] params ({})
-    def get_bucket_policy_status(params = {}, options = {})
+    def get_bucket_policy_status(params = {}, **options)
       req = build_request(:get_bucket_policy_status, params)
       req.send_request(options)
     end
@@ -4746,9 +4746,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketReplication AWS API Documentation
     #
-    # @overload get_bucket_replication(params = {})
+    # @overload get_bucket_replication(**params)
     # @param [Hash] params ({})
-    def get_bucket_replication(params = {}, options = {})
+    def get_bucket_replication(params = {}, **options)
       req = build_request(:get_bucket_replication, params)
       req.send_request(options)
     end
@@ -4808,9 +4808,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketRequestPayment AWS API Documentation
     #
-    # @overload get_bucket_request_payment(params = {})
+    # @overload get_bucket_request_payment(**params)
     # @param [Hash] params ({})
-    def get_bucket_request_payment(params = {}, options = {})
+    def get_bucket_request_payment(params = {}, **options)
       req = build_request(:get_bucket_request_payment, params)
       req.send_request(options)
     end
@@ -4890,9 +4890,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketTagging AWS API Documentation
     #
-    # @overload get_bucket_tagging(params = {})
+    # @overload get_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def get_bucket_tagging(params = {}, options = {})
+    def get_bucket_tagging(params = {}, **options)
       req = build_request(:get_bucket_tagging, params)
       req.send_request(options)
     end
@@ -4963,9 +4963,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketVersioning AWS API Documentation
     #
-    # @overload get_bucket_versioning(params = {})
+    # @overload get_bucket_versioning(**params)
     # @param [Hash] params ({})
-    def get_bucket_versioning(params = {}, options = {})
+    def get_bucket_versioning(params = {}, **options)
       req = build_request(:get_bucket_versioning, params)
       req.send_request(options)
     end
@@ -5051,9 +5051,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketWebsite AWS API Documentation
     #
-    # @overload get_bucket_website(params = {})
+    # @overload get_bucket_website(**params)
     # @param [Hash] params ({})
-    def get_bucket_website(params = {}, options = {})
+    def get_bucket_website(params = {}, **options)
       req = build_request(:get_bucket_website, params)
       req.send_request(options)
     end
@@ -5481,9 +5481,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObject AWS API Documentation
     #
-    # @overload get_object(params = {})
+    # @overload get_object(**params)
     # @param [Hash] params ({})
-    def get_object(params = {}, options = {}, &block)
+    def get_object(params = {}, **options, &block)
       req = build_request(:get_object, params)
       req.send_request(options, &block)
     end
@@ -5634,9 +5634,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObjectAcl AWS API Documentation
     #
-    # @overload get_object_acl(params = {})
+    # @overload get_object_acl(**params)
     # @param [Hash] params ({})
-    def get_object_acl(params = {}, options = {})
+    def get_object_acl(params = {}, **options)
       req = build_request(:get_object_acl, params)
       req.send_request(options)
     end
@@ -5710,9 +5710,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObjectLegalHold AWS API Documentation
     #
-    # @overload get_object_legal_hold(params = {})
+    # @overload get_object_legal_hold(**params)
     # @param [Hash] params ({})
-    def get_object_legal_hold(params = {}, options = {})
+    def get_object_legal_hold(params = {}, **options)
       req = build_request(:get_object_legal_hold, params)
       req.send_request(options)
     end
@@ -5766,9 +5766,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObjectLockConfiguration AWS API Documentation
     #
-    # @overload get_object_lock_configuration(params = {})
+    # @overload get_object_lock_configuration(**params)
     # @param [Hash] params ({})
-    def get_object_lock_configuration(params = {}, options = {})
+    def get_object_lock_configuration(params = {}, **options)
       req = build_request(:get_object_lock_configuration, params)
       req.send_request(options)
     end
@@ -5843,9 +5843,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObjectRetention AWS API Documentation
     #
-    # @overload get_object_retention(params = {})
+    # @overload get_object_retention(**params)
     # @param [Hash] params ({})
-    def get_object_retention(params = {}, options = {})
+    def get_object_retention(params = {}, **options)
       req = build_request(:get_object_retention, params)
       req.send_request(options)
     end
@@ -5983,9 +5983,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObjectTagging AWS API Documentation
     #
-    # @overload get_object_tagging(params = {})
+    # @overload get_object_tagging(**params)
     # @param [Hash] params ({})
-    def get_object_tagging(params = {}, options = {})
+    def get_object_tagging(params = {}, **options)
       req = build_request(:get_object_tagging, params)
       req.send_request(options)
     end
@@ -6076,9 +6076,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetObjectTorrent AWS API Documentation
     #
-    # @overload get_object_torrent(params = {})
+    # @overload get_object_torrent(**params)
     # @param [Hash] params ({})
-    def get_object_torrent(params = {}, options = {}, &block)
+    def get_object_torrent(params = {}, **options, &block)
       req = build_request(:get_object_torrent, params)
       req.send_request(options, &block)
     end
@@ -6147,9 +6147,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetPublicAccessBlock AWS API Documentation
     #
-    # @overload get_public_access_block(params = {})
+    # @overload get_public_access_block(**params)
     # @param [Hash] params ({})
-    def get_public_access_block(params = {}, options = {})
+    def get_public_access_block(params = {}, **options)
       req = build_request(:get_public_access_block, params)
       req.send_request(options)
     end
@@ -6228,9 +6228,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/HeadBucket AWS API Documentation
     #
-    # @overload head_bucket(params = {})
+    # @overload head_bucket(**params)
     # @param [Hash] params ({})
-    def head_bucket(params = {}, options = {})
+    def head_bucket(params = {}, **options)
       req = build_request(:head_bucket, params)
       req.send_request(options)
     end
@@ -6536,9 +6536,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/HeadObject AWS API Documentation
     #
-    # @overload head_object(params = {})
+    # @overload head_object(**params)
     # @param [Hash] params ({})
-    def head_object(params = {}, options = {})
+    def head_object(params = {}, **options)
       req = build_request(:head_object, params)
       req.send_request(options)
     end
@@ -6634,9 +6634,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketAnalyticsConfigurations AWS API Documentation
     #
-    # @overload list_bucket_analytics_configurations(params = {})
+    # @overload list_bucket_analytics_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_analytics_configurations(params = {}, options = {})
+    def list_bucket_analytics_configurations(params = {}, **options)
       req = build_request(:list_bucket_analytics_configurations, params)
       req.send_request(options)
     end
@@ -6721,9 +6721,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketIntelligentTieringConfigurations AWS API Documentation
     #
-    # @overload list_bucket_intelligent_tiering_configurations(params = {})
+    # @overload list_bucket_intelligent_tiering_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_intelligent_tiering_configurations(params = {}, options = {})
+    def list_bucket_intelligent_tiering_configurations(params = {}, **options)
       req = build_request(:list_bucket_intelligent_tiering_configurations, params)
       req.send_request(options)
     end
@@ -6819,9 +6819,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketInventoryConfigurations AWS API Documentation
     #
-    # @overload list_bucket_inventory_configurations(params = {})
+    # @overload list_bucket_inventory_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_inventory_configurations(params = {}, options = {})
+    def list_bucket_inventory_configurations(params = {}, **options)
       req = build_request(:list_bucket_inventory_configurations, params)
       req.send_request(options)
     end
@@ -6915,9 +6915,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketMetricsConfigurations AWS API Documentation
     #
-    # @overload list_bucket_metrics_configurations(params = {})
+    # @overload list_bucket_metrics_configurations(**params)
     # @param [Hash] params ({})
-    def list_bucket_metrics_configurations(params = {}, options = {})
+    def list_bucket_metrics_configurations(params = {}, **options)
       req = build_request(:list_bucket_metrics_configurations, params)
       req.send_request(options)
     end
@@ -6972,9 +6972,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBuckets AWS API Documentation
     #
-    # @overload list_buckets(params = {})
+    # @overload list_buckets(**params)
     # @param [Hash] params ({})
-    def list_buckets(params = {}, options = {})
+    def list_buckets(params = {}, **options)
       req = build_request(:list_buckets, params)
       req.send_request(options)
     end
@@ -7260,9 +7260,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListMultipartUploads AWS API Documentation
     #
-    # @overload list_multipart_uploads(params = {})
+    # @overload list_multipart_uploads(**params)
     # @param [Hash] params ({})
-    def list_multipart_uploads(params = {}, options = {})
+    def list_multipart_uploads(params = {}, **options)
       req = build_request(:list_multipart_uploads, params)
       req.send_request(options)
     end
@@ -7453,9 +7453,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListObjectVersions AWS API Documentation
     #
-    # @overload list_object_versions(params = {})
+    # @overload list_object_versions(**params)
     # @param [Hash] params ({})
-    def list_object_versions(params = {}, options = {})
+    def list_object_versions(params = {}, **options)
       req = build_request(:list_object_versions, params)
       req.send_request(options)
     end
@@ -7637,9 +7637,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListObjects AWS API Documentation
     #
-    # @overload list_objects(params = {})
+    # @overload list_objects(**params)
     # @param [Hash] params ({})
-    def list_objects(params = {}, options = {})
+    def list_objects(params = {}, **options)
       req = build_request(:list_objects, params)
       req.send_request(options)
     end
@@ -7842,9 +7842,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListObjectsV2 AWS API Documentation
     #
-    # @overload list_objects_v2(params = {})
+    # @overload list_objects_v2(**params)
     # @param [Hash] params ({})
-    def list_objects_v2(params = {}, options = {})
+    def list_objects_v2(params = {}, **options)
       req = build_request(:list_objects_v2, params)
       req.send_request(options)
     end
@@ -8039,9 +8039,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListParts AWS API Documentation
     #
-    # @overload list_parts(params = {})
+    # @overload list_parts(**params)
     # @param [Hash] params ({})
-    def list_parts(params = {}, options = {})
+    def list_parts(params = {}, **options)
       req = build_request(:list_parts, params)
       req.send_request(options)
     end
@@ -8117,9 +8117,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketAccelerateConfiguration AWS API Documentation
     #
-    # @overload put_bucket_accelerate_configuration(params = {})
+    # @overload put_bucket_accelerate_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_accelerate_configuration(params = {}, options = {})
+    def put_bucket_accelerate_configuration(params = {}, **options)
       req = build_request(:put_bucket_accelerate_configuration, params)
       req.send_request(options)
     end
@@ -8374,9 +8374,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketAcl AWS API Documentation
     #
-    # @overload put_bucket_acl(params = {})
+    # @overload put_bucket_acl(**params)
     # @param [Hash] params ({})
-    def put_bucket_acl(params = {}, options = {})
+    def put_bucket_acl(params = {}, **options)
       req = build_request(:put_bucket_acl, params)
       req.send_request(options)
     end
@@ -8507,9 +8507,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketAnalyticsConfiguration AWS API Documentation
     #
-    # @overload put_bucket_analytics_configuration(params = {})
+    # @overload put_bucket_analytics_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_analytics_configuration(params = {}, options = {})
+    def put_bucket_analytics_configuration(params = {}, **options)
       req = build_request(:put_bucket_analytics_configuration, params)
       req.send_request(options)
     end
@@ -8664,9 +8664,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketCors AWS API Documentation
     #
-    # @overload put_bucket_cors(params = {})
+    # @overload put_bucket_cors(**params)
     # @param [Hash] params ({})
-    def put_bucket_cors(params = {}, options = {})
+    def put_bucket_cors(params = {}, **options)
       req = build_request(:put_bucket_cors, params)
       req.send_request(options)
     end
@@ -8759,9 +8759,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketEncryption AWS API Documentation
     #
-    # @overload put_bucket_encryption(params = {})
+    # @overload put_bucket_encryption(**params)
     # @param [Hash] params ({})
-    def put_bucket_encryption(params = {}, options = {})
+    def put_bucket_encryption(params = {}, **options)
       req = build_request(:put_bucket_encryption, params)
       req.send_request(options)
     end
@@ -8849,9 +8849,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketIntelligentTieringConfiguration AWS API Documentation
     #
-    # @overload put_bucket_intelligent_tiering_configuration(params = {})
+    # @overload put_bucket_intelligent_tiering_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_intelligent_tiering_configuration(params = {}, options = {})
+    def put_bucket_intelligent_tiering_configuration(params = {}, **options)
       req = build_request(:put_bucket_intelligent_tiering_configuration, params)
       req.send_request(options)
     end
@@ -8983,9 +8983,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketInventoryConfiguration AWS API Documentation
     #
-    # @overload put_bucket_inventory_configuration(params = {})
+    # @overload put_bucket_inventory_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_inventory_configuration(params = {}, options = {})
+    def put_bucket_inventory_configuration(params = {}, **options)
       req = build_request(:put_bucket_inventory_configuration, params)
       req.send_request(options)
     end
@@ -9110,9 +9110,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketLifecycle AWS API Documentation
     #
-    # @overload put_bucket_lifecycle(params = {})
+    # @overload put_bucket_lifecycle(**params)
     # @param [Hash] params ({})
-    def put_bucket_lifecycle(params = {}, options = {})
+    def put_bucket_lifecycle(params = {}, **options)
       req = build_request(:put_bucket_lifecycle, params)
       req.send_request(options)
     end
@@ -9297,9 +9297,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketLifecycleConfiguration AWS API Documentation
     #
-    # @overload put_bucket_lifecycle_configuration(params = {})
+    # @overload put_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_lifecycle_configuration(params = {}, options = {})
+    def put_bucket_lifecycle_configuration(params = {}, **options)
       req = build_request(:put_bucket_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -9444,9 +9444,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketLogging AWS API Documentation
     #
-    # @overload put_bucket_logging(params = {})
+    # @overload put_bucket_logging(**params)
     # @param [Hash] params ({})
-    def put_bucket_logging(params = {}, options = {})
+    def put_bucket_logging(params = {}, **options)
       req = build_request(:put_bucket_logging, params)
       req.send_request(options)
     end
@@ -9540,9 +9540,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketMetricsConfiguration AWS API Documentation
     #
-    # @overload put_bucket_metrics_configuration(params = {})
+    # @overload put_bucket_metrics_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_metrics_configuration(params = {}, options = {})
+    def put_bucket_metrics_configuration(params = {}, **options)
       req = build_request(:put_bucket_metrics_configuration, params)
       req.send_request(options)
     end
@@ -9604,9 +9604,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketNotification AWS API Documentation
     #
-    # @overload put_bucket_notification(params = {})
+    # @overload put_bucket_notification(**params)
     # @param [Hash] params ({})
-    def put_bucket_notification(params = {}, options = {})
+    def put_bucket_notification(params = {}, **options)
       req = build_request(:put_bucket_notification, params)
       req.send_request(options)
     end
@@ -9774,9 +9774,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketNotificationConfiguration AWS API Documentation
     #
-    # @overload put_bucket_notification_configuration(params = {})
+    # @overload put_bucket_notification_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_notification_configuration(params = {}, options = {})
+    def put_bucket_notification_configuration(params = {}, **options)
       req = build_request(:put_bucket_notification_configuration, params)
       req.send_request(options)
     end
@@ -9838,9 +9838,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketOwnershipControls AWS API Documentation
     #
-    # @overload put_bucket_ownership_controls(params = {})
+    # @overload put_bucket_ownership_controls(**params)
     # @param [Hash] params ({})
-    def put_bucket_ownership_controls(params = {}, options = {})
+    def put_bucket_ownership_controls(params = {}, **options)
       req = build_request(:put_bucket_ownership_controls, params)
       req.send_request(options)
     end
@@ -9920,9 +9920,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketPolicy AWS API Documentation
     #
-    # @overload put_bucket_policy(params = {})
+    # @overload put_bucket_policy(**params)
     # @param [Hash] params ({})
-    def put_bucket_policy(params = {}, options = {})
+    def put_bucket_policy(params = {}, **options)
       req = build_request(:put_bucket_policy, params)
       req.send_request(options)
     end
@@ -10129,9 +10129,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketReplication AWS API Documentation
     #
-    # @overload put_bucket_replication(params = {})
+    # @overload put_bucket_replication(**params)
     # @param [Hash] params ({})
-    def put_bucket_replication(params = {}, options = {})
+    def put_bucket_replication(params = {}, **options)
       req = build_request(:put_bucket_replication, params)
       req.send_request(options)
     end
@@ -10205,9 +10205,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketRequestPayment AWS API Documentation
     #
-    # @overload put_bucket_request_payment(params = {})
+    # @overload put_bucket_request_payment(**params)
     # @param [Hash] params ({})
-    def put_bucket_request_payment(params = {}, options = {})
+    def put_bucket_request_payment(params = {}, **options)
       req = build_request(:put_bucket_request_payment, params)
       req.send_request(options)
     end
@@ -10348,9 +10348,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketTagging AWS API Documentation
     #
-    # @overload put_bucket_tagging(params = {})
+    # @overload put_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def put_bucket_tagging(params = {}, options = {})
+    def put_bucket_tagging(params = {}, **options)
       req = build_request(:put_bucket_tagging, params)
       req.send_request(options)
     end
@@ -10457,9 +10457,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketVersioning AWS API Documentation
     #
-    # @overload put_bucket_versioning(params = {})
+    # @overload put_bucket_versioning(**params)
     # @param [Hash] params ({})
-    def put_bucket_versioning(params = {}, options = {})
+    def put_bucket_versioning(params = {}, **options)
       req = build_request(:put_bucket_versioning, params)
       req.send_request(options)
     end
@@ -10617,9 +10617,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketWebsite AWS API Documentation
     #
-    # @overload put_bucket_website(params = {})
+    # @overload put_bucket_website(**params)
     # @param [Hash] params ({})
-    def put_bucket_website(params = {}, options = {})
+    def put_bucket_website(params = {}, **options)
       req = build_request(:put_bucket_website, params)
       req.send_request(options)
     end
@@ -11168,9 +11168,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutObject AWS API Documentation
     #
-    # @overload put_object(params = {})
+    # @overload put_object(**params)
     # @param [Hash] params ({})
-    def put_object(params = {}, options = {})
+    def put_object(params = {}, **options)
       req = build_request(:put_object, params)
       req.send_request(options)
     end
@@ -11501,9 +11501,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutObjectAcl AWS API Documentation
     #
-    # @overload put_object_acl(params = {})
+    # @overload put_object_acl(**params)
     # @param [Hash] params ({})
-    def put_object_acl(params = {}, options = {})
+    def put_object_acl(params = {}, **options)
       req = build_request(:put_object_acl, params)
       req.send_request(options)
     end
@@ -11594,9 +11594,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutObjectLegalHold AWS API Documentation
     #
-    # @overload put_object_legal_hold(params = {})
+    # @overload put_object_legal_hold(**params)
     # @param [Hash] params ({})
-    def put_object_legal_hold(params = {}, options = {})
+    def put_object_legal_hold(params = {}, **options)
       req = build_request(:put_object_legal_hold, params)
       req.send_request(options)
     end
@@ -11683,9 +11683,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutObjectLockConfiguration AWS API Documentation
     #
-    # @overload put_object_lock_configuration(params = {})
+    # @overload put_object_lock_configuration(**params)
     # @param [Hash] params ({})
-    def put_object_lock_configuration(params = {}, options = {})
+    def put_object_lock_configuration(params = {}, **options)
       req = build_request(:put_object_lock_configuration, params)
       req.send_request(options)
     end
@@ -11783,9 +11783,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutObjectRetention AWS API Documentation
     #
-    # @overload put_object_retention(params = {})
+    # @overload put_object_retention(**params)
     # @param [Hash] params ({})
-    def put_object_retention(params = {}, options = {})
+    def put_object_retention(params = {}, **options)
       req = build_request(:put_object_retention, params)
       req.send_request(options)
     end
@@ -11946,9 +11946,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutObjectTagging AWS API Documentation
     #
-    # @overload put_object_tagging(params = {})
+    # @overload put_object_tagging(**params)
     # @param [Hash] params ({})
-    def put_object_tagging(params = {}, options = {})
+    def put_object_tagging(params = {}, **options)
       req = build_request(:put_object_tagging, params)
       req.send_request(options)
     end
@@ -12032,9 +12032,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutPublicAccessBlock AWS API Documentation
     #
-    # @overload put_public_access_block(params = {})
+    # @overload put_public_access_block(**params)
     # @param [Hash] params ({})
-    def put_public_access_block(params = {}, options = {})
+    def put_public_access_block(params = {}, **options)
       req = build_request(:put_public_access_block, params)
       req.send_request(options)
     end
@@ -12453,9 +12453,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/RestoreObject AWS API Documentation
     #
-    # @overload restore_object(params = {})
+    # @overload restore_object(**params)
     # @param [Hash] params ({})
-    def restore_object(params = {}, options = {})
+    def restore_object(params = {}, **options)
       req = build_request(:restore_object, params)
       req.send_request(options)
     end
@@ -12849,9 +12849,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/SelectObjectContent AWS API Documentation
     #
-    # @overload select_object_content(params = {})
+    # @overload select_object_content(**params)
     # @param [Hash] params ({})
-    def select_object_content(params = {}, options = {}, &block)
+    def select_object_content(params = {}, **options, &block)
       params = params.dup
       event_stream_handler = case handler = params.delete(:event_stream_handler)
         when EventStreams::SelectObjectContentEventStream then handler
@@ -13126,9 +13126,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/UploadPart AWS API Documentation
     #
-    # @overload upload_part(params = {})
+    # @overload upload_part(**params)
     # @param [Hash] params ({})
-    def upload_part(params = {}, options = {})
+    def upload_part(params = {}, **options)
       req = build_request(:upload_part, params)
       req.send_request(options)
     end
@@ -13511,9 +13511,9 @@ module Aws::S3
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/UploadPartCopy AWS API Documentation
     #
-    # @overload upload_part_copy(params = {})
+    # @overload upload_part_copy(**params)
     # @param [Hash] params ({})
-    def upload_part_copy(params = {}, options = {})
+    def upload_part_copy(params = {}, **options)
       req = build_request(:upload_part_copy, params)
       req.send_request(options)
     end
@@ -13522,7 +13522,7 @@ module Aws::S3
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -13530,8 +13530,8 @@ module Aws::S3
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-s3'
-      context[:gem_version] = '1.86.2'
+      context[:gem_name] = "aws-sdk-s3"
+      context[:gem_version] = "1.86.2"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -13626,7 +13626,7 @@ module Aws::S3
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -13642,7 +13642,7 @@ module Aws::S3
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

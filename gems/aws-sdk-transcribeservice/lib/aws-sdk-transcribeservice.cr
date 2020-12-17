@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-transcribeservice/types'
-require_relative 'aws-sdk-transcribeservice/client_api'
-require_relative 'aws-sdk-transcribeservice/client'
-require_relative 'aws-sdk-transcribeservice/errors'
-require_relative 'aws-sdk-transcribeservice/resource'
-require_relative 'aws-sdk-transcribeservice/customizations'
+require_relative "aws-sdk-transcribeservice/types"
+require_relative "aws-sdk-transcribeservice/client_api"
+require_relative "aws-sdk-transcribeservice/client"
+require_relative "aws-sdk-transcribeservice/errors"
+require_relative "aws-sdk-transcribeservice/resource"
+require_relative "aws-sdk-transcribeservice/customizations"
 
 # This module provides support for Amazon Transcribe Service. This module is available in the
 # `aws-sdk-transcribeservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-transcribeservice/customizations'
 # @!group service
 module Aws::TranscribeService
 
-  GEM_VERSION = '1.50.0'
+  GEM_VERSION = "1.50.0"
 
 end

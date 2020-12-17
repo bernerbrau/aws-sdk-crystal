@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::CodeDeploy
   # Waiters are utility methods that poll for a particular state to occur
@@ -114,7 +114,7 @@ module Aws::CodeDeploy
 
       # @option (see Client#get_deployment)
       # @return (see Client#get_deployment)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:redshift)
 
@@ -280,7 +280,7 @@ module Aws::Redshift
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -371,9 +371,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AcceptReservedNodeExchange AWS API Documentation
     #
-    # @overload accept_reserved_node_exchange(params = {})
+    # @overload accept_reserved_node_exchange(**params)
     # @param [Hash] params ({})
-    def accept_reserved_node_exchange(params = {}, options = {})
+    def accept_reserved_node_exchange(params = {}, **options)
       req = build_request(:accept_reserved_node_exchange, params)
       req.send_request(options)
     end
@@ -457,9 +457,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AuthorizeClusterSecurityGroupIngress AWS API Documentation
     #
-    # @overload authorize_cluster_security_group_ingress(params = {})
+    # @overload authorize_cluster_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_cluster_security_group_ingress(params = {}, options = {})
+    def authorize_cluster_security_group_ingress(params = {}, **options)
       req = build_request(:authorize_cluster_security_group_ingress, params)
       req.send_request(options)
     end
@@ -546,9 +546,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AuthorizeSnapshotAccess AWS API Documentation
     #
-    # @overload authorize_snapshot_access(params = {})
+    # @overload authorize_snapshot_access(**params)
     # @param [Hash] params ({})
-    def authorize_snapshot_access(params = {}, options = {})
+    def authorize_snapshot_access(params = {}, **options)
       req = build_request(:authorize_snapshot_access, params)
       req.send_request(options)
     end
@@ -586,9 +586,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/BatchDeleteClusterSnapshots AWS API Documentation
     #
-    # @overload batch_delete_cluster_snapshots(params = {})
+    # @overload batch_delete_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def batch_delete_cluster_snapshots(params = {}, options = {})
+    def batch_delete_cluster_snapshots(params = {}, **options)
       req = build_request(:batch_delete_cluster_snapshots, params)
       req.send_request(options)
     end
@@ -638,9 +638,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/BatchModifyClusterSnapshots AWS API Documentation
     #
-    # @overload batch_modify_cluster_snapshots(params = {})
+    # @overload batch_modify_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def batch_modify_cluster_snapshots(params = {}, options = {})
+    def batch_modify_cluster_snapshots(params = {}, **options)
       req = build_request(:batch_modify_cluster_snapshots, params)
       req.send_request(options)
     end
@@ -700,9 +700,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CancelResize AWS API Documentation
     #
-    # @overload cancel_resize(params = {})
+    # @overload cancel_resize(**params)
     # @param [Hash] params ({})
-    def cancel_resize(params = {}, options = {})
+    def cancel_resize(params = {}, **options)
       req = build_request(:cancel_resize, params)
       req.send_request(options)
     end
@@ -828,9 +828,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CopyClusterSnapshot AWS API Documentation
     #
-    # @overload copy_cluster_snapshot(params = {})
+    # @overload copy_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_cluster_snapshot(params = {}, options = {})
+    def copy_cluster_snapshot(params = {}, **options)
       req = build_request(:copy_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -1318,9 +1318,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -1407,9 +1407,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateClusterParameterGroup AWS API Documentation
     #
-    # @overload create_cluster_parameter_group(params = {})
+    # @overload create_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_cluster_parameter_group(params = {}, options = {})
+    def create_cluster_parameter_group(params = {}, **options)
       req = build_request(:create_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -1486,9 +1486,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateClusterSecurityGroup AWS API Documentation
     #
-    # @overload create_cluster_security_group(params = {})
+    # @overload create_cluster_security_group(**params)
     # @param [Hash] params ({})
-    def create_cluster_security_group(params = {}, options = {})
+    def create_cluster_security_group(params = {}, **options)
       req = build_request(:create_cluster_security_group, params)
       req.send_request(options)
     end
@@ -1596,9 +1596,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateClusterSnapshot AWS API Documentation
     #
-    # @overload create_cluster_snapshot(params = {})
+    # @overload create_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def create_cluster_snapshot(params = {}, options = {})
+    def create_cluster_snapshot(params = {}, **options)
       req = build_request(:create_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -1675,9 +1675,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateClusterSubnetGroup AWS API Documentation
     #
-    # @overload create_cluster_subnet_group(params = {})
+    # @overload create_cluster_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_cluster_subnet_group(params = {}, options = {})
+    def create_cluster_subnet_group(params = {}, **options)
       req = build_request(:create_cluster_subnet_group, params)
       req.send_request(options)
     end
@@ -1808,9 +1808,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateEventSubscription AWS API Documentation
     #
-    # @overload create_event_subscription(params = {})
+    # @overload create_event_subscription(**params)
     # @param [Hash] params ({})
-    def create_event_subscription(params = {}, options = {})
+    def create_event_subscription(params = {}, **options)
       req = build_request(:create_event_subscription, params)
       req.send_request(options)
     end
@@ -1864,9 +1864,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateHsmClientCertificate AWS API Documentation
     #
-    # @overload create_hsm_client_certificate(params = {})
+    # @overload create_hsm_client_certificate(**params)
     # @param [Hash] params ({})
-    def create_hsm_client_certificate(params = {}, options = {})
+    def create_hsm_client_certificate(params = {}, **options)
       req = build_request(:create_hsm_client_certificate, params)
       req.send_request(options)
     end
@@ -1943,9 +1943,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateHsmConfiguration AWS API Documentation
     #
-    # @overload create_hsm_configuration(params = {})
+    # @overload create_hsm_configuration(**params)
     # @param [Hash] params ({})
-    def create_hsm_configuration(params = {}, options = {})
+    def create_hsm_configuration(params = {}, **options)
       req = build_request(:create_hsm_configuration, params)
       req.send_request(options)
     end
@@ -2050,9 +2050,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateScheduledAction AWS API Documentation
     #
-    # @overload create_scheduled_action(params = {})
+    # @overload create_scheduled_action(**params)
     # @param [Hash] params ({})
-    def create_scheduled_action(params = {}, options = {})
+    def create_scheduled_action(params = {}, **options)
       req = build_request(:create_scheduled_action, params)
       req.send_request(options)
     end
@@ -2120,9 +2120,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateSnapshotCopyGrant AWS API Documentation
     #
-    # @overload create_snapshot_copy_grant(params = {})
+    # @overload create_snapshot_copy_grant(**params)
     # @param [Hash] params ({})
-    def create_snapshot_copy_grant(params = {}, options = {})
+    def create_snapshot_copy_grant(params = {}, **options)
       req = build_request(:create_snapshot_copy_grant, params)
       req.send_request(options)
     end
@@ -2193,9 +2193,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateSnapshotSchedule AWS API Documentation
     #
-    # @overload create_snapshot_schedule(params = {})
+    # @overload create_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def create_snapshot_schedule(params = {}, options = {})
+    def create_snapshot_schedule(params = {}, **options)
       req = build_request(:create_snapshot_schedule, params)
       req.send_request(options)
     end
@@ -2237,9 +2237,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateTags AWS API Documentation
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -2320,9 +2320,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateUsageLimit AWS API Documentation
     #
-    # @overload create_usage_limit(params = {})
+    # @overload create_usage_limit(**params)
     # @param [Hash] params ({})
-    def create_usage_limit(params = {}, options = {})
+    def create_usage_limit(params = {}, **options)
       req = build_request(:create_usage_limit, params)
       req.send_request(options)
     end
@@ -2514,9 +2514,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteCluster AWS API Documentation
     #
-    # @overload delete_cluster(params = {})
+    # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, options = {})
+    def delete_cluster(params = {}, **options)
       req = build_request(:delete_cluster, params)
       req.send_request(options)
     end
@@ -2547,9 +2547,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteClusterParameterGroup AWS API Documentation
     #
-    # @overload delete_cluster_parameter_group(params = {})
+    # @overload delete_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_cluster_parameter_group(params = {}, options = {})
+    def delete_cluster_parameter_group(params = {}, **options)
       req = build_request(:delete_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -2582,9 +2582,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteClusterSecurityGroup AWS API Documentation
     #
-    # @overload delete_cluster_security_group(params = {})
+    # @overload delete_cluster_security_group(**params)
     # @param [Hash] params ({})
-    def delete_cluster_security_group(params = {}, options = {})
+    def delete_cluster_security_group(params = {}, **options)
       req = build_request(:delete_cluster_security_group, params)
       req.send_request(options)
     end
@@ -2669,9 +2669,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteClusterSnapshot AWS API Documentation
     #
-    # @overload delete_cluster_snapshot(params = {})
+    # @overload delete_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_cluster_snapshot(params = {}, options = {})
+    def delete_cluster_snapshot(params = {}, **options)
       req = build_request(:delete_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -2691,9 +2691,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteClusterSubnetGroup AWS API Documentation
     #
-    # @overload delete_cluster_subnet_group(params = {})
+    # @overload delete_cluster_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_cluster_subnet_group(params = {}, options = {})
+    def delete_cluster_subnet_group(params = {}, **options)
       req = build_request(:delete_cluster_subnet_group, params)
       req.send_request(options)
     end
@@ -2714,9 +2714,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteEventSubscription AWS API Documentation
     #
-    # @overload delete_event_subscription(params = {})
+    # @overload delete_event_subscription(**params)
     # @param [Hash] params ({})
-    def delete_event_subscription(params = {}, options = {})
+    def delete_event_subscription(params = {}, **options)
       req = build_request(:delete_event_subscription, params)
       req.send_request(options)
     end
@@ -2736,9 +2736,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteHsmClientCertificate AWS API Documentation
     #
-    # @overload delete_hsm_client_certificate(params = {})
+    # @overload delete_hsm_client_certificate(**params)
     # @param [Hash] params ({})
-    def delete_hsm_client_certificate(params = {}, options = {})
+    def delete_hsm_client_certificate(params = {}, **options)
       req = build_request(:delete_hsm_client_certificate, params)
       req.send_request(options)
     end
@@ -2758,9 +2758,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteHsmConfiguration AWS API Documentation
     #
-    # @overload delete_hsm_configuration(params = {})
+    # @overload delete_hsm_configuration(**params)
     # @param [Hash] params ({})
-    def delete_hsm_configuration(params = {}, options = {})
+    def delete_hsm_configuration(params = {}, **options)
       req = build_request(:delete_hsm_configuration, params)
       req.send_request(options)
     end
@@ -2780,9 +2780,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteScheduledAction AWS API Documentation
     #
-    # @overload delete_scheduled_action(params = {})
+    # @overload delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_action(params = {}, options = {})
+    def delete_scheduled_action(params = {}, **options)
       req = build_request(:delete_scheduled_action, params)
       req.send_request(options)
     end
@@ -2802,9 +2802,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteSnapshotCopyGrant AWS API Documentation
     #
-    # @overload delete_snapshot_copy_grant(params = {})
+    # @overload delete_snapshot_copy_grant(**params)
     # @param [Hash] params ({})
-    def delete_snapshot_copy_grant(params = {}, options = {})
+    def delete_snapshot_copy_grant(params = {}, **options)
       req = build_request(:delete_snapshot_copy_grant, params)
       req.send_request(options)
     end
@@ -2824,9 +2824,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteSnapshotSchedule AWS API Documentation
     #
-    # @overload delete_snapshot_schedule(params = {})
+    # @overload delete_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def delete_snapshot_schedule(params = {}, options = {})
+    def delete_snapshot_schedule(params = {}, **options)
       req = build_request(:delete_snapshot_schedule, params)
       req.send_request(options)
     end
@@ -2853,9 +2853,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -2875,9 +2875,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteUsageLimit AWS API Documentation
     #
-    # @overload delete_usage_limit(params = {})
+    # @overload delete_usage_limit(**params)
     # @param [Hash] params ({})
-    def delete_usage_limit(params = {}, options = {})
+    def delete_usage_limit(params = {}, **options)
       req = build_request(:delete_usage_limit, params)
       req.send_request(options)
     end
@@ -2906,9 +2906,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeAccountAttributes AWS API Documentation
     #
-    # @overload describe_account_attributes(params = {})
+    # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, options = {})
+    def describe_account_attributes(params = {}, **options)
       req = build_request(:describe_account_attributes, params)
       req.send_request(options)
     end
@@ -2973,9 +2973,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterDbRevisions AWS API Documentation
     #
-    # @overload describe_cluster_db_revisions(params = {})
+    # @overload describe_cluster_db_revisions(**params)
     # @param [Hash] params ({})
-    def describe_cluster_db_revisions(params = {}, options = {})
+    def describe_cluster_db_revisions(params = {}, **options)
       req = build_request(:describe_cluster_db_revisions, params)
       req.send_request(options)
     end
@@ -3079,9 +3079,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterParameterGroups AWS API Documentation
     #
-    # @overload describe_cluster_parameter_groups(params = {})
+    # @overload describe_cluster_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_cluster_parameter_groups(params = {}, options = {})
+    def describe_cluster_parameter_groups(params = {}, **options)
       req = build_request(:describe_cluster_parameter_groups, params)
       req.send_request(options)
     end
@@ -3168,9 +3168,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterParameters AWS API Documentation
     #
-    # @overload describe_cluster_parameters(params = {})
+    # @overload describe_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_cluster_parameters(params = {}, options = {})
+    def describe_cluster_parameters(params = {}, **options)
       req = build_request(:describe_cluster_parameters, params)
       req.send_request(options)
     end
@@ -3288,9 +3288,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterSecurityGroups AWS API Documentation
     #
-    # @overload describe_cluster_security_groups(params = {})
+    # @overload describe_cluster_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_cluster_security_groups(params = {}, options = {})
+    def describe_cluster_security_groups(params = {}, **options)
       req = build_request(:describe_cluster_security_groups, params)
       req.send_request(options)
     end
@@ -3495,9 +3495,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterSnapshots AWS API Documentation
     #
-    # @overload describe_cluster_snapshots(params = {})
+    # @overload describe_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_cluster_snapshots(params = {}, options = {})
+    def describe_cluster_snapshots(params = {}, **options)
       req = build_request(:describe_cluster_snapshots, params)
       req.send_request(options)
     end
@@ -3596,9 +3596,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterSubnetGroups AWS API Documentation
     #
-    # @overload describe_cluster_subnet_groups(params = {})
+    # @overload describe_cluster_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_cluster_subnet_groups(params = {}, options = {})
+    def describe_cluster_subnet_groups(params = {}, **options)
       req = build_request(:describe_cluster_subnet_groups, params)
       req.send_request(options)
     end
@@ -3649,9 +3649,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterTracks AWS API Documentation
     #
-    # @overload describe_cluster_tracks(params = {})
+    # @overload describe_cluster_tracks(**params)
     # @param [Hash] params ({})
-    def describe_cluster_tracks(params = {}, options = {})
+    def describe_cluster_tracks(params = {}, **options)
       req = build_request(:describe_cluster_tracks, params)
       req.send_request(options)
     end
@@ -3728,9 +3728,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterVersions AWS API Documentation
     #
-    # @overload describe_cluster_versions(params = {})
+    # @overload describe_cluster_versions(**params)
     # @param [Hash] params ({})
-    def describe_cluster_versions(params = {}, options = {})
+    def describe_cluster_versions(params = {}, **options)
       req = build_request(:describe_cluster_versions, params)
       req.send_request(options)
     end
@@ -3931,9 +3931,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusters AWS API Documentation
     #
-    # @overload describe_clusters(params = {})
+    # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, options = {})
+    def describe_clusters(params = {}, **options)
       req = build_request(:describe_clusters, params)
       req.send_request(options)
     end
@@ -4003,9 +4003,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeDefaultClusterParameters AWS API Documentation
     #
-    # @overload describe_default_cluster_parameters(params = {})
+    # @overload describe_default_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_default_cluster_parameters(params = {}, options = {})
+    def describe_default_cluster_parameters(params = {}, **options)
       req = build_request(:describe_default_cluster_parameters, params)
       req.send_request(options)
     end
@@ -4048,9 +4048,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeEventCategories AWS API Documentation
     #
-    # @overload describe_event_categories(params = {})
+    # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, options = {})
+    def describe_event_categories(params = {}, **options)
       req = build_request(:describe_event_categories, params)
       req.send_request(options)
     end
@@ -4151,9 +4151,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeEventSubscriptions AWS API Documentation
     #
-    # @overload describe_event_subscriptions(params = {})
+    # @overload describe_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_event_subscriptions(params = {}, options = {})
+    def describe_event_subscriptions(params = {}, **options)
       req = build_request(:describe_event_subscriptions, params)
       req.send_request(options)
     end
@@ -4286,9 +4286,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -4380,9 +4380,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeHsmClientCertificates AWS API Documentation
     #
-    # @overload describe_hsm_client_certificates(params = {})
+    # @overload describe_hsm_client_certificates(**params)
     # @param [Hash] params ({})
-    def describe_hsm_client_certificates(params = {}, options = {})
+    def describe_hsm_client_certificates(params = {}, **options)
       req = build_request(:describe_hsm_client_certificates, params)
       req.send_request(options)
     end
@@ -4477,9 +4477,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeHsmConfigurations AWS API Documentation
     #
-    # @overload describe_hsm_configurations(params = {})
+    # @overload describe_hsm_configurations(**params)
     # @param [Hash] params ({})
-    def describe_hsm_configurations(params = {}, options = {})
+    def describe_hsm_configurations(params = {}, **options)
       req = build_request(:describe_hsm_configurations, params)
       req.send_request(options)
     end
@@ -4518,9 +4518,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeLoggingStatus AWS API Documentation
     #
-    # @overload describe_logging_status(params = {})
+    # @overload describe_logging_status(**params)
     # @param [Hash] params ({})
-    def describe_logging_status(params = {}, options = {})
+    def describe_logging_status(params = {}, **options)
       req = build_request(:describe_logging_status, params)
       req.send_request(options)
     end
@@ -4608,9 +4608,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeNodeConfigurationOptions AWS API Documentation
     #
-    # @overload describe_node_configuration_options(params = {})
+    # @overload describe_node_configuration_options(**params)
     # @param [Hash] params ({})
-    def describe_node_configuration_options(params = {}, options = {})
+    def describe_node_configuration_options(params = {}, **options)
       req = build_request(:describe_node_configuration_options, params)
       req.send_request(options)
     end
@@ -4692,9 +4692,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeOrderableClusterOptions AWS API Documentation
     #
-    # @overload describe_orderable_cluster_options(params = {})
+    # @overload describe_orderable_cluster_options(**params)
     # @param [Hash] params ({})
-    def describe_orderable_cluster_options(params = {}, options = {})
+    def describe_orderable_cluster_options(params = {}, **options)
       req = build_request(:describe_orderable_cluster_options, params)
       req.send_request(options)
     end
@@ -4770,9 +4770,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeReservedNodeOfferings AWS API Documentation
     #
-    # @overload describe_reserved_node_offerings(params = {})
+    # @overload describe_reserved_node_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_node_offerings(params = {}, options = {})
+    def describe_reserved_node_offerings(params = {}, **options)
       req = build_request(:describe_reserved_node_offerings, params)
       req.send_request(options)
     end
@@ -4838,9 +4838,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeReservedNodes AWS API Documentation
     #
-    # @overload describe_reserved_nodes(params = {})
+    # @overload describe_reserved_nodes(**params)
     # @param [Hash] params ({})
-    def describe_reserved_nodes(params = {}, options = {})
+    def describe_reserved_nodes(params = {}, **options)
       req = build_request(:describe_reserved_nodes, params)
       req.send_request(options)
     end
@@ -4910,9 +4910,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeResize AWS API Documentation
     #
-    # @overload describe_resize(params = {})
+    # @overload describe_resize(**params)
     # @param [Hash] params ({})
-    def describe_resize(params = {}, options = {})
+    def describe_resize(params = {}, **options)
       req = build_request(:describe_resize, params)
       req.send_request(options)
     end
@@ -5010,9 +5010,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeScheduledActions AWS API Documentation
     #
-    # @overload describe_scheduled_actions(params = {})
+    # @overload describe_scheduled_actions(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_actions(params = {}, options = {})
+    def describe_scheduled_actions(params = {}, **options)
       req = build_request(:describe_scheduled_actions, params)
       req.send_request(options)
     end
@@ -5099,9 +5099,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeSnapshotCopyGrants AWS API Documentation
     #
-    # @overload describe_snapshot_copy_grants(params = {})
+    # @overload describe_snapshot_copy_grants(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_copy_grants(params = {}, options = {})
+    def describe_snapshot_copy_grants(params = {}, **options)
       req = build_request(:describe_snapshot_copy_grants, params)
       req.send_request(options)
     end
@@ -5174,9 +5174,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeSnapshotSchedules AWS API Documentation
     #
-    # @overload describe_snapshot_schedules(params = {})
+    # @overload describe_snapshot_schedules(**params)
     # @param [Hash] params ({})
-    def describe_snapshot_schedules(params = {}, options = {})
+    def describe_snapshot_schedules(params = {}, **options)
       req = build_request(:describe_snapshot_schedules, params)
       req.send_request(options)
     end
@@ -5195,9 +5195,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeStorage AWS API Documentation
     #
-    # @overload describe_storage(params = {})
+    # @overload describe_storage(**params)
     # @param [Hash] params ({})
-    def describe_storage(params = {}, options = {})
+    def describe_storage(params = {}, **options)
       req = build_request(:describe_storage, params)
       req.send_request(options)
     end
@@ -5268,9 +5268,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeTableRestoreStatus AWS API Documentation
     #
-    # @overload describe_table_restore_status(params = {})
+    # @overload describe_table_restore_status(**params)
     # @param [Hash] params ({})
-    def describe_table_restore_status(params = {}, options = {})
+    def describe_table_restore_status(params = {}, **options)
       req = build_request(:describe_table_restore_status, params)
       req.send_request(options)
     end
@@ -5398,9 +5398,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -5506,9 +5506,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeUsageLimits AWS API Documentation
     #
-    # @overload describe_usage_limits(params = {})
+    # @overload describe_usage_limits(**params)
     # @param [Hash] params ({})
-    def describe_usage_limits(params = {}, options = {})
+    def describe_usage_limits(params = {}, **options)
       req = build_request(:describe_usage_limits, params)
       req.send_request(options)
     end
@@ -5547,9 +5547,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DisableLogging AWS API Documentation
     #
-    # @overload disable_logging(params = {})
+    # @overload disable_logging(**params)
     # @param [Hash] params ({})
-    def disable_logging(params = {}, options = {})
+    def disable_logging(params = {}, **options)
       req = build_request(:disable_logging, params)
       req.send_request(options)
     end
@@ -5683,9 +5683,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DisableSnapshotCopy AWS API Documentation
     #
-    # @overload disable_snapshot_copy(params = {})
+    # @overload disable_snapshot_copy(**params)
     # @param [Hash] params ({})
-    def disable_snapshot_copy(params = {}, options = {})
+    def disable_snapshot_copy(params = {}, **options)
       req = build_request(:disable_snapshot_copy, params)
       req.send_request(options)
     end
@@ -5757,9 +5757,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/EnableLogging AWS API Documentation
     #
-    # @overload enable_logging(params = {})
+    # @overload enable_logging(**params)
     # @param [Hash] params ({})
-    def enable_logging(params = {}, options = {})
+    def enable_logging(params = {}, **options)
       req = build_request(:enable_logging, params)
       req.send_request(options)
     end
@@ -5921,9 +5921,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/EnableSnapshotCopy AWS API Documentation
     #
-    # @overload enable_snapshot_copy(params = {})
+    # @overload enable_snapshot_copy(**params)
     # @param [Hash] params ({})
-    def enable_snapshot_copy(params = {}, options = {})
+    def enable_snapshot_copy(params = {}, **options)
       req = build_request(:enable_snapshot_copy, params)
       req.send_request(options)
     end
@@ -6081,9 +6081,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetClusterCredentials AWS API Documentation
     #
-    # @overload get_cluster_credentials(params = {})
+    # @overload get_cluster_credentials(**params)
     # @param [Hash] params ({})
-    def get_cluster_credentials(params = {}, options = {})
+    def get_cluster_credentials(params = {}, **options)
       req = build_request(:get_cluster_credentials, params)
       req.send_request(options)
     end
@@ -6136,9 +6136,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetReservedNodeExchangeOfferings AWS API Documentation
     #
-    # @overload get_reserved_node_exchange_offerings(params = {})
+    # @overload get_reserved_node_exchange_offerings(**params)
     # @param [Hash] params ({})
-    def get_reserved_node_exchange_offerings(params = {}, options = {})
+    def get_reserved_node_exchange_offerings(params = {}, **options)
       req = build_request(:get_reserved_node_exchange_offerings, params)
       req.send_request(options)
     end
@@ -6559,9 +6559,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCluster AWS API Documentation
     #
-    # @overload modify_cluster(params = {})
+    # @overload modify_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cluster(params = {}, options = {})
+    def modify_cluster(params = {}, **options)
       req = build_request(:modify_cluster, params)
       req.send_request(options)
     end
@@ -6694,9 +6694,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterDbRevision AWS API Documentation
     #
-    # @overload modify_cluster_db_revision(params = {})
+    # @overload modify_cluster_db_revision(**params)
     # @param [Hash] params ({})
-    def modify_cluster_db_revision(params = {}, options = {})
+    def modify_cluster_db_revision(params = {}, **options)
       req = build_request(:modify_cluster_db_revision, params)
       req.send_request(options)
     end
@@ -6836,9 +6836,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterIamRoles AWS API Documentation
     #
-    # @overload modify_cluster_iam_roles(params = {})
+    # @overload modify_cluster_iam_roles(**params)
     # @param [Hash] params ({})
-    def modify_cluster_iam_roles(params = {}, options = {})
+    def modify_cluster_iam_roles(params = {}, **options)
       req = build_request(:modify_cluster_iam_roles, params)
       req.send_request(options)
     end
@@ -6987,9 +6987,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterMaintenance AWS API Documentation
     #
-    # @overload modify_cluster_maintenance(params = {})
+    # @overload modify_cluster_maintenance(**params)
     # @param [Hash] params ({})
-    def modify_cluster_maintenance(params = {}, options = {})
+    def modify_cluster_maintenance(params = {}, **options)
       req = build_request(:modify_cluster_maintenance, params)
       req.send_request(options)
     end
@@ -7049,9 +7049,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterParameterGroup AWS API Documentation
     #
-    # @overload modify_cluster_parameter_group(params = {})
+    # @overload modify_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_cluster_parameter_group(params = {}, options = {})
+    def modify_cluster_parameter_group(params = {}, **options)
       req = build_request(:modify_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -7133,9 +7133,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterSnapshot AWS API Documentation
     #
-    # @overload modify_cluster_snapshot(params = {})
+    # @overload modify_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def modify_cluster_snapshot(params = {}, options = {})
+    def modify_cluster_snapshot(params = {}, **options)
       req = build_request(:modify_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -7166,9 +7166,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterSnapshotSchedule AWS API Documentation
     #
-    # @overload modify_cluster_snapshot_schedule(params = {})
+    # @overload modify_cluster_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def modify_cluster_snapshot_schedule(params = {}, options = {})
+    def modify_cluster_snapshot_schedule(params = {}, **options)
       req = build_request(:modify_cluster_snapshot_schedule, params)
       req.send_request(options)
     end
@@ -7217,9 +7217,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterSubnetGroup AWS API Documentation
     #
-    # @overload modify_cluster_subnet_group(params = {})
+    # @overload modify_cluster_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_cluster_subnet_group(params = {}, options = {})
+    def modify_cluster_subnet_group(params = {}, **options)
       req = build_request(:modify_cluster_subnet_group, params)
       req.send_request(options)
     end
@@ -7307,9 +7307,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyEventSubscription AWS API Documentation
     #
-    # @overload modify_event_subscription(params = {})
+    # @overload modify_event_subscription(**params)
     # @param [Hash] params ({})
-    def modify_event_subscription(params = {}, options = {})
+    def modify_event_subscription(params = {}, **options)
       req = build_request(:modify_event_subscription, params)
       req.send_request(options)
     end
@@ -7406,9 +7406,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyScheduledAction AWS API Documentation
     #
-    # @overload modify_scheduled_action(params = {})
+    # @overload modify_scheduled_action(**params)
     # @param [Hash] params ({})
-    def modify_scheduled_action(params = {}, options = {})
+    def modify_scheduled_action(params = {}, **options)
       req = build_request(:modify_scheduled_action, params)
       req.send_request(options)
     end
@@ -7574,9 +7574,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifySnapshotCopyRetentionPeriod AWS API Documentation
     #
-    # @overload modify_snapshot_copy_retention_period(params = {})
+    # @overload modify_snapshot_copy_retention_period(**params)
     # @param [Hash] params ({})
-    def modify_snapshot_copy_retention_period(params = {}, options = {})
+    def modify_snapshot_copy_retention_period(params = {}, **options)
       req = build_request(:modify_snapshot_copy_retention_period, params)
       req.send_request(options)
     end
@@ -7627,9 +7627,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifySnapshotSchedule AWS API Documentation
     #
-    # @overload modify_snapshot_schedule(params = {})
+    # @overload modify_snapshot_schedule(**params)
     # @param [Hash] params ({})
-    def modify_snapshot_schedule(params = {}, options = {})
+    def modify_snapshot_schedule(params = {}, **options)
       req = build_request(:modify_snapshot_schedule, params)
       req.send_request(options)
     end
@@ -7682,9 +7682,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyUsageLimit AWS API Documentation
     #
-    # @overload modify_usage_limit(params = {})
+    # @overload modify_usage_limit(**params)
     # @param [Hash] params ({})
-    def modify_usage_limit(params = {}, options = {})
+    def modify_usage_limit(params = {}, **options)
       req = build_request(:modify_usage_limit, params)
       req.send_request(options)
     end
@@ -7808,9 +7808,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/PauseCluster AWS API Documentation
     #
-    # @overload pause_cluster(params = {})
+    # @overload pause_cluster(**params)
     # @param [Hash] params ({})
-    def pause_cluster(params = {}, options = {})
+    def pause_cluster(params = {}, **options)
       req = build_request(:pause_cluster, params)
       req.send_request(options)
     end
@@ -7869,9 +7869,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/PurchaseReservedNodeOffering AWS API Documentation
     #
-    # @overload purchase_reserved_node_offering(params = {})
+    # @overload purchase_reserved_node_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_node_offering(params = {}, options = {})
+    def purchase_reserved_node_offering(params = {}, **options)
       req = build_request(:purchase_reserved_node_offering, params)
       req.send_request(options)
     end
@@ -8005,9 +8005,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RebootCluster AWS API Documentation
     #
-    # @overload reboot_cluster(params = {})
+    # @overload reboot_cluster(**params)
     # @param [Hash] params ({})
-    def reboot_cluster(params = {}, options = {})
+    def reboot_cluster(params = {}, **options)
       req = build_request(:reboot_cluster, params)
       req.send_request(options)
     end
@@ -8066,9 +8066,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ResetClusterParameterGroup AWS API Documentation
     #
-    # @overload reset_cluster_parameter_group(params = {})
+    # @overload reset_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_cluster_parameter_group(params = {}, options = {})
+    def reset_cluster_parameter_group(params = {}, **options)
       req = build_request(:reset_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -8241,9 +8241,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ResizeCluster AWS API Documentation
     #
-    # @overload resize_cluster(params = {})
+    # @overload resize_cluster(**params)
     # @param [Hash] params ({})
-    def resize_cluster(params = {}, options = {})
+    def resize_cluster(params = {}, **options)
       req = build_request(:resize_cluster, params)
       req.send_request(options)
     end
@@ -8627,9 +8627,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RestoreFromClusterSnapshot AWS API Documentation
     #
-    # @overload restore_from_cluster_snapshot(params = {})
+    # @overload restore_from_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_from_cluster_snapshot(params = {}, options = {})
+    def restore_from_cluster_snapshot(params = {}, **options)
       req = build_request(:restore_from_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -8714,9 +8714,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RestoreTableFromClusterSnapshot AWS API Documentation
     #
-    # @overload restore_table_from_cluster_snapshot(params = {})
+    # @overload restore_table_from_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_table_from_cluster_snapshot(params = {}, options = {})
+    def restore_table_from_cluster_snapshot(params = {}, **options)
       req = build_request(:restore_table_from_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -8840,9 +8840,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ResumeCluster AWS API Documentation
     #
-    # @overload resume_cluster(params = {})
+    # @overload resume_cluster(**params)
     # @param [Hash] params ({})
-    def resume_cluster(params = {}, options = {})
+    def resume_cluster(params = {}, **options)
       req = build_request(:resume_cluster, params)
       req.send_request(options)
     end
@@ -8917,9 +8917,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RevokeClusterSecurityGroupIngress AWS API Documentation
     #
-    # @overload revoke_cluster_security_group_ingress(params = {})
+    # @overload revoke_cluster_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_cluster_security_group_ingress(params = {}, options = {})
+    def revoke_cluster_security_group_ingress(params = {}, **options)
       req = build_request(:revoke_cluster_security_group_ingress, params)
       req.send_request(options)
     end
@@ -9005,9 +9005,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RevokeSnapshotAccess AWS API Documentation
     #
-    # @overload revoke_snapshot_access(params = {})
+    # @overload revoke_snapshot_access(**params)
     # @param [Hash] params ({})
-    def revoke_snapshot_access(params = {}, options = {})
+    def revoke_snapshot_access(params = {}, **options)
       req = build_request(:revoke_snapshot_access, params)
       req.send_request(options)
     end
@@ -9135,9 +9135,9 @@ module Aws::Redshift
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RotateEncryptionKey AWS API Documentation
     #
-    # @overload rotate_encryption_key(params = {})
+    # @overload rotate_encryption_key(**params)
     # @param [Hash] params ({})
-    def rotate_encryption_key(params = {}, options = {})
+    def rotate_encryption_key(params = {}, **options)
       req = build_request(:rotate_encryption_key, params)
       req.send_request(options)
     end
@@ -9146,7 +9146,7 @@ module Aws::Redshift
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -9154,8 +9154,8 @@ module Aws::Redshift
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-redshift'
-      context[:gem_version] = '1.52.0'
+      context[:gem_name] = "aws-sdk-redshift"
+      context[:gem_version] = "1.52.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -9250,7 +9250,7 @@ module Aws::Redshift
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -9266,7 +9266,7 @@ module Aws::Redshift
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ram)
 
@@ -280,7 +280,7 @@ module Aws::RAM
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -371,9 +371,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/AcceptResourceShareInvitation AWS API Documentation
     #
-    # @overload accept_resource_share_invitation(params = {})
+    # @overload accept_resource_share_invitation(**params)
     # @param [Hash] params ({})
-    def accept_resource_share_invitation(params = {}, options = {})
+    def accept_resource_share_invitation(params = {}, **options)
       req = build_request(:accept_resource_share_invitation, params)
       req.send_request(options)
     end
@@ -424,9 +424,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/AssociateResourceShare AWS API Documentation
     #
-    # @overload associate_resource_share(params = {})
+    # @overload associate_resource_share(**params)
     # @param [Hash] params ({})
-    def associate_resource_share(params = {}, options = {})
+    def associate_resource_share(params = {}, **options)
       req = build_request(:associate_resource_share, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/AssociateResourceSharePermission AWS API Documentation
     #
-    # @overload associate_resource_share_permission(params = {})
+    # @overload associate_resource_share_permission(**params)
     # @param [Hash] params ({})
-    def associate_resource_share_permission(params = {}, options = {})
+    def associate_resource_share_permission(params = {}, **options)
       req = build_request(:associate_resource_share_permission, params)
       req.send_request(options)
     end
@@ -548,9 +548,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/CreateResourceShare AWS API Documentation
     #
-    # @overload create_resource_share(params = {})
+    # @overload create_resource_share(**params)
     # @param [Hash] params ({})
-    def create_resource_share(params = {}, options = {})
+    def create_resource_share(params = {}, **options)
       req = build_request(:create_resource_share, params)
       req.send_request(options)
     end
@@ -583,9 +583,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/DeleteResourceShare AWS API Documentation
     #
-    # @overload delete_resource_share(params = {})
+    # @overload delete_resource_share(**params)
     # @param [Hash] params ({})
-    def delete_resource_share(params = {}, options = {})
+    def delete_resource_share(params = {}, **options)
       req = build_request(:delete_resource_share, params)
       req.send_request(options)
     end
@@ -636,9 +636,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/DisassociateResourceShare AWS API Documentation
     #
-    # @overload disassociate_resource_share(params = {})
+    # @overload disassociate_resource_share(**params)
     # @param [Hash] params ({})
-    def disassociate_resource_share(params = {}, options = {})
+    def disassociate_resource_share(params = {}, **options)
       req = build_request(:disassociate_resource_share, params)
       req.send_request(options)
     end
@@ -675,9 +675,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/DisassociateResourceSharePermission AWS API Documentation
     #
-    # @overload disassociate_resource_share_permission(params = {})
+    # @overload disassociate_resource_share_permission(**params)
     # @param [Hash] params ({})
-    def disassociate_resource_share_permission(params = {}, options = {})
+    def disassociate_resource_share_permission(params = {}, **options)
       req = build_request(:disassociate_resource_share_permission, params)
       req.send_request(options)
     end
@@ -696,9 +696,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/EnableSharingWithAwsOrganization AWS API Documentation
     #
-    # @overload enable_sharing_with_aws_organization(params = {})
+    # @overload enable_sharing_with_aws_organization(**params)
     # @param [Hash] params ({})
-    def enable_sharing_with_aws_organization(params = {}, options = {})
+    def enable_sharing_with_aws_organization(params = {}, **options)
       req = build_request(:enable_sharing_with_aws_organization, params)
       req.send_request(options)
     end
@@ -735,9 +735,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/GetPermission AWS API Documentation
     #
-    # @overload get_permission(params = {})
+    # @overload get_permission(**params)
     # @param [Hash] params ({})
-    def get_permission(params = {}, options = {})
+    def get_permission(params = {}, **options)
       req = build_request(:get_permission, params)
       req.send_request(options)
     end
@@ -783,9 +783,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/GetResourcePolicies AWS API Documentation
     #
-    # @overload get_resource_policies(params = {})
+    # @overload get_resource_policies(**params)
     # @param [Hash] params ({})
-    def get_resource_policies(params = {}, options = {})
+    def get_resource_policies(params = {}, **options)
       req = build_request(:get_resource_policies, params)
       req.send_request(options)
     end
@@ -855,9 +855,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/GetResourceShareAssociations AWS API Documentation
     #
-    # @overload get_resource_share_associations(params = {})
+    # @overload get_resource_share_associations(**params)
     # @param [Hash] params ({})
-    def get_resource_share_associations(params = {}, options = {})
+    def get_resource_share_associations(params = {}, **options)
       req = build_request(:get_resource_share_associations, params)
       req.send_request(options)
     end
@@ -918,9 +918,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/GetResourceShareInvitations AWS API Documentation
     #
-    # @overload get_resource_share_invitations(params = {})
+    # @overload get_resource_share_invitations(**params)
     # @param [Hash] params ({})
-    def get_resource_share_invitations(params = {}, options = {})
+    def get_resource_share_invitations(params = {}, **options)
       req = build_request(:get_resource_share_invitations, params)
       req.send_request(options)
     end
@@ -994,9 +994,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/GetResourceShares AWS API Documentation
     #
-    # @overload get_resource_shares(params = {})
+    # @overload get_resource_shares(**params)
     # @param [Hash] params ({})
-    def get_resource_shares(params = {}, options = {})
+    def get_resource_shares(params = {}, **options)
       req = build_request(:get_resource_shares, params)
       req.send_request(options)
     end
@@ -1045,9 +1045,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ListPendingInvitationResources AWS API Documentation
     #
-    # @overload list_pending_invitation_resources(params = {})
+    # @overload list_pending_invitation_resources(**params)
     # @param [Hash] params ({})
-    def list_pending_invitation_resources(params = {}, options = {})
+    def list_pending_invitation_resources(params = {}, **options)
       req = build_request(:list_pending_invitation_resources, params)
       req.send_request(options)
     end
@@ -1095,9 +1095,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ListPermissions AWS API Documentation
     #
-    # @overload list_permissions(params = {})
+    # @overload list_permissions(**params)
     # @param [Hash] params ({})
-    def list_permissions(params = {}, options = {})
+    def list_permissions(params = {}, **options)
       req = build_request(:list_permissions, params)
       req.send_request(options)
     end
@@ -1167,9 +1167,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ListPrincipals AWS API Documentation
     #
-    # @overload list_principals(params = {})
+    # @overload list_principals(**params)
     # @param [Hash] params ({})
-    def list_principals(params = {}, options = {})
+    def list_principals(params = {}, **options)
       req = build_request(:list_principals, params)
       req.send_request(options)
     end
@@ -1216,9 +1216,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ListResourceSharePermissions AWS API Documentation
     #
-    # @overload list_resource_share_permissions(params = {})
+    # @overload list_resource_share_permissions(**params)
     # @param [Hash] params ({})
-    def list_resource_share_permissions(params = {}, options = {})
+    def list_resource_share_permissions(params = {}, **options)
       req = build_request(:list_resource_share_permissions, params)
       req.send_request(options)
     end
@@ -1254,9 +1254,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ListResourceTypes AWS API Documentation
     #
-    # @overload list_resource_types(params = {})
+    # @overload list_resource_types(**params)
     # @param [Hash] params ({})
-    def list_resource_types(params = {}, options = {})
+    def list_resource_types(params = {}, **options)
       req = build_request(:list_resource_types, params)
       req.send_request(options)
     end
@@ -1329,9 +1329,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ListResources AWS API Documentation
     #
-    # @overload list_resources(params = {})
+    # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, options = {})
+    def list_resources(params = {}, **options)
       req = build_request(:list_resources, params)
       req.send_request(options)
     end
@@ -1366,9 +1366,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/PromoteResourceShareCreatedFromPolicy AWS API Documentation
     #
-    # @overload promote_resource_share_created_from_policy(params = {})
+    # @overload promote_resource_share_created_from_policy(**params)
     # @param [Hash] params ({})
-    def promote_resource_share_created_from_policy(params = {}, options = {})
+    def promote_resource_share_created_from_policy(params = {}, **options)
       req = build_request(:promote_resource_share_created_from_policy, params)
       req.send_request(options)
     end
@@ -1417,9 +1417,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/RejectResourceShareInvitation AWS API Documentation
     #
-    # @overload reject_resource_share_invitation(params = {})
+    # @overload reject_resource_share_invitation(**params)
     # @param [Hash] params ({})
-    def reject_resource_share_invitation(params = {}, options = {})
+    def reject_resource_share_invitation(params = {}, **options)
       req = build_request(:reject_resource_share_invitation, params)
       req.send_request(options)
     end
@@ -1448,9 +1448,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1475,9 +1475,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1530,9 +1530,9 @@ module Aws::RAM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/UpdateResourceShare AWS API Documentation
     #
-    # @overload update_resource_share(params = {})
+    # @overload update_resource_share(**params)
     # @param [Hash] params ({})
-    def update_resource_share(params = {}, options = {})
+    def update_resource_share(params = {}, **options)
       req = build_request(:update_resource_share, params)
       req.send_request(options)
     end
@@ -1541,7 +1541,7 @@ module Aws::RAM
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1549,15 +1549,15 @@ module Aws::RAM
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ram'
-      context[:gem_version] = '1.22.0'
+      context[:gem_name] = "aws-sdk-ram"
+      context[:gem_version] = "1.22.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

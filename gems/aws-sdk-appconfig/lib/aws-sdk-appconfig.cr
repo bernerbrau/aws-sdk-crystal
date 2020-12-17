@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appconfig/types'
-require_relative 'aws-sdk-appconfig/client_api'
-require_relative 'aws-sdk-appconfig/client'
-require_relative 'aws-sdk-appconfig/errors'
-require_relative 'aws-sdk-appconfig/resource'
-require_relative 'aws-sdk-appconfig/customizations'
+require_relative "aws-sdk-appconfig/types"
+require_relative "aws-sdk-appconfig/client_api"
+require_relative "aws-sdk-appconfig/client"
+require_relative "aws-sdk-appconfig/errors"
+require_relative "aws-sdk-appconfig/resource"
+require_relative "aws-sdk-appconfig/customizations"
 
 # This module provides support for Amazon AppConfig. This module is available in the
 # `aws-sdk-appconfig` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-appconfig/customizations'
 # @!group service
 module Aws::AppConfig
 
-  GEM_VERSION = '1.12.0'
+  GEM_VERSION = "1.12.0"
 
 end

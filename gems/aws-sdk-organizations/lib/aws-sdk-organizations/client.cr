@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:organizations)
 
@@ -290,7 +290,7 @@ module Aws::Organizations
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -467,9 +467,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/AcceptHandshake AWS API Documentation
     #
-    # @overload accept_handshake(params = {})
+    # @overload accept_handshake(**params)
     # @param [Hash] params ({})
-    def accept_handshake(params = {}, options = {})
+    def accept_handshake(params = {}, **options)
       req = build_request(:accept_handshake, params)
       req.send_request(options)
     end
@@ -562,9 +562,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/AttachPolicy AWS API Documentation
     #
-    # @overload attach_policy(params = {})
+    # @overload attach_policy(**params)
     # @param [Hash] params ({})
-    def attach_policy(params = {}, options = {})
+    def attach_policy(params = {}, **options)
       req = build_request(:attach_policy, params)
       req.send_request(options)
     end
@@ -679,9 +679,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CancelHandshake AWS API Documentation
     #
-    # @overload cancel_handshake(params = {})
+    # @overload cancel_handshake(**params)
     # @param [Hash] params ({})
-    def cancel_handshake(params = {}, options = {})
+    def cancel_handshake(params = {}, **options)
       req = build_request(:cancel_handshake, params)
       req.send_request(options)
     end
@@ -899,9 +899,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateAccount AWS API Documentation
     #
-    # @overload create_account(params = {})
+    # @overload create_account(**params)
     # @param [Hash] params ({})
-    def create_account(params = {}, options = {})
+    def create_account(params = {}, **options)
       req = build_request(:create_account, params)
       req.send_request(options)
     end
@@ -1150,9 +1150,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateGovCloudAccount AWS API Documentation
     #
-    # @overload create_gov_cloud_account(params = {})
+    # @overload create_gov_cloud_account(**params)
     # @param [Hash] params ({})
-    def create_gov_cloud_account(params = {}, options = {})
+    def create_gov_cloud_account(params = {}, **options)
       req = build_request(:create_gov_cloud_account, params)
       req.send_request(options)
     end
@@ -1275,9 +1275,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateOrganization AWS API Documentation
     #
-    # @overload create_organization(params = {})
+    # @overload create_organization(**params)
     # @param [Hash] params ({})
-    def create_organization(params = {}, options = {})
+    def create_organization(params = {}, **options)
       req = build_request(:create_organization, params)
       req.send_request(options)
     end
@@ -1385,9 +1385,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateOrganizationalUnit AWS API Documentation
     #
-    # @overload create_organizational_unit(params = {})
+    # @overload create_organizational_unit(**params)
     # @param [Hash] params ({})
-    def create_organizational_unit(params = {}, options = {})
+    def create_organizational_unit(params = {}, **options)
       req = build_request(:create_organizational_unit, params)
       req.send_request(options)
     end
@@ -1521,9 +1521,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreatePolicy AWS API Documentation
     #
-    # @overload create_policy(params = {})
+    # @overload create_policy(**params)
     # @param [Hash] params ({})
-    def create_policy(params = {}, options = {})
+    def create_policy(params = {}, **options)
       req = build_request(:create_policy, params)
       req.send_request(options)
     end
@@ -1634,9 +1634,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeclineHandshake AWS API Documentation
     #
-    # @overload decline_handshake(params = {})
+    # @overload decline_handshake(**params)
     # @param [Hash] params ({})
-    def decline_handshake(params = {}, options = {})
+    def decline_handshake(params = {}, **options)
       req = build_request(:decline_handshake, params)
       req.send_request(options)
     end
@@ -1649,9 +1649,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeleteOrganization AWS API Documentation
     #
-    # @overload delete_organization(params = {})
+    # @overload delete_organization(**params)
     # @param [Hash] params ({})
-    def delete_organization(params = {}, options = {})
+    def delete_organization(params = {}, **options)
       req = build_request(:delete_organization, params)
       req.send_request(options)
     end
@@ -1697,9 +1697,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeleteOrganizationalUnit AWS API Documentation
     #
-    # @overload delete_organizational_unit(params = {})
+    # @overload delete_organizational_unit(**params)
     # @param [Hash] params ({})
-    def delete_organizational_unit(params = {}, options = {})
+    def delete_organizational_unit(params = {}, **options)
       req = build_request(:delete_organizational_unit, params)
       req.send_request(options)
     end
@@ -1744,9 +1744,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeletePolicy AWS API Documentation
     #
-    # @overload delete_policy(params = {})
+    # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, options = {})
+    def delete_policy(params = {}, **options)
       req = build_request(:delete_policy, params)
       req.send_request(options)
     end
@@ -1797,9 +1797,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeregisterDelegatedAdministrator AWS API Documentation
     #
-    # @overload deregister_delegated_administrator(params = {})
+    # @overload deregister_delegated_administrator(**params)
     # @param [Hash] params ({})
-    def deregister_delegated_administrator(params = {}, options = {})
+    def deregister_delegated_administrator(params = {}, **options)
       req = build_request(:deregister_delegated_administrator, params)
       req.send_request(options)
     end
@@ -1864,9 +1864,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeAccount AWS API Documentation
     #
-    # @overload describe_account(params = {})
+    # @overload describe_account(**params)
     # @param [Hash] params ({})
-    def describe_account(params = {}, options = {})
+    def describe_account(params = {}, **options)
       req = build_request(:describe_account, params)
       req.send_request(options)
     end
@@ -1934,9 +1934,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeCreateAccountStatus AWS API Documentation
     #
-    # @overload describe_create_account_status(params = {})
+    # @overload describe_create_account_status(**params)
     # @param [Hash] params ({})
-    def describe_create_account_status(params = {}, options = {})
+    def describe_create_account_status(params = {}, **options)
       req = build_request(:describe_create_account_status, params)
       req.send_request(options)
     end
@@ -2001,9 +2001,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeEffectivePolicy AWS API Documentation
     #
-    # @overload describe_effective_policy(params = {})
+    # @overload describe_effective_policy(**params)
     # @param [Hash] params ({})
-    def describe_effective_policy(params = {}, options = {})
+    def describe_effective_policy(params = {}, **options)
       req = build_request(:describe_effective_policy, params)
       req.send_request(options)
     end
@@ -2112,9 +2112,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeHandshake AWS API Documentation
     #
-    # @overload describe_handshake(params = {})
+    # @overload describe_handshake(**params)
     # @param [Hash] params ({})
-    def describe_handshake(params = {}, options = {})
+    def describe_handshake(params = {}, **options)
       req = build_request(:describe_handshake, params)
       req.send_request(options)
     end
@@ -2173,9 +2173,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeOrganization AWS API Documentation
     #
-    # @overload describe_organization(params = {})
+    # @overload describe_organization(**params)
     # @param [Hash] params ({})
-    def describe_organization(params = {}, options = {})
+    def describe_organization(params = {}, **options)
       req = build_request(:describe_organization, params)
       req.send_request(options)
     end
@@ -2236,9 +2236,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeOrganizationalUnit AWS API Documentation
     #
-    # @overload describe_organizational_unit(params = {})
+    # @overload describe_organizational_unit(**params)
     # @param [Hash] params ({})
-    def describe_organizational_unit(params = {}, options = {})
+    def describe_organizational_unit(params = {}, **options)
       req = build_request(:describe_organizational_unit, params)
       req.send_request(options)
     end
@@ -2308,9 +2308,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribePolicy AWS API Documentation
     #
-    # @overload describe_policy(params = {})
+    # @overload describe_policy(**params)
     # @param [Hash] params ({})
-    def describe_policy(params = {}, options = {})
+    def describe_policy(params = {}, **options)
       req = build_request(:describe_policy, params)
       req.send_request(options)
     end
@@ -2396,9 +2396,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DetachPolicy AWS API Documentation
     #
-    # @overload detach_policy(params = {})
+    # @overload detach_policy(**params)
     # @param [Hash] params ({})
-    def detach_policy(params = {}, options = {})
+    def detach_policy(params = {}, **options)
       req = build_request(:detach_policy, params)
       req.send_request(options)
     end
@@ -2455,9 +2455,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DisableAWSServiceAccess AWS API Documentation
     #
-    # @overload disable_aws_service_access(params = {})
+    # @overload disable_aws_service_access(**params)
     # @param [Hash] params ({})
-    def disable_aws_service_access(params = {}, options = {})
+    def disable_aws_service_access(params = {}, **options)
       req = build_request(:disable_aws_service_access, params)
       req.send_request(options)
     end
@@ -2560,9 +2560,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DisablePolicyType AWS API Documentation
     #
-    # @overload disable_policy_type(params = {})
+    # @overload disable_policy_type(**params)
     # @param [Hash] params ({})
-    def disable_policy_type(params = {}, options = {})
+    def disable_policy_type(params = {}, **options)
       req = build_request(:disable_policy_type, params)
       req.send_request(options)
     end
@@ -2610,9 +2610,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/EnableAWSServiceAccess AWS API Documentation
     #
-    # @overload enable_aws_service_access(params = {})
+    # @overload enable_aws_service_access(**params)
     # @param [Hash] params ({})
-    def enable_aws_service_access(params = {}, options = {})
+    def enable_aws_service_access(params = {}, **options)
       req = build_request(:enable_aws_service_access, params)
       req.send_request(options)
     end
@@ -2713,9 +2713,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/EnableAllFeatures AWS API Documentation
     #
-    # @overload enable_all_features(params = {})
+    # @overload enable_all_features(**params)
     # @param [Hash] params ({})
-    def enable_all_features(params = {}, options = {})
+    def enable_all_features(params = {}, **options)
       req = build_request(:enable_all_features, params)
       req.send_request(options)
     end
@@ -2814,9 +2814,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/EnablePolicyType AWS API Documentation
     #
-    # @overload enable_policy_type(params = {})
+    # @overload enable_policy_type(**params)
     # @param [Hash] params ({})
-    def enable_policy_type(params = {}, options = {})
+    def enable_policy_type(params = {}, **options)
       req = build_request(:enable_policy_type, params)
       req.send_request(options)
     end
@@ -2999,9 +2999,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/InviteAccountToOrganization AWS API Documentation
     #
-    # @overload invite_account_to_organization(params = {})
+    # @overload invite_account_to_organization(**params)
     # @param [Hash] params ({})
-    def invite_account_to_organization(params = {}, options = {})
+    def invite_account_to_organization(params = {}, **options)
       req = build_request(:invite_account_to_organization, params)
       req.send_request(options)
     end
@@ -3067,9 +3067,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/LeaveOrganization AWS API Documentation
     #
-    # @overload leave_organization(params = {})
+    # @overload leave_organization(**params)
     # @param [Hash] params ({})
-    def leave_organization(params = {}, options = {})
+    def leave_organization(params = {}, **options)
       req = build_request(:leave_organization, params)
       req.send_request(options)
     end
@@ -3134,9 +3134,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListAWSServiceAccessForOrganization AWS API Documentation
     #
-    # @overload list_aws_service_access_for_organization(params = {})
+    # @overload list_aws_service_access_for_organization(**params)
     # @param [Hash] params ({})
-    def list_aws_service_access_for_organization(params = {}, options = {})
+    def list_aws_service_access_for_organization(params = {}, **options)
       req = build_request(:list_aws_service_access_for_organization, params)
       req.send_request(options)
     end
@@ -3254,9 +3254,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListAccounts AWS API Documentation
     #
-    # @overload list_accounts(params = {})
+    # @overload list_accounts(**params)
     # @param [Hash] params ({})
-    def list_accounts(params = {}, options = {})
+    def list_accounts(params = {}, **options)
       req = build_request(:list_accounts, params)
       req.send_request(options)
     end
@@ -3365,9 +3365,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListAccountsForParent AWS API Documentation
     #
-    # @overload list_accounts_for_parent(params = {})
+    # @overload list_accounts_for_parent(**params)
     # @param [Hash] params ({})
-    def list_accounts_for_parent(params = {}, options = {})
+    def list_accounts_for_parent(params = {}, **options)
       req = build_request(:list_accounts_for_parent, params)
       req.send_request(options)
     end
@@ -3479,9 +3479,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListChildren AWS API Documentation
     #
-    # @overload list_children(params = {})
+    # @overload list_children(**params)
     # @param [Hash] params ({})
-    def list_children(params = {}, options = {})
+    def list_children(params = {}, **options)
       req = build_request(:list_children, params)
       req.send_request(options)
     end
@@ -3604,9 +3604,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListCreateAccountStatus AWS API Documentation
     #
-    # @overload list_create_account_status(params = {})
+    # @overload list_create_account_status(**params)
     # @param [Hash] params ({})
-    def list_create_account_status(params = {}, options = {})
+    def list_create_account_status(params = {}, **options)
       req = build_request(:list_create_account_status, params)
       req.send_request(options)
     end
@@ -3674,9 +3674,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListDelegatedAdministrators AWS API Documentation
     #
-    # @overload list_delegated_administrators(params = {})
+    # @overload list_delegated_administrators(**params)
     # @param [Hash] params ({})
-    def list_delegated_administrators(params = {}, options = {})
+    def list_delegated_administrators(params = {}, **options)
       req = build_request(:list_delegated_administrators, params)
       req.send_request(options)
     end
@@ -3735,9 +3735,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListDelegatedServicesForAccount AWS API Documentation
     #
-    # @overload list_delegated_services_for_account(params = {})
+    # @overload list_delegated_services_for_account(**params)
     # @param [Hash] params ({})
-    def list_delegated_services_for_account(params = {}, options = {})
+    def list_delegated_services_for_account(params = {}, **options)
       req = build_request(:list_delegated_services_for_account, params)
       req.send_request(options)
     end
@@ -3882,9 +3882,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListHandshakesForAccount AWS API Documentation
     #
-    # @overload list_handshakes_for_account(params = {})
+    # @overload list_handshakes_for_account(**params)
     # @param [Hash] params ({})
-    def list_handshakes_for_account(params = {}, options = {})
+    def list_handshakes_for_account(params = {}, **options)
       req = build_request(:list_handshakes_for_account, params)
       req.send_request(options)
     end
@@ -4074,9 +4074,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListHandshakesForOrganization AWS API Documentation
     #
-    # @overload list_handshakes_for_organization(params = {})
+    # @overload list_handshakes_for_organization(**params)
     # @param [Hash] params ({})
-    def list_handshakes_for_organization(params = {}, options = {})
+    def list_handshakes_for_organization(params = {}, **options)
       req = build_request(:list_handshakes_for_organization, params)
       req.send_request(options)
     end
@@ -4184,9 +4184,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListOrganizationalUnitsForParent AWS API Documentation
     #
-    # @overload list_organizational_units_for_parent(params = {})
+    # @overload list_organizational_units_for_parent(**params)
     # @param [Hash] params ({})
-    def list_organizational_units_for_parent(params = {}, options = {})
+    def list_organizational_units_for_parent(params = {}, **options)
       req = build_request(:list_organizational_units_for_parent, params)
       req.send_request(options)
     end
@@ -4292,9 +4292,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListParents AWS API Documentation
     #
-    # @overload list_parents(params = {})
+    # @overload list_parents(**params)
     # @param [Hash] params ({})
-    def list_parents(params = {}, options = {})
+    def list_parents(params = {}, **options)
       req = build_request(:list_parents, params)
       req.send_request(options)
     end
@@ -4419,9 +4419,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListPolicies AWS API Documentation
     #
-    # @overload list_policies(params = {})
+    # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, options = {})
+    def list_policies(params = {}, **options)
       req = build_request(:list_policies, params)
       req.send_request(options)
     end
@@ -4556,9 +4556,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListPoliciesForTarget AWS API Documentation
     #
-    # @overload list_policies_for_target(params = {})
+    # @overload list_policies_for_target(**params)
     # @param [Hash] params ({})
-    def list_policies_for_target(params = {}, options = {})
+    def list_policies_for_target(params = {}, **options)
       req = build_request(:list_policies_for_target, params)
       req.send_request(options)
     end
@@ -4657,9 +4657,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListRoots AWS API Documentation
     #
-    # @overload list_roots(params = {})
+    # @overload list_roots(**params)
     # @param [Hash] params ({})
-    def list_roots(params = {}, options = {})
+    def list_roots(params = {}, **options)
       req = build_request(:list_roots, params)
       req.send_request(options)
     end
@@ -4726,9 +4726,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4839,9 +4839,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListTargetsForPolicy AWS API Documentation
     #
-    # @overload list_targets_for_policy(params = {})
+    # @overload list_targets_for_policy(**params)
     # @param [Hash] params ({})
-    def list_targets_for_policy(params = {}, options = {})
+    def list_targets_for_policy(params = {}, **options)
       req = build_request(:list_targets_for_policy, params)
       req.send_request(options)
     end
@@ -4923,9 +4923,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/MoveAccount AWS API Documentation
     #
-    # @overload move_account(params = {})
+    # @overload move_account(**params)
     # @param [Hash] params ({})
-    def move_account(params = {}, options = {})
+    def move_account(params = {}, **options)
       req = build_request(:move_account, params)
       req.send_request(options)
     end
@@ -4967,9 +4967,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/RegisterDelegatedAdministrator AWS API Documentation
     #
-    # @overload register_delegated_administrator(params = {})
+    # @overload register_delegated_administrator(**params)
     # @param [Hash] params ({})
-    def register_delegated_administrator(params = {}, options = {})
+    def register_delegated_administrator(params = {}, **options)
       req = build_request(:register_delegated_administrator, params)
       req.send_request(options)
     end
@@ -5040,9 +5040,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/RemoveAccountFromOrganization AWS API Documentation
     #
-    # @overload remove_account_from_organization(params = {})
+    # @overload remove_account_from_organization(**params)
     # @param [Hash] params ({})
-    def remove_account_from_organization(params = {}, options = {})
+    def remove_account_from_organization(params = {}, **options)
       req = build_request(:remove_account_from_organization, params)
       req.send_request(options)
     end
@@ -5108,9 +5108,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5160,9 +5160,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5235,9 +5235,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/UpdateOrganizationalUnit AWS API Documentation
     #
-    # @overload update_organizational_unit(params = {})
+    # @overload update_organizational_unit(**params)
     # @param [Hash] params ({})
-    def update_organizational_unit(params = {}, options = {})
+    def update_organizational_unit(params = {}, **options)
       req = build_request(:update_organizational_unit, params)
       req.send_request(options)
     end
@@ -5360,9 +5360,9 @@ module Aws::Organizations
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/UpdatePolicy AWS API Documentation
     #
-    # @overload update_policy(params = {})
+    # @overload update_policy(**params)
     # @param [Hash] params ({})
-    def update_policy(params = {}, options = {})
+    def update_policy(params = {}, **options)
       req = build_request(:update_policy, params)
       req.send_request(options)
     end
@@ -5371,7 +5371,7 @@ module Aws::Organizations
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5379,15 +5379,15 @@ module Aws::Organizations
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-organizations'
-      context[:gem_version] = '1.55.0'
+      context[:gem_name] = "aws-sdk-organizations"
+      context[:gem_version] = "1.55.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

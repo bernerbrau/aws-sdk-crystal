@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotdeviceadvisor)
 
@@ -280,7 +280,7 @@ module Aws::IoTDeviceAdvisor
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -370,9 +370,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.suite_definition_name #=> String
     #   resp.created_at #=> Time
     #
-    # @overload create_suite_definition(params = {})
+    # @overload create_suite_definition(**params)
     # @param [Hash] params ({})
-    def create_suite_definition(params = {}, options = {})
+    def create_suite_definition(params = {}, **options)
       req = build_request(:create_suite_definition, params)
       req.send_request(options)
     end
@@ -390,9 +390,9 @@ module Aws::IoTDeviceAdvisor
     #     suite_definition_id: "UUID", # required
     #   })
     #
-    # @overload delete_suite_definition(params = {})
+    # @overload delete_suite_definition(**params)
     # @param [Hash] params ({})
-    def delete_suite_definition(params = {}, options = {})
+    def delete_suite_definition(params = {}, **options)
       req = build_request(:delete_suite_definition, params)
       req.send_request(options)
     end
@@ -441,9 +441,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.tags #=> Hash
     #   resp.tags["String128"] #=> String
     #
-    # @overload get_suite_definition(params = {})
+    # @overload get_suite_definition(**params)
     # @param [Hash] params ({})
-    def get_suite_definition(params = {}, options = {})
+    def get_suite_definition(params = {}, **options)
       req = build_request(:get_suite_definition, params)
       req.send_request(options)
     end
@@ -511,9 +511,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.tags #=> Hash
     #   resp.tags["String128"] #=> String
     #
-    # @overload get_suite_run(params = {})
+    # @overload get_suite_run(**params)
     # @param [Hash] params ({})
-    def get_suite_run(params = {}, options = {})
+    def get_suite_run(params = {}, **options)
       req = build_request(:get_suite_run, params)
       req.send_request(options)
     end
@@ -542,9 +542,9 @@ module Aws::IoTDeviceAdvisor
     #
     #   resp.qualification_report_download_url #=> String
     #
-    # @overload get_suite_run_report(params = {})
+    # @overload get_suite_run_report(**params)
     # @param [Hash] params ({})
-    def get_suite_run_report(params = {}, options = {})
+    def get_suite_run_report(params = {}, **options)
       req = build_request(:get_suite_run_report, params)
       req.send_request(options)
     end
@@ -583,9 +583,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.suite_definition_information_list[0].created_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_suite_definitions(params = {})
+    # @overload list_suite_definitions(**params)
     # @param [Hash] params ({})
-    def list_suite_definitions(params = {}, options = {})
+    def list_suite_definitions(params = {}, **options)
       req = build_request(:list_suite_definitions, params)
       req.send_request(options)
     end
@@ -639,9 +639,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.suite_runs_list[0].failed #=> Integer
     #   resp.next_token #=> String
     #
-    # @overload list_suite_runs(params = {})
+    # @overload list_suite_runs(**params)
     # @param [Hash] params ({})
-    def list_suite_runs(params = {}, options = {})
+    def list_suite_runs(params = {}, **options)
       req = build_request(:list_suite_runs, params)
       req.send_request(options)
     end
@@ -666,9 +666,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.tags #=> Hash
     #   resp.tags["String128"] #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -717,9 +717,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.group_configuration["ConfigString"] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_test_cases(params = {})
+    # @overload list_test_cases(**params)
     # @param [Hash] params ({})
-    def list_test_cases(params = {}, options = {})
+    def list_test_cases(params = {}, **options)
       req = build_request(:list_test_cases, params)
       req.send_request(options)
     end
@@ -771,9 +771,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.suite_run_arn #=> String
     #   resp.created_at #=> Time
     #
-    # @overload start_suite_run(params = {})
+    # @overload start_suite_run(**params)
     # @param [Hash] params ({})
-    def start_suite_run(params = {}, options = {})
+    def start_suite_run(params = {}, **options)
       req = build_request(:start_suite_run, params)
       req.send_request(options)
     end
@@ -797,9 +797,9 @@ module Aws::IoTDeviceAdvisor
     #     },
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -821,9 +821,9 @@ module Aws::IoTDeviceAdvisor
     #     tag_keys: ["String128"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -873,9 +873,9 @@ module Aws::IoTDeviceAdvisor
     #   resp.created_at #=> Time
     #   resp.last_updated_at #=> Time
     #
-    # @overload update_suite_definition(params = {})
+    # @overload update_suite_definition(**params)
     # @param [Hash] params ({})
-    def update_suite_definition(params = {}, options = {})
+    def update_suite_definition(params = {}, **options)
       req = build_request(:update_suite_definition, params)
       req.send_request(options)
     end
@@ -884,7 +884,7 @@ module Aws::IoTDeviceAdvisor
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -892,15 +892,15 @@ module Aws::IoTDeviceAdvisor
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotdeviceadvisor'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-iotdeviceadvisor"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

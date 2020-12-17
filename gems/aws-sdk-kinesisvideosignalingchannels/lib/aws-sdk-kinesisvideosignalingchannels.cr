@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-kinesisvideosignalingchannels/types'
-require_relative 'aws-sdk-kinesisvideosignalingchannels/client_api'
-require_relative 'aws-sdk-kinesisvideosignalingchannels/client'
-require_relative 'aws-sdk-kinesisvideosignalingchannels/errors'
-require_relative 'aws-sdk-kinesisvideosignalingchannels/resource'
-require_relative 'aws-sdk-kinesisvideosignalingchannels/customizations'
+require_relative "aws-sdk-kinesisvideosignalingchannels/types"
+require_relative "aws-sdk-kinesisvideosignalingchannels/client_api"
+require_relative "aws-sdk-kinesisvideosignalingchannels/client"
+require_relative "aws-sdk-kinesisvideosignalingchannels/errors"
+require_relative "aws-sdk-kinesisvideosignalingchannels/resource"
+require_relative "aws-sdk-kinesisvideosignalingchannels/customizations"
 
 # This module provides support for Amazon Kinesis Video Signaling Channels. This module is available in the
 # `aws-sdk-kinesisvideosignalingchannels` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-kinesisvideosignalingchannels/customizations'
 # @!group service
 module Aws::KinesisVideoSignalingChannels
 
-  GEM_VERSION = '1.8.0'
+  GEM_VERSION = "1.8.0"
 
 end

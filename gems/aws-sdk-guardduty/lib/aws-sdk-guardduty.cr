@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-guardduty/types'
-require_relative 'aws-sdk-guardduty/client_api'
-require_relative 'aws-sdk-guardduty/client'
-require_relative 'aws-sdk-guardduty/errors'
-require_relative 'aws-sdk-guardduty/resource'
-require_relative 'aws-sdk-guardduty/customizations'
+require_relative "aws-sdk-guardduty/types"
+require_relative "aws-sdk-guardduty/client_api"
+require_relative "aws-sdk-guardduty/client"
+require_relative "aws-sdk-guardduty/errors"
+require_relative "aws-sdk-guardduty/resource"
+require_relative "aws-sdk-guardduty/customizations"
 
 # This module provides support for Amazon GuardDuty. This module is available in the
 # `aws-sdk-guardduty` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-guardduty/customizations'
 # @!group service
 module Aws::GuardDuty
 
-  GEM_VERSION = '1.43.0'
+  GEM_VERSION = "1.43.0"
 
 end

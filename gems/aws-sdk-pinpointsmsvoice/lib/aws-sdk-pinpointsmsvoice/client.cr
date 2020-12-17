@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:pinpointsmsvoice)
 
@@ -280,7 +280,7 @@ module Aws::PinpointSMSVoice
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -343,9 +343,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/CreateConfigurationSet AWS API Documentation
     #
-    # @overload create_configuration_set(params = {})
+    # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, options = {})
+    def create_configuration_set(params = {}, **options)
       req = build_request(:create_configuration_set, params)
       req.send_request(options)
     end
@@ -386,9 +386,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/CreateConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload create_configuration_set_event_destination(params = {})
+    # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, options = {})
+    def create_configuration_set_event_destination(params = {}, **options)
       req = build_request(:create_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -407,9 +407,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/DeleteConfigurationSet AWS API Documentation
     #
-    # @overload delete_configuration_set(params = {})
+    # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, options = {})
+    def delete_configuration_set(params = {}, **options)
       req = build_request(:delete_configuration_set, params)
       req.send_request(options)
     end
@@ -431,9 +431,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/DeleteConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload delete_configuration_set_event_destination(params = {})
+    # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, options = {})
+    def delete_configuration_set_event_destination(params = {}, **options)
       req = build_request(:delete_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -469,9 +469,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/GetConfigurationSetEventDestinations AWS API Documentation
     #
-    # @overload get_configuration_set_event_destinations(params = {})
+    # @overload get_configuration_set_event_destinations(**params)
     # @param [Hash] params ({})
-    def get_configuration_set_event_destinations(params = {}, options = {})
+    def get_configuration_set_event_destinations(params = {}, **options)
       req = build_request(:get_configuration_set_event_destinations, params)
       req.send_request(options)
     end
@@ -503,9 +503,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/ListConfigurationSets AWS API Documentation
     #
-    # @overload list_configuration_sets(params = {})
+    # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, options = {})
+    def list_configuration_sets(params = {}, **options)
       req = build_request(:list_configuration_sets, params)
       req.send_request(options)
     end
@@ -567,9 +567,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/SendVoiceMessage AWS API Documentation
     #
-    # @overload send_voice_message(params = {})
+    # @overload send_voice_message(**params)
     # @param [Hash] params ({})
-    def send_voice_message(params = {}, options = {})
+    def send_voice_message(params = {}, **options)
       req = build_request(:send_voice_message, params)
       req.send_request(options)
     end
@@ -612,9 +612,9 @@ module Aws::PinpointSMSVoice
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-2018-09-05/UpdateConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload update_configuration_set_event_destination(params = {})
+    # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, options = {})
+    def update_configuration_set_event_destination(params = {}, **options)
       req = build_request(:update_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -623,7 +623,7 @@ module Aws::PinpointSMSVoice
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -631,15 +631,15 @@ module Aws::PinpointSMSVoice
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-pinpointsmsvoice'
-      context[:gem_version] = '1.21.0'
+      context[:gem_name] = "aws-sdk-pinpointsmsvoice"
+      context[:gem_version] = "1.21.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

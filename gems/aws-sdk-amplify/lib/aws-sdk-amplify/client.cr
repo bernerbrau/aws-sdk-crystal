@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:amplify)
 
@@ -280,7 +280,7 @@ module Aws::Amplify
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -493,9 +493,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/CreateApp AWS API Documentation
     #
-    # @overload create_app(params = {})
+    # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, options = {})
+    def create_app(params = {}, **options)
       req = build_request(:create_app, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/CreateBackendEnvironment AWS API Documentation
     #
-    # @overload create_backend_environment(params = {})
+    # @overload create_backend_environment(**params)
     # @param [Hash] params ({})
-    def create_backend_environment(params = {}, options = {})
+    def create_backend_environment(params = {}, **options)
       req = build_request(:create_backend_environment, params)
       req.send_request(options)
     end
@@ -675,9 +675,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/CreateBranch AWS API Documentation
     #
-    # @overload create_branch(params = {})
+    # @overload create_branch(**params)
     # @param [Hash] params ({})
-    def create_branch(params = {}, options = {})
+    def create_branch(params = {}, **options)
       req = build_request(:create_branch, params)
       req.send_request(options)
     end
@@ -722,9 +722,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/CreateDeployment AWS API Documentation
     #
-    # @overload create_deployment(params = {})
+    # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, options = {})
+    def create_deployment(params = {}, **options)
       req = build_request(:create_deployment, params)
       req.send_request(options)
     end
@@ -790,9 +790,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/CreateDomainAssociation AWS API Documentation
     #
-    # @overload create_domain_association(params = {})
+    # @overload create_domain_association(**params)
     # @param [Hash] params ({})
-    def create_domain_association(params = {}, options = {})
+    def create_domain_association(params = {}, **options)
       req = build_request(:create_domain_association, params)
       req.send_request(options)
     end
@@ -832,9 +832,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/CreateWebhook AWS API Documentation
     #
-    # @overload create_webhook(params = {})
+    # @overload create_webhook(**params)
     # @param [Hash] params ({})
-    def create_webhook(params = {}, options = {})
+    def create_webhook(params = {}, **options)
       req = build_request(:create_webhook, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/DeleteApp AWS API Documentation
     #
-    # @overload delete_app(params = {})
+    # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, options = {})
+    def delete_app(params = {}, **options)
       req = build_request(:delete_app, params)
       req.send_request(options)
     end
@@ -939,9 +939,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/DeleteBackendEnvironment AWS API Documentation
     #
-    # @overload delete_backend_environment(params = {})
+    # @overload delete_backend_environment(**params)
     # @param [Hash] params ({})
-    def delete_backend_environment(params = {}, options = {})
+    def delete_backend_environment(params = {}, **options)
       req = build_request(:delete_backend_environment, params)
       req.send_request(options)
     end
@@ -1001,9 +1001,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/DeleteBranch AWS API Documentation
     #
-    # @overload delete_branch(params = {})
+    # @overload delete_branch(**params)
     # @param [Hash] params ({})
-    def delete_branch(params = {}, options = {})
+    def delete_branch(params = {}, **options)
       req = build_request(:delete_branch, params)
       req.send_request(options)
     end
@@ -1046,9 +1046,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/DeleteDomainAssociation AWS API Documentation
     #
-    # @overload delete_domain_association(params = {})
+    # @overload delete_domain_association(**params)
     # @param [Hash] params ({})
-    def delete_domain_association(params = {}, options = {})
+    def delete_domain_association(params = {}, **options)
       req = build_request(:delete_domain_association, params)
       req.send_request(options)
     end
@@ -1090,9 +1090,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/DeleteJob AWS API Documentation
     #
-    # @overload delete_job(params = {})
+    # @overload delete_job(**params)
     # @param [Hash] params ({})
-    def delete_job(params = {}, options = {})
+    def delete_job(params = {}, **options)
       req = build_request(:delete_job, params)
       req.send_request(options)
     end
@@ -1124,9 +1124,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/DeleteWebhook AWS API Documentation
     #
-    # @overload delete_webhook(params = {})
+    # @overload delete_webhook(**params)
     # @param [Hash] params ({})
-    def delete_webhook(params = {}, options = {})
+    def delete_webhook(params = {}, **options)
       req = build_request(:delete_webhook, params)
       req.send_request(options)
     end
@@ -1167,9 +1167,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GenerateAccessLogs AWS API Documentation
     #
-    # @overload generate_access_logs(params = {})
+    # @overload generate_access_logs(**params)
     # @param [Hash] params ({})
-    def generate_access_logs(params = {}, options = {})
+    def generate_access_logs(params = {}, **options)
       req = build_request(:generate_access_logs, params)
       req.send_request(options)
     end
@@ -1237,9 +1237,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetApp AWS API Documentation
     #
-    # @overload get_app(params = {})
+    # @overload get_app(**params)
     # @param [Hash] params ({})
-    def get_app(params = {}, options = {})
+    def get_app(params = {}, **options)
       req = build_request(:get_app, params)
       req.send_request(options)
     end
@@ -1267,9 +1267,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetArtifactUrl AWS API Documentation
     #
-    # @overload get_artifact_url(params = {})
+    # @overload get_artifact_url(**params)
     # @param [Hash] params ({})
-    def get_artifact_url(params = {}, options = {})
+    def get_artifact_url(params = {}, **options)
       req = build_request(:get_artifact_url, params)
       req.send_request(options)
     end
@@ -1304,9 +1304,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetBackendEnvironment AWS API Documentation
     #
-    # @overload get_backend_environment(params = {})
+    # @overload get_backend_environment(**params)
     # @param [Hash] params ({})
-    def get_backend_environment(params = {}, options = {})
+    def get_backend_environment(params = {}, **options)
       req = build_request(:get_backend_environment, params)
       req.send_request(options)
     end
@@ -1366,9 +1366,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetBranch AWS API Documentation
     #
-    # @overload get_branch(params = {})
+    # @overload get_branch(**params)
     # @param [Hash] params ({})
-    def get_branch(params = {}, options = {})
+    def get_branch(params = {}, **options)
       req = build_request(:get_branch, params)
       req.send_request(options)
     end
@@ -1411,9 +1411,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetDomainAssociation AWS API Documentation
     #
-    # @overload get_domain_association(params = {})
+    # @overload get_domain_association(**params)
     # @param [Hash] params ({})
-    def get_domain_association(params = {}, options = {})
+    def get_domain_association(params = {}, **options)
       req = build_request(:get_domain_association, params)
       req.send_request(options)
     end
@@ -1468,9 +1468,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetJob AWS API Documentation
     #
-    # @overload get_job(params = {})
+    # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, options = {})
+    def get_job(params = {}, **options)
       req = build_request(:get_job, params)
       req.send_request(options)
     end
@@ -1503,9 +1503,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/GetWebhook AWS API Documentation
     #
-    # @overload get_webhook(params = {})
+    # @overload get_webhook(**params)
     # @param [Hash] params ({})
-    def get_webhook(params = {}, options = {})
+    def get_webhook(params = {}, **options)
       req = build_request(:get_webhook, params)
       req.send_request(options)
     end
@@ -1581,9 +1581,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListApps AWS API Documentation
     #
-    # @overload list_apps(params = {})
+    # @overload list_apps(**params)
     # @param [Hash] params ({})
-    def list_apps(params = {}, options = {})
+    def list_apps(params = {}, **options)
       req = build_request(:list_apps, params)
       req.send_request(options)
     end
@@ -1631,9 +1631,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListArtifacts AWS API Documentation
     #
-    # @overload list_artifacts(params = {})
+    # @overload list_artifacts(**params)
     # @param [Hash] params ({})
-    def list_artifacts(params = {}, options = {})
+    def list_artifacts(params = {}, **options)
       req = build_request(:list_artifacts, params)
       req.send_request(options)
     end
@@ -1681,9 +1681,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListBackendEnvironments AWS API Documentation
     #
-    # @overload list_backend_environments(params = {})
+    # @overload list_backend_environments(**params)
     # @param [Hash] params ({})
-    def list_backend_environments(params = {}, options = {})
+    def list_backend_environments(params = {}, **options)
       req = build_request(:list_backend_environments, params)
       req.send_request(options)
     end
@@ -1752,9 +1752,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListBranches AWS API Documentation
     #
-    # @overload list_branches(params = {})
+    # @overload list_branches(**params)
     # @param [Hash] params ({})
-    def list_branches(params = {}, options = {})
+    def list_branches(params = {}, **options)
       req = build_request(:list_branches, params)
       req.send_request(options)
     end
@@ -1806,9 +1806,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListDomainAssociations AWS API Documentation
     #
-    # @overload list_domain_associations(params = {})
+    # @overload list_domain_associations(**params)
     # @param [Hash] params ({})
-    def list_domain_associations(params = {}, options = {})
+    def list_domain_associations(params = {}, **options)
       req = build_request(:list_domain_associations, params)
       req.send_request(options)
     end
@@ -1859,9 +1859,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -1888,9 +1888,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1935,9 +1935,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/ListWebhooks AWS API Documentation
     #
-    # @overload list_webhooks(params = {})
+    # @overload list_webhooks(**params)
     # @param [Hash] params ({})
-    def list_webhooks(params = {}, options = {})
+    def list_webhooks(params = {}, **options)
       req = build_request(:list_webhooks, params)
       req.send_request(options)
     end
@@ -1987,9 +1987,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/StartDeployment AWS API Documentation
     #
-    # @overload start_deployment(params = {})
+    # @overload start_deployment(**params)
     # @param [Hash] params ({})
-    def start_deployment(params = {}, options = {})
+    def start_deployment(params = {}, **options)
       req = build_request(:start_deployment, params)
       req.send_request(options)
     end
@@ -2056,9 +2056,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/StartJob AWS API Documentation
     #
-    # @overload start_job(params = {})
+    # @overload start_job(**params)
     # @param [Hash] params ({})
-    def start_job(params = {}, options = {})
+    def start_job(params = {}, **options)
       req = build_request(:start_job, params)
       req.send_request(options)
     end
@@ -2100,9 +2100,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/StopJob AWS API Documentation
     #
-    # @overload stop_job(params = {})
+    # @overload stop_job(**params)
     # @param [Hash] params ({})
-    def stop_job(params = {}, options = {})
+    def stop_job(params = {}, **options)
       req = build_request(:stop_job, params)
       req.send_request(options)
     end
@@ -2128,9 +2128,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2154,9 +2154,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2325,9 +2325,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/UpdateApp AWS API Documentation
     #
-    # @overload update_app(params = {})
+    # @overload update_app(**params)
     # @param [Hash] params ({})
-    def update_app(params = {}, options = {})
+    def update_app(params = {}, **options)
       req = build_request(:update_app, params)
       req.send_request(options)
     end
@@ -2456,9 +2456,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/UpdateBranch AWS API Documentation
     #
-    # @overload update_branch(params = {})
+    # @overload update_branch(**params)
     # @param [Hash] params ({})
-    def update_branch(params = {}, options = {})
+    def update_branch(params = {}, **options)
       req = build_request(:update_branch, params)
       req.send_request(options)
     end
@@ -2523,9 +2523,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/UpdateDomainAssociation AWS API Documentation
     #
-    # @overload update_domain_association(params = {})
+    # @overload update_domain_association(**params)
     # @param [Hash] params ({})
-    def update_domain_association(params = {}, options = {})
+    def update_domain_association(params = {}, **options)
       req = build_request(:update_domain_association, params)
       req.send_request(options)
     end
@@ -2565,9 +2565,9 @@ module Aws::Amplify
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/UpdateWebhook AWS API Documentation
     #
-    # @overload update_webhook(params = {})
+    # @overload update_webhook(**params)
     # @param [Hash] params ({})
-    def update_webhook(params = {}, options = {})
+    def update_webhook(params = {}, **options)
       req = build_request(:update_webhook, params)
       req.send_request(options)
     end
@@ -2576,7 +2576,7 @@ module Aws::Amplify
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2584,15 +2584,15 @@ module Aws::Amplify
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-amplify'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-amplify"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

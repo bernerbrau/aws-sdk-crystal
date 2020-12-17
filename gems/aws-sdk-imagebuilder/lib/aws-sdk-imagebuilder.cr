@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-imagebuilder/types'
-require_relative 'aws-sdk-imagebuilder/client_api'
-require_relative 'aws-sdk-imagebuilder/client'
-require_relative 'aws-sdk-imagebuilder/errors'
-require_relative 'aws-sdk-imagebuilder/resource'
-require_relative 'aws-sdk-imagebuilder/customizations'
+require_relative "aws-sdk-imagebuilder/types"
+require_relative "aws-sdk-imagebuilder/client_api"
+require_relative "aws-sdk-imagebuilder/client"
+require_relative "aws-sdk-imagebuilder/errors"
+require_relative "aws-sdk-imagebuilder/resource"
+require_relative "aws-sdk-imagebuilder/customizations"
 
 # This module provides support for EC2 Image Builder. This module is available in the
 # `aws-sdk-imagebuilder` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-imagebuilder/customizations'
 # @!group service
 module Aws::Imagebuilder
 
-  GEM_VERSION = '1.16.0'
+  GEM_VERSION = "1.16.0"
 
 end

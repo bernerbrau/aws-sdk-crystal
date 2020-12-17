@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mediastoredata)
 
@@ -280,7 +280,7 @@ module Aws::MediaStoreData
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -344,9 +344,9 @@ module Aws::MediaStoreData
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-data-2017-09-01/DeleteObject AWS API Documentation
     #
-    # @overload delete_object(params = {})
+    # @overload delete_object(**params)
     # @param [Hash] params ({})
-    def delete_object(params = {}, options = {})
+    def delete_object(params = {}, **options)
       req = build_request(:delete_object, params)
       req.send_request(options)
     end
@@ -382,9 +382,9 @@ module Aws::MediaStoreData
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-data-2017-09-01/DescribeObject AWS API Documentation
     #
-    # @overload describe_object(params = {})
+    # @overload describe_object(**params)
     # @param [Hash] params ({})
-    def describe_object(params = {}, options = {})
+    def describe_object(params = {}, **options)
       req = build_request(:describe_object, params)
       req.send_request(options)
     end
@@ -467,9 +467,9 @@ module Aws::MediaStoreData
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-data-2017-09-01/GetObject AWS API Documentation
     #
-    # @overload get_object(params = {})
+    # @overload get_object(**params)
     # @param [Hash] params ({})
-    def get_object(params = {}, options = {}, &block)
+    def get_object(params = {}, **options, &block)
       req = build_request(:get_object, params)
       req.send_request(options, &block)
     end
@@ -530,9 +530,9 @@ module Aws::MediaStoreData
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-data-2017-09-01/ListItems AWS API Documentation
     #
-    # @overload list_items(params = {})
+    # @overload list_items(**params)
     # @param [Hash] params ({})
-    def list_items(params = {}, options = {})
+    def list_items(params = {}, **options)
       req = build_request(:list_items, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::MediaStoreData
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediastore-data-2017-09-01/PutObject AWS API Documentation
     #
-    # @overload put_object(params = {})
+    # @overload put_object(**params)
     # @param [Hash] params ({})
-    def put_object(params = {}, options = {})
+    def put_object(params = {}, **options)
       req = build_request(:put_object, params)
       req.send_request(options)
     end
@@ -643,7 +643,7 @@ module Aws::MediaStoreData
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -651,15 +651,15 @@ module Aws::MediaStoreData
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mediastoredata'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-mediastoredata"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

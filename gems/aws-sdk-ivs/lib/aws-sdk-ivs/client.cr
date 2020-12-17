@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ivs)
 
@@ -280,7 +280,7 @@ module Aws::IVS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -362,9 +362,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/BatchGetChannel AWS API Documentation
     #
-    # @overload batch_get_channel(params = {})
+    # @overload batch_get_channel(**params)
     # @param [Hash] params ({})
-    def batch_get_channel(params = {}, options = {})
+    def batch_get_channel(params = {}, **options)
       req = build_request(:batch_get_channel, params)
       req.send_request(options)
     end
@@ -400,9 +400,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/BatchGetStreamKey AWS API Documentation
     #
-    # @overload batch_get_stream_key(params = {})
+    # @overload batch_get_stream_key(**params)
     # @param [Hash] params ({})
-    def batch_get_stream_key(params = {}, options = {})
+    def batch_get_stream_key(params = {}, **options)
       req = build_request(:batch_get_stream_key, params)
       req.send_request(options)
     end
@@ -474,9 +474,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/CreateChannel AWS API Documentation
     #
-    # @overload create_channel(params = {})
+    # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, options = {})
+    def create_channel(params = {}, **options)
       req = build_request(:create_channel, params)
       req.send_request(options)
     end
@@ -519,9 +519,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/CreateStreamKey AWS API Documentation
     #
-    # @overload create_stream_key(params = {})
+    # @overload create_stream_key(**params)
     # @param [Hash] params ({})
-    def create_stream_key(params = {}, options = {})
+    def create_stream_key(params = {}, **options)
       req = build_request(:create_stream_key, params)
       req.send_request(options)
     end
@@ -541,9 +541,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeleteChannel AWS API Documentation
     #
-    # @overload delete_channel(params = {})
+    # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, options = {})
+    def delete_channel(params = {}, **options)
       req = build_request(:delete_channel, params)
       req.send_request(options)
     end
@@ -564,9 +564,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeletePlaybackKeyPair AWS API Documentation
     #
-    # @overload delete_playback_key_pair(params = {})
+    # @overload delete_playback_key_pair(**params)
     # @param [Hash] params ({})
-    def delete_playback_key_pair(params = {}, options = {})
+    def delete_playback_key_pair(params = {}, **options)
       req = build_request(:delete_playback_key_pair, params)
       req.send_request(options)
     end
@@ -587,9 +587,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeleteStreamKey AWS API Documentation
     #
-    # @overload delete_stream_key(params = {})
+    # @overload delete_stream_key(**params)
     # @param [Hash] params ({})
-    def delete_stream_key(params = {}, options = {})
+    def delete_stream_key(params = {}, **options)
       req = build_request(:delete_stream_key, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetChannel AWS API Documentation
     #
-    # @overload get_channel(params = {})
+    # @overload get_channel(**params)
     # @param [Hash] params ({})
-    def get_channel(params = {}, options = {})
+    def get_channel(params = {}, **options)
       req = build_request(:get_channel, params)
       req.send_request(options)
     end
@@ -659,9 +659,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetPlaybackKeyPair AWS API Documentation
     #
-    # @overload get_playback_key_pair(params = {})
+    # @overload get_playback_key_pair(**params)
     # @param [Hash] params ({})
-    def get_playback_key_pair(params = {}, options = {})
+    def get_playback_key_pair(params = {}, **options)
       req = build_request(:get_playback_key_pair, params)
       req.send_request(options)
     end
@@ -693,9 +693,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetStream AWS API Documentation
     #
-    # @overload get_stream(params = {})
+    # @overload get_stream(**params)
     # @param [Hash] params ({})
-    def get_stream(params = {}, options = {})
+    def get_stream(params = {}, **options)
       req = build_request(:get_stream, params)
       req.send_request(options)
     end
@@ -725,9 +725,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetStreamKey AWS API Documentation
     #
-    # @overload get_stream_key(params = {})
+    # @overload get_stream_key(**params)
     # @param [Hash] params ({})
-    def get_stream_key(params = {}, options = {})
+    def get_stream_key(params = {}, **options)
       req = build_request(:get_stream_key, params)
       req.send_request(options)
     end
@@ -772,9 +772,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ImportPlaybackKeyPair AWS API Documentation
     #
-    # @overload import_playback_key_pair(params = {})
+    # @overload import_playback_key_pair(**params)
     # @param [Hash] params ({})
-    def import_playback_key_pair(params = {}, options = {})
+    def import_playback_key_pair(params = {}, **options)
       req = build_request(:import_playback_key_pair, params)
       req.send_request(options)
     end
@@ -821,9 +821,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListChannels AWS API Documentation
     #
-    # @overload list_channels(params = {})
+    # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, options = {})
+    def list_channels(params = {}, **options)
       req = build_request(:list_channels, params)
       req.send_request(options)
     end
@@ -862,9 +862,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListPlaybackKeyPairs AWS API Documentation
     #
-    # @overload list_playback_key_pairs(params = {})
+    # @overload list_playback_key_pairs(**params)
     # @param [Hash] params ({})
-    def list_playback_key_pairs(params = {}, options = {})
+    def list_playback_key_pairs(params = {}, **options)
       req = build_request(:list_playback_key_pairs, params)
       req.send_request(options)
     end
@@ -907,9 +907,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListStreamKeys AWS API Documentation
     #
-    # @overload list_stream_keys(params = {})
+    # @overload list_stream_keys(**params)
     # @param [Hash] params ({})
-    def list_stream_keys(params = {}, options = {})
+    def list_stream_keys(params = {}, **options)
       req = build_request(:list_stream_keys, params)
       req.send_request(options)
     end
@@ -950,9 +950,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListStreams AWS API Documentation
     #
-    # @overload list_streams(params = {})
+    # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, options = {})
+    def list_streams(params = {}, **options)
       req = build_request(:list_streams, params)
       req.send_request(options)
     end
@@ -992,9 +992,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1021,9 +1021,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/PutMetadata AWS API Documentation
     #
-    # @overload put_metadata(params = {})
+    # @overload put_metadata(**params)
     # @param [Hash] params ({})
-    def put_metadata(params = {}, options = {})
+    def put_metadata(params = {}, **options)
       req = build_request(:put_metadata, params)
       req.send_request(options)
     end
@@ -1051,9 +1051,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/StopStream AWS API Documentation
     #
-    # @overload stop_stream(params = {})
+    # @overload stop_stream(**params)
     # @param [Hash] params ({})
-    def stop_stream(params = {}, options = {})
+    def stop_stream(params = {}, **options)
       req = build_request(:stop_stream, params)
       req.send_request(options)
     end
@@ -1079,9 +1079,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1105,9 +1105,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1173,9 +1173,9 @@ module Aws::IVS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/UpdateChannel AWS API Documentation
     #
-    # @overload update_channel(params = {})
+    # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, options = {})
+    def update_channel(params = {}, **options)
       req = build_request(:update_channel, params)
       req.send_request(options)
     end
@@ -1184,7 +1184,7 @@ module Aws::IVS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1192,15 +1192,15 @@ module Aws::IVS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ivs'
-      context[:gem_version] = '1.5.0'
+      context[:gem_name] = "aws-sdk-ivs"
+      context[:gem_version] = "1.5.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

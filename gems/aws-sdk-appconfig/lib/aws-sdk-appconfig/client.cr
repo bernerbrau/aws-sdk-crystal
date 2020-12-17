@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:appconfig)
 
@@ -280,7 +280,7 @@ module Aws::AppConfig
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -368,9 +368,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateApplication AWS API Documentation
     #
-    # @overload create_application(params = {})
+    # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, options = {})
+    def create_application(params = {}, **options)
       req = build_request(:create_application, params)
       req.send_request(options)
     end
@@ -470,9 +470,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateConfigurationProfile AWS API Documentation
     #
-    # @overload create_configuration_profile(params = {})
+    # @overload create_configuration_profile(**params)
     # @param [Hash] params ({})
-    def create_configuration_profile(params = {}, options = {})
+    def create_configuration_profile(params = {}, **options)
       req = build_request(:create_configuration_profile, params)
       req.send_request(options)
     end
@@ -577,9 +577,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateDeploymentStrategy AWS API Documentation
     #
-    # @overload create_deployment_strategy(params = {})
+    # @overload create_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def create_deployment_strategy(params = {}, options = {})
+    def create_deployment_strategy(params = {}, **options)
       req = build_request(:create_deployment_strategy, params)
       req.send_request(options)
     end
@@ -649,9 +649,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateEnvironment AWS API Documentation
     #
-    # @overload create_environment(params = {})
+    # @overload create_environment(**params)
     # @param [Hash] params ({})
-    def create_environment(params = {}, options = {})
+    def create_environment(params = {}, **options)
       req = build_request(:create_environment, params)
       req.send_request(options)
     end
@@ -716,9 +716,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateHostedConfigurationVersion AWS API Documentation
     #
-    # @overload create_hosted_configuration_version(params = {})
+    # @overload create_hosted_configuration_version(**params)
     # @param [Hash] params ({})
-    def create_hosted_configuration_version(params = {}, options = {})
+    def create_hosted_configuration_version(params = {}, **options)
       req = build_request(:create_hosted_configuration_version, params)
       req.send_request(options)
     end
@@ -739,9 +739,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteApplication AWS API Documentation
     #
-    # @overload delete_application(params = {})
+    # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, options = {})
+    def delete_application(params = {}, **options)
       req = build_request(:delete_application, params)
       req.send_request(options)
     end
@@ -767,9 +767,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteConfigurationProfile AWS API Documentation
     #
-    # @overload delete_configuration_profile(params = {})
+    # @overload delete_configuration_profile(**params)
     # @param [Hash] params ({})
-    def delete_configuration_profile(params = {}, options = {})
+    def delete_configuration_profile(params = {}, **options)
       req = build_request(:delete_configuration_profile, params)
       req.send_request(options)
     end
@@ -790,9 +790,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteDeploymentStrategy AWS API Documentation
     #
-    # @overload delete_deployment_strategy(params = {})
+    # @overload delete_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def delete_deployment_strategy(params = {}, options = {})
+    def delete_deployment_strategy(params = {}, **options)
       req = build_request(:delete_deployment_strategy, params)
       req.send_request(options)
     end
@@ -817,9 +817,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteEnvironment AWS API Documentation
     #
-    # @overload delete_environment(params = {})
+    # @overload delete_environment(**params)
     # @param [Hash] params ({})
-    def delete_environment(params = {}, options = {})
+    def delete_environment(params = {}, **options)
       req = build_request(:delete_environment, params)
       req.send_request(options)
     end
@@ -848,9 +848,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteHostedConfigurationVersion AWS API Documentation
     #
-    # @overload delete_hosted_configuration_version(params = {})
+    # @overload delete_hosted_configuration_version(**params)
     # @param [Hash] params ({})
-    def delete_hosted_configuration_version(params = {}, options = {})
+    def delete_hosted_configuration_version(params = {}, **options)
       req = build_request(:delete_hosted_configuration_version, params)
       req.send_request(options)
     end
@@ -880,9 +880,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetApplication AWS API Documentation
     #
-    # @overload get_application(params = {})
+    # @overload get_application(**params)
     # @param [Hash] params ({})
-    def get_application(params = {}, options = {})
+    def get_application(params = {}, **options)
       req = build_request(:get_application, params)
       req.send_request(options)
     end
@@ -965,9 +965,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetConfiguration AWS API Documentation
     #
-    # @overload get_configuration(params = {})
+    # @overload get_configuration(**params)
     # @param [Hash] params ({})
-    def get_configuration(params = {}, options = {})
+    def get_configuration(params = {}, **options)
       req = build_request(:get_configuration, params)
       req.send_request(options)
     end
@@ -1012,9 +1012,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetConfigurationProfile AWS API Documentation
     #
-    # @overload get_configuration_profile(params = {})
+    # @overload get_configuration_profile(**params)
     # @param [Hash] params ({})
-    def get_configuration_profile(params = {}, options = {})
+    def get_configuration_profile(params = {}, **options)
       req = build_request(:get_configuration_profile, params)
       req.send_request(options)
     end
@@ -1088,9 +1088,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetDeployment AWS API Documentation
     #
-    # @overload get_deployment(params = {})
+    # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, options = {})
+    def get_deployment(params = {}, **options)
       req = build_request(:get_deployment, params)
       req.send_request(options)
     end
@@ -1135,9 +1135,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetDeploymentStrategy AWS API Documentation
     #
-    # @overload get_deployment_strategy(params = {})
+    # @overload get_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def get_deployment_strategy(params = {}, options = {})
+    def get_deployment_strategy(params = {}, **options)
       req = build_request(:get_deployment_strategy, params)
       req.send_request(options)
     end
@@ -1185,9 +1185,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetEnvironment AWS API Documentation
     #
-    # @overload get_environment(params = {})
+    # @overload get_environment(**params)
     # @param [Hash] params ({})
-    def get_environment(params = {}, options = {})
+    def get_environment(params = {}, **options)
       req = build_request(:get_environment, params)
       req.send_request(options)
     end
@@ -1231,9 +1231,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetHostedConfigurationVersion AWS API Documentation
     #
-    # @overload get_hosted_configuration_version(params = {})
+    # @overload get_hosted_configuration_version(**params)
     # @param [Hash] params ({})
-    def get_hosted_configuration_version(params = {}, options = {})
+    def get_hosted_configuration_version(params = {}, **options)
       req = build_request(:get_hosted_configuration_version, params)
       req.send_request(options)
     end
@@ -1273,9 +1273,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListApplications AWS API Documentation
     #
-    # @overload list_applications(params = {})
+    # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, options = {})
+    def list_applications(params = {}, **options)
       req = build_request(:list_applications, params)
       req.send_request(options)
     end
@@ -1322,9 +1322,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListConfigurationProfiles AWS API Documentation
     #
-    # @overload list_configuration_profiles(params = {})
+    # @overload list_configuration_profiles(**params)
     # @param [Hash] params ({})
-    def list_configuration_profiles(params = {}, options = {})
+    def list_configuration_profiles(params = {}, **options)
       req = build_request(:list_configuration_profiles, params)
       req.send_request(options)
     end
@@ -1369,9 +1369,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListDeploymentStrategies AWS API Documentation
     #
-    # @overload list_deployment_strategies(params = {})
+    # @overload list_deployment_strategies(**params)
     # @param [Hash] params ({})
-    def list_deployment_strategies(params = {}, options = {})
+    def list_deployment_strategies(params = {}, **options)
       req = build_request(:list_deployment_strategies, params)
       req.send_request(options)
     end
@@ -1427,9 +1427,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListDeployments AWS API Documentation
     #
-    # @overload list_deployments(params = {})
+    # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, options = {})
+    def list_deployments(params = {}, **options)
       req = build_request(:list_deployments, params)
       req.send_request(options)
     end
@@ -1478,9 +1478,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListEnvironments AWS API Documentation
     #
-    # @overload list_environments(params = {})
+    # @overload list_environments(**params)
     # @param [Hash] params ({})
-    def list_environments(params = {}, options = {})
+    def list_environments(params = {}, **options)
       req = build_request(:list_environments, params)
       req.send_request(options)
     end
@@ -1531,9 +1531,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListHostedConfigurationVersions AWS API Documentation
     #
-    # @overload list_hosted_configuration_versions(params = {})
+    # @overload list_hosted_configuration_versions(**params)
     # @param [Hash] params ({})
-    def list_hosted_configuration_versions(params = {}, options = {})
+    def list_hosted_configuration_versions(params = {}, **options)
       req = build_request(:list_hosted_configuration_versions, params)
       req.send_request(options)
     end
@@ -1560,9 +1560,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1654,9 +1654,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/StartDeployment AWS API Documentation
     #
-    # @overload start_deployment(params = {})
+    # @overload start_deployment(**params)
     # @param [Hash] params ({})
-    def start_deployment(params = {}, options = {})
+    def start_deployment(params = {}, **options)
       req = build_request(:start_deployment, params)
       req.send_request(options)
     end
@@ -1730,9 +1730,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/StopDeployment AWS API Documentation
     #
-    # @overload stop_deployment(params = {})
+    # @overload stop_deployment(**params)
     # @param [Hash] params ({})
-    def stop_deployment(params = {}, options = {})
+    def stop_deployment(params = {}, **options)
       req = build_request(:stop_deployment, params)
       req.send_request(options)
     end
@@ -1763,9 +1763,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1789,9 +1789,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1829,9 +1829,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/UpdateApplication AWS API Documentation
     #
-    # @overload update_application(params = {})
+    # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, options = {})
+    def update_application(params = {}, **options)
       req = build_request(:update_application, params)
       req.send_request(options)
     end
@@ -1897,9 +1897,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/UpdateConfigurationProfile AWS API Documentation
     #
-    # @overload update_configuration_profile(params = {})
+    # @overload update_configuration_profile(**params)
     # @param [Hash] params ({})
-    def update_configuration_profile(params = {}, options = {})
+    def update_configuration_profile(params = {}, **options)
       req = build_request(:update_configuration_profile, params)
       req.send_request(options)
     end
@@ -1988,9 +1988,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/UpdateDeploymentStrategy AWS API Documentation
     #
-    # @overload update_deployment_strategy(params = {})
+    # @overload update_deployment_strategy(**params)
     # @param [Hash] params ({})
-    def update_deployment_strategy(params = {}, options = {})
+    def update_deployment_strategy(params = {}, **options)
       req = build_request(:update_deployment_strategy, params)
       req.send_request(options)
     end
@@ -2049,9 +2049,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/UpdateEnvironment AWS API Documentation
     #
-    # @overload update_environment(params = {})
+    # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, options = {})
+    def update_environment(params = {}, **options)
       req = build_request(:update_environment, params)
       req.send_request(options)
     end
@@ -2080,9 +2080,9 @@ module Aws::AppConfig
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ValidateConfiguration AWS API Documentation
     #
-    # @overload validate_configuration(params = {})
+    # @overload validate_configuration(**params)
     # @param [Hash] params ({})
-    def validate_configuration(params = {}, options = {})
+    def validate_configuration(params = {}, **options)
       req = build_request(:validate_configuration, params)
       req.send_request(options)
     end
@@ -2091,7 +2091,7 @@ module Aws::AppConfig
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2099,15 +2099,15 @@ module Aws::AppConfig
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-appconfig'
-      context[:gem_version] = '1.12.0'
+      context[:gem_name] = "aws-sdk-appconfig"
+      context[:gem_version] = "1.12.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:appsync)
 
@@ -280,7 +280,7 @@ module Aws::AppSync
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -419,9 +419,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateApiCache AWS API Documentation
     #
-    # @overload create_api_cache(params = {})
+    # @overload create_api_cache(**params)
     # @param [Hash] params ({})
-    def create_api_cache(params = {}, options = {})
+    def create_api_cache(params = {}, **options)
       req = build_request(:create_api_cache, params)
       req.send_request(options)
     end
@@ -462,9 +462,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateApiKey AWS API Documentation
     #
-    # @overload create_api_key(params = {})
+    # @overload create_api_key(**params)
     # @param [Hash] params ({})
-    def create_api_key(params = {}, options = {})
+    def create_api_key(params = {}, **options)
       req = build_request(:create_api_key, params)
       req.send_request(options)
     end
@@ -584,9 +584,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateDataSource AWS API Documentation
     #
-    # @overload create_data_source(params = {})
+    # @overload create_data_source(**params)
     # @param [Hash] params ({})
-    def create_data_source(params = {}, options = {})
+    def create_data_source(params = {}, **options)
       req = build_request(:create_data_source, params)
       req.send_request(options)
     end
@@ -648,9 +648,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateFunction AWS API Documentation
     #
-    # @overload create_function(params = {})
+    # @overload create_function(**params)
     # @param [Hash] params ({})
-    def create_function(params = {}, options = {})
+    def create_function(params = {}, **options)
       req = build_request(:create_function, params)
       req.send_request(options)
     end
@@ -767,9 +767,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateGraphqlApi AWS API Documentation
     #
-    # @overload create_graphql_api(params = {})
+    # @overload create_graphql_api(**params)
     # @param [Hash] params ({})
-    def create_graphql_api(params = {}, options = {})
+    def create_graphql_api(params = {}, **options)
       req = build_request(:create_graphql_api, params)
       req.send_request(options)
     end
@@ -876,9 +876,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateResolver AWS API Documentation
     #
-    # @overload create_resolver(params = {})
+    # @overload create_resolver(**params)
     # @param [Hash] params ({})
-    def create_resolver(params = {}, options = {})
+    def create_resolver(params = {}, **options)
       req = build_request(:create_resolver, params)
       req.send_request(options)
     end
@@ -923,9 +923,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateType AWS API Documentation
     #
-    # @overload create_type(params = {})
+    # @overload create_type(**params)
     # @param [Hash] params ({})
-    def create_type(params = {}, options = {})
+    def create_type(params = {}, **options)
       req = build_request(:create_type, params)
       req.send_request(options)
     end
@@ -945,9 +945,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteApiCache AWS API Documentation
     #
-    # @overload delete_api_cache(params = {})
+    # @overload delete_api_cache(**params)
     # @param [Hash] params ({})
-    def delete_api_cache(params = {}, options = {})
+    def delete_api_cache(params = {}, **options)
       req = build_request(:delete_api_cache, params)
       req.send_request(options)
     end
@@ -971,9 +971,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteApiKey AWS API Documentation
     #
-    # @overload delete_api_key(params = {})
+    # @overload delete_api_key(**params)
     # @param [Hash] params ({})
-    def delete_api_key(params = {}, options = {})
+    def delete_api_key(params = {}, **options)
       req = build_request(:delete_api_key, params)
       req.send_request(options)
     end
@@ -997,9 +997,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteDataSource AWS API Documentation
     #
-    # @overload delete_data_source(params = {})
+    # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, options = {})
+    def delete_data_source(params = {}, **options)
       req = build_request(:delete_data_source, params)
       req.send_request(options)
     end
@@ -1023,9 +1023,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteFunction AWS API Documentation
     #
-    # @overload delete_function(params = {})
+    # @overload delete_function(**params)
     # @param [Hash] params ({})
-    def delete_function(params = {}, options = {})
+    def delete_function(params = {}, **options)
       req = build_request(:delete_function, params)
       req.send_request(options)
     end
@@ -1045,9 +1045,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteGraphqlApi AWS API Documentation
     #
-    # @overload delete_graphql_api(params = {})
+    # @overload delete_graphql_api(**params)
     # @param [Hash] params ({})
-    def delete_graphql_api(params = {}, options = {})
+    def delete_graphql_api(params = {}, **options)
       req = build_request(:delete_graphql_api, params)
       req.send_request(options)
     end
@@ -1075,9 +1075,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteResolver AWS API Documentation
     #
-    # @overload delete_resolver(params = {})
+    # @overload delete_resolver(**params)
     # @param [Hash] params ({})
-    def delete_resolver(params = {}, options = {})
+    def delete_resolver(params = {}, **options)
       req = build_request(:delete_resolver, params)
       req.send_request(options)
     end
@@ -1101,9 +1101,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteType AWS API Documentation
     #
-    # @overload delete_type(params = {})
+    # @overload delete_type(**params)
     # @param [Hash] params ({})
-    def delete_type(params = {}, options = {})
+    def delete_type(params = {}, **options)
       req = build_request(:delete_type, params)
       req.send_request(options)
     end
@@ -1123,9 +1123,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/FlushApiCache AWS API Documentation
     #
-    # @overload flush_api_cache(params = {})
+    # @overload flush_api_cache(**params)
     # @param [Hash] params ({})
-    def flush_api_cache(params = {}, options = {})
+    def flush_api_cache(params = {}, **options)
       req = build_request(:flush_api_cache, params)
       req.send_request(options)
     end
@@ -1156,9 +1156,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetApiCache AWS API Documentation
     #
-    # @overload get_api_cache(params = {})
+    # @overload get_api_cache(**params)
     # @param [Hash] params ({})
-    def get_api_cache(params = {}, options = {})
+    def get_api_cache(params = {}, **options)
       req = build_request(:get_api_cache, params)
       req.send_request(options)
     end
@@ -1212,9 +1212,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDataSource AWS API Documentation
     #
-    # @overload get_data_source(params = {})
+    # @overload get_data_source(**params)
     # @param [Hash] params ({})
-    def get_data_source(params = {}, options = {})
+    def get_data_source(params = {}, **options)
       req = build_request(:get_data_source, params)
       req.send_request(options)
     end
@@ -1251,9 +1251,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetFunction AWS API Documentation
     #
-    # @overload get_function(params = {})
+    # @overload get_function(**params)
     # @param [Hash] params ({})
-    def get_function(params = {}, options = {})
+    def get_function(params = {}, **options)
       req = build_request(:get_function, params)
       req.send_request(options)
     end
@@ -1308,9 +1308,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetGraphqlApi AWS API Documentation
     #
-    # @overload get_graphql_api(params = {})
+    # @overload get_graphql_api(**params)
     # @param [Hash] params ({})
-    def get_graphql_api(params = {}, options = {})
+    def get_graphql_api(params = {}, **options)
       req = build_request(:get_graphql_api, params)
       req.send_request(options)
     end
@@ -1345,9 +1345,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetIntrospectionSchema AWS API Documentation
     #
-    # @overload get_introspection_schema(params = {})
+    # @overload get_introspection_schema(**params)
     # @param [Hash] params ({})
-    def get_introspection_schema(params = {}, options = {})
+    def get_introspection_schema(params = {}, **options)
       req = build_request(:get_introspection_schema, params)
       req.send_request(options)
     end
@@ -1395,9 +1395,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetResolver AWS API Documentation
     #
-    # @overload get_resolver(params = {})
+    # @overload get_resolver(**params)
     # @param [Hash] params ({})
-    def get_resolver(params = {}, options = {})
+    def get_resolver(params = {}, **options)
       req = build_request(:get_resolver, params)
       req.send_request(options)
     end
@@ -1425,9 +1425,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetSchemaCreationStatus AWS API Documentation
     #
-    # @overload get_schema_creation_status(params = {})
+    # @overload get_schema_creation_status(**params)
     # @param [Hash] params ({})
-    def get_schema_creation_status(params = {}, options = {})
+    def get_schema_creation_status(params = {}, **options)
       req = build_request(:get_schema_creation_status, params)
       req.send_request(options)
     end
@@ -1465,9 +1465,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetType AWS API Documentation
     #
-    # @overload get_type(params = {})
+    # @overload get_type(**params)
     # @param [Hash] params ({})
-    def get_type(params = {}, options = {})
+    def get_type(params = {}, **options)
       req = build_request(:get_type, params)
       req.send_request(options)
     end
@@ -1516,9 +1516,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListApiKeys AWS API Documentation
     #
-    # @overload list_api_keys(params = {})
+    # @overload list_api_keys(**params)
     # @param [Hash] params ({})
-    def list_api_keys(params = {}, options = {})
+    def list_api_keys(params = {}, **options)
       req = build_request(:list_api_keys, params)
       req.send_request(options)
     end
@@ -1581,9 +1581,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListDataSources AWS API Documentation
     #
-    # @overload list_data_sources(params = {})
+    # @overload list_data_sources(**params)
     # @param [Hash] params ({})
-    def list_data_sources(params = {}, options = {})
+    def list_data_sources(params = {}, **options)
       req = build_request(:list_data_sources, params)
       req.send_request(options)
     end
@@ -1629,9 +1629,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListFunctions AWS API Documentation
     #
-    # @overload list_functions(params = {})
+    # @overload list_functions(**params)
     # @param [Hash] params ({})
-    def list_functions(params = {}, options = {})
+    def list_functions(params = {}, **options)
       req = build_request(:list_functions, params)
       req.send_request(options)
     end
@@ -1695,9 +1695,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListGraphqlApis AWS API Documentation
     #
-    # @overload list_graphql_apis(params = {})
+    # @overload list_graphql_apis(**params)
     # @param [Hash] params ({})
-    def list_graphql_apis(params = {}, options = {})
+    def list_graphql_apis(params = {}, **options)
       req = build_request(:list_graphql_apis, params)
       req.send_request(options)
     end
@@ -1754,9 +1754,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListResolvers AWS API Documentation
     #
-    # @overload list_resolvers(params = {})
+    # @overload list_resolvers(**params)
     # @param [Hash] params ({})
-    def list_resolvers(params = {}, options = {})
+    def list_resolvers(params = {}, **options)
       req = build_request(:list_resolvers, params)
       req.send_request(options)
     end
@@ -1813,9 +1813,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListResolversByFunction AWS API Documentation
     #
-    # @overload list_resolvers_by_function(params = {})
+    # @overload list_resolvers_by_function(**params)
     # @param [Hash] params ({})
-    def list_resolvers_by_function(params = {}, options = {})
+    def list_resolvers_by_function(params = {}, **options)
       req = build_request(:list_resolvers_by_function, params)
       req.send_request(options)
     end
@@ -1842,9 +1842,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1891,9 +1891,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListTypes AWS API Documentation
     #
-    # @overload list_types(params = {})
+    # @overload list_types(**params)
     # @param [Hash] params ({})
-    def list_types(params = {}, options = {})
+    def list_types(params = {}, **options)
       req = build_request(:list_types, params)
       req.send_request(options)
     end
@@ -1926,9 +1926,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/StartSchemaCreation AWS API Documentation
     #
-    # @overload start_schema_creation(params = {})
+    # @overload start_schema_creation(**params)
     # @param [Hash] params ({})
-    def start_schema_creation(params = {}, options = {})
+    def start_schema_creation(params = {}, **options)
       req = build_request(:start_schema_creation, params)
       req.send_request(options)
     end
@@ -1954,9 +1954,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1980,9 +1980,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2069,9 +2069,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateApiCache AWS API Documentation
     #
-    # @overload update_api_cache(params = {})
+    # @overload update_api_cache(**params)
     # @param [Hash] params ({})
-    def update_api_cache(params = {}, options = {})
+    def update_api_cache(params = {}, **options)
       req = build_request(:update_api_cache, params)
       req.send_request(options)
     end
@@ -2113,9 +2113,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateApiKey AWS API Documentation
     #
-    # @overload update_api_key(params = {})
+    # @overload update_api_key(**params)
     # @param [Hash] params ({})
-    def update_api_key(params = {}, options = {})
+    def update_api_key(params = {}, **options)
       req = build_request(:update_api_key, params)
       req.send_request(options)
     end
@@ -2234,9 +2234,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateDataSource AWS API Documentation
     #
-    # @overload update_data_source(params = {})
+    # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, options = {})
+    def update_data_source(params = {}, **options)
       req = build_request(:update_data_source, params)
       req.send_request(options)
     end
@@ -2299,9 +2299,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateFunction AWS API Documentation
     #
-    # @overload update_function(params = {})
+    # @overload update_function(**params)
     # @param [Hash] params ({})
-    def update_function(params = {}, options = {})
+    def update_function(params = {}, **options)
       req = build_request(:update_function, params)
       req.send_request(options)
     end
@@ -2416,9 +2416,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateGraphqlApi AWS API Documentation
     #
-    # @overload update_graphql_api(params = {})
+    # @overload update_graphql_api(**params)
     # @param [Hash] params ({})
-    def update_graphql_api(params = {}, options = {})
+    def update_graphql_api(params = {}, **options)
       req = build_request(:update_graphql_api, params)
       req.send_request(options)
     end
@@ -2522,9 +2522,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateResolver AWS API Documentation
     #
-    # @overload update_resolver(params = {})
+    # @overload update_resolver(**params)
     # @param [Hash] params ({})
-    def update_resolver(params = {}, options = {})
+    def update_resolver(params = {}, **options)
       req = build_request(:update_resolver, params)
       req.send_request(options)
     end
@@ -2566,9 +2566,9 @@ module Aws::AppSync
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateType AWS API Documentation
     #
-    # @overload update_type(params = {})
+    # @overload update_type(**params)
     # @param [Hash] params ({})
-    def update_type(params = {}, options = {})
+    def update_type(params = {}, **options)
       req = build_request(:update_type, params)
       req.send_request(options)
     end
@@ -2577,7 +2577,7 @@ module Aws::AppSync
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2585,15 +2585,15 @@ module Aws::AppSync
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-appsync'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-appsync"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

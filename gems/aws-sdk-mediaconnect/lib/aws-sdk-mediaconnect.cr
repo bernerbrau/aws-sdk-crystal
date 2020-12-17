@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mediaconnect/types'
-require_relative 'aws-sdk-mediaconnect/client_api'
-require_relative 'aws-sdk-mediaconnect/client'
-require_relative 'aws-sdk-mediaconnect/errors'
-require_relative 'aws-sdk-mediaconnect/resource'
-require_relative 'aws-sdk-mediaconnect/customizations'
+require_relative "aws-sdk-mediaconnect/types"
+require_relative "aws-sdk-mediaconnect/client_api"
+require_relative "aws-sdk-mediaconnect/client"
+require_relative "aws-sdk-mediaconnect/errors"
+require_relative "aws-sdk-mediaconnect/resource"
+require_relative "aws-sdk-mediaconnect/customizations"
 
 # This module provides support for AWS MediaConnect. This module is available in the
 # `aws-sdk-mediaconnect` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mediaconnect/customizations'
 # @!group service
 module Aws::MediaConnect
 
-  GEM_VERSION = '1.28.0'
+  GEM_VERSION = "1.28.0"
 
 end

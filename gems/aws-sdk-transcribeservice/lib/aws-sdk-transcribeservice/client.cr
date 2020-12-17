@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:transcribeservice)
 
@@ -290,7 +290,7 @@ module Aws::TranscribeService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -395,9 +395,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateLanguageModel AWS API Documentation
     #
-    # @overload create_language_model(params = {})
+    # @overload create_language_model(**params)
     # @param [Hash] params ({})
-    def create_language_model(params = {}, options = {})
+    def create_language_model(params = {}, **options)
       req = build_request(:create_language_model, params)
       req.send_request(options)
     end
@@ -469,9 +469,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateMedicalVocabulary AWS API Documentation
     #
-    # @overload create_medical_vocabulary(params = {})
+    # @overload create_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def create_medical_vocabulary(params = {}, options = {})
+    def create_medical_vocabulary(params = {}, **options)
       req = build_request(:create_medical_vocabulary, params)
       req.send_request(options)
     end
@@ -534,9 +534,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateVocabulary AWS API Documentation
     #
-    # @overload create_vocabulary(params = {})
+    # @overload create_vocabulary(**params)
     # @param [Hash] params ({})
-    def create_vocabulary(params = {}, options = {})
+    def create_vocabulary(params = {}, **options)
       req = build_request(:create_vocabulary, params)
       req.send_request(options)
     end
@@ -606,9 +606,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateVocabularyFilter AWS API Documentation
     #
-    # @overload create_vocabulary_filter(params = {})
+    # @overload create_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def create_vocabulary_filter(params = {}, options = {})
+    def create_vocabulary_filter(params = {}, **options)
       req = build_request(:create_vocabulary_filter, params)
       req.send_request(options)
     end
@@ -628,9 +628,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteLanguageModel AWS API Documentation
     #
-    # @overload delete_language_model(params = {})
+    # @overload delete_language_model(**params)
     # @param [Hash] params ({})
-    def delete_language_model(params = {}, options = {})
+    def delete_language_model(params = {}, **options)
       req = build_request(:delete_language_model, params)
       req.send_request(options)
     end
@@ -652,9 +652,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteMedicalTranscriptionJob AWS API Documentation
     #
-    # @overload delete_medical_transcription_job(params = {})
+    # @overload delete_medical_transcription_job(**params)
     # @param [Hash] params ({})
-    def delete_medical_transcription_job(params = {}, options = {})
+    def delete_medical_transcription_job(params = {}, **options)
       req = build_request(:delete_medical_transcription_job, params)
       req.send_request(options)
     end
@@ -674,9 +674,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteMedicalVocabulary AWS API Documentation
     #
-    # @overload delete_medical_vocabulary(params = {})
+    # @overload delete_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def delete_medical_vocabulary(params = {}, options = {})
+    def delete_medical_vocabulary(params = {}, **options)
       req = build_request(:delete_medical_vocabulary, params)
       req.send_request(options)
     end
@@ -697,9 +697,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteTranscriptionJob AWS API Documentation
     #
-    # @overload delete_transcription_job(params = {})
+    # @overload delete_transcription_job(**params)
     # @param [Hash] params ({})
-    def delete_transcription_job(params = {}, options = {})
+    def delete_transcription_job(params = {}, **options)
       req = build_request(:delete_transcription_job, params)
       req.send_request(options)
     end
@@ -719,9 +719,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteVocabulary AWS API Documentation
     #
-    # @overload delete_vocabulary(params = {})
+    # @overload delete_vocabulary(**params)
     # @param [Hash] params ({})
-    def delete_vocabulary(params = {}, options = {})
+    def delete_vocabulary(params = {}, **options)
       req = build_request(:delete_vocabulary, params)
       req.send_request(options)
     end
@@ -741,9 +741,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteVocabularyFilter AWS API Documentation
     #
-    # @overload delete_vocabulary_filter(params = {})
+    # @overload delete_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def delete_vocabulary_filter(params = {}, options = {})
+    def delete_vocabulary_filter(params = {}, **options)
       req = build_request(:delete_vocabulary_filter, params)
       req.send_request(options)
     end
@@ -787,9 +787,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DescribeLanguageModel AWS API Documentation
     #
-    # @overload describe_language_model(params = {})
+    # @overload describe_language_model(**params)
     # @param [Hash] params ({})
-    def describe_language_model(params = {}, options = {})
+    def describe_language_model(params = {}, **options)
       req = build_request(:describe_language_model, params)
       req.send_request(options)
     end
@@ -837,9 +837,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetMedicalTranscriptionJob AWS API Documentation
     #
-    # @overload get_medical_transcription_job(params = {})
+    # @overload get_medical_transcription_job(**params)
     # @param [Hash] params ({})
-    def get_medical_transcription_job(params = {}, options = {})
+    def get_medical_transcription_job(params = {}, **options)
       req = build_request(:get_medical_transcription_job, params)
       req.send_request(options)
     end
@@ -876,9 +876,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetMedicalVocabulary AWS API Documentation
     #
-    # @overload get_medical_vocabulary(params = {})
+    # @overload get_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def get_medical_vocabulary(params = {}, options = {})
+    def get_medical_vocabulary(params = {}, **options)
       req = build_request(:get_medical_vocabulary, params)
       req.send_request(options)
     end
@@ -937,9 +937,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetTranscriptionJob AWS API Documentation
     #
-    # @overload get_transcription_job(params = {})
+    # @overload get_transcription_job(**params)
     # @param [Hash] params ({})
-    def get_transcription_job(params = {}, options = {})
+    def get_transcription_job(params = {}, **options)
       req = build_request(:get_transcription_job, params)
       req.send_request(options)
     end
@@ -976,9 +976,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetVocabulary AWS API Documentation
     #
-    # @overload get_vocabulary(params = {})
+    # @overload get_vocabulary(**params)
     # @param [Hash] params ({})
-    def get_vocabulary(params = {}, options = {})
+    def get_vocabulary(params = {}, **options)
       req = build_request(:get_vocabulary, params)
       req.send_request(options)
     end
@@ -1010,9 +1010,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetVocabularyFilter AWS API Documentation
     #
-    # @overload get_vocabulary_filter(params = {})
+    # @overload get_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def get_vocabulary_filter(params = {}, options = {})
+    def get_vocabulary_filter(params = {}, **options)
       req = build_request(:get_vocabulary_filter, params)
       req.send_request(options)
     end
@@ -1075,9 +1075,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListLanguageModels AWS API Documentation
     #
-    # @overload list_language_models(params = {})
+    # @overload list_language_models(**params)
     # @param [Hash] params ({})
-    def list_language_models(params = {}, options = {})
+    def list_language_models(params = {}, **options)
       req = build_request(:list_language_models, params)
       req.send_request(options)
     end
@@ -1140,9 +1140,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListMedicalTranscriptionJobs AWS API Documentation
     #
-    # @overload list_medical_transcription_jobs(params = {})
+    # @overload list_medical_transcription_jobs(**params)
     # @param [Hash] params ({})
-    def list_medical_transcription_jobs(params = {}, options = {})
+    def list_medical_transcription_jobs(params = {}, **options)
       req = build_request(:list_medical_transcription_jobs, params)
       req.send_request(options)
     end
@@ -1198,9 +1198,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListMedicalVocabularies AWS API Documentation
     #
-    # @overload list_medical_vocabularies(params = {})
+    # @overload list_medical_vocabularies(**params)
     # @param [Hash] params ({})
-    def list_medical_vocabularies(params = {}, options = {})
+    def list_medical_vocabularies(params = {}, **options)
       req = build_request(:list_medical_vocabularies, params)
       req.send_request(options)
     end
@@ -1264,9 +1264,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListTranscriptionJobs AWS API Documentation
     #
-    # @overload list_transcription_jobs(params = {})
+    # @overload list_transcription_jobs(**params)
     # @param [Hash] params ({})
-    def list_transcription_jobs(params = {}, options = {})
+    def list_transcription_jobs(params = {}, **options)
       req = build_request(:list_transcription_jobs, params)
       req.send_request(options)
     end
@@ -1322,9 +1322,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListVocabularies AWS API Documentation
     #
-    # @overload list_vocabularies(params = {})
+    # @overload list_vocabularies(**params)
     # @param [Hash] params ({})
-    def list_vocabularies(params = {}, options = {})
+    def list_vocabularies(params = {}, **options)
       req = build_request(:list_vocabularies, params)
       req.send_request(options)
     end
@@ -1370,9 +1370,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListVocabularyFilters AWS API Documentation
     #
-    # @overload list_vocabulary_filters(params = {})
+    # @overload list_vocabulary_filters(**params)
     # @param [Hash] params ({})
-    def list_vocabulary_filters(params = {}, options = {})
+    def list_vocabulary_filters(params = {}, **options)
       req = build_request(:list_vocabulary_filters, params)
       req.send_request(options)
     end
@@ -1545,9 +1545,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartMedicalTranscriptionJob AWS API Documentation
     #
-    # @overload start_medical_transcription_job(params = {})
+    # @overload start_medical_transcription_job(**params)
     # @param [Hash] params ({})
-    def start_medical_transcription_job(params = {}, options = {})
+    def start_medical_transcription_job(params = {}, **options)
       req = build_request(:start_medical_transcription_job, params)
       req.send_request(options)
     end
@@ -1763,9 +1763,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartTranscriptionJob AWS API Documentation
     #
-    # @overload start_transcription_job(params = {})
+    # @overload start_transcription_job(**params)
     # @param [Hash] params ({})
-    def start_transcription_job(params = {}, options = {})
+    def start_transcription_job(params = {}, **options)
       req = build_request(:start_transcription_job, params)
       req.send_request(options)
     end
@@ -1834,9 +1834,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateMedicalVocabulary AWS API Documentation
     #
-    # @overload update_medical_vocabulary(params = {})
+    # @overload update_medical_vocabulary(**params)
     # @param [Hash] params ({})
-    def update_medical_vocabulary(params = {}, options = {})
+    def update_medical_vocabulary(params = {}, **options)
       req = build_request(:update_medical_vocabulary, params)
       req.send_request(options)
     end
@@ -1899,9 +1899,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateVocabulary AWS API Documentation
     #
-    # @overload update_vocabulary(params = {})
+    # @overload update_vocabulary(**params)
     # @param [Hash] params ({})
-    def update_vocabulary(params = {}, options = {})
+    def update_vocabulary(params = {}, **options)
       req = build_request(:update_vocabulary, params)
       req.send_request(options)
     end
@@ -1963,9 +1963,9 @@ module Aws::TranscribeService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateVocabularyFilter AWS API Documentation
     #
-    # @overload update_vocabulary_filter(params = {})
+    # @overload update_vocabulary_filter(**params)
     # @param [Hash] params ({})
-    def update_vocabulary_filter(params = {}, options = {})
+    def update_vocabulary_filter(params = {}, **options)
       req = build_request(:update_vocabulary_filter, params)
       req.send_request(options)
     end
@@ -1974,7 +1974,7 @@ module Aws::TranscribeService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1982,15 +1982,15 @@ module Aws::TranscribeService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-transcribeservice'
-      context[:gem_version] = '1.50.0'
+      context[:gem_name] = "aws-sdk-transcribeservice"
+      context[:gem_version] = "1.50.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

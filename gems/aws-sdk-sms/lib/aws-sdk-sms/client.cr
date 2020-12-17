@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:sms)
 
@@ -290,7 +290,7 @@ module Aws::SMS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -448,9 +448,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/CreateApp AWS API Documentation
     #
-    # @overload create_app(params = {})
+    # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, options = {})
+    def create_app(params = {}, **options)
       req = build_request(:create_app, params)
       req.send_request(options)
     end
@@ -528,9 +528,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/CreateReplicationJob AWS API Documentation
     #
-    # @overload create_replication_job(params = {})
+    # @overload create_replication_job(**params)
     # @param [Hash] params ({})
-    def create_replication_job(params = {}, options = {})
+    def create_replication_job(params = {}, **options)
       req = build_request(:create_replication_job, params)
       req.send_request(options)
     end
@@ -562,9 +562,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DeleteApp AWS API Documentation
     #
-    # @overload delete_app(params = {})
+    # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, options = {})
+    def delete_app(params = {}, **options)
       req = build_request(:delete_app, params)
       req.send_request(options)
     end
@@ -584,9 +584,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DeleteAppLaunchConfiguration AWS API Documentation
     #
-    # @overload delete_app_launch_configuration(params = {})
+    # @overload delete_app_launch_configuration(**params)
     # @param [Hash] params ({})
-    def delete_app_launch_configuration(params = {}, options = {})
+    def delete_app_launch_configuration(params = {}, **options)
       req = build_request(:delete_app_launch_configuration, params)
       req.send_request(options)
     end
@@ -606,9 +606,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DeleteAppReplicationConfiguration AWS API Documentation
     #
-    # @overload delete_app_replication_configuration(params = {})
+    # @overload delete_app_replication_configuration(**params)
     # @param [Hash] params ({})
-    def delete_app_replication_configuration(params = {}, options = {})
+    def delete_app_replication_configuration(params = {}, **options)
       req = build_request(:delete_app_replication_configuration, params)
       req.send_request(options)
     end
@@ -628,9 +628,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DeleteAppValidationConfiguration AWS API Documentation
     #
-    # @overload delete_app_validation_configuration(params = {})
+    # @overload delete_app_validation_configuration(**params)
     # @param [Hash] params ({})
-    def delete_app_validation_configuration(params = {}, options = {})
+    def delete_app_validation_configuration(params = {}, **options)
       req = build_request(:delete_app_validation_configuration, params)
       req.send_request(options)
     end
@@ -655,9 +655,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DeleteReplicationJob AWS API Documentation
     #
-    # @overload delete_replication_job(params = {})
+    # @overload delete_replication_job(**params)
     # @param [Hash] params ({})
-    def delete_replication_job(params = {}, options = {})
+    def delete_replication_job(params = {}, **options)
       req = build_request(:delete_replication_job, params)
       req.send_request(options)
     end
@@ -668,9 +668,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DeleteServerCatalog AWS API Documentation
     #
-    # @overload delete_server_catalog(params = {})
+    # @overload delete_server_catalog(**params)
     # @param [Hash] params ({})
-    def delete_server_catalog(params = {}, options = {})
+    def delete_server_catalog(params = {}, **options)
       req = build_request(:delete_server_catalog, params)
       req.send_request(options)
     end
@@ -693,9 +693,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/DisassociateConnector AWS API Documentation
     #
-    # @overload disassociate_connector(params = {})
+    # @overload disassociate_connector(**params)
     # @param [Hash] params ({})
-    def disassociate_connector(params = {}, options = {})
+    def disassociate_connector(params = {}, **options)
       req = build_request(:disassociate_connector, params)
       req.send_request(options)
     end
@@ -727,9 +727,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GenerateChangeSet AWS API Documentation
     #
-    # @overload generate_change_set(params = {})
+    # @overload generate_change_set(**params)
     # @param [Hash] params ({})
-    def generate_change_set(params = {}, options = {})
+    def generate_change_set(params = {}, **options)
       req = build_request(:generate_change_set, params)
       req.send_request(options)
     end
@@ -763,9 +763,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GenerateTemplate AWS API Documentation
     #
-    # @overload generate_template(params = {})
+    # @overload generate_template(**params)
     # @param [Hash] params ({})
-    def generate_template(params = {}, options = {})
+    def generate_template(params = {}, **options)
       req = build_request(:generate_template, params)
       req.send_request(options)
     end
@@ -830,9 +830,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetApp AWS API Documentation
     #
-    # @overload get_app(params = {})
+    # @overload get_app(**params)
     # @param [Hash] params ({})
-    def get_app(params = {}, options = {})
+    def get_app(params = {}, **options)
       req = build_request(:get_app, params)
       req.send_request(options)
     end
@@ -891,9 +891,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetAppLaunchConfiguration AWS API Documentation
     #
-    # @overload get_app_launch_configuration(params = {})
+    # @overload get_app_launch_configuration(**params)
     # @param [Hash] params ({})
-    def get_app_launch_configuration(params = {}, options = {})
+    def get_app_launch_configuration(params = {}, **options)
       req = build_request(:get_app_launch_configuration, params)
       req.send_request(options)
     end
@@ -939,9 +939,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetAppReplicationConfiguration AWS API Documentation
     #
-    # @overload get_app_replication_configuration(params = {})
+    # @overload get_app_replication_configuration(**params)
     # @param [Hash] params ({})
-    def get_app_replication_configuration(params = {}, options = {})
+    def get_app_replication_configuration(params = {}, **options)
       req = build_request(:get_app_replication_configuration, params)
       req.send_request(options)
     end
@@ -998,9 +998,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetAppValidationConfiguration AWS API Documentation
     #
-    # @overload get_app_validation_configuration(params = {})
+    # @overload get_app_validation_configuration(**params)
     # @param [Hash] params ({})
-    def get_app_validation_configuration(params = {}, options = {})
+    def get_app_validation_configuration(params = {}, **options)
       req = build_request(:get_app_validation_configuration, params)
       req.send_request(options)
     end
@@ -1043,9 +1043,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetAppValidationOutput AWS API Documentation
     #
-    # @overload get_app_validation_output(params = {})
+    # @overload get_app_validation_output(**params)
     # @param [Hash] params ({})
-    def get_app_validation_output(params = {}, options = {})
+    def get_app_validation_output(params = {}, **options)
       req = build_request(:get_app_validation_output, params)
       req.send_request(options)
     end
@@ -1092,9 +1092,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetConnectors AWS API Documentation
     #
-    # @overload get_connectors(params = {})
+    # @overload get_connectors(**params)
     # @param [Hash] params ({})
-    def get_connectors(params = {}, options = {})
+    def get_connectors(params = {}, **options)
       req = build_request(:get_connectors, params)
       req.send_request(options)
     end
@@ -1170,9 +1170,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetReplicationJobs AWS API Documentation
     #
-    # @overload get_replication_jobs(params = {})
+    # @overload get_replication_jobs(**params)
     # @param [Hash] params ({})
-    def get_replication_jobs(params = {}, options = {})
+    def get_replication_jobs(params = {}, **options)
       req = build_request(:get_replication_jobs, params)
       req.send_request(options)
     end
@@ -1260,9 +1260,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetReplicationRuns AWS API Documentation
     #
-    # @overload get_replication_runs(params = {})
+    # @overload get_replication_runs(**params)
     # @param [Hash] params ({})
-    def get_replication_runs(params = {}, options = {})
+    def get_replication_runs(params = {}, **options)
       req = build_request(:get_replication_runs, params)
       req.send_request(options)
     end
@@ -1324,9 +1324,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/GetServers AWS API Documentation
     #
-    # @overload get_servers(params = {})
+    # @overload get_servers(**params)
     # @param [Hash] params ({})
-    def get_servers(params = {}, options = {})
+    def get_servers(params = {}, **options)
       req = build_request(:get_servers, params)
       req.send_request(options)
     end
@@ -1353,9 +1353,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/ImportAppCatalog AWS API Documentation
     #
-    # @overload import_app_catalog(params = {})
+    # @overload import_app_catalog(**params)
     # @param [Hash] params ({})
-    def import_app_catalog(params = {}, options = {})
+    def import_app_catalog(params = {}, **options)
       req = build_request(:import_app_catalog, params)
       req.send_request(options)
     end
@@ -1370,9 +1370,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/ImportServerCatalog AWS API Documentation
     #
-    # @overload import_server_catalog(params = {})
+    # @overload import_server_catalog(**params)
     # @param [Hash] params ({})
-    def import_server_catalog(params = {}, options = {})
+    def import_server_catalog(params = {}, **options)
       req = build_request(:import_server_catalog, params)
       req.send_request(options)
     end
@@ -1392,9 +1392,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/LaunchApp AWS API Documentation
     #
-    # @overload launch_app(params = {})
+    # @overload launch_app(**params)
     # @param [Hash] params ({})
-    def launch_app(params = {}, options = {})
+    def launch_app(params = {}, **options)
       req = build_request(:launch_app, params)
       req.send_request(options)
     end
@@ -1453,9 +1453,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/ListApps AWS API Documentation
     #
-    # @overload list_apps(params = {})
+    # @overload list_apps(**params)
     # @param [Hash] params ({})
-    def list_apps(params = {}, options = {})
+    def list_apps(params = {}, **options)
       req = build_request(:list_apps, params)
       req.send_request(options)
     end
@@ -1484,9 +1484,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/NotifyAppValidationOutput AWS API Documentation
     #
-    # @overload notify_app_validation_output(params = {})
+    # @overload notify_app_validation_output(**params)
     # @param [Hash] params ({})
-    def notify_app_validation_output(params = {}, options = {})
+    def notify_app_validation_output(params = {}, **options)
       req = build_request(:notify_app_validation_output, params)
       req.send_request(options)
     end
@@ -1566,9 +1566,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/PutAppLaunchConfiguration AWS API Documentation
     #
-    # @overload put_app_launch_configuration(params = {})
+    # @overload put_app_launch_configuration(**params)
     # @param [Hash] params ({})
-    def put_app_launch_configuration(params = {}, options = {})
+    def put_app_launch_configuration(params = {}, **options)
       req = build_request(:put_app_launch_configuration, params)
       req.send_request(options)
     end
@@ -1627,9 +1627,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/PutAppReplicationConfiguration AWS API Documentation
     #
-    # @overload put_app_replication_configuration(params = {})
+    # @overload put_app_replication_configuration(**params)
     # @param [Hash] params ({})
-    def put_app_replication_configuration(params = {}, options = {})
+    def put_app_replication_configuration(params = {}, **options)
       req = build_request(:put_app_replication_configuration, params)
       req.send_request(options)
     end
@@ -1713,9 +1713,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/PutAppValidationConfiguration AWS API Documentation
     #
-    # @overload put_app_validation_configuration(params = {})
+    # @overload put_app_validation_configuration(**params)
     # @param [Hash] params ({})
-    def put_app_validation_configuration(params = {}, options = {})
+    def put_app_validation_configuration(params = {}, **options)
       req = build_request(:put_app_validation_configuration, params)
       req.send_request(options)
     end
@@ -1736,9 +1736,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/StartAppReplication AWS API Documentation
     #
-    # @overload start_app_replication(params = {})
+    # @overload start_app_replication(**params)
     # @param [Hash] params ({})
-    def start_app_replication(params = {}, options = {})
+    def start_app_replication(params = {}, **options)
       req = build_request(:start_app_replication, params)
       req.send_request(options)
     end
@@ -1762,9 +1762,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/StartOnDemandAppReplication AWS API Documentation
     #
-    # @overload start_on_demand_app_replication(params = {})
+    # @overload start_on_demand_app_replication(**params)
     # @param [Hash] params ({})
-    def start_on_demand_app_replication(params = {}, options = {})
+    def start_on_demand_app_replication(params = {}, **options)
       req = build_request(:start_on_demand_app_replication, params)
       req.send_request(options)
     end
@@ -1799,9 +1799,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/StartOnDemandReplicationRun AWS API Documentation
     #
-    # @overload start_on_demand_replication_run(params = {})
+    # @overload start_on_demand_replication_run(**params)
     # @param [Hash] params ({})
-    def start_on_demand_replication_run(params = {}, options = {})
+    def start_on_demand_replication_run(params = {}, **options)
       req = build_request(:start_on_demand_replication_run, params)
       req.send_request(options)
     end
@@ -1822,9 +1822,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/StopAppReplication AWS API Documentation
     #
-    # @overload stop_app_replication(params = {})
+    # @overload stop_app_replication(**params)
     # @param [Hash] params ({})
-    def stop_app_replication(params = {}, options = {})
+    def stop_app_replication(params = {}, **options)
       req = build_request(:stop_app_replication, params)
       req.send_request(options)
     end
@@ -1844,9 +1844,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/TerminateApp AWS API Documentation
     #
-    # @overload terminate_app(params = {})
+    # @overload terminate_app(**params)
     # @param [Hash] params ({})
-    def terminate_app(params = {}, options = {})
+    def terminate_app(params = {}, **options)
       req = build_request(:terminate_app, params)
       req.send_request(options)
     end
@@ -1960,9 +1960,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/UpdateApp AWS API Documentation
     #
-    # @overload update_app(params = {})
+    # @overload update_app(**params)
     # @param [Hash] params ({})
-    def update_app(params = {}, options = {})
+    def update_app(params = {}, **options)
       req = build_request(:update_app, params)
       req.send_request(options)
     end
@@ -2029,9 +2029,9 @@ module Aws::SMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sms-2016-10-24/UpdateReplicationJob AWS API Documentation
     #
-    # @overload update_replication_job(params = {})
+    # @overload update_replication_job(**params)
     # @param [Hash] params ({})
-    def update_replication_job(params = {}, options = {})
+    def update_replication_job(params = {}, **options)
       req = build_request(:update_replication_job, params)
       req.send_request(options)
     end
@@ -2040,7 +2040,7 @@ module Aws::SMS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2048,15 +2048,15 @@ module Aws::SMS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-sms'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-sms"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

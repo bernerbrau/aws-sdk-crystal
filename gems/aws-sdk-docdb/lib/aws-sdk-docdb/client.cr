@@ -7,29 +7,29 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
-require 'aws-sdk-docdb/plugins/cross_region_copying.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
+require "aws-sdk-docdb/plugins/cross_region_copying.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:docdb)
 
@@ -282,7 +282,7 @@ module Aws::DocDB
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -357,9 +357,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -415,9 +415,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ApplyPendingMaintenanceAction AWS API Documentation
     #
-    # @overload apply_pending_maintenance_action(params = {})
+    # @overload apply_pending_maintenance_action(**params)
     # @param [Hash] params ({})
-    def apply_pending_maintenance_action(params = {}, options = {})
+    def apply_pending_maintenance_action(params = {}, **options)
       req = build_request(:apply_pending_maintenance_action, params)
       req.send_request(options)
     end
@@ -488,9 +488,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CopyDBClusterParameterGroup AWS API Documentation
     #
-    # @overload copy_db_cluster_parameter_group(params = {})
+    # @overload copy_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def copy_db_cluster_parameter_group(params = {}, options = {})
+    def copy_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:copy_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -649,9 +649,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CopyDBClusterSnapshot AWS API Documentation
     #
-    # @overload copy_db_cluster_snapshot(params = {})
+    # @overload copy_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_db_cluster_snapshot(params = {}, options = {})
+    def copy_db_cluster_snapshot(params = {}, **options)
       req = build_request(:copy_db_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -896,9 +896,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CreateDBCluster AWS API Documentation
     #
-    # @overload create_db_cluster(params = {})
+    # @overload create_db_cluster(**params)
     # @param [Hash] params ({})
-    def create_db_cluster(params = {}, options = {})
+    def create_db_cluster(params = {}, **options)
       req = build_request(:create_db_cluster, params)
       req.send_request(options)
     end
@@ -976,9 +976,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CreateDBClusterParameterGroup AWS API Documentation
     #
-    # @overload create_db_cluster_parameter_group(params = {})
+    # @overload create_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_parameter_group(params = {}, options = {})
+    def create_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:create_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -1054,9 +1054,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CreateDBClusterSnapshot AWS API Documentation
     #
-    # @overload create_db_cluster_snapshot(params = {})
+    # @overload create_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_snapshot(params = {}, options = {})
+    def create_db_cluster_snapshot(params = {}, **options)
       req = build_request(:create_db_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -1217,9 +1217,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CreateDBInstance AWS API Documentation
     #
-    # @overload create_db_instance(params = {})
+    # @overload create_db_instance(**params)
     # @param [Hash] params ({})
-    def create_db_instance(params = {}, options = {})
+    def create_db_instance(params = {}, **options)
       req = build_request(:create_db_instance, params)
       req.send_request(options)
     end
@@ -1277,9 +1277,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/CreateDBSubnetGroup AWS API Documentation
     #
-    # @overload create_db_subnet_group(params = {})
+    # @overload create_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_db_subnet_group(params = {}, options = {})
+    def create_db_subnet_group(params = {}, **options)
       req = build_request(:create_db_subnet_group, params)
       req.send_request(options)
     end
@@ -1385,9 +1385,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DeleteDBCluster AWS API Documentation
     #
-    # @overload delete_db_cluster(params = {})
+    # @overload delete_db_cluster(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster(params = {}, options = {})
+    def delete_db_cluster(params = {}, **options)
       req = build_request(:delete_db_cluster, params)
       req.send_request(options)
     end
@@ -1416,9 +1416,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DeleteDBClusterParameterGroup AWS API Documentation
     #
-    # @overload delete_db_cluster_parameter_group(params = {})
+    # @overload delete_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_parameter_group(params = {}, options = {})
+    def delete_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:delete_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -1469,9 +1469,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DeleteDBClusterSnapshot AWS API Documentation
     #
-    # @overload delete_db_cluster_snapshot(params = {})
+    # @overload delete_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_snapshot(params = {}, options = {})
+    def delete_db_cluster_snapshot(params = {}, **options)
       req = build_request(:delete_db_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -1562,9 +1562,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DeleteDBInstance AWS API Documentation
     #
-    # @overload delete_db_instance(params = {})
+    # @overload delete_db_instance(**params)
     # @param [Hash] params ({})
-    def delete_db_instance(params = {}, options = {})
+    def delete_db_instance(params = {}, **options)
       req = build_request(:delete_db_instance, params)
       req.send_request(options)
     end
@@ -1600,9 +1600,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DeleteDBSubnetGroup AWS API Documentation
     #
-    # @overload delete_db_subnet_group(params = {})
+    # @overload delete_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_db_subnet_group(params = {}, options = {})
+    def delete_db_subnet_group(params = {}, **options)
       req = build_request(:delete_db_subnet_group, params)
       req.send_request(options)
     end
@@ -1679,9 +1679,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeCertificates AWS API Documentation
     #
-    # @overload describe_certificates(params = {})
+    # @overload describe_certificates(**params)
     # @param [Hash] params ({})
-    def describe_certificates(params = {}, options = {})
+    def describe_certificates(params = {}, **options)
       req = build_request(:describe_certificates, params)
       req.send_request(options)
     end
@@ -1751,9 +1751,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBClusterParameterGroups AWS API Documentation
     #
-    # @overload describe_db_cluster_parameter_groups(params = {})
+    # @overload describe_db_cluster_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_parameter_groups(params = {}, options = {})
+    def describe_db_cluster_parameter_groups(params = {}, **options)
       req = build_request(:describe_db_cluster_parameter_groups, params)
       req.send_request(options)
     end
@@ -1833,9 +1833,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBClusterParameters AWS API Documentation
     #
-    # @overload describe_db_cluster_parameters(params = {})
+    # @overload describe_db_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_parameters(params = {}, options = {})
+    def describe_db_cluster_parameters(params = {}, **options)
       req = build_request(:describe_db_cluster_parameters, params)
       req.send_request(options)
     end
@@ -1874,9 +1874,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBClusterSnapshotAttributes AWS API Documentation
     #
-    # @overload describe_db_cluster_snapshot_attributes(params = {})
+    # @overload describe_db_cluster_snapshot_attributes(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_snapshot_attributes(params = {}, options = {})
+    def describe_db_cluster_snapshot_attributes(params = {}, **options)
       req = build_request(:describe_db_cluster_snapshot_attributes, params)
       req.send_request(options)
     end
@@ -2014,9 +2014,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBClusterSnapshots AWS API Documentation
     #
-    # @overload describe_db_cluster_snapshots(params = {})
+    # @overload describe_db_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_snapshots(params = {}, options = {})
+    def describe_db_cluster_snapshots(params = {}, **options)
       req = build_request(:describe_db_cluster_snapshots, params)
       req.send_request(options)
     end
@@ -2132,9 +2132,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBClusters AWS API Documentation
     #
-    # @overload describe_db_clusters(params = {})
+    # @overload describe_db_clusters(**params)
     # @param [Hash] params ({})
-    def describe_db_clusters(params = {}, options = {})
+    def describe_db_clusters(params = {}, **options)
       req = build_request(:describe_db_clusters, params)
       req.send_request(options)
     end
@@ -2237,9 +2237,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBEngineVersions AWS API Documentation
     #
-    # @overload describe_db_engine_versions(params = {})
+    # @overload describe_db_engine_versions(**params)
     # @param [Hash] params ({})
-    def describe_db_engine_versions(params = {}, options = {})
+    def describe_db_engine_versions(params = {}, **options)
       req = build_request(:describe_db_engine_versions, params)
       req.send_request(options)
     end
@@ -2380,9 +2380,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBInstances AWS API Documentation
     #
-    # @overload describe_db_instances(params = {})
+    # @overload describe_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_db_instances(params = {}, options = {})
+    def describe_db_instances(params = {}, **options)
       req = build_request(:describe_db_instances, params)
       req.send_request(options)
     end
@@ -2449,9 +2449,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeDBSubnetGroups AWS API Documentation
     #
-    # @overload describe_db_subnet_groups(params = {})
+    # @overload describe_db_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_subnet_groups(params = {}, options = {})
+    def describe_db_subnet_groups(params = {}, **options)
       req = build_request(:describe_db_subnet_groups, params)
       req.send_request(options)
     end
@@ -2517,9 +2517,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeEngineDefaultClusterParameters AWS API Documentation
     #
-    # @overload describe_engine_default_cluster_parameters(params = {})
+    # @overload describe_engine_default_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_cluster_parameters(params = {}, options = {})
+    def describe_engine_default_cluster_parameters(params = {}, **options)
       req = build_request(:describe_engine_default_cluster_parameters, params)
       req.send_request(options)
     end
@@ -2561,9 +2561,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeEventCategories AWS API Documentation
     #
-    # @overload describe_event_categories(params = {})
+    # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, options = {})
+    def describe_event_categories(params = {}, **options)
       req = build_request(:describe_event_categories, params)
       req.send_request(options)
     end
@@ -2680,9 +2680,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -2765,9 +2765,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribeOrderableDBInstanceOptions AWS API Documentation
     #
-    # @overload describe_orderable_db_instance_options(params = {})
+    # @overload describe_orderable_db_instance_options(**params)
     # @param [Hash] params ({})
-    def describe_orderable_db_instance_options(params = {}, options = {})
+    def describe_orderable_db_instance_options(params = {}, **options)
       req = build_request(:describe_orderable_db_instance_options, params)
       req.send_request(options)
     end
@@ -2843,9 +2843,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DescribePendingMaintenanceActions AWS API Documentation
     #
-    # @overload describe_pending_maintenance_actions(params = {})
+    # @overload describe_pending_maintenance_actions(**params)
     # @param [Hash] params ({})
-    def describe_pending_maintenance_actions(params = {}, options = {})
+    def describe_pending_maintenance_actions(params = {}, **options)
       req = build_request(:describe_pending_maintenance_actions, params)
       req.send_request(options)
     end
@@ -2932,9 +2932,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/FailoverDBCluster AWS API Documentation
     #
-    # @overload failover_db_cluster(params = {})
+    # @overload failover_db_cluster(**params)
     # @param [Hash] params ({})
-    def failover_db_cluster(params = {}, options = {})
+    def failover_db_cluster(params = {}, **options)
       req = build_request(:failover_db_cluster, params)
       req.send_request(options)
     end
@@ -2972,9 +2972,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3176,9 +3176,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ModifyDBCluster AWS API Documentation
     #
-    # @overload modify_db_cluster(params = {})
+    # @overload modify_db_cluster(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster(params = {}, options = {})
+    def modify_db_cluster(params = {}, **options)
       req = build_request(:modify_db_cluster, params)
       req.send_request(options)
     end
@@ -3239,9 +3239,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ModifyDBClusterParameterGroup AWS API Documentation
     #
-    # @overload modify_db_cluster_parameter_group(params = {})
+    # @overload modify_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_parameter_group(params = {}, options = {})
+    def modify_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:modify_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -3316,9 +3316,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ModifyDBClusterSnapshotAttribute AWS API Documentation
     #
-    # @overload modify_db_cluster_snapshot_attribute(params = {})
+    # @overload modify_db_cluster_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_snapshot_attribute(params = {}, options = {})
+    def modify_db_cluster_snapshot_attribute(params = {}, **options)
       req = build_request(:modify_db_cluster_snapshot_attribute, params)
       req.send_request(options)
     end
@@ -3498,9 +3498,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ModifyDBInstance AWS API Documentation
     #
-    # @overload modify_db_instance(params = {})
+    # @overload modify_db_instance(**params)
     # @param [Hash] params ({})
-    def modify_db_instance(params = {}, options = {})
+    def modify_db_instance(params = {}, **options)
       req = build_request(:modify_db_instance, params)
       req.send_request(options)
     end
@@ -3549,9 +3549,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ModifyDBSubnetGroup AWS API Documentation
     #
-    # @overload modify_db_subnet_group(params = {})
+    # @overload modify_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_db_subnet_group(params = {}, options = {})
+    def modify_db_subnet_group(params = {}, **options)
       req = build_request(:modify_db_subnet_group, params)
       req.send_request(options)
     end
@@ -3656,9 +3656,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/RebootDBInstance AWS API Documentation
     #
-    # @overload reboot_db_instance(params = {})
+    # @overload reboot_db_instance(**params)
     # @param [Hash] params ({})
-    def reboot_db_instance(params = {}, options = {})
+    def reboot_db_instance(params = {}, **options)
       req = build_request(:reboot_db_instance, params)
       req.send_request(options)
     end
@@ -3683,9 +3683,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -3745,9 +3745,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/ResetDBClusterParameterGroup AWS API Documentation
     #
-    # @overload reset_db_cluster_parameter_group(params = {})
+    # @overload reset_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_db_cluster_parameter_group(params = {}, options = {})
+    def reset_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:reset_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -3926,9 +3926,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/RestoreDBClusterFromSnapshot AWS API Documentation
     #
-    # @overload restore_db_cluster_from_snapshot(params = {})
+    # @overload restore_db_cluster_from_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_from_snapshot(params = {}, options = {})
+    def restore_db_cluster_from_snapshot(params = {}, **options)
       req = build_request(:restore_db_cluster_from_snapshot, params)
       req.send_request(options)
     end
@@ -4116,9 +4116,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/RestoreDBClusterToPointInTime AWS API Documentation
     #
-    # @overload restore_db_cluster_to_point_in_time(params = {})
+    # @overload restore_db_cluster_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_to_point_in_time(params = {}, options = {})
+    def restore_db_cluster_to_point_in_time(params = {}, **options)
       req = build_request(:restore_db_cluster_to_point_in_time, params)
       req.send_request(options)
     end
@@ -4189,9 +4189,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/StartDBCluster AWS API Documentation
     #
-    # @overload start_db_cluster(params = {})
+    # @overload start_db_cluster(**params)
     # @param [Hash] params ({})
-    def start_db_cluster(params = {}, options = {})
+    def start_db_cluster(params = {}, **options)
       req = build_request(:start_db_cluster, params)
       req.send_request(options)
     end
@@ -4262,9 +4262,9 @@ module Aws::DocDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/StopDBCluster AWS API Documentation
     #
-    # @overload stop_db_cluster(params = {})
+    # @overload stop_db_cluster(**params)
     # @param [Hash] params ({})
-    def stop_db_cluster(params = {}, options = {})
+    def stop_db_cluster(params = {}, **options)
       req = build_request(:stop_db_cluster, params)
       req.send_request(options)
     end
@@ -4273,7 +4273,7 @@ module Aws::DocDB
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4281,8 +4281,8 @@ module Aws::DocDB
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-docdb'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-docdb"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -4375,7 +4375,7 @@ module Aws::DocDB
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -4391,7 +4391,7 @@ module Aws::DocDB
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

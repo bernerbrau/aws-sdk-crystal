@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:amplifybackend)
 
@@ -280,7 +280,7 @@ module Aws::AmplifyBackend
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -363,9 +363,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CloneBackend AWS API Documentation
     #
-    # @overload clone_backend(params = {})
+    # @overload clone_backend(**params)
     # @param [Hash] params ({})
-    def clone_backend(params = {}, options = {})
+    def clone_backend(params = {}, **options)
       req = build_request(:clone_backend, params)
       req.send_request(options)
     end
@@ -414,9 +414,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackend AWS API Documentation
     #
-    # @overload create_backend(params = {})
+    # @overload create_backend(**params)
     # @param [Hash] params ({})
-    def create_backend(params = {}, options = {})
+    def create_backend(params = {}, **options)
       req = build_request(:create_backend, params)
       req.send_request(options)
     end
@@ -497,9 +497,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendAPI AWS API Documentation
     #
-    # @overload create_backend_api(params = {})
+    # @overload create_backend_api(**params)
     # @param [Hash] params ({})
-    def create_backend_api(params = {}, options = {})
+    def create_backend_api(params = {}, **options)
       req = build_request(:create_backend_api, params)
       req.send_request(options)
     end
@@ -599,9 +599,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendAuth AWS API Documentation
     #
-    # @overload create_backend_auth(params = {})
+    # @overload create_backend_auth(**params)
     # @param [Hash] params ({})
-    def create_backend_auth(params = {}, options = {})
+    def create_backend_auth(params = {}, **options)
       req = build_request(:create_backend_auth, params)
       req.send_request(options)
     end
@@ -635,9 +635,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendConfig AWS API Documentation
     #
-    # @overload create_backend_config(params = {})
+    # @overload create_backend_config(**params)
     # @param [Hash] params ({})
-    def create_backend_config(params = {}, options = {})
+    def create_backend_config(params = {}, **options)
       req = build_request(:create_backend_config, params)
       req.send_request(options)
     end
@@ -669,9 +669,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateToken AWS API Documentation
     #
-    # @overload create_token(params = {})
+    # @overload create_token(**params)
     # @param [Hash] params ({})
-    def create_token(params = {}, options = {})
+    def create_token(params = {}, **options)
       req = build_request(:create_token, params)
       req.send_request(options)
     end
@@ -709,9 +709,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackend AWS API Documentation
     #
-    # @overload delete_backend(params = {})
+    # @overload delete_backend(**params)
     # @param [Hash] params ({})
-    def delete_backend(params = {}, options = {})
+    def delete_backend(params = {}, **options)
       req = build_request(:delete_backend, params)
       req.send_request(options)
     end
@@ -792,9 +792,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackendAPI AWS API Documentation
     #
-    # @overload delete_backend_api(params = {})
+    # @overload delete_backend_api(**params)
     # @param [Hash] params ({})
-    def delete_backend_api(params = {}, options = {})
+    def delete_backend_api(params = {}, **options)
       req = build_request(:delete_backend_api, params)
       req.send_request(options)
     end
@@ -835,9 +835,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackendAuth AWS API Documentation
     #
-    # @overload delete_backend_auth(params = {})
+    # @overload delete_backend_auth(**params)
     # @param [Hash] params ({})
-    def delete_backend_auth(params = {}, options = {})
+    def delete_backend_auth(params = {}, **options)
       req = build_request(:delete_backend_auth, params)
       req.send_request(options)
     end
@@ -865,9 +865,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteToken AWS API Documentation
     #
-    # @overload delete_token(params = {})
+    # @overload delete_token(**params)
     # @param [Hash] params ({})
-    def delete_token(params = {}, options = {})
+    def delete_token(params = {}, **options)
       req = build_request(:delete_token, params)
       req.send_request(options)
     end
@@ -908,9 +908,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GenerateBackendAPIModels AWS API Documentation
     #
-    # @overload generate_backend_api_models(params = {})
+    # @overload generate_backend_api_models(**params)
     # @param [Hash] params ({})
-    def generate_backend_api_models(params = {}, options = {})
+    def generate_backend_api_models(params = {}, **options)
       req = build_request(:generate_backend_api_models, params)
       req.send_request(options)
     end
@@ -949,9 +949,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackend AWS API Documentation
     #
-    # @overload get_backend(params = {})
+    # @overload get_backend(**params)
     # @param [Hash] params ({})
-    def get_backend(params = {}, options = {})
+    def get_backend(params = {}, **options)
       req = build_request(:get_backend, params)
       req.send_request(options)
     end
@@ -1052,9 +1052,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendAPI AWS API Documentation
     #
-    # @overload get_backend_api(params = {})
+    # @overload get_backend_api(**params)
     # @param [Hash] params ({})
-    def get_backend_api(params = {}, options = {})
+    def get_backend_api(params = {}, **options)
       req = build_request(:get_backend_api, params)
       req.send_request(options)
     end
@@ -1087,9 +1087,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendAPIModels AWS API Documentation
     #
-    # @overload get_backend_api_models(params = {})
+    # @overload get_backend_api_models(**params)
     # @param [Hash] params ({})
-    def get_backend_api_models(params = {}, options = {})
+    def get_backend_api_models(params = {}, **options)
       req = build_request(:get_backend_api_models, params)
       req.send_request(options)
     end
@@ -1160,9 +1160,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendAuth AWS API Documentation
     #
-    # @overload get_backend_auth(params = {})
+    # @overload get_backend_auth(**params)
     # @param [Hash] params ({})
-    def get_backend_auth(params = {}, options = {})
+    def get_backend_auth(params = {}, **options)
       req = build_request(:get_backend_auth, params)
       req.send_request(options)
     end
@@ -1207,9 +1207,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendJob AWS API Documentation
     #
-    # @overload get_backend_job(params = {})
+    # @overload get_backend_job(**params)
     # @param [Hash] params ({})
-    def get_backend_job(params = {}, options = {})
+    def get_backend_job(params = {}, **options)
       req = build_request(:get_backend_job, params)
       req.send_request(options)
     end
@@ -1243,9 +1243,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetToken AWS API Documentation
     #
-    # @overload get_token(params = {})
+    # @overload get_token(**params)
     # @param [Hash] params ({})
-    def get_token(params = {}, options = {})
+    def get_token(params = {}, **options)
       req = build_request(:get_token, params)
       req.send_request(options)
     end
@@ -1300,9 +1300,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ListBackendJobs AWS API Documentation
     #
-    # @overload list_backend_jobs(params = {})
+    # @overload list_backend_jobs(**params)
     # @param [Hash] params ({})
-    def list_backend_jobs(params = {}, options = {})
+    def list_backend_jobs(params = {}, **options)
       req = build_request(:list_backend_jobs, params)
       req.send_request(options)
     end
@@ -1338,9 +1338,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/RemoveAllBackends AWS API Documentation
     #
-    # @overload remove_all_backends(params = {})
+    # @overload remove_all_backends(**params)
     # @param [Hash] params ({})
-    def remove_all_backends(params = {}, options = {})
+    def remove_all_backends(params = {}, **options)
       req = build_request(:remove_all_backends, params)
       req.send_request(options)
     end
@@ -1366,9 +1366,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/RemoveBackendConfig AWS API Documentation
     #
-    # @overload remove_backend_config(params = {})
+    # @overload remove_backend_config(**params)
     # @param [Hash] params ({})
-    def remove_backend_config(params = {}, options = {})
+    def remove_backend_config(params = {}, **options)
       req = build_request(:remove_backend_config, params)
       req.send_request(options)
     end
@@ -1449,9 +1449,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendAPI AWS API Documentation
     #
-    # @overload update_backend_api(params = {})
+    # @overload update_backend_api(**params)
     # @param [Hash] params ({})
-    def update_backend_api(params = {}, options = {})
+    def update_backend_api(params = {}, **options)
       req = build_request(:update_backend_api, params)
       req.send_request(options)
     end
@@ -1547,9 +1547,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendAuth AWS API Documentation
     #
-    # @overload update_backend_auth(params = {})
+    # @overload update_backend_auth(**params)
     # @param [Hash] params ({})
-    def update_backend_auth(params = {}, options = {})
+    def update_backend_auth(params = {}, **options)
       req = build_request(:update_backend_auth, params)
       req.send_request(options)
     end
@@ -1593,9 +1593,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendConfig AWS API Documentation
     #
-    # @overload update_backend_config(params = {})
+    # @overload update_backend_config(**params)
     # @param [Hash] params ({})
-    def update_backend_config(params = {}, options = {})
+    def update_backend_config(params = {}, **options)
       req = build_request(:update_backend_config, params)
       req.send_request(options)
     end
@@ -1646,9 +1646,9 @@ module Aws::AmplifyBackend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendJob AWS API Documentation
     #
-    # @overload update_backend_job(params = {})
+    # @overload update_backend_job(**params)
     # @param [Hash] params ({})
-    def update_backend_job(params = {}, options = {})
+    def update_backend_job(params = {}, **options)
       req = build_request(:update_backend_job, params)
       req.send_request(options)
     end
@@ -1657,7 +1657,7 @@ module Aws::AmplifyBackend
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1665,15 +1665,15 @@ module Aws::AmplifyBackend
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-amplifybackend'
-      context[:gem_version] = '1.1.0'
+      context[:gem_name] = "aws-sdk-amplifybackend"
+      context[:gem_version] = "1.1.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mediastore/types'
-require_relative 'aws-sdk-mediastore/client_api'
-require_relative 'aws-sdk-mediastore/client'
-require_relative 'aws-sdk-mediastore/errors'
-require_relative 'aws-sdk-mediastore/resource'
-require_relative 'aws-sdk-mediastore/customizations'
+require_relative "aws-sdk-mediastore/types"
+require_relative "aws-sdk-mediastore/client_api"
+require_relative "aws-sdk-mediastore/client"
+require_relative "aws-sdk-mediastore/errors"
+require_relative "aws-sdk-mediastore/resource"
+require_relative "aws-sdk-mediastore/customizations"
 
 # This module provides support for AWS Elemental MediaStore. This module is available in the
 # `aws-sdk-mediastore` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mediastore/customizations'
 # @!group service
 module Aws::MediaStore
 
-  GEM_VERSION = '1.30.0'
+  GEM_VERSION = "1.30.0"
 
 end

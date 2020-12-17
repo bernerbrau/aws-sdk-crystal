@@ -8,26 +8,26 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-autoscaling/types'
-require_relative 'aws-sdk-autoscaling/client_api'
-require_relative 'aws-sdk-autoscaling/client'
-require_relative 'aws-sdk-autoscaling/errors'
-require_relative 'aws-sdk-autoscaling/waiters'
-require_relative 'aws-sdk-autoscaling/resource'
-require_relative 'aws-sdk-autoscaling/activity'
-require_relative 'aws-sdk-autoscaling/auto_scaling_group'
-require_relative 'aws-sdk-autoscaling/instance'
-require_relative 'aws-sdk-autoscaling/launch_configuration'
-require_relative 'aws-sdk-autoscaling/lifecycle_hook'
-require_relative 'aws-sdk-autoscaling/load_balancer'
-require_relative 'aws-sdk-autoscaling/notification_configuration'
-require_relative 'aws-sdk-autoscaling/scaling_policy'
-require_relative 'aws-sdk-autoscaling/scheduled_action'
-require_relative 'aws-sdk-autoscaling/tag'
-require_relative 'aws-sdk-autoscaling/customizations'
+require_relative "aws-sdk-autoscaling/types"
+require_relative "aws-sdk-autoscaling/client_api"
+require_relative "aws-sdk-autoscaling/client"
+require_relative "aws-sdk-autoscaling/errors"
+require_relative "aws-sdk-autoscaling/waiters"
+require_relative "aws-sdk-autoscaling/resource"
+require_relative "aws-sdk-autoscaling/activity"
+require_relative "aws-sdk-autoscaling/auto_scaling_group"
+require_relative "aws-sdk-autoscaling/instance"
+require_relative "aws-sdk-autoscaling/launch_configuration"
+require_relative "aws-sdk-autoscaling/lifecycle_hook"
+require_relative "aws-sdk-autoscaling/load_balancer"
+require_relative "aws-sdk-autoscaling/notification_configuration"
+require_relative "aws-sdk-autoscaling/scaling_policy"
+require_relative "aws-sdk-autoscaling/scheduled_action"
+require_relative "aws-sdk-autoscaling/tag"
+require_relative "aws-sdk-autoscaling/customizations"
 
 # This module provides support for Auto Scaling. This module is available in the
 # `aws-sdk-autoscaling` gem.
@@ -59,6 +59,6 @@ require_relative 'aws-sdk-autoscaling/customizations'
 # @!group service
 module Aws::AutoScaling
 
-  GEM_VERSION = '1.52.0'
+  GEM_VERSION = "1.52.0"
 
 end

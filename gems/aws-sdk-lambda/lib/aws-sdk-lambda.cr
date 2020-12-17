@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lambda/types'
-require_relative 'aws-sdk-lambda/client_api'
-require_relative 'aws-sdk-lambda/client'
-require_relative 'aws-sdk-lambda/errors'
-require_relative 'aws-sdk-lambda/waiters'
-require_relative 'aws-sdk-lambda/resource'
-require_relative 'aws-sdk-lambda/customizations'
+require_relative "aws-sdk-lambda/types"
+require_relative "aws-sdk-lambda/client_api"
+require_relative "aws-sdk-lambda/client"
+require_relative "aws-sdk-lambda/errors"
+require_relative "aws-sdk-lambda/waiters"
+require_relative "aws-sdk-lambda/resource"
+require_relative "aws-sdk-lambda/customizations"
 
 # This module provides support for AWS Lambda. This module is available in the
 # `aws-sdk-lambda` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-lambda/customizations'
 # @!group service
 module Aws::Lambda
 
-  GEM_VERSION = '1.57.0'
+  GEM_VERSION = "1.57.0"
 
 end

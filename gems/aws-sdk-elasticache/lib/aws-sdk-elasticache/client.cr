@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:elasticache)
 
@@ -280,7 +280,7 @@ module Aws::ElastiCache
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -419,9 +419,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -484,9 +484,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/AuthorizeCacheSecurityGroupIngress AWS API Documentation
     #
-    # @overload authorize_cache_security_group_ingress(params = {})
+    # @overload authorize_cache_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_cache_security_group_ingress(params = {}, options = {})
+    def authorize_cache_security_group_ingress(params = {}, **options)
       req = build_request(:authorize_cache_security_group_ingress, params)
       req.send_request(options)
     end
@@ -536,9 +536,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/BatchApplyUpdateAction AWS API Documentation
     #
-    # @overload batch_apply_update_action(params = {})
+    # @overload batch_apply_update_action(**params)
     # @param [Hash] params ({})
-    def batch_apply_update_action(params = {}, options = {})
+    def batch_apply_update_action(params = {}, **options)
       req = build_request(:batch_apply_update_action, params)
       req.send_request(options)
     end
@@ -588,9 +588,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/BatchStopUpdateAction AWS API Documentation
     #
-    # @overload batch_stop_update_action(params = {})
+    # @overload batch_stop_update_action(**params)
     # @param [Hash] params ({})
-    def batch_stop_update_action(params = {}, options = {})
+    def batch_stop_update_action(params = {}, **options)
       req = build_request(:batch_stop_update_action, params)
       req.send_request(options)
     end
@@ -672,9 +672,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CompleteMigration AWS API Documentation
     #
-    # @overload complete_migration(params = {})
+    # @overload complete_migration(**params)
     # @param [Hash] params ({})
-    def complete_migration(params = {}, options = {})
+    def complete_migration(params = {}, **options)
       req = build_request(:complete_migration, params)
       req.send_request(options)
     end
@@ -888,9 +888,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CopySnapshot AWS API Documentation
     #
-    # @overload copy_snapshot(params = {})
+    # @overload copy_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_snapshot(params = {}, options = {})
+    def copy_snapshot(params = {}, **options)
       req = build_request(:copy_snapshot, params)
       req.send_request(options)
     end
@@ -1446,9 +1446,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateCacheCluster AWS API Documentation
     #
-    # @overload create_cache_cluster(params = {})
+    # @overload create_cache_cluster(**params)
     # @param [Hash] params ({})
-    def create_cache_cluster(params = {}, options = {})
+    def create_cache_cluster(params = {}, **options)
       req = build_request(:create_cache_cluster, params)
       req.send_request(options)
     end
@@ -1528,9 +1528,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateCacheParameterGroup AWS API Documentation
     #
-    # @overload create_cache_parameter_group(params = {})
+    # @overload create_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_cache_parameter_group(params = {}, options = {})
+    def create_cache_parameter_group(params = {}, **options)
       req = build_request(:create_cache_parameter_group, params)
       req.send_request(options)
     end
@@ -1593,9 +1593,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateCacheSecurityGroup AWS API Documentation
     #
-    # @overload create_cache_security_group(params = {})
+    # @overload create_cache_security_group(**params)
     # @param [Hash] params ({})
-    def create_cache_security_group(params = {}, options = {})
+    def create_cache_security_group(params = {}, **options)
       req = build_request(:create_cache_security_group, params)
       req.send_request(options)
     end
@@ -1689,9 +1689,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateCacheSubnetGroup AWS API Documentation
     #
-    # @overload create_cache_subnet_group(params = {})
+    # @overload create_cache_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_cache_subnet_group(params = {}, options = {})
+    def create_cache_subnet_group(params = {}, **options)
       req = build_request(:create_cache_subnet_group, params)
       req.send_request(options)
     end
@@ -1771,9 +1771,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateGlobalReplicationGroup AWS API Documentation
     #
-    # @overload create_global_replication_group(params = {})
+    # @overload create_global_replication_group(**params)
     # @param [Hash] params ({})
-    def create_global_replication_group(params = {}, options = {})
+    def create_global_replication_group(params = {}, **options)
       req = build_request(:create_global_replication_group, params)
       req.send_request(options)
     end
@@ -2437,9 +2437,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateReplicationGroup AWS API Documentation
     #
-    # @overload create_replication_group(params = {})
+    # @overload create_replication_group(**params)
     # @param [Hash] params ({})
-    def create_replication_group(params = {}, options = {})
+    def create_replication_group(params = {}, **options)
       req = build_request(:create_replication_group, params)
       req.send_request(options)
     end
@@ -2650,9 +2650,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateSnapshot AWS API Documentation
     #
-    # @overload create_snapshot(params = {})
+    # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, options = {})
+    def create_snapshot(params = {}, **options)
       req = build_request(:create_snapshot, params)
       req.send_request(options)
     end
@@ -2720,9 +2720,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -2778,9 +2778,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/CreateUserGroup AWS API Documentation
     #
-    # @overload create_user_group(params = {})
+    # @overload create_user_group(**params)
     # @param [Hash] params ({})
-    def create_user_group(params = {}, options = {})
+    def create_user_group(params = {}, **options)
       req = build_request(:create_user_group, params)
       req.send_request(options)
     end
@@ -2851,9 +2851,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DecreaseNodeGroupsInGlobalReplicationGroup AWS API Documentation
     #
-    # @overload decrease_node_groups_in_global_replication_group(params = {})
+    # @overload decrease_node_groups_in_global_replication_group(**params)
     # @param [Hash] params ({})
-    def decrease_node_groups_in_global_replication_group(params = {}, options = {})
+    def decrease_node_groups_in_global_replication_group(params = {}, **options)
       req = build_request(:decrease_node_groups_in_global_replication_group, params)
       req.send_request(options)
     end
@@ -2976,9 +2976,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DecreaseReplicaCount AWS API Documentation
     #
-    # @overload decrease_replica_count(params = {})
+    # @overload decrease_replica_count(**params)
     # @param [Hash] params ({})
-    def decrease_replica_count(params = {}, options = {})
+    def decrease_replica_count(params = {}, **options)
       req = build_request(:decrease_replica_count, params)
       req.send_request(options)
     end
@@ -3118,9 +3118,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteCacheCluster AWS API Documentation
     #
-    # @overload delete_cache_cluster(params = {})
+    # @overload delete_cache_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cache_cluster(params = {}, options = {})
+    def delete_cache_cluster(params = {}, **options)
       req = build_request(:delete_cache_cluster, params)
       req.send_request(options)
     end
@@ -3155,9 +3155,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteCacheParameterGroup AWS API Documentation
     #
-    # @overload delete_cache_parameter_group(params = {})
+    # @overload delete_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_cache_parameter_group(params = {}, options = {})
+    def delete_cache_parameter_group(params = {}, **options)
       req = build_request(:delete_cache_parameter_group, params)
       req.send_request(options)
     end
@@ -3195,9 +3195,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteCacheSecurityGroup AWS API Documentation
     #
-    # @overload delete_cache_security_group(params = {})
+    # @overload delete_cache_security_group(**params)
     # @param [Hash] params ({})
-    def delete_cache_security_group(params = {}, options = {})
+    def delete_cache_security_group(params = {}, **options)
       req = build_request(:delete_cache_security_group, params)
       req.send_request(options)
     end
@@ -3234,9 +3234,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteCacheSubnetGroup AWS API Documentation
     #
-    # @overload delete_cache_subnet_group(params = {})
+    # @overload delete_cache_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_cache_subnet_group(params = {}, options = {})
+    def delete_cache_subnet_group(params = {}, **options)
       req = build_request(:delete_cache_subnet_group, params)
       req.send_request(options)
     end
@@ -3301,9 +3301,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteGlobalReplicationGroup AWS API Documentation
     #
-    # @overload delete_global_replication_group(params = {})
+    # @overload delete_global_replication_group(**params)
     # @param [Hash] params ({})
-    def delete_global_replication_group(params = {}, options = {})
+    def delete_global_replication_group(params = {}, **options)
       req = build_request(:delete_global_replication_group, params)
       req.send_request(options)
     end
@@ -3426,9 +3426,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteReplicationGroup AWS API Documentation
     #
-    # @overload delete_replication_group(params = {})
+    # @overload delete_replication_group(**params)
     # @param [Hash] params ({})
-    def delete_replication_group(params = {}, options = {})
+    def delete_replication_group(params = {}, **options)
       req = build_request(:delete_replication_group, params)
       req.send_request(options)
     end
@@ -3542,9 +3542,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteSnapshot AWS API Documentation
     #
-    # @overload delete_snapshot(params = {})
+    # @overload delete_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_snapshot(params = {}, options = {})
+    def delete_snapshot(params = {}, **options)
       req = build_request(:delete_snapshot, params)
       req.send_request(options)
     end
@@ -3593,9 +3593,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -3645,9 +3645,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DeleteUserGroup AWS API Documentation
     #
-    # @overload delete_user_group(params = {})
+    # @overload delete_user_group(**params)
     # @param [Hash] params ({})
-    def delete_user_group(params = {}, options = {})
+    def delete_user_group(params = {}, **options)
       req = build_request(:delete_user_group, params)
       req.send_request(options)
     end
@@ -3898,9 +3898,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeCacheClusters AWS API Documentation
     #
-    # @overload describe_cache_clusters(params = {})
+    # @overload describe_cache_clusters(**params)
     # @param [Hash] params ({})
-    def describe_cache_clusters(params = {}, options = {})
+    def describe_cache_clusters(params = {}, **options)
       req = build_request(:describe_cache_clusters, params)
       req.send_request(options)
     end
@@ -4152,9 +4152,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeCacheEngineVersions AWS API Documentation
     #
-    # @overload describe_cache_engine_versions(params = {})
+    # @overload describe_cache_engine_versions(**params)
     # @param [Hash] params ({})
-    def describe_cache_engine_versions(params = {}, options = {})
+    def describe_cache_engine_versions(params = {}, **options)
       req = build_request(:describe_cache_engine_versions, params)
       req.send_request(options)
     end
@@ -4230,9 +4230,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeCacheParameterGroups AWS API Documentation
     #
-    # @overload describe_cache_parameter_groups(params = {})
+    # @overload describe_cache_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_cache_parameter_groups(params = {}, options = {})
+    def describe_cache_parameter_groups(params = {}, **options)
       req = build_request(:describe_cache_parameter_groups, params)
       req.send_request(options)
     end
@@ -4710,9 +4710,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeCacheParameters AWS API Documentation
     #
-    # @overload describe_cache_parameters(params = {})
+    # @overload describe_cache_parameters(**params)
     # @param [Hash] params ({})
-    def describe_cache_parameters(params = {}, options = {})
+    def describe_cache_parameters(params = {}, **options)
       req = build_request(:describe_cache_parameters, params)
       req.send_request(options)
     end
@@ -4781,9 +4781,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeCacheSecurityGroups AWS API Documentation
     #
-    # @overload describe_cache_security_groups(params = {})
+    # @overload describe_cache_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_cache_security_groups(params = {}, options = {})
+    def describe_cache_security_groups(params = {}, **options)
       req = build_request(:describe_cache_security_groups, params)
       req.send_request(options)
     end
@@ -4889,9 +4889,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeCacheSubnetGroups AWS API Documentation
     #
-    # @overload describe_cache_subnet_groups(params = {})
+    # @overload describe_cache_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_cache_subnet_groups(params = {}, options = {})
+    def describe_cache_subnet_groups(params = {}, **options)
       req = build_request(:describe_cache_subnet_groups, params)
       req.send_request(options)
     end
@@ -5577,9 +5577,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeEngineDefaultParameters AWS API Documentation
     #
-    # @overload describe_engine_default_parameters(params = {})
+    # @overload describe_engine_default_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_parameters(params = {}, options = {})
+    def describe_engine_default_parameters(params = {}, **options)
       req = build_request(:describe_engine_default_parameters, params)
       req.send_request(options)
     end
@@ -5760,9 +5760,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -5832,9 +5832,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeGlobalReplicationGroups AWS API Documentation
     #
-    # @overload describe_global_replication_groups(params = {})
+    # @overload describe_global_replication_groups(**params)
     # @param [Hash] params ({})
-    def describe_global_replication_groups(params = {}, options = {})
+    def describe_global_replication_groups(params = {}, **options)
       req = build_request(:describe_global_replication_groups, params)
       req.send_request(options)
     end
@@ -6011,9 +6011,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeReplicationGroups AWS API Documentation
     #
-    # @overload describe_replication_groups(params = {})
+    # @overload describe_replication_groups(**params)
     # @param [Hash] params ({})
-    def describe_replication_groups(params = {}, options = {})
+    def describe_replication_groups(params = {}, **options)
       req = build_request(:describe_replication_groups, params)
       req.send_request(options)
     end
@@ -6216,9 +6216,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeReservedCacheNodes AWS API Documentation
     #
-    # @overload describe_reserved_cache_nodes(params = {})
+    # @overload describe_reserved_cache_nodes(**params)
     # @param [Hash] params ({})
-    def describe_reserved_cache_nodes(params = {}, options = {})
+    def describe_reserved_cache_nodes(params = {}, **options)
       req = build_request(:describe_reserved_cache_nodes, params)
       req.send_request(options)
     end
@@ -6723,9 +6723,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeReservedCacheNodesOfferings AWS API Documentation
     #
-    # @overload describe_reserved_cache_nodes_offerings(params = {})
+    # @overload describe_reserved_cache_nodes_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_cache_nodes_offerings(params = {}, options = {})
+    def describe_reserved_cache_nodes_offerings(params = {}, **options)
       req = build_request(:describe_reserved_cache_nodes_offerings, params)
       req.send_request(options)
     end
@@ -6782,9 +6782,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeServiceUpdates AWS API Documentation
     #
-    # @overload describe_service_updates(params = {})
+    # @overload describe_service_updates(**params)
     # @param [Hash] params ({})
-    def describe_service_updates(params = {}, options = {})
+    def describe_service_updates(params = {}, **options)
       req = build_request(:describe_service_updates, params)
       req.send_request(options)
     end
@@ -6949,9 +6949,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeSnapshots AWS API Documentation
     #
-    # @overload describe_snapshots(params = {})
+    # @overload describe_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_snapshots(params = {}, options = {})
+    def describe_snapshots(params = {}, **options)
       req = build_request(:describe_snapshots, params)
       req.send_request(options)
     end
@@ -7061,9 +7061,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeUpdateActions AWS API Documentation
     #
-    # @overload describe_update_actions(params = {})
+    # @overload describe_update_actions(**params)
     # @param [Hash] params ({})
-    def describe_update_actions(params = {}, options = {})
+    def describe_update_actions(params = {}, **options)
       req = build_request(:describe_update_actions, params)
       req.send_request(options)
     end
@@ -7119,9 +7119,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeUserGroups AWS API Documentation
     #
-    # @overload describe_user_groups(params = {})
+    # @overload describe_user_groups(**params)
     # @param [Hash] params ({})
-    def describe_user_groups(params = {}, options = {})
+    def describe_user_groups(params = {}, **options)
       req = build_request(:describe_user_groups, params)
       req.send_request(options)
     end
@@ -7188,9 +7188,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DescribeUsers AWS API Documentation
     #
-    # @overload describe_users(params = {})
+    # @overload describe_users(**params)
     # @param [Hash] params ({})
-    def describe_users(params = {}, options = {})
+    def describe_users(params = {}, **options)
       req = build_request(:describe_users, params)
       req.send_request(options)
     end
@@ -7248,9 +7248,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/DisassociateGlobalReplicationGroup AWS API Documentation
     #
-    # @overload disassociate_global_replication_group(params = {})
+    # @overload disassociate_global_replication_group(**params)
     # @param [Hash] params ({})
-    def disassociate_global_replication_group(params = {}, options = {})
+    def disassociate_global_replication_group(params = {}, **options)
       req = build_request(:disassociate_global_replication_group, params)
       req.send_request(options)
     end
@@ -7305,9 +7305,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/FailoverGlobalReplicationGroup AWS API Documentation
     #
-    # @overload failover_global_replication_group(params = {})
+    # @overload failover_global_replication_group(**params)
     # @param [Hash] params ({})
-    def failover_global_replication_group(params = {}, options = {})
+    def failover_global_replication_group(params = {}, **options)
       req = build_request(:failover_global_replication_group, params)
       req.send_request(options)
     end
@@ -7378,9 +7378,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/IncreaseNodeGroupsInGlobalReplicationGroup AWS API Documentation
     #
-    # @overload increase_node_groups_in_global_replication_group(params = {})
+    # @overload increase_node_groups_in_global_replication_group(**params)
     # @param [Hash] params ({})
-    def increase_node_groups_in_global_replication_group(params = {}, options = {})
+    def increase_node_groups_in_global_replication_group(params = {}, **options)
       req = build_request(:increase_node_groups_in_global_replication_group, params)
       req.send_request(options)
     end
@@ -7487,9 +7487,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/IncreaseReplicaCount AWS API Documentation
     #
-    # @overload increase_replica_count(params = {})
+    # @overload increase_replica_count(**params)
     # @param [Hash] params ({})
-    def increase_replica_count(params = {}, options = {})
+    def increase_replica_count(params = {}, **options)
       req = build_request(:increase_replica_count, params)
       req.send_request(options)
     end
@@ -7578,9 +7578,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ListAllowedNodeTypeModifications AWS API Documentation
     #
-    # @overload list_allowed_node_type_modifications(params = {})
+    # @overload list_allowed_node_type_modifications(**params)
     # @param [Hash] params ({})
-    def list_allowed_node_type_modifications(params = {}, options = {})
+    def list_allowed_node_type_modifications(params = {}, **options)
       req = build_request(:list_allowed_node_type_modifications, params)
       req.send_request(options)
     end
@@ -7655,9 +7655,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -8090,9 +8090,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyCacheCluster AWS API Documentation
     #
-    # @overload modify_cache_cluster(params = {})
+    # @overload modify_cache_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cache_cluster(params = {}, options = {})
+    def modify_cache_cluster(params = {}, **options)
       req = build_request(:modify_cache_cluster, params)
       req.send_request(options)
     end
@@ -8156,9 +8156,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyCacheParameterGroup AWS API Documentation
     #
-    # @overload modify_cache_parameter_group(params = {})
+    # @overload modify_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_cache_parameter_group(params = {}, options = {})
+    def modify_cache_parameter_group(params = {}, **options)
       req = build_request(:modify_cache_parameter_group, params)
       req.send_request(options)
     end
@@ -8258,9 +8258,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyCacheSubnetGroup AWS API Documentation
     #
-    # @overload modify_cache_subnet_group(params = {})
+    # @overload modify_cache_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_cache_subnet_group(params = {}, options = {})
+    def modify_cache_subnet_group(params = {}, **options)
       req = build_request(:modify_cache_subnet_group, params)
       req.send_request(options)
     end
@@ -8331,9 +8331,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyGlobalReplicationGroup AWS API Documentation
     #
-    # @overload modify_global_replication_group(params = {})
+    # @overload modify_global_replication_group(**params)
     # @param [Hash] params ({})
-    def modify_global_replication_group(params = {}, options = {})
+    def modify_global_replication_group(params = {}, **options)
       req = build_request(:modify_global_replication_group, params)
       req.send_request(options)
     end
@@ -8711,9 +8711,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyReplicationGroup AWS API Documentation
     #
-    # @overload modify_replication_group(params = {})
+    # @overload modify_replication_group(**params)
     # @param [Hash] params ({})
-    def modify_replication_group(params = {}, options = {})
+    def modify_replication_group(params = {}, **options)
       req = build_request(:modify_replication_group, params)
       req.send_request(options)
     end
@@ -8839,9 +8839,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyReplicationGroupShardConfiguration AWS API Documentation
     #
-    # @overload modify_replication_group_shard_configuration(params = {})
+    # @overload modify_replication_group_shard_configuration(**params)
     # @param [Hash] params ({})
-    def modify_replication_group_shard_configuration(params = {}, options = {})
+    def modify_replication_group_shard_configuration(params = {}, **options)
       req = build_request(:modify_replication_group_shard_configuration, params)
       req.send_request(options)
     end
@@ -8900,9 +8900,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyUser AWS API Documentation
     #
-    # @overload modify_user(params = {})
+    # @overload modify_user(**params)
     # @param [Hash] params ({})
-    def modify_user(params = {}, options = {})
+    def modify_user(params = {}, **options)
       req = build_request(:modify_user, params)
       req.send_request(options)
     end
@@ -8953,9 +8953,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ModifyUserGroup AWS API Documentation
     #
-    # @overload modify_user_group(params = {})
+    # @overload modify_user_group(**params)
     # @param [Hash] params ({})
-    def modify_user_group(params = {}, options = {})
+    def modify_user_group(params = {}, **options)
       req = build_request(:modify_user_group, params)
       req.send_request(options)
     end
@@ -9024,9 +9024,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/PurchaseReservedCacheNodesOffering AWS API Documentation
     #
-    # @overload purchase_reserved_cache_nodes_offering(params = {})
+    # @overload purchase_reserved_cache_nodes_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_cache_nodes_offering(params = {}, options = {})
+    def purchase_reserved_cache_nodes_offering(params = {}, **options)
       req = build_request(:purchase_reserved_cache_nodes_offering, params)
       req.send_request(options)
     end
@@ -9076,9 +9076,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/RebalanceSlotsInGlobalReplicationGroup AWS API Documentation
     #
-    # @overload rebalance_slots_in_global_replication_group(params = {})
+    # @overload rebalance_slots_in_global_replication_group(**params)
     # @param [Hash] params ({})
-    def rebalance_slots_in_global_replication_group(params = {}, options = {})
+    def rebalance_slots_in_global_replication_group(params = {}, **options)
       req = build_request(:rebalance_slots_in_global_replication_group, params)
       req.send_request(options)
     end
@@ -9227,9 +9227,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/RebootCacheCluster AWS API Documentation
     #
-    # @overload reboot_cache_cluster(params = {})
+    # @overload reboot_cache_cluster(**params)
     # @param [Hash] params ({})
-    def reboot_cache_cluster(params = {}, options = {})
+    def reboot_cache_cluster(params = {}, **options)
       req = build_request(:reboot_cache_cluster, params)
       req.send_request(options)
     end
@@ -9313,9 +9313,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -9380,9 +9380,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/ResetCacheParameterGroup AWS API Documentation
     #
-    # @overload reset_cache_parameter_group(params = {})
+    # @overload reset_cache_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_cache_parameter_group(params = {}, options = {})
+    def reset_cache_parameter_group(params = {}, **options)
       req = build_request(:reset_cache_parameter_group, params)
       req.send_request(options)
     end
@@ -9439,9 +9439,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/RevokeCacheSecurityGroupIngress AWS API Documentation
     #
-    # @overload revoke_cache_security_group_ingress(params = {})
+    # @overload revoke_cache_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_cache_security_group_ingress(params = {}, options = {})
+    def revoke_cache_security_group_ingress(params = {}, **options)
       req = build_request(:revoke_cache_security_group_ingress, params)
       req.send_request(options)
     end
@@ -9526,9 +9526,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/StartMigration AWS API Documentation
     #
-    # @overload start_migration(params = {})
+    # @overload start_migration(**params)
     # @param [Hash] params ({})
-    def start_migration(params = {}, options = {})
+    def start_migration(params = {}, **options)
       req = build_request(:start_migration, params)
       req.send_request(options)
     end
@@ -9662,9 +9662,9 @@ module Aws::ElastiCache
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/TestFailover AWS API Documentation
     #
-    # @overload test_failover(params = {})
+    # @overload test_failover(**params)
     # @param [Hash] params ({})
-    def test_failover(params = {}, options = {})
+    def test_failover(params = {}, **options)
       req = build_request(:test_failover, params)
       req.send_request(options)
     end
@@ -9673,7 +9673,7 @@ module Aws::ElastiCache
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -9681,8 +9681,8 @@ module Aws::ElastiCache
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-elasticache'
-      context[:gem_version] = '1.47.0'
+      context[:gem_name] = "aws-sdk-elasticache"
+      context[:gem_version] = "1.47.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -9777,7 +9777,7 @@ module Aws::ElastiCache
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -9793,7 +9793,7 @@ module Aws::ElastiCache
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

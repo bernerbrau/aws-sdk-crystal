@@ -7,31 +7,31 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/protocols/rest_xml.rb'
-require 'aws-sdk-s3control/plugins/arn.rb'
-require 'aws-sdk-s3control/plugins/dualstack.rb'
-require 'aws-sdk-s3control/plugins/s3_control_signer.rb'
-require 'aws-sdk-s3control/plugins/s3_host_id.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/protocols/rest_xml.rb"
+require "aws-sdk-s3control/plugins/arn.rb"
+require "aws-sdk-s3control/plugins/dualstack.rb"
+require "aws-sdk-s3control/plugins/s3_control_signer.rb"
+require "aws-sdk-s3control/plugins/s3_host_id.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:s3control)
 
@@ -296,7 +296,7 @@ module Aws::S3Control
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -464,9 +464,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessPoint AWS API Documentation
     #
-    # @overload create_access_point(params = {})
+    # @overload create_access_point(**params)
     # @param [Hash] params ({})
-    def create_access_point(params = {}, options = {})
+    def create_access_point(params = {}, **options)
       req = build_request(:create_access_point, params)
       req.send_request(options)
     end
@@ -623,9 +623,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateBucket AWS API Documentation
     #
-    # @overload create_bucket(params = {})
+    # @overload create_bucket(**params)
     # @param [Hash] params ({})
-    def create_bucket(params = {}, options = {})
+    def create_bucket(params = {}, **options)
       req = build_request(:create_bucket, params)
       req.send_request(options)
     end
@@ -848,9 +848,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateJob AWS API Documentation
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -909,9 +909,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPoint AWS API Documentation
     #
-    # @overload delete_access_point(params = {})
+    # @overload delete_access_point(**params)
     # @param [Hash] params ({})
-    def delete_access_point(params = {}, options = {})
+    def delete_access_point(params = {}, **options)
       req = build_request(:delete_access_point, params)
       req.send_request(options)
     end
@@ -969,9 +969,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointPolicy AWS API Documentation
     #
-    # @overload delete_access_point_policy(params = {})
+    # @overload delete_access_point_policy(**params)
     # @param [Hash] params ({})
-    def delete_access_point_policy(params = {}, options = {})
+    def delete_access_point_policy(params = {}, **options)
       req = build_request(:delete_access_point_policy, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteBucket AWS API Documentation
     #
-    # @overload delete_bucket(params = {})
+    # @overload delete_bucket(**params)
     # @param [Hash] params ({})
-    def delete_bucket(params = {}, options = {})
+    def delete_bucket(params = {}, **options)
       req = build_request(:delete_bucket, params)
       req.send_request(options)
     end
@@ -1124,9 +1124,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteBucketLifecycleConfiguration AWS API Documentation
     #
-    # @overload delete_bucket_lifecycle_configuration(params = {})
+    # @overload delete_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def delete_bucket_lifecycle_configuration(params = {}, options = {})
+    def delete_bucket_lifecycle_configuration(params = {}, **options)
       req = build_request(:delete_bucket_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -1210,9 +1210,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteBucketPolicy AWS API Documentation
     #
-    # @overload delete_bucket_policy(params = {})
+    # @overload delete_bucket_policy(**params)
     # @param [Hash] params ({})
-    def delete_bucket_policy(params = {}, options = {})
+    def delete_bucket_policy(params = {}, **options)
       req = build_request(:delete_bucket_policy, params)
       req.send_request(options)
     end
@@ -1282,9 +1282,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteBucketTagging AWS API Documentation
     #
-    # @overload delete_bucket_tagging(params = {})
+    # @overload delete_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def delete_bucket_tagging(params = {}, options = {})
+    def delete_bucket_tagging(params = {}, **options)
       req = build_request(:delete_bucket_tagging, params)
       req.send_request(options)
     end
@@ -1329,9 +1329,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteJobTagging AWS API Documentation
     #
-    # @overload delete_job_tagging(params = {})
+    # @overload delete_job_tagging(**params)
     # @param [Hash] params ({})
-    def delete_job_tagging(params = {}, options = {})
+    def delete_job_tagging(params = {}, **options)
       req = build_request(:delete_job_tagging, params)
       req.send_request(options)
     end
@@ -1365,9 +1365,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeletePublicAccessBlock AWS API Documentation
     #
-    # @overload delete_public_access_block(params = {})
+    # @overload delete_public_access_block(**params)
     # @param [Hash] params ({})
-    def delete_public_access_block(params = {}, options = {})
+    def delete_public_access_block(params = {}, **options)
       req = build_request(:delete_public_access_block, params)
       req.send_request(options)
     end
@@ -1405,9 +1405,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfiguration AWS API Documentation
     #
-    # @overload delete_storage_lens_configuration(params = {})
+    # @overload delete_storage_lens_configuration(**params)
     # @param [Hash] params ({})
-    def delete_storage_lens_configuration(params = {}, options = {})
+    def delete_storage_lens_configuration(params = {}, **options)
       req = build_request(:delete_storage_lens_configuration, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfigurationTagging AWS API Documentation
     #
-    # @overload delete_storage_lens_configuration_tagging(params = {})
+    # @overload delete_storage_lens_configuration_tagging(**params)
     # @param [Hash] params ({})
-    def delete_storage_lens_configuration_tagging(params = {}, options = {})
+    def delete_storage_lens_configuration_tagging(params = {}, **options)
       req = build_request(:delete_storage_lens_configuration_tagging, params)
       req.send_request(options)
     end
@@ -1577,9 +1577,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DescribeJob AWS API Documentation
     #
-    # @overload describe_job(params = {})
+    # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, options = {})
+    def describe_job(params = {}, **options)
       req = build_request(:describe_job, params)
       req.send_request(options)
     end
@@ -1660,9 +1660,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPoint AWS API Documentation
     #
-    # @overload get_access_point(params = {})
+    # @overload get_access_point(**params)
     # @param [Hash] params ({})
-    def get_access_point(params = {}, options = {})
+    def get_access_point(params = {}, **options)
       req = build_request(:get_access_point, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicy AWS API Documentation
     #
-    # @overload get_access_point_policy(params = {})
+    # @overload get_access_point_policy(**params)
     # @param [Hash] params ({})
-    def get_access_point_policy(params = {}, options = {})
+    def get_access_point_policy(params = {}, **options)
       req = build_request(:get_access_point_policy, params)
       req.send_request(options)
     end
@@ -1755,9 +1755,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatus AWS API Documentation
     #
-    # @overload get_access_point_policy_status(params = {})
+    # @overload get_access_point_policy_status(**params)
     # @param [Hash] params ({})
-    def get_access_point_policy_status(params = {}, options = {})
+    def get_access_point_policy_status(params = {}, **options)
       req = build_request(:get_access_point_policy_status, params)
       req.send_request(options)
     end
@@ -1841,9 +1841,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetBucket AWS API Documentation
     #
-    # @overload get_bucket(params = {})
+    # @overload get_bucket(**params)
     # @param [Hash] params ({})
-    def get_bucket(params = {}, options = {})
+    def get_bucket(params = {}, **options)
       req = build_request(:get_bucket, params)
       req.send_request(options)
     end
@@ -1959,9 +1959,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetBucketLifecycleConfiguration AWS API Documentation
     #
-    # @overload get_bucket_lifecycle_configuration(params = {})
+    # @overload get_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def get_bucket_lifecycle_configuration(params = {}, options = {})
+    def get_bucket_lifecycle_configuration(params = {}, **options)
       req = build_request(:get_bucket_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -2055,9 +2055,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetBucketPolicy AWS API Documentation
     #
-    # @overload get_bucket_policy(params = {})
+    # @overload get_bucket_policy(**params)
     # @param [Hash] params ({})
-    def get_bucket_policy(params = {}, options = {})
+    def get_bucket_policy(params = {}, **options)
       req = build_request(:get_bucket_policy, params)
       req.send_request(options)
     end
@@ -2143,9 +2143,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetBucketTagging AWS API Documentation
     #
-    # @overload get_bucket_tagging(params = {})
+    # @overload get_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def get_bucket_tagging(params = {}, options = {})
+    def get_bucket_tagging(params = {}, **options)
       req = build_request(:get_bucket_tagging, params)
       req.send_request(options)
     end
@@ -2198,9 +2198,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetJobTagging AWS API Documentation
     #
-    # @overload get_job_tagging(params = {})
+    # @overload get_job_tagging(**params)
     # @param [Hash] params ({})
-    def get_job_tagging(params = {}, options = {})
+    def get_job_tagging(params = {}, **options)
       req = build_request(:get_job_tagging, params)
       req.send_request(options)
     end
@@ -2243,9 +2243,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetPublicAccessBlock AWS API Documentation
     #
-    # @overload get_public_access_block(params = {})
+    # @overload get_public_access_block(**params)
     # @param [Hash] params ({})
-    def get_public_access_block(params = {}, options = {})
+    def get_public_access_block(params = {}, **options)
       req = build_request(:get_public_access_block, params)
       req.send_request(options)
     end
@@ -2312,9 +2312,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfiguration AWS API Documentation
     #
-    # @overload get_storage_lens_configuration(params = {})
+    # @overload get_storage_lens_configuration(**params)
     # @param [Hash] params ({})
-    def get_storage_lens_configuration(params = {}, options = {})
+    def get_storage_lens_configuration(params = {}, **options)
       req = build_request(:get_storage_lens_configuration, params)
       req.send_request(options)
     end
@@ -2360,9 +2360,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfigurationTagging AWS API Documentation
     #
-    # @overload get_storage_lens_configuration_tagging(params = {})
+    # @overload get_storage_lens_configuration_tagging(**params)
     # @param [Hash] params ({})
-    def get_storage_lens_configuration_tagging(params = {}, options = {})
+    def get_storage_lens_configuration_tagging(params = {}, **options)
       req = build_request(:get_storage_lens_configuration_tagging, params)
       req.send_request(options)
     end
@@ -2459,9 +2459,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessPoints AWS API Documentation
     #
-    # @overload list_access_points(params = {})
+    # @overload list_access_points(**params)
     # @param [Hash] params ({})
-    def list_access_points(params = {}, options = {})
+    def list_access_points(params = {}, **options)
       req = build_request(:list_access_points, params)
       req.send_request(options)
     end
@@ -2541,9 +2541,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -2604,9 +2604,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListRegionalBuckets AWS API Documentation
     #
-    # @overload list_regional_buckets(params = {})
+    # @overload list_regional_buckets(**params)
     # @param [Hash] params ({})
-    def list_regional_buckets(params = {}, options = {})
+    def list_regional_buckets(params = {}, **options)
       req = build_request(:list_regional_buckets, params)
       req.send_request(options)
     end
@@ -2656,9 +2656,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensConfigurations AWS API Documentation
     #
-    # @overload list_storage_lens_configurations(params = {})
+    # @overload list_storage_lens_configurations(**params)
     # @param [Hash] params ({})
-    def list_storage_lens_configurations(params = {}, options = {})
+    def list_storage_lens_configurations(params = {}, **options)
       req = build_request(:list_storage_lens_configurations, params)
       req.send_request(options)
     end
@@ -2732,9 +2732,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointPolicy AWS API Documentation
     #
-    # @overload put_access_point_policy(params = {})
+    # @overload put_access_point_policy(**params)
     # @param [Hash] params ({})
-    def put_access_point_policy(params = {}, options = {})
+    def put_access_point_policy(params = {}, **options)
       req = build_request(:put_access_point_policy, params)
       req.send_request(options)
     end
@@ -2846,9 +2846,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutBucketLifecycleConfiguration AWS API Documentation
     #
-    # @overload put_bucket_lifecycle_configuration(params = {})
+    # @overload put_bucket_lifecycle_configuration(**params)
     # @param [Hash] params ({})
-    def put_bucket_lifecycle_configuration(params = {}, options = {})
+    def put_bucket_lifecycle_configuration(params = {}, **options)
       req = build_request(:put_bucket_lifecycle_configuration, params)
       req.send_request(options)
     end
@@ -2945,9 +2945,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutBucketPolicy AWS API Documentation
     #
-    # @overload put_bucket_policy(params = {})
+    # @overload put_bucket_policy(**params)
     # @param [Hash] params ({})
-    def put_bucket_policy(params = {}, options = {})
+    def put_bucket_policy(params = {}, **options)
       req = build_request(:put_bucket_policy, params)
       req.send_request(options)
     end
@@ -3082,9 +3082,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutBucketTagging AWS API Documentation
     #
-    # @overload put_bucket_tagging(params = {})
+    # @overload put_bucket_tagging(**params)
     # @param [Hash] params ({})
-    def put_bucket_tagging(params = {}, options = {})
+    def put_bucket_tagging(params = {}, **options)
       req = build_request(:put_bucket_tagging, params)
       req.send_request(options)
     end
@@ -3178,9 +3178,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutJobTagging AWS API Documentation
     #
-    # @overload put_job_tagging(params = {})
+    # @overload put_job_tagging(**params)
     # @param [Hash] params ({})
-    def put_job_tagging(params = {}, options = {})
+    def put_job_tagging(params = {}, **options)
       req = build_request(:put_job_tagging, params)
       req.send_request(options)
     end
@@ -3225,9 +3225,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutPublicAccessBlock AWS API Documentation
     #
-    # @overload put_public_access_block(params = {})
+    # @overload put_public_access_block(**params)
     # @param [Hash] params ({})
-    def put_public_access_block(params = {}, options = {})
+    def put_public_access_block(params = {}, **options)
       req = build_request(:put_public_access_block, params)
       req.send_request(options)
     end
@@ -3333,9 +3333,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfiguration AWS API Documentation
     #
-    # @overload put_storage_lens_configuration(params = {})
+    # @overload put_storage_lens_configuration(**params)
     # @param [Hash] params ({})
-    def put_storage_lens_configuration(params = {}, options = {})
+    def put_storage_lens_configuration(params = {}, **options)
       req = build_request(:put_storage_lens_configuration, params)
       req.send_request(options)
     end
@@ -3387,9 +3387,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfigurationTagging AWS API Documentation
     #
-    # @overload put_storage_lens_configuration_tagging(params = {})
+    # @overload put_storage_lens_configuration_tagging(**params)
     # @param [Hash] params ({})
-    def put_storage_lens_configuration_tagging(params = {}, options = {})
+    def put_storage_lens_configuration_tagging(params = {}, **options)
       req = build_request(:put_storage_lens_configuration_tagging, params)
       req.send_request(options)
     end
@@ -3446,9 +3446,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateJobPriority AWS API Documentation
     #
-    # @overload update_job_priority(params = {})
+    # @overload update_job_priority(**params)
     # @param [Hash] params ({})
-    def update_job_priority(params = {}, options = {})
+    def update_job_priority(params = {}, **options)
       req = build_request(:update_job_priority, params)
       req.send_request(options)
     end
@@ -3513,9 +3513,9 @@ module Aws::S3Control
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateJobStatus AWS API Documentation
     #
-    # @overload update_job_status(params = {})
+    # @overload update_job_status(**params)
     # @param [Hash] params ({})
-    def update_job_status(params = {}, options = {})
+    def update_job_status(params = {}, **options)
       req = build_request(:update_job_status, params)
       req.send_request(options)
     end
@@ -3524,7 +3524,7 @@ module Aws::S3Control
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3532,15 +3532,15 @@ module Aws::S3Control
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-s3control'
-      context[:gem_version] = '1.25.0'
+      context[:gem_name] = "aws-sdk-s3control"
+      context[:gem_version] = "1.25.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iot/types'
-require_relative 'aws-sdk-iot/client_api'
-require_relative 'aws-sdk-iot/client'
-require_relative 'aws-sdk-iot/errors'
-require_relative 'aws-sdk-iot/resource'
-require_relative 'aws-sdk-iot/customizations'
+require_relative "aws-sdk-iot/types"
+require_relative "aws-sdk-iot/client_api"
+require_relative "aws-sdk-iot/client"
+require_relative "aws-sdk-iot/errors"
+require_relative "aws-sdk-iot/resource"
+require_relative "aws-sdk-iot/customizations"
 
 # This module provides support for AWS IoT. This module is available in the
 # `aws-sdk-iot` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iot/customizations'
 # @!group service
 module Aws::IoT
 
-  GEM_VERSION = '1.64.0'
+  GEM_VERSION = "1.64.0"
 
 end

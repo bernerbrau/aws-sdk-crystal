@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::EMR
   # Waiters are utility methods that poll for a particular state to occur
@@ -128,7 +128,7 @@ module Aws::EMR
 
       # @option (see Client#describe_cluster)
       # @return (see Client#describe_cluster)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -172,7 +172,7 @@ module Aws::EMR
 
       # @option (see Client#describe_cluster)
       # @return (see Client#describe_cluster)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -222,7 +222,7 @@ module Aws::EMR
 
       # @option (see Client#describe_step)
       # @return (see Client#describe_step)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

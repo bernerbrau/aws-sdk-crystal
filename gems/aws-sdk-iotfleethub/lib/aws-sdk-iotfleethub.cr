@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotfleethub/types'
-require_relative 'aws-sdk-iotfleethub/client_api'
-require_relative 'aws-sdk-iotfleethub/client'
-require_relative 'aws-sdk-iotfleethub/errors'
-require_relative 'aws-sdk-iotfleethub/resource'
-require_relative 'aws-sdk-iotfleethub/customizations'
+require_relative "aws-sdk-iotfleethub/types"
+require_relative "aws-sdk-iotfleethub/client_api"
+require_relative "aws-sdk-iotfleethub/client"
+require_relative "aws-sdk-iotfleethub/errors"
+require_relative "aws-sdk-iotfleethub/resource"
+require_relative "aws-sdk-iotfleethub/customizations"
 
 # This module provides support for AWS IoT Fleet Hub. This module is available in the
 # `aws-sdk-iotfleethub` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotfleethub/customizations'
 # @!group service
 module Aws::IoTFleetHub
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

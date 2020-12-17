@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotanalytics/types'
-require_relative 'aws-sdk-iotanalytics/client_api'
-require_relative 'aws-sdk-iotanalytics/client'
-require_relative 'aws-sdk-iotanalytics/errors'
-require_relative 'aws-sdk-iotanalytics/resource'
-require_relative 'aws-sdk-iotanalytics/customizations'
+require_relative "aws-sdk-iotanalytics/types"
+require_relative "aws-sdk-iotanalytics/client_api"
+require_relative "aws-sdk-iotanalytics/client"
+require_relative "aws-sdk-iotanalytics/errors"
+require_relative "aws-sdk-iotanalytics/resource"
+require_relative "aws-sdk-iotanalytics/customizations"
 
 # This module provides support for AWS IoT Analytics. This module is available in the
 # `aws-sdk-iotanalytics` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotanalytics/customizations'
 # @!group service
 module Aws::IoTAnalytics
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

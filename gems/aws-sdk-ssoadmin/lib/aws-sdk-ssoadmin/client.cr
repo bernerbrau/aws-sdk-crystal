@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ssoadmin)
 
@@ -290,7 +290,7 @@ module Aws::SSOAdmin
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -372,9 +372,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AttachManagedPolicyToPermissionSet AWS API Documentation
     #
-    # @overload attach_managed_policy_to_permission_set(params = {})
+    # @overload attach_managed_policy_to_permission_set(**params)
     # @param [Hash] params ({})
-    def attach_managed_policy_to_permission_set(params = {}, options = {})
+    def attach_managed_policy_to_permission_set(params = {}, **options)
       req = build_request(:attach_managed_policy_to_permission_set, params)
       req.send_request(options)
     end
@@ -454,9 +454,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/CreateAccountAssignment AWS API Documentation
     #
-    # @overload create_account_assignment(params = {})
+    # @overload create_account_assignment(**params)
     # @param [Hash] params ({})
-    def create_account_assignment(params = {}, options = {})
+    def create_account_assignment(params = {}, **options)
       req = build_request(:create_account_assignment, params)
       req.send_request(options)
     end
@@ -501,9 +501,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/CreateInstanceAccessControlAttributeConfiguration AWS API Documentation
     #
-    # @overload create_instance_access_control_attribute_configuration(params = {})
+    # @overload create_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def create_instance_access_control_attribute_configuration(params = {}, options = {})
+    def create_instance_access_control_attribute_configuration(params = {}, **options)
       req = build_request(:create_instance_access_control_attribute_configuration, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/CreatePermissionSet AWS API Documentation
     #
-    # @overload create_permission_set(params = {})
+    # @overload create_permission_set(**params)
     # @param [Hash] params ({})
-    def create_permission_set(params = {}, options = {})
+    def create_permission_set(params = {}, **options)
       req = build_request(:create_permission_set, params)
       req.send_request(options)
     end
@@ -636,9 +636,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeleteAccountAssignment AWS API Documentation
     #
-    # @overload delete_account_assignment(params = {})
+    # @overload delete_account_assignment(**params)
     # @param [Hash] params ({})
-    def delete_account_assignment(params = {}, options = {})
+    def delete_account_assignment(params = {}, **options)
       req = build_request(:delete_account_assignment, params)
       req.send_request(options)
     end
@@ -666,9 +666,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeleteInlinePolicyFromPermissionSet AWS API Documentation
     #
-    # @overload delete_inline_policy_from_permission_set(params = {})
+    # @overload delete_inline_policy_from_permission_set(**params)
     # @param [Hash] params ({})
-    def delete_inline_policy_from_permission_set(params = {}, options = {})
+    def delete_inline_policy_from_permission_set(params = {}, **options)
       req = build_request(:delete_inline_policy_from_permission_set, params)
       req.send_request(options)
     end
@@ -696,9 +696,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeleteInstanceAccessControlAttributeConfiguration AWS API Documentation
     #
-    # @overload delete_instance_access_control_attribute_configuration(params = {})
+    # @overload delete_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def delete_instance_access_control_attribute_configuration(params = {}, options = {})
+    def delete_instance_access_control_attribute_configuration(params = {}, **options)
       req = build_request(:delete_instance_access_control_attribute_configuration, params)
       req.send_request(options)
     end
@@ -726,9 +726,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeletePermissionSet AWS API Documentation
     #
-    # @overload delete_permission_set(params = {})
+    # @overload delete_permission_set(**params)
     # @param [Hash] params ({})
-    def delete_permission_set(params = {}, options = {})
+    def delete_permission_set(params = {}, **options)
       req = build_request(:delete_permission_set, params)
       req.send_request(options)
     end
@@ -770,9 +770,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DescribeAccountAssignmentCreationStatus AWS API Documentation
     #
-    # @overload describe_account_assignment_creation_status(params = {})
+    # @overload describe_account_assignment_creation_status(**params)
     # @param [Hash] params ({})
-    def describe_account_assignment_creation_status(params = {}, options = {})
+    def describe_account_assignment_creation_status(params = {}, **options)
       req = build_request(:describe_account_assignment_creation_status, params)
       req.send_request(options)
     end
@@ -814,9 +814,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DescribeAccountAssignmentDeletionStatus AWS API Documentation
     #
-    # @overload describe_account_assignment_deletion_status(params = {})
+    # @overload describe_account_assignment_deletion_status(**params)
     # @param [Hash] params ({})
-    def describe_account_assignment_deletion_status(params = {}, options = {})
+    def describe_account_assignment_deletion_status(params = {}, **options)
       req = build_request(:describe_account_assignment_deletion_status, params)
       req.send_request(options)
     end
@@ -856,9 +856,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DescribeInstanceAccessControlAttributeConfiguration AWS API Documentation
     #
-    # @overload describe_instance_access_control_attribute_configuration(params = {})
+    # @overload describe_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def describe_instance_access_control_attribute_configuration(params = {}, options = {})
+    def describe_instance_access_control_attribute_configuration(params = {}, **options)
       req = build_request(:describe_instance_access_control_attribute_configuration, params)
       req.send_request(options)
     end
@@ -897,9 +897,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DescribePermissionSet AWS API Documentation
     #
-    # @overload describe_permission_set(params = {})
+    # @overload describe_permission_set(**params)
     # @param [Hash] params ({})
-    def describe_permission_set(params = {}, options = {})
+    def describe_permission_set(params = {}, **options)
       req = build_request(:describe_permission_set, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DescribePermissionSetProvisioningStatus AWS API Documentation
     #
-    # @overload describe_permission_set_provisioning_status(params = {})
+    # @overload describe_permission_set_provisioning_status(**params)
     # @param [Hash] params ({})
-    def describe_permission_set_provisioning_status(params = {}, options = {})
+    def describe_permission_set_provisioning_status(params = {}, **options)
       req = build_request(:describe_permission_set_provisioning_status, params)
       req.send_request(options)
     end
@@ -975,9 +975,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DetachManagedPolicyFromPermissionSet AWS API Documentation
     #
-    # @overload detach_managed_policy_from_permission_set(params = {})
+    # @overload detach_managed_policy_from_permission_set(**params)
     # @param [Hash] params ({})
-    def detach_managed_policy_from_permission_set(params = {}, options = {})
+    def detach_managed_policy_from_permission_set(params = {}, **options)
       req = build_request(:detach_managed_policy_from_permission_set, params)
       req.send_request(options)
     end
@@ -1011,9 +1011,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/GetInlinePolicyForPermissionSet AWS API Documentation
     #
-    # @overload get_inline_policy_for_permission_set(params = {})
+    # @overload get_inline_policy_for_permission_set(**params)
     # @param [Hash] params ({})
-    def get_inline_policy_for_permission_set(params = {}, options = {})
+    def get_inline_policy_for_permission_set(params = {}, **options)
       req = build_request(:get_inline_policy_for_permission_set, params)
       req.send_request(options)
     end
@@ -1066,9 +1066,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListAccountAssignmentCreationStatus AWS API Documentation
     #
-    # @overload list_account_assignment_creation_status(params = {})
+    # @overload list_account_assignment_creation_status(**params)
     # @param [Hash] params ({})
-    def list_account_assignment_creation_status(params = {}, options = {})
+    def list_account_assignment_creation_status(params = {}, **options)
       req = build_request(:list_account_assignment_creation_status, params)
       req.send_request(options)
     end
@@ -1121,9 +1121,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListAccountAssignmentDeletionStatus AWS API Documentation
     #
-    # @overload list_account_assignment_deletion_status(params = {})
+    # @overload list_account_assignment_deletion_status(**params)
     # @param [Hash] params ({})
-    def list_account_assignment_deletion_status(params = {}, options = {})
+    def list_account_assignment_deletion_status(params = {}, **options)
       req = build_request(:list_account_assignment_deletion_status, params)
       req.send_request(options)
     end
@@ -1179,9 +1179,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListAccountAssignments AWS API Documentation
     #
-    # @overload list_account_assignments(params = {})
+    # @overload list_account_assignments(**params)
     # @param [Hash] params ({})
-    def list_account_assignments(params = {}, options = {})
+    def list_account_assignments(params = {}, **options)
       req = build_request(:list_account_assignments, params)
       req.send_request(options)
     end
@@ -1235,9 +1235,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListAccountsForProvisionedPermissionSet AWS API Documentation
     #
-    # @overload list_accounts_for_provisioned_permission_set(params = {})
+    # @overload list_accounts_for_provisioned_permission_set(**params)
     # @param [Hash] params ({})
-    def list_accounts_for_provisioned_permission_set(params = {}, options = {})
+    def list_accounts_for_provisioned_permission_set(params = {}, **options)
       req = build_request(:list_accounts_for_provisioned_permission_set, params)
       req.send_request(options)
     end
@@ -1274,9 +1274,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListInstances AWS API Documentation
     #
-    # @overload list_instances(params = {})
+    # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, options = {})
+    def list_instances(params = {}, **options)
       req = build_request(:list_instances, params)
       req.send_request(options)
     end
@@ -1326,9 +1326,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListManagedPoliciesInPermissionSet AWS API Documentation
     #
-    # @overload list_managed_policies_in_permission_set(params = {})
+    # @overload list_managed_policies_in_permission_set(**params)
     # @param [Hash] params ({})
-    def list_managed_policies_in_permission_set(params = {}, options = {})
+    def list_managed_policies_in_permission_set(params = {}, **options)
       req = build_request(:list_managed_policies_in_permission_set, params)
       req.send_request(options)
     end
@@ -1381,9 +1381,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListPermissionSetProvisioningStatus AWS API Documentation
     #
-    # @overload list_permission_set_provisioning_status(params = {})
+    # @overload list_permission_set_provisioning_status(**params)
     # @param [Hash] params ({})
-    def list_permission_set_provisioning_status(params = {}, options = {})
+    def list_permission_set_provisioning_status(params = {}, **options)
       req = build_request(:list_permission_set_provisioning_status, params)
       req.send_request(options)
     end
@@ -1427,9 +1427,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListPermissionSets AWS API Documentation
     #
-    # @overload list_permission_sets(params = {})
+    # @overload list_permission_sets(**params)
     # @param [Hash] params ({})
-    def list_permission_sets(params = {}, options = {})
+    def list_permission_sets(params = {}, **options)
       req = build_request(:list_permission_sets, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListPermissionSetsProvisionedToAccount AWS API Documentation
     #
-    # @overload list_permission_sets_provisioned_to_account(params = {})
+    # @overload list_permission_sets_provisioned_to_account(**params)
     # @param [Hash] params ({})
-    def list_permission_sets_provisioned_to_account(params = {}, options = {})
+    def list_permission_sets_provisioned_to_account(params = {}, **options)
       req = build_request(:list_permission_sets_provisioned_to_account, params)
       req.send_request(options)
     end
@@ -1529,9 +1529,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1580,9 +1580,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ProvisionPermissionSet AWS API Documentation
     #
-    # @overload provision_permission_set(params = {})
+    # @overload provision_permission_set(**params)
     # @param [Hash] params ({})
-    def provision_permission_set(params = {}, options = {})
+    def provision_permission_set(params = {}, **options)
       req = build_request(:provision_permission_set, params)
       req.send_request(options)
     end
@@ -1621,9 +1621,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/PutInlinePolicyToPermissionSet AWS API Documentation
     #
-    # @overload put_inline_policy_to_permission_set(params = {})
+    # @overload put_inline_policy_to_permission_set(**params)
     # @param [Hash] params ({})
-    def put_inline_policy_to_permission_set(params = {}, options = {})
+    def put_inline_policy_to_permission_set(params = {}, **options)
       req = build_request(:put_inline_policy_to_permission_set, params)
       req.send_request(options)
     end
@@ -1660,9 +1660,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1694,9 +1694,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1739,9 +1739,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/UpdateInstanceAccessControlAttributeConfiguration AWS API Documentation
     #
-    # @overload update_instance_access_control_attribute_configuration(params = {})
+    # @overload update_instance_access_control_attribute_configuration(**params)
     # @param [Hash] params ({})
-    def update_instance_access_control_attribute_configuration(params = {}, options = {})
+    def update_instance_access_control_attribute_configuration(params = {}, **options)
       req = build_request(:update_instance_access_control_attribute_configuration, params)
       req.send_request(options)
     end
@@ -1783,9 +1783,9 @@ module Aws::SSOAdmin
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/UpdatePermissionSet AWS API Documentation
     #
-    # @overload update_permission_set(params = {})
+    # @overload update_permission_set(**params)
     # @param [Hash] params ({})
-    def update_permission_set(params = {}, options = {})
+    def update_permission_set(params = {}, **options)
       req = build_request(:update_permission_set, params)
       req.send_request(options)
     end
@@ -1794,7 +1794,7 @@ module Aws::SSOAdmin
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1802,15 +1802,15 @@ module Aws::SSOAdmin
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ssoadmin'
-      context[:gem_version] = '1.4.0'
+      context[:gem_name] = "aws-sdk-ssoadmin"
+      context[:gem_version] = "1.4.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

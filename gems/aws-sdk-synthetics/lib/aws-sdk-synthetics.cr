@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-synthetics/types'
-require_relative 'aws-sdk-synthetics/client_api'
-require_relative 'aws-sdk-synthetics/client'
-require_relative 'aws-sdk-synthetics/errors'
-require_relative 'aws-sdk-synthetics/resource'
-require_relative 'aws-sdk-synthetics/customizations'
+require_relative "aws-sdk-synthetics/types"
+require_relative "aws-sdk-synthetics/client_api"
+require_relative "aws-sdk-synthetics/client"
+require_relative "aws-sdk-synthetics/errors"
+require_relative "aws-sdk-synthetics/resource"
+require_relative "aws-sdk-synthetics/customizations"
 
 # This module provides support for Synthetics. This module is available in the
 # `aws-sdk-synthetics` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-synthetics/customizations'
 # @!group service
 module Aws::Synthetics
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

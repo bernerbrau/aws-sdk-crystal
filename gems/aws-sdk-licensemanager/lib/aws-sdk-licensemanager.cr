@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-licensemanager/types'
-require_relative 'aws-sdk-licensemanager/client_api'
-require_relative 'aws-sdk-licensemanager/client'
-require_relative 'aws-sdk-licensemanager/errors'
-require_relative 'aws-sdk-licensemanager/resource'
-require_relative 'aws-sdk-licensemanager/customizations'
+require_relative "aws-sdk-licensemanager/types"
+require_relative "aws-sdk-licensemanager/client_api"
+require_relative "aws-sdk-licensemanager/client"
+require_relative "aws-sdk-licensemanager/errors"
+require_relative "aws-sdk-licensemanager/resource"
+require_relative "aws-sdk-licensemanager/customizations"
 
 # This module provides support for AWS License Manager. This module is available in the
 # `aws-sdk-licensemanager` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-licensemanager/customizations'
 # @!group service
 module Aws::LicenseManager
 
-  GEM_VERSION = '1.23.0'
+  GEM_VERSION = "1.23.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-pinpoint/types'
-require_relative 'aws-sdk-pinpoint/client_api'
-require_relative 'aws-sdk-pinpoint/client'
-require_relative 'aws-sdk-pinpoint/errors'
-require_relative 'aws-sdk-pinpoint/resource'
-require_relative 'aws-sdk-pinpoint/customizations'
+require_relative "aws-sdk-pinpoint/types"
+require_relative "aws-sdk-pinpoint/client_api"
+require_relative "aws-sdk-pinpoint/client"
+require_relative "aws-sdk-pinpoint/errors"
+require_relative "aws-sdk-pinpoint/resource"
+require_relative "aws-sdk-pinpoint/customizations"
 
 # This module provides support for Amazon Pinpoint. This module is available in the
 # `aws-sdk-pinpoint` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-pinpoint/customizations'
 # @!group service
 module Aws::Pinpoint
 
-  GEM_VERSION = '1.47.0'
+  GEM_VERSION = "1.47.0"
 
 end

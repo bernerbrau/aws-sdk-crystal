@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-qldbsession/types'
-require_relative 'aws-sdk-qldbsession/client_api'
-require_relative 'aws-sdk-qldbsession/client'
-require_relative 'aws-sdk-qldbsession/errors'
-require_relative 'aws-sdk-qldbsession/resource'
-require_relative 'aws-sdk-qldbsession/customizations'
+require_relative "aws-sdk-qldbsession/types"
+require_relative "aws-sdk-qldbsession/client_api"
+require_relative "aws-sdk-qldbsession/client"
+require_relative "aws-sdk-qldbsession/errors"
+require_relative "aws-sdk-qldbsession/resource"
+require_relative "aws-sdk-qldbsession/customizations"
 
 # This module provides support for Amazon QLDB Session. This module is available in the
 # `aws-sdk-qldbsession` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-qldbsession/customizations'
 # @!group service
 module Aws::QLDBSession
 
-  GEM_VERSION = '1.9.0'
+  GEM_VERSION = "1.9.0"
 
 end

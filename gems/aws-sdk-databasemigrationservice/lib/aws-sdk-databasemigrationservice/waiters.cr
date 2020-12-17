@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::DatabaseMigrationService
   # Waiters are utility methods that poll for a particular state to occur
@@ -121,7 +121,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_endpoints)
       # @return (see Client#describe_endpoints)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -184,7 +184,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_replication_instances)
       # @return (see Client#describe_replication_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -228,7 +228,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_replication_instances)
       # @return (see Client#describe_replication_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -296,7 +296,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_replication_tasks)
       # @return (see Client#describe_replication_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -383,7 +383,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_replication_tasks)
       # @return (see Client#describe_replication_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -470,7 +470,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_replication_tasks)
       # @return (see Client#describe_replication_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -557,7 +557,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_replication_tasks)
       # @return (see Client#describe_replication_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -602,7 +602,7 @@ module Aws::DatabaseMigrationService
 
       # @option (see Client#describe_connections)
       # @return (see Client#describe_connections)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

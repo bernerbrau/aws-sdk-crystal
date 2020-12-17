@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-personalize/types'
-require_relative 'aws-sdk-personalize/client_api'
-require_relative 'aws-sdk-personalize/client'
-require_relative 'aws-sdk-personalize/errors'
-require_relative 'aws-sdk-personalize/resource'
-require_relative 'aws-sdk-personalize/customizations'
+require_relative "aws-sdk-personalize/types"
+require_relative "aws-sdk-personalize/client_api"
+require_relative "aws-sdk-personalize/client"
+require_relative "aws-sdk-personalize/errors"
+require_relative "aws-sdk-personalize/resource"
+require_relative "aws-sdk-personalize/customizations"
 
 # This module provides support for Amazon Personalize. This module is available in the
 # `aws-sdk-personalize` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-personalize/customizations'
 # @!group service
 module Aws::Personalize
 
-  GEM_VERSION = '1.19.0'
+  GEM_VERSION = "1.19.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:dataexchange)
 
@@ -280,7 +280,7 @@ module Aws::DataExchange
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -342,9 +342,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CancelJob AWS API Documentation
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -411,9 +411,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateDataSet AWS API Documentation
     #
-    # @overload create_data_set(params = {})
+    # @overload create_data_set(**params)
     # @param [Hash] params ({})
-    def create_data_set(params = {}, options = {})
+    def create_data_set(params = {}, **options)
       req = build_request(:create_data_set, params)
       req.send_request(options)
     end
@@ -527,9 +527,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateJob AWS API Documentation
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -585,9 +585,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateRevision AWS API Documentation
     #
-    # @overload create_revision(params = {})
+    # @overload create_revision(**params)
     # @param [Hash] params ({})
-    def create_revision(params = {}, options = {})
+    def create_revision(params = {}, **options)
       req = build_request(:create_revision, params)
       req.send_request(options)
     end
@@ -612,9 +612,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteAsset AWS API Documentation
     #
-    # @overload delete_asset(params = {})
+    # @overload delete_asset(**params)
     # @param [Hash] params ({})
-    def delete_asset(params = {}, options = {})
+    def delete_asset(params = {}, **options)
       req = build_request(:delete_asset, params)
       req.send_request(options)
     end
@@ -633,9 +633,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteDataSet AWS API Documentation
     #
-    # @overload delete_data_set(params = {})
+    # @overload delete_data_set(**params)
     # @param [Hash] params ({})
-    def delete_data_set(params = {}, options = {})
+    def delete_data_set(params = {}, **options)
       req = build_request(:delete_data_set, params)
       req.send_request(options)
     end
@@ -657,9 +657,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteRevision AWS API Documentation
     #
-    # @overload delete_revision(params = {})
+    # @overload delete_revision(**params)
     # @param [Hash] params ({})
-    def delete_revision(params = {}, options = {})
+    def delete_revision(params = {}, **options)
       req = build_request(:delete_revision, params)
       req.send_request(options)
     end
@@ -708,9 +708,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetAsset AWS API Documentation
     #
-    # @overload get_asset(params = {})
+    # @overload get_asset(**params)
     # @param [Hash] params ({})
-    def get_asset(params = {}, options = {})
+    def get_asset(params = {}, **options)
       req = build_request(:get_asset, params)
       req.send_request(options)
     end
@@ -756,9 +756,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetDataSet AWS API Documentation
     #
-    # @overload get_data_set(params = {})
+    # @overload get_data_set(**params)
     # @param [Hash] params ({})
-    def get_data_set(params = {}, options = {})
+    def get_data_set(params = {}, **options)
       req = build_request(:get_data_set, params)
       req.send_request(options)
     end
@@ -830,9 +830,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetJob AWS API Documentation
     #
-    # @overload get_job(params = {})
+    # @overload get_job(**params)
     # @param [Hash] params ({})
-    def get_job(params = {}, options = {})
+    def get_job(params = {}, **options)
       req = build_request(:get_job, params)
       req.send_request(options)
     end
@@ -877,9 +877,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetRevision AWS API Documentation
     #
-    # @overload get_revision(params = {})
+    # @overload get_revision(**params)
     # @param [Hash] params ({})
-    def get_revision(params = {}, options = {})
+    def get_revision(params = {}, **options)
       req = build_request(:get_revision, params)
       req.send_request(options)
     end
@@ -923,9 +923,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListDataSetRevisions AWS API Documentation
     #
-    # @overload list_data_set_revisions(params = {})
+    # @overload list_data_set_revisions(**params)
     # @param [Hash] params ({})
-    def list_data_set_revisions(params = {}, options = {})
+    def list_data_set_revisions(params = {}, **options)
       req = build_request(:list_data_set_revisions, params)
       req.send_request(options)
     end
@@ -973,9 +973,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListDataSets AWS API Documentation
     #
-    # @overload list_data_sets(params = {})
+    # @overload list_data_sets(**params)
     # @param [Hash] params ({})
-    def list_data_sets(params = {}, options = {})
+    def list_data_sets(params = {}, **options)
       req = build_request(:list_data_sets, params)
       req.send_request(options)
     end
@@ -1055,9 +1055,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -1106,9 +1106,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListRevisionAssets AWS API Documentation
     #
-    # @overload list_revision_assets(params = {})
+    # @overload list_revision_assets(**params)
     # @param [Hash] params ({})
-    def list_revision_assets(params = {}, options = {})
+    def list_revision_assets(params = {}, **options)
       req = build_request(:list_revision_assets, params)
       req.send_request(options)
     end
@@ -1134,9 +1134,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1155,9 +1155,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/StartJob AWS API Documentation
     #
-    # @overload start_job(params = {})
+    # @overload start_job(**params)
     # @param [Hash] params ({})
-    def start_job(params = {}, options = {})
+    def start_job(params = {}, **options)
       req = build_request(:start_job, params)
       req.send_request(options)
     end
@@ -1181,9 +1181,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1205,9 +1205,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1262,9 +1262,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateAsset AWS API Documentation
     #
-    # @overload update_asset(params = {})
+    # @overload update_asset(**params)
     # @param [Hash] params ({})
-    def update_asset(params = {}, options = {})
+    def update_asset(params = {}, **options)
       req = build_request(:update_asset, params)
       req.send_request(options)
     end
@@ -1315,9 +1315,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateDataSet AWS API Documentation
     #
-    # @overload update_data_set(params = {})
+    # @overload update_data_set(**params)
     # @param [Hash] params ({})
-    def update_data_set(params = {}, options = {})
+    def update_data_set(params = {}, **options)
       req = build_request(:update_data_set, params)
       req.send_request(options)
     end
@@ -1369,9 +1369,9 @@ module Aws::DataExchange
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateRevision AWS API Documentation
     #
-    # @overload update_revision(params = {})
+    # @overload update_revision(**params)
     # @param [Hash] params ({})
-    def update_revision(params = {}, options = {})
+    def update_revision(params = {}, **options)
       req = build_request(:update_revision, params)
       req.send_request(options)
     end
@@ -1380,7 +1380,7 @@ module Aws::DataExchange
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1388,15 +1388,15 @@ module Aws::DataExchange
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-dataexchange'
-      context[:gem_version] = '1.10.0'
+      context[:gem_name] = "aws-sdk-dataexchange"
+      context[:gem_version] = "1.10.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

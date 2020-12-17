@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-datasync/types'
-require_relative 'aws-sdk-datasync/client_api'
-require_relative 'aws-sdk-datasync/client'
-require_relative 'aws-sdk-datasync/errors'
-require_relative 'aws-sdk-datasync/resource'
-require_relative 'aws-sdk-datasync/customizations'
+require_relative "aws-sdk-datasync/types"
+require_relative "aws-sdk-datasync/client_api"
+require_relative "aws-sdk-datasync/client"
+require_relative "aws-sdk-datasync/errors"
+require_relative "aws-sdk-datasync/resource"
+require_relative "aws-sdk-datasync/customizations"
 
 # This module provides support for AWS DataSync. This module is available in the
 # `aws-sdk-datasync` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-datasync/customizations'
 # @!group service
 module Aws::DataSync
 
-  GEM_VERSION = '1.28.0'
+  GEM_VERSION = "1.28.0"
 
 end

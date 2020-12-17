@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:lex)
 
@@ -280,7 +280,7 @@ module Aws::Lex
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -362,9 +362,9 @@ module Aws::Lex
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/runtime.lex-2016-11-28/DeleteSession AWS API Documentation
     #
-    # @overload delete_session(params = {})
+    # @overload delete_session(**params)
     # @param [Hash] params ({})
-    def delete_session(params = {}, options = {})
+    def delete_session(params = {}, **options)
       req = build_request(:delete_session, params)
       req.send_request(options)
     end
@@ -436,9 +436,9 @@ module Aws::Lex
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/runtime.lex-2016-11-28/GetSession AWS API Documentation
     #
-    # @overload get_session(params = {})
+    # @overload get_session(**params)
     # @param [Hash] params ({})
-    def get_session(params = {}, options = {})
+    def get_session(params = {}, **options)
       req = build_request(:get_session, params)
       req.send_request(options)
     end
@@ -713,9 +713,9 @@ module Aws::Lex
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/runtime.lex-2016-11-28/PostContent AWS API Documentation
     #
-    # @overload post_content(params = {})
+    # @overload post_content(**params)
     # @param [Hash] params ({})
-    def post_content(params = {}, options = {}, &block)
+    def post_content(params = {}, **options, &block)
       req = build_request(:post_content, params)
       req.send_request(options, &block)
     end
@@ -928,9 +928,9 @@ module Aws::Lex
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/runtime.lex-2016-11-28/PostText AWS API Documentation
     #
-    # @overload post_text(params = {})
+    # @overload post_text(**params)
     # @param [Hash] params ({})
-    def post_text(params = {}, options = {})
+    def post_text(params = {}, **options)
       req = build_request(:post_text, params)
       req.send_request(options)
     end
@@ -1102,9 +1102,9 @@ module Aws::Lex
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/runtime.lex-2016-11-28/PutSession AWS API Documentation
     #
-    # @overload put_session(params = {})
+    # @overload put_session(**params)
     # @param [Hash] params ({})
-    def put_session(params = {}, options = {}, &block)
+    def put_session(params = {}, **options, &block)
       req = build_request(:put_session, params)
       req.send_request(options, &block)
     end
@@ -1113,7 +1113,7 @@ module Aws::Lex
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1121,15 +1121,15 @@ module Aws::Lex
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-lex'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-lex"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

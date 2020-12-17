@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ses/types'
-require_relative 'aws-sdk-ses/client_api'
-require_relative 'aws-sdk-ses/client'
-require_relative 'aws-sdk-ses/errors'
-require_relative 'aws-sdk-ses/waiters'
-require_relative 'aws-sdk-ses/resource'
-require_relative 'aws-sdk-ses/customizations'
+require_relative "aws-sdk-ses/types"
+require_relative "aws-sdk-ses/client_api"
+require_relative "aws-sdk-ses/client"
+require_relative "aws-sdk-ses/errors"
+require_relative "aws-sdk-ses/waiters"
+require_relative "aws-sdk-ses/resource"
+require_relative "aws-sdk-ses/customizations"
 
 # This module provides support for Amazon Simple Email Service. This module is available in the
 # `aws-sdk-ses` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-ses/customizations'
 # @!group service
 module Aws::SES
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

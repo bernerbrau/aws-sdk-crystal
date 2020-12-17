@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-directconnect/types'
-require_relative 'aws-sdk-directconnect/client_api'
-require_relative 'aws-sdk-directconnect/client'
-require_relative 'aws-sdk-directconnect/errors'
-require_relative 'aws-sdk-directconnect/resource'
-require_relative 'aws-sdk-directconnect/customizations'
+require_relative "aws-sdk-directconnect/types"
+require_relative "aws-sdk-directconnect/client_api"
+require_relative "aws-sdk-directconnect/client"
+require_relative "aws-sdk-directconnect/errors"
+require_relative "aws-sdk-directconnect/resource"
+require_relative "aws-sdk-directconnect/customizations"
 
 # This module provides support for AWS Direct Connect. This module is available in the
 # `aws-sdk-directconnect` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-directconnect/customizations'
 # @!group service
 module Aws::DirectConnect
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

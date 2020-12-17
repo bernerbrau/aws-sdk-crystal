@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:wafv2)
 
@@ -290,7 +290,7 @@ module Aws::WAFV2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -390,9 +390,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/AssociateWebACL AWS API Documentation
     #
-    # @overload associate_web_acl(params = {})
+    # @overload associate_web_acl(**params)
     # @param [Hash] params ({})
-    def associate_web_acl(params = {}, options = {})
+    def associate_web_acl(params = {}, **options)
       req = build_request(:associate_web_acl, params)
       req.send_request(options)
     end
@@ -679,9 +679,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CheckCapacity AWS API Documentation
     #
-    # @overload check_capacity(params = {})
+    # @overload check_capacity(**params)
     # @param [Hash] params ({})
-    def check_capacity(params = {}, options = {})
+    def check_capacity(params = {}, **options)
       req = build_request(:check_capacity, params)
       req.send_request(options)
     end
@@ -793,9 +793,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateIPSet AWS API Documentation
     #
-    # @overload create_ip_set(params = {})
+    # @overload create_ip_set(**params)
     # @param [Hash] params ({})
-    def create_ip_set(params = {}, options = {})
+    def create_ip_set(params = {}, **options)
       req = build_request(:create_ip_set, params)
       req.send_request(options)
     end
@@ -876,9 +876,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateRegexPatternSet AWS API Documentation
     #
-    # @overload create_regex_pattern_set(params = {})
+    # @overload create_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def create_regex_pattern_set(params = {}, options = {})
+    def create_regex_pattern_set(params = {}, **options)
       req = build_request(:create_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -1212,9 +1212,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateRuleGroup AWS API Documentation
     #
-    # @overload create_rule_group(params = {})
+    # @overload create_rule_group(**params)
     # @param [Hash] params ({})
-    def create_rule_group(params = {}, options = {})
+    def create_rule_group(params = {}, **options)
       req = build_request(:create_rule_group, params)
       req.send_request(options)
     end
@@ -1544,9 +1544,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateWebACL AWS API Documentation
     #
-    # @overload create_web_acl(params = {})
+    # @overload create_web_acl(**params)
     # @param [Hash] params ({})
-    def create_web_acl(params = {}, options = {})
+    def create_web_acl(params = {}, **options)
       req = build_request(:create_web_acl, params)
       req.send_request(options)
     end
@@ -1587,9 +1587,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteFirewallManagerRuleGroups AWS API Documentation
     #
-    # @overload delete_firewall_manager_rule_groups(params = {})
+    # @overload delete_firewall_manager_rule_groups(**params)
     # @param [Hash] params ({})
-    def delete_firewall_manager_rule_groups(params = {}, options = {})
+    def delete_firewall_manager_rule_groups(params = {}, **options)
       req = build_request(:delete_firewall_manager_rule_groups, params)
       req.send_request(options)
     end
@@ -1653,9 +1653,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteIPSet AWS API Documentation
     #
-    # @overload delete_ip_set(params = {})
+    # @overload delete_ip_set(**params)
     # @param [Hash] params ({})
-    def delete_ip_set(params = {}, options = {})
+    def delete_ip_set(params = {}, **options)
       req = build_request(:delete_ip_set, params)
       req.send_request(options)
     end
@@ -1687,9 +1687,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteLoggingConfiguration AWS API Documentation
     #
-    # @overload delete_logging_configuration(params = {})
+    # @overload delete_logging_configuration(**params)
     # @param [Hash] params ({})
-    def delete_logging_configuration(params = {}, options = {})
+    def delete_logging_configuration(params = {}, **options)
       req = build_request(:delete_logging_configuration, params)
       req.send_request(options)
     end
@@ -1714,9 +1714,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeletePermissionPolicy AWS API Documentation
     #
-    # @overload delete_permission_policy(params = {})
+    # @overload delete_permission_policy(**params)
     # @param [Hash] params ({})
-    def delete_permission_policy(params = {}, options = {})
+    def delete_permission_policy(params = {}, **options)
       req = build_request(:delete_permission_policy, params)
       req.send_request(options)
     end
@@ -1780,9 +1780,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteRegexPatternSet AWS API Documentation
     #
-    # @overload delete_regex_pattern_set(params = {})
+    # @overload delete_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def delete_regex_pattern_set(params = {}, options = {})
+    def delete_regex_pattern_set(params = {}, **options)
       req = build_request(:delete_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -1846,9 +1846,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteRuleGroup AWS API Documentation
     #
-    # @overload delete_rule_group(params = {})
+    # @overload delete_rule_group(**params)
     # @param [Hash] params ({})
-    def delete_rule_group(params = {}, options = {})
+    def delete_rule_group(params = {}, **options)
       req = build_request(:delete_rule_group, params)
       req.send_request(options)
     end
@@ -1915,9 +1915,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteWebACL AWS API Documentation
     #
-    # @overload delete_web_acl(params = {})
+    # @overload delete_web_acl(**params)
     # @param [Hash] params ({})
-    def delete_web_acl(params = {}, options = {})
+    def delete_web_acl(params = {}, **options)
       req = build_request(:delete_web_acl, params)
       req.send_request(options)
     end
@@ -1979,9 +1979,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedRuleGroup AWS API Documentation
     #
-    # @overload describe_managed_rule_group(params = {})
+    # @overload describe_managed_rule_group(**params)
     # @param [Hash] params ({})
-    def describe_managed_rule_group(params = {}, options = {})
+    def describe_managed_rule_group(params = {}, **options)
       req = build_request(:describe_managed_rule_group, params)
       req.send_request(options)
     end
@@ -2033,9 +2033,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DisassociateWebACL AWS API Documentation
     #
-    # @overload disassociate_web_acl(params = {})
+    # @overload disassociate_web_acl(**params)
     # @param [Hash] params ({})
-    def disassociate_web_acl(params = {}, options = {})
+    def disassociate_web_acl(params = {}, **options)
       req = build_request(:disassociate_web_acl, params)
       req.send_request(options)
     end
@@ -2102,9 +2102,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetIPSet AWS API Documentation
     #
-    # @overload get_ip_set(params = {})
+    # @overload get_ip_set(**params)
     # @param [Hash] params ({})
-    def get_ip_set(params = {}, options = {})
+    def get_ip_set(params = {}, **options)
       req = build_request(:get_ip_set, params)
       req.send_request(options)
     end
@@ -2148,9 +2148,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetLoggingConfiguration AWS API Documentation
     #
-    # @overload get_logging_configuration(params = {})
+    # @overload get_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_logging_configuration(params = {}, options = {})
+    def get_logging_configuration(params = {}, **options)
       req = build_request(:get_logging_configuration, params)
       req.send_request(options)
     end
@@ -2179,9 +2179,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetPermissionPolicy AWS API Documentation
     #
-    # @overload get_permission_policy(params = {})
+    # @overload get_permission_policy(**params)
     # @param [Hash] params ({})
-    def get_permission_policy(params = {}, options = {})
+    def get_permission_policy(params = {}, **options)
       req = build_request(:get_permission_policy, params)
       req.send_request(options)
     end
@@ -2253,9 +2253,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetRateBasedStatementManagedKeys AWS API Documentation
     #
-    # @overload get_rate_based_statement_managed_keys(params = {})
+    # @overload get_rate_based_statement_managed_keys(**params)
     # @param [Hash] params ({})
-    def get_rate_based_statement_managed_keys(params = {}, options = {})
+    def get_rate_based_statement_managed_keys(params = {}, **options)
       req = build_request(:get_rate_based_statement_managed_keys, params)
       req.send_request(options)
     end
@@ -2321,9 +2321,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetRegexPatternSet AWS API Documentation
     #
-    # @overload get_regex_pattern_set(params = {})
+    # @overload get_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def get_regex_pattern_set(params = {}, options = {})
+    def get_regex_pattern_set(params = {}, **options)
       req = build_request(:get_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -2452,9 +2452,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetRuleGroup AWS API Documentation
     #
-    # @overload get_rule_group(params = {})
+    # @overload get_rule_group(**params)
     # @param [Hash] params ({})
-    def get_rule_group(params = {}, options = {})
+    def get_rule_group(params = {}, **options)
       req = build_request(:get_rule_group, params)
       req.send_request(options)
     end
@@ -2560,9 +2560,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetSampledRequests AWS API Documentation
     #
-    # @overload get_sampled_requests(params = {})
+    # @overload get_sampled_requests(**params)
     # @param [Hash] params ({})
-    def get_sampled_requests(params = {}, options = {})
+    def get_sampled_requests(params = {}, **options)
       req = build_request(:get_sampled_requests, params)
       req.send_request(options)
     end
@@ -2718,9 +2718,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetWebACL AWS API Documentation
     #
-    # @overload get_web_acl(params = {})
+    # @overload get_web_acl(**params)
     # @param [Hash] params ({})
-    def get_web_acl(params = {}, options = {})
+    def get_web_acl(params = {}, **options)
       req = build_request(:get_web_acl, params)
       req.send_request(options)
     end
@@ -2852,9 +2852,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetWebACLForResource AWS API Documentation
     #
-    # @overload get_web_acl_for_resource(params = {})
+    # @overload get_web_acl_for_resource(**params)
     # @param [Hash] params ({})
-    def get_web_acl_for_resource(params = {}, options = {})
+    def get_web_acl_for_resource(params = {}, **options)
       req = build_request(:get_web_acl_for_resource, params)
       req.send_request(options)
     end
@@ -2924,9 +2924,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAvailableManagedRuleGroups AWS API Documentation
     #
-    # @overload list_available_managed_rule_groups(params = {})
+    # @overload list_available_managed_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_available_managed_rule_groups(params = {}, options = {})
+    def list_available_managed_rule_groups(params = {}, **options)
       req = build_request(:list_available_managed_rule_groups, params)
       req.send_request(options)
     end
@@ -2997,9 +2997,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListIPSets AWS API Documentation
     #
-    # @overload list_ip_sets(params = {})
+    # @overload list_ip_sets(**params)
     # @param [Hash] params ({})
-    def list_ip_sets(params = {}, options = {})
+    def list_ip_sets(params = {}, **options)
       req = build_request(:list_ip_sets, params)
       req.send_request(options)
     end
@@ -3071,9 +3071,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListLoggingConfigurations AWS API Documentation
     #
-    # @overload list_logging_configurations(params = {})
+    # @overload list_logging_configurations(**params)
     # @param [Hash] params ({})
-    def list_logging_configurations(params = {}, options = {})
+    def list_logging_configurations(params = {}, **options)
       req = build_request(:list_logging_configurations, params)
       req.send_request(options)
     end
@@ -3144,9 +3144,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListRegexPatternSets AWS API Documentation
     #
-    # @overload list_regex_pattern_sets(params = {})
+    # @overload list_regex_pattern_sets(**params)
     # @param [Hash] params ({})
-    def list_regex_pattern_sets(params = {}, options = {})
+    def list_regex_pattern_sets(params = {}, **options)
       req = build_request(:list_regex_pattern_sets, params)
       req.send_request(options)
     end
@@ -3193,9 +3193,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListResourcesForWebACL AWS API Documentation
     #
-    # @overload list_resources_for_web_acl(params = {})
+    # @overload list_resources_for_web_acl(**params)
     # @param [Hash] params ({})
-    def list_resources_for_web_acl(params = {}, options = {})
+    def list_resources_for_web_acl(params = {}, **options)
       req = build_request(:list_resources_for_web_acl, params)
       req.send_request(options)
     end
@@ -3266,9 +3266,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListRuleGroups AWS API Documentation
     #
-    # @overload list_rule_groups(params = {})
+    # @overload list_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_rule_groups(params = {}, options = {})
+    def list_rule_groups(params = {}, **options)
       req = build_request(:list_rule_groups, params)
       req.send_request(options)
     end
@@ -3334,9 +3334,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3407,9 +3407,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListWebACLs AWS API Documentation
     #
-    # @overload list_web_acls(params = {})
+    # @overload list_web_acls(**params)
     # @param [Hash] params ({})
-    def list_web_acls(params = {}, options = {})
+    def list_web_acls(params = {}, **options)
       req = build_request(:list_web_acls, params)
       req.send_request(options)
     end
@@ -3503,9 +3503,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutLoggingConfiguration AWS API Documentation
     #
-    # @overload put_logging_configuration(params = {})
+    # @overload put_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_logging_configuration(params = {}, options = {})
+    def put_logging_configuration(params = {}, **options)
       req = build_request(:put_logging_configuration, params)
       req.send_request(options)
     end
@@ -3565,9 +3565,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutPermissionPolicy AWS API Documentation
     #
-    # @overload put_permission_policy(params = {})
+    # @overload put_permission_policy(**params)
     # @param [Hash] params ({})
-    def put_permission_policy(params = {}, options = {})
+    def put_permission_policy(params = {}, **options)
       req = build_request(:put_permission_policy, params)
       req.send_request(options)
     end
@@ -3616,9 +3616,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3658,9 +3658,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3768,9 +3768,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateIPSet AWS API Documentation
     #
-    # @overload update_ip_set(params = {})
+    # @overload update_ip_set(**params)
     # @param [Hash] params ({})
-    def update_ip_set(params = {}, options = {})
+    def update_ip_set(params = {}, **options)
       req = build_request(:update_ip_set, params)
       req.send_request(options)
     end
@@ -3852,9 +3852,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateRegexPatternSet AWS API Documentation
     #
-    # @overload update_regex_pattern_set(params = {})
+    # @overload update_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def update_regex_pattern_set(params = {}, options = {})
+    def update_regex_pattern_set(params = {}, **options)
       req = build_request(:update_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -4174,9 +4174,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateRuleGroup AWS API Documentation
     #
-    # @overload update_rule_group(params = {})
+    # @overload update_rule_group(**params)
     # @param [Hash] params ({})
-    def update_rule_group(params = {}, options = {})
+    def update_rule_group(params = {}, **options)
       req = build_request(:update_rule_group, params)
       req.send_request(options)
     end
@@ -4510,9 +4510,9 @@ module Aws::WAFV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateWebACL AWS API Documentation
     #
-    # @overload update_web_acl(params = {})
+    # @overload update_web_acl(**params)
     # @param [Hash] params ({})
-    def update_web_acl(params = {}, options = {})
+    def update_web_acl(params = {}, **options)
       req = build_request(:update_web_acl, params)
       req.send_request(options)
     end
@@ -4521,7 +4521,7 @@ module Aws::WAFV2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4529,15 +4529,15 @@ module Aws::WAFV2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-wafv2'
-      context[:gem_version] = '1.14.0'
+      context[:gem_name] = "aws-sdk-wafv2"
+      context[:gem_version] = "1.14.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:databasemigrationservice)
 
@@ -290,7 +290,7 @@ module Aws::DatabaseMigrationService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -394,9 +394,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -450,9 +450,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ApplyPendingMaintenanceAction AWS API Documentation
     #
-    # @overload apply_pending_maintenance_action(params = {})
+    # @overload apply_pending_maintenance_action(**params)
     # @param [Hash] params ({})
-    def apply_pending_maintenance_action(params = {}, options = {})
+    def apply_pending_maintenance_action(params = {}, **options)
       req = build_request(:apply_pending_maintenance_action, params)
       req.send_request(options)
     end
@@ -495,9 +495,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CancelReplicationTaskAssessmentRun AWS API Documentation
     #
-    # @overload cancel_replication_task_assessment_run(params = {})
+    # @overload cancel_replication_task_assessment_run(**params)
     # @param [Hash] params ({})
-    def cancel_replication_task_assessment_run(params = {}, options = {})
+    def cancel_replication_task_assessment_run(params = {}, **options)
       req = build_request(:cancel_replication_task_assessment_run, params)
       req.send_request(options)
     end
@@ -1255,9 +1255,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEndpoint AWS API Documentation
     #
-    # @overload create_endpoint(params = {})
+    # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, options = {})
+    def create_endpoint(params = {}, **options)
       req = build_request(:create_endpoint, params)
       req.send_request(options)
     end
@@ -1365,9 +1365,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEventSubscription AWS API Documentation
     #
-    # @overload create_event_subscription(params = {})
+    # @overload create_event_subscription(**params)
     # @param [Hash] params ({})
-    def create_event_subscription(params = {}, options = {})
+    def create_event_subscription(params = {}, **options)
       req = build_request(:create_event_subscription, params)
       req.send_request(options)
     end
@@ -1654,9 +1654,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationInstance AWS API Documentation
     #
-    # @overload create_replication_instance(params = {})
+    # @overload create_replication_instance(**params)
     # @param [Hash] params ({})
-    def create_replication_instance(params = {}, options = {})
+    def create_replication_instance(params = {}, **options)
       req = build_request(:create_replication_instance, params)
       req.send_request(options)
     end
@@ -1739,9 +1739,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationSubnetGroup AWS API Documentation
     #
-    # @overload create_replication_subnet_group(params = {})
+    # @overload create_replication_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_replication_subnet_group(params = {}, options = {})
+    def create_replication_subnet_group(params = {}, **options)
       req = build_request(:create_replication_subnet_group, params)
       req.send_request(options)
     end
@@ -1961,9 +1961,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationTask AWS API Documentation
     #
-    # @overload create_replication_task(params = {})
+    # @overload create_replication_task(**params)
     # @param [Hash] params ({})
-    def create_replication_task(params = {}, options = {})
+    def create_replication_task(params = {}, **options)
       req = build_request(:create_replication_task, params)
       req.send_request(options)
     end
@@ -2013,9 +2013,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteCertificate AWS API Documentation
     #
-    # @overload delete_certificate(params = {})
+    # @overload delete_certificate(**params)
     # @param [Hash] params ({})
-    def delete_certificate(params = {}, options = {})
+    def delete_certificate(params = {}, **options)
       req = build_request(:delete_certificate, params)
       req.send_request(options)
     end
@@ -2067,9 +2067,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteConnection AWS API Documentation
     #
-    # @overload delete_connection(params = {})
+    # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, options = {})
+    def delete_connection(params = {}, **options)
       req = build_request(:delete_connection, params)
       req.send_request(options)
     end
@@ -2328,9 +2328,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteEndpoint AWS API Documentation
     #
-    # @overload delete_endpoint(params = {})
+    # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, options = {})
+    def delete_endpoint(params = {}, **options)
       req = build_request(:delete_endpoint, params)
       req.send_request(options)
     end
@@ -2366,9 +2366,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteEventSubscription AWS API Documentation
     #
-    # @overload delete_event_subscription(params = {})
+    # @overload delete_event_subscription(**params)
     # @param [Hash] params ({})
-    def delete_event_subscription(params = {}, options = {})
+    def delete_event_subscription(params = {}, **options)
       req = build_request(:delete_event_subscription, params)
       req.send_request(options)
     end
@@ -2500,9 +2500,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationInstance AWS API Documentation
     #
-    # @overload delete_replication_instance(params = {})
+    # @overload delete_replication_instance(**params)
     # @param [Hash] params ({})
-    def delete_replication_instance(params = {}, options = {})
+    def delete_replication_instance(params = {}, **options)
       req = build_request(:delete_replication_instance, params)
       req.send_request(options)
     end
@@ -2535,9 +2535,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationSubnetGroup AWS API Documentation
     #
-    # @overload delete_replication_subnet_group(params = {})
+    # @overload delete_replication_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_replication_subnet_group(params = {}, options = {})
+    def delete_replication_subnet_group(params = {}, **options)
       req = build_request(:delete_replication_subnet_group, params)
       req.send_request(options)
     end
@@ -2616,9 +2616,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationTask AWS API Documentation
     #
-    # @overload delete_replication_task(params = {})
+    # @overload delete_replication_task(**params)
     # @param [Hash] params ({})
-    def delete_replication_task(params = {}, options = {})
+    def delete_replication_task(params = {}, **options)
       req = build_request(:delete_replication_task, params)
       req.send_request(options)
     end
@@ -2662,9 +2662,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationTaskAssessmentRun AWS API Documentation
     #
-    # @overload delete_replication_task_assessment_run(params = {})
+    # @overload delete_replication_task_assessment_run(**params)
     # @param [Hash] params ({})
-    def delete_replication_task_assessment_run(params = {}, options = {})
+    def delete_replication_task_assessment_run(params = {}, **options)
       req = build_request(:delete_replication_task_assessment_run, params)
       req.send_request(options)
     end
@@ -2726,9 +2726,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeAccountAttributes AWS API Documentation
     #
-    # @overload describe_account_attributes(params = {})
+    # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, options = {})
+    def describe_account_attributes(params = {}, **options)
       req = build_request(:describe_account_attributes, params)
       req.send_request(options)
     end
@@ -2814,9 +2814,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeApplicableIndividualAssessments AWS API Documentation
     #
-    # @overload describe_applicable_individual_assessments(params = {})
+    # @overload describe_applicable_individual_assessments(**params)
     # @param [Hash] params ({})
-    def describe_applicable_individual_assessments(params = {}, options = {})
+    def describe_applicable_individual_assessments(params = {}, **options)
       req = build_request(:describe_applicable_individual_assessments, params)
       req.send_request(options)
     end
@@ -2903,9 +2903,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeCertificates AWS API Documentation
     #
-    # @overload describe_certificates(params = {})
+    # @overload describe_certificates(**params)
     # @param [Hash] params ({})
-    def describe_certificates(params = {}, options = {})
+    def describe_certificates(params = {}, **options)
       req = build_request(:describe_certificates, params)
       req.send_request(options)
     end
@@ -3006,9 +3006,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeConnections AWS API Documentation
     #
-    # @overload describe_connections(params = {})
+    # @overload describe_connections(**params)
     # @param [Hash] params ({})
-    def describe_connections(params = {}, options = {})
+    def describe_connections(params = {}, **options)
       req = build_request(:describe_connections, params)
       req.send_request(options)
     end
@@ -3093,9 +3093,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEndpointTypes AWS API Documentation
     #
-    # @overload describe_endpoint_types(params = {})
+    # @overload describe_endpoint_types(**params)
     # @param [Hash] params ({})
-    def describe_endpoint_types(params = {}, options = {})
+    def describe_endpoint_types(params = {}, **options)
       req = build_request(:describe_endpoint_types, params)
       req.send_request(options)
     end
@@ -3385,9 +3385,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEndpoints AWS API Documentation
     #
-    # @overload describe_endpoints(params = {})
+    # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, options = {})
+    def describe_endpoints(params = {}, **options)
       req = build_request(:describe_endpoints, params)
       req.send_request(options)
     end
@@ -3434,9 +3434,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEventCategories AWS API Documentation
     #
-    # @overload describe_event_categories(params = {})
+    # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, options = {})
+    def describe_event_categories(params = {}, **options)
       req = build_request(:describe_event_categories, params)
       req.send_request(options)
     end
@@ -3509,9 +3509,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEventSubscriptions AWS API Documentation
     #
-    # @overload describe_event_subscriptions(params = {})
+    # @overload describe_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_event_subscriptions(params = {}, options = {})
+    def describe_event_subscriptions(params = {}, **options)
       req = build_request(:describe_event_subscriptions, params)
       req.send_request(options)
     end
@@ -3602,9 +3602,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -3675,9 +3675,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeOrderableReplicationInstances AWS API Documentation
     #
-    # @overload describe_orderable_replication_instances(params = {})
+    # @overload describe_orderable_replication_instances(**params)
     # @param [Hash] params ({})
-    def describe_orderable_replication_instances(params = {}, options = {})
+    def describe_orderable_replication_instances(params = {}, **options)
       req = build_request(:describe_orderable_replication_instances, params)
       req.send_request(options)
     end
@@ -3740,9 +3740,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribePendingMaintenanceActions AWS API Documentation
     #
-    # @overload describe_pending_maintenance_actions(params = {})
+    # @overload describe_pending_maintenance_actions(**params)
     # @param [Hash] params ({})
-    def describe_pending_maintenance_actions(params = {}, options = {})
+    def describe_pending_maintenance_actions(params = {}, **options)
       req = build_request(:describe_pending_maintenance_actions, params)
       req.send_request(options)
     end
@@ -3788,9 +3788,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRefreshSchemasStatus AWS API Documentation
     #
-    # @overload describe_refresh_schemas_status(params = {})
+    # @overload describe_refresh_schemas_status(**params)
     # @param [Hash] params ({})
-    def describe_refresh_schemas_status(params = {}, options = {})
+    def describe_refresh_schemas_status(params = {}, **options)
       req = build_request(:describe_refresh_schemas_status, params)
       req.send_request(options)
     end
@@ -3842,9 +3842,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationInstanceTaskLogs AWS API Documentation
     #
-    # @overload describe_replication_instance_task_logs(params = {})
+    # @overload describe_replication_instance_task_logs(**params)
     # @param [Hash] params ({})
-    def describe_replication_instance_task_logs(params = {}, options = {})
+    def describe_replication_instance_task_logs(params = {}, **options)
       req = build_request(:describe_replication_instance_task_logs, params)
       req.send_request(options)
     end
@@ -3970,9 +3970,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationInstances AWS API Documentation
     #
-    # @overload describe_replication_instances(params = {})
+    # @overload describe_replication_instances(**params)
     # @param [Hash] params ({})
-    def describe_replication_instances(params = {}, options = {})
+    def describe_replication_instances(params = {}, **options)
       req = build_request(:describe_replication_instances, params)
       req.send_request(options)
     end
@@ -4060,9 +4060,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationSubnetGroups AWS API Documentation
     #
-    # @overload describe_replication_subnet_groups(params = {})
+    # @overload describe_replication_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_replication_subnet_groups(params = {}, options = {})
+    def describe_replication_subnet_groups(params = {}, **options)
       req = build_request(:describe_replication_subnet_groups, params)
       req.send_request(options)
     end
@@ -4122,9 +4122,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTaskAssessmentResults AWS API Documentation
     #
-    # @overload describe_replication_task_assessment_results(params = {})
+    # @overload describe_replication_task_assessment_results(**params)
     # @param [Hash] params ({})
-    def describe_replication_task_assessment_results(params = {}, options = {})
+    def describe_replication_task_assessment_results(params = {}, **options)
       req = build_request(:describe_replication_task_assessment_results, params)
       req.send_request(options)
     end
@@ -4200,9 +4200,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTaskAssessmentRuns AWS API Documentation
     #
-    # @overload describe_replication_task_assessment_runs(params = {})
+    # @overload describe_replication_task_assessment_runs(**params)
     # @param [Hash] params ({})
-    def describe_replication_task_assessment_runs(params = {}, options = {})
+    def describe_replication_task_assessment_runs(params = {}, **options)
       req = build_request(:describe_replication_task_assessment_runs, params)
       req.send_request(options)
     end
@@ -4263,9 +4263,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTaskIndividualAssessments AWS API Documentation
     #
-    # @overload describe_replication_task_individual_assessments(params = {})
+    # @overload describe_replication_task_individual_assessments(**params)
     # @param [Hash] params ({})
-    def describe_replication_task_individual_assessments(params = {}, options = {})
+    def describe_replication_task_individual_assessments(params = {}, **options)
       req = build_request(:describe_replication_task_individual_assessments, params)
       req.send_request(options)
     end
@@ -4390,9 +4390,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTasks AWS API Documentation
     #
-    # @overload describe_replication_tasks(params = {})
+    # @overload describe_replication_tasks(**params)
     # @param [Hash] params ({})
-    def describe_replication_tasks(params = {}, options = {})
+    def describe_replication_tasks(params = {}, **options)
       req = build_request(:describe_replication_tasks, params)
       req.send_request(options)
     end
@@ -4459,9 +4459,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeSchemas AWS API Documentation
     #
-    # @overload describe_schemas(params = {})
+    # @overload describe_schemas(**params)
     # @param [Hash] params ({})
-    def describe_schemas(params = {}, options = {})
+    def describe_schemas(params = {}, **options)
       req = build_request(:describe_schemas, params)
       req.send_request(options)
     end
@@ -4568,9 +4568,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeTableStatistics AWS API Documentation
     #
-    # @overload describe_table_statistics(params = {})
+    # @overload describe_table_statistics(**params)
     # @param [Hash] params ({})
-    def describe_table_statistics(params = {}, options = {})
+    def describe_table_statistics(params = {}, **options)
       req = build_request(:describe_table_statistics, params)
       req.send_request(options)
     end
@@ -4642,9 +4642,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ImportCertificate AWS API Documentation
     #
-    # @overload import_certificate(params = {})
+    # @overload import_certificate(**params)
     # @param [Hash] params ({})
-    def import_certificate(params = {}, options = {})
+    def import_certificate(params = {}, **options)
       req = build_request(:import_certificate, params)
       req.send_request(options)
     end
@@ -4694,9 +4694,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -5413,9 +5413,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEndpoint AWS API Documentation
     #
-    # @overload modify_endpoint(params = {})
+    # @overload modify_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_endpoint(params = {}, options = {})
+    def modify_endpoint(params = {}, **options)
       req = build_request(:modify_endpoint, params)
       req.send_request(options)
     end
@@ -5475,9 +5475,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEventSubscription AWS API Documentation
     #
-    # @overload modify_event_subscription(params = {})
+    # @overload modify_event_subscription(**params)
     # @param [Hash] params ({})
-    def modify_event_subscription(params = {}, options = {})
+    def modify_event_subscription(params = {}, **options)
       req = build_request(:modify_event_subscription, params)
       req.send_request(options)
     end
@@ -5711,9 +5711,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyReplicationInstance AWS API Documentation
     #
-    # @overload modify_replication_instance(params = {})
+    # @overload modify_replication_instance(**params)
     # @param [Hash] params ({})
-    def modify_replication_instance(params = {}, options = {})
+    def modify_replication_instance(params = {}, **options)
       req = build_request(:modify_replication_instance, params)
       req.send_request(options)
     end
@@ -5772,9 +5772,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyReplicationSubnetGroup AWS API Documentation
     #
-    # @overload modify_replication_subnet_group(params = {})
+    # @overload modify_replication_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_replication_subnet_group(params = {}, options = {})
+    def modify_replication_subnet_group(params = {}, **options)
       req = build_request(:modify_replication_subnet_group, params)
       req.send_request(options)
     end
@@ -5926,9 +5926,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyReplicationTask AWS API Documentation
     #
-    # @overload modify_replication_task(params = {})
+    # @overload modify_replication_task(**params)
     # @param [Hash] params ({})
-    def modify_replication_task(params = {}, options = {})
+    def modify_replication_task(params = {}, **options)
       req = build_request(:modify_replication_task, params)
       req.send_request(options)
     end
@@ -5990,9 +5990,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/MoveReplicationTask AWS API Documentation
     #
-    # @overload move_replication_task(params = {})
+    # @overload move_replication_task(**params)
     # @param [Hash] params ({})
-    def move_replication_task(params = {}, options = {})
+    def move_replication_task(params = {}, **options)
       req = build_request(:move_replication_task, params)
       req.send_request(options)
     end
@@ -6061,9 +6061,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/RebootReplicationInstance AWS API Documentation
     #
-    # @overload reboot_replication_instance(params = {})
+    # @overload reboot_replication_instance(**params)
     # @param [Hash] params ({})
-    def reboot_replication_instance(params = {}, options = {})
+    def reboot_replication_instance(params = {}, **options)
       req = build_request(:reboot_replication_instance, params)
       req.send_request(options)
     end
@@ -6118,9 +6118,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/RefreshSchemas AWS API Documentation
     #
-    # @overload refresh_schemas(params = {})
+    # @overload refresh_schemas(**params)
     # @param [Hash] params ({})
-    def refresh_schemas(params = {}, options = {})
+    def refresh_schemas(params = {}, **options)
       req = build_request(:refresh_schemas, params)
       req.send_request(options)
     end
@@ -6166,9 +6166,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ReloadTables AWS API Documentation
     #
-    # @overload reload_tables(params = {})
+    # @overload reload_tables(**params)
     # @param [Hash] params ({})
-    def reload_tables(params = {}, options = {})
+    def reload_tables(params = {}, **options)
       req = build_request(:reload_tables, params)
       req.send_request(options)
     end
@@ -6214,9 +6214,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -6356,9 +6356,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTask AWS API Documentation
     #
-    # @overload start_replication_task(params = {})
+    # @overload start_replication_task(**params)
     # @param [Hash] params ({})
-    def start_replication_task(params = {}, options = {})
+    def start_replication_task(params = {}, **options)
       req = build_request(:start_replication_task, params)
       req.send_request(options)
     end
@@ -6413,9 +6413,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTaskAssessment AWS API Documentation
     #
-    # @overload start_replication_task_assessment(params = {})
+    # @overload start_replication_task_assessment(**params)
     # @param [Hash] params ({})
-    def start_replication_task_assessment(params = {}, options = {})
+    def start_replication_task_assessment(params = {}, **options)
       req = build_request(:start_replication_task_assessment, params)
       req.send_request(options)
     end
@@ -6533,9 +6533,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTaskAssessmentRun AWS API Documentation
     #
-    # @overload start_replication_task_assessment_run(params = {})
+    # @overload start_replication_task_assessment_run(**params)
     # @param [Hash] params ({})
-    def start_replication_task_assessment_run(params = {}, options = {})
+    def start_replication_task_assessment_run(params = {}, **options)
       req = build_request(:start_replication_task_assessment_run, params)
       req.send_request(options)
     end
@@ -6614,9 +6614,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StopReplicationTask AWS API Documentation
     #
-    # @overload stop_replication_task(params = {})
+    # @overload stop_replication_task(**params)
     # @param [Hash] params ({})
-    def stop_replication_task(params = {}, options = {})
+    def stop_replication_task(params = {}, **options)
       req = build_request(:stop_replication_task, params)
       req.send_request(options)
     end
@@ -6669,9 +6669,9 @@ module Aws::DatabaseMigrationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/TestConnection AWS API Documentation
     #
-    # @overload test_connection(params = {})
+    # @overload test_connection(**params)
     # @param [Hash] params ({})
-    def test_connection(params = {}, options = {})
+    def test_connection(params = {}, **options)
       req = build_request(:test_connection, params)
       req.send_request(options)
     end
@@ -6680,7 +6680,7 @@ module Aws::DatabaseMigrationService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -6688,8 +6688,8 @@ module Aws::DatabaseMigrationService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-databasemigrationservice'
-      context[:gem_version] = '1.48.0'
+      context[:gem_name] = "aws-sdk-databasemigrationservice"
+      context[:gem_version] = "1.48.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -6788,7 +6788,7 @@ module Aws::DatabaseMigrationService
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -6804,7 +6804,7 @@ module Aws::DatabaseMigrationService
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

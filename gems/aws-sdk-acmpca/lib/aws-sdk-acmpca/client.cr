@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:acmpca)
 
@@ -290,7 +290,7 @@ module Aws::ACMPCA
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -453,9 +453,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CreateCertificateAuthority AWS API Documentation
     #
-    # @overload create_certificate_authority(params = {})
+    # @overload create_certificate_authority(**params)
     # @param [Hash] params ({})
-    def create_certificate_authority(params = {}, options = {})
+    def create_certificate_authority(params = {}, **options)
       req = build_request(:create_certificate_authority, params)
       req.send_request(options)
     end
@@ -517,9 +517,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CreateCertificateAuthorityAuditReport AWS API Documentation
     #
-    # @overload create_certificate_authority_audit_report(params = {})
+    # @overload create_certificate_authority_audit_report(**params)
     # @param [Hash] params ({})
-    def create_certificate_authority_audit_report(params = {}, options = {})
+    def create_certificate_authority_audit_report(params = {}, **options)
       req = build_request(:create_certificate_authority_audit_report, params)
       req.send_request(options)
     end
@@ -590,9 +590,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CreatePermission AWS API Documentation
     #
-    # @overload create_permission(params = {})
+    # @overload create_permission(**params)
     # @param [Hash] params ({})
-    def create_permission(params = {}, options = {})
+    def create_permission(params = {}, **options)
       req = build_request(:create_permission, params)
       req.send_request(options)
     end
@@ -662,9 +662,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DeleteCertificateAuthority AWS API Documentation
     #
-    # @overload delete_certificate_authority(params = {})
+    # @overload delete_certificate_authority(**params)
     # @param [Hash] params ({})
-    def delete_certificate_authority(params = {}, options = {})
+    def delete_certificate_authority(params = {}, **options)
       req = build_request(:delete_certificate_authority, params)
       req.send_request(options)
     end
@@ -734,9 +734,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DeletePermission AWS API Documentation
     #
-    # @overload delete_permission(params = {})
+    # @overload delete_permission(**params)
     # @param [Hash] params ({})
-    def delete_permission(params = {}, options = {})
+    def delete_permission(params = {}, **options)
       req = build_request(:delete_permission, params)
       req.send_request(options)
     end
@@ -804,9 +804,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DeletePolicy AWS API Documentation
     #
-    # @overload delete_policy(params = {})
+    # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, options = {})
+    def delete_policy(params = {}, **options)
       req = build_request(:delete_policy, params)
       req.send_request(options)
     end
@@ -895,9 +895,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DescribeCertificateAuthority AWS API Documentation
     #
-    # @overload describe_certificate_authority(params = {})
+    # @overload describe_certificate_authority(**params)
     # @param [Hash] params ({})
-    def describe_certificate_authority(params = {}, options = {})
+    def describe_certificate_authority(params = {}, **options)
       req = build_request(:describe_certificate_authority, params)
       req.send_request(options)
     end
@@ -957,9 +957,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DescribeCertificateAuthorityAuditReport AWS API Documentation
     #
-    # @overload describe_certificate_authority_audit_report(params = {})
+    # @overload describe_certificate_authority_audit_report(**params)
     # @param [Hash] params ({})
-    def describe_certificate_authority_audit_report(params = {}, options = {})
+    def describe_certificate_authority_audit_report(params = {}, **options)
       req = build_request(:describe_certificate_authority_audit_report, params)
       req.send_request(options)
     end
@@ -1021,9 +1021,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetCertificate AWS API Documentation
     #
-    # @overload get_certificate(params = {})
+    # @overload get_certificate(**params)
     # @param [Hash] params ({})
-    def get_certificate(params = {}, options = {})
+    def get_certificate(params = {}, **options)
       req = build_request(:get_certificate, params)
       req.send_request(options)
     end
@@ -1059,9 +1059,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetCertificateAuthorityCertificate AWS API Documentation
     #
-    # @overload get_certificate_authority_certificate(params = {})
+    # @overload get_certificate_authority_certificate(**params)
     # @param [Hash] params ({})
-    def get_certificate_authority_certificate(params = {}, options = {})
+    def get_certificate_authority_certificate(params = {}, **options)
       req = build_request(:get_certificate_authority_certificate, params)
       req.send_request(options)
     end
@@ -1111,9 +1111,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetCertificateAuthorityCsr AWS API Documentation
     #
-    # @overload get_certificate_authority_csr(params = {})
+    # @overload get_certificate_authority_csr(**params)
     # @param [Hash] params ({})
-    def get_certificate_authority_csr(params = {}, options = {})
+    def get_certificate_authority_csr(params = {}, **options)
       req = build_request(:get_certificate_authority_csr, params)
       req.send_request(options)
     end
@@ -1174,9 +1174,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetPolicy AWS API Documentation
     #
-    # @overload get_policy(params = {})
+    # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, options = {})
+    def get_policy(params = {}, **options)
       req = build_request(:get_policy, params)
       req.send_request(options)
     end
@@ -1308,9 +1308,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/ImportCertificateAuthorityCertificate AWS API Documentation
     #
-    # @overload import_certificate_authority_certificate(params = {})
+    # @overload import_certificate_authority_certificate(**params)
     # @param [Hash] params ({})
-    def import_certificate_authority_certificate(params = {}, options = {})
+    def import_certificate_authority_certificate(params = {}, **options)
       req = build_request(:import_certificate_authority_certificate, params)
       req.send_request(options)
     end
@@ -1463,9 +1463,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/IssueCertificate AWS API Documentation
     #
-    # @overload issue_certificate(params = {})
+    # @overload issue_certificate(**params)
     # @param [Hash] params ({})
-    def issue_certificate(params = {}, options = {})
+    def issue_certificate(params = {}, **options)
       req = build_request(:issue_certificate, params)
       req.send_request(options)
     end
@@ -1547,9 +1547,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/ListCertificateAuthorities AWS API Documentation
     #
-    # @overload list_certificate_authorities(params = {})
+    # @overload list_certificate_authorities(**params)
     # @param [Hash] params ({})
-    def list_certificate_authorities(params = {}, options = {})
+    def list_certificate_authorities(params = {}, **options)
       req = build_request(:list_certificate_authorities, params)
       req.send_request(options)
     end
@@ -1638,9 +1638,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/ListPermissions AWS API Documentation
     #
-    # @overload list_permissions(params = {})
+    # @overload list_permissions(**params)
     # @param [Hash] params ({})
-    def list_permissions(params = {}, options = {})
+    def list_permissions(params = {}, **options)
       req = build_request(:list_permissions, params)
       req.send_request(options)
     end
@@ -1704,9 +1704,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -1782,9 +1782,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/PutPolicy AWS API Documentation
     #
-    # @overload put_policy(params = {})
+    # @overload put_policy(**params)
     # @param [Hash] params ({})
-    def put_policy(params = {}, options = {})
+    def put_policy(params = {}, **options)
       req = build_request(:put_policy, params)
       req.send_request(options)
     end
@@ -1836,9 +1836,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/RestoreCertificateAuthority AWS API Documentation
     #
-    # @overload restore_certificate_authority(params = {})
+    # @overload restore_certificate_authority(**params)
     # @param [Hash] params ({})
-    def restore_certificate_authority(params = {}, options = {})
+    def restore_certificate_authority(params = {}, **options)
       req = build_request(:restore_certificate_authority, params)
       req.send_request(options)
     end
@@ -1916,9 +1916,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/RevokeCertificate AWS API Documentation
     #
-    # @overload revoke_certificate(params = {})
+    # @overload revoke_certificate(**params)
     # @param [Hash] params ({})
-    def revoke_certificate(params = {}, options = {})
+    def revoke_certificate(params = {}, **options)
       req = build_request(:revoke_certificate, params)
       req.send_request(options)
     end
@@ -1969,9 +1969,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/TagCertificateAuthority AWS API Documentation
     #
-    # @overload tag_certificate_authority(params = {})
+    # @overload tag_certificate_authority(**params)
     # @param [Hash] params ({})
-    def tag_certificate_authority(params = {}, options = {})
+    def tag_certificate_authority(params = {}, **options)
       req = build_request(:tag_certificate_authority, params)
       req.send_request(options)
     end
@@ -2019,9 +2019,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/UntagCertificateAuthority AWS API Documentation
     #
-    # @overload untag_certificate_authority(params = {})
+    # @overload untag_certificate_authority(**params)
     # @param [Hash] params ({})
-    def untag_certificate_authority(params = {}, options = {})
+    def untag_certificate_authority(params = {}, **options)
       req = build_request(:untag_certificate_authority, params)
       req.send_request(options)
     end
@@ -2075,9 +2075,9 @@ module Aws::ACMPCA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/UpdateCertificateAuthority AWS API Documentation
     #
-    # @overload update_certificate_authority(params = {})
+    # @overload update_certificate_authority(**params)
     # @param [Hash] params ({})
-    def update_certificate_authority(params = {}, options = {})
+    def update_certificate_authority(params = {}, **options)
       req = build_request(:update_certificate_authority, params)
       req.send_request(options)
     end
@@ -2086,7 +2086,7 @@ module Aws::ACMPCA
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2094,8 +2094,8 @@ module Aws::ACMPCA
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-acmpca'
-      context[:gem_version] = '1.30.0'
+      context[:gem_name] = "aws-sdk-acmpca"
+      context[:gem_version] = "1.30.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -2189,7 +2189,7 @@ module Aws::ACMPCA
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -2205,7 +2205,7 @@ module Aws::ACMPCA
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

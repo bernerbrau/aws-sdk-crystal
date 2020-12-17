@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sagemakeredgemanager/types'
-require_relative 'aws-sdk-sagemakeredgemanager/client_api'
-require_relative 'aws-sdk-sagemakeredgemanager/client'
-require_relative 'aws-sdk-sagemakeredgemanager/errors'
-require_relative 'aws-sdk-sagemakeredgemanager/resource'
-require_relative 'aws-sdk-sagemakeredgemanager/customizations'
+require_relative "aws-sdk-sagemakeredgemanager/types"
+require_relative "aws-sdk-sagemakeredgemanager/client_api"
+require_relative "aws-sdk-sagemakeredgemanager/client"
+require_relative "aws-sdk-sagemakeredgemanager/errors"
+require_relative "aws-sdk-sagemakeredgemanager/resource"
+require_relative "aws-sdk-sagemakeredgemanager/customizations"
 
 # This module provides support for Amazon Sagemaker Edge Manager. This module is available in the
 # `aws-sdk-sagemakeredgemanager` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-sagemakeredgemanager/customizations'
 # @!group service
 module Aws::SagemakerEdgeManager
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

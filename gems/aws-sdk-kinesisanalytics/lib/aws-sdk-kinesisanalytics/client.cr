@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kinesisanalytics)
 
@@ -290,7 +290,7 @@ module Aws::KinesisAnalytics
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -381,9 +381,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/AddApplicationCloudWatchLoggingOption AWS API Documentation
     #
-    # @overload add_application_cloud_watch_logging_option(params = {})
+    # @overload add_application_cloud_watch_logging_option(**params)
     # @param [Hash] params ({})
-    def add_application_cloud_watch_logging_option(params = {}, options = {})
+    def add_application_cloud_watch_logging_option(params = {}, **options)
       req = build_request(:add_application_cloud_watch_logging_option, params)
       req.send_request(options)
     end
@@ -491,9 +491,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/AddApplicationInput AWS API Documentation
     #
-    # @overload add_application_input(params = {})
+    # @overload add_application_input(**params)
     # @param [Hash] params ({})
-    def add_application_input(params = {}, options = {})
+    def add_application_input(params = {}, **options)
       req = build_request(:add_application_input, params)
       req.send_request(options)
     end
@@ -565,9 +565,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/AddApplicationInputProcessingConfiguration AWS API Documentation
     #
-    # @overload add_application_input_processing_configuration(params = {})
+    # @overload add_application_input_processing_configuration(**params)
     # @param [Hash] params ({})
-    def add_application_input_processing_configuration(params = {}, options = {})
+    def add_application_input_processing_configuration(params = {}, **options)
       req = build_request(:add_application_input_processing_configuration, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/AddApplicationOutput AWS API Documentation
     #
-    # @overload add_application_output(params = {})
+    # @overload add_application_output(**params)
     # @param [Hash] params ({})
-    def add_application_output(params = {}, options = {})
+    def add_application_output(params = {}, **options)
       req = build_request(:add_application_output, params)
       req.send_request(options)
     end
@@ -764,9 +764,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/AddApplicationReferenceDataSource AWS API Documentation
     #
-    # @overload add_application_reference_data_source(params = {})
+    # @overload add_application_reference_data_source(**params)
     # @param [Hash] params ({})
-    def add_application_reference_data_source(params = {}, options = {})
+    def add_application_reference_data_source(params = {}, **options)
       req = build_request(:add_application_reference_data_source, params)
       req.send_request(options)
     end
@@ -997,9 +997,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/CreateApplication AWS API Documentation
     #
-    # @overload create_application(params = {})
+    # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, options = {})
+    def create_application(params = {}, **options)
       req = build_request(:create_application, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DeleteApplication AWS API Documentation
     #
-    # @overload delete_application(params = {})
+    # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, options = {})
+    def delete_application(params = {}, **options)
       req = build_request(:delete_application, params)
       req.send_request(options)
     end
@@ -1087,9 +1087,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DeleteApplicationCloudWatchLoggingOption AWS API Documentation
     #
-    # @overload delete_application_cloud_watch_logging_option(params = {})
+    # @overload delete_application_cloud_watch_logging_option(**params)
     # @param [Hash] params ({})
-    def delete_application_cloud_watch_logging_option(params = {}, options = {})
+    def delete_application_cloud_watch_logging_option(params = {}, **options)
       req = build_request(:delete_application_cloud_watch_logging_option, params)
       req.send_request(options)
     end
@@ -1135,9 +1135,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DeleteApplicationInputProcessingConfiguration AWS API Documentation
     #
-    # @overload delete_application_input_processing_configuration(params = {})
+    # @overload delete_application_input_processing_configuration(**params)
     # @param [Hash] params ({})
-    def delete_application_input_processing_configuration(params = {}, options = {})
+    def delete_application_input_processing_configuration(params = {}, **options)
       req = build_request(:delete_application_input_processing_configuration, params)
       req.send_request(options)
     end
@@ -1197,9 +1197,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DeleteApplicationOutput AWS API Documentation
     #
-    # @overload delete_application_output(params = {})
+    # @overload delete_application_output(**params)
     # @param [Hash] params ({})
-    def delete_application_output(params = {}, options = {})
+    def delete_application_output(params = {}, **options)
       req = build_request(:delete_application_output, params)
       req.send_request(options)
     end
@@ -1262,9 +1262,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DeleteApplicationReferenceDataSource AWS API Documentation
     #
-    # @overload delete_application_reference_data_source(params = {})
+    # @overload delete_application_reference_data_source(**params)
     # @param [Hash] params ({})
-    def delete_application_reference_data_source(params = {}, options = {})
+    def delete_application_reference_data_source(params = {}, **options)
       req = build_request(:delete_application_reference_data_source, params)
       req.send_request(options)
     end
@@ -1369,9 +1369,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DescribeApplication AWS API Documentation
     #
-    # @overload describe_application(params = {})
+    # @overload describe_application(**params)
     # @param [Hash] params ({})
-    def describe_application(params = {}, options = {})
+    def describe_application(params = {}, **options)
       req = build_request(:describe_application, params)
       req.send_request(options)
     end
@@ -1475,9 +1475,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/DiscoverInputSchema AWS API Documentation
     #
-    # @overload discover_input_schema(params = {})
+    # @overload discover_input_schema(**params)
     # @param [Hash] params ({})
-    def discover_input_schema(params = {}, options = {})
+    def discover_input_schema(params = {}, **options)
       req = build_request(:discover_input_schema, params)
       req.send_request(options)
     end
@@ -1540,9 +1540,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/ListApplications AWS API Documentation
     #
-    # @overload list_applications(params = {})
+    # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, options = {})
+    def list_applications(params = {}, **options)
       req = build_request(:list_applications, params)
       req.send_request(options)
     end
@@ -1575,9 +1575,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1639,9 +1639,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/StartApplication AWS API Documentation
     #
-    # @overload start_application(params = {})
+    # @overload start_application(**params)
     # @param [Hash] params ({})
-    def start_application(params = {}, options = {})
+    def start_application(params = {}, **options)
       req = build_request(:start_application, params)
       req.send_request(options)
     end
@@ -1681,9 +1681,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/StopApplication AWS API Documentation
     #
-    # @overload stop_application(params = {})
+    # @overload stop_application(**params)
     # @param [Hash] params ({})
-    def stop_application(params = {}, options = {})
+    def stop_application(params = {}, **options)
       req = build_request(:stop_application, params)
       req.send_request(options)
     end
@@ -1719,9 +1719,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1751,9 +1751,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1910,9 +1910,9 @@ module Aws::KinesisAnalytics
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisanalytics-2015-08-14/UpdateApplication AWS API Documentation
     #
-    # @overload update_application(params = {})
+    # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, options = {})
+    def update_application(params = {}, **options)
       req = build_request(:update_application, params)
       req.send_request(options)
     end
@@ -1921,7 +1921,7 @@ module Aws::KinesisAnalytics
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1929,15 +1929,15 @@ module Aws::KinesisAnalytics
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kinesisanalytics'
-      context[:gem_version] = '1.29.0'
+      context[:gem_name] = "aws-sdk-kinesisanalytics"
+      context[:gem_version] = "1.29.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-medialive/types'
-require_relative 'aws-sdk-medialive/client_api'
-require_relative 'aws-sdk-medialive/client'
-require_relative 'aws-sdk-medialive/errors'
-require_relative 'aws-sdk-medialive/waiters'
-require_relative 'aws-sdk-medialive/resource'
-require_relative 'aws-sdk-medialive/customizations'
+require_relative "aws-sdk-medialive/types"
+require_relative "aws-sdk-medialive/client_api"
+require_relative "aws-sdk-medialive/client"
+require_relative "aws-sdk-medialive/errors"
+require_relative "aws-sdk-medialive/waiters"
+require_relative "aws-sdk-medialive/resource"
+require_relative "aws-sdk-medialive/customizations"
 
 # This module provides support for AWS Elemental MediaLive. This module is available in the
 # `aws-sdk-medialive` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-medialive/customizations'
 # @!group service
 module Aws::MediaLive
 
-  GEM_VERSION = '1.61.0'
+  GEM_VERSION = "1.61.0"
 
 end

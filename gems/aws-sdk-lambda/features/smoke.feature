@@ -8,11 +8,11 @@
 Feature: Smoke tests for Lambda
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @lambda @smoke
   Scenario: Call Aws::Lambda::Client#list_functions and expect it to succeed
-  When I call the operation 'list_functions' with params:
+  When I call the operation "list_functions" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @lambda @smoke
   Scenario: Call Aws::Aws::Lambda::Client#invoke and expect it to fail
-  When I call the operation 'invoke' with params:
+  When I call the operation "invoke" with params:
     """
 {"function_name":"bogus-function"}
     """

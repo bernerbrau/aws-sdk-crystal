@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v2.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v2.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:importexport)
 
@@ -280,7 +280,7 @@ module Aws::ImportExport
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -351,9 +351,9 @@ module Aws::ImportExport
     #
     #   resp.success #=> Boolean
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -411,9 +411,9 @@ module Aws::ImportExport
     #   resp.artifact_list[0].description #=> String
     #   resp.artifact_list[0].url #=> String
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -489,9 +489,9 @@ module Aws::ImportExport
     #   resp.shipping_label_url #=> String
     #   resp.warning #=> String
     #
-    # @overload get_shipping_label(params = {})
+    # @overload get_shipping_label(**params)
     # @param [Hash] params ({})
-    def get_shipping_label(params = {}, options = {})
+    def get_shipping_label(params = {}, **options)
       req = build_request(:get_shipping_label, params)
       req.send_request(options)
     end
@@ -554,9 +554,9 @@ module Aws::ImportExport
     #   resp.artifact_list[0].description #=> String
     #   resp.artifact_list[0].url #=> String
     #
-    # @overload get_status(params = {})
+    # @overload get_status(**params)
     # @param [Hash] params ({})
-    def get_status(params = {}, options = {})
+    def get_status(params = {}, **options)
       req = build_request(:get_status, params)
       req.send_request(options)
     end
@@ -605,9 +605,9 @@ module Aws::ImportExport
     #   resp.jobs[0].job_type #=> String, one of "Import", "Export"
     #   resp.is_truncated #=> Boolean
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -658,9 +658,9 @@ module Aws::ImportExport
     #   resp.artifact_list[0].description #=> String
     #   resp.artifact_list[0].url #=> String
     #
-    # @overload update_job(params = {})
+    # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, options = {})
+    def update_job(params = {}, **options)
       req = build_request(:update_job, params)
       req.send_request(options)
     end
@@ -669,7 +669,7 @@ module Aws::ImportExport
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -677,15 +677,15 @@ module Aws::ImportExport
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-importexport'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-importexport"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

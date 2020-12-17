@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudhsm)
 
@@ -290,7 +290,7 @@ module Aws::CloudHSM
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -389,9 +389,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -437,9 +437,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/CreateHapg AWS API Documentation
     #
-    # @overload create_hapg(params = {})
+    # @overload create_hapg(**params)
     # @param [Hash] params ({})
-    def create_hapg(params = {}, options = {})
+    def create_hapg(params = {}, **options)
       req = build_request(:create_hapg, params)
       req.send_request(options)
     end
@@ -532,9 +532,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/CreateHsm AWS API Documentation
     #
-    # @overload create_hsm(params = {})
+    # @overload create_hsm(**params)
     # @param [Hash] params ({})
-    def create_hsm(params = {}, options = {})
+    def create_hsm(params = {}, **options)
       req = build_request(:create_hsm, params)
       req.send_request(options)
     end
@@ -583,9 +583,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/CreateLunaClient AWS API Documentation
     #
-    # @overload create_luna_client(params = {})
+    # @overload create_luna_client(**params)
     # @param [Hash] params ({})
-    def create_luna_client(params = {}, options = {})
+    def create_luna_client(params = {}, **options)
       req = build_request(:create_luna_client, params)
       req.send_request(options)
     end
@@ -629,9 +629,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/DeleteHapg AWS API Documentation
     #
-    # @overload delete_hapg(params = {})
+    # @overload delete_hapg(**params)
     # @param [Hash] params ({})
-    def delete_hapg(params = {}, options = {})
+    def delete_hapg(params = {}, **options)
       req = build_request(:delete_hapg, params)
       req.send_request(options)
     end
@@ -676,9 +676,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/DeleteHsm AWS API Documentation
     #
-    # @overload delete_hsm(params = {})
+    # @overload delete_hsm(**params)
     # @param [Hash] params ({})
-    def delete_hsm(params = {}, options = {})
+    def delete_hsm(params = {}, **options)
       req = build_request(:delete_hsm, params)
       req.send_request(options)
     end
@@ -722,9 +722,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/DeleteLunaClient AWS API Documentation
     #
-    # @overload delete_luna_client(params = {})
+    # @overload delete_luna_client(**params)
     # @param [Hash] params ({})
-    def delete_luna_client(params = {}, options = {})
+    def delete_luna_client(params = {}, **options)
       req = build_request(:delete_luna_client, params)
       req.send_request(options)
     end
@@ -788,9 +788,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/DescribeHapg AWS API Documentation
     #
-    # @overload describe_hapg(params = {})
+    # @overload describe_hapg(**params)
     # @param [Hash] params ({})
-    def describe_hapg(params = {}, options = {})
+    def describe_hapg(params = {}, **options)
       req = build_request(:describe_hapg, params)
       req.send_request(options)
     end
@@ -882,9 +882,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/DescribeHsm AWS API Documentation
     #
-    # @overload describe_hsm(params = {})
+    # @overload describe_hsm(**params)
     # @param [Hash] params ({})
-    def describe_hsm(params = {}, options = {})
+    def describe_hsm(params = {}, **options)
       req = build_request(:describe_hsm, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/DescribeLunaClient AWS API Documentation
     #
-    # @overload describe_luna_client(params = {})
+    # @overload describe_luna_client(**params)
     # @param [Hash] params ({})
-    def describe_luna_client(params = {}, options = {})
+    def describe_luna_client(params = {}, **options)
       req = build_request(:describe_luna_client, params)
       req.send_request(options)
     end
@@ -1000,9 +1000,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/GetConfig AWS API Documentation
     #
-    # @overload get_config(params = {})
+    # @overload get_config(**params)
     # @param [Hash] params ({})
-    def get_config(params = {}, options = {})
+    def get_config(params = {}, **options)
       req = build_request(:get_config, params)
       req.send_request(options)
     end
@@ -1039,9 +1039,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ListAvailableZones AWS API Documentation
     #
-    # @overload list_available_zones(params = {})
+    # @overload list_available_zones(**params)
     # @param [Hash] params ({})
-    def list_available_zones(params = {}, options = {})
+    def list_available_zones(params = {}, **options)
       req = build_request(:list_available_zones, params)
       req.send_request(options)
     end
@@ -1094,9 +1094,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ListHapgs AWS API Documentation
     #
-    # @overload list_hapgs(params = {})
+    # @overload list_hapgs(**params)
     # @param [Hash] params ({})
-    def list_hapgs(params = {}, options = {})
+    def list_hapgs(params = {}, **options)
       req = build_request(:list_hapgs, params)
       req.send_request(options)
     end
@@ -1150,9 +1150,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ListHsms AWS API Documentation
     #
-    # @overload list_hsms(params = {})
+    # @overload list_hsms(**params)
     # @param [Hash] params ({})
-    def list_hsms(params = {}, options = {})
+    def list_hsms(params = {}, **options)
       req = build_request(:list_hsms, params)
       req.send_request(options)
     end
@@ -1205,9 +1205,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ListLunaClients AWS API Documentation
     #
-    # @overload list_luna_clients(params = {})
+    # @overload list_luna_clients(**params)
     # @param [Hash] params ({})
-    def list_luna_clients(params = {}, options = {})
+    def list_luna_clients(params = {}, **options)
       req = build_request(:list_luna_clients, params)
       req.send_request(options)
     end
@@ -1253,9 +1253,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1308,9 +1308,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ModifyHapg AWS API Documentation
     #
-    # @overload modify_hapg(params = {})
+    # @overload modify_hapg(**params)
     # @param [Hash] params ({})
-    def modify_hapg(params = {}, options = {})
+    def modify_hapg(params = {}, **options)
       req = build_request(:modify_hapg, params)
       req.send_request(options)
     end
@@ -1387,9 +1387,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ModifyHsm AWS API Documentation
     #
-    # @overload modify_hsm(params = {})
+    # @overload modify_hsm(**params)
     # @param [Hash] params ({})
-    def modify_hsm(params = {}, options = {})
+    def modify_hsm(params = {}, **options)
       req = build_request(:modify_hsm, params)
       req.send_request(options)
     end
@@ -1440,9 +1440,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/ModifyLunaClient AWS API Documentation
     #
-    # @overload modify_luna_client(params = {})
+    # @overload modify_luna_client(**params)
     # @param [Hash] params ({})
-    def modify_luna_client(params = {}, options = {})
+    def modify_luna_client(params = {}, **options)
       req = build_request(:modify_luna_client, params)
       req.send_request(options)
     end
@@ -1496,9 +1496,9 @@ module Aws::CloudHSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cloudhsm-2014-05-30/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -1507,7 +1507,7 @@ module Aws::CloudHSM
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1515,15 +1515,15 @@ module Aws::CloudHSM
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudhsm'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-cloudhsm"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,17 +8,17 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sqs/types'
-require_relative 'aws-sdk-sqs/client_api'
-require_relative 'aws-sdk-sqs/client'
-require_relative 'aws-sdk-sqs/errors'
-require_relative 'aws-sdk-sqs/resource'
-require_relative 'aws-sdk-sqs/message'
-require_relative 'aws-sdk-sqs/queue'
-require_relative 'aws-sdk-sqs/customizations'
+require_relative "aws-sdk-sqs/types"
+require_relative "aws-sdk-sqs/client_api"
+require_relative "aws-sdk-sqs/client"
+require_relative "aws-sdk-sqs/errors"
+require_relative "aws-sdk-sqs/resource"
+require_relative "aws-sdk-sqs/message"
+require_relative "aws-sdk-sqs/queue"
+require_relative "aws-sdk-sqs/customizations"
 
 # This module provides support for Amazon Simple Queue Service. This module is available in the
 # `aws-sdk-sqs` gem.
@@ -50,6 +50,6 @@ require_relative 'aws-sdk-sqs/customizations'
 # @!group service
 module Aws::SQS
 
-  GEM_VERSION = '1.34.0'
+  GEM_VERSION = "1.34.0"
 
 end

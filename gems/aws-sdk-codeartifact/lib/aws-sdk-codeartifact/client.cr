@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codeartifact)
 
@@ -280,7 +280,7 @@ module Aws::CodeArtifact
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -393,9 +393,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/AssociateExternalConnection AWS API Documentation
     #
-    # @overload associate_external_connection(params = {})
+    # @overload associate_external_connection(**params)
     # @param [Hash] params ({})
-    def associate_external_connection(params = {}, options = {})
+    def associate_external_connection(params = {}, **options)
       req = build_request(:associate_external_connection, params)
       req.send_request(options)
     end
@@ -521,9 +521,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/CopyPackageVersions AWS API Documentation
     #
-    # @overload copy_package_versions(params = {})
+    # @overload copy_package_versions(**params)
     # @param [Hash] params ({})
-    def copy_package_versions(params = {}, options = {})
+    def copy_package_versions(params = {}, **options)
       req = build_request(:copy_package_versions, params)
       req.send_request(options)
     end
@@ -601,9 +601,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/CreateDomain AWS API Documentation
     #
-    # @overload create_domain(params = {})
+    # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, options = {})
+    def create_domain(params = {}, **options)
       req = build_request(:create_domain, params)
       req.send_request(options)
     end
@@ -678,9 +678,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/CreateRepository AWS API Documentation
     #
-    # @overload create_repository(params = {})
+    # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, options = {})
+    def create_repository(params = {}, **options)
       req = build_request(:create_repository, params)
       req.send_request(options)
     end
@@ -721,9 +721,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeleteDomain AWS API Documentation
     #
-    # @overload delete_domain(params = {})
+    # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, options = {})
+    def delete_domain(params = {}, **options)
       req = build_request(:delete_domain, params)
       req.send_request(options)
     end
@@ -763,9 +763,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeleteDomainPermissionsPolicy AWS API Documentation
     #
-    # @overload delete_domain_permissions_policy(params = {})
+    # @overload delete_domain_permissions_policy(**params)
     # @param [Hash] params ({})
-    def delete_domain_permissions_policy(params = {}, options = {})
+    def delete_domain_permissions_policy(params = {}, **options)
       req = build_request(:delete_domain_permissions_policy, params)
       req.send_request(options)
     end
@@ -864,9 +864,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeletePackageVersions AWS API Documentation
     #
-    # @overload delete_package_versions(params = {})
+    # @overload delete_package_versions(**params)
     # @param [Hash] params ({})
-    def delete_package_versions(params = {}, options = {})
+    def delete_package_versions(params = {}, **options)
       req = build_request(:delete_package_versions, params)
       req.send_request(options)
     end
@@ -912,9 +912,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeleteRepository AWS API Documentation
     #
-    # @overload delete_repository(params = {})
+    # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, options = {})
+    def delete_repository(params = {}, **options)
       req = build_request(:delete_repository, params)
       req.send_request(options)
     end
@@ -967,9 +967,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeleteRepositoryPermissionsPolicy AWS API Documentation
     #
-    # @overload delete_repository_permissions_policy(params = {})
+    # @overload delete_repository_permissions_policy(**params)
     # @param [Hash] params ({})
-    def delete_repository_permissions_policy(params = {}, options = {})
+    def delete_repository_permissions_policy(params = {}, **options)
       req = build_request(:delete_repository_permissions_policy, params)
       req.send_request(options)
     end
@@ -1013,9 +1013,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DescribeDomain AWS API Documentation
     #
-    # @overload describe_domain(params = {})
+    # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, options = {})
+    def describe_domain(params = {}, **options)
       req = build_request(:describe_domain, params)
       req.send_request(options)
     end
@@ -1105,9 +1105,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DescribePackageVersion AWS API Documentation
     #
-    # @overload describe_package_version(params = {})
+    # @overload describe_package_version(**params)
     # @param [Hash] params ({})
-    def describe_package_version(params = {}, options = {})
+    def describe_package_version(params = {}, **options)
       req = build_request(:describe_package_version, params)
       req.send_request(options)
     end
@@ -1154,9 +1154,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DescribeRepository AWS API Documentation
     #
-    # @overload describe_repository(params = {})
+    # @overload describe_repository(**params)
     # @param [Hash] params ({})
-    def describe_repository(params = {}, options = {})
+    def describe_repository(params = {}, **options)
       req = build_request(:describe_repository, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DisassociateExternalConnection AWS API Documentation
     #
-    # @overload disassociate_external_connection(params = {})
+    # @overload disassociate_external_connection(**params)
     # @param [Hash] params ({})
-    def disassociate_external_connection(params = {}, options = {})
+    def disassociate_external_connection(params = {}, **options)
       req = build_request(:disassociate_external_connection, params)
       req.send_request(options)
     end
@@ -1325,9 +1325,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DisposePackageVersions AWS API Documentation
     #
-    # @overload dispose_package_versions(params = {})
+    # @overload dispose_package_versions(**params)
     # @param [Hash] params ({})
-    def dispose_package_versions(params = {}, options = {})
+    def dispose_package_versions(params = {}, **options)
       req = build_request(:dispose_package_versions, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/GetAuthorizationToken AWS API Documentation
     #
-    # @overload get_authorization_token(params = {})
+    # @overload get_authorization_token(**params)
     # @param [Hash] params ({})
-    def get_authorization_token(params = {}, options = {})
+    def get_authorization_token(params = {}, **options)
       req = build_request(:get_authorization_token, params)
       req.send_request(options)
     end
@@ -1444,9 +1444,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/GetDomainPermissionsPolicy AWS API Documentation
     #
-    # @overload get_domain_permissions_policy(params = {})
+    # @overload get_domain_permissions_policy(**params)
     # @param [Hash] params ({})
-    def get_domain_permissions_policy(params = {}, options = {})
+    def get_domain_permissions_policy(params = {}, **options)
       req = build_request(:get_domain_permissions_policy, params)
       req.send_request(options)
     end
@@ -1536,9 +1536,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/GetPackageVersionAsset AWS API Documentation
     #
-    # @overload get_package_version_asset(params = {})
+    # @overload get_package_version_asset(**params)
     # @param [Hash] params ({})
-    def get_package_version_asset(params = {}, options = {}, &block)
+    def get_package_version_asset(params = {}, **options, &block)
       req = build_request(:get_package_version_asset, params)
       req.send_request(options, &block)
     end
@@ -1628,9 +1628,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/GetPackageVersionReadme AWS API Documentation
     #
-    # @overload get_package_version_readme(params = {})
+    # @overload get_package_version_readme(**params)
     # @param [Hash] params ({})
-    def get_package_version_readme(params = {}, options = {})
+    def get_package_version_readme(params = {}, **options)
       req = build_request(:get_package_version_readme, params)
       req.send_request(options)
     end
@@ -1687,9 +1687,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/GetRepositoryEndpoint AWS API Documentation
     #
-    # @overload get_repository_endpoint(params = {})
+    # @overload get_repository_endpoint(**params)
     # @param [Hash] params ({})
-    def get_repository_endpoint(params = {}, options = {})
+    def get_repository_endpoint(params = {}, **options)
       req = build_request(:get_repository_endpoint, params)
       req.send_request(options)
     end
@@ -1728,9 +1728,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/GetRepositoryPermissionsPolicy AWS API Documentation
     #
-    # @overload get_repository_permissions_policy(params = {})
+    # @overload get_repository_permissions_policy(**params)
     # @param [Hash] params ({})
-    def get_repository_permissions_policy(params = {}, options = {})
+    def get_repository_permissions_policy(params = {}, **options)
       req = build_request(:get_repository_permissions_policy, params)
       req.send_request(options)
     end
@@ -1774,9 +1774,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListDomains AWS API Documentation
     #
-    # @overload list_domains(params = {})
+    # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, options = {})
+    def list_domains(params = {}, **options)
       req = build_request(:list_domains, params)
       req.send_request(options)
     end
@@ -1884,9 +1884,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListPackageVersionAssets AWS API Documentation
     #
-    # @overload list_package_version_assets(params = {})
+    # @overload list_package_version_assets(**params)
     # @param [Hash] params ({})
-    def list_package_version_assets(params = {}, options = {})
+    def list_package_version_assets(params = {}, **options)
       req = build_request(:list_package_version_assets, params)
       req.send_request(options)
     end
@@ -1992,9 +1992,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListPackageVersionDependencies AWS API Documentation
     #
-    # @overload list_package_version_dependencies(params = {})
+    # @overload list_package_version_dependencies(**params)
     # @param [Hash] params ({})
-    def list_package_version_dependencies(params = {}, options = {})
+    def list_package_version_dependencies(params = {}, **options)
       req = build_request(:list_package_version_dependencies, params)
       req.send_request(options)
     end
@@ -2112,9 +2112,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListPackageVersions AWS API Documentation
     #
-    # @overload list_package_versions(params = {})
+    # @overload list_package_versions(**params)
     # @param [Hash] params ({})
-    def list_package_versions(params = {}, options = {})
+    def list_package_versions(params = {}, **options)
       req = build_request(:list_package_versions, params)
       req.send_request(options)
     end
@@ -2205,9 +2205,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListPackages AWS API Documentation
     #
-    # @overload list_packages(params = {})
+    # @overload list_packages(**params)
     # @param [Hash] params ({})
-    def list_packages(params = {}, options = {})
+    def list_packages(params = {}, **options)
       req = build_request(:list_packages, params)
       req.send_request(options)
     end
@@ -2260,9 +2260,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListRepositories AWS API Documentation
     #
-    # @overload list_repositories(params = {})
+    # @overload list_repositories(**params)
     # @param [Hash] params ({})
-    def list_repositories(params = {}, options = {})
+    def list_repositories(params = {}, **options)
       req = build_request(:list_repositories, params)
       req.send_request(options)
     end
@@ -2330,9 +2330,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListRepositoriesInDomain AWS API Documentation
     #
-    # @overload list_repositories_in_domain(params = {})
+    # @overload list_repositories_in_domain(**params)
     # @param [Hash] params ({})
-    def list_repositories_in_domain(params = {}, options = {})
+    def list_repositories_in_domain(params = {}, **options)
       req = build_request(:list_repositories_in_domain, params)
       req.send_request(options)
     end
@@ -2361,9 +2361,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2413,9 +2413,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/PutDomainPermissionsPolicy AWS API Documentation
     #
-    # @overload put_domain_permissions_policy(params = {})
+    # @overload put_domain_permissions_policy(**params)
     # @param [Hash] params ({})
-    def put_domain_permissions_policy(params = {}, options = {})
+    def put_domain_permissions_policy(params = {}, **options)
       req = build_request(:put_domain_permissions_policy, params)
       req.send_request(options)
     end
@@ -2472,9 +2472,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/PutRepositoryPermissionsPolicy AWS API Documentation
     #
-    # @overload put_repository_permissions_policy(params = {})
+    # @overload put_repository_permissions_policy(**params)
     # @param [Hash] params ({})
-    def put_repository_permissions_policy(params = {}, options = {})
+    def put_repository_permissions_policy(params = {}, **options)
       req = build_request(:put_repository_permissions_policy, params)
       req.send_request(options)
     end
@@ -2504,9 +2504,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2531,9 +2531,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2632,9 +2632,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/UpdatePackageVersionsStatus AWS API Documentation
     #
-    # @overload update_package_versions_status(params = {})
+    # @overload update_package_versions_status(**params)
     # @param [Hash] params ({})
-    def update_package_versions_status(params = {}, options = {})
+    def update_package_versions_status(params = {}, **options)
       req = build_request(:update_package_versions_status, params)
       req.send_request(options)
     end
@@ -2700,9 +2700,9 @@ module Aws::CodeArtifact
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/UpdateRepository AWS API Documentation
     #
-    # @overload update_repository(params = {})
+    # @overload update_repository(**params)
     # @param [Hash] params ({})
-    def update_repository(params = {}, options = {})
+    def update_repository(params = {}, **options)
       req = build_request(:update_repository, params)
       req.send_request(options)
     end
@@ -2711,7 +2711,7 @@ module Aws::CodeArtifact
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2719,15 +2719,15 @@ module Aws::CodeArtifact
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codeartifact'
-      context[:gem_version] = '1.6.0'
+      context[:gem_name] = "aws-sdk-codeartifact"
+      context[:gem_version] = "1.6.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

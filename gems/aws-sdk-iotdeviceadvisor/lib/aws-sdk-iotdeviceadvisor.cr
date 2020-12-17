@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotdeviceadvisor/types'
-require_relative 'aws-sdk-iotdeviceadvisor/client_api'
-require_relative 'aws-sdk-iotdeviceadvisor/client'
-require_relative 'aws-sdk-iotdeviceadvisor/errors'
-require_relative 'aws-sdk-iotdeviceadvisor/resource'
-require_relative 'aws-sdk-iotdeviceadvisor/customizations'
+require_relative "aws-sdk-iotdeviceadvisor/types"
+require_relative "aws-sdk-iotdeviceadvisor/client_api"
+require_relative "aws-sdk-iotdeviceadvisor/client"
+require_relative "aws-sdk-iotdeviceadvisor/errors"
+require_relative "aws-sdk-iotdeviceadvisor/resource"
+require_relative "aws-sdk-iotdeviceadvisor/customizations"
 
 # This module provides support for AWS IoT Core Device Advisor. This module is available in the
 # `aws-sdk-iotdeviceadvisor` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotdeviceadvisor/customizations'
 # @!group service
 module Aws::IoTDeviceAdvisor
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

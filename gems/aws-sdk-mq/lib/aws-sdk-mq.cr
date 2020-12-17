@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mq/types'
-require_relative 'aws-sdk-mq/client_api'
-require_relative 'aws-sdk-mq/client'
-require_relative 'aws-sdk-mq/errors'
-require_relative 'aws-sdk-mq/resource'
-require_relative 'aws-sdk-mq/customizations'
+require_relative "aws-sdk-mq/types"
+require_relative "aws-sdk-mq/client_api"
+require_relative "aws-sdk-mq/client"
+require_relative "aws-sdk-mq/errors"
+require_relative "aws-sdk-mq/resource"
+require_relative "aws-sdk-mq/customizations"
 
 # This module provides support for AmazonMQ. This module is available in the
 # `aws-sdk-mq` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mq/customizations'
 # @!group service
 module Aws::MQ
 
-  GEM_VERSION = '1.34.0'
+  GEM_VERSION = "1.34.0"
 
 end

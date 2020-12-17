@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-health/types'
-require_relative 'aws-sdk-health/client_api'
-require_relative 'aws-sdk-health/client'
-require_relative 'aws-sdk-health/errors'
-require_relative 'aws-sdk-health/resource'
-require_relative 'aws-sdk-health/customizations'
+require_relative "aws-sdk-health/types"
+require_relative "aws-sdk-health/client_api"
+require_relative "aws-sdk-health/client"
+require_relative "aws-sdk-health/errors"
+require_relative "aws-sdk-health/resource"
+require_relative "aws-sdk-health/customizations"
 
 # This module provides support for AWS Health APIs and Notifications. This module is available in the
 # `aws-sdk-health` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-health/customizations'
 # @!group service
 module Aws::Health
 
-  GEM_VERSION = '1.31.0'
+  GEM_VERSION = "1.31.0"
 
 end

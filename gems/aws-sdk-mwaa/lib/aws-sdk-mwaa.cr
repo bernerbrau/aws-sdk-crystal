@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mwaa/types'
-require_relative 'aws-sdk-mwaa/client_api'
-require_relative 'aws-sdk-mwaa/client'
-require_relative 'aws-sdk-mwaa/errors'
-require_relative 'aws-sdk-mwaa/resource'
-require_relative 'aws-sdk-mwaa/customizations'
+require_relative "aws-sdk-mwaa/types"
+require_relative "aws-sdk-mwaa/client_api"
+require_relative "aws-sdk-mwaa/client"
+require_relative "aws-sdk-mwaa/errors"
+require_relative "aws-sdk-mwaa/resource"
+require_relative "aws-sdk-mwaa/customizations"
 
 # This module provides support for AmazonMWAA. This module is available in the
 # `aws-sdk-mwaa` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mwaa/customizations'
 # @!group service
 module Aws::MWAA
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

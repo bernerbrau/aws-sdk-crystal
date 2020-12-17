@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appflow/types'
-require_relative 'aws-sdk-appflow/client_api'
-require_relative 'aws-sdk-appflow/client'
-require_relative 'aws-sdk-appflow/errors'
-require_relative 'aws-sdk-appflow/resource'
-require_relative 'aws-sdk-appflow/customizations'
+require_relative "aws-sdk-appflow/types"
+require_relative "aws-sdk-appflow/client_api"
+require_relative "aws-sdk-appflow/client"
+require_relative "aws-sdk-appflow/errors"
+require_relative "aws-sdk-appflow/resource"
+require_relative "aws-sdk-appflow/customizations"
 
 # This module provides support for Amazon Appflow. This module is available in the
 # `aws-sdk-appflow` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-appflow/customizations'
 # @!group service
 module Aws::Appflow
 
-  GEM_VERSION = '1.4.0'
+  GEM_VERSION = "1.4.0"
 
 end

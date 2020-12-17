@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:pinpoint)
 
@@ -280,7 +280,7 @@ module Aws::Pinpoint
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -358,9 +358,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateApp AWS API Documentation
     #
-    # @overload create_app(params = {})
+    # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, options = {})
+    def create_app(params = {}, **options)
       req = build_request(:create_app, params)
       req.send_request(options)
     end
@@ -924,9 +924,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateCampaign AWS API Documentation
     #
-    # @overload create_campaign(params = {})
+    # @overload create_campaign(**params)
     # @param [Hash] params ({})
-    def create_campaign(params = {}, options = {})
+    def create_campaign(params = {}, **options)
       req = build_request(:create_campaign, params)
       req.send_request(options)
     end
@@ -969,9 +969,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateEmailTemplate AWS API Documentation
     #
-    # @overload create_email_template(params = {})
+    # @overload create_email_template(**params)
     # @param [Hash] params ({})
-    def create_email_template(params = {}, options = {})
+    def create_email_template(params = {}, **options)
       req = build_request(:create_email_template, params)
       req.send_request(options)
     end
@@ -1022,9 +1022,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateExportJob AWS API Documentation
     #
-    # @overload create_export_job(params = {})
+    # @overload create_export_job(**params)
     # @param [Hash] params ({})
-    def create_export_job(params = {}, options = {})
+    def create_export_job(params = {}, **options)
       req = build_request(:create_export_job, params)
       req.send_request(options)
     end
@@ -1083,9 +1083,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateImportJob AWS API Documentation
     #
-    # @overload create_import_job(params = {})
+    # @overload create_import_job(**params)
     # @param [Hash] params ({})
-    def create_import_job(params = {}, options = {})
+    def create_import_job(params = {}, **options)
       req = build_request(:create_import_job, params)
       req.send_request(options)
     end
@@ -1603,9 +1603,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateJourney AWS API Documentation
     #
-    # @overload create_journey(params = {})
+    # @overload create_journey(**params)
     # @param [Hash] params ({})
-    def create_journey(params = {}, options = {})
+    def create_journey(params = {}, **options)
       req = build_request(:create_journey, params)
       req.send_request(options)
     end
@@ -1694,9 +1694,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreatePushTemplate AWS API Documentation
     #
-    # @overload create_push_template(params = {})
+    # @overload create_push_template(**params)
     # @param [Hash] params ({})
-    def create_push_template(params = {}, options = {})
+    def create_push_template(params = {}, **options)
       req = build_request(:create_push_template, params)
       req.send_request(options)
     end
@@ -1747,9 +1747,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateRecommenderConfiguration AWS API Documentation
     #
-    # @overload create_recommender_configuration(params = {})
+    # @overload create_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def create_recommender_configuration(params = {}, options = {})
+    def create_recommender_configuration(params = {}, **options)
       req = build_request(:create_recommender_configuration, params)
       req.send_request(options)
     end
@@ -2032,9 +2032,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateSegment AWS API Documentation
     #
-    # @overload create_segment(params = {})
+    # @overload create_segment(**params)
     # @param [Hash] params ({})
-    def create_segment(params = {}, options = {})
+    def create_segment(params = {}, **options)
       req = build_request(:create_segment, params)
       req.send_request(options)
     end
@@ -2075,9 +2075,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateSmsTemplate AWS API Documentation
     #
-    # @overload create_sms_template(params = {})
+    # @overload create_sms_template(**params)
     # @param [Hash] params ({})
-    def create_sms_template(params = {}, options = {})
+    def create_sms_template(params = {}, **options)
       req = build_request(:create_sms_template, params)
       req.send_request(options)
     end
@@ -2119,9 +2119,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/CreateVoiceTemplate AWS API Documentation
     #
-    # @overload create_voice_template(params = {})
+    # @overload create_voice_template(**params)
     # @param [Hash] params ({})
-    def create_voice_template(params = {}, options = {})
+    def create_voice_template(params = {}, **options)
       req = build_request(:create_voice_template, params)
       req.send_request(options)
     end
@@ -2156,9 +2156,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteAdmChannel AWS API Documentation
     #
-    # @overload delete_adm_channel(params = {})
+    # @overload delete_adm_channel(**params)
     # @param [Hash] params ({})
-    def delete_adm_channel(params = {}, options = {})
+    def delete_adm_channel(params = {}, **options)
       req = build_request(:delete_adm_channel, params)
       req.send_request(options)
     end
@@ -2195,9 +2195,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteApnsChannel AWS API Documentation
     #
-    # @overload delete_apns_channel(params = {})
+    # @overload delete_apns_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_channel(params = {}, options = {})
+    def delete_apns_channel(params = {}, **options)
       req = build_request(:delete_apns_channel, params)
       req.send_request(options)
     end
@@ -2234,9 +2234,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteApnsSandboxChannel AWS API Documentation
     #
-    # @overload delete_apns_sandbox_channel(params = {})
+    # @overload delete_apns_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_sandbox_channel(params = {}, options = {})
+    def delete_apns_sandbox_channel(params = {}, **options)
       req = build_request(:delete_apns_sandbox_channel, params)
       req.send_request(options)
     end
@@ -2273,9 +2273,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteApnsVoipChannel AWS API Documentation
     #
-    # @overload delete_apns_voip_channel(params = {})
+    # @overload delete_apns_voip_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_voip_channel(params = {}, options = {})
+    def delete_apns_voip_channel(params = {}, **options)
       req = build_request(:delete_apns_voip_channel, params)
       req.send_request(options)
     end
@@ -2312,9 +2312,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteApnsVoipSandboxChannel AWS API Documentation
     #
-    # @overload delete_apns_voip_sandbox_channel(params = {})
+    # @overload delete_apns_voip_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def delete_apns_voip_sandbox_channel(params = {}, options = {})
+    def delete_apns_voip_sandbox_channel(params = {}, **options)
       req = build_request(:delete_apns_voip_sandbox_channel, params)
       req.send_request(options)
     end
@@ -2343,9 +2343,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteApp AWS API Documentation
     #
-    # @overload delete_app(params = {})
+    # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, options = {})
+    def delete_app(params = {}, **options)
       req = build_request(:delete_app, params)
       req.send_request(options)
     end
@@ -2381,9 +2381,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteBaiduChannel AWS API Documentation
     #
-    # @overload delete_baidu_channel(params = {})
+    # @overload delete_baidu_channel(**params)
     # @param [Hash] params ({})
-    def delete_baidu_channel(params = {}, options = {})
+    def delete_baidu_channel(params = {}, **options)
       req = build_request(:delete_baidu_channel, params)
       req.send_request(options)
     end
@@ -2635,9 +2635,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteCampaign AWS API Documentation
     #
-    # @overload delete_campaign(params = {})
+    # @overload delete_campaign(**params)
     # @param [Hash] params ({})
-    def delete_campaign(params = {}, options = {})
+    def delete_campaign(params = {}, **options)
       req = build_request(:delete_campaign, params)
       req.send_request(options)
     end
@@ -2677,9 +2677,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteEmailChannel AWS API Documentation
     #
-    # @overload delete_email_channel(params = {})
+    # @overload delete_email_channel(**params)
     # @param [Hash] params ({})
-    def delete_email_channel(params = {}, options = {})
+    def delete_email_channel(params = {}, **options)
       req = build_request(:delete_email_channel, params)
       req.send_request(options)
     end
@@ -2709,9 +2709,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteEmailTemplate AWS API Documentation
     #
-    # @overload delete_email_template(params = {})
+    # @overload delete_email_template(**params)
     # @param [Hash] params ({})
-    def delete_email_template(params = {}, options = {})
+    def delete_email_template(params = {}, **options)
       req = build_request(:delete_email_template, params)
       req.send_request(options)
     end
@@ -2771,9 +2771,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteEndpoint AWS API Documentation
     #
-    # @overload delete_endpoint(params = {})
+    # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, options = {})
+    def delete_endpoint(params = {}, **options)
       req = build_request(:delete_endpoint, params)
       req.send_request(options)
     end
@@ -2803,9 +2803,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteEventStream AWS API Documentation
     #
-    # @overload delete_event_stream(params = {})
+    # @overload delete_event_stream(**params)
     # @param [Hash] params ({})
-    def delete_event_stream(params = {}, options = {})
+    def delete_event_stream(params = {}, **options)
       req = build_request(:delete_event_stream, params)
       req.send_request(options)
     end
@@ -2841,9 +2841,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteGcmChannel AWS API Documentation
     #
-    # @overload delete_gcm_channel(params = {})
+    # @overload delete_gcm_channel(**params)
     # @param [Hash] params ({})
-    def delete_gcm_channel(params = {}, options = {})
+    def delete_gcm_channel(params = {}, **options)
       req = build_request(:delete_gcm_channel, params)
       req.send_request(options)
     end
@@ -3042,9 +3042,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteJourney AWS API Documentation
     #
-    # @overload delete_journey(params = {})
+    # @overload delete_journey(**params)
     # @param [Hash] params ({})
-    def delete_journey(params = {}, options = {})
+    def delete_journey(params = {}, **options)
       req = build_request(:delete_journey, params)
       req.send_request(options)
     end
@@ -3074,9 +3074,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeletePushTemplate AWS API Documentation
     #
-    # @overload delete_push_template(params = {})
+    # @overload delete_push_template(**params)
     # @param [Hash] params ({})
-    def delete_push_template(params = {}, options = {})
+    def delete_push_template(params = {}, **options)
       req = build_request(:delete_push_template, params)
       req.send_request(options)
     end
@@ -3113,9 +3113,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteRecommenderConfiguration AWS API Documentation
     #
-    # @overload delete_recommender_configuration(params = {})
+    # @overload delete_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def delete_recommender_configuration(params = {}, options = {})
+    def delete_recommender_configuration(params = {}, **options)
       req = build_request(:delete_recommender_configuration, params)
       req.send_request(options)
     end
@@ -3241,9 +3241,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteSegment AWS API Documentation
     #
-    # @overload delete_segment(params = {})
+    # @overload delete_segment(**params)
     # @param [Hash] params ({})
-    def delete_segment(params = {}, options = {})
+    def delete_segment(params = {}, **options)
       req = build_request(:delete_segment, params)
       req.send_request(options)
     end
@@ -3282,9 +3282,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteSmsChannel AWS API Documentation
     #
-    # @overload delete_sms_channel(params = {})
+    # @overload delete_sms_channel(**params)
     # @param [Hash] params ({})
-    def delete_sms_channel(params = {}, options = {})
+    def delete_sms_channel(params = {}, **options)
       req = build_request(:delete_sms_channel, params)
       req.send_request(options)
     end
@@ -3314,9 +3314,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteSmsTemplate AWS API Documentation
     #
-    # @overload delete_sms_template(params = {})
+    # @overload delete_sms_template(**params)
     # @param [Hash] params ({})
-    def delete_sms_template(params = {}, options = {})
+    def delete_sms_template(params = {}, **options)
       req = build_request(:delete_sms_template, params)
       req.send_request(options)
     end
@@ -3377,9 +3377,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteUserEndpoints AWS API Documentation
     #
-    # @overload delete_user_endpoints(params = {})
+    # @overload delete_user_endpoints(**params)
     # @param [Hash] params ({})
-    def delete_user_endpoints(params = {}, options = {})
+    def delete_user_endpoints(params = {}, **options)
       req = build_request(:delete_user_endpoints, params)
       req.send_request(options)
     end
@@ -3414,9 +3414,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteVoiceChannel AWS API Documentation
     #
-    # @overload delete_voice_channel(params = {})
+    # @overload delete_voice_channel(**params)
     # @param [Hash] params ({})
-    def delete_voice_channel(params = {}, options = {})
+    def delete_voice_channel(params = {}, **options)
       req = build_request(:delete_voice_channel, params)
       req.send_request(options)
     end
@@ -3446,9 +3446,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/DeleteVoiceTemplate AWS API Documentation
     #
-    # @overload delete_voice_template(params = {})
+    # @overload delete_voice_template(**params)
     # @param [Hash] params ({})
-    def delete_voice_template(params = {}, options = {})
+    def delete_voice_template(params = {}, **options)
       req = build_request(:delete_voice_template, params)
       req.send_request(options)
     end
@@ -3483,9 +3483,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetAdmChannel AWS API Documentation
     #
-    # @overload get_adm_channel(params = {})
+    # @overload get_adm_channel(**params)
     # @param [Hash] params ({})
-    def get_adm_channel(params = {}, options = {})
+    def get_adm_channel(params = {}, **options)
       req = build_request(:get_adm_channel, params)
       req.send_request(options)
     end
@@ -3522,9 +3522,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApnsChannel AWS API Documentation
     #
-    # @overload get_apns_channel(params = {})
+    # @overload get_apns_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_channel(params = {}, options = {})
+    def get_apns_channel(params = {}, **options)
       req = build_request(:get_apns_channel, params)
       req.send_request(options)
     end
@@ -3561,9 +3561,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApnsSandboxChannel AWS API Documentation
     #
-    # @overload get_apns_sandbox_channel(params = {})
+    # @overload get_apns_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_sandbox_channel(params = {}, options = {})
+    def get_apns_sandbox_channel(params = {}, **options)
       req = build_request(:get_apns_sandbox_channel, params)
       req.send_request(options)
     end
@@ -3600,9 +3600,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApnsVoipChannel AWS API Documentation
     #
-    # @overload get_apns_voip_channel(params = {})
+    # @overload get_apns_voip_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_voip_channel(params = {}, options = {})
+    def get_apns_voip_channel(params = {}, **options)
       req = build_request(:get_apns_voip_channel, params)
       req.send_request(options)
     end
@@ -3639,9 +3639,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApnsVoipSandboxChannel AWS API Documentation
     #
-    # @overload get_apns_voip_sandbox_channel(params = {})
+    # @overload get_apns_voip_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def get_apns_voip_sandbox_channel(params = {}, options = {})
+    def get_apns_voip_sandbox_channel(params = {}, **options)
       req = build_request(:get_apns_voip_sandbox_channel, params)
       req.send_request(options)
     end
@@ -3670,9 +3670,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApp AWS API Documentation
     #
-    # @overload get_app(params = {})
+    # @overload get_app(**params)
     # @param [Hash] params ({})
-    def get_app(params = {}, options = {})
+    def get_app(params = {}, **options)
       req = build_request(:get_app, params)
       req.send_request(options)
     end
@@ -3726,9 +3726,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApplicationDateRangeKpi AWS API Documentation
     #
-    # @overload get_application_date_range_kpi(params = {})
+    # @overload get_application_date_range_kpi(**params)
     # @param [Hash] params ({})
-    def get_application_date_range_kpi(params = {}, options = {})
+    def get_application_date_range_kpi(params = {}, **options)
       req = build_request(:get_application_date_range_kpi, params)
       req.send_request(options)
     end
@@ -3763,9 +3763,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApplicationSettings AWS API Documentation
     #
-    # @overload get_application_settings(params = {})
+    # @overload get_application_settings(**params)
     # @param [Hash] params ({})
-    def get_application_settings(params = {}, options = {})
+    def get_application_settings(params = {}, **options)
       req = build_request(:get_application_settings, params)
       req.send_request(options)
     end
@@ -3800,9 +3800,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetApps AWS API Documentation
     #
-    # @overload get_apps(params = {})
+    # @overload get_apps(**params)
     # @param [Hash] params ({})
-    def get_apps(params = {}, options = {})
+    def get_apps(params = {}, **options)
       req = build_request(:get_apps, params)
       req.send_request(options)
     end
@@ -3838,9 +3838,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetBaiduChannel AWS API Documentation
     #
-    # @overload get_baidu_channel(params = {})
+    # @overload get_baidu_channel(**params)
     # @param [Hash] params ({})
-    def get_baidu_channel(params = {}, options = {})
+    def get_baidu_channel(params = {}, **options)
       req = build_request(:get_baidu_channel, params)
       req.send_request(options)
     end
@@ -4093,9 +4093,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetCampaign AWS API Documentation
     #
-    # @overload get_campaign(params = {})
+    # @overload get_campaign(**params)
     # @param [Hash] params ({})
-    def get_campaign(params = {}, options = {})
+    def get_campaign(params = {}, **options)
       req = build_request(:get_campaign, params)
       req.send_request(options)
     end
@@ -4143,9 +4143,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetCampaignActivities AWS API Documentation
     #
-    # @overload get_campaign_activities(params = {})
+    # @overload get_campaign_activities(**params)
     # @param [Hash] params ({})
-    def get_campaign_activities(params = {}, options = {})
+    def get_campaign_activities(params = {}, **options)
       req = build_request(:get_campaign_activities, params)
       req.send_request(options)
     end
@@ -4203,9 +4203,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetCampaignDateRangeKpi AWS API Documentation
     #
-    # @overload get_campaign_date_range_kpi(params = {})
+    # @overload get_campaign_date_range_kpi(**params)
     # @param [Hash] params ({})
-    def get_campaign_date_range_kpi(params = {}, options = {})
+    def get_campaign_date_range_kpi(params = {}, **options)
       req = build_request(:get_campaign_date_range_kpi, params)
       req.send_request(options)
     end
@@ -4461,9 +4461,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetCampaignVersion AWS API Documentation
     #
-    # @overload get_campaign_version(params = {})
+    # @overload get_campaign_version(**params)
     # @param [Hash] params ({})
-    def get_campaign_version(params = {}, options = {})
+    def get_campaign_version(params = {}, **options)
       req = build_request(:get_campaign_version, params)
       req.send_request(options)
     end
@@ -4724,9 +4724,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetCampaignVersions AWS API Documentation
     #
-    # @overload get_campaign_versions(params = {})
+    # @overload get_campaign_versions(**params)
     # @param [Hash] params ({})
-    def get_campaign_versions(params = {}, options = {})
+    def get_campaign_versions(params = {}, **options)
       req = build_request(:get_campaign_versions, params)
       req.send_request(options)
     end
@@ -4985,9 +4985,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetCampaigns AWS API Documentation
     #
-    # @overload get_campaigns(params = {})
+    # @overload get_campaigns(**params)
     # @param [Hash] params ({})
-    def get_campaigns(params = {}, options = {})
+    def get_campaigns(params = {}, **options)
       req = build_request(:get_campaigns, params)
       req.send_request(options)
     end
@@ -5022,9 +5022,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetChannels AWS API Documentation
     #
-    # @overload get_channels(params = {})
+    # @overload get_channels(**params)
     # @param [Hash] params ({})
-    def get_channels(params = {}, options = {})
+    def get_channels(params = {}, **options)
       req = build_request(:get_channels, params)
       req.send_request(options)
     end
@@ -5064,9 +5064,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetEmailChannel AWS API Documentation
     #
-    # @overload get_email_channel(params = {})
+    # @overload get_email_channel(**params)
     # @param [Hash] params ({})
-    def get_email_channel(params = {}, options = {})
+    def get_email_channel(params = {}, **options)
       req = build_request(:get_email_channel, params)
       req.send_request(options)
     end
@@ -5108,9 +5108,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetEmailTemplate AWS API Documentation
     #
-    # @overload get_email_template(params = {})
+    # @overload get_email_template(**params)
     # @param [Hash] params ({})
-    def get_email_template(params = {}, options = {})
+    def get_email_template(params = {}, **options)
       req = build_request(:get_email_template, params)
       req.send_request(options)
     end
@@ -5171,9 +5171,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetEndpoint AWS API Documentation
     #
-    # @overload get_endpoint(params = {})
+    # @overload get_endpoint(**params)
     # @param [Hash] params ({})
-    def get_endpoint(params = {}, options = {})
+    def get_endpoint(params = {}, **options)
       req = build_request(:get_endpoint, params)
       req.send_request(options)
     end
@@ -5204,9 +5204,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetEventStream AWS API Documentation
     #
-    # @overload get_event_stream(params = {})
+    # @overload get_event_stream(**params)
     # @param [Hash] params ({})
-    def get_event_stream(params = {}, options = {})
+    def get_event_stream(params = {}, **options)
       req = build_request(:get_event_stream, params)
       req.send_request(options)
     end
@@ -5251,9 +5251,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetExportJob AWS API Documentation
     #
-    # @overload get_export_job(params = {})
+    # @overload get_export_job(**params)
     # @param [Hash] params ({})
-    def get_export_job(params = {}, options = {})
+    def get_export_job(params = {}, **options)
       req = build_request(:get_export_job, params)
       req.send_request(options)
     end
@@ -5303,9 +5303,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetExportJobs AWS API Documentation
     #
-    # @overload get_export_jobs(params = {})
+    # @overload get_export_jobs(**params)
     # @param [Hash] params ({})
-    def get_export_jobs(params = {}, options = {})
+    def get_export_jobs(params = {}, **options)
       req = build_request(:get_export_jobs, params)
       req.send_request(options)
     end
@@ -5341,9 +5341,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetGcmChannel AWS API Documentation
     #
-    # @overload get_gcm_channel(params = {})
+    # @overload get_gcm_channel(**params)
     # @param [Hash] params ({})
-    def get_gcm_channel(params = {}, options = {})
+    def get_gcm_channel(params = {}, **options)
       req = build_request(:get_gcm_channel, params)
       req.send_request(options)
     end
@@ -5392,9 +5392,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetImportJob AWS API Documentation
     #
-    # @overload get_import_job(params = {})
+    # @overload get_import_job(**params)
     # @param [Hash] params ({})
-    def get_import_job(params = {}, options = {})
+    def get_import_job(params = {}, **options)
       req = build_request(:get_import_job, params)
       req.send_request(options)
     end
@@ -5448,9 +5448,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetImportJobs AWS API Documentation
     #
-    # @overload get_import_jobs(params = {})
+    # @overload get_import_jobs(**params)
     # @param [Hash] params ({})
-    def get_import_jobs(params = {}, options = {})
+    def get_import_jobs(params = {}, **options)
       req = build_request(:get_import_jobs, params)
       req.send_request(options)
     end
@@ -5650,9 +5650,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetJourney AWS API Documentation
     #
-    # @overload get_journey(params = {})
+    # @overload get_journey(**params)
     # @param [Hash] params ({})
-    def get_journey(params = {}, options = {})
+    def get_journey(params = {}, **options)
       req = build_request(:get_journey, params)
       req.send_request(options)
     end
@@ -5710,9 +5710,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetJourneyDateRangeKpi AWS API Documentation
     #
-    # @overload get_journey_date_range_kpi(params = {})
+    # @overload get_journey_date_range_kpi(**params)
     # @param [Hash] params ({})
-    def get_journey_date_range_kpi(params = {}, options = {})
+    def get_journey_date_range_kpi(params = {}, **options)
       req = build_request(:get_journey_date_range_kpi, params)
       req.send_request(options)
     end
@@ -5756,9 +5756,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetJourneyExecutionActivityMetrics AWS API Documentation
     #
-    # @overload get_journey_execution_activity_metrics(params = {})
+    # @overload get_journey_execution_activity_metrics(**params)
     # @param [Hash] params ({})
-    def get_journey_execution_activity_metrics(params = {}, options = {})
+    def get_journey_execution_activity_metrics(params = {}, **options)
       req = build_request(:get_journey_execution_activity_metrics, params)
       req.send_request(options)
     end
@@ -5797,9 +5797,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetJourneyExecutionMetrics AWS API Documentation
     #
-    # @overload get_journey_execution_metrics(params = {})
+    # @overload get_journey_execution_metrics(**params)
     # @param [Hash] params ({})
-    def get_journey_execution_metrics(params = {}, options = {})
+    def get_journey_execution_metrics(params = {}, **options)
       req = build_request(:get_journey_execution_metrics, params)
       req.send_request(options)
     end
@@ -5877,9 +5877,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetPushTemplate AWS API Documentation
     #
-    # @overload get_push_template(params = {})
+    # @overload get_push_template(**params)
     # @param [Hash] params ({})
-    def get_push_template(params = {}, options = {})
+    def get_push_template(params = {}, **options)
       req = build_request(:get_push_template, params)
       req.send_request(options)
     end
@@ -5917,9 +5917,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetRecommenderConfiguration AWS API Documentation
     #
-    # @overload get_recommender_configuration(params = {})
+    # @overload get_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def get_recommender_configuration(params = {}, options = {})
+    def get_recommender_configuration(params = {}, **options)
       req = build_request(:get_recommender_configuration, params)
       req.send_request(options)
     end
@@ -5962,9 +5962,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetRecommenderConfigurations AWS API Documentation
     #
-    # @overload get_recommender_configurations(params = {})
+    # @overload get_recommender_configurations(**params)
     # @param [Hash] params ({})
-    def get_recommender_configurations(params = {}, options = {})
+    def get_recommender_configurations(params = {}, **options)
       req = build_request(:get_recommender_configurations, params)
       req.send_request(options)
     end
@@ -6092,9 +6092,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSegment AWS API Documentation
     #
-    # @overload get_segment(params = {})
+    # @overload get_segment(**params)
     # @param [Hash] params ({})
-    def get_segment(params = {}, options = {})
+    def get_segment(params = {}, **options)
       req = build_request(:get_segment, params)
       req.send_request(options)
     end
@@ -6147,9 +6147,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSegmentExportJobs AWS API Documentation
     #
-    # @overload get_segment_export_jobs(params = {})
+    # @overload get_segment_export_jobs(**params)
     # @param [Hash] params ({})
-    def get_segment_export_jobs(params = {}, options = {})
+    def get_segment_export_jobs(params = {}, **options)
       req = build_request(:get_segment_export_jobs, params)
       req.send_request(options)
     end
@@ -6206,9 +6206,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSegmentImportJobs AWS API Documentation
     #
-    # @overload get_segment_import_jobs(params = {})
+    # @overload get_segment_import_jobs(**params)
     # @param [Hash] params ({})
-    def get_segment_import_jobs(params = {}, options = {})
+    def get_segment_import_jobs(params = {}, **options)
       req = build_request(:get_segment_import_jobs, params)
       req.send_request(options)
     end
@@ -6339,9 +6339,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSegmentVersion AWS API Documentation
     #
-    # @overload get_segment_version(params = {})
+    # @overload get_segment_version(**params)
     # @param [Hash] params ({})
-    def get_segment_version(params = {}, options = {})
+    def get_segment_version(params = {}, **options)
       req = build_request(:get_segment_version, params)
       req.send_request(options)
     end
@@ -6477,9 +6477,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSegmentVersions AWS API Documentation
     #
-    # @overload get_segment_versions(params = {})
+    # @overload get_segment_versions(**params)
     # @param [Hash] params ({})
-    def get_segment_versions(params = {}, options = {})
+    def get_segment_versions(params = {}, **options)
       req = build_request(:get_segment_versions, params)
       req.send_request(options)
     end
@@ -6611,9 +6611,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSegments AWS API Documentation
     #
-    # @overload get_segments(params = {})
+    # @overload get_segments(**params)
     # @param [Hash] params ({})
-    def get_segments(params = {}, options = {})
+    def get_segments(params = {}, **options)
       req = build_request(:get_segments, params)
       req.send_request(options)
     end
@@ -6652,9 +6652,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSmsChannel AWS API Documentation
     #
-    # @overload get_sms_channel(params = {})
+    # @overload get_sms_channel(**params)
     # @param [Hash] params ({})
-    def get_sms_channel(params = {}, options = {})
+    def get_sms_channel(params = {}, **options)
       req = build_request(:get_sms_channel, params)
       req.send_request(options)
     end
@@ -6694,9 +6694,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetSmsTemplate AWS API Documentation
     #
-    # @overload get_sms_template(params = {})
+    # @overload get_sms_template(**params)
     # @param [Hash] params ({})
-    def get_sms_template(params = {}, options = {})
+    def get_sms_template(params = {}, **options)
       req = build_request(:get_sms_template, params)
       req.send_request(options)
     end
@@ -6758,9 +6758,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetUserEndpoints AWS API Documentation
     #
-    # @overload get_user_endpoints(params = {})
+    # @overload get_user_endpoints(**params)
     # @param [Hash] params ({})
-    def get_user_endpoints(params = {}, options = {})
+    def get_user_endpoints(params = {}, **options)
       req = build_request(:get_user_endpoints, params)
       req.send_request(options)
     end
@@ -6795,9 +6795,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetVoiceChannel AWS API Documentation
     #
-    # @overload get_voice_channel(params = {})
+    # @overload get_voice_channel(**params)
     # @param [Hash] params ({})
-    def get_voice_channel(params = {}, options = {})
+    def get_voice_channel(params = {}, **options)
       req = build_request(:get_voice_channel, params)
       req.send_request(options)
     end
@@ -6838,9 +6838,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/GetVoiceTemplate AWS API Documentation
     #
-    # @overload get_voice_template(params = {})
+    # @overload get_voice_template(**params)
     # @param [Hash] params ({})
-    def get_voice_template(params = {}, options = {})
+    def get_voice_template(params = {}, **options)
       req = build_request(:get_voice_template, params)
       req.send_request(options)
     end
@@ -7045,9 +7045,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/ListJourneys AWS API Documentation
     #
-    # @overload list_journeys(params = {})
+    # @overload list_journeys(**params)
     # @param [Hash] params ({})
-    def list_journeys(params = {}, options = {})
+    def list_journeys(params = {}, **options)
       req = build_request(:list_journeys, params)
       req.send_request(options)
     end
@@ -7074,9 +7074,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -7121,9 +7121,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/ListTemplateVersions AWS API Documentation
     #
-    # @overload list_template_versions(params = {})
+    # @overload list_template_versions(**params)
     # @param [Hash] params ({})
-    def list_template_versions(params = {}, options = {})
+    def list_template_versions(params = {}, **options)
       req = build_request(:list_template_versions, params)
       req.send_request(options)
     end
@@ -7169,9 +7169,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/ListTemplates AWS API Documentation
     #
-    # @overload list_templates(params = {})
+    # @overload list_templates(**params)
     # @param [Hash] params ({})
-    def list_templates(params = {}, options = {})
+    def list_templates(params = {}, **options)
       req = build_request(:list_templates, params)
       req.send_request(options)
     end
@@ -7213,9 +7213,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/PhoneNumberValidate AWS API Documentation
     #
-    # @overload phone_number_validate(params = {})
+    # @overload phone_number_validate(**params)
     # @param [Hash] params ({})
-    def phone_number_validate(params = {}, options = {})
+    def phone_number_validate(params = {}, **options)
       req = build_request(:phone_number_validate, params)
       req.send_request(options)
     end
@@ -7255,9 +7255,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/PutEventStream AWS API Documentation
     #
-    # @overload put_event_stream(params = {})
+    # @overload put_event_stream(**params)
     # @param [Hash] params ({})
-    def put_event_stream(params = {}, options = {})
+    def put_event_stream(params = {}, **options)
       req = build_request(:put_event_stream, params)
       req.send_request(options)
     end
@@ -7358,9 +7358,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/PutEvents AWS API Documentation
     #
-    # @overload put_events(params = {})
+    # @overload put_events(**params)
     # @param [Hash] params ({})
-    def put_events(params = {}, options = {})
+    def put_events(params = {}, **options)
       req = build_request(:put_events, params)
       req.send_request(options)
     end
@@ -7399,9 +7399,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/RemoveAttributes AWS API Documentation
     #
-    # @overload remove_attributes(params = {})
+    # @overload remove_attributes(**params)
     # @param [Hash] params ({})
-    def remove_attributes(params = {}, options = {})
+    def remove_attributes(params = {}, **options)
       req = build_request(:remove_attributes, params)
       req.send_request(options)
     end
@@ -7650,9 +7650,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/SendMessages AWS API Documentation
     #
-    # @overload send_messages(params = {})
+    # @overload send_messages(**params)
     # @param [Hash] params ({})
-    def send_messages(params = {}, options = {})
+    def send_messages(params = {}, **options)
       req = build_request(:send_messages, params)
       req.send_request(options)
     end
@@ -7883,9 +7883,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/SendUsersMessages AWS API Documentation
     #
-    # @overload send_users_messages(params = {})
+    # @overload send_users_messages(**params)
     # @param [Hash] params ({})
-    def send_users_messages(params = {}, options = {})
+    def send_users_messages(params = {}, **options)
       req = build_request(:send_users_messages, params)
       req.send_request(options)
     end
@@ -7914,9 +7914,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -7939,9 +7939,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -7985,9 +7985,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateAdmChannel AWS API Documentation
     #
-    # @overload update_adm_channel(params = {})
+    # @overload update_adm_channel(**params)
     # @param [Hash] params ({})
-    def update_adm_channel(params = {}, options = {})
+    def update_adm_channel(params = {}, **options)
       req = build_request(:update_adm_channel, params)
       req.send_request(options)
     end
@@ -8038,9 +8038,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateApnsChannel AWS API Documentation
     #
-    # @overload update_apns_channel(params = {})
+    # @overload update_apns_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_channel(params = {}, options = {})
+    def update_apns_channel(params = {}, **options)
       req = build_request(:update_apns_channel, params)
       req.send_request(options)
     end
@@ -8091,9 +8091,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateApnsSandboxChannel AWS API Documentation
     #
-    # @overload update_apns_sandbox_channel(params = {})
+    # @overload update_apns_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_sandbox_channel(params = {}, options = {})
+    def update_apns_sandbox_channel(params = {}, **options)
       req = build_request(:update_apns_sandbox_channel, params)
       req.send_request(options)
     end
@@ -8144,9 +8144,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateApnsVoipChannel AWS API Documentation
     #
-    # @overload update_apns_voip_channel(params = {})
+    # @overload update_apns_voip_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_voip_channel(params = {}, options = {})
+    def update_apns_voip_channel(params = {}, **options)
       req = build_request(:update_apns_voip_channel, params)
       req.send_request(options)
     end
@@ -8198,9 +8198,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateApnsVoipSandboxChannel AWS API Documentation
     #
-    # @overload update_apns_voip_sandbox_channel(params = {})
+    # @overload update_apns_voip_sandbox_channel(**params)
     # @param [Hash] params ({})
-    def update_apns_voip_sandbox_channel(params = {}, options = {})
+    def update_apns_voip_sandbox_channel(params = {}, **options)
       req = build_request(:update_apns_voip_sandbox_channel, params)
       req.send_request(options)
     end
@@ -8256,9 +8256,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateApplicationSettings AWS API Documentation
     #
-    # @overload update_application_settings(params = {})
+    # @overload update_application_settings(**params)
     # @param [Hash] params ({})
-    def update_application_settings(params = {}, options = {})
+    def update_application_settings(params = {}, **options)
       req = build_request(:update_application_settings, params)
       req.send_request(options)
     end
@@ -8303,9 +8303,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateBaiduChannel AWS API Documentation
     #
-    # @overload update_baidu_channel(params = {})
+    # @overload update_baidu_channel(**params)
     # @param [Hash] params ({})
-    def update_baidu_channel(params = {}, options = {})
+    def update_baidu_channel(params = {}, **options)
       req = build_request(:update_baidu_channel, params)
       req.send_request(options)
     end
@@ -8871,9 +8871,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateCampaign AWS API Documentation
     #
-    # @overload update_campaign(params = {})
+    # @overload update_campaign(**params)
     # @param [Hash] params ({})
-    def update_campaign(params = {}, options = {})
+    def update_campaign(params = {}, **options)
       req = build_request(:update_campaign, params)
       req.send_request(options)
     end
@@ -8924,9 +8924,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateEmailChannel AWS API Documentation
     #
-    # @overload update_email_channel(params = {})
+    # @overload update_email_channel(**params)
     # @param [Hash] params ({})
-    def update_email_channel(params = {}, options = {})
+    def update_email_channel(params = {}, **options)
       req = build_request(:update_email_channel, params)
       req.send_request(options)
     end
@@ -8974,9 +8974,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateEmailTemplate AWS API Documentation
     #
-    # @overload update_email_template(params = {})
+    # @overload update_email_template(**params)
     # @param [Hash] params ({})
-    def update_email_template(params = {}, options = {})
+    def update_email_template(params = {}, **options)
       req = build_request(:update_email_template, params)
       req.send_request(options)
     end
@@ -9051,9 +9051,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateEndpoint AWS API Documentation
     #
-    # @overload update_endpoint(params = {})
+    # @overload update_endpoint(**params)
     # @param [Hash] params ({})
-    def update_endpoint(params = {}, options = {})
+    def update_endpoint(params = {}, **options)
       req = build_request(:update_endpoint, params)
       req.send_request(options)
     end
@@ -9131,9 +9131,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateEndpointsBatch AWS API Documentation
     #
-    # @overload update_endpoints_batch(params = {})
+    # @overload update_endpoints_batch(**params)
     # @param [Hash] params ({})
-    def update_endpoints_batch(params = {}, options = {})
+    def update_endpoints_batch(params = {}, **options)
       req = build_request(:update_endpoints_batch, params)
       req.send_request(options)
     end
@@ -9179,9 +9179,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateGcmChannel AWS API Documentation
     #
-    # @overload update_gcm_channel(params = {})
+    # @overload update_gcm_channel(**params)
     # @param [Hash] params ({})
-    def update_gcm_channel(params = {}, options = {})
+    def update_gcm_channel(params = {}, **options)
       req = build_request(:update_gcm_channel, params)
       req.send_request(options)
     end
@@ -9702,9 +9702,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateJourney AWS API Documentation
     #
-    # @overload update_journey(params = {})
+    # @overload update_journey(**params)
     # @param [Hash] params ({})
-    def update_journey(params = {}, options = {})
+    def update_journey(params = {}, **options)
       req = build_request(:update_journey, params)
       req.send_request(options)
     end
@@ -9909,9 +9909,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateJourneyState AWS API Documentation
     #
-    # @overload update_journey_state(params = {})
+    # @overload update_journey_state(**params)
     # @param [Hash] params ({})
-    def update_journey_state(params = {}, options = {})
+    def update_journey_state(params = {}, **options)
       req = build_request(:update_journey_state, params)
       req.send_request(options)
     end
@@ -10005,9 +10005,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdatePushTemplate AWS API Documentation
     #
-    # @overload update_push_template(params = {})
+    # @overload update_push_template(**params)
     # @param [Hash] params ({})
-    def update_push_template(params = {}, options = {})
+    def update_push_template(params = {}, **options)
       req = build_request(:update_push_template, params)
       req.send_request(options)
     end
@@ -10061,9 +10061,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateRecommenderConfiguration AWS API Documentation
     #
-    # @overload update_recommender_configuration(params = {})
+    # @overload update_recommender_configuration(**params)
     # @param [Hash] params ({})
-    def update_recommender_configuration(params = {}, options = {})
+    def update_recommender_configuration(params = {}, **options)
       req = build_request(:update_recommender_configuration, params)
       req.send_request(options)
     end
@@ -10349,9 +10349,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateSegment AWS API Documentation
     #
-    # @overload update_segment(params = {})
+    # @overload update_segment(**params)
     # @param [Hash] params ({})
-    def update_segment(params = {}, options = {})
+    def update_segment(params = {}, **options)
       req = build_request(:update_segment, params)
       req.send_request(options)
     end
@@ -10399,9 +10399,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateSmsChannel AWS API Documentation
     #
-    # @overload update_sms_channel(params = {})
+    # @overload update_sms_channel(**params)
     # @param [Hash] params ({})
-    def update_sms_channel(params = {}, options = {})
+    def update_sms_channel(params = {}, **options)
       req = build_request(:update_sms_channel, params)
       req.send_request(options)
     end
@@ -10447,9 +10447,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateSmsTemplate AWS API Documentation
     #
-    # @overload update_sms_template(params = {})
+    # @overload update_sms_template(**params)
     # @param [Hash] params ({})
-    def update_sms_template(params = {}, options = {})
+    def update_sms_template(params = {}, **options)
       req = build_request(:update_sms_template, params)
       req.send_request(options)
     end
@@ -10486,9 +10486,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateTemplateActiveVersion AWS API Documentation
     #
-    # @overload update_template_active_version(params = {})
+    # @overload update_template_active_version(**params)
     # @param [Hash] params ({})
-    def update_template_active_version(params = {}, options = {})
+    def update_template_active_version(params = {}, **options)
       req = build_request(:update_template_active_version, params)
       req.send_request(options)
     end
@@ -10530,9 +10530,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateVoiceChannel AWS API Documentation
     #
-    # @overload update_voice_channel(params = {})
+    # @overload update_voice_channel(**params)
     # @param [Hash] params ({})
-    def update_voice_channel(params = {}, options = {})
+    def update_voice_channel(params = {}, **options)
       req = build_request(:update_voice_channel, params)
       req.send_request(options)
     end
@@ -10579,9 +10579,9 @@ module Aws::Pinpoint
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-2016-12-01/UpdateVoiceTemplate AWS API Documentation
     #
-    # @overload update_voice_template(params = {})
+    # @overload update_voice_template(**params)
     # @param [Hash] params ({})
-    def update_voice_template(params = {}, options = {})
+    def update_voice_template(params = {}, **options)
       req = build_request(:update_voice_template, params)
       req.send_request(options)
     end
@@ -10590,7 +10590,7 @@ module Aws::Pinpoint
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -10598,15 +10598,15 @@ module Aws::Pinpoint
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-pinpoint'
-      context[:gem_version] = '1.47.0'
+      context[:gem_name] = "aws-sdk-pinpoint"
+      context[:gem_version] = "1.47.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

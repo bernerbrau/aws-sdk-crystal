@@ -8,11 +8,11 @@
 Feature: Smoke tests for Route53Domains
 
 Background:
-  Given I create a client in region 'us-east-1'
+  Given I create a client in region "us-east-1"
 
   @route53domains @smoke
   Scenario: Call Aws::Route53Domains::Client#list_domains and expect it to succeed
-  When I call the operation 'list_domains' with params:
+  When I call the operation "list_domains" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @route53domains @smoke
   Scenario: Call Aws::Aws::Route53Domains::Client#get_domain_detail and expect it to fail
-  When I call the operation 'get_domain_detail' with params:
+  When I call the operation "get_domain_detail" with params:
     """
 {"domain_name":"fake-domain-name"}
     """

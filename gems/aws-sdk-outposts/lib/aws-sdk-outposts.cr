@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-outposts/types'
-require_relative 'aws-sdk-outposts/client_api'
-require_relative 'aws-sdk-outposts/client'
-require_relative 'aws-sdk-outposts/errors'
-require_relative 'aws-sdk-outposts/resource'
-require_relative 'aws-sdk-outposts/customizations'
+require_relative "aws-sdk-outposts/types"
+require_relative "aws-sdk-outposts/client_api"
+require_relative "aws-sdk-outposts/client"
+require_relative "aws-sdk-outposts/errors"
+require_relative "aws-sdk-outposts/resource"
+require_relative "aws-sdk-outposts/customizations"
 
 # This module provides support for AWS Outposts. This module is available in the
 # `aws-sdk-outposts` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-outposts/customizations'
 # @!group service
 module Aws::Outposts
 
-  GEM_VERSION = '1.12.0'
+  GEM_VERSION = "1.12.0"
 
 end

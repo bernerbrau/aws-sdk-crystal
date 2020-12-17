@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codestar)
 
@@ -290,7 +290,7 @@ module Aws::CodeStar
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -380,9 +380,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/AssociateTeamMember AWS API Documentation
     #
-    # @overload associate_team_member(params = {})
+    # @overload associate_team_member(**params)
     # @param [Hash] params ({})
-    def associate_team_member(params = {}, options = {})
+    def associate_team_member(params = {}, **options)
       req = build_request(:associate_team_member, params)
       req.send_request(options)
     end
@@ -483,9 +483,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -542,9 +542,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/CreateUserProfile AWS API Documentation
     #
-    # @overload create_user_profile(params = {})
+    # @overload create_user_profile(**params)
     # @param [Hash] params ({})
-    def create_user_profile(params = {}, options = {})
+    def create_user_profile(params = {}, **options)
       req = build_request(:create_user_profile, params)
       req.send_request(options)
     end
@@ -588,9 +588,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -620,9 +620,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/DeleteUserProfile AWS API Documentation
     #
-    # @overload delete_user_profile(params = {})
+    # @overload delete_user_profile(**params)
     # @param [Hash] params ({})
-    def delete_user_profile(params = {}, options = {})
+    def delete_user_profile(params = {}, **options)
       req = build_request(:delete_user_profile, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/DescribeProject AWS API Documentation
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -704,9 +704,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/DescribeUserProfile AWS API Documentation
     #
-    # @overload describe_user_profile(params = {})
+    # @overload describe_user_profile(**params)
     # @param [Hash] params ({})
-    def describe_user_profile(params = {}, options = {})
+    def describe_user_profile(params = {}, **options)
       req = build_request(:describe_user_profile, params)
       req.send_request(options)
     end
@@ -736,9 +736,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/DisassociateTeamMember AWS API Documentation
     #
-    # @overload disassociate_team_member(params = {})
+    # @overload disassociate_team_member(**params)
     # @param [Hash] params ({})
-    def disassociate_team_member(params = {}, options = {})
+    def disassociate_team_member(params = {}, **options)
       req = build_request(:disassociate_team_member, params)
       req.send_request(options)
     end
@@ -774,9 +774,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -815,9 +815,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/ListResources AWS API Documentation
     #
-    # @overload list_resources(params = {})
+    # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, options = {})
+    def list_resources(params = {}, **options)
       req = build_request(:list_resources, params)
       req.send_request(options)
     end
@@ -854,9 +854,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/ListTagsForProject AWS API Documentation
     #
-    # @overload list_tags_for_project(params = {})
+    # @overload list_tags_for_project(**params)
     # @param [Hash] params ({})
-    def list_tags_for_project(params = {}, options = {})
+    def list_tags_for_project(params = {}, **options)
       req = build_request(:list_tags_for_project, params)
       req.send_request(options)
     end
@@ -896,9 +896,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/ListTeamMembers AWS API Documentation
     #
-    # @overload list_team_members(params = {})
+    # @overload list_team_members(**params)
     # @param [Hash] params ({})
-    def list_team_members(params = {}, options = {})
+    def list_team_members(params = {}, **options)
       req = build_request(:list_team_members, params)
       req.send_request(options)
     end
@@ -936,9 +936,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/ListUserProfiles AWS API Documentation
     #
-    # @overload list_user_profiles(params = {})
+    # @overload list_user_profiles(**params)
     # @param [Hash] params ({})
-    def list_user_profiles(params = {}, options = {})
+    def list_user_profiles(params = {}, **options)
       req = build_request(:list_user_profiles, params)
       req.send_request(options)
     end
@@ -971,9 +971,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/TagProject AWS API Documentation
     #
-    # @overload tag_project(params = {})
+    # @overload tag_project(**params)
     # @param [Hash] params ({})
-    def tag_project(params = {}, options = {})
+    def tag_project(params = {}, **options)
       req = build_request(:tag_project, params)
       req.send_request(options)
     end
@@ -997,9 +997,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/UntagProject AWS API Documentation
     #
-    # @overload untag_project(params = {})
+    # @overload untag_project(**params)
     # @param [Hash] params ({})
-    def untag_project(params = {}, options = {})
+    def untag_project(params = {}, **options)
       req = build_request(:untag_project, params)
       req.send_request(options)
     end
@@ -1027,9 +1027,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/UpdateProject AWS API Documentation
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -1083,9 +1083,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/UpdateTeamMember AWS API Documentation
     #
-    # @overload update_team_member(params = {})
+    # @overload update_team_member(**params)
     # @param [Hash] params ({})
-    def update_team_member(params = {}, options = {})
+    def update_team_member(params = {}, **options)
       req = build_request(:update_team_member, params)
       req.send_request(options)
     end
@@ -1142,9 +1142,9 @@ module Aws::CodeStar
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codestar-2017-04-19/UpdateUserProfile AWS API Documentation
     #
-    # @overload update_user_profile(params = {})
+    # @overload update_user_profile(**params)
     # @param [Hash] params ({})
-    def update_user_profile(params = {}, options = {})
+    def update_user_profile(params = {}, **options)
       req = build_request(:update_user_profile, params)
       req.send_request(options)
     end
@@ -1153,7 +1153,7 @@ module Aws::CodeStar
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1161,15 +1161,15 @@ module Aws::CodeStar
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codestar'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-codestar"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

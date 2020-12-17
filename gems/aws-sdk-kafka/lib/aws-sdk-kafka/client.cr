@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kafka)
 
@@ -280,7 +280,7 @@ module Aws::Kafka
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -356,9 +356,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/BatchAssociateScramSecret AWS API Documentation
     #
-    # @overload batch_associate_scram_secret(params = {})
+    # @overload batch_associate_scram_secret(**params)
     # @param [Hash] params ({})
-    def batch_associate_scram_secret(params = {}, options = {})
+    def batch_associate_scram_secret(params = {}, **options)
       req = build_request(:batch_associate_scram_secret, params)
       req.send_request(options)
     end
@@ -487,9 +487,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CreateConfiguration AWS API Documentation
     #
-    # @overload create_configuration(params = {})
+    # @overload create_configuration(**params)
     # @param [Hash] params ({})
-    def create_configuration(params = {}, options = {})
+    def create_configuration(params = {}, **options)
       req = build_request(:create_configuration, params)
       req.send_request(options)
     end
@@ -571,9 +571,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DeleteCluster AWS API Documentation
     #
-    # @overload delete_cluster(params = {})
+    # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, options = {})
+    def delete_cluster(params = {}, **options)
       req = build_request(:delete_cluster, params)
       req.send_request(options)
     end
@@ -602,9 +602,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DeleteConfiguration AWS API Documentation
     #
-    # @overload delete_configuration(params = {})
+    # @overload delete_configuration(**params)
     # @param [Hash] params ({})
-    def delete_configuration(params = {}, options = {})
+    def delete_configuration(params = {}, **options)
       req = build_request(:delete_configuration, params)
       req.send_request(options)
     end
@@ -666,9 +666,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeCluster AWS API Documentation
     #
-    # @overload describe_cluster(params = {})
+    # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, options = {})
+    def describe_cluster(params = {}, **options)
       req = build_request(:describe_cluster, params)
       req.send_request(options)
     end
@@ -738,9 +738,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeClusterOperation AWS API Documentation
     #
-    # @overload describe_cluster_operation(params = {})
+    # @overload describe_cluster_operation(**params)
     # @param [Hash] params ({})
-    def describe_cluster_operation(params = {}, options = {})
+    def describe_cluster_operation(params = {}, **options)
       req = build_request(:describe_cluster_operation, params)
       req.send_request(options)
     end
@@ -780,9 +780,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeConfiguration AWS API Documentation
     #
-    # @overload describe_configuration(params = {})
+    # @overload describe_configuration(**params)
     # @param [Hash] params ({})
-    def describe_configuration(params = {}, options = {})
+    def describe_configuration(params = {}, **options)
       req = build_request(:describe_configuration, params)
       req.send_request(options)
     end
@@ -818,9 +818,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeConfigurationRevision AWS API Documentation
     #
-    # @overload describe_configuration_revision(params = {})
+    # @overload describe_configuration_revision(**params)
     # @param [Hash] params ({})
-    def describe_configuration_revision(params = {}, options = {})
+    def describe_configuration_revision(params = {}, **options)
       req = build_request(:describe_configuration_revision, params)
       req.send_request(options)
     end
@@ -854,9 +854,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/BatchDisassociateScramSecret AWS API Documentation
     #
-    # @overload batch_disassociate_scram_secret(params = {})
+    # @overload batch_disassociate_scram_secret(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_scram_secret(params = {}, options = {})
+    def batch_disassociate_scram_secret(params = {}, **options)
       req = build_request(:batch_disassociate_scram_secret, params)
       req.send_request(options)
     end
@@ -885,9 +885,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/GetBootstrapBrokers AWS API Documentation
     #
-    # @overload get_bootstrap_brokers(params = {})
+    # @overload get_bootstrap_brokers(**params)
     # @param [Hash] params ({})
-    def get_bootstrap_brokers(params = {}, options = {})
+    def get_bootstrap_brokers(params = {}, **options)
       req = build_request(:get_bootstrap_brokers, params)
       req.send_request(options)
     end
@@ -916,9 +916,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/GetCompatibleKafkaVersions AWS API Documentation
     #
-    # @overload get_compatible_kafka_versions(params = {})
+    # @overload get_compatible_kafka_versions(**params)
     # @param [Hash] params ({})
-    def get_compatible_kafka_versions(params = {}, options = {})
+    def get_compatible_kafka_versions(params = {}, **options)
       req = build_request(:get_compatible_kafka_versions, params)
       req.send_request(options)
     end
@@ -1000,9 +1000,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListClusterOperations AWS API Documentation
     #
-    # @overload list_cluster_operations(params = {})
+    # @overload list_cluster_operations(**params)
     # @param [Hash] params ({})
-    def list_cluster_operations(params = {}, options = {})
+    def list_cluster_operations(params = {}, **options)
       req = build_request(:list_cluster_operations, params)
       req.send_request(options)
     end
@@ -1074,9 +1074,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListClusters AWS API Documentation
     #
-    # @overload list_clusters(params = {})
+    # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, options = {})
+    def list_clusters(params = {}, **options)
       req = build_request(:list_clusters, params)
       req.send_request(options)
     end
@@ -1114,9 +1114,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListConfigurationRevisions AWS API Documentation
     #
-    # @overload list_configuration_revisions(params = {})
+    # @overload list_configuration_revisions(**params)
     # @param [Hash] params ({})
-    def list_configuration_revisions(params = {}, options = {})
+    def list_configuration_revisions(params = {}, **options)
       req = build_request(:list_configuration_revisions, params)
       req.send_request(options)
     end
@@ -1158,9 +1158,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListConfigurations AWS API Documentation
     #
-    # @overload list_configurations(params = {})
+    # @overload list_configurations(**params)
     # @param [Hash] params ({})
-    def list_configurations(params = {}, options = {})
+    def list_configurations(params = {}, **options)
       req = build_request(:list_configurations, params)
       req.send_request(options)
     end
@@ -1194,9 +1194,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListKafkaVersions AWS API Documentation
     #
-    # @overload list_kafka_versions(params = {})
+    # @overload list_kafka_versions(**params)
     # @param [Hash] params ({})
-    def list_kafka_versions(params = {}, options = {})
+    def list_kafka_versions(params = {}, **options)
       req = build_request(:list_kafka_versions, params)
       req.send_request(options)
     end
@@ -1250,9 +1250,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListNodes AWS API Documentation
     #
-    # @overload list_nodes(params = {})
+    # @overload list_nodes(**params)
     # @param [Hash] params ({})
-    def list_nodes(params = {}, options = {})
+    def list_nodes(params = {}, **options)
       req = build_request(:list_nodes, params)
       req.send_request(options)
     end
@@ -1289,9 +1289,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListScramSecrets AWS API Documentation
     #
-    # @overload list_scram_secrets(params = {})
+    # @overload list_scram_secrets(**params)
     # @param [Hash] params ({})
-    def list_scram_secrets(params = {}, options = {})
+    def list_scram_secrets(params = {}, **options)
       req = build_request(:list_scram_secrets, params)
       req.send_request(options)
     end
@@ -1317,9 +1317,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1350,9 +1350,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/RebootBroker AWS API Documentation
     #
-    # @overload reboot_broker(params = {})
+    # @overload reboot_broker(**params)
     # @param [Hash] params ({})
-    def reboot_broker(params = {}, options = {})
+    def reboot_broker(params = {}, **options)
       req = build_request(:reboot_broker, params)
       req.send_request(options)
     end
@@ -1377,9 +1377,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1402,9 +1402,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1442,9 +1442,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateBrokerCount AWS API Documentation
     #
-    # @overload update_broker_count(params = {})
+    # @overload update_broker_count(**params)
     # @param [Hash] params ({})
-    def update_broker_count(params = {}, options = {})
+    def update_broker_count(params = {}, **options)
       req = build_request(:update_broker_count, params)
       req.send_request(options)
     end
@@ -1492,9 +1492,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateBrokerStorage AWS API Documentation
     #
-    # @overload update_broker_storage(params = {})
+    # @overload update_broker_storage(**params)
     # @param [Hash] params ({})
-    def update_broker_storage(params = {}, options = {})
+    def update_broker_storage(params = {}, **options)
       req = build_request(:update_broker_storage, params)
       req.send_request(options)
     end
@@ -1532,9 +1532,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateConfiguration AWS API Documentation
     #
-    # @overload update_configuration(params = {})
+    # @overload update_configuration(**params)
     # @param [Hash] params ({})
-    def update_configuration(params = {}, options = {})
+    def update_configuration(params = {}, **options)
       req = build_request(:update_configuration, params)
       req.send_request(options)
     end
@@ -1573,9 +1573,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateClusterConfiguration AWS API Documentation
     #
-    # @overload update_cluster_configuration(params = {})
+    # @overload update_cluster_configuration(**params)
     # @param [Hash] params ({})
-    def update_cluster_configuration(params = {}, options = {})
+    def update_cluster_configuration(params = {}, **options)
       req = build_request(:update_cluster_configuration, params)
       req.send_request(options)
     end
@@ -1617,9 +1617,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateClusterKafkaVersion AWS API Documentation
     #
-    # @overload update_cluster_kafka_version(params = {})
+    # @overload update_cluster_kafka_version(**params)
     # @param [Hash] params ({})
-    def update_cluster_kafka_version(params = {}, options = {})
+    def update_cluster_kafka_version(params = {}, **options)
       req = build_request(:update_cluster_kafka_version, params)
       req.send_request(options)
     end
@@ -1692,9 +1692,9 @@ module Aws::Kafka
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateMonitoring AWS API Documentation
     #
-    # @overload update_monitoring(params = {})
+    # @overload update_monitoring(**params)
     # @param [Hash] params ({})
-    def update_monitoring(params = {}, options = {})
+    def update_monitoring(params = {}, **options)
       req = build_request(:update_monitoring, params)
       req.send_request(options)
     end
@@ -1703,7 +1703,7 @@ module Aws::Kafka
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1711,15 +1711,15 @@ module Aws::Kafka
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kafka'
-      context[:gem_version] = '1.32.0'
+      context[:gem_name] = "aws-sdk-kafka"
+      context[:gem_version] = "1.32.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

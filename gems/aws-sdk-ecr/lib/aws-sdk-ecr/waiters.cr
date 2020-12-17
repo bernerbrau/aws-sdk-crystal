@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ECR
   # Waiters are utility methods that poll for a particular state to occur
@@ -110,7 +110,7 @@ module Aws::ECR
 
       # @option (see Client#describe_image_scan_findings)
       # @return (see Client#describe_image_scan_findings)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -155,7 +155,7 @@ module Aws::ECR
 
       # @option (see Client#get_lifecycle_policy_preview)
       # @return (see Client#get_lifecycle_policy_preview)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

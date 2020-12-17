@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-schemas/types'
-require_relative 'aws-sdk-schemas/client_api'
-require_relative 'aws-sdk-schemas/client'
-require_relative 'aws-sdk-schemas/errors'
-require_relative 'aws-sdk-schemas/waiters'
-require_relative 'aws-sdk-schemas/resource'
-require_relative 'aws-sdk-schemas/customizations'
+require_relative "aws-sdk-schemas/types"
+require_relative "aws-sdk-schemas/client_api"
+require_relative "aws-sdk-schemas/client"
+require_relative "aws-sdk-schemas/errors"
+require_relative "aws-sdk-schemas/waiters"
+require_relative "aws-sdk-schemas/resource"
+require_relative "aws-sdk-schemas/customizations"
 
 # This module provides support for Schemas. This module is available in the
 # `aws-sdk-schemas` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-schemas/customizations'
 # @!group service
 module Aws::Schemas
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

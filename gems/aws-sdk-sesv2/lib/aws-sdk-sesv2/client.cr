@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:sesv2)
 
@@ -280,7 +280,7 @@ module Aws::SESV2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -394,9 +394,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateConfigurationSet AWS API Documentation
     #
-    # @overload create_configuration_set(params = {})
+    # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, options = {})
+    def create_configuration_set(params = {}, **options)
       req = build_request(:create_configuration_set, params)
       req.send_request(options)
     end
@@ -457,9 +457,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload create_configuration_set_event_destination(params = {})
+    # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, options = {})
+    def create_configuration_set_event_destination(params = {}, **options)
       req = build_request(:create_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -503,9 +503,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateContact AWS API Documentation
     #
-    # @overload create_contact(params = {})
+    # @overload create_contact(**params)
     # @param [Hash] params ({})
-    def create_contact(params = {}, options = {})
+    def create_contact(params = {}, **options)
       req = build_request(:create_contact, params)
       req.send_request(options)
     end
@@ -550,9 +550,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateContactList AWS API Documentation
     #
-    # @overload create_contact_list(params = {})
+    # @overload create_contact_list(**params)
     # @param [Hash] params ({})
-    def create_contact_list(params = {}, options = {})
+    def create_contact_list(params = {}, **options)
       req = build_request(:create_contact_list, params)
       req.send_request(options)
     end
@@ -611,9 +611,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateCustomVerificationEmailTemplate AWS API Documentation
     #
-    # @overload create_custom_verification_email_template(params = {})
+    # @overload create_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def create_custom_verification_email_template(params = {}, options = {})
+    def create_custom_verification_email_template(params = {}, **options)
       req = build_request(:create_custom_verification_email_template, params)
       req.send_request(options)
     end
@@ -647,9 +647,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateDedicatedIpPool AWS API Documentation
     #
-    # @overload create_dedicated_ip_pool(params = {})
+    # @overload create_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def create_dedicated_ip_pool(params = {}, options = {})
+    def create_dedicated_ip_pool(params = {}, **options)
       req = build_request(:create_dedicated_ip_pool, params)
       req.send_request(options)
     end
@@ -731,9 +731,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateDeliverabilityTestReport AWS API Documentation
     #
-    # @overload create_deliverability_test_report(params = {})
+    # @overload create_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def create_deliverability_test_report(params = {}, options = {})
+    def create_deliverability_test_report(params = {}, **options)
       req = build_request(:create_deliverability_test_report, params)
       req.send_request(options)
     end
@@ -823,9 +823,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateEmailIdentity AWS API Documentation
     #
-    # @overload create_email_identity(params = {})
+    # @overload create_email_identity(**params)
     # @param [Hash] params ({})
-    def create_email_identity(params = {}, options = {})
+    def create_email_identity(params = {}, **options)
       req = build_request(:create_email_identity, params)
       req.send_request(options)
     end
@@ -879,9 +879,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateEmailIdentityPolicy AWS API Documentation
     #
-    # @overload create_email_identity_policy(params = {})
+    # @overload create_email_identity_policy(**params)
     # @param [Hash] params ({})
-    def create_email_identity_policy(params = {}, options = {})
+    def create_email_identity_policy(params = {}, **options)
       req = build_request(:create_email_identity_policy, params)
       req.send_request(options)
     end
@@ -919,9 +919,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateEmailTemplate AWS API Documentation
     #
-    # @overload create_email_template(params = {})
+    # @overload create_email_template(**params)
     # @param [Hash] params ({})
-    def create_email_template(params = {}, options = {})
+    def create_email_template(params = {}, **options)
       req = build_request(:create_email_template, params)
       req.send_request(options)
     end
@@ -962,9 +962,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/CreateImportJob AWS API Documentation
     #
-    # @overload create_import_job(params = {})
+    # @overload create_import_job(**params)
     # @param [Hash] params ({})
-    def create_import_job(params = {}, options = {})
+    def create_import_job(params = {}, **options)
       req = build_request(:create_import_job, params)
       req.send_request(options)
     end
@@ -990,9 +990,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteConfigurationSet AWS API Documentation
     #
-    # @overload delete_configuration_set(params = {})
+    # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, options = {})
+    def delete_configuration_set(params = {}, **options)
       req = build_request(:delete_configuration_set, params)
       req.send_request(options)
     end
@@ -1024,9 +1024,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload delete_configuration_set_event_destination(params = {})
+    # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, options = {})
+    def delete_configuration_set_event_destination(params = {}, **options)
       req = build_request(:delete_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -1050,9 +1050,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteContact AWS API Documentation
     #
-    # @overload delete_contact(params = {})
+    # @overload delete_contact(**params)
     # @param [Hash] params ({})
-    def delete_contact(params = {}, options = {})
+    def delete_contact(params = {}, **options)
       req = build_request(:delete_contact, params)
       req.send_request(options)
     end
@@ -1072,9 +1072,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteContactList AWS API Documentation
     #
-    # @overload delete_contact_list(params = {})
+    # @overload delete_contact_list(**params)
     # @param [Hash] params ({})
-    def delete_contact_list(params = {}, options = {})
+    def delete_contact_list(params = {}, **options)
       req = build_request(:delete_contact_list, params)
       req.send_request(options)
     end
@@ -1105,9 +1105,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteCustomVerificationEmailTemplate AWS API Documentation
     #
-    # @overload delete_custom_verification_email_template(params = {})
+    # @overload delete_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def delete_custom_verification_email_template(params = {}, options = {})
+    def delete_custom_verification_email_template(params = {}, **options)
       req = build_request(:delete_custom_verification_email_template, params)
       req.send_request(options)
     end
@@ -1127,9 +1127,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteDedicatedIpPool AWS API Documentation
     #
-    # @overload delete_dedicated_ip_pool(params = {})
+    # @overload delete_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def delete_dedicated_ip_pool(params = {}, options = {})
+    def delete_dedicated_ip_pool(params = {}, **options)
       req = build_request(:delete_dedicated_ip_pool, params)
       req.send_request(options)
     end
@@ -1151,9 +1151,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteEmailIdentity AWS API Documentation
     #
-    # @overload delete_email_identity(params = {})
+    # @overload delete_email_identity(**params)
     # @param [Hash] params ({})
-    def delete_email_identity(params = {}, options = {})
+    def delete_email_identity(params = {}, **options)
       req = build_request(:delete_email_identity, params)
       req.send_request(options)
     end
@@ -1197,9 +1197,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteEmailIdentityPolicy AWS API Documentation
     #
-    # @overload delete_email_identity_policy(params = {})
+    # @overload delete_email_identity_policy(**params)
     # @param [Hash] params ({})
-    def delete_email_identity_policy(params = {}, options = {})
+    def delete_email_identity_policy(params = {}, **options)
       req = build_request(:delete_email_identity_policy, params)
       req.send_request(options)
     end
@@ -1221,9 +1221,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteEmailTemplate AWS API Documentation
     #
-    # @overload delete_email_template(params = {})
+    # @overload delete_email_template(**params)
     # @param [Hash] params ({})
-    def delete_email_template(params = {}, options = {})
+    def delete_email_template(params = {}, **options)
       req = build_request(:delete_email_template, params)
       req.send_request(options)
     end
@@ -1244,9 +1244,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/DeleteSuppressedDestination AWS API Documentation
     #
-    # @overload delete_suppressed_destination(params = {})
+    # @overload delete_suppressed_destination(**params)
     # @param [Hash] params ({})
-    def delete_suppressed_destination(params = {}, options = {})
+    def delete_suppressed_destination(params = {}, **options)
       req = build_request(:delete_suppressed_destination, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetAccount AWS API Documentation
     #
-    # @overload get_account(params = {})
+    # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, options = {})
+    def get_account(params = {}, **options)
       req = build_request(:get_account, params)
       req.send_request(options)
     end
@@ -1321,9 +1321,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetBlacklistReports AWS API Documentation
     #
-    # @overload get_blacklist_reports(params = {})
+    # @overload get_blacklist_reports(**params)
     # @param [Hash] params ({})
-    def get_blacklist_reports(params = {}, options = {})
+    def get_blacklist_reports(params = {}, **options)
       req = build_request(:get_blacklist_reports, params)
       req.send_request(options)
     end
@@ -1375,9 +1375,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetConfigurationSet AWS API Documentation
     #
-    # @overload get_configuration_set(params = {})
+    # @overload get_configuration_set(**params)
     # @param [Hash] params ({})
-    def get_configuration_set(params = {}, options = {})
+    def get_configuration_set(params = {}, **options)
       req = build_request(:get_configuration_set, params)
       req.send_request(options)
     end
@@ -1423,9 +1423,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetConfigurationSetEventDestinations AWS API Documentation
     #
-    # @overload get_configuration_set_event_destinations(params = {})
+    # @overload get_configuration_set_event_destinations(**params)
     # @param [Hash] params ({})
-    def get_configuration_set_event_destinations(params = {}, options = {})
+    def get_configuration_set_event_destinations(params = {}, **options)
       req = build_request(:get_configuration_set_event_destinations, params)
       req.send_request(options)
     end
@@ -1473,9 +1473,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetContact AWS API Documentation
     #
-    # @overload get_contact(params = {})
+    # @overload get_contact(**params)
     # @param [Hash] params ({})
-    def get_contact(params = {}, options = {})
+    def get_contact(params = {}, **options)
       req = build_request(:get_contact, params)
       req.send_request(options)
     end
@@ -1518,9 +1518,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetContactList AWS API Documentation
     #
-    # @overload get_contact_list(params = {})
+    # @overload get_contact_list(**params)
     # @param [Hash] params ({})
-    def get_contact_list(params = {}, options = {})
+    def get_contact_list(params = {}, **options)
       req = build_request(:get_contact_list, params)
       req.send_request(options)
     end
@@ -1568,9 +1568,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetCustomVerificationEmailTemplate AWS API Documentation
     #
-    # @overload get_custom_verification_email_template(params = {})
+    # @overload get_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def get_custom_verification_email_template(params = {}, options = {})
+    def get_custom_verification_email_template(params = {}, **options)
       req = build_request(:get_custom_verification_email_template, params)
       req.send_request(options)
     end
@@ -1603,9 +1603,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDedicatedIp AWS API Documentation
     #
-    # @overload get_dedicated_ip(params = {})
+    # @overload get_dedicated_ip(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ip(params = {}, options = {})
+    def get_dedicated_ip(params = {}, **options)
       req = build_request(:get_dedicated_ip, params)
       req.send_request(options)
     end
@@ -1653,9 +1653,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDedicatedIps AWS API Documentation
     #
-    # @overload get_dedicated_ips(params = {})
+    # @overload get_dedicated_ips(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ips(params = {}, options = {})
+    def get_dedicated_ips(params = {}, **options)
       req = build_request(:get_dedicated_ips, params)
       req.send_request(options)
     end
@@ -1704,9 +1704,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDeliverabilityDashboardOptions AWS API Documentation
     #
-    # @overload get_deliverability_dashboard_options(params = {})
+    # @overload get_deliverability_dashboard_options(**params)
     # @param [Hash] params ({})
-    def get_deliverability_dashboard_options(params = {}, options = {})
+    def get_deliverability_dashboard_options(params = {}, **options)
       req = build_request(:get_deliverability_dashboard_options, params)
       req.send_request(options)
     end
@@ -1757,9 +1757,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDeliverabilityTestReport AWS API Documentation
     #
-    # @overload get_deliverability_test_report(params = {})
+    # @overload get_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def get_deliverability_test_report(params = {}, options = {})
+    def get_deliverability_test_report(params = {}, **options)
       req = build_request(:get_deliverability_test_report, params)
       req.send_request(options)
     end
@@ -1803,9 +1803,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDomainDeliverabilityCampaign AWS API Documentation
     #
-    # @overload get_domain_deliverability_campaign(params = {})
+    # @overload get_domain_deliverability_campaign(**params)
     # @param [Hash] params ({})
-    def get_domain_deliverability_campaign(params = {}, options = {})
+    def get_domain_deliverability_campaign(params = {}, **options)
       req = build_request(:get_domain_deliverability_campaign, params)
       req.send_request(options)
     end
@@ -1866,9 +1866,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDomainStatisticsReport AWS API Documentation
     #
-    # @overload get_domain_statistics_report(params = {})
+    # @overload get_domain_statistics_report(**params)
     # @param [Hash] params ({})
-    def get_domain_statistics_report(params = {}, options = {})
+    def get_domain_statistics_report(params = {}, **options)
       req = build_request(:get_domain_statistics_report, params)
       req.send_request(options)
     end
@@ -1917,9 +1917,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetEmailIdentity AWS API Documentation
     #
-    # @overload get_email_identity(params = {})
+    # @overload get_email_identity(**params)
     # @param [Hash] params ({})
-    def get_email_identity(params = {}, options = {})
+    def get_email_identity(params = {}, **options)
       req = build_request(:get_email_identity, params)
       req.send_request(options)
     end
@@ -1964,9 +1964,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetEmailIdentityPolicies AWS API Documentation
     #
-    # @overload get_email_identity_policies(params = {})
+    # @overload get_email_identity_policies(**params)
     # @param [Hash] params ({})
-    def get_email_identity_policies(params = {}, options = {})
+    def get_email_identity_policies(params = {}, **options)
       req = build_request(:get_email_identity_policies, params)
       req.send_request(options)
     end
@@ -1999,9 +1999,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetEmailTemplate AWS API Documentation
     #
-    # @overload get_email_template(params = {})
+    # @overload get_email_template(**params)
     # @param [Hash] params ({})
-    def get_email_template(params = {}, options = {})
+    def get_email_template(params = {}, **options)
       req = build_request(:get_email_template, params)
       req.send_request(options)
     end
@@ -2047,9 +2047,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetImportJob AWS API Documentation
     #
-    # @overload get_import_job(params = {})
+    # @overload get_import_job(**params)
     # @param [Hash] params ({})
-    def get_import_job(params = {}, options = {})
+    def get_import_job(params = {}, **options)
       req = build_request(:get_import_job, params)
       req.send_request(options)
     end
@@ -2080,9 +2080,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetSuppressedDestination AWS API Documentation
     #
-    # @overload get_suppressed_destination(params = {})
+    # @overload get_suppressed_destination(**params)
     # @param [Hash] params ({})
-    def get_suppressed_destination(params = {}, options = {})
+    def get_suppressed_destination(params = {}, **options)
       req = build_request(:get_suppressed_destination, params)
       req.send_request(options)
     end
@@ -2128,9 +2128,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListConfigurationSets AWS API Documentation
     #
-    # @overload list_configuration_sets(params = {})
+    # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, options = {})
+    def list_configuration_sets(params = {}, **options)
       req = build_request(:list_configuration_sets, params)
       req.send_request(options)
     end
@@ -2173,9 +2173,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListContactLists AWS API Documentation
     #
-    # @overload list_contact_lists(params = {})
+    # @overload list_contact_lists(**params)
     # @param [Hash] params ({})
-    def list_contact_lists(params = {}, options = {})
+    def list_contact_lists(params = {}, **options)
       req = build_request(:list_contact_lists, params)
       req.send_request(options)
     end
@@ -2240,9 +2240,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListContacts AWS API Documentation
     #
-    # @overload list_contacts(params = {})
+    # @overload list_contacts(**params)
     # @param [Hash] params ({})
-    def list_contacts(params = {}, options = {})
+    def list_contacts(params = {}, **options)
       req = build_request(:list_contacts, params)
       req.send_request(options)
     end
@@ -2301,9 +2301,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListCustomVerificationEmailTemplates AWS API Documentation
     #
-    # @overload list_custom_verification_email_templates(params = {})
+    # @overload list_custom_verification_email_templates(**params)
     # @param [Hash] params ({})
-    def list_custom_verification_email_templates(params = {}, options = {})
+    def list_custom_verification_email_templates(params = {}, **options)
       req = build_request(:list_custom_verification_email_templates, params)
       req.send_request(options)
     end
@@ -2343,9 +2343,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListDedicatedIpPools AWS API Documentation
     #
-    # @overload list_dedicated_ip_pools(params = {})
+    # @overload list_dedicated_ip_pools(**params)
     # @param [Hash] params ({})
-    def list_dedicated_ip_pools(params = {}, options = {})
+    def list_dedicated_ip_pools(params = {}, **options)
       req = build_request(:list_dedicated_ip_pools, params)
       req.send_request(options)
     end
@@ -2397,9 +2397,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListDeliverabilityTestReports AWS API Documentation
     #
-    # @overload list_deliverability_test_reports(params = {})
+    # @overload list_deliverability_test_reports(**params)
     # @param [Hash] params ({})
-    def list_deliverability_test_reports(params = {}, options = {})
+    def list_deliverability_test_reports(params = {}, **options)
       req = build_request(:list_deliverability_test_reports, params)
       req.send_request(options)
     end
@@ -2473,9 +2473,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListDomainDeliverabilityCampaigns AWS API Documentation
     #
-    # @overload list_domain_deliverability_campaigns(params = {})
+    # @overload list_domain_deliverability_campaigns(**params)
     # @param [Hash] params ({})
-    def list_domain_deliverability_campaigns(params = {}, options = {})
+    def list_domain_deliverability_campaigns(params = {}, **options)
       req = build_request(:list_domain_deliverability_campaigns, params)
       req.send_request(options)
     end
@@ -2523,9 +2523,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListEmailIdentities AWS API Documentation
     #
-    # @overload list_email_identities(params = {})
+    # @overload list_email_identities(**params)
     # @param [Hash] params ({})
-    def list_email_identities(params = {}, options = {})
+    def list_email_identities(params = {}, **options)
       req = build_request(:list_email_identities, params)
       req.send_request(options)
     end
@@ -2571,9 +2571,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListEmailTemplates AWS API Documentation
     #
-    # @overload list_email_templates(params = {})
+    # @overload list_email_templates(**params)
     # @param [Hash] params ({})
-    def list_email_templates(params = {}, options = {})
+    def list_email_templates(params = {}, **options)
       req = build_request(:list_email_templates, params)
       req.send_request(options)
     end
@@ -2625,9 +2625,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListImportJobs AWS API Documentation
     #
-    # @overload list_import_jobs(params = {})
+    # @overload list_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_import_jobs(params = {}, options = {})
+    def list_import_jobs(params = {}, **options)
       req = build_request(:list_import_jobs, params)
       req.send_request(options)
     end
@@ -2685,9 +2685,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListSuppressedDestinations AWS API Documentation
     #
-    # @overload list_suppressed_destinations(params = {})
+    # @overload list_suppressed_destinations(**params)
     # @param [Hash] params ({})
-    def list_suppressed_destinations(params = {}, options = {})
+    def list_suppressed_destinations(params = {}, **options)
       req = build_request(:list_suppressed_destinations, params)
       req.send_request(options)
     end
@@ -2721,9 +2721,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2747,9 +2747,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutAccountDedicatedIpWarmupAttributes AWS API Documentation
     #
-    # @overload put_account_dedicated_ip_warmup_attributes(params = {})
+    # @overload put_account_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_dedicated_ip_warmup_attributes(params = {}, options = {})
+    def put_account_dedicated_ip_warmup_attributes(params = {}, **options)
       req = build_request(:put_account_dedicated_ip_warmup_attributes, params)
       req.send_request(options)
     end
@@ -2803,9 +2803,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutAccountDetails AWS API Documentation
     #
-    # @overload put_account_details(params = {})
+    # @overload put_account_details(**params)
     # @param [Hash] params ({})
-    def put_account_details(params = {}, options = {})
+    def put_account_details(params = {}, **options)
       req = build_request(:put_account_details, params)
       req.send_request(options)
     end
@@ -2832,9 +2832,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutAccountSendingAttributes AWS API Documentation
     #
-    # @overload put_account_sending_attributes(params = {})
+    # @overload put_account_sending_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_sending_attributes(params = {}, options = {})
+    def put_account_sending_attributes(params = {}, **options)
       req = build_request(:put_account_sending_attributes, params)
       req.send_request(options)
     end
@@ -2864,9 +2864,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutAccountSuppressionAttributes AWS API Documentation
     #
-    # @overload put_account_suppression_attributes(params = {})
+    # @overload put_account_suppression_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_suppression_attributes(params = {}, options = {})
+    def put_account_suppression_attributes(params = {}, **options)
       req = build_request(:put_account_suppression_attributes, params)
       req.send_request(options)
     end
@@ -2902,9 +2902,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutConfigurationSetDeliveryOptions AWS API Documentation
     #
-    # @overload put_configuration_set_delivery_options(params = {})
+    # @overload put_configuration_set_delivery_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_delivery_options(params = {}, options = {})
+    def put_configuration_set_delivery_options(params = {}, **options)
       req = build_request(:put_configuration_set_delivery_options, params)
       req.send_request(options)
     end
@@ -2932,9 +2932,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutConfigurationSetReputationOptions AWS API Documentation
     #
-    # @overload put_configuration_set_reputation_options(params = {})
+    # @overload put_configuration_set_reputation_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_reputation_options(params = {}, options = {})
+    def put_configuration_set_reputation_options(params = {}, **options)
       req = build_request(:put_configuration_set_reputation_options, params)
       req.send_request(options)
     end
@@ -2961,9 +2961,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutConfigurationSetSendingOptions AWS API Documentation
     #
-    # @overload put_configuration_set_sending_options(params = {})
+    # @overload put_configuration_set_sending_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_sending_options(params = {}, options = {})
+    def put_configuration_set_sending_options(params = {}, **options)
       req = build_request(:put_configuration_set_sending_options, params)
       req.send_request(options)
     end
@@ -2999,9 +2999,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutConfigurationSetSuppressionOptions AWS API Documentation
     #
-    # @overload put_configuration_set_suppression_options(params = {})
+    # @overload put_configuration_set_suppression_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_suppression_options(params = {}, options = {})
+    def put_configuration_set_suppression_options(params = {}, **options)
       req = build_request(:put_configuration_set_suppression_options, params)
       req.send_request(options)
     end
@@ -3027,9 +3027,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutConfigurationSetTrackingOptions AWS API Documentation
     #
-    # @overload put_configuration_set_tracking_options(params = {})
+    # @overload put_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_tracking_options(params = {}, options = {})
+    def put_configuration_set_tracking_options(params = {}, **options)
       req = build_request(:put_configuration_set_tracking_options, params)
       req.send_request(options)
     end
@@ -3064,9 +3064,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDedicatedIpInPool AWS API Documentation
     #
-    # @overload put_dedicated_ip_in_pool(params = {})
+    # @overload put_dedicated_ip_in_pool(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_in_pool(params = {}, options = {})
+    def put_dedicated_ip_in_pool(params = {}, **options)
       req = build_request(:put_dedicated_ip_in_pool, params)
       req.send_request(options)
     end
@@ -3090,9 +3090,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDedicatedIpWarmupAttributes AWS API Documentation
     #
-    # @overload put_dedicated_ip_warmup_attributes(params = {})
+    # @overload put_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_warmup_attributes(params = {}, options = {})
+    def put_dedicated_ip_warmup_attributes(params = {}, **options)
       req = build_request(:put_dedicated_ip_warmup_attributes, params)
       req.send_request(options)
     end
@@ -3141,9 +3141,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDeliverabilityDashboardOption AWS API Documentation
     #
-    # @overload put_deliverability_dashboard_option(params = {})
+    # @overload put_deliverability_dashboard_option(**params)
     # @param [Hash] params ({})
-    def put_deliverability_dashboard_option(params = {}, options = {})
+    def put_deliverability_dashboard_option(params = {}, **options)
       req = build_request(:put_deliverability_dashboard_option, params)
       req.send_request(options)
     end
@@ -3171,9 +3171,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutEmailIdentityDkimAttributes AWS API Documentation
     #
-    # @overload put_email_identity_dkim_attributes(params = {})
+    # @overload put_email_identity_dkim_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_dkim_attributes(params = {}, options = {})
+    def put_email_identity_dkim_attributes(params = {}, **options)
       req = build_request(:put_email_identity_dkim_attributes, params)
       req.send_request(options)
     end
@@ -3239,9 +3239,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutEmailIdentityDkimSigningAttributes AWS API Documentation
     #
-    # @overload put_email_identity_dkim_signing_attributes(params = {})
+    # @overload put_email_identity_dkim_signing_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_dkim_signing_attributes(params = {}, options = {})
+    def put_email_identity_dkim_signing_attributes(params = {}, **options)
       req = build_request(:put_email_identity_dkim_signing_attributes, params)
       req.send_request(options)
     end
@@ -3288,9 +3288,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutEmailIdentityFeedbackAttributes AWS API Documentation
     #
-    # @overload put_email_identity_feedback_attributes(params = {})
+    # @overload put_email_identity_feedback_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_feedback_attributes(params = {}, options = {})
+    def put_email_identity_feedback_attributes(params = {}, **options)
       req = build_request(:put_email_identity_feedback_attributes, params)
       req.send_request(options)
     end
@@ -3337,9 +3337,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutEmailIdentityMailFromAttributes AWS API Documentation
     #
-    # @overload put_email_identity_mail_from_attributes(params = {})
+    # @overload put_email_identity_mail_from_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_mail_from_attributes(params = {}, options = {})
+    def put_email_identity_mail_from_attributes(params = {}, **options)
       req = build_request(:put_email_identity_mail_from_attributes, params)
       req.send_request(options)
     end
@@ -3365,9 +3365,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutSuppressedDestination AWS API Documentation
     #
-    # @overload put_suppressed_destination(params = {})
+    # @overload put_suppressed_destination(**params)
     # @param [Hash] params ({})
-    def put_suppressed_destination(params = {}, options = {})
+    def put_suppressed_destination(params = {}, **options)
       req = build_request(:put_suppressed_destination, params)
       req.send_request(options)
     end
@@ -3500,9 +3500,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/SendBulkEmail AWS API Documentation
     #
-    # @overload send_bulk_email(params = {})
+    # @overload send_bulk_email(**params)
     # @param [Hash] params ({})
-    def send_bulk_email(params = {}, options = {})
+    def send_bulk_email(params = {}, **options)
       req = build_request(:send_bulk_email, params)
       req.send_request(options)
     end
@@ -3552,9 +3552,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/SendCustomVerificationEmail AWS API Documentation
     #
-    # @overload send_custom_verification_email(params = {})
+    # @overload send_custom_verification_email(**params)
     # @param [Hash] params ({})
-    def send_custom_verification_email(params = {}, options = {})
+    def send_custom_verification_email(params = {}, **options)
       req = build_request(:send_custom_verification_email, params)
       req.send_request(options)
     end
@@ -3715,9 +3715,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/SendEmail AWS API Documentation
     #
-    # @overload send_email(params = {})
+    # @overload send_email(**params)
     # @param [Hash] params ({})
-    def send_email(params = {}, options = {})
+    def send_email(params = {}, **options)
       req = build_request(:send_email, params)
       req.send_request(options)
     end
@@ -3759,9 +3759,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3796,9 +3796,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/TestRenderEmailTemplate AWS API Documentation
     #
-    # @overload test_render_email_template(params = {})
+    # @overload test_render_email_template(**params)
     # @param [Hash] params ({})
-    def test_render_email_template(params = {}, options = {})
+    def test_render_email_template(params = {}, **options)
       req = build_request(:test_render_email_template, params)
       req.send_request(options)
     end
@@ -3830,9 +3830,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3891,9 +3891,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UpdateConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload update_configuration_set_event_destination(params = {})
+    # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, options = {})
+    def update_configuration_set_event_destination(params = {}, **options)
       req = build_request(:update_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -3938,9 +3938,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UpdateContact AWS API Documentation
     #
-    # @overload update_contact(params = {})
+    # @overload update_contact(**params)
     # @param [Hash] params ({})
-    def update_contact(params = {}, options = {})
+    def update_contact(params = {}, **options)
       req = build_request(:update_contact, params)
       req.send_request(options)
     end
@@ -3977,9 +3977,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UpdateContactList AWS API Documentation
     #
-    # @overload update_contact_list(params = {})
+    # @overload update_contact_list(**params)
     # @param [Hash] params ({})
-    def update_contact_list(params = {}, options = {})
+    def update_contact_list(params = {}, **options)
       req = build_request(:update_contact_list, params)
       req.send_request(options)
     end
@@ -4039,9 +4039,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UpdateCustomVerificationEmailTemplate AWS API Documentation
     #
-    # @overload update_custom_verification_email_template(params = {})
+    # @overload update_custom_verification_email_template(**params)
     # @param [Hash] params ({})
-    def update_custom_verification_email_template(params = {}, options = {})
+    def update_custom_verification_email_template(params = {}, **options)
       req = build_request(:update_custom_verification_email_template, params)
       req.send_request(options)
     end
@@ -4096,9 +4096,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UpdateEmailIdentityPolicy AWS API Documentation
     #
-    # @overload update_email_identity_policy(params = {})
+    # @overload update_email_identity_policy(**params)
     # @param [Hash] params ({})
-    def update_email_identity_policy(params = {}, options = {})
+    def update_email_identity_policy(params = {}, **options)
       req = build_request(:update_email_identity_policy, params)
       req.send_request(options)
     end
@@ -4136,9 +4136,9 @@ module Aws::SESV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/UpdateEmailTemplate AWS API Documentation
     #
-    # @overload update_email_template(params = {})
+    # @overload update_email_template(**params)
     # @param [Hash] params ({})
-    def update_email_template(params = {}, options = {})
+    def update_email_template(params = {}, **options)
       req = build_request(:update_email_template, params)
       req.send_request(options)
     end
@@ -4147,7 +4147,7 @@ module Aws::SESV2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4155,15 +4155,15 @@ module Aws::SESV2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-sesv2'
-      context[:gem_version] = '1.14.0'
+      context[:gem_name] = "aws-sdk-sesv2"
+      context[:gem_version] = "1.14.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

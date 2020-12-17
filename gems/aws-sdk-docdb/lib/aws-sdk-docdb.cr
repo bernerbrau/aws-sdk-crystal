@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-docdb/types'
-require_relative 'aws-sdk-docdb/client_api'
-require_relative 'aws-sdk-docdb/client'
-require_relative 'aws-sdk-docdb/errors'
-require_relative 'aws-sdk-docdb/waiters'
-require_relative 'aws-sdk-docdb/resource'
-require_relative 'aws-sdk-docdb/customizations'
+require_relative "aws-sdk-docdb/types"
+require_relative "aws-sdk-docdb/client_api"
+require_relative "aws-sdk-docdb/client"
+require_relative "aws-sdk-docdb/errors"
+require_relative "aws-sdk-docdb/waiters"
+require_relative "aws-sdk-docdb/resource"
+require_relative "aws-sdk-docdb/customizations"
 
 # This module provides support for Amazon DocumentDB with MongoDB compatibility. This module is available in the
 # `aws-sdk-docdb` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-docdb/customizations'
 # @!group service
 module Aws::DocDB
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

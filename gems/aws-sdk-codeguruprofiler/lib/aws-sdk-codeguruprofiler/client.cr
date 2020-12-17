@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codeguruprofiler)
 
@@ -280,7 +280,7 @@ module Aws::CodeGuruProfiler
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -363,9 +363,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/AddNotificationChannels AWS API Documentation
     #
-    # @overload add_notification_channels(params = {})
+    # @overload add_notification_channels(**params)
     # @param [Hash] params ({})
-    def add_notification_channels(params = {}, options = {})
+    def add_notification_channels(params = {}, **options)
       req = build_request(:add_notification_channels, params)
       req.send_request(options)
     end
@@ -459,9 +459,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/BatchGetFrameMetricData AWS API Documentation
     #
-    # @overload batch_get_frame_metric_data(params = {})
+    # @overload batch_get_frame_metric_data(**params)
     # @param [Hash] params ({})
-    def batch_get_frame_metric_data(params = {}, options = {})
+    def batch_get_frame_metric_data(params = {}, **options)
       req = build_request(:batch_get_frame_metric_data, params)
       req.send_request(options)
     end
@@ -534,9 +534,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/ConfigureAgent AWS API Documentation
     #
-    # @overload configure_agent(params = {})
+    # @overload configure_agent(**params)
     # @param [Hash] params ({})
-    def configure_agent(params = {}, options = {})
+    def configure_agent(params = {}, **options)
       req = build_request(:configure_agent, params)
       req.send_request(options)
     end
@@ -603,9 +603,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/CreateProfilingGroup AWS API Documentation
     #
-    # @overload create_profiling_group(params = {})
+    # @overload create_profiling_group(**params)
     # @param [Hash] params ({})
-    def create_profiling_group(params = {}, options = {})
+    def create_profiling_group(params = {}, **options)
       req = build_request(:create_profiling_group, params)
       req.send_request(options)
     end
@@ -625,9 +625,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/DeleteProfilingGroup AWS API Documentation
     #
-    # @overload delete_profiling_group(params = {})
+    # @overload delete_profiling_group(**params)
     # @param [Hash] params ({})
-    def delete_profiling_group(params = {}, options = {})
+    def delete_profiling_group(params = {}, **options)
       req = build_request(:delete_profiling_group, params)
       req.send_request(options)
     end
@@ -669,9 +669,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/DescribeProfilingGroup AWS API Documentation
     #
-    # @overload describe_profiling_group(params = {})
+    # @overload describe_profiling_group(**params)
     # @param [Hash] params ({})
-    def describe_profiling_group(params = {}, options = {})
+    def describe_profiling_group(params = {}, **options)
       req = build_request(:describe_profiling_group, params)
       req.send_request(options)
     end
@@ -738,9 +738,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/GetFindingsReportAccountSummary AWS API Documentation
     #
-    # @overload get_findings_report_account_summary(params = {})
+    # @overload get_findings_report_account_summary(**params)
     # @param [Hash] params ({})
-    def get_findings_report_account_summary(params = {}, options = {})
+    def get_findings_report_account_summary(params = {}, **options)
       req = build_request(:get_findings_report_account_summary, params)
       req.send_request(options)
     end
@@ -772,9 +772,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/GetNotificationConfiguration AWS API Documentation
     #
-    # @overload get_notification_configuration(params = {})
+    # @overload get_notification_configuration(**params)
     # @param [Hash] params ({})
-    def get_notification_configuration(params = {}, options = {})
+    def get_notification_configuration(params = {}, **options)
       req = build_request(:get_notification_configuration, params)
       req.send_request(options)
     end
@@ -802,9 +802,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/GetPolicy AWS API Documentation
     #
-    # @overload get_policy(params = {})
+    # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, options = {})
+    def get_policy(params = {}, **options)
       req = build_request(:get_policy, params)
       req.send_request(options)
     end
@@ -880,9 +880,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/GetProfile AWS API Documentation
     #
-    # @overload get_profile(params = {})
+    # @overload get_profile(**params)
     # @param [Hash] params ({})
-    def get_profile(params = {}, options = {})
+    def get_profile(params = {}, **options)
       req = build_request(:get_profile, params)
       req.send_request(options)
     end
@@ -994,9 +994,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/GetRecommendations AWS API Documentation
     #
-    # @overload get_recommendations(params = {})
+    # @overload get_recommendations(**params)
     # @param [Hash] params ({})
-    def get_recommendations(params = {}, options = {})
+    def get_recommendations(params = {}, **options)
       req = build_request(:get_recommendations, params)
       req.send_request(options)
     end
@@ -1076,9 +1076,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/ListFindingsReports AWS API Documentation
     #
-    # @overload list_findings_reports(params = {})
+    # @overload list_findings_reports(**params)
     # @param [Hash] params ({})
-    def list_findings_reports(params = {}, options = {})
+    def list_findings_reports(params = {}, **options)
       req = build_request(:list_findings_reports, params)
       req.send_request(options)
     end
@@ -1158,9 +1158,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/ListProfileTimes AWS API Documentation
     #
-    # @overload list_profile_times(params = {})
+    # @overload list_profile_times(**params)
     # @param [Hash] params ({})
-    def list_profile_times(params = {}, options = {})
+    def list_profile_times(params = {}, **options)
       req = build_request(:list_profile_times, params)
       req.send_request(options)
     end
@@ -1240,9 +1240,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/ListProfilingGroups AWS API Documentation
     #
-    # @overload list_profiling_groups(params = {})
+    # @overload list_profiling_groups(**params)
     # @param [Hash] params ({})
-    def list_profiling_groups(params = {}, options = {})
+    def list_profiling_groups(params = {}, **options)
       req = build_request(:list_profiling_groups, params)
       req.send_request(options)
     end
@@ -1270,9 +1270,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1320,9 +1320,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/PostAgentProfile AWS API Documentation
     #
-    # @overload post_agent_profile(params = {})
+    # @overload post_agent_profile(**params)
     # @param [Hash] params ({})
-    def post_agent_profile(params = {}, options = {})
+    def post_agent_profile(params = {}, **options)
       req = build_request(:post_agent_profile, params)
       req.send_request(options)
     end
@@ -1377,9 +1377,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/PutPermission AWS API Documentation
     #
-    # @overload put_permission(params = {})
+    # @overload put_permission(**params)
     # @param [Hash] params ({})
-    def put_permission(params = {}, options = {})
+    def put_permission(params = {}, **options)
       req = build_request(:put_permission, params)
       req.send_request(options)
     end
@@ -1414,9 +1414,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/RemoveNotificationChannel AWS API Documentation
     #
-    # @overload remove_notification_channel(params = {})
+    # @overload remove_notification_channel(**params)
     # @param [Hash] params ({})
-    def remove_notification_channel(params = {}, options = {})
+    def remove_notification_channel(params = {}, **options)
       req = build_request(:remove_notification_channel, params)
       req.send_request(options)
     end
@@ -1468,9 +1468,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/RemovePermission AWS API Documentation
     #
-    # @overload remove_permission(params = {})
+    # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, options = {})
+    def remove_permission(params = {}, **options)
       req = build_request(:remove_permission, params)
       req.send_request(options)
     end
@@ -1510,9 +1510,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/SubmitFeedback AWS API Documentation
     #
-    # @overload submit_feedback(params = {})
+    # @overload submit_feedback(**params)
     # @param [Hash] params ({})
-    def submit_feedback(params = {}, options = {})
+    def submit_feedback(params = {}, **options)
       req = build_request(:submit_feedback, params)
       req.send_request(options)
     end
@@ -1539,9 +1539,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1567,9 +1567,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1613,9 +1613,9 @@ module Aws::CodeGuruProfiler
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codeguruprofiler-2019-07-18/UpdateProfilingGroup AWS API Documentation
     #
-    # @overload update_profiling_group(params = {})
+    # @overload update_profiling_group(**params)
     # @param [Hash] params ({})
-    def update_profiling_group(params = {}, options = {})
+    def update_profiling_group(params = {}, **options)
       req = build_request(:update_profiling_group, params)
       req.send_request(options)
     end
@@ -1624,7 +1624,7 @@ module Aws::CodeGuruProfiler
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1632,15 +1632,15 @@ module Aws::CodeGuruProfiler
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codeguruprofiler'
-      context[:gem_version] = '1.12.0'
+      context[:gem_name] = "aws-sdk-codeguruprofiler"
+      context[:gem_version] = "1.12.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

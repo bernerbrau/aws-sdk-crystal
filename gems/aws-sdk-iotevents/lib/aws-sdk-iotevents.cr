@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotevents/types'
-require_relative 'aws-sdk-iotevents/client_api'
-require_relative 'aws-sdk-iotevents/client'
-require_relative 'aws-sdk-iotevents/errors'
-require_relative 'aws-sdk-iotevents/resource'
-require_relative 'aws-sdk-iotevents/customizations'
+require_relative "aws-sdk-iotevents/types"
+require_relative "aws-sdk-iotevents/client_api"
+require_relative "aws-sdk-iotevents/client"
+require_relative "aws-sdk-iotevents/errors"
+require_relative "aws-sdk-iotevents/resource"
+require_relative "aws-sdk-iotevents/customizations"
 
 # This module provides support for AWS IoT Events. This module is available in the
 # `aws-sdk-iotevents` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotevents/customizations'
 # @!group service
 module Aws::IoTEvents
 
-  GEM_VERSION = '1.20.0'
+  GEM_VERSION = "1.20.0"
 
 end

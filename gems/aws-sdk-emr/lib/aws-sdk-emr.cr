@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-emr/types'
-require_relative 'aws-sdk-emr/client_api'
-require_relative 'aws-sdk-emr/client'
-require_relative 'aws-sdk-emr/errors'
-require_relative 'aws-sdk-emr/waiters'
-require_relative 'aws-sdk-emr/resource'
-require_relative 'aws-sdk-emr/customizations'
+require_relative "aws-sdk-emr/types"
+require_relative "aws-sdk-emr/client_api"
+require_relative "aws-sdk-emr/client"
+require_relative "aws-sdk-emr/errors"
+require_relative "aws-sdk-emr/waiters"
+require_relative "aws-sdk-emr/resource"
+require_relative "aws-sdk-emr/customizations"
 
 # This module provides support for Amazon Elastic MapReduce. This module is available in the
 # `aws-sdk-emr` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-emr/customizations'
 # @!group service
 module Aws::EMR
 
-  GEM_VERSION = '1.40.0'
+  GEM_VERSION = "1.40.0"
 
 end

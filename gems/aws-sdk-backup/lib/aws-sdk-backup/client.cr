@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:backup)
 
@@ -280,7 +280,7 @@ module Aws::Backup
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -415,9 +415,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateBackupPlan AWS API Documentation
     #
-    # @overload create_backup_plan(params = {})
+    # @overload create_backup_plan(**params)
     # @param [Hash] params ({})
-    def create_backup_plan(params = {}, options = {})
+    def create_backup_plan(params = {}, **options)
       req = build_request(:create_backup_plan, params)
       req.send_request(options)
     end
@@ -498,9 +498,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateBackupSelection AWS API Documentation
     #
-    # @overload create_backup_selection(params = {})
+    # @overload create_backup_selection(**params)
     # @param [Hash] params ({})
-    def create_backup_selection(params = {}, options = {})
+    def create_backup_selection(params = {}, **options)
       req = build_request(:create_backup_selection, params)
       req.send_request(options)
     end
@@ -558,9 +558,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateBackupVault AWS API Documentation
     #
-    # @overload create_backup_vault(params = {})
+    # @overload create_backup_vault(**params)
     # @param [Hash] params ({})
-    def create_backup_vault(params = {}, options = {})
+    def create_backup_vault(params = {}, **options)
       req = build_request(:create_backup_vault, params)
       req.send_request(options)
     end
@@ -595,9 +595,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupPlan AWS API Documentation
     #
-    # @overload delete_backup_plan(params = {})
+    # @overload delete_backup_plan(**params)
     # @param [Hash] params ({})
-    def delete_backup_plan(params = {}, options = {})
+    def delete_backup_plan(params = {}, **options)
       req = build_request(:delete_backup_plan, params)
       req.send_request(options)
     end
@@ -623,9 +623,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupSelection AWS API Documentation
     #
-    # @overload delete_backup_selection(params = {})
+    # @overload delete_backup_selection(**params)
     # @param [Hash] params ({})
-    def delete_backup_selection(params = {}, options = {})
+    def delete_backup_selection(params = {}, **options)
       req = build_request(:delete_backup_selection, params)
       req.send_request(options)
     end
@@ -649,9 +649,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVault AWS API Documentation
     #
-    # @overload delete_backup_vault(params = {})
+    # @overload delete_backup_vault(**params)
     # @param [Hash] params ({})
-    def delete_backup_vault(params = {}, options = {})
+    def delete_backup_vault(params = {}, **options)
       req = build_request(:delete_backup_vault, params)
       req.send_request(options)
     end
@@ -675,9 +675,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVaultAccessPolicy AWS API Documentation
     #
-    # @overload delete_backup_vault_access_policy(params = {})
+    # @overload delete_backup_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def delete_backup_vault_access_policy(params = {}, options = {})
+    def delete_backup_vault_access_policy(params = {}, **options)
       req = build_request(:delete_backup_vault_access_policy, params)
       req.send_request(options)
     end
@@ -700,9 +700,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteBackupVaultNotifications AWS API Documentation
     #
-    # @overload delete_backup_vault_notifications(params = {})
+    # @overload delete_backup_vault_notifications(**params)
     # @param [Hash] params ({})
-    def delete_backup_vault_notifications(params = {}, options = {})
+    def delete_backup_vault_notifications(params = {}, **options)
       req = build_request(:delete_backup_vault_notifications, params)
       req.send_request(options)
     end
@@ -731,9 +731,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRecoveryPoint AWS API Documentation
     #
-    # @overload delete_recovery_point(params = {})
+    # @overload delete_recovery_point(**params)
     # @param [Hash] params ({})
-    def delete_recovery_point(params = {}, options = {})
+    def delete_recovery_point(params = {}, **options)
       req = build_request(:delete_recovery_point, params)
       req.send_request(options)
     end
@@ -801,9 +801,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeBackupJob AWS API Documentation
     #
-    # @overload describe_backup_job(params = {})
+    # @overload describe_backup_job(**params)
     # @param [Hash] params ({})
-    def describe_backup_job(params = {}, options = {})
+    def describe_backup_job(params = {}, **options)
       req = build_request(:describe_backup_job, params)
       req.send_request(options)
     end
@@ -842,9 +842,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeBackupVault AWS API Documentation
     #
-    # @overload describe_backup_vault(params = {})
+    # @overload describe_backup_vault(**params)
     # @param [Hash] params ({})
-    def describe_backup_vault(params = {}, options = {})
+    def describe_backup_vault(params = {}, **options)
       req = build_request(:describe_backup_vault, params)
       req.send_request(options)
     end
@@ -887,9 +887,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeCopyJob AWS API Documentation
     #
-    # @overload describe_copy_job(params = {})
+    # @overload describe_copy_job(**params)
     # @param [Hash] params ({})
-    def describe_copy_job(params = {}, options = {})
+    def describe_copy_job(params = {}, **options)
       req = build_request(:describe_copy_job, params)
       req.send_request(options)
     end
@@ -909,9 +909,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeGlobalSettings AWS API Documentation
     #
-    # @overload describe_global_settings(params = {})
+    # @overload describe_global_settings(**params)
     # @param [Hash] params ({})
-    def describe_global_settings(params = {}, options = {})
+    def describe_global_settings(params = {}, **options)
       req = build_request(:describe_global_settings, params)
       req.send_request(options)
     end
@@ -944,9 +944,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeProtectedResource AWS API Documentation
     #
-    # @overload describe_protected_resource(params = {})
+    # @overload describe_protected_resource(**params)
     # @param [Hash] params ({})
-    def describe_protected_resource(params = {}, options = {})
+    def describe_protected_resource(params = {}, **options)
       req = build_request(:describe_protected_resource, params)
       req.send_request(options)
     end
@@ -1021,9 +1021,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeRecoveryPoint AWS API Documentation
     #
-    # @overload describe_recovery_point(params = {})
+    # @overload describe_recovery_point(**params)
     # @param [Hash] params ({})
-    def describe_recovery_point(params = {}, options = {})
+    def describe_recovery_point(params = {}, **options)
       req = build_request(:describe_recovery_point, params)
       req.send_request(options)
     end
@@ -1047,9 +1047,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeRegionSettings AWS API Documentation
     #
-    # @overload describe_region_settings(params = {})
+    # @overload describe_region_settings(**params)
     # @param [Hash] params ({})
-    def describe_region_settings(params = {}, options = {})
+    def describe_region_settings(params = {}, **options)
       req = build_request(:describe_region_settings, params)
       req.send_request(options)
     end
@@ -1100,9 +1100,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DescribeRestoreJob AWS API Documentation
     #
-    # @overload describe_restore_job(params = {})
+    # @overload describe_restore_job(**params)
     # @param [Hash] params ({})
-    def describe_restore_job(params = {}, options = {})
+    def describe_restore_job(params = {}, **options)
       req = build_request(:describe_restore_job, params)
       req.send_request(options)
     end
@@ -1129,9 +1129,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ExportBackupPlanTemplate AWS API Documentation
     #
-    # @overload export_backup_plan_template(params = {})
+    # @overload export_backup_plan_template(**params)
     # @param [Hash] params ({})
-    def export_backup_plan_template(params = {}, options = {})
+    def export_backup_plan_template(params = {}, **options)
       req = build_request(:export_backup_plan_template, params)
       req.send_request(options)
     end
@@ -1202,9 +1202,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetBackupPlan AWS API Documentation
     #
-    # @overload get_backup_plan(params = {})
+    # @overload get_backup_plan(**params)
     # @param [Hash] params ({})
-    def get_backup_plan(params = {}, options = {})
+    def get_backup_plan(params = {}, **options)
       req = build_request(:get_backup_plan, params)
       req.send_request(options)
     end
@@ -1249,9 +1249,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetBackupPlanFromJSON AWS API Documentation
     #
-    # @overload get_backup_plan_from_json(params = {})
+    # @overload get_backup_plan_from_json(**params)
     # @param [Hash] params ({})
-    def get_backup_plan_from_json(params = {}, options = {})
+    def get_backup_plan_from_json(params = {}, **options)
       req = build_request(:get_backup_plan_from_json, params)
       req.send_request(options)
     end
@@ -1296,9 +1296,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetBackupPlanFromTemplate AWS API Documentation
     #
-    # @overload get_backup_plan_from_template(params = {})
+    # @overload get_backup_plan_from_template(**params)
     # @param [Hash] params ({})
-    def get_backup_plan_from_template(params = {}, options = {})
+    def get_backup_plan_from_template(params = {}, **options)
       req = build_request(:get_backup_plan_from_template, params)
       req.send_request(options)
     end
@@ -1345,9 +1345,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetBackupSelection AWS API Documentation
     #
-    # @overload get_backup_selection(params = {})
+    # @overload get_backup_selection(**params)
     # @param [Hash] params ({})
-    def get_backup_selection(params = {}, options = {})
+    def get_backup_selection(params = {}, **options)
       req = build_request(:get_backup_selection, params)
       req.send_request(options)
     end
@@ -1381,9 +1381,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetBackupVaultAccessPolicy AWS API Documentation
     #
-    # @overload get_backup_vault_access_policy(params = {})
+    # @overload get_backup_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def get_backup_vault_access_policy(params = {}, options = {})
+    def get_backup_vault_access_policy(params = {}, **options)
       req = build_request(:get_backup_vault_access_policy, params)
       req.send_request(options)
     end
@@ -1419,9 +1419,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetBackupVaultNotifications AWS API Documentation
     #
-    # @overload get_backup_vault_notifications(params = {})
+    # @overload get_backup_vault_notifications(**params)
     # @param [Hash] params ({})
-    def get_backup_vault_notifications(params = {}, options = {})
+    def get_backup_vault_notifications(params = {}, **options)
       req = build_request(:get_backup_vault_notifications, params)
       req.send_request(options)
     end
@@ -1462,9 +1462,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRecoveryPointRestoreMetadata AWS API Documentation
     #
-    # @overload get_recovery_point_restore_metadata(params = {})
+    # @overload get_recovery_point_restore_metadata(**params)
     # @param [Hash] params ({})
-    def get_recovery_point_restore_metadata(params = {}, options = {})
+    def get_recovery_point_restore_metadata(params = {}, **options)
       req = build_request(:get_recovery_point_restore_metadata, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetSupportedResourceTypes AWS API Documentation
     #
-    # @overload get_supported_resource_types(params = {})
+    # @overload get_supported_resource_types(**params)
     # @param [Hash] params ({})
-    def get_supported_resource_types(params = {}, options = {})
+    def get_supported_resource_types(params = {}, **options)
       req = build_request(:get_supported_resource_types, params)
       req.send_request(options)
     end
@@ -1590,9 +1590,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupJobs AWS API Documentation
     #
-    # @overload list_backup_jobs(params = {})
+    # @overload list_backup_jobs(**params)
     # @param [Hash] params ({})
-    def list_backup_jobs(params = {}, options = {})
+    def list_backup_jobs(params = {}, **options)
       req = build_request(:list_backup_jobs, params)
       req.send_request(options)
     end
@@ -1632,9 +1632,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupPlanTemplates AWS API Documentation
     #
-    # @overload list_backup_plan_templates(params = {})
+    # @overload list_backup_plan_templates(**params)
     # @param [Hash] params ({})
-    def list_backup_plan_templates(params = {}, options = {})
+    def list_backup_plan_templates(params = {}, **options)
       req = build_request(:list_backup_plan_templates, params)
       req.send_request(options)
     end
@@ -1689,9 +1689,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupPlanVersions AWS API Documentation
     #
-    # @overload list_backup_plan_versions(params = {})
+    # @overload list_backup_plan_versions(**params)
     # @param [Hash] params ({})
-    def list_backup_plan_versions(params = {}, options = {})
+    def list_backup_plan_versions(params = {}, **options)
       req = build_request(:list_backup_plan_versions, params)
       req.send_request(options)
     end
@@ -1749,9 +1749,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupPlans AWS API Documentation
     #
-    # @overload list_backup_plans(params = {})
+    # @overload list_backup_plans(**params)
     # @param [Hash] params ({})
-    def list_backup_plans(params = {}, options = {})
+    def list_backup_plans(params = {}, **options)
       req = build_request(:list_backup_plans, params)
       req.send_request(options)
     end
@@ -1799,9 +1799,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupSelections AWS API Documentation
     #
-    # @overload list_backup_selections(params = {})
+    # @overload list_backup_selections(**params)
     # @param [Hash] params ({})
-    def list_backup_selections(params = {}, options = {})
+    def list_backup_selections(params = {}, **options)
       req = build_request(:list_backup_selections, params)
       req.send_request(options)
     end
@@ -1845,9 +1845,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupVaults AWS API Documentation
     #
-    # @overload list_backup_vaults(params = {})
+    # @overload list_backup_vaults(**params)
     # @param [Hash] params ({})
-    def list_backup_vaults(params = {}, options = {})
+    def list_backup_vaults(params = {}, **options)
       req = build_request(:list_backup_vaults, params)
       req.send_request(options)
     end
@@ -1946,9 +1946,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListCopyJobs AWS API Documentation
     #
-    # @overload list_copy_jobs(params = {})
+    # @overload list_copy_jobs(**params)
     # @param [Hash] params ({})
-    def list_copy_jobs(params = {}, options = {})
+    def list_copy_jobs(params = {}, **options)
       req = build_request(:list_copy_jobs, params)
       req.send_request(options)
     end
@@ -1990,9 +1990,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListProtectedResources AWS API Documentation
     #
-    # @overload list_protected_resources(params = {})
+    # @overload list_protected_resources(**params)
     # @param [Hash] params ({})
-    def list_protected_resources(params = {}, options = {})
+    def list_protected_resources(params = {}, **options)
       req = build_request(:list_protected_resources, params)
       req.send_request(options)
     end
@@ -2082,9 +2082,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRecoveryPointsByBackupVault AWS API Documentation
     #
-    # @overload list_recovery_points_by_backup_vault(params = {})
+    # @overload list_recovery_points_by_backup_vault(**params)
     # @param [Hash] params ({})
-    def list_recovery_points_by_backup_vault(params = {}, options = {})
+    def list_recovery_points_by_backup_vault(params = {}, **options)
       req = build_request(:list_recovery_points_by_backup_vault, params)
       req.send_request(options)
     end
@@ -2133,9 +2133,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRecoveryPointsByResource AWS API Documentation
     #
-    # @overload list_recovery_points_by_resource(params = {})
+    # @overload list_recovery_points_by_resource(**params)
     # @param [Hash] params ({})
-    def list_recovery_points_by_resource(params = {}, options = {})
+    def list_recovery_points_by_resource(params = {}, **options)
       req = build_request(:list_recovery_points_by_resource, params)
       req.send_request(options)
     end
@@ -2203,9 +2203,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreJobs AWS API Documentation
     #
-    # @overload list_restore_jobs(params = {})
+    # @overload list_restore_jobs(**params)
     # @param [Hash] params ({})
-    def list_restore_jobs(params = {}, options = {})
+    def list_restore_jobs(params = {}, **options)
       req = build_request(:list_restore_jobs, params)
       req.send_request(options)
     end
@@ -2254,9 +2254,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -2285,9 +2285,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutBackupVaultAccessPolicy AWS API Documentation
     #
-    # @overload put_backup_vault_access_policy(params = {})
+    # @overload put_backup_vault_access_policy(**params)
     # @param [Hash] params ({})
-    def put_backup_vault_access_policy(params = {}, options = {})
+    def put_backup_vault_access_policy(params = {}, **options)
       req = build_request(:put_backup_vault_access_policy, params)
       req.send_request(options)
     end
@@ -2322,9 +2322,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutBackupVaultNotifications AWS API Documentation
     #
-    # @overload put_backup_vault_notifications(params = {})
+    # @overload put_backup_vault_notifications(**params)
     # @param [Hash] params ({})
-    def put_backup_vault_notifications(params = {}, options = {})
+    def put_backup_vault_notifications(params = {}, **options)
       req = build_request(:put_backup_vault_notifications, params)
       req.send_request(options)
     end
@@ -2418,9 +2418,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/StartBackupJob AWS API Documentation
     #
-    # @overload start_backup_job(params = {})
+    # @overload start_backup_job(**params)
     # @param [Hash] params ({})
-    def start_backup_job(params = {}, options = {})
+    def start_backup_job(params = {}, **options)
       req = build_request(:start_backup_job, params)
       req.send_request(options)
     end
@@ -2487,9 +2487,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/StartCopyJob AWS API Documentation
     #
-    # @overload start_copy_job(params = {})
+    # @overload start_copy_job(**params)
     # @param [Hash] params ({})
-    def start_copy_job(params = {}, options = {})
+    def start_copy_job(params = {}, **options)
       req = build_request(:start_copy_job, params)
       req.send_request(options)
     end
@@ -2589,9 +2589,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/StartRestoreJob AWS API Documentation
     #
-    # @overload start_restore_job(params = {})
+    # @overload start_restore_job(**params)
     # @param [Hash] params ({})
-    def start_restore_job(params = {}, options = {})
+    def start_restore_job(params = {}, **options)
       req = build_request(:start_restore_job, params)
       req.send_request(options)
     end
@@ -2611,9 +2611,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/StopBackupJob AWS API Documentation
     #
-    # @overload stop_backup_job(params = {})
+    # @overload stop_backup_job(**params)
     # @param [Hash] params ({})
-    def stop_backup_job(params = {}, options = {})
+    def stop_backup_job(params = {}, **options)
       req = build_request(:stop_backup_job, params)
       req.send_request(options)
     end
@@ -2642,9 +2642,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2671,9 +2671,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2752,9 +2752,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateBackupPlan AWS API Documentation
     #
-    # @overload update_backup_plan(params = {})
+    # @overload update_backup_plan(**params)
     # @param [Hash] params ({})
-    def update_backup_plan(params = {}, options = {})
+    def update_backup_plan(params = {}, **options)
       req = build_request(:update_backup_plan, params)
       req.send_request(options)
     end
@@ -2777,9 +2777,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateGlobalSettings AWS API Documentation
     #
-    # @overload update_global_settings(params = {})
+    # @overload update_global_settings(**params)
     # @param [Hash] params ({})
-    def update_global_settings(params = {}, options = {})
+    def update_global_settings(params = {}, **options)
       req = build_request(:update_global_settings, params)
       req.send_request(options)
     end
@@ -2847,9 +2847,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRecoveryPointLifecycle AWS API Documentation
     #
-    # @overload update_recovery_point_lifecycle(params = {})
+    # @overload update_recovery_point_lifecycle(**params)
     # @param [Hash] params ({})
-    def update_recovery_point_lifecycle(params = {}, options = {})
+    def update_recovery_point_lifecycle(params = {}, **options)
       req = build_request(:update_recovery_point_lifecycle, params)
       req.send_request(options)
     end
@@ -2878,9 +2878,9 @@ module Aws::Backup
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRegionSettings AWS API Documentation
     #
-    # @overload update_region_settings(params = {})
+    # @overload update_region_settings(**params)
     # @param [Hash] params ({})
-    def update_region_settings(params = {}, options = {})
+    def update_region_settings(params = {}, **options)
       req = build_request(:update_region_settings, params)
       req.send_request(options)
     end
@@ -2889,7 +2889,7 @@ module Aws::Backup
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2897,15 +2897,15 @@ module Aws::Backup
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-backup'
-      context[:gem_version] = '1.25.0'
+      context[:gem_name] = "aws-sdk-backup"
+      context[:gem_version] = "1.25.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

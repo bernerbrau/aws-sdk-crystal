@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:locationservice)
 
@@ -280,7 +280,7 @@ module Aws::LocationService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -356,9 +356,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/AssociateTrackerConsumer AWS API Documentation
     #
-    # @overload associate_tracker_consumer(params = {})
+    # @overload associate_tracker_consumer(**params)
     # @param [Hash] params ({})
-    def associate_tracker_consumer(params = {}, options = {})
+    def associate_tracker_consumer(params = {}, **options)
       req = build_request(:associate_tracker_consumer, params)
       req.send_request(options)
     end
@@ -396,9 +396,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchDeleteGeofence AWS API Documentation
     #
-    # @overload batch_delete_geofence(params = {})
+    # @overload batch_delete_geofence(**params)
     # @param [Hash] params ({})
-    def batch_delete_geofence(params = {}, options = {})
+    def batch_delete_geofence(params = {}, **options)
       req = build_request(:batch_delete_geofence, params)
       req.send_request(options)
     end
@@ -441,9 +441,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchEvaluateGeofences AWS API Documentation
     #
-    # @overload batch_evaluate_geofences(params = {})
+    # @overload batch_evaluate_geofences(**params)
     # @param [Hash] params ({})
-    def batch_evaluate_geofences(params = {}, options = {})
+    def batch_evaluate_geofences(params = {}, **options)
       req = build_request(:batch_evaluate_geofences, params)
       req.send_request(options)
     end
@@ -492,9 +492,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchGetDevicePosition AWS API Documentation
     #
-    # @overload batch_get_device_position(params = {})
+    # @overload batch_get_device_position(**params)
     # @param [Hash] params ({})
-    def batch_get_device_position(params = {}, options = {})
+    def batch_get_device_position(params = {}, **options)
       req = build_request(:batch_get_device_position, params)
       req.send_request(options)
     end
@@ -544,9 +544,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchPutGeofence AWS API Documentation
     #
-    # @overload batch_put_geofence(params = {})
+    # @overload batch_put_geofence(**params)
     # @param [Hash] params ({})
-    def batch_put_geofence(params = {}, options = {})
+    def batch_put_geofence(params = {}, **options)
       req = build_request(:batch_put_geofence, params)
       req.send_request(options)
     end
@@ -593,9 +593,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchUpdateDevicePosition AWS API Documentation
     #
-    # @overload batch_update_device_position(params = {})
+    # @overload batch_update_device_position(**params)
     # @param [Hash] params ({})
-    def batch_update_device_position(params = {}, options = {})
+    def batch_update_device_position(params = {}, **options)
       req = build_request(:batch_update_device_position, params)
       req.send_request(options)
     end
@@ -659,9 +659,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateGeofenceCollection AWS API Documentation
     #
-    # @overload create_geofence_collection(params = {})
+    # @overload create_geofence_collection(**params)
     # @param [Hash] params ({})
-    def create_geofence_collection(params = {}, options = {})
+    def create_geofence_collection(params = {}, **options)
       req = build_request(:create_geofence_collection, params)
       req.send_request(options)
     end
@@ -743,9 +743,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateMap AWS API Documentation
     #
-    # @overload create_map(params = {})
+    # @overload create_map(**params)
     # @param [Hash] params ({})
-    def create_map(params = {}, options = {})
+    def create_map(params = {}, **options)
       req = build_request(:create_map, params)
       req.send_request(options)
     end
@@ -835,9 +835,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreatePlaceIndex AWS API Documentation
     #
-    # @overload create_place_index(params = {})
+    # @overload create_place_index(**params)
     # @param [Hash] params ({})
-    def create_place_index(params = {}, options = {})
+    def create_place_index(params = {}, **options)
       req = build_request(:create_place_index, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateTracker AWS API Documentation
     #
-    # @overload create_tracker(params = {})
+    # @overload create_tracker(**params)
     # @param [Hash] params ({})
-    def create_tracker(params = {}, options = {})
+    def create_tracker(params = {}, **options)
       req = build_request(:create_tracker, params)
       req.send_request(options)
     end
@@ -930,9 +930,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteGeofenceCollection AWS API Documentation
     #
-    # @overload delete_geofence_collection(params = {})
+    # @overload delete_geofence_collection(**params)
     # @param [Hash] params ({})
-    def delete_geofence_collection(params = {}, options = {})
+    def delete_geofence_collection(params = {}, **options)
       req = build_request(:delete_geofence_collection, params)
       req.send_request(options)
     end
@@ -958,9 +958,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteMap AWS API Documentation
     #
-    # @overload delete_map(params = {})
+    # @overload delete_map(**params)
     # @param [Hash] params ({})
-    def delete_map(params = {}, options = {})
+    def delete_map(params = {}, **options)
       req = build_request(:delete_map, params)
       req.send_request(options)
     end
@@ -985,9 +985,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeletePlaceIndex AWS API Documentation
     #
-    # @overload delete_place_index(params = {})
+    # @overload delete_place_index(**params)
     # @param [Hash] params ({})
-    def delete_place_index(params = {}, options = {})
+    def delete_place_index(params = {}, **options)
       req = build_request(:delete_place_index, params)
       req.send_request(options)
     end
@@ -1014,9 +1014,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteTracker AWS API Documentation
     #
-    # @overload delete_tracker(params = {})
+    # @overload delete_tracker(**params)
     # @param [Hash] params ({})
-    def delete_tracker(params = {}, options = {})
+    def delete_tracker(params = {}, **options)
       req = build_request(:delete_tracker, params)
       req.send_request(options)
     end
@@ -1050,9 +1050,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeGeofenceCollection AWS API Documentation
     #
-    # @overload describe_geofence_collection(params = {})
+    # @overload describe_geofence_collection(**params)
     # @param [Hash] params ({})
-    def describe_geofence_collection(params = {}, options = {})
+    def describe_geofence_collection(params = {}, **options)
       req = build_request(:describe_geofence_collection, params)
       req.send_request(options)
     end
@@ -1090,9 +1090,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeMap AWS API Documentation
     #
-    # @overload describe_map(params = {})
+    # @overload describe_map(**params)
     # @param [Hash] params ({})
-    def describe_map(params = {}, options = {})
+    def describe_map(params = {}, **options)
       req = build_request(:describe_map, params)
       req.send_request(options)
     end
@@ -1130,9 +1130,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribePlaceIndex AWS API Documentation
     #
-    # @overload describe_place_index(params = {})
+    # @overload describe_place_index(**params)
     # @param [Hash] params ({})
-    def describe_place_index(params = {}, options = {})
+    def describe_place_index(params = {}, **options)
       req = build_request(:describe_place_index, params)
       req.send_request(options)
     end
@@ -1166,9 +1166,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeTracker AWS API Documentation
     #
-    # @overload describe_tracker(params = {})
+    # @overload describe_tracker(**params)
     # @param [Hash] params ({})
-    def describe_tracker(params = {}, options = {})
+    def describe_tracker(params = {}, **options)
       req = build_request(:describe_tracker, params)
       req.send_request(options)
     end
@@ -1206,9 +1206,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DisassociateTrackerConsumer AWS API Documentation
     #
-    # @overload disassociate_tracker_consumer(params = {})
+    # @overload disassociate_tracker_consumer(**params)
     # @param [Hash] params ({})
-    def disassociate_tracker_consumer(params = {}, options = {})
+    def disassociate_tracker_consumer(params = {}, **options)
       req = build_request(:disassociate_tracker_consumer, params)
       req.send_request(options)
     end
@@ -1249,9 +1249,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetDevicePosition AWS API Documentation
     #
-    # @overload get_device_position(params = {})
+    # @overload get_device_position(**params)
     # @param [Hash] params ({})
-    def get_device_position(params = {}, options = {})
+    def get_device_position(params = {}, **options)
       req = build_request(:get_device_position, params)
       req.send_request(options)
     end
@@ -1331,9 +1331,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetDevicePositionHistory AWS API Documentation
     #
-    # @overload get_device_position_history(params = {})
+    # @overload get_device_position_history(**params)
     # @param [Hash] params ({})
-    def get_device_position_history(params = {}, options = {})
+    def get_device_position_history(params = {}, **options)
       req = build_request(:get_device_position_history, params)
       req.send_request(options)
     end
@@ -1374,9 +1374,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetGeofence AWS API Documentation
     #
-    # @overload get_geofence(params = {})
+    # @overload get_geofence(**params)
     # @param [Hash] params ({})
-    def get_geofence(params = {}, options = {})
+    def get_geofence(params = {}, **options)
       req = build_request(:get_geofence, params)
       req.send_request(options)
     end
@@ -1416,9 +1416,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapGlyphs AWS API Documentation
     #
-    # @overload get_map_glyphs(params = {})
+    # @overload get_map_glyphs(**params)
     # @param [Hash] params ({})
-    def get_map_glyphs(params = {}, options = {}, &block)
+    def get_map_glyphs(params = {}, **options, &block)
       req = build_request(:get_map_glyphs, params)
       req.send_request(options, &block)
     end
@@ -1464,9 +1464,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapSprites AWS API Documentation
     #
-    # @overload get_map_sprites(params = {})
+    # @overload get_map_sprites(**params)
     # @param [Hash] params ({})
-    def get_map_sprites(params = {}, options = {}, &block)
+    def get_map_sprites(params = {}, **options, &block)
       req = build_request(:get_map_sprites, params)
       req.send_request(options, &block)
     end
@@ -1499,9 +1499,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapStyleDescriptor AWS API Documentation
     #
-    # @overload get_map_style_descriptor(params = {})
+    # @overload get_map_style_descriptor(**params)
     # @param [Hash] params ({})
-    def get_map_style_descriptor(params = {}, options = {}, &block)
+    def get_map_style_descriptor(params = {}, **options, &block)
       req = build_request(:get_map_style_descriptor, params)
       req.send_request(options, &block)
     end
@@ -1548,9 +1548,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapTile AWS API Documentation
     #
-    # @overload get_map_tile(params = {})
+    # @overload get_map_tile(**params)
     # @param [Hash] params ({})
-    def get_map_tile(params = {}, options = {}, &block)
+    def get_map_tile(params = {}, **options, &block)
       req = build_request(:get_map_tile, params)
       req.send_request(options, &block)
     end
@@ -1594,9 +1594,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListGeofenceCollections AWS API Documentation
     #
-    # @overload list_geofence_collections(params = {})
+    # @overload list_geofence_collections(**params)
     # @param [Hash] params ({})
-    def list_geofence_collections(params = {}, options = {})
+    def list_geofence_collections(params = {}, **options)
       req = build_request(:list_geofence_collections, params)
       req.send_request(options)
     end
@@ -1641,9 +1641,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListGeofences AWS API Documentation
     #
-    # @overload list_geofences(params = {})
+    # @overload list_geofences(**params)
     # @param [Hash] params ({})
-    def list_geofences(params = {}, options = {})
+    def list_geofences(params = {}, **options)
       req = build_request(:list_geofences, params)
       req.send_request(options)
     end
@@ -1688,9 +1688,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListMaps AWS API Documentation
     #
-    # @overload list_maps(params = {})
+    # @overload list_maps(**params)
     # @param [Hash] params ({})
-    def list_maps(params = {}, options = {})
+    def list_maps(params = {}, **options)
       req = build_request(:list_maps, params)
       req.send_request(options)
     end
@@ -1735,9 +1735,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListPlaceIndexes AWS API Documentation
     #
-    # @overload list_place_indexes(params = {})
+    # @overload list_place_indexes(**params)
     # @param [Hash] params ({})
-    def list_place_indexes(params = {}, options = {})
+    def list_place_indexes(params = {}, **options)
       req = build_request(:list_place_indexes, params)
       req.send_request(options)
     end
@@ -1784,9 +1784,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListTrackerConsumers AWS API Documentation
     #
-    # @overload list_tracker_consumers(params = {})
+    # @overload list_tracker_consumers(**params)
     # @param [Hash] params ({})
-    def list_tracker_consumers(params = {}, options = {})
+    def list_tracker_consumers(params = {}, **options)
       req = build_request(:list_tracker_consumers, params)
       req.send_request(options)
     end
@@ -1830,9 +1830,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListTrackers AWS API Documentation
     #
-    # @overload list_trackers(params = {})
+    # @overload list_trackers(**params)
     # @param [Hash] params ({})
-    def list_trackers(params = {}, options = {})
+    def list_trackers(params = {}, **options)
       req = build_request(:list_trackers, params)
       req.send_request(options)
     end
@@ -1878,9 +1878,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/PutGeofence AWS API Documentation
     #
-    # @overload put_geofence(params = {})
+    # @overload put_geofence(**params)
     # @param [Hash] params ({})
-    def put_geofence(params = {}, options = {})
+    def put_geofence(params = {}, **options)
       req = build_request(:put_geofence, params)
       req.send_request(options)
     end
@@ -1956,9 +1956,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForPosition AWS API Documentation
     #
-    # @overload search_place_index_for_position(params = {})
+    # @overload search_place_index_for_position(**params)
     # @param [Hash] params ({})
-    def search_place_index_for_position(params = {}, options = {})
+    def search_place_index_for_position(params = {}, **options)
       req = build_request(:search_place_index_for_position, params)
       req.send_request(options)
     end
@@ -2095,9 +2095,9 @@ module Aws::LocationService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForText AWS API Documentation
     #
-    # @overload search_place_index_for_text(params = {})
+    # @overload search_place_index_for_text(**params)
     # @param [Hash] params ({})
-    def search_place_index_for_text(params = {}, options = {})
+    def search_place_index_for_text(params = {}, **options)
       req = build_request(:search_place_index_for_text, params)
       req.send_request(options)
     end
@@ -2106,7 +2106,7 @@ module Aws::LocationService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2114,15 +2114,15 @@ module Aws::LocationService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-locationservice'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-locationservice"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

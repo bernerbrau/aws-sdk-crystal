@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-wafregional/types'
-require_relative 'aws-sdk-wafregional/client_api'
-require_relative 'aws-sdk-wafregional/client'
-require_relative 'aws-sdk-wafregional/errors'
-require_relative 'aws-sdk-wafregional/resource'
-require_relative 'aws-sdk-wafregional/customizations'
+require_relative "aws-sdk-wafregional/types"
+require_relative "aws-sdk-wafregional/client_api"
+require_relative "aws-sdk-wafregional/client"
+require_relative "aws-sdk-wafregional/errors"
+require_relative "aws-sdk-wafregional/resource"
+require_relative "aws-sdk-wafregional/customizations"
 
 # This module provides support for AWS WAF Regional. This module is available in the
 # `aws-sdk-wafregional` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-wafregional/customizations'
 # @!group service
 module Aws::WAFRegional
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

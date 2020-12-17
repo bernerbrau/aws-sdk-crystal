@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cognitoidentityprovider/types'
-require_relative 'aws-sdk-cognitoidentityprovider/client_api'
-require_relative 'aws-sdk-cognitoidentityprovider/client'
-require_relative 'aws-sdk-cognitoidentityprovider/errors'
-require_relative 'aws-sdk-cognitoidentityprovider/resource'
-require_relative 'aws-sdk-cognitoidentityprovider/customizations'
+require_relative "aws-sdk-cognitoidentityprovider/types"
+require_relative "aws-sdk-cognitoidentityprovider/client_api"
+require_relative "aws-sdk-cognitoidentityprovider/client"
+require_relative "aws-sdk-cognitoidentityprovider/errors"
+require_relative "aws-sdk-cognitoidentityprovider/resource"
+require_relative "aws-sdk-cognitoidentityprovider/customizations"
 
 # This module provides support for Amazon Cognito Identity Provider. This module is available in the
 # `aws-sdk-cognitoidentityprovider` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cognitoidentityprovider/customizations'
 # @!group service
 module Aws::CognitoIdentityProvider
 
-  GEM_VERSION = '1.48.0'
+  GEM_VERSION = "1.48.0"
 
 end

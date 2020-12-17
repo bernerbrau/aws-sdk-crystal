@@ -8,11 +8,11 @@
 Feature: Smoke tests for CloudTrail
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @cloudtrail @smoke
   Scenario: Call Aws::CloudTrail::Client#describe_trails and expect it to succeed
-  When I call the operation 'describe_trails' with params:
+  When I call the operation "describe_trails" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @cloudtrail @smoke
   Scenario: Call Aws::Aws::CloudTrail::Client#delete_trail and expect it to fail
-  When I call the operation 'delete_trail' with params:
+  When I call the operation "delete_trail" with params:
     """
 {"name":"faketrail"}
     """

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mwaa)
 
@@ -280,7 +280,7 @@ module Aws::MWAA
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -350,9 +350,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/CreateCliToken AWS API Documentation
     #
-    # @overload create_cli_token(params = {})
+    # @overload create_cli_token(**params)
     # @param [Hash] params ({})
-    def create_cli_token(params = {}, options = {})
+    def create_cli_token(params = {}, **options)
       req = build_request(:create_cli_token, params)
       req.send_request(options)
     end
@@ -546,9 +546,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/CreateEnvironment AWS API Documentation
     #
-    # @overload create_environment(params = {})
+    # @overload create_environment(**params)
     # @param [Hash] params ({})
-    def create_environment(params = {}, options = {})
+    def create_environment(params = {}, **options)
       req = build_request(:create_environment, params)
       req.send_request(options)
     end
@@ -577,9 +577,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/CreateWebLoginToken AWS API Documentation
     #
-    # @overload create_web_login_token(params = {})
+    # @overload create_web_login_token(**params)
     # @param [Hash] params ({})
-    def create_web_login_token(params = {}, options = {})
+    def create_web_login_token(params = {}, **options)
       req = build_request(:create_web_login_token, params)
       req.send_request(options)
     end
@@ -599,9 +599,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/DeleteEnvironment AWS API Documentation
     #
-    # @overload delete_environment(params = {})
+    # @overload delete_environment(**params)
     # @param [Hash] params ({})
-    def delete_environment(params = {}, options = {})
+    def delete_environment(params = {}, **options)
       req = build_request(:delete_environment, params)
       req.send_request(options)
     end
@@ -672,9 +672,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/GetEnvironment AWS API Documentation
     #
-    # @overload get_environment(params = {})
+    # @overload get_environment(**params)
     # @param [Hash] params ({})
-    def get_environment(params = {}, options = {})
+    def get_environment(params = {}, **options)
       req = build_request(:get_environment, params)
       req.send_request(options)
     end
@@ -709,9 +709,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/ListEnvironments AWS API Documentation
     #
-    # @overload list_environments(params = {})
+    # @overload list_environments(**params)
     # @param [Hash] params ({})
-    def list_environments(params = {}, options = {})
+    def list_environments(params = {}, **options)
       req = build_request(:list_environments, params)
       req.send_request(options)
     end
@@ -738,9 +738,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -785,9 +785,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/PublishMetrics AWS API Documentation
     #
-    # @overload publish_metrics(params = {})
+    # @overload publish_metrics(**params)
     # @param [Hash] params ({})
-    def publish_metrics(params = {}, options = {})
+    def publish_metrics(params = {}, **options)
       req = build_request(:publish_metrics, params)
       req.send_request(options)
     end
@@ -813,9 +813,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -839,9 +839,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -957,9 +957,9 @@ module Aws::MWAA
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/UpdateEnvironment AWS API Documentation
     #
-    # @overload update_environment(params = {})
+    # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, options = {})
+    def update_environment(params = {}, **options)
       req = build_request(:update_environment, params)
       req.send_request(options)
     end
@@ -968,7 +968,7 @@ module Aws::MWAA
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -976,15 +976,15 @@ module Aws::MWAA
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mwaa'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-mwaa"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

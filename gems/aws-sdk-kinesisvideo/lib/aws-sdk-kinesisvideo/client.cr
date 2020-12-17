@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kinesisvideo)
 
@@ -280,7 +280,7 @@ module Aws::KinesisVideo
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -373,9 +373,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/CreateSignalingChannel AWS API Documentation
     #
-    # @overload create_signaling_channel(params = {})
+    # @overload create_signaling_channel(**params)
     # @param [Hash] params ({})
-    def create_signaling_channel(params = {}, options = {})
+    def create_signaling_channel(params = {}, **options)
       req = build_request(:create_signaling_channel, params)
       req.send_request(options)
     end
@@ -481,9 +481,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/CreateStream AWS API Documentation
     #
-    # @overload create_stream(params = {})
+    # @overload create_stream(**params)
     # @param [Hash] params ({})
-    def create_stream(params = {}, options = {})
+    def create_stream(params = {}, **options)
       req = build_request(:create_stream, params)
       req.send_request(options)
     end
@@ -512,9 +512,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DeleteSignalingChannel AWS API Documentation
     #
-    # @overload delete_signaling_channel(params = {})
+    # @overload delete_signaling_channel(**params)
     # @param [Hash] params ({})
-    def delete_signaling_channel(params = {}, options = {})
+    def delete_signaling_channel(params = {}, **options)
       req = build_request(:delete_signaling_channel, params)
       req.send_request(options)
     end
@@ -559,9 +559,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DeleteStream AWS API Documentation
     #
-    # @overload delete_stream(params = {})
+    # @overload delete_stream(**params)
     # @param [Hash] params ({})
-    def delete_stream(params = {}, options = {})
+    def delete_stream(params = {}, **options)
       req = build_request(:delete_stream, params)
       req.send_request(options)
     end
@@ -599,9 +599,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DescribeSignalingChannel AWS API Documentation
     #
-    # @overload describe_signaling_channel(params = {})
+    # @overload describe_signaling_channel(**params)
     # @param [Hash] params ({})
-    def describe_signaling_channel(params = {}, options = {})
+    def describe_signaling_channel(params = {}, **options)
       req = build_request(:describe_signaling_channel, params)
       req.send_request(options)
     end
@@ -640,9 +640,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DescribeStream AWS API Documentation
     #
-    # @overload describe_stream(params = {})
+    # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, options = {})
+    def describe_stream(params = {}, **options)
       req = build_request(:describe_stream, params)
       req.send_request(options)
     end
@@ -690,9 +690,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/GetDataEndpoint AWS API Documentation
     #
-    # @overload get_data_endpoint(params = {})
+    # @overload get_data_endpoint(**params)
     # @param [Hash] params ({})
-    def get_data_endpoint(params = {}, options = {})
+    def get_data_endpoint(params = {}, **options)
       req = build_request(:get_data_endpoint, params)
       req.send_request(options)
     end
@@ -743,9 +743,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/GetSignalingChannelEndpoint AWS API Documentation
     #
-    # @overload get_signaling_channel_endpoint(params = {})
+    # @overload get_signaling_channel_endpoint(**params)
     # @param [Hash] params ({})
-    def get_signaling_channel_endpoint(params = {}, options = {})
+    def get_signaling_channel_endpoint(params = {}, **options)
       req = build_request(:get_signaling_channel_endpoint, params)
       req.send_request(options)
     end
@@ -799,9 +799,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/ListSignalingChannels AWS API Documentation
     #
-    # @overload list_signaling_channels(params = {})
+    # @overload list_signaling_channels(**params)
     # @param [Hash] params ({})
-    def list_signaling_channels(params = {}, options = {})
+    def list_signaling_channels(params = {}, **options)
       req = build_request(:list_signaling_channels, params)
       req.send_request(options)
     end
@@ -859,9 +859,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/ListStreams AWS API Documentation
     #
-    # @overload list_streams(params = {})
+    # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, options = {})
+    def list_streams(params = {}, **options)
       req = build_request(:list_streams, params)
       req.send_request(options)
     end
@@ -898,9 +898,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -943,9 +943,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/ListTagsForStream AWS API Documentation
     #
-    # @overload list_tags_for_stream(params = {})
+    # @overload list_tags_for_stream(**params)
     # @param [Hash] params ({})
-    def list_tags_for_stream(params = {}, options = {})
+    def list_tags_for_stream(params = {}, **options)
       req = build_request(:list_tags_for_stream, params)
       req.send_request(options)
     end
@@ -985,9 +985,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1035,9 +1035,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/TagStream AWS API Documentation
     #
-    # @overload tag_stream(params = {})
+    # @overload tag_stream(**params)
     # @param [Hash] params ({})
-    def tag_stream(params = {}, options = {})
+    def tag_stream(params = {}, **options)
       req = build_request(:tag_stream, params)
       req.send_request(options)
     end
@@ -1064,9 +1064,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1099,9 +1099,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UntagStream AWS API Documentation
     #
-    # @overload untag_stream(params = {})
+    # @overload untag_stream(**params)
     # @param [Hash] params ({})
-    def untag_stream(params = {}, options = {})
+    def untag_stream(params = {}, **options)
       req = build_request(:untag_stream, params)
       req.send_request(options)
     end
@@ -1168,9 +1168,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateDataRetention AWS API Documentation
     #
-    # @overload update_data_retention(params = {})
+    # @overload update_data_retention(**params)
     # @param [Hash] params ({})
-    def update_data_retention(params = {}, options = {})
+    def update_data_retention(params = {}, **options)
       req = build_request(:update_data_retention, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateSignalingChannel AWS API Documentation
     #
-    # @overload update_signaling_channel(params = {})
+    # @overload update_signaling_channel(**params)
     # @param [Hash] params ({})
-    def update_signaling_channel(params = {}, options = {})
+    def update_signaling_channel(params = {}, **options)
       req = build_request(:update_signaling_channel, params)
       req.send_request(options)
     end
@@ -1278,9 +1278,9 @@ module Aws::KinesisVideo
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateStream AWS API Documentation
     #
-    # @overload update_stream(params = {})
+    # @overload update_stream(**params)
     # @param [Hash] params ({})
-    def update_stream(params = {}, options = {})
+    def update_stream(params = {}, **options)
       req = build_request(:update_stream, params)
       req.send_request(options)
     end
@@ -1289,7 +1289,7 @@ module Aws::KinesisVideo
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1297,15 +1297,15 @@ module Aws::KinesisVideo
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kinesisvideo'
-      context[:gem_version] = '1.30.0'
+      context[:gem_name] = "aws-sdk-kinesisvideo"
+      context[:gem_version] = "1.30.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

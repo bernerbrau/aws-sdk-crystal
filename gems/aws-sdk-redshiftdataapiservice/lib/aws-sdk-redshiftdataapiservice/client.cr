@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:redshiftdataapiservice)
 
@@ -290,7 +290,7 @@ module Aws::RedshiftDataAPIService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -361,9 +361,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/CancelStatement AWS API Documentation
     #
-    # @overload cancel_statement(params = {})
+    # @overload cancel_statement(**params)
     # @param [Hash] params ({})
-    def cancel_statement(params = {}, options = {})
+    def cancel_statement(params = {}, **options)
       req = build_request(:cancel_statement, params)
       req.send_request(options)
     end
@@ -423,9 +423,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/DescribeStatement AWS API Documentation
     #
-    # @overload describe_statement(params = {})
+    # @overload describe_statement(**params)
     # @param [Hash] params ({})
-    def describe_statement(params = {}, options = {})
+    def describe_statement(params = {}, **options)
       req = build_request(:describe_statement, params)
       req.send_request(options)
     end
@@ -525,9 +525,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/DescribeTable AWS API Documentation
     #
-    # @overload describe_table(params = {})
+    # @overload describe_table(**params)
     # @param [Hash] params ({})
-    def describe_table(params = {}, options = {})
+    def describe_table(params = {}, **options)
       req = build_request(:describe_table, params)
       req.send_request(options)
     end
@@ -606,9 +606,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ExecuteStatement AWS API Documentation
     #
-    # @overload execute_statement(params = {})
+    # @overload execute_statement(**params)
     # @param [Hash] params ({})
-    def execute_statement(params = {}, options = {})
+    def execute_statement(params = {}, **options)
       req = build_request(:execute_statement, params)
       req.send_request(options)
     end
@@ -675,9 +675,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/GetStatementResult AWS API Documentation
     #
-    # @overload get_statement_result(params = {})
+    # @overload get_statement_result(**params)
     # @param [Hash] params ({})
-    def get_statement_result(params = {}, options = {})
+    def get_statement_result(params = {}, **options)
       req = build_request(:get_statement_result, params)
       req.send_request(options)
     end
@@ -751,9 +751,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListDatabases AWS API Documentation
     #
-    # @overload list_databases(params = {})
+    # @overload list_databases(**params)
     # @param [Hash] params ({})
-    def list_databases(params = {}, options = {})
+    def list_databases(params = {}, **options)
       req = build_request(:list_databases, params)
       req.send_request(options)
     end
@@ -834,9 +834,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListSchemas AWS API Documentation
     #
-    # @overload list_schemas(params = {})
+    # @overload list_schemas(**params)
     # @param [Hash] params ({})
-    def list_schemas(params = {}, options = {})
+    def list_schemas(params = {}, **options)
       req = build_request(:list_schemas, params)
       req.send_request(options)
     end
@@ -914,9 +914,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListStatements AWS API Documentation
     #
-    # @overload list_statements(params = {})
+    # @overload list_statements(**params)
     # @param [Hash] params ({})
-    def list_statements(params = {}, options = {})
+    def list_statements(params = {}, **options)
       req = build_request(:list_statements, params)
       req.send_request(options)
     end
@@ -1014,9 +1014,9 @@ module Aws::RedshiftDataAPIService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListTables AWS API Documentation
     #
-    # @overload list_tables(params = {})
+    # @overload list_tables(**params)
     # @param [Hash] params ({})
-    def list_tables(params = {}, options = {})
+    def list_tables(params = {}, **options)
       req = build_request(:list_tables, params)
       req.send_request(options)
     end
@@ -1025,7 +1025,7 @@ module Aws::RedshiftDataAPIService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1033,15 +1033,15 @@ module Aws::RedshiftDataAPIService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-redshiftdataapiservice'
-      context[:gem_version] = '1.2.0'
+      context[:gem_name] = "aws-sdk-redshiftdataapiservice"
+      context[:gem_version] = "1.2.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:opsworks)
 
@@ -290,7 +290,7 @@ module Aws::OpsWorks
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -375,9 +375,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/AssignInstance AWS API Documentation
     #
-    # @overload assign_instance(params = {})
+    # @overload assign_instance(**params)
     # @param [Hash] params ({})
-    def assign_instance(params = {}, options = {})
+    def assign_instance(params = {}, **options)
       req = build_request(:assign_instance, params)
       req.send_request(options)
     end
@@ -415,9 +415,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/AssignVolume AWS API Documentation
     #
-    # @overload assign_volume(params = {})
+    # @overload assign_volume(**params)
     # @param [Hash] params ({})
-    def assign_volume(params = {}, options = {})
+    def assign_volume(params = {}, **options)
       req = build_request(:assign_volume, params)
       req.send_request(options)
     end
@@ -454,9 +454,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/AssociateElasticIp AWS API Documentation
     #
-    # @overload associate_elastic_ip(params = {})
+    # @overload associate_elastic_ip(**params)
     # @param [Hash] params ({})
-    def associate_elastic_ip(params = {}, options = {})
+    def associate_elastic_ip(params = {}, **options)
       req = build_request(:associate_elastic_ip, params)
       req.send_request(options)
     end
@@ -501,9 +501,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/AttachElasticLoadBalancer AWS API Documentation
     #
-    # @overload attach_elastic_load_balancer(params = {})
+    # @overload attach_elastic_load_balancer(**params)
     # @param [Hash] params ({})
-    def attach_elastic_load_balancer(params = {}, options = {})
+    def attach_elastic_load_balancer(params = {}, **options)
       req = build_request(:attach_elastic_load_balancer, params)
       req.send_request(options)
     end
@@ -873,9 +873,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CloneStack AWS API Documentation
     #
-    # @overload clone_stack(params = {})
+    # @overload clone_stack(**params)
     # @param [Hash] params ({})
-    def clone_stack(params = {}, options = {})
+    def clone_stack(params = {}, **options)
       req = build_request(:clone_stack, params)
       req.send_request(options)
     end
@@ -1007,9 +1007,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateApp AWS API Documentation
     #
-    # @overload create_app(params = {})
+    # @overload create_app(**params)
     # @param [Hash] params ({})
-    def create_app(params = {}, options = {})
+    def create_app(params = {}, **options)
       req = build_request(:create_app, params)
       req.send_request(options)
     end
@@ -1091,9 +1091,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateDeployment AWS API Documentation
     #
-    # @overload create_deployment(params = {})
+    # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, options = {})
+    def create_deployment(params = {}, **options)
       req = build_request(:create_deployment, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance AWS API Documentation
     #
-    # @overload create_instance(params = {})
+    # @overload create_instance(**params)
     # @param [Hash] params ({})
-    def create_instance(params = {}, options = {})
+    def create_instance(params = {}, **options)
       req = build_request(:create_instance, params)
       req.send_request(options)
     end
@@ -1545,9 +1545,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateLayer AWS API Documentation
     #
-    # @overload create_layer(params = {})
+    # @overload create_layer(**params)
     # @param [Hash] params ({})
-    def create_layer(params = {}, options = {})
+    def create_layer(params = {}, **options)
       req = build_request(:create_layer, params)
       req.send_request(options)
     end
@@ -1911,9 +1911,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateStack AWS API Documentation
     #
-    # @overload create_stack(params = {})
+    # @overload create_stack(**params)
     # @param [Hash] params ({})
-    def create_stack(params = {}, options = {})
+    def create_stack(params = {}, **options)
       req = build_request(:create_stack, params)
       req.send_request(options)
     end
@@ -1971,9 +1971,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateUserProfile AWS API Documentation
     #
-    # @overload create_user_profile(params = {})
+    # @overload create_user_profile(**params)
     # @param [Hash] params ({})
-    def create_user_profile(params = {}, options = {})
+    def create_user_profile(params = {}, **options)
       req = build_request(:create_user_profile, params)
       req.send_request(options)
     end
@@ -2002,9 +2002,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeleteApp AWS API Documentation
     #
-    # @overload delete_app(params = {})
+    # @overload delete_app(**params)
     # @param [Hash] params ({})
-    def delete_app(params = {}, options = {})
+    def delete_app(params = {}, **options)
       req = build_request(:delete_app, params)
       req.send_request(options)
     end
@@ -2045,9 +2045,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeleteInstance AWS API Documentation
     #
-    # @overload delete_instance(params = {})
+    # @overload delete_instance(**params)
     # @param [Hash] params ({})
-    def delete_instance(params = {}, options = {})
+    def delete_instance(params = {}, **options)
       req = build_request(:delete_instance, params)
       req.send_request(options)
     end
@@ -2079,9 +2079,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeleteLayer AWS API Documentation
     #
-    # @overload delete_layer(params = {})
+    # @overload delete_layer(**params)
     # @param [Hash] params ({})
-    def delete_layer(params = {}, options = {})
+    def delete_layer(params = {}, **options)
       req = build_request(:delete_layer, params)
       req.send_request(options)
     end
@@ -2113,9 +2113,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeleteStack AWS API Documentation
     #
-    # @overload delete_stack(params = {})
+    # @overload delete_stack(**params)
     # @param [Hash] params ({})
-    def delete_stack(params = {}, options = {})
+    def delete_stack(params = {}, **options)
       req = build_request(:delete_stack, params)
       req.send_request(options)
     end
@@ -2144,9 +2144,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeleteUserProfile AWS API Documentation
     #
-    # @overload delete_user_profile(params = {})
+    # @overload delete_user_profile(**params)
     # @param [Hash] params ({})
-    def delete_user_profile(params = {}, options = {})
+    def delete_user_profile(params = {}, **options)
       req = build_request(:delete_user_profile, params)
       req.send_request(options)
     end
@@ -2178,9 +2178,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeregisterEcsCluster AWS API Documentation
     #
-    # @overload deregister_ecs_cluster(params = {})
+    # @overload deregister_ecs_cluster(**params)
     # @param [Hash] params ({})
-    def deregister_ecs_cluster(params = {}, options = {})
+    def deregister_ecs_cluster(params = {}, **options)
       req = build_request(:deregister_ecs_cluster, params)
       req.send_request(options)
     end
@@ -2212,9 +2212,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeregisterElasticIp AWS API Documentation
     #
-    # @overload deregister_elastic_ip(params = {})
+    # @overload deregister_elastic_ip(**params)
     # @param [Hash] params ({})
-    def deregister_elastic_ip(params = {}, options = {})
+    def deregister_elastic_ip(params = {}, **options)
       req = build_request(:deregister_elastic_ip, params)
       req.send_request(options)
     end
@@ -2246,9 +2246,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeregisterInstance AWS API Documentation
     #
-    # @overload deregister_instance(params = {})
+    # @overload deregister_instance(**params)
     # @param [Hash] params ({})
-    def deregister_instance(params = {}, options = {})
+    def deregister_instance(params = {}, **options)
       req = build_request(:deregister_instance, params)
       req.send_request(options)
     end
@@ -2277,9 +2277,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeregisterRdsDbInstance AWS API Documentation
     #
-    # @overload deregister_rds_db_instance(params = {})
+    # @overload deregister_rds_db_instance(**params)
     # @param [Hash] params ({})
-    def deregister_rds_db_instance(params = {}, options = {})
+    def deregister_rds_db_instance(params = {}, **options)
       req = build_request(:deregister_rds_db_instance, params)
       req.send_request(options)
     end
@@ -2312,9 +2312,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DeregisterVolume AWS API Documentation
     #
-    # @overload deregister_volume(params = {})
+    # @overload deregister_volume(**params)
     # @param [Hash] params ({})
-    def deregister_volume(params = {}, options = {})
+    def deregister_volume(params = {}, **options)
       req = build_request(:deregister_volume, params)
       req.send_request(options)
     end
@@ -2353,9 +2353,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeAgentVersions AWS API Documentation
     #
-    # @overload describe_agent_versions(params = {})
+    # @overload describe_agent_versions(**params)
     # @param [Hash] params ({})
-    def describe_agent_versions(params = {}, options = {})
+    def describe_agent_versions(params = {}, **options)
       req = build_request(:describe_agent_versions, params)
       req.send_request(options)
     end
@@ -2436,9 +2436,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeApps AWS API Documentation
     #
-    # @overload describe_apps(params = {})
+    # @overload describe_apps(**params)
     # @param [Hash] params ({})
-    def describe_apps(params = {}, options = {})
+    def describe_apps(params = {}, **options)
       req = build_request(:describe_apps, params)
       req.send_request(options)
     end
@@ -2502,9 +2502,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeCommands AWS API Documentation
     #
-    # @overload describe_commands(params = {})
+    # @overload describe_commands(**params)
     # @param [Hash] params ({})
-    def describe_commands(params = {}, options = {})
+    def describe_commands(params = {}, **options)
       req = build_request(:describe_commands, params)
       req.send_request(options)
     end
@@ -2577,9 +2577,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeDeployments AWS API Documentation
     #
-    # @overload describe_deployments(params = {})
+    # @overload describe_deployments(**params)
     # @param [Hash] params ({})
-    def describe_deployments(params = {}, options = {})
+    def describe_deployments(params = {}, **options)
       req = build_request(:describe_deployments, params)
       req.send_request(options)
     end
@@ -2650,9 +2650,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeEcsClusters AWS API Documentation
     #
-    # @overload describe_ecs_clusters(params = {})
+    # @overload describe_ecs_clusters(**params)
     # @param [Hash] params ({})
-    def describe_ecs_clusters(params = {}, options = {})
+    def describe_ecs_clusters(params = {}, **options)
       req = build_request(:describe_ecs_clusters, params)
       req.send_request(options)
     end
@@ -2713,9 +2713,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeElasticIps AWS API Documentation
     #
-    # @overload describe_elastic_ips(params = {})
+    # @overload describe_elastic_ips(**params)
     # @param [Hash] params ({})
-    def describe_elastic_ips(params = {}, options = {})
+    def describe_elastic_ips(params = {}, **options)
       req = build_request(:describe_elastic_ips, params)
       req.send_request(options)
     end
@@ -2773,9 +2773,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeElasticLoadBalancers AWS API Documentation
     #
-    # @overload describe_elastic_load_balancers(params = {})
+    # @overload describe_elastic_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_elastic_load_balancers(params = {}, options = {})
+    def describe_elastic_load_balancers(params = {}, **options)
       req = build_request(:describe_elastic_load_balancers, params)
       req.send_request(options)
     end
@@ -2888,9 +2888,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeInstances AWS API Documentation
     #
-    # @overload describe_instances(params = {})
+    # @overload describe_instances(**params)
     # @param [Hash] params ({})
-    def describe_instances(params = {}, options = {})
+    def describe_instances(params = {}, **options)
       req = build_request(:describe_instances, params)
       req.send_request(options)
     end
@@ -3001,9 +3001,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeLayers AWS API Documentation
     #
-    # @overload describe_layers(params = {})
+    # @overload describe_layers(**params)
     # @param [Hash] params ({})
-    def describe_layers(params = {}, options = {})
+    def describe_layers(params = {}, **options)
       req = build_request(:describe_layers, params)
       req.send_request(options)
     end
@@ -3061,9 +3061,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeLoadBasedAutoScaling AWS API Documentation
     #
-    # @overload describe_load_based_auto_scaling(params = {})
+    # @overload describe_load_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def describe_load_based_auto_scaling(params = {}, options = {})
+    def describe_load_based_auto_scaling(params = {}, **options)
       req = build_request(:describe_load_based_auto_scaling, params)
       req.send_request(options)
     end
@@ -3092,9 +3092,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeMyUserProfile AWS API Documentation
     #
-    # @overload describe_my_user_profile(params = {})
+    # @overload describe_my_user_profile(**params)
     # @param [Hash] params ({})
-    def describe_my_user_profile(params = {}, options = {})
+    def describe_my_user_profile(params = {}, **options)
       req = build_request(:describe_my_user_profile, params)
       req.send_request(options)
     end
@@ -3121,9 +3121,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeOperatingSystems AWS API Documentation
     #
-    # @overload describe_operating_systems(params = {})
+    # @overload describe_operating_systems(**params)
     # @param [Hash] params ({})
-    def describe_operating_systems(params = {}, options = {})
+    def describe_operating_systems(params = {}, **options)
       req = build_request(:describe_operating_systems, params)
       req.send_request(options)
     end
@@ -3172,9 +3172,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribePermissions AWS API Documentation
     #
-    # @overload describe_permissions(params = {})
+    # @overload describe_permissions(**params)
     # @param [Hash] params ({})
-    def describe_permissions(params = {}, options = {})
+    def describe_permissions(params = {}, **options)
       req = build_request(:describe_permissions, params)
       req.send_request(options)
     end
@@ -3239,9 +3239,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeRaidArrays AWS API Documentation
     #
-    # @overload describe_raid_arrays(params = {})
+    # @overload describe_raid_arrays(**params)
     # @param [Hash] params ({})
-    def describe_raid_arrays(params = {}, options = {})
+    def describe_raid_arrays(params = {}, **options)
       req = build_request(:describe_raid_arrays, params)
       req.send_request(options)
     end
@@ -3293,9 +3293,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeRdsDbInstances AWS API Documentation
     #
-    # @overload describe_rds_db_instances(params = {})
+    # @overload describe_rds_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_rds_db_instances(params = {}, options = {})
+    def describe_rds_db_instances(params = {}, **options)
       req = build_request(:describe_rds_db_instances, params)
       req.send_request(options)
     end
@@ -3353,9 +3353,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeServiceErrors AWS API Documentation
     #
-    # @overload describe_service_errors(params = {})
+    # @overload describe_service_errors(**params)
     # @param [Hash] params ({})
-    def describe_service_errors(params = {}, options = {})
+    def describe_service_errors(params = {}, **options)
       req = build_request(:describe_service_errors, params)
       req.send_request(options)
     end
@@ -3393,9 +3393,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeStackProvisioningParameters AWS API Documentation
     #
-    # @overload describe_stack_provisioning_parameters(params = {})
+    # @overload describe_stack_provisioning_parameters(**params)
     # @param [Hash] params ({})
-    def describe_stack_provisioning_parameters(params = {}, options = {})
+    def describe_stack_provisioning_parameters(params = {}, **options)
       req = build_request(:describe_stack_provisioning_parameters, params)
       req.send_request(options)
     end
@@ -3457,9 +3457,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeStackSummary AWS API Documentation
     #
-    # @overload describe_stack_summary(params = {})
+    # @overload describe_stack_summary(**params)
     # @param [Hash] params ({})
-    def describe_stack_summary(params = {}, options = {})
+    def describe_stack_summary(params = {}, **options)
       req = build_request(:describe_stack_summary, params)
       req.send_request(options)
     end
@@ -3527,9 +3527,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeStacks AWS API Documentation
     #
-    # @overload describe_stacks(params = {})
+    # @overload describe_stacks(**params)
     # @param [Hash] params ({})
-    def describe_stacks(params = {}, options = {})
+    def describe_stacks(params = {}, **options)
       req = build_request(:describe_stacks, params)
       req.send_request(options)
     end
@@ -3585,9 +3585,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeTimeBasedAutoScaling AWS API Documentation
     #
-    # @overload describe_time_based_auto_scaling(params = {})
+    # @overload describe_time_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def describe_time_based_auto_scaling(params = {}, options = {})
+    def describe_time_based_auto_scaling(params = {}, **options)
       req = build_request(:describe_time_based_auto_scaling, params)
       req.send_request(options)
     end
@@ -3628,9 +3628,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeUserProfiles AWS API Documentation
     #
-    # @overload describe_user_profiles(params = {})
+    # @overload describe_user_profiles(**params)
     # @param [Hash] params ({})
-    def describe_user_profiles(params = {}, options = {})
+    def describe_user_profiles(params = {}, **options)
       req = build_request(:describe_user_profiles, params)
       req.send_request(options)
     end
@@ -3702,9 +3702,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeVolumes AWS API Documentation
     #
-    # @overload describe_volumes(params = {})
+    # @overload describe_volumes(**params)
     # @param [Hash] params ({})
-    def describe_volumes(params = {}, options = {})
+    def describe_volumes(params = {}, **options)
       req = build_request(:describe_volumes, params)
       req.send_request(options)
     end
@@ -3738,9 +3738,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DetachElasticLoadBalancer AWS API Documentation
     #
-    # @overload detach_elastic_load_balancer(params = {})
+    # @overload detach_elastic_load_balancer(**params)
     # @param [Hash] params ({})
-    def detach_elastic_load_balancer(params = {}, options = {})
+    def detach_elastic_load_balancer(params = {}, **options)
       req = build_request(:detach_elastic_load_balancer, params)
       req.send_request(options)
     end
@@ -3772,9 +3772,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DisassociateElasticIp AWS API Documentation
     #
-    # @overload disassociate_elastic_ip(params = {})
+    # @overload disassociate_elastic_ip(**params)
     # @param [Hash] params ({})
-    def disassociate_elastic_ip(params = {}, options = {})
+    def disassociate_elastic_ip(params = {}, **options)
       req = build_request(:disassociate_elastic_ip, params)
       req.send_request(options)
     end
@@ -3812,9 +3812,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/GetHostnameSuggestion AWS API Documentation
     #
-    # @overload get_hostname_suggestion(params = {})
+    # @overload get_hostname_suggestion(**params)
     # @param [Hash] params ({})
-    def get_hostname_suggestion(params = {}, options = {})
+    def get_hostname_suggestion(params = {}, **options)
       req = build_request(:get_hostname_suggestion, params)
       req.send_request(options)
     end
@@ -3854,9 +3854,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/GrantAccess AWS API Documentation
     #
-    # @overload grant_access(params = {})
+    # @overload grant_access(**params)
     # @param [Hash] params ({})
-    def grant_access(params = {}, options = {})
+    def grant_access(params = {}, **options)
       req = build_request(:grant_access, params)
       req.send_request(options)
     end
@@ -3896,9 +3896,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -3929,9 +3929,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/RebootInstance AWS API Documentation
     #
-    # @overload reboot_instance(params = {})
+    # @overload reboot_instance(**params)
     # @param [Hash] params ({})
-    def reboot_instance(params = {}, options = {})
+    def reboot_instance(params = {}, **options)
       req = build_request(:reboot_instance, params)
       req.send_request(options)
     end
@@ -3974,9 +3974,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/RegisterEcsCluster AWS API Documentation
     #
-    # @overload register_ecs_cluster(params = {})
+    # @overload register_ecs_cluster(**params)
     # @param [Hash] params ({})
-    def register_ecs_cluster(params = {}, options = {})
+    def register_ecs_cluster(params = {}, **options)
       req = build_request(:register_ecs_cluster, params)
       req.send_request(options)
     end
@@ -4020,9 +4020,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/RegisterElasticIp AWS API Documentation
     #
-    # @overload register_elastic_ip(params = {})
+    # @overload register_elastic_ip(**params)
     # @param [Hash] params ({})
-    def register_elastic_ip(params = {}, options = {})
+    def register_elastic_ip(params = {}, **options)
       req = build_request(:register_elastic_ip, params)
       req.send_request(options)
     end
@@ -4105,9 +4105,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/RegisterInstance AWS API Documentation
     #
-    # @overload register_instance(params = {})
+    # @overload register_instance(**params)
     # @param [Hash] params ({})
-    def register_instance(params = {}, options = {})
+    def register_instance(params = {}, **options)
       req = build_request(:register_instance, params)
       req.send_request(options)
     end
@@ -4148,9 +4148,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/RegisterRdsDbInstance AWS API Documentation
     #
-    # @overload register_rds_db_instance(params = {})
+    # @overload register_rds_db_instance(**params)
     # @param [Hash] params ({})
-    def register_rds_db_instance(params = {}, options = {})
+    def register_rds_db_instance(params = {}, **options)
       req = build_request(:register_rds_db_instance, params)
       req.send_request(options)
     end
@@ -4193,9 +4193,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/RegisterVolume AWS API Documentation
     #
-    # @overload register_volume(params = {})
+    # @overload register_volume(**params)
     # @param [Hash] params ({})
-    def register_volume(params = {}, options = {})
+    def register_volume(params = {}, **options)
       req = build_request(:register_volume, params)
       req.send_request(options)
     end
@@ -4268,9 +4268,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/SetLoadBasedAutoScaling AWS API Documentation
     #
-    # @overload set_load_based_auto_scaling(params = {})
+    # @overload set_load_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def set_load_based_auto_scaling(params = {}, options = {})
+    def set_load_based_auto_scaling(params = {}, **options)
       req = build_request(:set_load_based_auto_scaling, params)
       req.send_request(options)
     end
@@ -4335,9 +4335,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/SetPermission AWS API Documentation
     #
-    # @overload set_permission(params = {})
+    # @overload set_permission(**params)
     # @param [Hash] params ({})
-    def set_permission(params = {}, options = {})
+    def set_permission(params = {}, **options)
       req = build_request(:set_permission, params)
       req.send_request(options)
     end
@@ -4395,9 +4395,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/SetTimeBasedAutoScaling AWS API Documentation
     #
-    # @overload set_time_based_auto_scaling(params = {})
+    # @overload set_time_based_auto_scaling(**params)
     # @param [Hash] params ({})
-    def set_time_based_auto_scaling(params = {}, options = {})
+    def set_time_based_auto_scaling(params = {}, **options)
       req = build_request(:set_time_based_auto_scaling, params)
       req.send_request(options)
     end
@@ -4428,9 +4428,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/StartInstance AWS API Documentation
     #
-    # @overload start_instance(params = {})
+    # @overload start_instance(**params)
     # @param [Hash] params ({})
-    def start_instance(params = {}, options = {})
+    def start_instance(params = {}, **options)
       req = build_request(:start_instance, params)
       req.send_request(options)
     end
@@ -4459,9 +4459,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/StartStack AWS API Documentation
     #
-    # @overload start_stack(params = {})
+    # @overload start_stack(**params)
     # @param [Hash] params ({})
-    def start_stack(params = {}, options = {})
+    def start_stack(params = {}, **options)
       req = build_request(:start_stack, params)
       req.send_request(options)
     end
@@ -4505,9 +4505,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/StopInstance AWS API Documentation
     #
-    # @overload stop_instance(params = {})
+    # @overload stop_instance(**params)
     # @param [Hash] params ({})
-    def stop_instance(params = {}, options = {})
+    def stop_instance(params = {}, **options)
       req = build_request(:stop_instance, params)
       req.send_request(options)
     end
@@ -4536,9 +4536,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/StopStack AWS API Documentation
     #
-    # @overload stop_stack(params = {})
+    # @overload stop_stack(**params)
     # @param [Hash] params ({})
-    def stop_stack(params = {}, options = {})
+    def stop_stack(params = {}, **options)
       req = build_request(:stop_stack, params)
       req.send_request(options)
     end
@@ -4586,9 +4586,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -4620,9 +4620,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UnassignInstance AWS API Documentation
     #
-    # @overload unassign_instance(params = {})
+    # @overload unassign_instance(**params)
     # @param [Hash] params ({})
-    def unassign_instance(params = {}, options = {})
+    def unassign_instance(params = {}, **options)
       req = build_request(:unassign_instance, params)
       req.send_request(options)
     end
@@ -4653,9 +4653,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UnassignVolume AWS API Documentation
     #
-    # @overload unassign_volume(params = {})
+    # @overload unassign_volume(**params)
     # @param [Hash] params ({})
-    def unassign_volume(params = {}, options = {})
+    def unassign_volume(params = {}, **options)
       req = build_request(:unassign_volume, params)
       req.send_request(options)
     end
@@ -4679,9 +4679,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -4796,9 +4796,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateApp AWS API Documentation
     #
-    # @overload update_app(params = {})
+    # @overload update_app(**params)
     # @param [Hash] params ({})
-    def update_app(params = {}, options = {})
+    def update_app(params = {}, **options)
       req = build_request(:update_app, params)
       req.send_request(options)
     end
@@ -4833,9 +4833,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateElasticIp AWS API Documentation
     #
-    # @overload update_elastic_ip(params = {})
+    # @overload update_elastic_ip(**params)
     # @param [Hash] params ({})
-    def update_elastic_ip(params = {}, options = {})
+    def update_elastic_ip(params = {}, **options)
       req = build_request(:update_elastic_ip, params)
       req.send_request(options)
     end
@@ -4995,9 +4995,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateInstance AWS API Documentation
     #
-    # @overload update_instance(params = {})
+    # @overload update_instance(**params)
     # @param [Hash] params ({})
-    def update_instance(params = {}, options = {})
+    def update_instance(params = {}, **options)
       req = build_request(:update_instance, params)
       req.send_request(options)
     end
@@ -5179,9 +5179,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateLayer AWS API Documentation
     #
-    # @overload update_layer(params = {})
+    # @overload update_layer(**params)
     # @param [Hash] params ({})
-    def update_layer(params = {}, options = {})
+    def update_layer(params = {}, **options)
       req = build_request(:update_layer, params)
       req.send_request(options)
     end
@@ -5210,9 +5210,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateMyUserProfile AWS API Documentation
     #
-    # @overload update_my_user_profile(params = {})
+    # @overload update_my_user_profile(**params)
     # @param [Hash] params ({})
-    def update_my_user_profile(params = {}, options = {})
+    def update_my_user_profile(params = {}, **options)
       req = build_request(:update_my_user_profile, params)
       req.send_request(options)
     end
@@ -5249,9 +5249,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateRdsDbInstance AWS API Documentation
     #
-    # @overload update_rds_db_instance(params = {})
+    # @overload update_rds_db_instance(**params)
     # @param [Hash] params ({})
-    def update_rds_db_instance(params = {}, options = {})
+    def update_rds_db_instance(params = {}, **options)
       req = build_request(:update_rds_db_instance, params)
       req.send_request(options)
     end
@@ -5534,9 +5534,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateStack AWS API Documentation
     #
-    # @overload update_stack(params = {})
+    # @overload update_stack(**params)
     # @param [Hash] params ({})
-    def update_stack(params = {}, options = {})
+    def update_stack(params = {}, **options)
       req = build_request(:update_stack, params)
       req.send_request(options)
     end
@@ -5588,9 +5588,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateUserProfile AWS API Documentation
     #
-    # @overload update_user_profile(params = {})
+    # @overload update_user_profile(**params)
     # @param [Hash] params ({})
-    def update_user_profile(params = {}, options = {})
+    def update_user_profile(params = {}, **options)
       req = build_request(:update_user_profile, params)
       req.send_request(options)
     end
@@ -5629,9 +5629,9 @@ module Aws::OpsWorks
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/UpdateVolume AWS API Documentation
     #
-    # @overload update_volume(params = {})
+    # @overload update_volume(**params)
     # @param [Hash] params ({})
-    def update_volume(params = {}, options = {})
+    def update_volume(params = {}, **options)
       req = build_request(:update_volume, params)
       req.send_request(options)
     end
@@ -5640,7 +5640,7 @@ module Aws::OpsWorks
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5648,8 +5648,8 @@ module Aws::OpsWorks
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-opsworks'
-      context[:gem_version] = '1.30.0'
+      context[:gem_name] = "aws-sdk-opsworks"
+      context[:gem_version] = "1.30.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -5746,7 +5746,7 @@ module Aws::OpsWorks
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -5762,7 +5762,7 @@ module Aws::OpsWorks
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

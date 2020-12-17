@@ -8,11 +8,11 @@
 Feature: Smoke tests for IoT
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @iot @smoke
   Scenario: Call Aws::IoT::Client#list_policies and expect it to succeed
-  When I call the operation 'list_policies' with params:
+  When I call the operation "list_policies" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @iot @smoke
   Scenario: Call Aws::Aws::IoT::Client#describe_thing and expect it to fail
-  When I call the operation 'describe_thing' with params:
+  When I call the operation "describe_thing" with params:
     """
 {"thing_name":"fake-thing"}
     """

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-storagegateway/types'
-require_relative 'aws-sdk-storagegateway/client_api'
-require_relative 'aws-sdk-storagegateway/client'
-require_relative 'aws-sdk-storagegateway/errors'
-require_relative 'aws-sdk-storagegateway/resource'
-require_relative 'aws-sdk-storagegateway/customizations'
+require_relative "aws-sdk-storagegateway/types"
+require_relative "aws-sdk-storagegateway/client_api"
+require_relative "aws-sdk-storagegateway/client"
+require_relative "aws-sdk-storagegateway/errors"
+require_relative "aws-sdk-storagegateway/resource"
+require_relative "aws-sdk-storagegateway/customizations"
 
 # This module provides support for AWS Storage Gateway. This module is available in the
 # `aws-sdk-storagegateway` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-storagegateway/customizations'
 # @!group service
 module Aws::StorageGateway
 
-  GEM_VERSION = '1.52.0'
+  GEM_VERSION = "1.52.0"
 
 end

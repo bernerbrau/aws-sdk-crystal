@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lex/types'
-require_relative 'aws-sdk-lex/client_api'
-require_relative 'aws-sdk-lex/client'
-require_relative 'aws-sdk-lex/errors'
-require_relative 'aws-sdk-lex/resource'
-require_relative 'aws-sdk-lex/customizations'
+require_relative "aws-sdk-lex/types"
+require_relative "aws-sdk-lex/client_api"
+require_relative "aws-sdk-lex/client"
+require_relative "aws-sdk-lex/errors"
+require_relative "aws-sdk-lex/resource"
+require_relative "aws-sdk-lex/customizations"
 
 # This module provides support for Amazon Lex Runtime Service. This module is available in the
 # `aws-sdk-lex` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-lex/customizations'
 # @!group service
 module Aws::Lex
 
-  GEM_VERSION = '1.33.0'
+  GEM_VERSION = "1.33.0"
 
 end

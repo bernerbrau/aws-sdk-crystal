@@ -8,11 +8,11 @@
 Feature: Smoke tests for Lightsail
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @lightsail @smoke
   Scenario: Call Aws::Lightsail::Client#get_active_names and expect it to succeed
-  When I call the operation 'get_active_names' with params:
+  When I call the operation "get_active_names" with params:
     """
 {}
     """

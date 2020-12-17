@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-amplify/types'
-require_relative 'aws-sdk-amplify/client_api'
-require_relative 'aws-sdk-amplify/client'
-require_relative 'aws-sdk-amplify/errors'
-require_relative 'aws-sdk-amplify/resource'
-require_relative 'aws-sdk-amplify/customizations'
+require_relative "aws-sdk-amplify/types"
+require_relative "aws-sdk-amplify/client_api"
+require_relative "aws-sdk-amplify/client"
+require_relative "aws-sdk-amplify/errors"
+require_relative "aws-sdk-amplify/resource"
+require_relative "aws-sdk-amplify/customizations"
 
 # This module provides support for AWS Amplify. This module is available in the
 # `aws-sdk-amplify` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-amplify/customizations'
 # @!group service
 module Aws::Amplify
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

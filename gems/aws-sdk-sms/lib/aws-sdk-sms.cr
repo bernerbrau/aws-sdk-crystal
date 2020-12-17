@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sms/types'
-require_relative 'aws-sdk-sms/client_api'
-require_relative 'aws-sdk-sms/client'
-require_relative 'aws-sdk-sms/errors'
-require_relative 'aws-sdk-sms/resource'
-require_relative 'aws-sdk-sms/customizations'
+require_relative "aws-sdk-sms/types"
+require_relative "aws-sdk-sms/client_api"
+require_relative "aws-sdk-sms/client"
+require_relative "aws-sdk-sms/errors"
+require_relative "aws-sdk-sms/resource"
+require_relative "aws-sdk-sms/customizations"
 
 # This module provides support for AWS Server Migration Service. This module is available in the
 # `aws-sdk-sms` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-sms/customizations'
 # @!group service
 module Aws::SMS
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

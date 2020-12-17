@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:rekognition)
 
@@ -290,7 +290,7 @@ module Aws::Rekognition
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -555,9 +555,9 @@ module Aws::Rekognition
     #   resp.source_image_orientation_correction #=> String, one of "ROTATE_0", "ROTATE_90", "ROTATE_180", "ROTATE_270"
     #   resp.target_image_orientation_correction #=> String, one of "ROTATE_0", "ROTATE_90", "ROTATE_180", "ROTATE_270"
     #
-    # @overload compare_faces(params = {})
+    # @overload compare_faces(**params)
     # @param [Hash] params ({})
-    def compare_faces(params = {}, options = {})
+    def compare_faces(params = {}, **options)
       req = build_request(:compare_faces, params)
       req.send_request(options)
     end
@@ -616,9 +616,9 @@ module Aws::Rekognition
     #   resp.collection_arn #=> String
     #   resp.face_model_version #=> String
     #
-    # @overload create_collection(params = {})
+    # @overload create_collection(**params)
     # @param [Hash] params ({})
-    def create_collection(params = {}, options = {})
+    def create_collection(params = {}, **options)
       req = build_request(:create_collection, params)
       req.send_request(options)
     end
@@ -647,9 +647,9 @@ module Aws::Rekognition
     #
     #   resp.project_arn #=> String
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -734,9 +734,9 @@ module Aws::Rekognition
     #
     #   resp.project_version_arn #=> String
     #
-    # @overload create_project_version(params = {})
+    # @overload create_project_version(**params)
     # @param [Hash] params ({})
-    def create_project_version(params = {}, options = {})
+    def create_project_version(params = {}, **options)
       req = build_request(:create_project_version, params)
       req.send_request(options)
     end
@@ -815,9 +815,9 @@ module Aws::Rekognition
     #
     #   resp.stream_processor_arn #=> String
     #
-    # @overload create_stream_processor(params = {})
+    # @overload create_stream_processor(**params)
     # @param [Hash] params ({})
-    def create_stream_processor(params = {}, options = {})
+    def create_stream_processor(params = {}, **options)
       req = build_request(:create_stream_processor, params)
       req.send_request(options)
     end
@@ -860,9 +860,9 @@ module Aws::Rekognition
     #
     #   resp.status_code #=> Integer
     #
-    # @overload delete_collection(params = {})
+    # @overload delete_collection(**params)
     # @param [Hash] params ({})
-    def delete_collection(params = {}, options = {})
+    def delete_collection(params = {}, **options)
       req = build_request(:delete_collection, params)
       req.send_request(options)
     end
@@ -914,9 +914,9 @@ module Aws::Rekognition
     #   resp.deleted_faces #=> Array
     #   resp.deleted_faces[0] #=> String
     #
-    # @overload delete_faces(params = {})
+    # @overload delete_faces(**params)
     # @param [Hash] params ({})
-    def delete_faces(params = {}, options = {})
+    def delete_faces(params = {}, **options)
       req = build_request(:delete_faces, params)
       req.send_request(options)
     end
@@ -945,9 +945,9 @@ module Aws::Rekognition
     #
     #   resp.status #=> String, one of "CREATING", "CREATED", "DELETING"
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -980,9 +980,9 @@ module Aws::Rekognition
     #
     #   resp.status #=> String, one of "TRAINING_IN_PROGRESS", "TRAINING_COMPLETED", "TRAINING_FAILED", "STARTING", "RUNNING", "FAILED", "STOPPING", "STOPPED", "DELETING"
     #
-    # @overload delete_project_version(params = {})
+    # @overload delete_project_version(**params)
     # @param [Hash] params ({})
-    def delete_project_version(params = {}, options = {})
+    def delete_project_version(params = {}, **options)
       req = build_request(:delete_project_version, params)
       req.send_request(options)
     end
@@ -1004,9 +1004,9 @@ module Aws::Rekognition
     #     name: "StreamProcessorName", # required
     #   })
     #
-    # @overload delete_stream_processor(params = {})
+    # @overload delete_stream_processor(**params)
     # @param [Hash] params ({})
-    def delete_stream_processor(params = {}, options = {})
+    def delete_stream_processor(params = {}, **options)
       req = build_request(:delete_stream_processor, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::Rekognition
     #   resp.collection_arn #=> String
     #   resp.creation_timestamp #=> Time
     #
-    # @overload describe_collection(params = {})
+    # @overload describe_collection(**params)
     # @param [Hash] params ({})
-    def describe_collection(params = {}, options = {})
+    def describe_collection(params = {}, **options)
       req = build_request(:describe_collection, params)
       req.send_request(options)
     end
@@ -1151,9 +1151,9 @@ module Aws::Rekognition
     #   * project_version_running
     #   * project_version_training_completed
     #
-    # @overload describe_project_versions(params = {})
+    # @overload describe_project_versions(**params)
     # @param [Hash] params ({})
-    def describe_project_versions(params = {}, options = {})
+    def describe_project_versions(params = {}, **options)
       req = build_request(:describe_project_versions, params)
       req.send_request(options)
     end
@@ -1198,9 +1198,9 @@ module Aws::Rekognition
     #   resp.project_descriptions[0].status #=> String, one of "CREATING", "CREATED", "DELETING"
     #   resp.next_token #=> String
     #
-    # @overload describe_projects(params = {})
+    # @overload describe_projects(**params)
     # @param [Hash] params ({})
-    def describe_projects(params = {}, options = {})
+    def describe_projects(params = {}, **options)
       req = build_request(:describe_projects, params)
       req.send_request(options)
     end
@@ -1246,9 +1246,9 @@ module Aws::Rekognition
     #   resp.settings.face_search.collection_id #=> String
     #   resp.settings.face_search.face_match_threshold #=> Float
     #
-    # @overload describe_stream_processor(params = {})
+    # @overload describe_stream_processor(**params)
     # @param [Hash] params ({})
-    def describe_stream_processor(params = {}, options = {})
+    def describe_stream_processor(params = {}, **options)
       req = build_request(:describe_stream_processor, params)
       req.send_request(options)
     end
@@ -1367,9 +1367,9 @@ module Aws::Rekognition
     #   resp.custom_labels[0].geometry.polygon[0].x #=> Float
     #   resp.custom_labels[0].geometry.polygon[0].y #=> Float
     #
-    # @overload detect_custom_labels(params = {})
+    # @overload detect_custom_labels(**params)
     # @param [Hash] params ({})
-    def detect_custom_labels(params = {}, options = {})
+    def detect_custom_labels(params = {}, **options)
       req = build_request(:detect_custom_labels, params)
       req.send_request(options)
     end
@@ -1548,9 +1548,9 @@ module Aws::Rekognition
     #   resp.face_details[0].confidence #=> Float
     #   resp.orientation_correction #=> String, one of "ROTATE_0", "ROTATE_90", "ROTATE_180", "ROTATE_270"
     #
-    # @overload detect_faces(params = {})
+    # @overload detect_faces(**params)
     # @param [Hash] params ({})
-    def detect_faces(params = {}, options = {})
+    def detect_faces(params = {}, **options)
       req = build_request(:detect_faces, params)
       req.send_request(options)
     end
@@ -1723,9 +1723,9 @@ module Aws::Rekognition
     #   resp.orientation_correction #=> String, one of "ROTATE_0", "ROTATE_90", "ROTATE_180", "ROTATE_270"
     #   resp.label_model_version #=> String
     #
-    # @overload detect_labels(params = {})
+    # @overload detect_labels(**params)
     # @param [Hash] params ({})
-    def detect_labels(params = {}, options = {})
+    def detect_labels(params = {}, **options)
       req = build_request(:detect_labels, params)
       req.send_request(options)
     end
@@ -1807,9 +1807,9 @@ module Aws::Rekognition
     #   resp.human_loop_activation_output.human_loop_activation_reasons[0] #=> String
     #   resp.human_loop_activation_output.human_loop_activation_conditions_evaluation_results #=> String
     #
-    # @overload detect_moderation_labels(params = {})
+    # @overload detect_moderation_labels(**params)
     # @param [Hash] params ({})
-    def detect_moderation_labels(params = {}, options = {})
+    def detect_moderation_labels(params = {}, **options)
       req = build_request(:detect_moderation_labels, params)
       req.send_request(options)
     end
@@ -1916,9 +1916,9 @@ module Aws::Rekognition
     #   resp.summary.persons_indeterminate #=> Array
     #   resp.summary.persons_indeterminate[0] #=> Integer
     #
-    # @overload detect_protective_equipment(params = {})
+    # @overload detect_protective_equipment(**params)
     # @param [Hash] params ({})
-    def detect_protective_equipment(params = {}, options = {})
+    def detect_protective_equipment(params = {}, **options)
       req = build_request(:detect_protective_equipment, params)
       req.send_request(options)
     end
@@ -2027,9 +2027,9 @@ module Aws::Rekognition
     #   resp.text_detections[0].geometry.polygon[0].y #=> Float
     #   resp.text_model_version #=> String
     #
-    # @overload detect_text(params = {})
+    # @overload detect_text(**params)
     # @param [Hash] params ({})
-    def detect_text(params = {}, options = {})
+    def detect_text(params = {}, **options)
       req = build_request(:detect_text, params)
       req.send_request(options)
     end
@@ -2067,9 +2067,9 @@ module Aws::Rekognition
     #   resp.urls[0] #=> String
     #   resp.name #=> String
     #
-    # @overload get_celebrity_info(params = {})
+    # @overload get_celebrity_info(**params)
     # @param [Hash] params ({})
-    def get_celebrity_info(params = {}, options = {})
+    def get_celebrity_info(params = {}, **options)
       req = build_request(:get_celebrity_info, params)
       req.send_request(options)
     end
@@ -2222,9 +2222,9 @@ module Aws::Rekognition
     #   resp.celebrities[0].celebrity.face.quality.sharpness #=> Float
     #   resp.celebrities[0].celebrity.face.confidence #=> Float
     #
-    # @overload get_celebrity_recognition(params = {})
+    # @overload get_celebrity_recognition(**params)
     # @param [Hash] params ({})
-    def get_celebrity_recognition(params = {}, options = {})
+    def get_celebrity_recognition(params = {}, **options)
       req = build_request(:get_celebrity_recognition, params)
       req.send_request(options)
     end
@@ -2327,9 +2327,9 @@ module Aws::Rekognition
     #   resp.next_token #=> String
     #   resp.moderation_model_version #=> String
     #
-    # @overload get_content_moderation(params = {})
+    # @overload get_content_moderation(**params)
     # @param [Hash] params ({})
-    def get_content_moderation(params = {}, options = {})
+    def get_content_moderation(params = {}, **options)
       req = build_request(:get_content_moderation, params)
       req.send_request(options)
     end
@@ -2441,9 +2441,9 @@ module Aws::Rekognition
     #   resp.faces[0].face.quality.sharpness #=> Float
     #   resp.faces[0].face.confidence #=> Float
     #
-    # @overload get_face_detection(params = {})
+    # @overload get_face_detection(**params)
     # @param [Hash] params ({})
-    def get_face_detection(params = {}, options = {})
+    def get_face_detection(params = {}, **options)
       req = build_request(:get_face_detection, params)
       req.send_request(options)
     end
@@ -2588,9 +2588,9 @@ module Aws::Rekognition
     #   resp.persons[0].face_matches[0].face.external_image_id #=> String
     #   resp.persons[0].face_matches[0].face.confidence #=> Float
     #
-    # @overload get_face_search(params = {})
+    # @overload get_face_search(**params)
     # @param [Hash] params ({})
-    def get_face_search(params = {}, options = {})
+    def get_face_search(params = {}, **options)
       req = build_request(:get_face_search, params)
       req.send_request(options)
     end
@@ -2697,9 +2697,9 @@ module Aws::Rekognition
     #   resp.labels[0].label.parents[0].name #=> String
     #   resp.label_model_version #=> String
     #
-    # @overload get_label_detection(params = {})
+    # @overload get_label_detection(**params)
     # @param [Hash] params ({})
-    def get_label_detection(params = {}, options = {})
+    def get_label_detection(params = {}, **options)
       req = build_request(:get_label_detection, params)
       req.send_request(options)
     end
@@ -2839,9 +2839,9 @@ module Aws::Rekognition
     #   resp.persons[0].person.face.quality.sharpness #=> Float
     #   resp.persons[0].person.face.confidence #=> Float
     #
-    # @overload get_person_tracking(params = {})
+    # @overload get_person_tracking(**params)
     # @param [Hash] params ({})
-    def get_person_tracking(params = {}, options = {})
+    def get_person_tracking(params = {}, **options)
       req = build_request(:get_person_tracking, params)
       req.send_request(options)
     end
@@ -2949,9 +2949,9 @@ module Aws::Rekognition
     #   resp.selected_segment_types[0].type #=> String, one of "TECHNICAL_CUE", "SHOT"
     #   resp.selected_segment_types[0].model_version #=> String
     #
-    # @overload get_segment_detection(params = {})
+    # @overload get_segment_detection(**params)
     # @param [Hash] params ({})
-    def get_segment_detection(params = {}, options = {})
+    def get_segment_detection(params = {}, **options)
       req = build_request(:get_segment_detection, params)
       req.send_request(options)
     end
@@ -3048,9 +3048,9 @@ module Aws::Rekognition
     #   resp.next_token #=> String
     #   resp.text_model_version #=> String
     #
-    # @overload get_text_detection(params = {})
+    # @overload get_text_detection(**params)
     # @param [Hash] params ({})
-    def get_text_detection(params = {}, options = {})
+    def get_text_detection(params = {}, **options)
       req = build_request(:get_text_detection, params)
       req.send_request(options)
     end
@@ -3478,9 +3478,9 @@ module Aws::Rekognition
     #   resp.unindexed_faces[0].face_detail.quality.sharpness #=> Float
     #   resp.unindexed_faces[0].face_detail.confidence #=> Float
     #
-    # @overload index_faces(params = {})
+    # @overload index_faces(**params)
     # @param [Hash] params ({})
-    def index_faces(params = {}, options = {})
+    def index_faces(params = {}, **options)
       req = build_request(:index_faces, params)
       req.send_request(options)
     end
@@ -3539,9 +3539,9 @@ module Aws::Rekognition
     #   resp.face_model_versions #=> Array
     #   resp.face_model_versions[0] #=> String
     #
-    # @overload list_collections(params = {})
+    # @overload list_collections(**params)
     # @param [Hash] params ({})
-    def list_collections(params = {}, options = {})
+    def list_collections(params = {}, **options)
       req = build_request(:list_collections, params)
       req.send_request(options)
     end
@@ -3734,9 +3734,9 @@ module Aws::Rekognition
     #   resp.next_token #=> String
     #   resp.face_model_version #=> String
     #
-    # @overload list_faces(params = {})
+    # @overload list_faces(**params)
     # @param [Hash] params ({})
-    def list_faces(params = {}, options = {})
+    def list_faces(params = {}, **options)
       req = build_request(:list_faces, params)
       req.send_request(options)
     end
@@ -3775,9 +3775,9 @@ module Aws::Rekognition
     #   resp.stream_processors[0].name #=> String
     #   resp.stream_processors[0].status #=> String, one of "STOPPED", "STARTING", "RUNNING", "FAILED", "STOPPING"
     #
-    # @overload list_stream_processors(params = {})
+    # @overload list_stream_processors(**params)
     # @param [Hash] params ({})
-    def list_stream_processors(params = {}, options = {})
+    def list_stream_processors(params = {}, **options)
       req = build_request(:list_stream_processors, params)
       req.send_request(options)
     end
@@ -3885,9 +3885,9 @@ module Aws::Rekognition
     #   resp.unrecognized_faces[0].quality.sharpness #=> Float
     #   resp.orientation_correction #=> String, one of "ROTATE_0", "ROTATE_90", "ROTATE_180", "ROTATE_270"
     #
-    # @overload recognize_celebrities(params = {})
+    # @overload recognize_celebrities(**params)
     # @param [Hash] params ({})
-    def recognize_celebrities(params = {}, options = {})
+    def recognize_celebrities(params = {}, **options)
       req = build_request(:recognize_celebrities, params)
       req.send_request(options)
     end
@@ -4022,9 +4022,9 @@ module Aws::Rekognition
     #   resp.face_matches[0].face.confidence #=> Float
     #   resp.face_model_version #=> String
     #
-    # @overload search_faces(params = {})
+    # @overload search_faces(**params)
     # @param [Hash] params ({})
-    def search_faces(params = {}, options = {})
+    def search_faces(params = {}, **options)
       req = build_request(:search_faces, params)
       req.send_request(options)
     end
@@ -4201,9 +4201,9 @@ module Aws::Rekognition
     #   resp.face_matches[0].face.confidence #=> Float
     #   resp.face_model_version #=> String
     #
-    # @overload search_faces_by_image(params = {})
+    # @overload search_faces_by_image(**params)
     # @param [Hash] params ({})
-    def search_faces_by_image(params = {}, options = {})
+    def search_faces_by_image(params = {}, **options)
       req = build_request(:search_faces_by_image, params)
       req.send_request(options)
     end
@@ -4273,9 +4273,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_celebrity_recognition(params = {})
+    # @overload start_celebrity_recognition(**params)
     # @param [Hash] params ({})
-    def start_celebrity_recognition(params = {}, options = {})
+    def start_celebrity_recognition(params = {}, **options)
       req = build_request(:start_celebrity_recognition, params)
       req.send_request(options)
     end
@@ -4355,9 +4355,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_content_moderation(params = {})
+    # @overload start_content_moderation(**params)
     # @param [Hash] params ({})
-    def start_content_moderation(params = {}, options = {})
+    def start_content_moderation(params = {}, **options)
       req = build_request(:start_content_moderation, params)
       req.send_request(options)
     end
@@ -4435,9 +4435,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_face_detection(params = {})
+    # @overload start_face_detection(**params)
     # @param [Hash] params ({})
-    def start_face_detection(params = {}, options = {})
+    def start_face_detection(params = {}, **options)
       req = build_request(:start_face_detection, params)
       req.send_request(options)
     end
@@ -4513,9 +4513,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_face_search(params = {})
+    # @overload start_face_search(**params)
     # @param [Hash] params ({})
-    def start_face_search(params = {}, options = {})
+    def start_face_search(params = {}, **options)
       req = build_request(:start_face_search, params)
       req.send_request(options)
     end
@@ -4598,9 +4598,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_label_detection(params = {})
+    # @overload start_label_detection(**params)
     # @param [Hash] params ({})
-    def start_label_detection(params = {}, options = {})
+    def start_label_detection(params = {}, **options)
       req = build_request(:start_label_detection, params)
       req.send_request(options)
     end
@@ -4667,9 +4667,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_person_tracking(params = {})
+    # @overload start_person_tracking(**params)
     # @param [Hash] params ({})
-    def start_person_tracking(params = {}, options = {})
+    def start_person_tracking(params = {}, **options)
       req = build_request(:start_person_tracking, params)
       req.send_request(options)
     end
@@ -4715,9 +4715,9 @@ module Aws::Rekognition
     #
     #   resp.status #=> String, one of "TRAINING_IN_PROGRESS", "TRAINING_COMPLETED", "TRAINING_FAILED", "STARTING", "RUNNING", "FAILED", "STOPPING", "STOPPED", "DELETING"
     #
-    # @overload start_project_version(params = {})
+    # @overload start_project_version(**params)
     # @param [Hash] params ({})
-    def start_project_version(params = {}, options = {})
+    def start_project_version(params = {}, **options)
       req = build_request(:start_project_version, params)
       req.send_request(options)
     end
@@ -4812,9 +4812,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_segment_detection(params = {})
+    # @overload start_segment_detection(**params)
     # @param [Hash] params ({})
-    def start_segment_detection(params = {}, options = {})
+    def start_segment_detection(params = {}, **options)
       req = build_request(:start_segment_detection, params)
       req.send_request(options)
     end
@@ -4835,9 +4835,9 @@ module Aws::Rekognition
     #     name: "StreamProcessorName", # required
     #   })
     #
-    # @overload start_stream_processor(params = {})
+    # @overload start_stream_processor(**params)
     # @param [Hash] params ({})
-    def start_stream_processor(params = {}, options = {})
+    def start_stream_processor(params = {}, **options)
       req = build_request(:start_stream_processor, params)
       req.send_request(options)
     end
@@ -4927,9 +4927,9 @@ module Aws::Rekognition
     #
     #   resp.job_id #=> String
     #
-    # @overload start_text_detection(params = {})
+    # @overload start_text_detection(**params)
     # @param [Hash] params ({})
-    def start_text_detection(params = {}, options = {})
+    def start_text_detection(params = {}, **options)
       req = build_request(:start_text_detection, params)
       req.send_request(options)
     end
@@ -4958,9 +4958,9 @@ module Aws::Rekognition
     #
     #   resp.status #=> String, one of "TRAINING_IN_PROGRESS", "TRAINING_COMPLETED", "TRAINING_FAILED", "STARTING", "RUNNING", "FAILED", "STOPPING", "STOPPED", "DELETING"
     #
-    # @overload stop_project_version(params = {})
+    # @overload stop_project_version(**params)
     # @param [Hash] params ({})
-    def stop_project_version(params = {}, options = {})
+    def stop_project_version(params = {}, **options)
       req = build_request(:stop_project_version, params)
       req.send_request(options)
     end
@@ -4979,9 +4979,9 @@ module Aws::Rekognition
     #     name: "StreamProcessorName", # required
     #   })
     #
-    # @overload stop_stream_processor(params = {})
+    # @overload stop_stream_processor(**params)
     # @param [Hash] params ({})
-    def stop_stream_processor(params = {}, options = {})
+    def stop_stream_processor(params = {}, **options)
       req = build_request(:stop_stream_processor, params)
       req.send_request(options)
     end
@@ -4990,7 +4990,7 @@ module Aws::Rekognition
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4998,8 +4998,8 @@ module Aws::Rekognition
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-rekognition'
-      context[:gem_version] = '1.47.0'
+      context[:gem_name] = "aws-sdk-rekognition"
+      context[:gem_version] = "1.47.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -5092,7 +5092,7 @@ module Aws::Rekognition
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -5108,7 +5108,7 @@ module Aws::Rekognition
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

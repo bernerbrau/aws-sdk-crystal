@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudhsmv2/types'
-require_relative 'aws-sdk-cloudhsmv2/client_api'
-require_relative 'aws-sdk-cloudhsmv2/client'
-require_relative 'aws-sdk-cloudhsmv2/errors'
-require_relative 'aws-sdk-cloudhsmv2/resource'
-require_relative 'aws-sdk-cloudhsmv2/customizations'
+require_relative "aws-sdk-cloudhsmv2/types"
+require_relative "aws-sdk-cloudhsmv2/client_api"
+require_relative "aws-sdk-cloudhsmv2/client"
+require_relative "aws-sdk-cloudhsmv2/errors"
+require_relative "aws-sdk-cloudhsmv2/resource"
+require_relative "aws-sdk-cloudhsmv2/customizations"
 
 # This module provides support for AWS CloudHSM V2. This module is available in the
 # `aws-sdk-cloudhsmv2` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cloudhsmv2/customizations'
 # @!group service
 module Aws::CloudHSMV2
 
-  GEM_VERSION = '1.31.0'
+  GEM_VERSION = "1.31.0"
 
 end

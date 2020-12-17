@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:eventbridge)
 
@@ -290,7 +290,7 @@ module Aws::EventBridge
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -354,9 +354,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ActivateEventSource AWS API Documentation
     #
-    # @overload activate_event_source(params = {})
+    # @overload activate_event_source(**params)
     # @param [Hash] params ({})
-    def activate_event_source(params = {}, options = {})
+    def activate_event_source(params = {}, **options)
       req = build_request(:activate_event_source, params)
       req.send_request(options)
     end
@@ -386,9 +386,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/CancelReplay AWS API Documentation
     #
-    # @overload cancel_replay(params = {})
+    # @overload cancel_replay(**params)
     # @param [Hash] params ({})
-    def cancel_replay(params = {}, options = {})
+    def cancel_replay(params = {}, **options)
       req = build_request(:cancel_replay, params)
       req.send_request(options)
     end
@@ -442,9 +442,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/CreateArchive AWS API Documentation
     #
-    # @overload create_archive(params = {})
+    # @overload create_archive(**params)
     # @param [Hash] params ({})
-    def create_archive(params = {}, options = {})
+    def create_archive(params = {}, **options)
       req = build_request(:create_archive, params)
       req.send_request(options)
     end
@@ -494,9 +494,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/CreateEventBus AWS API Documentation
     #
-    # @overload create_event_bus(params = {})
+    # @overload create_event_bus(**params)
     # @param [Hash] params ({})
-    def create_event_bus(params = {}, options = {})
+    def create_event_bus(params = {}, **options)
       req = build_request(:create_event_bus, params)
       req.send_request(options)
     end
@@ -557,9 +557,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/CreatePartnerEventSource AWS API Documentation
     #
-    # @overload create_partner_event_source(params = {})
+    # @overload create_partner_event_source(**params)
     # @param [Hash] params ({})
-    def create_partner_event_source(params = {}, options = {})
+    def create_partner_event_source(params = {}, **options)
       req = build_request(:create_partner_event_source, params)
       req.send_request(options)
     end
@@ -588,9 +588,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeactivateEventSource AWS API Documentation
     #
-    # @overload deactivate_event_source(params = {})
+    # @overload deactivate_event_source(**params)
     # @param [Hash] params ({})
-    def deactivate_event_source(params = {}, options = {})
+    def deactivate_event_source(params = {}, **options)
       req = build_request(:deactivate_event_source, params)
       req.send_request(options)
     end
@@ -610,9 +610,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeleteArchive AWS API Documentation
     #
-    # @overload delete_archive(params = {})
+    # @overload delete_archive(**params)
     # @param [Hash] params ({})
-    def delete_archive(params = {}, options = {})
+    def delete_archive(params = {}, **options)
       req = build_request(:delete_archive, params)
       req.send_request(options)
     end
@@ -634,9 +634,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeleteEventBus AWS API Documentation
     #
-    # @overload delete_event_bus(params = {})
+    # @overload delete_event_bus(**params)
     # @param [Hash] params ({})
-    def delete_event_bus(params = {}, options = {})
+    def delete_event_bus(params = {}, **options)
       req = build_request(:delete_event_bus, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeletePartnerEventSource AWS API Documentation
     #
-    # @overload delete_partner_event_source(params = {})
+    # @overload delete_partner_event_source(**params)
     # @param [Hash] params ({})
-    def delete_partner_event_source(params = {}, options = {})
+    def delete_partner_event_source(params = {}, **options)
       req = build_request(:delete_partner_event_source, params)
       req.send_request(options)
     end
@@ -712,9 +712,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeleteRule AWS API Documentation
     #
-    # @overload delete_rule(params = {})
+    # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, options = {})
+    def delete_rule(params = {}, **options)
       req = build_request(:delete_rule, params)
       req.send_request(options)
     end
@@ -760,9 +760,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeArchive AWS API Documentation
     #
-    # @overload describe_archive(params = {})
+    # @overload describe_archive(**params)
     # @param [Hash] params ({})
-    def describe_archive(params = {}, options = {})
+    def describe_archive(params = {}, **options)
       req = build_request(:describe_archive, params)
       req.send_request(options)
     end
@@ -802,9 +802,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeEventBus AWS API Documentation
     #
-    # @overload describe_event_bus(params = {})
+    # @overload describe_event_bus(**params)
     # @param [Hash] params ({})
-    def describe_event_bus(params = {}, options = {})
+    def describe_event_bus(params = {}, **options)
       req = build_request(:describe_event_bus, params)
       req.send_request(options)
     end
@@ -841,9 +841,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeEventSource AWS API Documentation
     #
-    # @overload describe_event_source(params = {})
+    # @overload describe_event_source(**params)
     # @param [Hash] params ({})
-    def describe_event_source(params = {}, options = {})
+    def describe_event_source(params = {}, **options)
       req = build_request(:describe_event_source, params)
       req.send_request(options)
     end
@@ -874,9 +874,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribePartnerEventSource AWS API Documentation
     #
-    # @overload describe_partner_event_source(params = {})
+    # @overload describe_partner_event_source(**params)
     # @param [Hash] params ({})
-    def describe_partner_event_source(params = {}, options = {})
+    def describe_partner_event_source(params = {}, **options)
       req = build_request(:describe_partner_event_source, params)
       req.send_request(options)
     end
@@ -935,9 +935,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeReplay AWS API Documentation
     #
-    # @overload describe_replay(params = {})
+    # @overload describe_replay(**params)
     # @param [Hash] params ({})
-    def describe_replay(params = {}, options = {})
+    def describe_replay(params = {}, **options)
       req = build_request(:describe_replay, params)
       req.send_request(options)
     end
@@ -989,9 +989,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeRule AWS API Documentation
     #
-    # @overload describe_rule(params = {})
+    # @overload describe_rule(**params)
     # @param [Hash] params ({})
-    def describe_rule(params = {}, options = {})
+    def describe_rule(params = {}, **options)
       req = build_request(:describe_rule, params)
       req.send_request(options)
     end
@@ -1021,9 +1021,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DisableRule AWS API Documentation
     #
-    # @overload disable_rule(params = {})
+    # @overload disable_rule(**params)
     # @param [Hash] params ({})
-    def disable_rule(params = {}, options = {})
+    def disable_rule(params = {}, **options)
       req = build_request(:disable_rule, params)
       req.send_request(options)
     end
@@ -1053,9 +1053,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/EnableRule AWS API Documentation
     #
-    # @overload enable_rule(params = {})
+    # @overload enable_rule(**params)
     # @param [Hash] params ({})
-    def enable_rule(params = {}, options = {})
+    def enable_rule(params = {}, **options)
       req = build_request(:enable_rule, params)
       req.send_request(options)
     end
@@ -1111,9 +1111,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListArchives AWS API Documentation
     #
-    # @overload list_archives(params = {})
+    # @overload list_archives(**params)
     # @param [Hash] params ({})
-    def list_archives(params = {}, options = {})
+    def list_archives(params = {}, **options)
       req = build_request(:list_archives, params)
       req.send_request(options)
     end
@@ -1157,9 +1157,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListEventBuses AWS API Documentation
     #
-    # @overload list_event_buses(params = {})
+    # @overload list_event_buses(**params)
     # @param [Hash] params ({})
-    def list_event_buses(params = {}, options = {})
+    def list_event_buses(params = {}, **options)
       req = build_request(:list_event_buses, params)
       req.send_request(options)
     end
@@ -1207,9 +1207,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListEventSources AWS API Documentation
     #
-    # @overload list_event_sources(params = {})
+    # @overload list_event_sources(**params)
     # @param [Hash] params ({})
-    def list_event_sources(params = {}, options = {})
+    def list_event_sources(params = {}, **options)
       req = build_request(:list_event_sources, params)
       req.send_request(options)
     end
@@ -1255,9 +1255,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListPartnerEventSourceAccounts AWS API Documentation
     #
-    # @overload list_partner_event_source_accounts(params = {})
+    # @overload list_partner_event_source_accounts(**params)
     # @param [Hash] params ({})
-    def list_partner_event_source_accounts(params = {}, options = {})
+    def list_partner_event_source_accounts(params = {}, **options)
       req = build_request(:list_partner_event_source_accounts, params)
       req.send_request(options)
     end
@@ -1301,9 +1301,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListPartnerEventSources AWS API Documentation
     #
-    # @overload list_partner_event_sources(params = {})
+    # @overload list_partner_event_sources(**params)
     # @param [Hash] params ({})
-    def list_partner_event_sources(params = {}, options = {})
+    def list_partner_event_sources(params = {}, **options)
       req = build_request(:list_partner_event_sources, params)
       req.send_request(options)
     end
@@ -1360,9 +1360,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListReplays AWS API Documentation
     #
-    # @overload list_replays(params = {})
+    # @overload list_replays(**params)
     # @param [Hash] params ({})
-    def list_replays(params = {}, options = {})
+    def list_replays(params = {}, **options)
       req = build_request(:list_replays, params)
       req.send_request(options)
     end
@@ -1407,9 +1407,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListRuleNamesByTarget AWS API Documentation
     #
-    # @overload list_rule_names_by_target(params = {})
+    # @overload list_rule_names_by_target(**params)
     # @param [Hash] params ({})
-    def list_rule_names_by_target(params = {}, options = {})
+    def list_rule_names_by_target(params = {}, **options)
       req = build_request(:list_rule_names_by_target, params)
       req.send_request(options)
     end
@@ -1464,9 +1464,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListRules AWS API Documentation
     #
-    # @overload list_rules(params = {})
+    # @overload list_rules(**params)
     # @param [Hash] params ({})
-    def list_rules(params = {}, options = {})
+    def list_rules(params = {}, **options)
       req = build_request(:list_rules, params)
       req.send_request(options)
     end
@@ -1495,9 +1495,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1582,9 +1582,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListTargetsByRule AWS API Documentation
     #
-    # @overload list_targets_by_rule(params = {})
+    # @overload list_targets_by_rule(**params)
     # @param [Hash] params ({})
-    def list_targets_by_rule(params = {}, options = {})
+    def list_targets_by_rule(params = {}, **options)
       req = build_request(:list_targets_by_rule, params)
       req.send_request(options)
     end
@@ -1627,9 +1627,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PutEvents AWS API Documentation
     #
-    # @overload put_events(params = {})
+    # @overload put_events(**params)
     # @param [Hash] params ({})
-    def put_events(params = {}, options = {})
+    def put_events(params = {}, **options)
       req = build_request(:put_events, params)
       req.send_request(options)
     end
@@ -1669,9 +1669,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PutPartnerEvents AWS API Documentation
     #
-    # @overload put_partner_events(params = {})
+    # @overload put_partner_events(**params)
     # @param [Hash] params ({})
-    def put_partner_events(params = {}, options = {})
+    def put_partner_events(params = {}, **options)
       req = build_request(:put_partner_events, params)
       req.send_request(options)
     end
@@ -1772,9 +1772,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PutPermission AWS API Documentation
     #
-    # @overload put_permission(params = {})
+    # @overload put_permission(**params)
     # @param [Hash] params ({})
-    def put_permission(params = {}, options = {})
+    def put_permission(params = {}, **options)
       req = build_request(:put_permission, params)
       req.send_request(options)
     end
@@ -1904,9 +1904,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PutRule AWS API Documentation
     #
-    # @overload put_rule(params = {})
+    # @overload put_rule(**params)
     # @param [Hash] params ({})
-    def put_rule(params = {}, options = {})
+    def put_rule(params = {}, **options)
       req = build_request(:put_rule, params)
       req.send_request(options)
     end
@@ -2146,9 +2146,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PutTargets AWS API Documentation
     #
-    # @overload put_targets(params = {})
+    # @overload put_targets(**params)
     # @param [Hash] params ({})
-    def put_targets(params = {}, options = {})
+    def put_targets(params = {}, **options)
       req = build_request(:put_targets, params)
       req.send_request(options)
     end
@@ -2182,9 +2182,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/RemovePermission AWS API Documentation
     #
-    # @overload remove_permission(params = {})
+    # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, options = {})
+    def remove_permission(params = {}, **options)
       req = build_request(:remove_permission, params)
       req.send_request(options)
     end
@@ -2242,9 +2242,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/RemoveTargets AWS API Documentation
     #
-    # @overload remove_targets(params = {})
+    # @overload remove_targets(**params)
     # @param [Hash] params ({})
-    def remove_targets(params = {}, options = {})
+    def remove_targets(params = {}, **options)
       req = build_request(:remove_targets, params)
       req.send_request(options)
     end
@@ -2311,9 +2311,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/StartReplay AWS API Documentation
     #
-    # @overload start_replay(params = {})
+    # @overload start_replay(**params)
     # @param [Hash] params ({})
-    def start_replay(params = {}, options = {})
+    def start_replay(params = {}, **options)
       req = build_request(:start_replay, params)
       req.send_request(options)
     end
@@ -2357,9 +2357,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2400,9 +2400,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/TestEventPattern AWS API Documentation
     #
-    # @overload test_event_pattern(params = {})
+    # @overload test_event_pattern(**params)
     # @param [Hash] params ({})
-    def test_event_pattern(params = {}, options = {})
+    def test_event_pattern(params = {}, **options)
       req = build_request(:test_event_pattern, params)
       req.send_request(options)
     end
@@ -2428,9 +2428,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2474,9 +2474,9 @@ module Aws::EventBridge
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/UpdateArchive AWS API Documentation
     #
-    # @overload update_archive(params = {})
+    # @overload update_archive(**params)
     # @param [Hash] params ({})
-    def update_archive(params = {}, options = {})
+    def update_archive(params = {}, **options)
       req = build_request(:update_archive, params)
       req.send_request(options)
     end
@@ -2485,7 +2485,7 @@ module Aws::EventBridge
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2493,15 +2493,15 @@ module Aws::EventBridge
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-eventbridge'
-      context[:gem_version] = '1.18.0'
+      context[:gem_name] = "aws-sdk-eventbridge"
+      context[:gem_version] = "1.18.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

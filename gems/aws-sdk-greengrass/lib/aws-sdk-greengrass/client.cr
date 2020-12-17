@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:greengrass)
 
@@ -280,7 +280,7 @@ module Aws::Greengrass
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -354,9 +354,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/AssociateRoleToGroup AWS API Documentation
     #
-    # @overload associate_role_to_group(params = {})
+    # @overload associate_role_to_group(**params)
     # @param [Hash] params ({})
-    def associate_role_to_group(params = {}, options = {})
+    def associate_role_to_group(params = {}, **options)
       req = build_request(:associate_role_to_group, params)
       req.send_request(options)
     end
@@ -386,9 +386,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/AssociateServiceRoleToAccount AWS API Documentation
     #
-    # @overload associate_service_role_to_account(params = {})
+    # @overload associate_service_role_to_account(**params)
     # @param [Hash] params ({})
-    def associate_service_role_to_account(params = {}, options = {})
+    def associate_service_role_to_account(params = {}, **options)
       req = build_request(:associate_service_role_to_account, params)
       req.send_request(options)
     end
@@ -451,9 +451,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateConnectorDefinition AWS API Documentation
     #
-    # @overload create_connector_definition(params = {})
+    # @overload create_connector_definition(**params)
     # @param [Hash] params ({})
-    def create_connector_definition(params = {}, options = {})
+    def create_connector_definition(params = {}, **options)
       req = build_request(:create_connector_definition, params)
       req.send_request(options)
     end
@@ -499,9 +499,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateConnectorDefinitionVersion AWS API Documentation
     #
-    # @overload create_connector_definition_version(params = {})
+    # @overload create_connector_definition_version(**params)
     # @param [Hash] params ({})
-    def create_connector_definition_version(params = {}, options = {})
+    def create_connector_definition_version(params = {}, **options)
       req = build_request(:create_connector_definition_version, params)
       req.send_request(options)
     end
@@ -563,9 +563,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateCoreDefinition AWS API Documentation
     #
-    # @overload create_core_definition(params = {})
+    # @overload create_core_definition(**params)
     # @param [Hash] params ({})
-    def create_core_definition(params = {}, options = {})
+    def create_core_definition(params = {}, **options)
       req = build_request(:create_core_definition, params)
       req.send_request(options)
     end
@@ -610,9 +610,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateCoreDefinitionVersion AWS API Documentation
     #
-    # @overload create_core_definition_version(params = {})
+    # @overload create_core_definition_version(**params)
     # @param [Hash] params ({})
-    def create_core_definition_version(params = {}, options = {})
+    def create_core_definition_version(params = {}, **options)
       req = build_request(:create_core_definition_version, params)
       req.send_request(options)
     end
@@ -658,9 +658,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateDeployment AWS API Documentation
     #
-    # @overload create_deployment(params = {})
+    # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, options = {})
+    def create_deployment(params = {}, **options)
       req = build_request(:create_deployment, params)
       req.send_request(options)
     end
@@ -721,9 +721,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateDeviceDefinition AWS API Documentation
     #
-    # @overload create_device_definition(params = {})
+    # @overload create_device_definition(**params)
     # @param [Hash] params ({})
-    def create_device_definition(params = {}, options = {})
+    def create_device_definition(params = {}, **options)
       req = build_request(:create_device_definition, params)
       req.send_request(options)
     end
@@ -768,9 +768,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateDeviceDefinitionVersion AWS API Documentation
     #
-    # @overload create_device_definition_version(params = {})
+    # @overload create_device_definition_version(**params)
     # @param [Hash] params ({})
-    def create_device_definition_version(params = {}, options = {})
+    def create_device_definition_version(params = {}, **options)
       req = build_request(:create_device_definition_version, params)
       req.send_request(options)
     end
@@ -867,9 +867,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateFunctionDefinition AWS API Documentation
     #
-    # @overload create_function_definition(params = {})
+    # @overload create_function_definition(**params)
     # @param [Hash] params ({})
-    def create_function_definition(params = {}, options = {})
+    def create_function_definition(params = {}, **options)
       req = build_request(:create_function_definition, params)
       req.send_request(options)
     end
@@ -952,9 +952,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateFunctionDefinitionVersion AWS API Documentation
     #
-    # @overload create_function_definition_version(params = {})
+    # @overload create_function_definition_version(**params)
     # @param [Hash] params ({})
-    def create_function_definition_version(params = {}, options = {})
+    def create_function_definition_version(params = {}, **options)
       req = build_request(:create_function_definition_version, params)
       req.send_request(options)
     end
@@ -1016,9 +1016,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateGroup AWS API Documentation
     #
-    # @overload create_group(params = {})
+    # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, options = {})
+    def create_group(params = {}, **options)
       req = build_request(:create_group, params)
       req.send_request(options)
     end
@@ -1047,9 +1047,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateGroupCertificateAuthority AWS API Documentation
     #
-    # @overload create_group_certificate_authority(params = {})
+    # @overload create_group_certificate_authority(**params)
     # @param [Hash] params ({})
-    def create_group_certificate_authority(params = {}, options = {})
+    def create_group_certificate_authority(params = {}, **options)
       req = build_request(:create_group_certificate_authority, params)
       req.send_request(options)
     end
@@ -1104,9 +1104,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateGroupVersion AWS API Documentation
     #
-    # @overload create_group_version(params = {})
+    # @overload create_group_version(**params)
     # @param [Hash] params ({})
-    def create_group_version(params = {}, options = {})
+    def create_group_version(params = {}, **options)
       req = build_request(:create_group_version, params)
       req.send_request(options)
     end
@@ -1168,9 +1168,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateLoggerDefinition AWS API Documentation
     #
-    # @overload create_logger_definition(params = {})
+    # @overload create_logger_definition(**params)
     # @param [Hash] params ({})
-    def create_logger_definition(params = {}, options = {})
+    def create_logger_definition(params = {}, **options)
       req = build_request(:create_logger_definition, params)
       req.send_request(options)
     end
@@ -1216,9 +1216,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateLoggerDefinitionVersion AWS API Documentation
     #
-    # @overload create_logger_definition_version(params = {})
+    # @overload create_logger_definition_version(**params)
     # @param [Hash] params ({})
-    def create_logger_definition_version(params = {}, options = {})
+    def create_logger_definition_version(params = {}, **options)
       req = build_request(:create_logger_definition_version, params)
       req.send_request(options)
     end
@@ -1315,9 +1315,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateResourceDefinition AWS API Documentation
     #
-    # @overload create_resource_definition(params = {})
+    # @overload create_resource_definition(**params)
     # @param [Hash] params ({})
-    def create_resource_definition(params = {}, options = {})
+    def create_resource_definition(params = {}, **options)
       req = build_request(:create_resource_definition, params)
       req.send_request(options)
     end
@@ -1397,9 +1397,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateResourceDefinitionVersion AWS API Documentation
     #
-    # @overload create_resource_definition_version(params = {})
+    # @overload create_resource_definition_version(**params)
     # @param [Hash] params ({})
-    def create_resource_definition_version(params = {}, options = {})
+    def create_resource_definition_version(params = {}, **options)
       req = build_request(:create_resource_definition_version, params)
       req.send_request(options)
     end
@@ -1459,9 +1459,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateSoftwareUpdateJob AWS API Documentation
     #
-    # @overload create_software_update_job(params = {})
+    # @overload create_software_update_job(**params)
     # @param [Hash] params ({})
-    def create_software_update_job(params = {}, options = {})
+    def create_software_update_job(params = {}, **options)
       req = build_request(:create_software_update_job, params)
       req.send_request(options)
     end
@@ -1522,9 +1522,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateSubscriptionDefinition AWS API Documentation
     #
-    # @overload create_subscription_definition(params = {})
+    # @overload create_subscription_definition(**params)
     # @param [Hash] params ({})
-    def create_subscription_definition(params = {}, options = {})
+    def create_subscription_definition(params = {}, **options)
       req = build_request(:create_subscription_definition, params)
       req.send_request(options)
     end
@@ -1569,9 +1569,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/CreateSubscriptionDefinitionVersion AWS API Documentation
     #
-    # @overload create_subscription_definition_version(params = {})
+    # @overload create_subscription_definition_version(**params)
     # @param [Hash] params ({})
-    def create_subscription_definition_version(params = {}, options = {})
+    def create_subscription_definition_version(params = {}, **options)
       req = build_request(:create_subscription_definition_version, params)
       req.send_request(options)
     end
@@ -1590,9 +1590,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteConnectorDefinition AWS API Documentation
     #
-    # @overload delete_connector_definition(params = {})
+    # @overload delete_connector_definition(**params)
     # @param [Hash] params ({})
-    def delete_connector_definition(params = {}, options = {})
+    def delete_connector_definition(params = {}, **options)
       req = build_request(:delete_connector_definition, params)
       req.send_request(options)
     end
@@ -1611,9 +1611,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteCoreDefinition AWS API Documentation
     #
-    # @overload delete_core_definition(params = {})
+    # @overload delete_core_definition(**params)
     # @param [Hash] params ({})
-    def delete_core_definition(params = {}, options = {})
+    def delete_core_definition(params = {}, **options)
       req = build_request(:delete_core_definition, params)
       req.send_request(options)
     end
@@ -1632,9 +1632,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteDeviceDefinition AWS API Documentation
     #
-    # @overload delete_device_definition(params = {})
+    # @overload delete_device_definition(**params)
     # @param [Hash] params ({})
-    def delete_device_definition(params = {}, options = {})
+    def delete_device_definition(params = {}, **options)
       req = build_request(:delete_device_definition, params)
       req.send_request(options)
     end
@@ -1653,9 +1653,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteFunctionDefinition AWS API Documentation
     #
-    # @overload delete_function_definition(params = {})
+    # @overload delete_function_definition(**params)
     # @param [Hash] params ({})
-    def delete_function_definition(params = {}, options = {})
+    def delete_function_definition(params = {}, **options)
       req = build_request(:delete_function_definition, params)
       req.send_request(options)
     end
@@ -1674,9 +1674,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteGroup AWS API Documentation
     #
-    # @overload delete_group(params = {})
+    # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, options = {})
+    def delete_group(params = {}, **options)
       req = build_request(:delete_group, params)
       req.send_request(options)
     end
@@ -1695,9 +1695,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteLoggerDefinition AWS API Documentation
     #
-    # @overload delete_logger_definition(params = {})
+    # @overload delete_logger_definition(**params)
     # @param [Hash] params ({})
-    def delete_logger_definition(params = {}, options = {})
+    def delete_logger_definition(params = {}, **options)
       req = build_request(:delete_logger_definition, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteResourceDefinition AWS API Documentation
     #
-    # @overload delete_resource_definition(params = {})
+    # @overload delete_resource_definition(**params)
     # @param [Hash] params ({})
-    def delete_resource_definition(params = {}, options = {})
+    def delete_resource_definition(params = {}, **options)
       req = build_request(:delete_resource_definition, params)
       req.send_request(options)
     end
@@ -1737,9 +1737,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DeleteSubscriptionDefinition AWS API Documentation
     #
-    # @overload delete_subscription_definition(params = {})
+    # @overload delete_subscription_definition(**params)
     # @param [Hash] params ({})
-    def delete_subscription_definition(params = {}, options = {})
+    def delete_subscription_definition(params = {}, **options)
       req = build_request(:delete_subscription_definition, params)
       req.send_request(options)
     end
@@ -1764,9 +1764,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DisassociateRoleFromGroup AWS API Documentation
     #
-    # @overload disassociate_role_from_group(params = {})
+    # @overload disassociate_role_from_group(**params)
     # @param [Hash] params ({})
-    def disassociate_role_from_group(params = {}, options = {})
+    def disassociate_role_from_group(params = {}, **options)
       req = build_request(:disassociate_role_from_group, params)
       req.send_request(options)
     end
@@ -1784,9 +1784,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/DisassociateServiceRoleFromAccount AWS API Documentation
     #
-    # @overload disassociate_service_role_from_account(params = {})
+    # @overload disassociate_service_role_from_account(**params)
     # @param [Hash] params ({})
-    def disassociate_service_role_from_account(params = {}, options = {})
+    def disassociate_service_role_from_account(params = {}, **options)
       req = build_request(:disassociate_service_role_from_account, params)
       req.send_request(options)
     end
@@ -1813,9 +1813,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetAssociatedRole AWS API Documentation
     #
-    # @overload get_associated_role(params = {})
+    # @overload get_associated_role(**params)
     # @param [Hash] params ({})
-    def get_associated_role(params = {}, options = {})
+    def get_associated_role(params = {}, **options)
       req = build_request(:get_associated_role, params)
       req.send_request(options)
     end
@@ -1855,9 +1855,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetBulkDeploymentStatus AWS API Documentation
     #
-    # @overload get_bulk_deployment_status(params = {})
+    # @overload get_bulk_deployment_status(**params)
     # @param [Hash] params ({})
-    def get_bulk_deployment_status(params = {}, options = {})
+    def get_bulk_deployment_status(params = {}, **options)
       req = build_request(:get_bulk_deployment_status, params)
       req.send_request(options)
     end
@@ -1888,9 +1888,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetConnectivityInfo AWS API Documentation
     #
-    # @overload get_connectivity_info(params = {})
+    # @overload get_connectivity_info(**params)
     # @param [Hash] params ({})
-    def get_connectivity_info(params = {}, options = {})
+    def get_connectivity_info(params = {}, **options)
       req = build_request(:get_connectivity_info, params)
       req.send_request(options)
     end
@@ -1930,9 +1930,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetConnectorDefinition AWS API Documentation
     #
-    # @overload get_connector_definition(params = {})
+    # @overload get_connector_definition(**params)
     # @param [Hash] params ({})
-    def get_connector_definition(params = {}, options = {})
+    def get_connector_definition(params = {}, **options)
       req = build_request(:get_connector_definition, params)
       req.send_request(options)
     end
@@ -1980,9 +1980,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetConnectorDefinitionVersion AWS API Documentation
     #
-    # @overload get_connector_definition_version(params = {})
+    # @overload get_connector_definition_version(**params)
     # @param [Hash] params ({})
-    def get_connector_definition_version(params = {}, options = {})
+    def get_connector_definition_version(params = {}, **options)
       req = build_request(:get_connector_definition_version, params)
       req.send_request(options)
     end
@@ -2022,9 +2022,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetCoreDefinition AWS API Documentation
     #
-    # @overload get_core_definition(params = {})
+    # @overload get_core_definition(**params)
     # @param [Hash] params ({})
-    def get_core_definition(params = {}, options = {})
+    def get_core_definition(params = {}, **options)
       req = build_request(:get_core_definition, params)
       req.send_request(options)
     end
@@ -2066,9 +2066,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetCoreDefinitionVersion AWS API Documentation
     #
-    # @overload get_core_definition_version(params = {})
+    # @overload get_core_definition_version(**params)
     # @param [Hash] params ({})
-    def get_core_definition_version(params = {}, options = {})
+    def get_core_definition_version(params = {}, **options)
       req = build_request(:get_core_definition_version, params)
       req.send_request(options)
     end
@@ -2106,9 +2106,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetDeploymentStatus AWS API Documentation
     #
-    # @overload get_deployment_status(params = {})
+    # @overload get_deployment_status(**params)
     # @param [Hash] params ({})
-    def get_deployment_status(params = {}, options = {})
+    def get_deployment_status(params = {}, **options)
       req = build_request(:get_deployment_status, params)
       req.send_request(options)
     end
@@ -2148,9 +2148,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetDeviceDefinition AWS API Documentation
     #
-    # @overload get_device_definition(params = {})
+    # @overload get_device_definition(**params)
     # @param [Hash] params ({})
-    def get_device_definition(params = {}, options = {})
+    def get_device_definition(params = {}, **options)
       req = build_request(:get_device_definition, params)
       req.send_request(options)
     end
@@ -2195,9 +2195,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetDeviceDefinitionVersion AWS API Documentation
     #
-    # @overload get_device_definition_version(params = {})
+    # @overload get_device_definition_version(**params)
     # @param [Hash] params ({})
-    def get_device_definition_version(params = {}, options = {})
+    def get_device_definition_version(params = {}, **options)
       req = build_request(:get_device_definition_version, params)
       req.send_request(options)
     end
@@ -2238,9 +2238,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetFunctionDefinition AWS API Documentation
     #
-    # @overload get_function_definition(params = {})
+    # @overload get_function_definition(**params)
     # @param [Hash] params ({})
-    def get_function_definition(params = {}, options = {})
+    def get_function_definition(params = {}, **options)
       req = build_request(:get_function_definition, params)
       req.send_request(options)
     end
@@ -2303,9 +2303,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetFunctionDefinitionVersion AWS API Documentation
     #
-    # @overload get_function_definition_version(params = {})
+    # @overload get_function_definition_version(**params)
     # @param [Hash] params ({})
-    def get_function_definition_version(params = {}, options = {})
+    def get_function_definition_version(params = {}, **options)
       req = build_request(:get_function_definition_version, params)
       req.send_request(options)
     end
@@ -2345,9 +2345,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetGroup AWS API Documentation
     #
-    # @overload get_group(params = {})
+    # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, options = {})
+    def get_group(params = {}, **options)
       req = build_request(:get_group, params)
       req.send_request(options)
     end
@@ -2380,9 +2380,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetGroupCertificateAuthority AWS API Documentation
     #
-    # @overload get_group_certificate_authority(params = {})
+    # @overload get_group_certificate_authority(**params)
     # @param [Hash] params ({})
-    def get_group_certificate_authority(params = {}, options = {})
+    def get_group_certificate_authority(params = {}, **options)
       req = build_request(:get_group_certificate_authority, params)
       req.send_request(options)
     end
@@ -2411,9 +2411,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetGroupCertificateConfiguration AWS API Documentation
     #
-    # @overload get_group_certificate_configuration(params = {})
+    # @overload get_group_certificate_configuration(**params)
     # @param [Hash] params ({})
-    def get_group_certificate_configuration(params = {}, options = {})
+    def get_group_certificate_configuration(params = {}, **options)
       req = build_request(:get_group_certificate_configuration, params)
       req.send_request(options)
     end
@@ -2455,9 +2455,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetGroupVersion AWS API Documentation
     #
-    # @overload get_group_version(params = {})
+    # @overload get_group_version(**params)
     # @param [Hash] params ({})
-    def get_group_version(params = {}, options = {})
+    def get_group_version(params = {}, **options)
       req = build_request(:get_group_version, params)
       req.send_request(options)
     end
@@ -2497,9 +2497,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetLoggerDefinition AWS API Documentation
     #
-    # @overload get_logger_definition(params = {})
+    # @overload get_logger_definition(**params)
     # @param [Hash] params ({})
-    def get_logger_definition(params = {}, options = {})
+    def get_logger_definition(params = {}, **options)
       req = build_request(:get_logger_definition, params)
       req.send_request(options)
     end
@@ -2543,9 +2543,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetLoggerDefinitionVersion AWS API Documentation
     #
-    # @overload get_logger_definition_version(params = {})
+    # @overload get_logger_definition_version(**params)
     # @param [Hash] params ({})
-    def get_logger_definition_version(params = {}, options = {})
+    def get_logger_definition_version(params = {}, **options)
       req = build_request(:get_logger_definition_version, params)
       req.send_request(options)
     end
@@ -2586,9 +2586,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetResourceDefinition AWS API Documentation
     #
-    # @overload get_resource_definition(params = {})
+    # @overload get_resource_definition(**params)
     # @param [Hash] params ({})
-    def get_resource_definition(params = {}, options = {})
+    def get_resource_definition(params = {}, **options)
       req = build_request(:get_resource_definition, params)
       req.send_request(options)
     end
@@ -2645,9 +2645,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetResourceDefinitionVersion AWS API Documentation
     #
-    # @overload get_resource_definition_version(params = {})
+    # @overload get_resource_definition_version(**params)
     # @param [Hash] params ({})
-    def get_resource_definition_version(params = {}, options = {})
+    def get_resource_definition_version(params = {}, **options)
       req = build_request(:get_resource_definition_version, params)
       req.send_request(options)
     end
@@ -2666,9 +2666,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetServiceRoleForAccount AWS API Documentation
     #
-    # @overload get_service_role_for_account(params = {})
+    # @overload get_service_role_for_account(**params)
     # @param [Hash] params ({})
-    def get_service_role_for_account(params = {}, options = {})
+    def get_service_role_for_account(params = {}, **options)
       req = build_request(:get_service_role_for_account, params)
       req.send_request(options)
     end
@@ -2708,9 +2708,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetSubscriptionDefinition AWS API Documentation
     #
-    # @overload get_subscription_definition(params = {})
+    # @overload get_subscription_definition(**params)
     # @param [Hash] params ({})
-    def get_subscription_definition(params = {}, options = {})
+    def get_subscription_definition(params = {}, **options)
       req = build_request(:get_subscription_definition, params)
       req.send_request(options)
     end
@@ -2755,9 +2755,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetSubscriptionDefinitionVersion AWS API Documentation
     #
-    # @overload get_subscription_definition_version(params = {})
+    # @overload get_subscription_definition_version(**params)
     # @param [Hash] params ({})
-    def get_subscription_definition_version(params = {}, options = {})
+    def get_subscription_definition_version(params = {}, **options)
       req = build_request(:get_subscription_definition_version, params)
       req.send_request(options)
     end
@@ -2783,9 +2783,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/GetThingRuntimeConfiguration AWS API Documentation
     #
-    # @overload get_thing_runtime_configuration(params = {})
+    # @overload get_thing_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def get_thing_runtime_configuration(params = {}, options = {})
+    def get_thing_runtime_configuration(params = {}, **options)
       req = build_request(:get_thing_runtime_configuration, params)
       req.send_request(options)
     end
@@ -2829,9 +2829,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListBulkDeploymentDetailedReports AWS API Documentation
     #
-    # @overload list_bulk_deployment_detailed_reports(params = {})
+    # @overload list_bulk_deployment_detailed_reports(**params)
     # @param [Hash] params ({})
-    def list_bulk_deployment_detailed_reports(params = {}, options = {})
+    def list_bulk_deployment_detailed_reports(params = {}, **options)
       req = build_request(:list_bulk_deployment_detailed_reports, params)
       req.send_request(options)
     end
@@ -2864,9 +2864,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListBulkDeployments AWS API Documentation
     #
-    # @overload list_bulk_deployments(params = {})
+    # @overload list_bulk_deployments(**params)
     # @param [Hash] params ({})
-    def list_bulk_deployments(params = {}, options = {})
+    def list_bulk_deployments(params = {}, **options)
       req = build_request(:list_bulk_deployments, params)
       req.send_request(options)
     end
@@ -2906,9 +2906,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListConnectorDefinitionVersions AWS API Documentation
     #
-    # @overload list_connector_definition_versions(params = {})
+    # @overload list_connector_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_connector_definition_versions(params = {}, options = {})
+    def list_connector_definition_versions(params = {}, **options)
       req = build_request(:list_connector_definition_versions, params)
       req.send_request(options)
     end
@@ -2947,9 +2947,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListConnectorDefinitions AWS API Documentation
     #
-    # @overload list_connector_definitions(params = {})
+    # @overload list_connector_definitions(**params)
     # @param [Hash] params ({})
-    def list_connector_definitions(params = {}, options = {})
+    def list_connector_definitions(params = {}, **options)
       req = build_request(:list_connector_definitions, params)
       req.send_request(options)
     end
@@ -2986,9 +2986,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListCoreDefinitionVersions AWS API Documentation
     #
-    # @overload list_core_definition_versions(params = {})
+    # @overload list_core_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_core_definition_versions(params = {}, options = {})
+    def list_core_definition_versions(params = {}, **options)
       req = build_request(:list_core_definition_versions, params)
       req.send_request(options)
     end
@@ -3027,9 +3027,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListCoreDefinitions AWS API Documentation
     #
-    # @overload list_core_definitions(params = {})
+    # @overload list_core_definitions(**params)
     # @param [Hash] params ({})
-    def list_core_definitions(params = {}, options = {})
+    def list_core_definitions(params = {}, **options)
       req = build_request(:list_core_definitions, params)
       req.send_request(options)
     end
@@ -3067,9 +3067,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListDeployments AWS API Documentation
     #
-    # @overload list_deployments(params = {})
+    # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, options = {})
+    def list_deployments(params = {}, **options)
       req = build_request(:list_deployments, params)
       req.send_request(options)
     end
@@ -3106,9 +3106,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListDeviceDefinitionVersions AWS API Documentation
     #
-    # @overload list_device_definition_versions(params = {})
+    # @overload list_device_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_device_definition_versions(params = {}, options = {})
+    def list_device_definition_versions(params = {}, **options)
       req = build_request(:list_device_definition_versions, params)
       req.send_request(options)
     end
@@ -3147,9 +3147,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListDeviceDefinitions AWS API Documentation
     #
-    # @overload list_device_definitions(params = {})
+    # @overload list_device_definitions(**params)
     # @param [Hash] params ({})
-    def list_device_definitions(params = {}, options = {})
+    def list_device_definitions(params = {}, **options)
       req = build_request(:list_device_definitions, params)
       req.send_request(options)
     end
@@ -3186,9 +3186,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListFunctionDefinitionVersions AWS API Documentation
     #
-    # @overload list_function_definition_versions(params = {})
+    # @overload list_function_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_function_definition_versions(params = {}, options = {})
+    def list_function_definition_versions(params = {}, **options)
       req = build_request(:list_function_definition_versions, params)
       req.send_request(options)
     end
@@ -3227,9 +3227,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListFunctionDefinitions AWS API Documentation
     #
-    # @overload list_function_definitions(params = {})
+    # @overload list_function_definitions(**params)
     # @param [Hash] params ({})
-    def list_function_definitions(params = {}, options = {})
+    def list_function_definitions(params = {}, **options)
       req = build_request(:list_function_definitions, params)
       req.send_request(options)
     end
@@ -3256,9 +3256,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListGroupCertificateAuthorities AWS API Documentation
     #
-    # @overload list_group_certificate_authorities(params = {})
+    # @overload list_group_certificate_authorities(**params)
     # @param [Hash] params ({})
-    def list_group_certificate_authorities(params = {}, options = {})
+    def list_group_certificate_authorities(params = {}, **options)
       req = build_request(:list_group_certificate_authorities, params)
       req.send_request(options)
     end
@@ -3295,9 +3295,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListGroupVersions AWS API Documentation
     #
-    # @overload list_group_versions(params = {})
+    # @overload list_group_versions(**params)
     # @param [Hash] params ({})
-    def list_group_versions(params = {}, options = {})
+    def list_group_versions(params = {}, **options)
       req = build_request(:list_group_versions, params)
       req.send_request(options)
     end
@@ -3334,9 +3334,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListGroups AWS API Documentation
     #
-    # @overload list_groups(params = {})
+    # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, options = {})
+    def list_groups(params = {}, **options)
       req = build_request(:list_groups, params)
       req.send_request(options)
     end
@@ -3373,9 +3373,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListLoggerDefinitionVersions AWS API Documentation
     #
-    # @overload list_logger_definition_versions(params = {})
+    # @overload list_logger_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_logger_definition_versions(params = {}, options = {})
+    def list_logger_definition_versions(params = {}, **options)
       req = build_request(:list_logger_definition_versions, params)
       req.send_request(options)
     end
@@ -3414,9 +3414,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListLoggerDefinitions AWS API Documentation
     #
-    # @overload list_logger_definitions(params = {})
+    # @overload list_logger_definitions(**params)
     # @param [Hash] params ({})
-    def list_logger_definitions(params = {}, options = {})
+    def list_logger_definitions(params = {}, **options)
       req = build_request(:list_logger_definitions, params)
       req.send_request(options)
     end
@@ -3453,9 +3453,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListResourceDefinitionVersions AWS API Documentation
     #
-    # @overload list_resource_definition_versions(params = {})
+    # @overload list_resource_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_resource_definition_versions(params = {}, options = {})
+    def list_resource_definition_versions(params = {}, **options)
       req = build_request(:list_resource_definition_versions, params)
       req.send_request(options)
     end
@@ -3494,9 +3494,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListResourceDefinitions AWS API Documentation
     #
-    # @overload list_resource_definitions(params = {})
+    # @overload list_resource_definitions(**params)
     # @param [Hash] params ({})
-    def list_resource_definitions(params = {}, options = {})
+    def list_resource_definitions(params = {}, **options)
       req = build_request(:list_resource_definitions, params)
       req.send_request(options)
     end
@@ -3533,9 +3533,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListSubscriptionDefinitionVersions AWS API Documentation
     #
-    # @overload list_subscription_definition_versions(params = {})
+    # @overload list_subscription_definition_versions(**params)
     # @param [Hash] params ({})
-    def list_subscription_definition_versions(params = {}, options = {})
+    def list_subscription_definition_versions(params = {}, **options)
       req = build_request(:list_subscription_definition_versions, params)
       req.send_request(options)
     end
@@ -3574,9 +3574,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListSubscriptionDefinitions AWS API Documentation
     #
-    # @overload list_subscription_definitions(params = {})
+    # @overload list_subscription_definitions(**params)
     # @param [Hash] params ({})
-    def list_subscription_definitions(params = {}, options = {})
+    def list_subscription_definitions(params = {}, **options)
       req = build_request(:list_subscription_definitions, params)
       req.send_request(options)
     end
@@ -3602,9 +3602,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3638,9 +3638,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/ResetDeployments AWS API Documentation
     #
-    # @overload reset_deployments(params = {})
+    # @overload reset_deployments(**params)
     # @param [Hash] params ({})
-    def reset_deployments(params = {}, options = {})
+    def reset_deployments(params = {}, **options)
       req = build_request(:reset_deployments, params)
       req.send_request(options)
     end
@@ -3697,9 +3697,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/StartBulkDeployment AWS API Documentation
     #
-    # @overload start_bulk_deployment(params = {})
+    # @overload start_bulk_deployment(**params)
     # @param [Hash] params ({})
-    def start_bulk_deployment(params = {}, options = {})
+    def start_bulk_deployment(params = {}, **options)
       req = build_request(:start_bulk_deployment, params)
       req.send_request(options)
     end
@@ -3722,9 +3722,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/StopBulkDeployment AWS API Documentation
     #
-    # @overload stop_bulk_deployment(params = {})
+    # @overload stop_bulk_deployment(**params)
     # @param [Hash] params ({})
-    def stop_bulk_deployment(params = {}, options = {})
+    def stop_bulk_deployment(params = {}, **options)
       req = build_request(:stop_bulk_deployment, params)
       req.send_request(options)
     end
@@ -3753,9 +3753,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3777,9 +3777,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3819,9 +3819,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateConnectivityInfo AWS API Documentation
     #
-    # @overload update_connectivity_info(params = {})
+    # @overload update_connectivity_info(**params)
     # @param [Hash] params ({})
-    def update_connectivity_info(params = {}, options = {})
+    def update_connectivity_info(params = {}, **options)
       req = build_request(:update_connectivity_info, params)
       req.send_request(options)
     end
@@ -3843,9 +3843,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateConnectorDefinition AWS API Documentation
     #
-    # @overload update_connector_definition(params = {})
+    # @overload update_connector_definition(**params)
     # @param [Hash] params ({})
-    def update_connector_definition(params = {}, options = {})
+    def update_connector_definition(params = {}, **options)
       req = build_request(:update_connector_definition, params)
       req.send_request(options)
     end
@@ -3867,9 +3867,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateCoreDefinition AWS API Documentation
     #
-    # @overload update_core_definition(params = {})
+    # @overload update_core_definition(**params)
     # @param [Hash] params ({})
-    def update_core_definition(params = {}, options = {})
+    def update_core_definition(params = {}, **options)
       req = build_request(:update_core_definition, params)
       req.send_request(options)
     end
@@ -3891,9 +3891,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateDeviceDefinition AWS API Documentation
     #
-    # @overload update_device_definition(params = {})
+    # @overload update_device_definition(**params)
     # @param [Hash] params ({})
-    def update_device_definition(params = {}, options = {})
+    def update_device_definition(params = {}, **options)
       req = build_request(:update_device_definition, params)
       req.send_request(options)
     end
@@ -3915,9 +3915,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateFunctionDefinition AWS API Documentation
     #
-    # @overload update_function_definition(params = {})
+    # @overload update_function_definition(**params)
     # @param [Hash] params ({})
-    def update_function_definition(params = {}, options = {})
+    def update_function_definition(params = {}, **options)
       req = build_request(:update_function_definition, params)
       req.send_request(options)
     end
@@ -3939,9 +3939,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateGroup AWS API Documentation
     #
-    # @overload update_group(params = {})
+    # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, options = {})
+    def update_group(params = {}, **options)
       req = build_request(:update_group, params)
       req.send_request(options)
     end
@@ -3975,9 +3975,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateGroupCertificateConfiguration AWS API Documentation
     #
-    # @overload update_group_certificate_configuration(params = {})
+    # @overload update_group_certificate_configuration(**params)
     # @param [Hash] params ({})
-    def update_group_certificate_configuration(params = {}, options = {})
+    def update_group_certificate_configuration(params = {}, **options)
       req = build_request(:update_group_certificate_configuration, params)
       req.send_request(options)
     end
@@ -3999,9 +3999,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateLoggerDefinition AWS API Documentation
     #
-    # @overload update_logger_definition(params = {})
+    # @overload update_logger_definition(**params)
     # @param [Hash] params ({})
-    def update_logger_definition(params = {}, options = {})
+    def update_logger_definition(params = {}, **options)
       req = build_request(:update_logger_definition, params)
       req.send_request(options)
     end
@@ -4023,9 +4023,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateResourceDefinition AWS API Documentation
     #
-    # @overload update_resource_definition(params = {})
+    # @overload update_resource_definition(**params)
     # @param [Hash] params ({})
-    def update_resource_definition(params = {}, options = {})
+    def update_resource_definition(params = {}, **options)
       req = build_request(:update_resource_definition, params)
       req.send_request(options)
     end
@@ -4047,9 +4047,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateSubscriptionDefinition AWS API Documentation
     #
-    # @overload update_subscription_definition(params = {})
+    # @overload update_subscription_definition(**params)
     # @param [Hash] params ({})
-    def update_subscription_definition(params = {}, options = {})
+    def update_subscription_definition(params = {}, **options)
       req = build_request(:update_subscription_definition, params)
       req.send_request(options)
     end
@@ -4074,9 +4074,9 @@ module Aws::Greengrass
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/greengrass-2017-06-07/UpdateThingRuntimeConfiguration AWS API Documentation
     #
-    # @overload update_thing_runtime_configuration(params = {})
+    # @overload update_thing_runtime_configuration(**params)
     # @param [Hash] params ({})
-    def update_thing_runtime_configuration(params = {}, options = {})
+    def update_thing_runtime_configuration(params = {}, **options)
       req = build_request(:update_thing_runtime_configuration, params)
       req.send_request(options)
     end
@@ -4085,7 +4085,7 @@ module Aws::Greengrass
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4093,15 +4093,15 @@ module Aws::Greengrass
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-greengrass'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-greengrass"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

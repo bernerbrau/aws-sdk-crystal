@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:braket)
 
@@ -280,7 +280,7 @@ module Aws::Braket
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -357,9 +357,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/CancelQuantumTask AWS API Documentation
     #
-    # @overload cancel_quantum_task(params = {})
+    # @overload cancel_quantum_task(**params)
     # @param [Hash] params ({})
-    def cancel_quantum_task(params = {}, options = {})
+    def cancel_quantum_task(params = {}, **options)
       req = build_request(:cancel_quantum_task, params)
       req.send_request(options)
     end
@@ -427,9 +427,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/CreateQuantumTask AWS API Documentation
     #
-    # @overload create_quantum_task(params = {})
+    # @overload create_quantum_task(**params)
     # @param [Hash] params ({})
-    def create_quantum_task(params = {}, options = {})
+    def create_quantum_task(params = {}, **options)
       req = build_request(:create_quantum_task, params)
       req.send_request(options)
     end
@@ -465,9 +465,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/GetDevice AWS API Documentation
     #
-    # @overload get_device(params = {})
+    # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, options = {})
+    def get_device(params = {}, **options)
       req = build_request(:get_device, params)
       req.send_request(options)
     end
@@ -514,9 +514,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/GetQuantumTask AWS API Documentation
     #
-    # @overload get_quantum_task(params = {})
+    # @overload get_quantum_task(**params)
     # @param [Hash] params ({})
-    def get_quantum_task(params = {}, options = {})
+    def get_quantum_task(params = {}, **options)
       req = build_request(:get_quantum_task, params)
       req.send_request(options)
     end
@@ -543,9 +543,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -595,9 +595,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/SearchDevices AWS API Documentation
     #
-    # @overload search_devices(params = {})
+    # @overload search_devices(**params)
     # @param [Hash] params ({})
-    def search_devices(params = {}, options = {})
+    def search_devices(params = {}, **options)
       req = build_request(:search_devices, params)
       req.send_request(options)
     end
@@ -653,9 +653,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/SearchQuantumTasks AWS API Documentation
     #
-    # @overload search_quantum_tasks(params = {})
+    # @overload search_quantum_tasks(**params)
     # @param [Hash] params ({})
-    def search_quantum_tasks(params = {}, options = {})
+    def search_quantum_tasks(params = {}, **options)
       req = build_request(:search_quantum_tasks, params)
       req.send_request(options)
     end
@@ -682,9 +682,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -709,9 +709,9 @@ module Aws::Braket
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/braket-2019-09-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -720,7 +720,7 @@ module Aws::Braket
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -728,15 +728,15 @@ module Aws::Braket
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-braket'
-      context[:gem_version] = '1.5.0'
+      context[:gem_name] = "aws-sdk-braket"
+      context[:gem_version] = "1.5.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

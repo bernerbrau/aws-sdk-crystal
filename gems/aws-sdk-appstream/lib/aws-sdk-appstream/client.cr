@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:appstream)
 
@@ -290,7 +290,7 @@ module Aws::AppStream
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -356,9 +356,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/AssociateFleet AWS API Documentation
     #
-    # @overload associate_fleet(params = {})
+    # @overload associate_fleet(**params)
     # @param [Hash] params ({})
-    def associate_fleet(params = {}, options = {})
+    def associate_fleet(params = {}, **options)
       req = build_request(:associate_fleet, params)
       req.send_request(options)
     end
@@ -399,9 +399,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/BatchAssociateUserStack AWS API Documentation
     #
-    # @overload batch_associate_user_stack(params = {})
+    # @overload batch_associate_user_stack(**params)
     # @param [Hash] params ({})
-    def batch_associate_user_stack(params = {}, options = {})
+    def batch_associate_user_stack(params = {}, **options)
       req = build_request(:batch_associate_user_stack, params)
       req.send_request(options)
     end
@@ -440,9 +440,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/BatchDisassociateUserStack AWS API Documentation
     #
-    # @overload batch_disassociate_user_stack(params = {})
+    # @overload batch_disassociate_user_stack(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_user_stack(params = {}, options = {})
+    def batch_disassociate_user_stack(params = {}, **options)
       req = build_request(:batch_disassociate_user_stack, params)
       req.send_request(options)
     end
@@ -486,9 +486,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CopyImage AWS API Documentation
     #
-    # @overload copy_image(params = {})
+    # @overload copy_image(**params)
     # @param [Hash] params ({})
-    def copy_image(params = {}, options = {})
+    def copy_image(params = {}, **options)
       req = build_request(:copy_image, params)
       req.send_request(options)
     end
@@ -535,9 +535,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateDirectoryConfig AWS API Documentation
     #
-    # @overload create_directory_config(params = {})
+    # @overload create_directory_config(**params)
     # @param [Hash] params ({})
-    def create_directory_config(params = {}, options = {})
+    def create_directory_config(params = {}, **options)
       req = build_request(:create_directory_config, params)
       req.send_request(options)
     end
@@ -817,9 +817,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateFleet AWS API Documentation
     #
-    # @overload create_fleet(params = {})
+    # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, options = {})
+    def create_fleet(params = {}, **options)
       req = build_request(:create_fleet, params)
       req.send_request(options)
     end
@@ -1039,9 +1039,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateImageBuilder AWS API Documentation
     #
-    # @overload create_image_builder(params = {})
+    # @overload create_image_builder(**params)
     # @param [Hash] params ({})
-    def create_image_builder(params = {}, options = {})
+    def create_image_builder(params = {}, **options)
       req = build_request(:create_image_builder, params)
       req.send_request(options)
     end
@@ -1074,9 +1074,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateImageBuilderStreamingURL AWS API Documentation
     #
-    # @overload create_image_builder_streaming_url(params = {})
+    # @overload create_image_builder_streaming_url(**params)
     # @param [Hash] params ({})
-    def create_image_builder_streaming_url(params = {}, options = {})
+    def create_image_builder_streaming_url(params = {}, **options)
       req = build_request(:create_image_builder_streaming_url, params)
       req.send_request(options)
     end
@@ -1217,9 +1217,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateStack AWS API Documentation
     #
-    # @overload create_stack(params = {})
+    # @overload create_stack(**params)
     # @param [Hash] params ({})
-    def create_stack(params = {}, options = {})
+    def create_stack(params = {}, **options)
       req = build_request(:create_stack, params)
       req.send_request(options)
     end
@@ -1276,9 +1276,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateStreamingURL AWS API Documentation
     #
-    # @overload create_streaming_url(params = {})
+    # @overload create_streaming_url(**params)
     # @param [Hash] params ({})
-    def create_streaming_url(params = {}, options = {})
+    def create_streaming_url(params = {}, **options)
       req = build_request(:create_streaming_url, params)
       req.send_request(options)
     end
@@ -1298,9 +1298,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateUsageReportSubscription AWS API Documentation
     #
-    # @overload create_usage_report_subscription(params = {})
+    # @overload create_usage_report_subscription(**params)
     # @param [Hash] params ({})
-    def create_usage_report_subscription(params = {}, options = {})
+    def create_usage_report_subscription(params = {}, **options)
       req = build_request(:create_usage_report_subscription, params)
       req.send_request(options)
     end
@@ -1352,9 +1352,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -1376,9 +1376,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteDirectoryConfig AWS API Documentation
     #
-    # @overload delete_directory_config(params = {})
+    # @overload delete_directory_config(**params)
     # @param [Hash] params ({})
-    def delete_directory_config(params = {}, options = {})
+    def delete_directory_config(params = {}, **options)
       req = build_request(:delete_directory_config, params)
       req.send_request(options)
     end
@@ -1398,9 +1398,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteFleet AWS API Documentation
     #
-    # @overload delete_fleet(params = {})
+    # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, options = {})
+    def delete_fleet(params = {}, **options)
       req = build_request(:delete_fleet, params)
       req.send_request(options)
     end
@@ -1453,9 +1453,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteImage AWS API Documentation
     #
-    # @overload delete_image(params = {})
+    # @overload delete_image(**params)
     # @param [Hash] params ({})
-    def delete_image(params = {}, options = {})
+    def delete_image(params = {}, **options)
       req = build_request(:delete_image, params)
       req.send_request(options)
     end
@@ -1509,9 +1509,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteImageBuilder AWS API Documentation
     #
-    # @overload delete_image_builder(params = {})
+    # @overload delete_image_builder(**params)
     # @param [Hash] params ({})
-    def delete_image_builder(params = {}, options = {})
+    def delete_image_builder(params = {}, **options)
       req = build_request(:delete_image_builder, params)
       req.send_request(options)
     end
@@ -1538,9 +1538,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteImagePermissions AWS API Documentation
     #
-    # @overload delete_image_permissions(params = {})
+    # @overload delete_image_permissions(**params)
     # @param [Hash] params ({})
-    def delete_image_permissions(params = {}, options = {})
+    def delete_image_permissions(params = {}, **options)
       req = build_request(:delete_image_permissions, params)
       req.send_request(options)
     end
@@ -1563,9 +1563,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteStack AWS API Documentation
     #
-    # @overload delete_stack(params = {})
+    # @overload delete_stack(**params)
     # @param [Hash] params ({})
-    def delete_stack(params = {}, options = {})
+    def delete_stack(params = {}, **options)
       req = build_request(:delete_stack, params)
       req.send_request(options)
     end
@@ -1576,9 +1576,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteUsageReportSubscription AWS API Documentation
     #
-    # @overload delete_usage_report_subscription(params = {})
+    # @overload delete_usage_report_subscription(**params)
     # @param [Hash] params ({})
-    def delete_usage_report_subscription(params = {}, options = {})
+    def delete_usage_report_subscription(params = {}, **options)
       req = build_request(:delete_usage_report_subscription, params)
       req.send_request(options)
     end
@@ -1606,9 +1606,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -1659,9 +1659,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeDirectoryConfigs AWS API Documentation
     #
-    # @overload describe_directory_configs(params = {})
+    # @overload describe_directory_configs(**params)
     # @param [Hash] params ({})
-    def describe_directory_configs(params = {}, options = {})
+    def describe_directory_configs(params = {}, **options)
       req = build_request(:describe_directory_configs, params)
       req.send_request(options)
     end
@@ -1731,9 +1731,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeFleets AWS API Documentation
     #
-    # @overload describe_fleets(params = {})
+    # @overload describe_fleets(**params)
     # @param [Hash] params ({})
-    def describe_fleets(params = {}, options = {})
+    def describe_fleets(params = {}, **options)
       req = build_request(:describe_fleets, params)
       req.send_request(options)
     end
@@ -1801,9 +1801,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeImageBuilders AWS API Documentation
     #
-    # @overload describe_image_builders(params = {})
+    # @overload describe_image_builders(**params)
     # @param [Hash] params ({})
-    def describe_image_builders(params = {}, options = {})
+    def describe_image_builders(params = {}, **options)
       req = build_request(:describe_image_builders, params)
       req.send_request(options)
     end
@@ -1854,9 +1854,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeImagePermissions AWS API Documentation
     #
-    # @overload describe_image_permissions(params = {})
+    # @overload describe_image_permissions(**params)
     # @param [Hash] params ({})
-    def describe_image_permissions(params = {}, options = {})
+    def describe_image_permissions(params = {}, **options)
       req = build_request(:describe_image_permissions, params)
       req.send_request(options)
     end
@@ -1931,9 +1931,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeImages AWS API Documentation
     #
-    # @overload describe_images(params = {})
+    # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, options = {})
+    def describe_images(params = {}, **options)
       req = build_request(:describe_images, params)
       req.send_request(options)
     end
@@ -2001,9 +2001,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeSessions AWS API Documentation
     #
-    # @overload describe_sessions(params = {})
+    # @overload describe_sessions(**params)
     # @param [Hash] params ({})
-    def describe_sessions(params = {}, options = {})
+    def describe_sessions(params = {}, **options)
       req = build_request(:describe_sessions, params)
       req.send_request(options)
     end
@@ -2064,9 +2064,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeStacks AWS API Documentation
     #
-    # @overload describe_stacks(params = {})
+    # @overload describe_stacks(**params)
     # @param [Hash] params ({})
-    def describe_stacks(params = {}, options = {})
+    def describe_stacks(params = {}, **options)
       req = build_request(:describe_stacks, params)
       req.send_request(options)
     end
@@ -2106,9 +2106,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeUsageReportSubscriptions AWS API Documentation
     #
-    # @overload describe_usage_report_subscriptions(params = {})
+    # @overload describe_usage_report_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_usage_report_subscriptions(params = {}, options = {})
+    def describe_usage_report_subscriptions(params = {}, **options)
       req = build_request(:describe_usage_report_subscriptions, params)
       req.send_request(options)
     end
@@ -2168,9 +2168,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeUserStackAssociations AWS API Documentation
     #
-    # @overload describe_user_stack_associations(params = {})
+    # @overload describe_user_stack_associations(**params)
     # @param [Hash] params ({})
-    def describe_user_stack_associations(params = {}, options = {})
+    def describe_user_stack_associations(params = {}, **options)
       req = build_request(:describe_user_stack_associations, params)
       req.send_request(options)
     end
@@ -2217,9 +2217,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DescribeUsers AWS API Documentation
     #
-    # @overload describe_users(params = {})
+    # @overload describe_users(**params)
     # @param [Hash] params ({})
-    def describe_users(params = {}, options = {})
+    def describe_users(params = {}, **options)
       req = build_request(:describe_users, params)
       req.send_request(options)
     end
@@ -2249,9 +2249,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DisableUser AWS API Documentation
     #
-    # @overload disable_user(params = {})
+    # @overload disable_user(**params)
     # @param [Hash] params ({})
-    def disable_user(params = {}, options = {})
+    def disable_user(params = {}, **options)
       req = build_request(:disable_user, params)
       req.send_request(options)
     end
@@ -2275,9 +2275,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/DisassociateFleet AWS API Documentation
     #
-    # @overload disassociate_fleet(params = {})
+    # @overload disassociate_fleet(**params)
     # @param [Hash] params ({})
-    def disassociate_fleet(params = {}, options = {})
+    def disassociate_fleet(params = {}, **options)
       req = build_request(:disassociate_fleet, params)
       req.send_request(options)
     end
@@ -2310,9 +2310,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/EnableUser AWS API Documentation
     #
-    # @overload enable_user(params = {})
+    # @overload enable_user(**params)
     # @param [Hash] params ({})
-    def enable_user(params = {}, options = {})
+    def enable_user(params = {}, **options)
       req = build_request(:enable_user, params)
       req.send_request(options)
     end
@@ -2332,9 +2332,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ExpireSession AWS API Documentation
     #
-    # @overload expire_session(params = {})
+    # @overload expire_session(**params)
     # @param [Hash] params ({})
-    def expire_session(params = {}, options = {})
+    def expire_session(params = {}, **options)
       req = build_request(:expire_session, params)
       req.send_request(options)
     end
@@ -2369,9 +2369,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ListAssociatedFleets AWS API Documentation
     #
-    # @overload list_associated_fleets(params = {})
+    # @overload list_associated_fleets(**params)
     # @param [Hash] params ({})
-    def list_associated_fleets(params = {}, options = {})
+    def list_associated_fleets(params = {}, **options)
       req = build_request(:list_associated_fleets, params)
       req.send_request(options)
     end
@@ -2406,9 +2406,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ListAssociatedStacks AWS API Documentation
     #
-    # @overload list_associated_stacks(params = {})
+    # @overload list_associated_stacks(**params)
     # @param [Hash] params ({})
-    def list_associated_stacks(params = {}, options = {})
+    def list_associated_stacks(params = {}, **options)
       req = build_request(:list_associated_stacks, params)
       req.send_request(options)
     end
@@ -2443,9 +2443,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2465,9 +2465,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/StartFleet AWS API Documentation
     #
-    # @overload start_fleet(params = {})
+    # @overload start_fleet(**params)
     # @param [Hash] params ({})
-    def start_fleet(params = {}, options = {})
+    def start_fleet(params = {}, **options)
       req = build_request(:start_fleet, params)
       req.send_request(options)
     end
@@ -2527,9 +2527,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/StartImageBuilder AWS API Documentation
     #
-    # @overload start_image_builder(params = {})
+    # @overload start_image_builder(**params)
     # @param [Hash] params ({})
-    def start_image_builder(params = {}, options = {})
+    def start_image_builder(params = {}, **options)
       req = build_request(:start_image_builder, params)
       req.send_request(options)
     end
@@ -2549,9 +2549,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/StopFleet AWS API Documentation
     #
-    # @overload stop_fleet(params = {})
+    # @overload stop_fleet(**params)
     # @param [Hash] params ({})
-    def stop_fleet(params = {}, options = {})
+    def stop_fleet(params = {}, **options)
       req = build_request(:stop_fleet, params)
       req.send_request(options)
     end
@@ -2605,9 +2605,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/StopImageBuilder AWS API Documentation
     #
-    # @overload stop_image_builder(params = {})
+    # @overload stop_image_builder(**params)
     # @param [Hash] params ({})
-    def stop_image_builder(params = {}, options = {})
+    def stop_image_builder(params = {}, **options)
       req = build_request(:stop_image_builder, params)
       req.send_request(options)
     end
@@ -2657,9 +2657,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2693,9 +2693,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2741,9 +2741,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateDirectoryConfig AWS API Documentation
     #
-    # @overload update_directory_config(params = {})
+    # @overload update_directory_config(**params)
     # @param [Hash] params ({})
-    def update_directory_config(params = {}, options = {})
+    def update_directory_config(params = {}, **options)
       req = build_request(:update_directory_config, params)
       req.send_request(options)
     end
@@ -2998,9 +2998,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateFleet AWS API Documentation
     #
-    # @overload update_fleet(params = {})
+    # @overload update_fleet(**params)
     # @param [Hash] params ({})
-    def update_fleet(params = {}, options = {})
+    def update_fleet(params = {}, **options)
       req = build_request(:update_fleet, params)
       req.send_request(options)
     end
@@ -3032,9 +3032,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateImagePermissions AWS API Documentation
     #
-    # @overload update_image_permissions(params = {})
+    # @overload update_image_permissions(**params)
     # @param [Hash] params ({})
-    def update_image_permissions(params = {}, options = {})
+    def update_image_permissions(params = {}, **options)
       req = build_request(:update_image_permissions, params)
       req.send_request(options)
     end
@@ -3159,9 +3159,9 @@ module Aws::AppStream
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/appstream-2016-12-01/UpdateStack AWS API Documentation
     #
-    # @overload update_stack(params = {})
+    # @overload update_stack(**params)
     # @param [Hash] params ({})
-    def update_stack(params = {}, options = {})
+    def update_stack(params = {}, **options)
       req = build_request(:update_stack, params)
       req.send_request(options)
     end
@@ -3170,7 +3170,7 @@ module Aws::AppStream
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3178,8 +3178,8 @@ module Aws::AppStream
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-appstream'
-      context[:gem_version] = '1.48.0'
+      context[:gem_name] = "aws-sdk-appstream"
+      context[:gem_version] = "1.48.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3272,7 +3272,7 @@ module Aws::AppStream
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3288,7 +3288,7 @@ module Aws::AppStream
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

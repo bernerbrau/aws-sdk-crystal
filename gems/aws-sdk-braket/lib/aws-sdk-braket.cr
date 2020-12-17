@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-braket/types'
-require_relative 'aws-sdk-braket/client_api'
-require_relative 'aws-sdk-braket/client'
-require_relative 'aws-sdk-braket/errors'
-require_relative 'aws-sdk-braket/resource'
-require_relative 'aws-sdk-braket/customizations'
+require_relative "aws-sdk-braket/types"
+require_relative "aws-sdk-braket/client_api"
+require_relative "aws-sdk-braket/client"
+require_relative "aws-sdk-braket/errors"
+require_relative "aws-sdk-braket/resource"
+require_relative "aws-sdk-braket/customizations"
 
 # This module provides support for Braket. This module is available in the
 # `aws-sdk-braket` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-braket/customizations'
 # @!group service
 module Aws::Braket
 
-  GEM_VERSION = '1.5.0'
+  GEM_VERSION = "1.5.0"
 
 end

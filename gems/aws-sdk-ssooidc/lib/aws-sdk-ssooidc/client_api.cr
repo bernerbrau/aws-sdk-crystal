@@ -168,7 +168,7 @@ module Aws::SSOOIDC
         o.name = "CreateToken"
         o.http_method = "POST"
         o.http_request_uri = "/token"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: CreateTokenRequest)
         o.output = Shapes::ShapeRef.new(shape: CreateTokenResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)
@@ -188,7 +188,7 @@ module Aws::SSOOIDC
         o.name = "RegisterClient"
         o.http_method = "POST"
         o.http_request_uri = "/client/register"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: RegisterClientRequest)
         o.output = Shapes::ShapeRef.new(shape: RegisterClientResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)
@@ -201,7 +201,7 @@ module Aws::SSOOIDC
         o.name = "StartDeviceAuthorization"
         o.http_method = "POST"
         o.http_request_uri = "/device_authorization"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: StartDeviceAuthorizationRequest)
         o.output = Shapes::ShapeRef.new(shape: StartDeviceAuthorizationResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidRequestException)

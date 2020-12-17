@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mturk/types'
-require_relative 'aws-sdk-mturk/client_api'
-require_relative 'aws-sdk-mturk/client'
-require_relative 'aws-sdk-mturk/errors'
-require_relative 'aws-sdk-mturk/resource'
-require_relative 'aws-sdk-mturk/customizations'
+require_relative "aws-sdk-mturk/types"
+require_relative "aws-sdk-mturk/client_api"
+require_relative "aws-sdk-mturk/client"
+require_relative "aws-sdk-mturk/errors"
+require_relative "aws-sdk-mturk/resource"
+require_relative "aws-sdk-mturk/customizations"
 
 # This module provides support for Amazon Mechanical Turk. This module is available in the
 # `aws-sdk-mturk` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mturk/customizations'
 # @!group service
 module Aws::MTurk
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

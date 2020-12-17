@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:elasticsearchservice)
 
@@ -280,7 +280,7 @@ module Aws::ElasticsearchService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -355,9 +355,9 @@ module Aws::ElasticsearchService
     #   resp.cross_cluster_search_connection.connection_status.status_code #=> String, one of "PENDING_ACCEPTANCE", "APPROVED", "REJECTING", "REJECTED", "DELETING", "DELETED"
     #   resp.cross_cluster_search_connection.connection_status.message #=> String
     #
-    # @overload accept_inbound_cross_cluster_search_connection(params = {})
+    # @overload accept_inbound_cross_cluster_search_connection(**params)
     # @param [Hash] params ({})
-    def accept_inbound_cross_cluster_search_connection(params = {}, options = {})
+    def accept_inbound_cross_cluster_search_connection(params = {}, **options)
       req = build_request(:accept_inbound_cross_cluster_search_connection, params)
       req.send_request(options)
     end
@@ -391,9 +391,9 @@ module Aws::ElasticsearchService
     #     ],
     #   })
     #
-    # @overload add_tags(params = {})
+    # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, options = {})
+    def add_tags(params = {}, **options)
       req = build_request(:add_tags, params)
       req.send_request(options)
     end
@@ -431,9 +431,9 @@ module Aws::ElasticsearchService
     #   resp.domain_package_details.error_details.error_type #=> String
     #   resp.domain_package_details.error_details.error_message #=> String
     #
-    # @overload associate_package(params = {})
+    # @overload associate_package(**params)
     # @param [Hash] params ({})
-    def associate_package(params = {}, options = {})
+    def associate_package(params = {}, **options)
       req = build_request(:associate_package, params)
       req.send_request(options)
     end
@@ -467,9 +467,9 @@ module Aws::ElasticsearchService
     #   resp.service_software_options.automated_update_date #=> Time
     #   resp.service_software_options.optional_deployment #=> Boolean
     #
-    # @overload cancel_elasticsearch_service_software_update(params = {})
+    # @overload cancel_elasticsearch_service_software_update(**params)
     # @param [Hash] params ({})
-    def cancel_elasticsearch_service_software_update(params = {}, options = {})
+    def cancel_elasticsearch_service_software_update(params = {}, **options)
       req = build_request(:cancel_elasticsearch_service_software_update, params)
       req.send_request(options)
     end
@@ -718,9 +718,9 @@ module Aws::ElasticsearchService
     #   resp.domain_status.advanced_security_options.saml_options.roles_key #=> String
     #   resp.domain_status.advanced_security_options.saml_options.session_timeout_minutes #=> Integer
     #
-    # @overload create_elasticsearch_domain(params = {})
+    # @overload create_elasticsearch_domain(**params)
     # @param [Hash] params ({})
-    def create_elasticsearch_domain(params = {}, options = {})
+    def create_elasticsearch_domain(params = {}, **options)
       req = build_request(:create_elasticsearch_domain, params)
       req.send_request(options)
     end
@@ -776,9 +776,9 @@ module Aws::ElasticsearchService
     #   resp.connection_status.message #=> String
     #   resp.cross_cluster_search_connection_id #=> String
     #
-    # @overload create_outbound_cross_cluster_search_connection(params = {})
+    # @overload create_outbound_cross_cluster_search_connection(**params)
     # @param [Hash] params ({})
-    def create_outbound_cross_cluster_search_connection(params = {}, options = {})
+    def create_outbound_cross_cluster_search_connection(params = {}, **options)
       req = build_request(:create_outbound_cross_cluster_search_connection, params)
       req.send_request(options)
     end
@@ -826,9 +826,9 @@ module Aws::ElasticsearchService
     #   resp.package_details.error_details.error_type #=> String
     #   resp.package_details.error_details.error_message #=> String
     #
-    # @overload create_package(params = {})
+    # @overload create_package(**params)
     # @param [Hash] params ({})
-    def create_package(params = {}, options = {})
+    def create_package(params = {}, **options)
       req = build_request(:create_package, params)
       req.send_request(options)
     end
@@ -920,9 +920,9 @@ module Aws::ElasticsearchService
     #   resp.domain_status.advanced_security_options.saml_options.roles_key #=> String
     #   resp.domain_status.advanced_security_options.saml_options.session_timeout_minutes #=> Integer
     #
-    # @overload delete_elasticsearch_domain(params = {})
+    # @overload delete_elasticsearch_domain(**params)
     # @param [Hash] params ({})
-    def delete_elasticsearch_domain(params = {}, options = {})
+    def delete_elasticsearch_domain(params = {}, **options)
       req = build_request(:delete_elasticsearch_domain, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::ElasticsearchService
     #
     # @return [Struct] Returns an empty {Seahorse::Client::Response response}.
     #
-    # @overload delete_elasticsearch_service_role(params = {})
+    # @overload delete_elasticsearch_service_role(**params)
     # @param [Hash] params ({})
-    def delete_elasticsearch_service_role(params = {}, options = {})
+    def delete_elasticsearch_service_role(params = {}, **options)
       req = build_request(:delete_elasticsearch_service_role, params)
       req.send_request(options)
     end
@@ -975,9 +975,9 @@ module Aws::ElasticsearchService
     #   resp.cross_cluster_search_connection.connection_status.status_code #=> String, one of "PENDING_ACCEPTANCE", "APPROVED", "REJECTING", "REJECTED", "DELETING", "DELETED"
     #   resp.cross_cluster_search_connection.connection_status.message #=> String
     #
-    # @overload delete_inbound_cross_cluster_search_connection(params = {})
+    # @overload delete_inbound_cross_cluster_search_connection(**params)
     # @param [Hash] params ({})
-    def delete_inbound_cross_cluster_search_connection(params = {}, options = {})
+    def delete_inbound_cross_cluster_search_connection(params = {}, **options)
       req = build_request(:delete_inbound_cross_cluster_search_connection, params)
       req.send_request(options)
     end
@@ -1011,9 +1011,9 @@ module Aws::ElasticsearchService
     #   resp.cross_cluster_search_connection.connection_status.status_code #=> String, one of "PENDING_ACCEPTANCE", "VALIDATING", "VALIDATION_FAILED", "PROVISIONING", "ACTIVE", "REJECTED", "DELETING", "DELETED"
     #   resp.cross_cluster_search_connection.connection_status.message #=> String
     #
-    # @overload delete_outbound_cross_cluster_search_connection(params = {})
+    # @overload delete_outbound_cross_cluster_search_connection(**params)
     # @param [Hash] params ({})
-    def delete_outbound_cross_cluster_search_connection(params = {}, options = {})
+    def delete_outbound_cross_cluster_search_connection(params = {}, **options)
       req = build_request(:delete_outbound_cross_cluster_search_connection, params)
       req.send_request(options)
     end
@@ -1047,9 +1047,9 @@ module Aws::ElasticsearchService
     #   resp.package_details.error_details.error_type #=> String
     #   resp.package_details.error_details.error_message #=> String
     #
-    # @overload delete_package(params = {})
+    # @overload delete_package(**params)
     # @param [Hash] params ({})
-    def delete_package(params = {}, options = {})
+    def delete_package(params = {}, **options)
       req = build_request(:delete_package, params)
       req.send_request(options)
     end
@@ -1141,9 +1141,9 @@ module Aws::ElasticsearchService
     #   resp.domain_status.advanced_security_options.saml_options.roles_key #=> String
     #   resp.domain_status.advanced_security_options.saml_options.session_timeout_minutes #=> Integer
     #
-    # @overload describe_elasticsearch_domain(params = {})
+    # @overload describe_elasticsearch_domain(**params)
     # @param [Hash] params ({})
-    def describe_elasticsearch_domain(params = {}, options = {})
+    def describe_elasticsearch_domain(params = {}, **options)
       req = build_request(:describe_elasticsearch_domain, params)
       req.send_request(options)
     end
@@ -1282,9 +1282,9 @@ module Aws::ElasticsearchService
     #   resp.domain_config.advanced_security_options.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active"
     #   resp.domain_config.advanced_security_options.status.pending_deletion #=> Boolean
     #
-    # @overload describe_elasticsearch_domain_config(params = {})
+    # @overload describe_elasticsearch_domain_config(**params)
     # @param [Hash] params ({})
-    def describe_elasticsearch_domain_config(params = {}, options = {})
+    def describe_elasticsearch_domain_config(params = {}, **options)
       req = build_request(:describe_elasticsearch_domain_config, params)
       req.send_request(options)
     end
@@ -1377,9 +1377,9 @@ module Aws::ElasticsearchService
     #   resp.domain_status_list[0].advanced_security_options.saml_options.roles_key #=> String
     #   resp.domain_status_list[0].advanced_security_options.saml_options.session_timeout_minutes #=> Integer
     #
-    # @overload describe_elasticsearch_domains(params = {})
+    # @overload describe_elasticsearch_domains(**params)
     # @param [Hash] params ({})
-    def describe_elasticsearch_domains(params = {}, options = {})
+    def describe_elasticsearch_domains(params = {}, **options)
       req = build_request(:describe_elasticsearch_domains, params)
       req.send_request(options)
     end
@@ -1429,9 +1429,9 @@ module Aws::ElasticsearchService
     #   resp.limits_by_role["InstanceRole"].additional_limits[0].limit_values #=> Array
     #   resp.limits_by_role["InstanceRole"].additional_limits[0].limit_values[0] #=> String
     #
-    # @overload describe_elasticsearch_instance_type_limits(params = {})
+    # @overload describe_elasticsearch_instance_type_limits(**params)
     # @param [Hash] params ({})
-    def describe_elasticsearch_instance_type_limits(params = {}, options = {})
+    def describe_elasticsearch_instance_type_limits(params = {}, **options)
       req = build_request(:describe_elasticsearch_instance_type_limits, params)
       req.send_request(options)
     end
@@ -1490,9 +1490,9 @@ module Aws::ElasticsearchService
     #   resp.cross_cluster_search_connections[0].connection_status.message #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_inbound_cross_cluster_search_connections(params = {})
+    # @overload describe_inbound_cross_cluster_search_connections(**params)
     # @param [Hash] params ({})
-    def describe_inbound_cross_cluster_search_connections(params = {}, options = {})
+    def describe_inbound_cross_cluster_search_connections(params = {}, **options)
       req = build_request(:describe_inbound_cross_cluster_search_connections, params)
       req.send_request(options)
     end
@@ -1552,9 +1552,9 @@ module Aws::ElasticsearchService
     #   resp.cross_cluster_search_connections[0].connection_status.message #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_outbound_cross_cluster_search_connections(params = {})
+    # @overload describe_outbound_cross_cluster_search_connections(**params)
     # @param [Hash] params ({})
-    def describe_outbound_cross_cluster_search_connections(params = {}, options = {})
+    def describe_outbound_cross_cluster_search_connections(params = {}, **options)
       req = build_request(:describe_outbound_cross_cluster_search_connections, params)
       req.send_request(options)
     end
@@ -1609,9 +1609,9 @@ module Aws::ElasticsearchService
     #   resp.package_details_list[0].error_details.error_message #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_packages(params = {})
+    # @overload describe_packages(**params)
     # @param [Hash] params ({})
-    def describe_packages(params = {}, options = {})
+    def describe_packages(params = {}, **options)
       req = build_request(:describe_packages, params)
       req.send_request(options)
     end
@@ -1661,9 +1661,9 @@ module Aws::ElasticsearchService
     #   resp.reserved_elasticsearch_instance_offerings[0].recurring_charges[0].recurring_charge_amount #=> Float
     #   resp.reserved_elasticsearch_instance_offerings[0].recurring_charges[0].recurring_charge_frequency #=> String
     #
-    # @overload describe_reserved_elasticsearch_instance_offerings(params = {})
+    # @overload describe_reserved_elasticsearch_instance_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_elasticsearch_instance_offerings(params = {}, options = {})
+    def describe_reserved_elasticsearch_instance_offerings(params = {}, **options)
       req = build_request(:describe_reserved_elasticsearch_instance_offerings, params)
       req.send_request(options)
     end
@@ -1719,9 +1719,9 @@ module Aws::ElasticsearchService
     #   resp.reserved_elasticsearch_instances[0].recurring_charges[0].recurring_charge_amount #=> Float
     #   resp.reserved_elasticsearch_instances[0].recurring_charges[0].recurring_charge_frequency #=> String
     #
-    # @overload describe_reserved_elasticsearch_instances(params = {})
+    # @overload describe_reserved_elasticsearch_instances(**params)
     # @param [Hash] params ({})
-    def describe_reserved_elasticsearch_instances(params = {}, options = {})
+    def describe_reserved_elasticsearch_instances(params = {}, **options)
       req = build_request(:describe_reserved_elasticsearch_instances, params)
       req.send_request(options)
     end
@@ -1759,9 +1759,9 @@ module Aws::ElasticsearchService
     #   resp.domain_package_details.error_details.error_type #=> String
     #   resp.domain_package_details.error_details.error_message #=> String
     #
-    # @overload dissociate_package(params = {})
+    # @overload dissociate_package(**params)
     # @param [Hash] params ({})
-    def dissociate_package(params = {}, options = {})
+    def dissociate_package(params = {}, **options)
       req = build_request(:dissociate_package, params)
       req.send_request(options)
     end
@@ -1793,9 +1793,9 @@ module Aws::ElasticsearchService
     #   resp.compatible_elasticsearch_versions[0].target_versions #=> Array
     #   resp.compatible_elasticsearch_versions[0].target_versions[0] #=> String
     #
-    # @overload get_compatible_elasticsearch_versions(params = {})
+    # @overload get_compatible_elasticsearch_versions(**params)
     # @param [Hash] params ({})
-    def get_compatible_elasticsearch_versions(params = {}, options = {})
+    def get_compatible_elasticsearch_versions(params = {}, **options)
       req = build_request(:get_compatible_elasticsearch_versions, params)
       req.send_request(options)
     end
@@ -1839,9 +1839,9 @@ module Aws::ElasticsearchService
     #   resp.package_version_history_list[0].created_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload get_package_version_history(params = {})
+    # @overload get_package_version_history(**params)
     # @param [Hash] params ({})
-    def get_package_version_history(params = {}, options = {})
+    def get_package_version_history(params = {}, **options)
       req = build_request(:get_package_version_history, params)
       req.send_request(options)
     end
@@ -1892,9 +1892,9 @@ module Aws::ElasticsearchService
     #   resp.upgrade_histories[0].steps_list[0].progress_percent #=> Float
     #   resp.next_token #=> String
     #
-    # @overload get_upgrade_history(params = {})
+    # @overload get_upgrade_history(**params)
     # @param [Hash] params ({})
-    def get_upgrade_history(params = {}, options = {})
+    def get_upgrade_history(params = {}, **options)
       req = build_request(:get_upgrade_history, params)
       req.send_request(options)
     end
@@ -1926,9 +1926,9 @@ module Aws::ElasticsearchService
     #   resp.step_status #=> String, one of "IN_PROGRESS", "SUCCEEDED", "SUCCEEDED_WITH_ISSUES", "FAILED"
     #   resp.upgrade_name #=> String
     #
-    # @overload get_upgrade_status(params = {})
+    # @overload get_upgrade_status(**params)
     # @param [Hash] params ({})
-    def get_upgrade_status(params = {}, options = {})
+    def get_upgrade_status(params = {}, **options)
       req = build_request(:get_upgrade_status, params)
       req.send_request(options)
     end
@@ -1945,9 +1945,9 @@ module Aws::ElasticsearchService
     #   resp.domain_names #=> Array
     #   resp.domain_names[0].domain_name #=> String
     #
-    # @overload list_domain_names(params = {})
+    # @overload list_domain_names(**params)
     # @param [Hash] params ({})
-    def list_domain_names(params = {}, options = {})
+    def list_domain_names(params = {}, **options)
       req = build_request(:list_domain_names, params)
       req.send_request(options)
     end
@@ -1995,9 +1995,9 @@ module Aws::ElasticsearchService
     #   resp.domain_package_details_list[0].error_details.error_message #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_domains_for_package(params = {})
+    # @overload list_domains_for_package(**params)
     # @param [Hash] params ({})
-    def list_domains_for_package(params = {}, options = {})
+    def list_domains_for_package(params = {}, **options)
       req = build_request(:list_domains_for_package, params)
       req.send_request(options)
     end
@@ -2044,9 +2044,9 @@ module Aws::ElasticsearchService
     #   resp.elasticsearch_instance_types[0] #=> String, one of "m3.medium.elasticsearch", "m3.large.elasticsearch", "m3.xlarge.elasticsearch", "m3.2xlarge.elasticsearch", "m4.large.elasticsearch", "m4.xlarge.elasticsearch", "m4.2xlarge.elasticsearch", "m4.4xlarge.elasticsearch", "m4.10xlarge.elasticsearch", "m5.large.elasticsearch", "m5.xlarge.elasticsearch", "m5.2xlarge.elasticsearch", "m5.4xlarge.elasticsearch", "m5.12xlarge.elasticsearch", "r5.large.elasticsearch", "r5.xlarge.elasticsearch", "r5.2xlarge.elasticsearch", "r5.4xlarge.elasticsearch", "r5.12xlarge.elasticsearch", "c5.large.elasticsearch", "c5.xlarge.elasticsearch", "c5.2xlarge.elasticsearch", "c5.4xlarge.elasticsearch", "c5.9xlarge.elasticsearch", "c5.18xlarge.elasticsearch", "ultrawarm1.medium.elasticsearch", "ultrawarm1.large.elasticsearch", "t2.micro.elasticsearch", "t2.small.elasticsearch", "t2.medium.elasticsearch", "r3.large.elasticsearch", "r3.xlarge.elasticsearch", "r3.2xlarge.elasticsearch", "r3.4xlarge.elasticsearch", "r3.8xlarge.elasticsearch", "i2.xlarge.elasticsearch", "i2.2xlarge.elasticsearch", "d2.xlarge.elasticsearch", "d2.2xlarge.elasticsearch", "d2.4xlarge.elasticsearch", "d2.8xlarge.elasticsearch", "c4.large.elasticsearch", "c4.xlarge.elasticsearch", "c4.2xlarge.elasticsearch", "c4.4xlarge.elasticsearch", "c4.8xlarge.elasticsearch", "r4.large.elasticsearch", "r4.xlarge.elasticsearch", "r4.2xlarge.elasticsearch", "r4.4xlarge.elasticsearch", "r4.8xlarge.elasticsearch", "r4.16xlarge.elasticsearch", "i3.large.elasticsearch", "i3.xlarge.elasticsearch", "i3.2xlarge.elasticsearch", "i3.4xlarge.elasticsearch", "i3.8xlarge.elasticsearch", "i3.16xlarge.elasticsearch"
     #   resp.next_token #=> String
     #
-    # @overload list_elasticsearch_instance_types(params = {})
+    # @overload list_elasticsearch_instance_types(**params)
     # @param [Hash] params ({})
-    def list_elasticsearch_instance_types(params = {}, options = {})
+    def list_elasticsearch_instance_types(params = {}, **options)
       req = build_request(:list_elasticsearch_instance_types, params)
       req.send_request(options)
     end
@@ -2082,9 +2082,9 @@ module Aws::ElasticsearchService
     #   resp.elasticsearch_versions[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_elasticsearch_versions(params = {})
+    # @overload list_elasticsearch_versions(**params)
     # @param [Hash] params ({})
-    def list_elasticsearch_versions(params = {}, options = {})
+    def list_elasticsearch_versions(params = {}, **options)
       req = build_request(:list_elasticsearch_versions, params)
       req.send_request(options)
     end
@@ -2132,9 +2132,9 @@ module Aws::ElasticsearchService
     #   resp.domain_package_details_list[0].error_details.error_message #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_packages_for_domain(params = {})
+    # @overload list_packages_for_domain(**params)
     # @param [Hash] params ({})
-    def list_packages_for_domain(params = {}, options = {})
+    def list_packages_for_domain(params = {}, **options)
       req = build_request(:list_packages_for_domain, params)
       req.send_request(options)
     end
@@ -2161,9 +2161,9 @@ module Aws::ElasticsearchService
     #   resp.tag_list[0].key #=> String
     #   resp.tag_list[0].value #=> String
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -2197,9 +2197,9 @@ module Aws::ElasticsearchService
     #   resp.reserved_elasticsearch_instance_id #=> String
     #   resp.reservation_name #=> String
     #
-    # @overload purchase_reserved_elasticsearch_instance_offering(params = {})
+    # @overload purchase_reserved_elasticsearch_instance_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_elasticsearch_instance_offering(params = {}, options = {})
+    def purchase_reserved_elasticsearch_instance_offering(params = {}, **options)
       req = build_request(:purchase_reserved_elasticsearch_instance_offering, params)
       req.send_request(options)
     end
@@ -2232,9 +2232,9 @@ module Aws::ElasticsearchService
     #   resp.cross_cluster_search_connection.connection_status.status_code #=> String, one of "PENDING_ACCEPTANCE", "APPROVED", "REJECTING", "REJECTED", "DELETING", "DELETED"
     #   resp.cross_cluster_search_connection.connection_status.message #=> String
     #
-    # @overload reject_inbound_cross_cluster_search_connection(params = {})
+    # @overload reject_inbound_cross_cluster_search_connection(**params)
     # @param [Hash] params ({})
-    def reject_inbound_cross_cluster_search_connection(params = {}, options = {})
+    def reject_inbound_cross_cluster_search_connection(params = {}, **options)
       req = build_request(:reject_inbound_cross_cluster_search_connection, params)
       req.send_request(options)
     end
@@ -2259,9 +2259,9 @@ module Aws::ElasticsearchService
     #     tag_keys: ["String"], # required
     #   })
     #
-    # @overload remove_tags(params = {})
+    # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, options = {})
+    def remove_tags(params = {}, **options)
       req = build_request(:remove_tags, params)
       req.send_request(options)
     end
@@ -2293,9 +2293,9 @@ module Aws::ElasticsearchService
     #   resp.service_software_options.automated_update_date #=> Time
     #   resp.service_software_options.optional_deployment #=> Boolean
     #
-    # @overload start_elasticsearch_service_software_update(params = {})
+    # @overload start_elasticsearch_service_software_update(**params)
     # @param [Hash] params ({})
-    def start_elasticsearch_service_software_update(params = {}, options = {})
+    def start_elasticsearch_service_software_update(params = {}, **options)
       req = build_request(:start_elasticsearch_service_software_update, params)
       req.send_request(options)
     end
@@ -2558,9 +2558,9 @@ module Aws::ElasticsearchService
     #   resp.domain_config.advanced_security_options.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active"
     #   resp.domain_config.advanced_security_options.status.pending_deletion #=> Boolean
     #
-    # @overload update_elasticsearch_domain_config(params = {})
+    # @overload update_elasticsearch_domain_config(**params)
     # @param [Hash] params ({})
-    def update_elasticsearch_domain_config(params = {}, options = {})
+    def update_elasticsearch_domain_config(params = {}, **options)
       req = build_request(:update_elasticsearch_domain_config, params)
       req.send_request(options)
     end
@@ -2610,9 +2610,9 @@ module Aws::ElasticsearchService
     #   resp.package_details.error_details.error_type #=> String
     #   resp.package_details.error_details.error_message #=> String
     #
-    # @overload update_package(params = {})
+    # @overload update_package(**params)
     # @param [Hash] params ({})
-    def update_package(params = {}, options = {})
+    def update_package(params = {}, **options)
       req = build_request(:update_package, params)
       req.send_request(options)
     end
@@ -2654,9 +2654,9 @@ module Aws::ElasticsearchService
     #   resp.target_version #=> String
     #   resp.perform_check_only #=> Boolean
     #
-    # @overload upgrade_elasticsearch_domain(params = {})
+    # @overload upgrade_elasticsearch_domain(**params)
     # @param [Hash] params ({})
-    def upgrade_elasticsearch_domain(params = {}, options = {})
+    def upgrade_elasticsearch_domain(params = {}, **options)
       req = build_request(:upgrade_elasticsearch_domain, params)
       req.send_request(options)
     end
@@ -2665,7 +2665,7 @@ module Aws::ElasticsearchService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2673,15 +2673,15 @@ module Aws::ElasticsearchService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-elasticsearchservice'
-      context[:gem_version] = '1.46.0'
+      context[:gem_name] = "aws-sdk-elasticsearchservice"
+      context[:gem_version] = "1.46.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

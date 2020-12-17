@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotdataplane)
 
@@ -280,7 +280,7 @@ module Aws::IoTDataPlane
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -357,9 +357,9 @@ module Aws::IoTDataPlane
     #
     #   resp.payload #=> String
     #
-    # @overload delete_thing_shadow(params = {})
+    # @overload delete_thing_shadow(**params)
     # @param [Hash] params ({})
-    def delete_thing_shadow(params = {}, options = {})
+    def delete_thing_shadow(params = {}, **options)
       req = build_request(:delete_thing_shadow, params)
       req.send_request(options)
     end
@@ -394,9 +394,9 @@ module Aws::IoTDataPlane
     #
     #   resp.payload #=> String
     #
-    # @overload get_thing_shadow(params = {})
+    # @overload get_thing_shadow(**params)
     # @param [Hash] params ({})
-    def get_thing_shadow(params = {}, options = {})
+    def get_thing_shadow(params = {}, **options)
       req = build_request(:get_thing_shadow, params)
       req.send_request(options)
     end
@@ -433,9 +433,9 @@ module Aws::IoTDataPlane
     #   resp.next_token #=> String
     #   resp.timestamp #=> Integer
     #
-    # @overload list_named_shadows_for_thing(params = {})
+    # @overload list_named_shadows_for_thing(**params)
     # @param [Hash] params ({})
-    def list_named_shadows_for_thing(params = {}, options = {})
+    def list_named_shadows_for_thing(params = {}, **options)
       req = build_request(:list_named_shadows_for_thing, params)
       req.send_request(options)
     end
@@ -468,9 +468,9 @@ module Aws::IoTDataPlane
     #     payload: "data",
     #   })
     #
-    # @overload publish(params = {})
+    # @overload publish(**params)
     # @param [Hash] params ({})
-    def publish(params = {}, options = {})
+    def publish(params = {}, **options)
       req = build_request(:publish, params)
       req.send_request(options)
     end
@@ -509,9 +509,9 @@ module Aws::IoTDataPlane
     #
     #   resp.payload #=> String
     #
-    # @overload update_thing_shadow(params = {})
+    # @overload update_thing_shadow(**params)
     # @param [Hash] params ({})
-    def update_thing_shadow(params = {}, options = {})
+    def update_thing_shadow(params = {}, **options)
       req = build_request(:update_thing_shadow, params)
       req.send_request(options)
     end
@@ -520,7 +520,7 @@ module Aws::IoTDataPlane
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -528,15 +528,15 @@ module Aws::IoTDataPlane
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotdataplane'
-      context[:gem_version] = '1.26.0'
+      context[:gem_name] = "aws-sdk-iotdataplane"
+      context[:gem_version] = "1.26.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

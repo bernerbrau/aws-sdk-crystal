@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:datapipeline)
 
@@ -290,7 +290,7 @@ module Aws::DataPipeline
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -373,9 +373,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/ActivatePipeline AWS API Documentation
     #
-    # @overload activate_pipeline(params = {})
+    # @overload activate_pipeline(**params)
     # @param [Hash] params ({})
-    def activate_pipeline(params = {}, options = {})
+    def activate_pipeline(params = {}, **options)
       req = build_request(:activate_pipeline, params)
       req.send_request(options)
     end
@@ -404,9 +404,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/AddTags AWS API Documentation
     #
-    # @overload add_tags(params = {})
+    # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, options = {})
+    def add_tags(params = {}, **options)
       req = build_request(:add_tags, params)
       req.send_request(options)
     end
@@ -470,9 +470,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/CreatePipeline AWS API Documentation
     #
-    # @overload create_pipeline(params = {})
+    # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, options = {})
+    def create_pipeline(params = {}, **options)
       req = build_request(:create_pipeline, params)
       req.send_request(options)
     end
@@ -504,9 +504,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/DeactivatePipeline AWS API Documentation
     #
-    # @overload deactivate_pipeline(params = {})
+    # @overload deactivate_pipeline(**params)
     # @param [Hash] params ({})
-    def deactivate_pipeline(params = {}, options = {})
+    def deactivate_pipeline(params = {}, **options)
       req = build_request(:deactivate_pipeline, params)
       req.send_request(options)
     end
@@ -533,9 +533,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/DeletePipeline AWS API Documentation
     #
-    # @overload delete_pipeline(params = {})
+    # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, options = {})
+    def delete_pipeline(params = {}, **options)
       req = build_request(:delete_pipeline, params)
       req.send_request(options)
     end
@@ -593,9 +593,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/DescribeObjects AWS API Documentation
     #
-    # @overload describe_objects(params = {})
+    # @overload describe_objects(**params)
     # @param [Hash] params ({})
-    def describe_objects(params = {}, options = {})
+    def describe_objects(params = {}, **options)
       req = build_request(:describe_objects, params)
       req.send_request(options)
     end
@@ -642,9 +642,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/DescribePipelines AWS API Documentation
     #
-    # @overload describe_pipelines(params = {})
+    # @overload describe_pipelines(**params)
     # @param [Hash] params ({})
-    def describe_pipelines(params = {}, options = {})
+    def describe_pipelines(params = {}, **options)
       req = build_request(:describe_pipelines, params)
       req.send_request(options)
     end
@@ -680,9 +680,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/EvaluateExpression AWS API Documentation
     #
-    # @overload evaluate_expression(params = {})
+    # @overload evaluate_expression(**params)
     # @param [Hash] params ({})
-    def evaluate_expression(params = {}, options = {})
+    def evaluate_expression(params = {}, **options)
       req = build_request(:evaluate_expression, params)
       req.send_request(options)
     end
@@ -732,9 +732,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/GetPipelineDefinition AWS API Documentation
     #
-    # @overload get_pipeline_definition(params = {})
+    # @overload get_pipeline_definition(**params)
     # @param [Hash] params ({})
-    def get_pipeline_definition(params = {}, options = {})
+    def get_pipeline_definition(params = {}, **options)
       req = build_request(:get_pipeline_definition, params)
       req.send_request(options)
     end
@@ -772,9 +772,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/ListPipelines AWS API Documentation
     #
-    # @overload list_pipelines(params = {})
+    # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, options = {})
+    def list_pipelines(params = {}, **options)
       req = build_request(:list_pipelines, params)
       req.send_request(options)
     end
@@ -849,9 +849,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/PollForTask AWS API Documentation
     #
-    # @overload poll_for_task(params = {})
+    # @overload poll_for_task(**params)
     # @param [Hash] params ({})
-    def poll_for_task(params = {}, options = {})
+    def poll_for_task(params = {}, **options)
       req = build_request(:poll_for_task, params)
       req.send_request(options)
     end
@@ -941,9 +941,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/PutPipelineDefinition AWS API Documentation
     #
-    # @overload put_pipeline_definition(params = {})
+    # @overload put_pipeline_definition(**params)
     # @param [Hash] params ({})
-    def put_pipeline_definition(params = {}, options = {})
+    def put_pipeline_definition(params = {}, **options)
       req = build_request(:put_pipeline_definition, params)
       req.send_request(options)
     end
@@ -1011,9 +1011,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/QueryObjects AWS API Documentation
     #
-    # @overload query_objects(params = {})
+    # @overload query_objects(**params)
     # @param [Hash] params ({})
-    def query_objects(params = {}, options = {})
+    def query_objects(params = {}, **options)
       req = build_request(:query_objects, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/RemoveTags AWS API Documentation
     #
-    # @overload remove_tags(params = {})
+    # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, options = {})
+    def remove_tags(params = {}, **options)
       req = build_request(:remove_tags, params)
       req.send_request(options)
     end
@@ -1089,9 +1089,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/ReportTaskProgress AWS API Documentation
     #
-    # @overload report_task_progress(params = {})
+    # @overload report_task_progress(**params)
     # @param [Hash] params ({})
-    def report_task_progress(params = {}, options = {})
+    def report_task_progress(params = {}, **options)
       req = build_request(:report_task_progress, params)
       req.send_request(options)
     end
@@ -1138,9 +1138,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/ReportTaskRunnerHeartbeat AWS API Documentation
     #
-    # @overload report_task_runner_heartbeat(params = {})
+    # @overload report_task_runner_heartbeat(**params)
     # @param [Hash] params ({})
-    def report_task_runner_heartbeat(params = {}, options = {})
+    def report_task_runner_heartbeat(params = {}, **options)
       req = build_request(:report_task_runner_heartbeat, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/SetStatus AWS API Documentation
     #
-    # @overload set_status(params = {})
+    # @overload set_status(**params)
     # @param [Hash] params ({})
-    def set_status(params = {}, options = {})
+    def set_status(params = {}, **options)
       req = build_request(:set_status, params)
       req.send_request(options)
     end
@@ -1230,9 +1230,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/SetTaskStatus AWS API Documentation
     #
-    # @overload set_task_status(params = {})
+    # @overload set_task_status(**params)
     # @param [Hash] params ({})
-    def set_task_status(params = {}, options = {})
+    def set_task_status(params = {}, **options)
       req = build_request(:set_task_status, params)
       req.send_request(options)
     end
@@ -1309,9 +1309,9 @@ module Aws::DataPipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/datapipeline-2012-10-29/ValidatePipelineDefinition AWS API Documentation
     #
-    # @overload validate_pipeline_definition(params = {})
+    # @overload validate_pipeline_definition(**params)
     # @param [Hash] params ({})
-    def validate_pipeline_definition(params = {}, options = {})
+    def validate_pipeline_definition(params = {}, **options)
       req = build_request(:validate_pipeline_definition, params)
       req.send_request(options)
     end
@@ -1320,7 +1320,7 @@ module Aws::DataPipeline
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1328,15 +1328,15 @@ module Aws::DataPipeline
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-datapipeline'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-datapipeline"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

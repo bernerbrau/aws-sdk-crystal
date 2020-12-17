@@ -8,11 +8,11 @@
 Feature: Smoke tests for ApplicationDiscoveryService
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @applicationdiscoveryservice @smoke
   Scenario: Call Aws::ApplicationDiscoveryService::Client#describe_agents and expect it to succeed
-  When I call the operation 'describe_agents' with params:
+  When I call the operation "describe_agents" with params:
     """
 {}
     """

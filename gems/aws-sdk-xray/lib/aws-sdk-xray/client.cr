@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:xray)
 
@@ -280,7 +280,7 @@ module Aws::XRay
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -367,9 +367,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/BatchGetTraces AWS API Documentation
     #
-    # @overload batch_get_traces(params = {})
+    # @overload batch_get_traces(**params)
     # @param [Hash] params ({})
-    def batch_get_traces(params = {}, options = {})
+    def batch_get_traces(params = {}, **options)
       req = build_request(:batch_get_traces, params)
       req.send_request(options)
     end
@@ -448,9 +448,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/CreateGroup AWS API Documentation
     #
-    # @overload create_group(params = {})
+    # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, options = {})
+    def create_group(params = {}, **options)
       req = build_request(:create_group, params)
       req.send_request(options)
     end
@@ -544,9 +544,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/CreateSamplingRule AWS API Documentation
     #
-    # @overload create_sampling_rule(params = {})
+    # @overload create_sampling_rule(**params)
     # @param [Hash] params ({})
-    def create_sampling_rule(params = {}, options = {})
+    def create_sampling_rule(params = {}, **options)
       req = build_request(:create_sampling_rule, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/DeleteGroup AWS API Documentation
     #
-    # @overload delete_group(params = {})
+    # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, options = {})
+    def delete_group(params = {}, **options)
       req = build_request(:delete_group, params)
       req.send_request(options)
     end
@@ -619,9 +619,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/DeleteSamplingRule AWS API Documentation
     #
-    # @overload delete_sampling_rule(params = {})
+    # @overload delete_sampling_rule(**params)
     # @param [Hash] params ({})
-    def delete_sampling_rule(params = {}, options = {})
+    def delete_sampling_rule(params = {}, **options)
       req = build_request(:delete_sampling_rule, params)
       req.send_request(options)
     end
@@ -640,9 +640,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetEncryptionConfig AWS API Documentation
     #
-    # @overload get_encryption_config(params = {})
+    # @overload get_encryption_config(**params)
     # @param [Hash] params ({})
-    def get_encryption_config(params = {}, options = {})
+    def get_encryption_config(params = {}, **options)
       req = build_request(:get_encryption_config, params)
       req.send_request(options)
     end
@@ -676,9 +676,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetGroup AWS API Documentation
     #
-    # @overload get_group(params = {})
+    # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, options = {})
+    def get_group(params = {}, **options)
       req = build_request(:get_group, params)
       req.send_request(options)
     end
@@ -713,9 +713,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetGroups AWS API Documentation
     #
-    # @overload get_groups(params = {})
+    # @overload get_groups(**params)
     # @param [Hash] params ({})
-    def get_groups(params = {}, options = {})
+    def get_groups(params = {}, **options)
       req = build_request(:get_groups, params)
       req.send_request(options)
     end
@@ -770,9 +770,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetInsight AWS API Documentation
     #
-    # @overload get_insight(params = {})
+    # @overload get_insight(**params)
     # @param [Hash] params ({})
-    def get_insight(params = {}, options = {})
+    def get_insight(params = {}, **options)
       req = build_request(:get_insight, params)
       req.send_request(options)
     end
@@ -829,9 +829,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetInsightEvents AWS API Documentation
     #
-    # @overload get_insight_events(params = {})
+    # @overload get_insight_events(**params)
     # @param [Hash] params ({})
-    def get_insight_events(params = {}, options = {})
+    def get_insight_events(params = {}, **options)
       req = build_request(:get_insight_events, params)
       req.send_request(options)
     end
@@ -897,9 +897,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetInsightImpactGraph AWS API Documentation
     #
-    # @overload get_insight_impact_graph(params = {})
+    # @overload get_insight_impact_graph(**params)
     # @param [Hash] params ({})
-    def get_insight_impact_graph(params = {}, options = {})
+    def get_insight_impact_graph(params = {}, **options)
       req = build_request(:get_insight_impact_graph, params)
       req.send_request(options)
     end
@@ -984,9 +984,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetInsightSummaries AWS API Documentation
     #
-    # @overload get_insight_summaries(params = {})
+    # @overload get_insight_summaries(**params)
     # @param [Hash] params ({})
-    def get_insight_summaries(params = {}, options = {})
+    def get_insight_summaries(params = {}, **options)
       req = build_request(:get_insight_summaries, params)
       req.send_request(options)
     end
@@ -1032,9 +1032,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetSamplingRules AWS API Documentation
     #
-    # @overload get_sampling_rules(params = {})
+    # @overload get_sampling_rules(**params)
     # @param [Hash] params ({})
-    def get_sampling_rules(params = {}, options = {})
+    def get_sampling_rules(params = {}, **options)
       req = build_request(:get_sampling_rules, params)
       req.send_request(options)
     end
@@ -1070,9 +1070,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetSamplingStatisticSummaries AWS API Documentation
     #
-    # @overload get_sampling_statistic_summaries(params = {})
+    # @overload get_sampling_statistic_summaries(**params)
     # @param [Hash] params ({})
-    def get_sampling_statistic_summaries(params = {}, options = {})
+    def get_sampling_statistic_summaries(params = {}, **options)
       req = build_request(:get_sampling_statistic_summaries, params)
       req.send_request(options)
     end
@@ -1120,9 +1120,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetSamplingTargets AWS API Documentation
     #
-    # @overload get_sampling_targets(params = {})
+    # @overload get_sampling_targets(**params)
     # @param [Hash] params ({})
-    def get_sampling_targets(params = {}, options = {})
+    def get_sampling_targets(params = {}, **options)
       req = build_request(:get_sampling_targets, params)
       req.send_request(options)
     end
@@ -1228,9 +1228,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetServiceGraph AWS API Documentation
     #
-    # @overload get_service_graph(params = {})
+    # @overload get_service_graph(**params)
     # @param [Hash] params ({})
-    def get_service_graph(params = {}, options = {})
+    def get_service_graph(params = {}, **options)
       req = build_request(:get_service_graph, params)
       req.send_request(options)
     end
@@ -1318,9 +1318,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetTimeSeriesServiceStatistics AWS API Documentation
     #
-    # @overload get_time_series_service_statistics(params = {})
+    # @overload get_time_series_service_statistics(**params)
     # @param [Hash] params ({})
-    def get_time_series_service_statistics(params = {}, options = {})
+    def get_time_series_service_statistics(params = {}, **options)
       req = build_request(:get_time_series_service_statistics, params)
       req.send_request(options)
     end
@@ -1398,9 +1398,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetTraceGraph AWS API Documentation
     #
-    # @overload get_trace_graph(params = {})
+    # @overload get_trace_graph(**params)
     # @param [Hash] params ({})
-    def get_trace_graph(params = {}, options = {})
+    def get_trace_graph(params = {}, **options)
       req = build_request(:get_trace_graph, params)
       req.send_request(options)
     end
@@ -1580,9 +1580,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/GetTraceSummaries AWS API Documentation
     #
-    # @overload get_trace_summaries(params = {})
+    # @overload get_trace_summaries(**params)
     # @param [Hash] params ({})
-    def get_trace_summaries(params = {}, options = {})
+    def get_trace_summaries(params = {}, **options)
       req = build_request(:get_trace_summaries, params)
       req.send_request(options)
     end
@@ -1619,9 +1619,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1667,9 +1667,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/PutEncryptionConfig AWS API Documentation
     #
-    # @overload put_encryption_config(params = {})
+    # @overload put_encryption_config(**params)
     # @param [Hash] params ({})
-    def put_encryption_config(params = {}, options = {})
+    def put_encryption_config(params = {}, **options)
       req = build_request(:put_encryption_config, params)
       req.send_request(options)
     end
@@ -1713,9 +1713,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/PutTelemetryRecords AWS API Documentation
     #
-    # @overload put_telemetry_records(params = {})
+    # @overload put_telemetry_records(**params)
     # @param [Hash] params ({})
-    def put_telemetry_records(params = {}, options = {})
+    def put_telemetry_records(params = {}, **options)
       req = build_request(:put_telemetry_records, params)
       req.send_request(options)
     end
@@ -1796,9 +1796,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/PutTraceSegments AWS API Documentation
     #
-    # @overload put_trace_segments(params = {})
+    # @overload put_trace_segments(**params)
     # @param [Hash] params ({})
-    def put_trace_segments(params = {}, options = {})
+    def put_trace_segments(params = {}, **options)
       req = build_request(:put_trace_segments, params)
       req.send_request(options)
     end
@@ -1850,9 +1850,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1878,9 +1878,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1933,9 +1933,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/UpdateGroup AWS API Documentation
     #
-    # @overload update_group(params = {})
+    # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, options = {})
+    def update_group(params = {}, **options)
       req = build_request(:update_group, params)
       req.send_request(options)
     end
@@ -1991,9 +1991,9 @@ module Aws::XRay
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/xray-2016-04-12/UpdateSamplingRule AWS API Documentation
     #
-    # @overload update_sampling_rule(params = {})
+    # @overload update_sampling_rule(**params)
     # @param [Hash] params ({})
-    def update_sampling_rule(params = {}, options = {})
+    def update_sampling_rule(params = {}, **options)
       req = build_request(:update_sampling_rule, params)
       req.send_request(options)
     end
@@ -2002,7 +2002,7 @@ module Aws::XRay
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2010,15 +2010,15 @@ module Aws::XRay
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-xray'
-      context[:gem_version] = '1.35.0'
+      context[:gem_name] = "aws-sdk-xray"
+      context[:gem_version] = "1.35.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

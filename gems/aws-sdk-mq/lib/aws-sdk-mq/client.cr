@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mq)
 
@@ -280,7 +280,7 @@ module Aws::MQ
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -451,9 +451,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/CreateBroker AWS API Documentation
     #
-    # @overload create_broker(params = {})
+    # @overload create_broker(**params)
     # @param [Hash] params ({})
-    def create_broker(params = {}, options = {})
+    def create_broker(params = {}, **options)
       req = build_request(:create_broker, params)
       req.send_request(options)
     end
@@ -509,9 +509,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/CreateConfiguration AWS API Documentation
     #
-    # @overload create_configuration(params = {})
+    # @overload create_configuration(**params)
     # @param [Hash] params ({})
-    def create_configuration(params = {}, options = {})
+    def create_configuration(params = {}, **options)
       req = build_request(:create_configuration, params)
       req.send_request(options)
     end
@@ -535,9 +535,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/CreateTags AWS API Documentation
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -568,9 +568,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -595,9 +595,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DeleteBroker AWS API Documentation
     #
-    # @overload delete_broker(params = {})
+    # @overload delete_broker(**params)
     # @param [Hash] params ({})
-    def delete_broker(params = {}, options = {})
+    def delete_broker(params = {}, **options)
       req = build_request(:delete_broker, params)
       req.send_request(options)
     end
@@ -619,9 +619,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -643,9 +643,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -768,9 +768,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DescribeBroker AWS API Documentation
     #
-    # @overload describe_broker(params = {})
+    # @overload describe_broker(**params)
     # @param [Hash] params ({})
-    def describe_broker(params = {}, options = {})
+    def describe_broker(params = {}, **options)
       req = build_request(:describe_broker, params)
       req.send_request(options)
     end
@@ -808,9 +808,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DescribeBrokerEngineTypes AWS API Documentation
     #
-    # @overload describe_broker_engine_types(params = {})
+    # @overload describe_broker_engine_types(**params)
     # @param [Hash] params ({})
-    def describe_broker_engine_types(params = {}, options = {})
+    def describe_broker_engine_types(params = {}, **options)
       req = build_request(:describe_broker_engine_types, params)
       req.send_request(options)
     end
@@ -860,9 +860,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DescribeBrokerInstanceOptions AWS API Documentation
     #
-    # @overload describe_broker_instance_options(params = {})
+    # @overload describe_broker_instance_options(**params)
     # @param [Hash] params ({})
-    def describe_broker_instance_options(params = {}, options = {})
+    def describe_broker_instance_options(params = {}, **options)
       req = build_request(:describe_broker_instance_options, params)
       req.send_request(options)
     end
@@ -908,9 +908,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DescribeConfiguration AWS API Documentation
     #
-    # @overload describe_configuration(params = {})
+    # @overload describe_configuration(**params)
     # @param [Hash] params ({})
-    def describe_configuration(params = {}, options = {})
+    def describe_configuration(params = {}, **options)
       req = build_request(:describe_configuration, params)
       req.send_request(options)
     end
@@ -945,9 +945,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DescribeConfigurationRevision AWS API Documentation
     #
-    # @overload describe_configuration_revision(params = {})
+    # @overload describe_configuration_revision(**params)
     # @param [Hash] params ({})
-    def describe_configuration_revision(params = {}, options = {})
+    def describe_configuration_revision(params = {}, **options)
       req = build_request(:describe_configuration_revision, params)
       req.send_request(options)
     end
@@ -987,9 +987,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/DescribeUser AWS API Documentation
     #
-    # @overload describe_user(params = {})
+    # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, options = {})
+    def describe_user(params = {}, **options)
       req = build_request(:describe_user, params)
       req.send_request(options)
     end
@@ -1029,9 +1029,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/ListBrokers AWS API Documentation
     #
-    # @overload list_brokers(params = {})
+    # @overload list_brokers(**params)
     # @param [Hash] params ({})
-    def list_brokers(params = {}, options = {})
+    def list_brokers(params = {}, **options)
       req = build_request(:list_brokers, params)
       req.send_request(options)
     end
@@ -1071,9 +1071,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/ListConfigurationRevisions AWS API Documentation
     #
-    # @overload list_configuration_revisions(params = {})
+    # @overload list_configuration_revisions(**params)
     # @param [Hash] params ({})
-    def list_configuration_revisions(params = {}, options = {})
+    def list_configuration_revisions(params = {}, **options)
       req = build_request(:list_configuration_revisions, params)
       req.send_request(options)
     end
@@ -1118,9 +1118,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/ListConfigurations AWS API Documentation
     #
-    # @overload list_configurations(params = {})
+    # @overload list_configurations(**params)
     # @param [Hash] params ({})
-    def list_configurations(params = {}, options = {})
+    def list_configurations(params = {}, **options)
       req = build_request(:list_configurations, params)
       req.send_request(options)
     end
@@ -1146,9 +1146,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -1187,9 +1187,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/RebootBroker AWS API Documentation
     #
-    # @overload reboot_broker(params = {})
+    # @overload reboot_broker(**params)
     # @param [Hash] params ({})
-    def reboot_broker(params = {}, options = {})
+    def reboot_broker(params = {}, **options)
       req = build_request(:reboot_broker, params)
       req.send_request(options)
     end
@@ -1311,9 +1311,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/UpdateBroker AWS API Documentation
     #
-    # @overload update_broker(params = {})
+    # @overload update_broker(**params)
     # @param [Hash] params ({})
-    def update_broker(params = {}, options = {})
+    def update_broker(params = {}, **options)
       req = build_request(:update_broker, params)
       req.send_request(options)
     end
@@ -1359,9 +1359,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/UpdateConfiguration AWS API Documentation
     #
-    # @overload update_configuration(params = {})
+    # @overload update_configuration(**params)
     # @param [Hash] params ({})
-    def update_configuration(params = {}, options = {})
+    def update_configuration(params = {}, **options)
       req = build_request(:update_configuration, params)
       req.send_request(options)
     end
@@ -1392,9 +1392,9 @@ module Aws::MQ
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mq-2017-11-27/UpdateUser AWS API Documentation
     #
-    # @overload update_user(params = {})
+    # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, options = {})
+    def update_user(params = {}, **options)
       req = build_request(:update_user, params)
       req.send_request(options)
     end
@@ -1403,7 +1403,7 @@ module Aws::MQ
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1411,15 +1411,15 @@ module Aws::MQ
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mq'
-      context[:gem_version] = '1.34.0'
+      context[:gem_name] = "aws-sdk-mq"
+      context[:gem_version] = "1.34.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

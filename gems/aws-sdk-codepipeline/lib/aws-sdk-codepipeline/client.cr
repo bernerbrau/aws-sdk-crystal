@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codepipeline)
 
@@ -290,7 +290,7 @@ module Aws::CodePipeline
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -367,9 +367,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/AcknowledgeJob AWS API Documentation
     #
-    # @overload acknowledge_job(params = {})
+    # @overload acknowledge_job(**params)
     # @param [Hash] params ({})
-    def acknowledge_job(params = {}, options = {})
+    def acknowledge_job(params = {}, **options)
       req = build_request(:acknowledge_job, params)
       req.send_request(options)
     end
@@ -408,9 +408,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/AcknowledgeThirdPartyJob AWS API Documentation
     #
-    # @overload acknowledge_third_party_job(params = {})
+    # @overload acknowledge_third_party_job(**params)
     # @param [Hash] params ({})
-    def acknowledge_third_party_job(params = {}, options = {})
+    def acknowledge_third_party_job(params = {}, **options)
       req = build_request(:acknowledge_third_party_job, params)
       req.send_request(options)
     end
@@ -530,9 +530,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/CreateCustomActionType AWS API Documentation
     #
-    # @overload create_custom_action_type(params = {})
+    # @overload create_custom_action_type(**params)
     # @param [Hash] params ({})
-    def create_custom_action_type(params = {}, options = {})
+    def create_custom_action_type(params = {}, **options)
       req = build_request(:create_custom_action_type, params)
       req.send_request(options)
     end
@@ -672,9 +672,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/CreatePipeline AWS API Documentation
     #
-    # @overload create_pipeline(params = {})
+    # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, options = {})
+    def create_pipeline(params = {}, **options)
       req = build_request(:create_pipeline, params)
       req.send_request(options)
     end
@@ -712,9 +712,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/DeleteCustomActionType AWS API Documentation
     #
-    # @overload delete_custom_action_type(params = {})
+    # @overload delete_custom_action_type(**params)
     # @param [Hash] params ({})
-    def delete_custom_action_type(params = {}, options = {})
+    def delete_custom_action_type(params = {}, **options)
       req = build_request(:delete_custom_action_type, params)
       req.send_request(options)
     end
@@ -734,9 +734,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/DeletePipeline AWS API Documentation
     #
-    # @overload delete_pipeline(params = {})
+    # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, options = {})
+    def delete_pipeline(params = {}, **options)
       req = build_request(:delete_pipeline, params)
       req.send_request(options)
     end
@@ -760,9 +760,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/DeleteWebhook AWS API Documentation
     #
-    # @overload delete_webhook(params = {})
+    # @overload delete_webhook(**params)
     # @param [Hash] params ({})
-    def delete_webhook(params = {}, options = {})
+    def delete_webhook(params = {}, **options)
       req = build_request(:delete_webhook, params)
       req.send_request(options)
     end
@@ -785,9 +785,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/DeregisterWebhookWithThirdParty AWS API Documentation
     #
-    # @overload deregister_webhook_with_third_party(params = {})
+    # @overload deregister_webhook_with_third_party(**params)
     # @param [Hash] params ({})
-    def deregister_webhook_with_third_party(params = {}, options = {})
+    def deregister_webhook_with_third_party(params = {}, **options)
       req = build_request(:deregister_webhook_with_third_party, params)
       req.send_request(options)
     end
@@ -827,9 +827,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/DisableStageTransition AWS API Documentation
     #
-    # @overload disable_stage_transition(params = {})
+    # @overload disable_stage_transition(**params)
     # @param [Hash] params ({})
-    def disable_stage_transition(params = {}, options = {})
+    def disable_stage_transition(params = {}, **options)
       req = build_request(:disable_stage_transition, params)
       req.send_request(options)
     end
@@ -864,9 +864,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/EnableStageTransition AWS API Documentation
     #
-    # @overload enable_stage_transition(params = {})
+    # @overload enable_stage_transition(**params)
     # @param [Hash] params ({})
-    def enable_stage_transition(params = {}, options = {})
+    def enable_stage_transition(params = {}, **options)
       req = build_request(:enable_stage_transition, params)
       req.send_request(options)
     end
@@ -929,9 +929,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/GetJobDetails AWS API Documentation
     #
-    # @overload get_job_details(params = {})
+    # @overload get_job_details(**params)
     # @param [Hash] params ({})
-    def get_job_details(params = {}, options = {})
+    def get_job_details(params = {}, **options)
       req = build_request(:get_job_details, params)
       req.send_request(options)
     end
@@ -1002,9 +1002,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/GetPipeline AWS API Documentation
     #
-    # @overload get_pipeline(params = {})
+    # @overload get_pipeline(**params)
     # @param [Hash] params ({})
-    def get_pipeline(params = {}, options = {})
+    def get_pipeline(params = {}, **options)
       req = build_request(:get_pipeline, params)
       req.send_request(options)
     end
@@ -1048,9 +1048,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/GetPipelineExecution AWS API Documentation
     #
-    # @overload get_pipeline_execution(params = {})
+    # @overload get_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def get_pipeline_execution(params = {}, options = {})
+    def get_pipeline_execution(params = {}, **options)
       req = build_request(:get_pipeline_execution, params)
       req.send_request(options)
     end
@@ -1118,9 +1118,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/GetPipelineState AWS API Documentation
     #
-    # @overload get_pipeline_state(params = {})
+    # @overload get_pipeline_state(**params)
     # @param [Hash] params ({})
-    def get_pipeline_state(params = {}, options = {})
+    def get_pipeline_state(params = {}, **options)
       req = build_request(:get_pipeline_state, params)
       req.send_request(options)
     end
@@ -1190,9 +1190,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/GetThirdPartyJobDetails AWS API Documentation
     #
-    # @overload get_third_party_job_details(params = {})
+    # @overload get_third_party_job_details(**params)
     # @param [Hash] params ({})
-    def get_third_party_job_details(params = {}, options = {})
+    def get_third_party_job_details(params = {}, **options)
       req = build_request(:get_third_party_job_details, params)
       req.send_request(options)
     end
@@ -1279,9 +1279,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListActionExecutions AWS API Documentation
     #
-    # @overload list_action_executions(params = {})
+    # @overload list_action_executions(**params)
     # @param [Hash] params ({})
-    def list_action_executions(params = {}, options = {})
+    def list_action_executions(params = {}, **options)
       req = build_request(:list_action_executions, params)
       req.send_request(options)
     end
@@ -1339,9 +1339,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListActionTypes AWS API Documentation
     #
-    # @overload list_action_types(params = {})
+    # @overload list_action_types(**params)
     # @param [Hash] params ({})
-    def list_action_types(params = {}, options = {})
+    def list_action_types(params = {}, **options)
       req = build_request(:list_action_types, params)
       req.send_request(options)
     end
@@ -1397,9 +1397,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListPipelineExecutions AWS API Documentation
     #
-    # @overload list_pipeline_executions(params = {})
+    # @overload list_pipeline_executions(**params)
     # @param [Hash] params ({})
-    def list_pipeline_executions(params = {}, options = {})
+    def list_pipeline_executions(params = {}, **options)
       req = build_request(:list_pipeline_executions, params)
       req.send_request(options)
     end
@@ -1434,9 +1434,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListPipelines AWS API Documentation
     #
-    # @overload list_pipelines(params = {})
+    # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, options = {})
+    def list_pipelines(params = {}, **options)
       req = build_request(:list_pipelines, params)
       req.send_request(options)
     end
@@ -1479,9 +1479,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1537,9 +1537,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListWebhooks AWS API Documentation
     #
-    # @overload list_webhooks(params = {})
+    # @overload list_webhooks(**params)
     # @param [Hash] params ({})
-    def list_webhooks(params = {}, options = {})
+    def list_webhooks(params = {}, **options)
       req = build_request(:list_webhooks, params)
       req.send_request(options)
     end
@@ -1626,9 +1626,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PollForJobs AWS API Documentation
     #
-    # @overload poll_for_jobs(params = {})
+    # @overload poll_for_jobs(**params)
     # @param [Hash] params ({})
-    def poll_for_jobs(params = {}, options = {})
+    def poll_for_jobs(params = {}, **options)
       req = build_request(:poll_for_jobs, params)
       req.send_request(options)
     end
@@ -1671,9 +1671,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PollForThirdPartyJobs AWS API Documentation
     #
-    # @overload poll_for_third_party_jobs(params = {})
+    # @overload poll_for_third_party_jobs(**params)
     # @param [Hash] params ({})
-    def poll_for_third_party_jobs(params = {}, options = {})
+    def poll_for_third_party_jobs(params = {}, **options)
       req = build_request(:poll_for_third_party_jobs, params)
       req.send_request(options)
     end
@@ -1720,9 +1720,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutActionRevision AWS API Documentation
     #
-    # @overload put_action_revision(params = {})
+    # @overload put_action_revision(**params)
     # @param [Hash] params ({})
-    def put_action_revision(params = {}, options = {})
+    def put_action_revision(params = {}, **options)
       req = build_request(:put_action_revision, params)
       req.send_request(options)
     end
@@ -1771,9 +1771,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutApprovalResult AWS API Documentation
     #
-    # @overload put_approval_result(params = {})
+    # @overload put_approval_result(**params)
     # @param [Hash] params ({})
-    def put_approval_result(params = {}, options = {})
+    def put_approval_result(params = {}, **options)
       req = build_request(:put_approval_result, params)
       req.send_request(options)
     end
@@ -1803,9 +1803,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutJobFailureResult AWS API Documentation
     #
-    # @overload put_job_failure_result(params = {})
+    # @overload put_job_failure_result(**params)
     # @param [Hash] params ({})
-    def put_job_failure_result(params = {}, options = {})
+    def put_job_failure_result(params = {}, **options)
       req = build_request(:put_job_failure_result, params)
       req.send_request(options)
     end
@@ -1863,9 +1863,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutJobSuccessResult AWS API Documentation
     #
-    # @overload put_job_success_result(params = {})
+    # @overload put_job_success_result(**params)
     # @param [Hash] params ({})
-    def put_job_success_result(params = {}, options = {})
+    def put_job_success_result(params = {}, **options)
       req = build_request(:put_job_success_result, params)
       req.send_request(options)
     end
@@ -1901,9 +1901,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutThirdPartyJobFailureResult AWS API Documentation
     #
-    # @overload put_third_party_job_failure_result(params = {})
+    # @overload put_third_party_job_failure_result(**params)
     # @param [Hash] params ({})
-    def put_third_party_job_failure_result(params = {}, options = {})
+    def put_third_party_job_failure_result(params = {}, **options)
       req = build_request(:put_third_party_job_failure_result, params)
       req.send_request(options)
     end
@@ -1958,9 +1958,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutThirdPartyJobSuccessResult AWS API Documentation
     #
-    # @overload put_third_party_job_success_result(params = {})
+    # @overload put_third_party_job_success_result(**params)
     # @param [Hash] params ({})
-    def put_third_party_job_success_result(params = {}, options = {})
+    def put_third_party_job_success_result(params = {}, **options)
       req = build_request(:put_third_party_job_success_result, params)
       req.send_request(options)
     end
@@ -2038,9 +2038,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutWebhook AWS API Documentation
     #
-    # @overload put_webhook(params = {})
+    # @overload put_webhook(**params)
     # @param [Hash] params ({})
-    def put_webhook(params = {}, options = {})
+    def put_webhook(params = {}, **options)
       req = build_request(:put_webhook, params)
       req.send_request(options)
     end
@@ -2062,9 +2062,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RegisterWebhookWithThirdParty AWS API Documentation
     #
-    # @overload register_webhook_with_third_party(params = {})
+    # @overload register_webhook_with_third_party(**params)
     # @param [Hash] params ({})
-    def register_webhook_with_third_party(params = {}, options = {})
+    def register_webhook_with_third_party(params = {}, **options)
       req = build_request(:register_webhook_with_third_party, params)
       req.send_request(options)
     end
@@ -2108,9 +2108,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RetryStageExecution AWS API Documentation
     #
-    # @overload retry_stage_execution(params = {})
+    # @overload retry_stage_execution(**params)
     # @param [Hash] params ({})
-    def retry_stage_execution(params = {}, options = {})
+    def retry_stage_execution(params = {}, **options)
       req = build_request(:retry_stage_execution, params)
       req.send_request(options)
     end
@@ -2146,9 +2146,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/StartPipelineExecution AWS API Documentation
     #
-    # @overload start_pipeline_execution(params = {})
+    # @overload start_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def start_pipeline_execution(params = {}, options = {})
+    def start_pipeline_execution(params = {}, **options)
       req = build_request(:start_pipeline_execution, params)
       req.send_request(options)
     end
@@ -2199,9 +2199,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/StopPipelineExecution AWS API Documentation
     #
-    # @overload stop_pipeline_execution(params = {})
+    # @overload stop_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def stop_pipeline_execution(params = {}, options = {})
+    def stop_pipeline_execution(params = {}, **options)
       req = build_request(:stop_pipeline_execution, params)
       req.send_request(options)
     end
@@ -2232,9 +2232,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2258,9 +2258,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2382,9 +2382,9 @@ module Aws::CodePipeline
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/UpdatePipeline AWS API Documentation
     #
-    # @overload update_pipeline(params = {})
+    # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, options = {})
+    def update_pipeline(params = {}, **options)
       req = build_request(:update_pipeline, params)
       req.send_request(options)
     end
@@ -2393,7 +2393,7 @@ module Aws::CodePipeline
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2401,15 +2401,15 @@ module Aws::CodePipeline
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codepipeline'
-      context[:gem_version] = '1.38.0'
+      context[:gem_name] = "aws-sdk-codepipeline"
+      context[:gem_version] = "1.38.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

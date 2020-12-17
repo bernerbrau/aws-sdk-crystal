@@ -13,11 +13,11 @@ module Aws::SQS
 
     extend Aws::Deprecations
 
-    # @overload def initialize(queue_url, receipt_handle, options = {})
+    # @overload def initialize(queue_url, receipt_handle, **options)
     #   @param [String] queue_url
     #   @param [String] receipt_handle
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :queue_url
     #   @option options [required, String] :receipt_handle
     #   @option options [Client] :client

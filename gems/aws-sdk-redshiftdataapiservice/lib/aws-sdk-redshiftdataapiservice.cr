@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-redshiftdataapiservice/types'
-require_relative 'aws-sdk-redshiftdataapiservice/client_api'
-require_relative 'aws-sdk-redshiftdataapiservice/client'
-require_relative 'aws-sdk-redshiftdataapiservice/errors'
-require_relative 'aws-sdk-redshiftdataapiservice/resource'
-require_relative 'aws-sdk-redshiftdataapiservice/customizations'
+require_relative "aws-sdk-redshiftdataapiservice/types"
+require_relative "aws-sdk-redshiftdataapiservice/client_api"
+require_relative "aws-sdk-redshiftdataapiservice/client"
+require_relative "aws-sdk-redshiftdataapiservice/errors"
+require_relative "aws-sdk-redshiftdataapiservice/resource"
+require_relative "aws-sdk-redshiftdataapiservice/customizations"
 
 # This module provides support for Redshift Data API Service. This module is available in the
 # `aws-sdk-redshiftdataapiservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-redshiftdataapiservice/customizations'
 # @!group service
 module Aws::RedshiftDataAPIService
 
-  GEM_VERSION = '1.2.0'
+  GEM_VERSION = "1.2.0"
 
 end

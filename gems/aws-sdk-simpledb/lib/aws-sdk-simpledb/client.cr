@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v2.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v2.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:simpledb)
 
@@ -280,7 +280,7 @@ module Aws::SimpleDB
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -362,9 +362,9 @@ module Aws::SimpleDB
     #     ],
     #   })
     #
-    # @overload batch_delete_attributes(params = {})
+    # @overload batch_delete_attributes(**params)
     # @param [Hash] params ({})
-    def batch_delete_attributes(params = {}, options = {})
+    def batch_delete_attributes(params = {}, **options)
       req = build_request(:batch_delete_attributes, params)
       req.send_request(options)
     end
@@ -443,9 +443,9 @@ module Aws::SimpleDB
     #     ],
     #   })
     #
-    # @overload batch_put_attributes(params = {})
+    # @overload batch_put_attributes(**params)
     # @param [Hash] params ({})
-    def batch_put_attributes(params = {}, options = {})
+    def batch_put_attributes(params = {}, **options)
       req = build_request(:batch_put_attributes, params)
       req.send_request(options)
     end
@@ -477,9 +477,9 @@ module Aws::SimpleDB
     #     domain_name: "String", # required
     #   })
     #
-    # @overload create_domain(params = {})
+    # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, options = {})
+    def create_domain(params = {}, **options)
       req = build_request(:create_domain, params)
       req.send_request(options)
     end
@@ -536,9 +536,9 @@ module Aws::SimpleDB
     #     },
     #   })
     #
-    # @overload delete_attributes(params = {})
+    # @overload delete_attributes(**params)
     # @param [Hash] params ({})
-    def delete_attributes(params = {}, options = {})
+    def delete_attributes(params = {}, **options)
       req = build_request(:delete_attributes, params)
       req.send_request(options)
     end
@@ -558,9 +558,9 @@ module Aws::SimpleDB
     #     domain_name: "String", # required
     #   })
     #
-    # @overload delete_domain(params = {})
+    # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, options = {})
+    def delete_domain(params = {}, **options)
       req = build_request(:delete_domain, params)
       req.send_request(options)
     end
@@ -598,9 +598,9 @@ module Aws::SimpleDB
     #   resp.attribute_values_size_bytes #=> Integer
     #   resp.timestamp #=> Integer
     #
-    # @overload domain_metadata(params = {})
+    # @overload domain_metadata(**params)
     # @param [Hash] params ({})
-    def domain_metadata(params = {}, options = {})
+    def domain_metadata(params = {}, **options)
       req = build_request(:domain_metadata, params)
       req.send_request(options)
     end
@@ -647,9 +647,9 @@ module Aws::SimpleDB
     #   resp.attributes[0].value #=> String
     #   resp.attributes[0].alternate_value_encoding #=> String
     #
-    # @overload get_attributes(params = {})
+    # @overload get_attributes(**params)
     # @param [Hash] params ({})
-    def get_attributes(params = {}, options = {})
+    def get_attributes(params = {}, **options)
       req = build_request(:get_attributes, params)
       req.send_request(options)
     end
@@ -690,9 +690,9 @@ module Aws::SimpleDB
     #   resp.domain_names[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_domains(params = {})
+    # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, options = {})
+    def list_domains(params = {}, **options)
       req = build_request(:list_domains, params)
       req.send_request(options)
     end
@@ -768,9 +768,9 @@ module Aws::SimpleDB
     #     },
     #   })
     #
-    # @overload put_attributes(params = {})
+    # @overload put_attributes(**params)
     # @param [Hash] params ({})
-    def put_attributes(params = {}, options = {})
+    def put_attributes(params = {}, **options)
       req = build_request(:put_attributes, params)
       req.send_request(options)
     end
@@ -825,9 +825,9 @@ module Aws::SimpleDB
     #   resp.items[0].attributes[0].alternate_value_encoding #=> String
     #   resp.next_token #=> String
     #
-    # @overload select(params = {})
+    # @overload select(**params)
     # @param [Hash] params ({})
-    def select(params = {}, options = {})
+    def select(params = {}, **options)
       req = build_request(:select, params)
       req.send_request(options)
     end
@@ -836,7 +836,7 @@ module Aws::SimpleDB
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -844,15 +844,15 @@ module Aws::SimpleDB
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-simpledb'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-simpledb"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

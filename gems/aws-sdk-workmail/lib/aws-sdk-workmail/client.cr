@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:workmail)
 
@@ -290,7 +290,7 @@ module Aws::WorkMail
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -360,9 +360,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/AssociateDelegateToResource AWS API Documentation
     #
-    # @overload associate_delegate_to_resource(params = {})
+    # @overload associate_delegate_to_resource(**params)
     # @param [Hash] params ({})
-    def associate_delegate_to_resource(params = {}, options = {})
+    def associate_delegate_to_resource(params = {}, **options)
       req = build_request(:associate_delegate_to_resource, params)
       req.send_request(options)
     end
@@ -390,9 +390,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/AssociateMemberToGroup AWS API Documentation
     #
-    # @overload associate_member_to_group(params = {})
+    # @overload associate_member_to_group(**params)
     # @param [Hash] params ({})
-    def associate_member_to_group(params = {}, options = {})
+    def associate_member_to_group(params = {}, **options)
       req = build_request(:associate_member_to_group, params)
       req.send_request(options)
     end
@@ -428,9 +428,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CancelMailboxExportJob AWS API Documentation
     #
-    # @overload cancel_mailbox_export_job(params = {})
+    # @overload cancel_mailbox_export_job(**params)
     # @param [Hash] params ({})
-    def cancel_mailbox_export_job(params = {}, options = {})
+    def cancel_mailbox_export_job(params = {}, **options)
       req = build_request(:cancel_mailbox_export_job, params)
       req.send_request(options)
     end
@@ -459,9 +459,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateAlias AWS API Documentation
     #
-    # @overload create_alias(params = {})
+    # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, options = {})
+    def create_alias(params = {}, **options)
       req = build_request(:create_alias, params)
       req.send_request(options)
     end
@@ -492,9 +492,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateGroup AWS API Documentation
     #
-    # @overload create_group(params = {})
+    # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, options = {})
+    def create_group(params = {}, **options)
       req = build_request(:create_group, params)
       req.send_request(options)
     end
@@ -576,9 +576,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateOrganization AWS API Documentation
     #
-    # @overload create_organization(params = {})
+    # @overload create_organization(**params)
     # @param [Hash] params ({})
-    def create_organization(params = {}, options = {})
+    def create_organization(params = {}, **options)
       req = build_request(:create_organization, params)
       req.send_request(options)
     end
@@ -614,9 +614,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateResource AWS API Documentation
     #
-    # @overload create_resource(params = {})
+    # @overload create_resource(**params)
     # @param [Hash] params ({})
-    def create_resource(params = {}, options = {})
+    def create_resource(params = {}, **options)
       req = build_request(:create_resource, params)
       req.send_request(options)
     end
@@ -656,9 +656,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -683,9 +683,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteAccessControlRule AWS API Documentation
     #
-    # @overload delete_access_control_rule(params = {})
+    # @overload delete_access_control_rule(**params)
     # @param [Hash] params ({})
-    def delete_access_control_rule(params = {}, options = {})
+    def delete_access_control_rule(params = {}, **options)
       req = build_request(:delete_access_control_rule, params)
       req.send_request(options)
     end
@@ -717,9 +717,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteAlias AWS API Documentation
     #
-    # @overload delete_alias(params = {})
+    # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, options = {})
+    def delete_alias(params = {}, **options)
       req = build_request(:delete_alias, params)
       req.send_request(options)
     end
@@ -743,9 +743,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteGroup AWS API Documentation
     #
-    # @overload delete_group(params = {})
+    # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, options = {})
+    def delete_group(params = {}, **options)
       req = build_request(:delete_group, params)
       req.send_request(options)
     end
@@ -775,9 +775,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteMailboxPermissions AWS API Documentation
     #
-    # @overload delete_mailbox_permissions(params = {})
+    # @overload delete_mailbox_permissions(**params)
     # @param [Hash] params ({})
-    def delete_mailbox_permissions(params = {}, options = {})
+    def delete_mailbox_permissions(params = {}, **options)
       req = build_request(:delete_mailbox_permissions, params)
       req.send_request(options)
     end
@@ -825,9 +825,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteOrganization AWS API Documentation
     #
-    # @overload delete_organization(params = {})
+    # @overload delete_organization(**params)
     # @param [Hash] params ({})
-    def delete_organization(params = {}, options = {})
+    def delete_organization(params = {}, **options)
       req = build_request(:delete_organization, params)
       req.send_request(options)
     end
@@ -852,9 +852,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteResource AWS API Documentation
     #
-    # @overload delete_resource(params = {})
+    # @overload delete_resource(**params)
     # @param [Hash] params ({})
-    def delete_resource(params = {}, options = {})
+    def delete_resource(params = {}, **options)
       req = build_request(:delete_resource, params)
       req.send_request(options)
     end
@@ -879,9 +879,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteRetentionPolicy AWS API Documentation
     #
-    # @overload delete_retention_policy(params = {})
+    # @overload delete_retention_policy(**params)
     # @param [Hash] params ({})
-    def delete_retention_policy(params = {}, options = {})
+    def delete_retention_policy(params = {}, **options)
       req = build_request(:delete_retention_policy, params)
       req.send_request(options)
     end
@@ -910,9 +910,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeregisterFromWorkMail AWS API Documentation
     #
-    # @overload deregister_from_work_mail(params = {})
+    # @overload deregister_from_work_mail(**params)
     # @param [Hash] params ({})
-    def deregister_from_work_mail(params = {}, options = {})
+    def deregister_from_work_mail(params = {}, **options)
       req = build_request(:deregister_from_work_mail, params)
       req.send_request(options)
     end
@@ -982,9 +982,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeGroup AWS API Documentation
     #
-    # @overload describe_group(params = {})
+    # @overload describe_group(**params)
     # @param [Hash] params ({})
-    def describe_group(params = {}, options = {})
+    def describe_group(params = {}, **options)
       req = build_request(:describe_group, params)
       req.send_request(options)
     end
@@ -1036,9 +1036,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeMailboxExportJob AWS API Documentation
     #
-    # @overload describe_mailbox_export_job(params = {})
+    # @overload describe_mailbox_export_job(**params)
     # @param [Hash] params ({})
-    def describe_mailbox_export_job(params = {}, options = {})
+    def describe_mailbox_export_job(params = {}, **options)
       req = build_request(:describe_mailbox_export_job, params)
       req.send_request(options)
     end
@@ -1081,9 +1081,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeOrganization AWS API Documentation
     #
-    # @overload describe_organization(params = {})
+    # @overload describe_organization(**params)
     # @param [Hash] params ({})
-    def describe_organization(params = {}, options = {})
+    def describe_organization(params = {}, **options)
       req = build_request(:describe_organization, params)
       req.send_request(options)
     end
@@ -1130,9 +1130,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeResource AWS API Documentation
     #
-    # @overload describe_resource(params = {})
+    # @overload describe_resource(**params)
     # @param [Hash] params ({})
-    def describe_resource(params = {}, options = {})
+    def describe_resource(params = {}, **options)
       req = build_request(:describe_resource, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeUser AWS API Documentation
     #
-    # @overload describe_user(params = {})
+    # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, options = {})
+    def describe_user(params = {}, **options)
       req = build_request(:describe_user, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DisassociateDelegateFromResource AWS API Documentation
     #
-    # @overload disassociate_delegate_from_resource(params = {})
+    # @overload disassociate_delegate_from_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_delegate_from_resource(params = {}, options = {})
+    def disassociate_delegate_from_resource(params = {}, **options)
       req = build_request(:disassociate_delegate_from_resource, params)
       req.send_request(options)
     end
@@ -1238,9 +1238,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DisassociateMemberFromGroup AWS API Documentation
     #
-    # @overload disassociate_member_from_group(params = {})
+    # @overload disassociate_member_from_group(**params)
     # @param [Hash] params ({})
-    def disassociate_member_from_group(params = {}, options = {})
+    def disassociate_member_from_group(params = {}, **options)
       req = build_request(:disassociate_member_from_group, params)
       req.send_request(options)
     end
@@ -1284,9 +1284,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetAccessControlEffect AWS API Documentation
     #
-    # @overload get_access_control_effect(params = {})
+    # @overload get_access_control_effect(**params)
     # @param [Hash] params ({})
-    def get_access_control_effect(params = {}, options = {})
+    def get_access_control_effect(params = {}, **options)
       req = build_request(:get_access_control_effect, params)
       req.send_request(options)
     end
@@ -1322,9 +1322,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetDefaultRetentionPolicy AWS API Documentation
     #
-    # @overload get_default_retention_policy(params = {})
+    # @overload get_default_retention_policy(**params)
     # @param [Hash] params ({})
-    def get_default_retention_policy(params = {}, options = {})
+    def get_default_retention_policy(params = {}, **options)
       req = build_request(:get_default_retention_policy, params)
       req.send_request(options)
     end
@@ -1358,9 +1358,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMailboxDetails AWS API Documentation
     #
-    # @overload get_mailbox_details(params = {})
+    # @overload get_mailbox_details(**params)
     # @param [Hash] params ({})
-    def get_mailbox_details(params = {}, options = {})
+    def get_mailbox_details(params = {}, **options)
       req = build_request(:get_mailbox_details, params)
       req.send_request(options)
     end
@@ -1403,9 +1403,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListAccessControlRules AWS API Documentation
     #
-    # @overload list_access_control_rules(params = {})
+    # @overload list_access_control_rules(**params)
     # @param [Hash] params ({})
-    def list_access_control_rules(params = {}, options = {})
+    def list_access_control_rules(params = {}, **options)
       req = build_request(:list_access_control_rules, params)
       req.send_request(options)
     end
@@ -1450,9 +1450,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListAliases AWS API Documentation
     #
-    # @overload list_aliases(params = {})
+    # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, options = {})
+    def list_aliases(params = {}, **options)
       req = build_request(:list_aliases, params)
       req.send_request(options)
     end
@@ -1503,9 +1503,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListGroupMembers AWS API Documentation
     #
-    # @overload list_group_members(params = {})
+    # @overload list_group_members(**params)
     # @param [Hash] params ({})
-    def list_group_members(params = {}, options = {})
+    def list_group_members(params = {}, **options)
       req = build_request(:list_group_members, params)
       req.send_request(options)
     end
@@ -1550,9 +1550,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListGroups AWS API Documentation
     #
-    # @overload list_groups(params = {})
+    # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, options = {})
+    def list_groups(params = {}, **options)
       req = build_request(:list_groups, params)
       req.send_request(options)
     end
@@ -1600,9 +1600,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMailboxExportJobs AWS API Documentation
     #
-    # @overload list_mailbox_export_jobs(params = {})
+    # @overload list_mailbox_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_mailbox_export_jobs(params = {}, options = {})
+    def list_mailbox_export_jobs(params = {}, **options)
       req = build_request(:list_mailbox_export_jobs, params)
       req.send_request(options)
     end
@@ -1652,9 +1652,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMailboxPermissions AWS API Documentation
     #
-    # @overload list_mailbox_permissions(params = {})
+    # @overload list_mailbox_permissions(**params)
     # @param [Hash] params ({})
-    def list_mailbox_permissions(params = {}, options = {})
+    def list_mailbox_permissions(params = {}, **options)
       req = build_request(:list_mailbox_permissions, params)
       req.send_request(options)
     end
@@ -1694,9 +1694,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListOrganizations AWS API Documentation
     #
-    # @overload list_organizations(params = {})
+    # @overload list_organizations(**params)
     # @param [Hash] params ({})
-    def list_organizations(params = {}, options = {})
+    def list_organizations(params = {}, **options)
       req = build_request(:list_organizations, params)
       req.send_request(options)
     end
@@ -1743,9 +1743,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListResourceDelegates AWS API Documentation
     #
-    # @overload list_resource_delegates(params = {})
+    # @overload list_resource_delegates(**params)
     # @param [Hash] params ({})
-    def list_resource_delegates(params = {}, options = {})
+    def list_resource_delegates(params = {}, **options)
       req = build_request(:list_resource_delegates, params)
       req.send_request(options)
     end
@@ -1791,9 +1791,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListResources AWS API Documentation
     #
-    # @overload list_resources(params = {})
+    # @overload list_resources(**params)
     # @param [Hash] params ({})
-    def list_resources(params = {}, options = {})
+    def list_resources(params = {}, **options)
       req = build_request(:list_resources, params)
       req.send_request(options)
     end
@@ -1821,9 +1821,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1870,9 +1870,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -1935,9 +1935,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutAccessControlRule AWS API Documentation
     #
-    # @overload put_access_control_rule(params = {})
+    # @overload put_access_control_rule(**params)
     # @param [Hash] params ({})
-    def put_access_control_rule(params = {}, options = {})
+    def put_access_control_rule(params = {}, **options)
       req = build_request(:put_access_control_rule, params)
       req.send_request(options)
     end
@@ -1979,9 +1979,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutMailboxPermissions AWS API Documentation
     #
-    # @overload put_mailbox_permissions(params = {})
+    # @overload put_mailbox_permissions(**params)
     # @param [Hash] params ({})
-    def put_mailbox_permissions(params = {}, options = {})
+    def put_mailbox_permissions(params = {}, **options)
       req = build_request(:put_mailbox_permissions, params)
       req.send_request(options)
     end
@@ -2023,9 +2023,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutRetentionPolicy AWS API Documentation
     #
-    # @overload put_retention_policy(params = {})
+    # @overload put_retention_policy(**params)
     # @param [Hash] params ({})
-    def put_retention_policy(params = {}, options = {})
+    def put_retention_policy(params = {}, **options)
       req = build_request(:put_retention_policy, params)
       req.send_request(options)
     end
@@ -2068,9 +2068,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/RegisterToWorkMail AWS API Documentation
     #
-    # @overload register_to_work_mail(params = {})
+    # @overload register_to_work_mail(**params)
     # @param [Hash] params ({})
-    def register_to_work_mail(params = {}, options = {})
+    def register_to_work_mail(params = {}, **options)
       req = build_request(:register_to_work_mail, params)
       req.send_request(options)
     end
@@ -2099,9 +2099,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ResetPassword AWS API Documentation
     #
-    # @overload reset_password(params = {})
+    # @overload reset_password(**params)
     # @param [Hash] params ({})
-    def reset_password(params = {}, options = {})
+    def reset_password(params = {}, **options)
       req = build_request(:reset_password, params)
       req.send_request(options)
     end
@@ -2168,9 +2168,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/StartMailboxExportJob AWS API Documentation
     #
-    # @overload start_mailbox_export_job(params = {})
+    # @overload start_mailbox_export_job(**params)
     # @param [Hash] params ({})
-    def start_mailbox_export_job(params = {}, options = {})
+    def start_mailbox_export_job(params = {}, **options)
       req = build_request(:start_mailbox_export_job, params)
       req.send_request(options)
     end
@@ -2200,9 +2200,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2227,9 +2227,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2259,9 +2259,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateMailboxQuota AWS API Documentation
     #
-    # @overload update_mailbox_quota(params = {})
+    # @overload update_mailbox_quota(**params)
     # @param [Hash] params ({})
-    def update_mailbox_quota(params = {}, options = {})
+    def update_mailbox_quota(params = {}, **options)
       req = build_request(:update_mailbox_quota, params)
       req.send_request(options)
     end
@@ -2292,9 +2292,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdatePrimaryEmailAddress AWS API Documentation
     #
-    # @overload update_primary_email_address(params = {})
+    # @overload update_primary_email_address(**params)
     # @param [Hash] params ({})
-    def update_primary_email_address(params = {}, options = {})
+    def update_primary_email_address(params = {}, **options)
       req = build_request(:update_primary_email_address, params)
       req.send_request(options)
     end
@@ -2334,9 +2334,9 @@ module Aws::WorkMail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateResource AWS API Documentation
     #
-    # @overload update_resource(params = {})
+    # @overload update_resource(**params)
     # @param [Hash] params ({})
-    def update_resource(params = {}, options = {})
+    def update_resource(params = {}, **options)
       req = build_request(:update_resource, params)
       req.send_request(options)
     end
@@ -2345,7 +2345,7 @@ module Aws::WorkMail
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2353,15 +2353,15 @@ module Aws::WorkMail
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-workmail'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-workmail"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

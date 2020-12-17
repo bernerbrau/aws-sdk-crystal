@@ -5,26 +5,26 @@
 {{/generated_src_warning}}
 Gem::Specification.new do |spec|
 
-  spec.name          = '{{gem_name}}'
-  spec.version       = File.read(File.expand_path('../VERSION', __FILE__)).strip
-  spec.summary       = '{{summary}}'
-  spec.description   = '{{description}}'
-  spec.author        = '{{author}}'
-  spec.homepage      = '{{homepage}}'
-  spec.license       = 'Apache-2.0'
-  spec.email         = ['{{email}}']
-  spec.require_paths = ['lib']
-  spec.files         = Dir['lib/**/*.cr']
+  spec.name          = "{{gem_name}}"
+  spec.version       = File.read(File.expand_path("../VERSION", __FILE__)).strip
+  spec.summary       = "{{summary}}"
+  spec.description   = "{{description}}"
+  spec.author        = "{{author}}"
+  spec.homepage      = "{{homepage}}"
+  spec.license       = "Apache-2.0"
+  spec.email         = ["{{email}}"]
+  spec.require_paths = ["lib"]
+  spec.files         = Dir["lib/**/*.cr"]
 
   {{#metadata}}
   spec.metadata = {
-    'source_code_uri' => '{{code_uri}}',
-    'changelog_uri'   => '{{code_uri}}/CHANGELOG.md'
+    "source_code_uri" => "{{code_uri}}",
+    "changelog_uri"   => "{{code_uri}}/CHANGELOG.md"
   }
 
   {{/metadata}}
   {{#dependencies}}
-  spec.add_dependency('{{gem}}', '{{&version}}')
+  spec.add_dependency("{{gem}}", "{{&version}}")
   {{/dependencies}}
 
 end

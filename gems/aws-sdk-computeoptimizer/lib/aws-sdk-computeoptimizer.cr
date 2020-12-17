@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-computeoptimizer/types'
-require_relative 'aws-sdk-computeoptimizer/client_api'
-require_relative 'aws-sdk-computeoptimizer/client'
-require_relative 'aws-sdk-computeoptimizer/errors'
-require_relative 'aws-sdk-computeoptimizer/resource'
-require_relative 'aws-sdk-computeoptimizer/customizations'
+require_relative "aws-sdk-computeoptimizer/types"
+require_relative "aws-sdk-computeoptimizer/client_api"
+require_relative "aws-sdk-computeoptimizer/client"
+require_relative "aws-sdk-computeoptimizer/errors"
+require_relative "aws-sdk-computeoptimizer/resource"
+require_relative "aws-sdk-computeoptimizer/customizations"
 
 # This module provides support for AWS Compute Optimizer. This module is available in the
 # `aws-sdk-computeoptimizer` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-computeoptimizer/customizations'
 # @!group service
 module Aws::ComputeOptimizer
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

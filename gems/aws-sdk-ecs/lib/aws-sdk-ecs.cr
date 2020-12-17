@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ecs/types'
-require_relative 'aws-sdk-ecs/client_api'
-require_relative 'aws-sdk-ecs/client'
-require_relative 'aws-sdk-ecs/errors'
-require_relative 'aws-sdk-ecs/waiters'
-require_relative 'aws-sdk-ecs/resource'
-require_relative 'aws-sdk-ecs/customizations'
+require_relative "aws-sdk-ecs/types"
+require_relative "aws-sdk-ecs/client_api"
+require_relative "aws-sdk-ecs/client"
+require_relative "aws-sdk-ecs/errors"
+require_relative "aws-sdk-ecs/waiters"
+require_relative "aws-sdk-ecs/resource"
+require_relative "aws-sdk-ecs/customizations"
 
 # This module provides support for Amazon EC2 Container Service. This module is available in the
 # `aws-sdk-ecs` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-ecs/customizations'
 # @!group service
 module Aws::ECS
 
-  GEM_VERSION = '1.72.0'
+  GEM_VERSION = "1.72.0"
 
 end

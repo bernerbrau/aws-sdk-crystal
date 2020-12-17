@@ -8,17 +8,17 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-transcribestreamingservice/types'
-require_relative 'aws-sdk-transcribestreamingservice/client_api'
-require_relative 'aws-sdk-transcribestreamingservice/client'
-require_relative 'aws-sdk-transcribestreamingservice/errors'
-require_relative 'aws-sdk-transcribestreamingservice/resource'
-require_relative 'aws-sdk-transcribestreamingservice/customizations'
-require_relative 'aws-sdk-transcribestreamingservice/async_client'
-require_relative 'aws-sdk-transcribestreamingservice/event_streams'
+require_relative "aws-sdk-transcribestreamingservice/types"
+require_relative "aws-sdk-transcribestreamingservice/client_api"
+require_relative "aws-sdk-transcribestreamingservice/client"
+require_relative "aws-sdk-transcribestreamingservice/errors"
+require_relative "aws-sdk-transcribestreamingservice/resource"
+require_relative "aws-sdk-transcribestreamingservice/customizations"
+require_relative "aws-sdk-transcribestreamingservice/async_client"
+require_relative "aws-sdk-transcribestreamingservice/event_streams"
 
 # This module provides support for Amazon Transcribe Streaming Service. This module is available in the
 # `aws-sdk-transcribestreamingservice` gem.
@@ -50,6 +50,6 @@ require_relative 'aws-sdk-transcribestreamingservice/event_streams'
 # @!group service
 module Aws::TranscribeStreamingService
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

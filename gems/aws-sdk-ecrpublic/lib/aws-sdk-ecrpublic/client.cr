@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ecrpublic)
 
@@ -290,7 +290,7 @@ module Aws::ECRPublic
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -388,9 +388,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/BatchCheckLayerAvailability AWS API Documentation
     #
-    # @overload batch_check_layer_availability(params = {})
+    # @overload batch_check_layer_availability(**params)
     # @param [Hash] params ({})
-    def batch_check_layer_availability(params = {}, options = {})
+    def batch_check_layer_availability(params = {}, **options)
       req = build_request(:batch_check_layer_availability, params)
       req.send_request(options)
     end
@@ -450,9 +450,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/BatchDeleteImage AWS API Documentation
     #
-    # @overload batch_delete_image(params = {})
+    # @overload batch_delete_image(**params)
     # @param [Hash] params ({})
-    def batch_delete_image(params = {}, options = {})
+    def batch_delete_image(params = {}, **options)
       req = build_request(:batch_delete_image, params)
       req.send_request(options)
     end
@@ -512,9 +512,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/CompleteLayerUpload AWS API Documentation
     #
-    # @overload complete_layer_upload(params = {})
+    # @overload complete_layer_upload(**params)
     # @param [Hash] params ({})
-    def complete_layer_upload(params = {}, options = {})
+    def complete_layer_upload(params = {}, **options)
       req = build_request(:complete_layer_upload, params)
       req.send_request(options)
     end
@@ -576,9 +576,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/CreateRepository AWS API Documentation
     #
-    # @overload create_repository(params = {})
+    # @overload create_repository(**params)
     # @param [Hash] params ({})
-    def create_repository(params = {}, options = {})
+    def create_repository(params = {}, **options)
       req = build_request(:create_repository, params)
       req.send_request(options)
     end
@@ -621,9 +621,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/DeleteRepository AWS API Documentation
     #
-    # @overload delete_repository(params = {})
+    # @overload delete_repository(**params)
     # @param [Hash] params ({})
-    def delete_repository(params = {}, options = {})
+    def delete_repository(params = {}, **options)
       req = build_request(:delete_repository, params)
       req.send_request(options)
     end
@@ -661,9 +661,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/DeleteRepositoryPolicy AWS API Documentation
     #
-    # @overload delete_repository_policy(params = {})
+    # @overload delete_repository_policy(**params)
     # @param [Hash] params ({})
-    def delete_repository_policy(params = {}, options = {})
+    def delete_repository_policy(params = {}, **options)
       req = build_request(:delete_repository_policy, params)
       req.send_request(options)
     end
@@ -728,9 +728,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/DescribeImageTags AWS API Documentation
     #
-    # @overload describe_image_tags(params = {})
+    # @overload describe_image_tags(**params)
     # @param [Hash] params ({})
-    def describe_image_tags(params = {}, options = {})
+    def describe_image_tags(params = {}, **options)
       req = build_request(:describe_image_tags, params)
       req.send_request(options)
     end
@@ -814,9 +814,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/DescribeImages AWS API Documentation
     #
-    # @overload describe_images(params = {})
+    # @overload describe_images(**params)
     # @param [Hash] params ({})
-    def describe_images(params = {}, options = {})
+    def describe_images(params = {}, **options)
       req = build_request(:describe_images, params)
       req.send_request(options)
     end
@@ -877,9 +877,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/DescribeRegistries AWS API Documentation
     #
-    # @overload describe_registries(params = {})
+    # @overload describe_registries(**params)
     # @param [Hash] params ({})
-    def describe_registries(params = {}, options = {})
+    def describe_registries(params = {}, **options)
       req = build_request(:describe_registries, params)
       req.send_request(options)
     end
@@ -950,9 +950,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/DescribeRepositories AWS API Documentation
     #
-    # @overload describe_repositories(params = {})
+    # @overload describe_repositories(**params)
     # @param [Hash] params ({})
-    def describe_repositories(params = {}, options = {})
+    def describe_repositories(params = {}, **options)
       req = build_request(:describe_repositories, params)
       req.send_request(options)
     end
@@ -975,9 +975,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/GetAuthorizationToken AWS API Documentation
     #
-    # @overload get_authorization_token(params = {})
+    # @overload get_authorization_token(**params)
     # @param [Hash] params ({})
-    def get_authorization_token(params = {}, options = {})
+    def get_authorization_token(params = {}, **options)
       req = build_request(:get_authorization_token, params)
       req.send_request(options)
     end
@@ -994,9 +994,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/GetRegistryCatalogData AWS API Documentation
     #
-    # @overload get_registry_catalog_data(params = {})
+    # @overload get_registry_catalog_data(**params)
     # @param [Hash] params ({})
-    def get_registry_catalog_data(params = {}, options = {})
+    def get_registry_catalog_data(params = {}, **options)
       req = build_request(:get_registry_catalog_data, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/GetRepositoryCatalogData AWS API Documentation
     #
-    # @overload get_repository_catalog_data(params = {})
+    # @overload get_repository_catalog_data(**params)
     # @param [Hash] params ({})
-    def get_repository_catalog_data(params = {}, options = {})
+    def get_repository_catalog_data(params = {}, **options)
       req = build_request(:get_repository_catalog_data, params)
       req.send_request(options)
     end
@@ -1075,9 +1075,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/GetRepositoryPolicy AWS API Documentation
     #
-    # @overload get_repository_policy(params = {})
+    # @overload get_repository_policy(**params)
     # @param [Hash] params ({})
-    def get_repository_policy(params = {}, options = {})
+    def get_repository_policy(params = {}, **options)
       req = build_request(:get_repository_policy, params)
       req.send_request(options)
     end
@@ -1122,9 +1122,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/InitiateLayerUpload AWS API Documentation
     #
-    # @overload initiate_layer_upload(params = {})
+    # @overload initiate_layer_upload(**params)
     # @param [Hash] params ({})
-    def initiate_layer_upload(params = {}, options = {})
+    def initiate_layer_upload(params = {}, **options)
       req = build_request(:initiate_layer_upload, params)
       req.send_request(options)
     end
@@ -1192,9 +1192,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/PutImage AWS API Documentation
     #
-    # @overload put_image(params = {})
+    # @overload put_image(**params)
     # @param [Hash] params ({})
-    def put_image(params = {}, options = {})
+    def put_image(params = {}, **options)
       req = build_request(:put_image, params)
       req.send_request(options)
     end
@@ -1226,9 +1226,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/PutRegistryCatalogData AWS API Documentation
     #
-    # @overload put_registry_catalog_data(params = {})
+    # @overload put_registry_catalog_data(**params)
     # @param [Hash] params ({})
-    def put_registry_catalog_data(params = {}, options = {})
+    def put_registry_catalog_data(params = {}, **options)
       req = build_request(:put_registry_catalog_data, params)
       req.send_request(options)
     end
@@ -1281,9 +1281,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/PutRepositoryCatalogData AWS API Documentation
     #
-    # @overload put_repository_catalog_data(params = {})
+    # @overload put_repository_catalog_data(**params)
     # @param [Hash] params ({})
-    def put_repository_catalog_data(params = {}, options = {})
+    def put_repository_catalog_data(params = {}, **options)
       req = build_request(:put_repository_catalog_data, params)
       req.send_request(options)
     end
@@ -1343,9 +1343,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/SetRepositoryPolicy AWS API Documentation
     #
-    # @overload set_repository_policy(params = {})
+    # @overload set_repository_policy(**params)
     # @param [Hash] params ({})
-    def set_repository_policy(params = {}, options = {})
+    def set_repository_policy(params = {}, **options)
       req = build_request(:set_repository_policy, params)
       req.send_request(options)
     end
@@ -1413,9 +1413,9 @@ module Aws::ECRPublic
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecr-public-2020-10-30/UploadLayerPart AWS API Documentation
     #
-    # @overload upload_layer_part(params = {})
+    # @overload upload_layer_part(**params)
     # @param [Hash] params ({})
-    def upload_layer_part(params = {}, options = {})
+    def upload_layer_part(params = {}, **options)
       req = build_request(:upload_layer_part, params)
       req.send_request(options)
     end
@@ -1424,7 +1424,7 @@ module Aws::ECRPublic
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1432,15 +1432,15 @@ module Aws::ECRPublic
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ecrpublic'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-ecrpublic"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

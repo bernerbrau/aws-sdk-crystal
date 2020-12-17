@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudhsm/types'
-require_relative 'aws-sdk-cloudhsm/client_api'
-require_relative 'aws-sdk-cloudhsm/client'
-require_relative 'aws-sdk-cloudhsm/errors'
-require_relative 'aws-sdk-cloudhsm/resource'
-require_relative 'aws-sdk-cloudhsm/customizations'
+require_relative "aws-sdk-cloudhsm/types"
+require_relative "aws-sdk-cloudhsm/client_api"
+require_relative "aws-sdk-cloudhsm/client"
+require_relative "aws-sdk-cloudhsm/errors"
+require_relative "aws-sdk-cloudhsm/resource"
+require_relative "aws-sdk-cloudhsm/customizations"
 
 # This module provides support for Amazon CloudHSM. This module is available in the
 # `aws-sdk-cloudhsm` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cloudhsm/customizations'
 # @!group service
 module Aws::CloudHSM
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

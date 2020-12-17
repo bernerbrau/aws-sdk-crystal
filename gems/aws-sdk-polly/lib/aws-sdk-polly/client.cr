@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:polly)
 
@@ -280,7 +280,7 @@ module Aws::Polly
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -365,9 +365,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/DeleteLexicon AWS API Documentation
     #
-    # @overload delete_lexicon(params = {})
+    # @overload delete_lexicon(**params)
     # @param [Hash] params ({})
-    def delete_lexicon(params = {}, options = {})
+    def delete_lexicon(params = {}, **options)
       req = build_request(:delete_lexicon, params)
       req.send_request(options)
     end
@@ -482,9 +482,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/DescribeVoices AWS API Documentation
     #
-    # @overload describe_voices(params = {})
+    # @overload describe_voices(**params)
     # @param [Hash] params ({})
-    def describe_voices(params = {}, options = {})
+    def describe_voices(params = {}, **options)
       req = build_request(:describe_voices, params)
       req.send_request(options)
     end
@@ -548,9 +548,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/GetLexicon AWS API Documentation
     #
-    # @overload get_lexicon(params = {})
+    # @overload get_lexicon(**params)
     # @param [Hash] params ({})
-    def get_lexicon(params = {}, options = {})
+    def get_lexicon(params = {}, **options)
       req = build_request(:get_lexicon, params)
       req.send_request(options)
     end
@@ -595,9 +595,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/GetSpeechSynthesisTask AWS API Documentation
     #
-    # @overload get_speech_synthesis_task(params = {})
+    # @overload get_speech_synthesis_task(**params)
     # @param [Hash] params ({})
-    def get_speech_synthesis_task(params = {}, options = {})
+    def get_speech_synthesis_task(params = {}, **options)
       req = build_request(:get_speech_synthesis_task, params)
       req.send_request(options)
     end
@@ -664,9 +664,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/ListLexicons AWS API Documentation
     #
-    # @overload list_lexicons(params = {})
+    # @overload list_lexicons(**params)
     # @param [Hash] params ({})
-    def list_lexicons(params = {}, options = {})
+    def list_lexicons(params = {}, **options)
       req = build_request(:list_lexicons, params)
       req.send_request(options)
     end
@@ -724,9 +724,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/ListSpeechSynthesisTasks AWS API Documentation
     #
-    # @overload list_speech_synthesis_tasks(params = {})
+    # @overload list_speech_synthesis_tasks(**params)
     # @param [Hash] params ({})
-    def list_speech_synthesis_tasks(params = {}, options = {})
+    def list_speech_synthesis_tasks(params = {}, **options)
       req = build_request(:list_speech_synthesis_tasks, params)
       req.send_request(options)
     end
@@ -776,9 +776,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/PutLexicon AWS API Documentation
     #
-    # @overload put_lexicon(params = {})
+    # @overload put_lexicon(**params)
     # @param [Hash] params ({})
-    def put_lexicon(params = {}, options = {})
+    def put_lexicon(params = {}, **options)
       req = build_request(:put_lexicon, params)
       req.send_request(options)
     end
@@ -900,9 +900,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/StartSpeechSynthesisTask AWS API Documentation
     #
-    # @overload start_speech_synthesis_task(params = {})
+    # @overload start_speech_synthesis_task(**params)
     # @param [Hash] params ({})
-    def start_speech_synthesis_task(params = {}, options = {})
+    def start_speech_synthesis_task(params = {}, **options)
       req = build_request(:start_speech_synthesis_task, params)
       req.send_request(options)
     end
@@ -1065,9 +1065,9 @@ module Aws::Polly
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/polly-2016-06-10/SynthesizeSpeech AWS API Documentation
     #
-    # @overload synthesize_speech(params = {})
+    # @overload synthesize_speech(**params)
     # @param [Hash] params ({})
-    def synthesize_speech(params = {}, options = {}, &block)
+    def synthesize_speech(params = {}, **options, &block)
       req = build_request(:synthesize_speech, params)
       req.send_request(options, &block)
     end
@@ -1076,7 +1076,7 @@ module Aws::Polly
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1084,15 +1084,15 @@ module Aws::Polly
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-polly'
-      context[:gem_version] = '1.38.0'
+      context[:gem_name] = "aws-sdk-polly"
+      context[:gem_version] = "1.38.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

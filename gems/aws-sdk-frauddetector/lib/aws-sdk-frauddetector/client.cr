@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:frauddetector)
 
@@ -290,7 +290,7 @@ module Aws::FraudDetector
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -379,9 +379,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/BatchCreateVariable AWS API Documentation
     #
-    # @overload batch_create_variable(params = {})
+    # @overload batch_create_variable(**params)
     # @param [Hash] params ({})
-    def batch_create_variable(params = {}, options = {})
+    def batch_create_variable(params = {}, **options)
       req = build_request(:batch_create_variable, params)
       req.send_request(options)
     end
@@ -421,9 +421,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/BatchGetVariable AWS API Documentation
     #
-    # @overload batch_get_variable(params = {})
+    # @overload batch_get_variable(**params)
     # @param [Hash] params ({})
-    def batch_get_variable(params = {}, options = {})
+    def batch_get_variable(params = {}, **options)
       req = build_request(:batch_get_variable, params)
       req.send_request(options)
     end
@@ -511,9 +511,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateDetectorVersion AWS API Documentation
     #
-    # @overload create_detector_version(params = {})
+    # @overload create_detector_version(**params)
     # @param [Hash] params ({})
-    def create_detector_version(params = {}, options = {})
+    def create_detector_version(params = {}, **options)
       req = build_request(:create_detector_version, params)
       req.send_request(options)
     end
@@ -554,9 +554,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateModel AWS API Documentation
     #
-    # @overload create_model(params = {})
+    # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, options = {})
+    def create_model(params = {}, **options)
       req = build_request(:create_model, params)
       req.send_request(options)
     end
@@ -625,9 +625,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateModelVersion AWS API Documentation
     #
-    # @overload create_model_version(params = {})
+    # @overload create_model_version(**params)
     # @param [Hash] params ({})
-    def create_model_version(params = {}, options = {})
+    def create_model_version(params = {}, **options)
       req = build_request(:create_model_version, params)
       req.send_request(options)
     end
@@ -684,9 +684,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateRule AWS API Documentation
     #
-    # @overload create_rule(params = {})
+    # @overload create_rule(**params)
     # @param [Hash] params ({})
-    def create_rule(params = {}, options = {})
+    def create_rule(params = {}, **options)
       req = build_request(:create_rule, params)
       req.send_request(options)
     end
@@ -748,9 +748,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateVariable AWS API Documentation
     #
-    # @overload create_variable(params = {})
+    # @overload create_variable(**params)
     # @param [Hash] params ({})
-    def create_variable(params = {}, options = {})
+    def create_variable(params = {}, **options)
       req = build_request(:create_variable, params)
       req.send_request(options)
     end
@@ -776,9 +776,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteDetector AWS API Documentation
     #
-    # @overload delete_detector(params = {})
+    # @overload delete_detector(**params)
     # @param [Hash] params ({})
-    def delete_detector(params = {}, options = {})
+    def delete_detector(params = {}, **options)
       req = build_request(:delete_detector, params)
       req.send_request(options)
     end
@@ -807,9 +807,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteDetectorVersion AWS API Documentation
     #
-    # @overload delete_detector_version(params = {})
+    # @overload delete_detector_version(**params)
     # @param [Hash] params ({})
-    def delete_detector_version(params = {}, options = {})
+    def delete_detector_version(params = {}, **options)
       req = build_request(:delete_detector_version, params)
       req.send_request(options)
     end
@@ -835,9 +835,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteEntityType AWS API Documentation
     #
-    # @overload delete_entity_type(params = {})
+    # @overload delete_entity_type(**params)
     # @param [Hash] params ({})
-    def delete_entity_type(params = {}, options = {})
+    def delete_entity_type(params = {}, **options)
       req = build_request(:delete_entity_type, params)
       req.send_request(options)
     end
@@ -865,9 +865,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteEvent AWS API Documentation
     #
-    # @overload delete_event(params = {})
+    # @overload delete_event(**params)
     # @param [Hash] params ({})
-    def delete_event(params = {}, options = {})
+    def delete_event(params = {}, **options)
       req = build_request(:delete_event, params)
       req.send_request(options)
     end
@@ -893,9 +893,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteEventType AWS API Documentation
     #
-    # @overload delete_event_type(params = {})
+    # @overload delete_event_type(**params)
     # @param [Hash] params ({})
-    def delete_event_type(params = {}, options = {})
+    def delete_event_type(params = {}, **options)
       req = build_request(:delete_event_type, params)
       req.send_request(options)
     end
@@ -919,9 +919,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteExternalModel AWS API Documentation
     #
-    # @overload delete_external_model(params = {})
+    # @overload delete_external_model(**params)
     # @param [Hash] params ({})
-    def delete_external_model(params = {}, options = {})
+    def delete_external_model(params = {}, **options)
       req = build_request(:delete_external_model, params)
       req.send_request(options)
     end
@@ -951,9 +951,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteLabel AWS API Documentation
     #
-    # @overload delete_label(params = {})
+    # @overload delete_label(**params)
     # @param [Hash] params ({})
-    def delete_label(params = {}, options = {})
+    def delete_label(params = {}, **options)
       req = build_request(:delete_label, params)
       req.send_request(options)
     end
@@ -984,9 +984,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteModel AWS API Documentation
     #
-    # @overload delete_model(params = {})
+    # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, options = {})
+    def delete_model(params = {}, **options)
       req = build_request(:delete_model, params)
       req.send_request(options)
     end
@@ -1021,9 +1021,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteModelVersion AWS API Documentation
     #
-    # @overload delete_model_version(params = {})
+    # @overload delete_model_version(**params)
     # @param [Hash] params ({})
-    def delete_model_version(params = {}, options = {})
+    def delete_model_version(params = {}, **options)
       req = build_request(:delete_model_version, params)
       req.send_request(options)
     end
@@ -1049,9 +1049,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteOutcome AWS API Documentation
     #
-    # @overload delete_outcome(params = {})
+    # @overload delete_outcome(**params)
     # @param [Hash] params ({})
-    def delete_outcome(params = {}, options = {})
+    def delete_outcome(params = {}, **options)
       req = build_request(:delete_outcome, params)
       req.send_request(options)
     end
@@ -1080,9 +1080,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteRule AWS API Documentation
     #
-    # @overload delete_rule(params = {})
+    # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, options = {})
+    def delete_rule(params = {}, **options)
       req = build_request(:delete_rule, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DeleteVariable AWS API Documentation
     #
-    # @overload delete_variable(params = {})
+    # @overload delete_variable(**params)
     # @param [Hash] params ({})
-    def delete_variable(params = {}, options = {})
+    def delete_variable(params = {}, **options)
       req = build_request(:delete_variable, params)
       req.send_request(options)
     end
@@ -1159,9 +1159,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DescribeDetector AWS API Documentation
     #
-    # @overload describe_detector(params = {})
+    # @overload describe_detector(**params)
     # @param [Hash] params ({})
-    def describe_detector(params = {}, options = {})
+    def describe_detector(params = {}, **options)
       req = build_request(:describe_detector, params)
       req.send_request(options)
     end
@@ -1240,9 +1240,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/DescribeModelVersions AWS API Documentation
     #
-    # @overload describe_model_versions(params = {})
+    # @overload describe_model_versions(**params)
     # @param [Hash] params ({})
-    def describe_model_versions(params = {}, options = {})
+    def describe_model_versions(params = {}, **options)
       req = build_request(:describe_model_versions, params)
       req.send_request(options)
     end
@@ -1300,9 +1300,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetDetectorVersion AWS API Documentation
     #
-    # @overload get_detector_version(params = {})
+    # @overload get_detector_version(**params)
     # @param [Hash] params ({})
-    def get_detector_version(params = {}, options = {})
+    def get_detector_version(params = {}, **options)
       req = build_request(:get_detector_version, params)
       req.send_request(options)
     end
@@ -1352,9 +1352,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetDetectors AWS API Documentation
     #
-    # @overload get_detectors(params = {})
+    # @overload get_detectors(**params)
     # @param [Hash] params ({})
-    def get_detectors(params = {}, options = {})
+    def get_detectors(params = {}, **options)
       req = build_request(:get_detectors, params)
       req.send_request(options)
     end
@@ -1403,9 +1403,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEntityTypes AWS API Documentation
     #
-    # @overload get_entity_types(params = {})
+    # @overload get_entity_types(**params)
     # @param [Hash] params ({})
-    def get_entity_types(params = {}, options = {})
+    def get_entity_types(params = {}, **options)
       req = build_request(:get_entity_types, params)
       req.send_request(options)
     end
@@ -1488,9 +1488,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEventPrediction AWS API Documentation
     #
-    # @overload get_event_prediction(params = {})
+    # @overload get_event_prediction(**params)
     # @param [Hash] params ({})
-    def get_event_prediction(params = {}, options = {})
+    def get_event_prediction(params = {}, **options)
       req = build_request(:get_event_prediction, params)
       req.send_request(options)
     end
@@ -1545,9 +1545,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEventTypes AWS API Documentation
     #
-    # @overload get_event_types(params = {})
+    # @overload get_event_types(**params)
     # @param [Hash] params ({})
-    def get_event_types(params = {}, options = {})
+    def get_event_types(params = {}, **options)
       req = build_request(:get_event_types, params)
       req.send_request(options)
     end
@@ -1608,9 +1608,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetExternalModels AWS API Documentation
     #
-    # @overload get_external_models(params = {})
+    # @overload get_external_models(**params)
     # @param [Hash] params ({})
-    def get_external_models(params = {}, options = {})
+    def get_external_models(params = {}, **options)
       req = build_request(:get_external_models, params)
       req.send_request(options)
     end
@@ -1629,9 +1629,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetKMSEncryptionKey AWS API Documentation
     #
-    # @overload get_kms_encryption_key(params = {})
+    # @overload get_kms_encryption_key(**params)
     # @param [Hash] params ({})
-    def get_kms_encryption_key(params = {}, options = {})
+    def get_kms_encryption_key(params = {}, **options)
       req = build_request(:get_kms_encryption_key, params)
       req.send_request(options)
     end
@@ -1680,9 +1680,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetLabels AWS API Documentation
     #
-    # @overload get_labels(params = {})
+    # @overload get_labels(**params)
     # @param [Hash] params ({})
-    def get_labels(params = {}, options = {})
+    def get_labels(params = {}, **options)
       req = build_request(:get_labels, params)
       req.send_request(options)
     end
@@ -1735,9 +1735,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetModelVersion AWS API Documentation
     #
-    # @overload get_model_version(params = {})
+    # @overload get_model_version(**params)
     # @param [Hash] params ({})
-    def get_model_version(params = {}, options = {})
+    def get_model_version(params = {}, **options)
       req = build_request(:get_model_version, params)
       req.send_request(options)
     end
@@ -1797,9 +1797,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetModels AWS API Documentation
     #
-    # @overload get_models(params = {})
+    # @overload get_models(**params)
     # @param [Hash] params ({})
-    def get_models(params = {}, options = {})
+    def get_models(params = {}, **options)
       req = build_request(:get_models, params)
       req.send_request(options)
     end
@@ -1847,9 +1847,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetOutcomes AWS API Documentation
     #
-    # @overload get_outcomes(params = {})
+    # @overload get_outcomes(**params)
     # @param [Hash] params ({})
-    def get_outcomes(params = {}, options = {})
+    def get_outcomes(params = {}, **options)
       req = build_request(:get_outcomes, params)
       req.send_request(options)
     end
@@ -1915,9 +1915,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetRules AWS API Documentation
     #
-    # @overload get_rules(params = {})
+    # @overload get_rules(**params)
     # @param [Hash] params ({})
-    def get_rules(params = {}, options = {})
+    def get_rules(params = {}, **options)
       req = build_request(:get_rules, params)
       req.send_request(options)
     end
@@ -1969,9 +1969,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetVariables AWS API Documentation
     #
-    # @overload get_variables(params = {})
+    # @overload get_variables(**params)
     # @param [Hash] params ({})
-    def get_variables(params = {}, options = {})
+    def get_variables(params = {}, **options)
       req = build_request(:get_variables, params)
       req.send_request(options)
     end
@@ -2014,9 +2014,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2053,9 +2053,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutDetector AWS API Documentation
     #
-    # @overload put_detector(params = {})
+    # @overload put_detector(**params)
     # @param [Hash] params ({})
-    def put_detector(params = {}, options = {})
+    def put_detector(params = {}, **options)
       req = build_request(:put_detector, params)
       req.send_request(options)
     end
@@ -2092,9 +2092,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutEntityType AWS API Documentation
     #
-    # @overload put_entity_type(params = {})
+    # @overload put_entity_type(**params)
     # @param [Hash] params ({})
-    def put_entity_type(params = {}, options = {})
+    def put_entity_type(params = {}, **options)
       req = build_request(:put_entity_type, params)
       req.send_request(options)
     end
@@ -2147,9 +2147,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutEventType AWS API Documentation
     #
-    # @overload put_event_type(params = {})
+    # @overload put_event_type(**params)
     # @param [Hash] params ({})
-    def put_event_type(params = {}, options = {})
+    def put_event_type(params = {}, **options)
       req = build_request(:put_event_type, params)
       req.send_request(options)
     end
@@ -2214,9 +2214,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutExternalModel AWS API Documentation
     #
-    # @overload put_external_model(params = {})
+    # @overload put_external_model(**params)
     # @param [Hash] params ({})
-    def put_external_model(params = {}, options = {})
+    def put_external_model(params = {}, **options)
       req = build_request(:put_external_model, params)
       req.send_request(options)
     end
@@ -2237,9 +2237,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutKMSEncryptionKey AWS API Documentation
     #
-    # @overload put_kms_encryption_key(params = {})
+    # @overload put_kms_encryption_key(**params)
     # @param [Hash] params ({})
-    def put_kms_encryption_key(params = {}, options = {})
+    def put_kms_encryption_key(params = {}, **options)
       req = build_request(:put_kms_encryption_key, params)
       req.send_request(options)
     end
@@ -2273,9 +2273,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutLabel AWS API Documentation
     #
-    # @overload put_label(params = {})
+    # @overload put_label(**params)
     # @param [Hash] params ({})
-    def put_label(params = {}, options = {})
+    def put_label(params = {}, **options)
       req = build_request(:put_label, params)
       req.send_request(options)
     end
@@ -2308,9 +2308,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutOutcome AWS API Documentation
     #
-    # @overload put_outcome(params = {})
+    # @overload put_outcome(**params)
     # @param [Hash] params ({})
-    def put_outcome(params = {}, options = {})
+    def put_outcome(params = {}, **options)
       req = build_request(:put_outcome, params)
       req.send_request(options)
     end
@@ -2339,9 +2339,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2365,9 +2365,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2440,9 +2440,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateDetectorVersion AWS API Documentation
     #
-    # @overload update_detector_version(params = {})
+    # @overload update_detector_version(**params)
     # @param [Hash] params ({})
-    def update_detector_version(params = {}, options = {})
+    def update_detector_version(params = {}, **options)
       req = build_request(:update_detector_version, params)
       req.send_request(options)
     end
@@ -2471,9 +2471,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateDetectorVersionMetadata AWS API Documentation
     #
-    # @overload update_detector_version_metadata(params = {})
+    # @overload update_detector_version_metadata(**params)
     # @param [Hash] params ({})
-    def update_detector_version_metadata(params = {}, options = {})
+    def update_detector_version_metadata(params = {}, **options)
       req = build_request(:update_detector_version_metadata, params)
       req.send_request(options)
     end
@@ -2503,9 +2503,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateDetectorVersionStatus AWS API Documentation
     #
-    # @overload update_detector_version_status(params = {})
+    # @overload update_detector_version_status(**params)
     # @param [Hash] params ({})
-    def update_detector_version_status(params = {}, options = {})
+    def update_detector_version_status(params = {}, **options)
       req = build_request(:update_detector_version_status, params)
       req.send_request(options)
     end
@@ -2534,9 +2534,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateModel AWS API Documentation
     #
-    # @overload update_model(params = {})
+    # @overload update_model(**params)
     # @param [Hash] params ({})
-    def update_model(params = {}, options = {})
+    def update_model(params = {}, **options)
       req = build_request(:update_model, params)
       req.send_request(options)
     end
@@ -2597,9 +2597,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateModelVersion AWS API Documentation
     #
-    # @overload update_model_version(params = {})
+    # @overload update_model_version(**params)
     # @param [Hash] params ({})
-    def update_model_version(params = {}, options = {})
+    def update_model_version(params = {}, **options)
       req = build_request(:update_model_version, params)
       req.send_request(options)
     end
@@ -2637,9 +2637,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateModelVersionStatus AWS API Documentation
     #
-    # @overload update_model_version_status(params = {})
+    # @overload update_model_version_status(**params)
     # @param [Hash] params ({})
-    def update_model_version_status(params = {}, options = {})
+    def update_model_version_status(params = {}, **options)
       req = build_request(:update_model_version_status, params)
       req.send_request(options)
     end
@@ -2667,9 +2667,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateRuleMetadata AWS API Documentation
     #
-    # @overload update_rule_metadata(params = {})
+    # @overload update_rule_metadata(**params)
     # @param [Hash] params ({})
-    def update_rule_metadata(params = {}, options = {})
+    def update_rule_metadata(params = {}, **options)
       req = build_request(:update_rule_metadata, params)
       req.send_request(options)
     end
@@ -2727,9 +2727,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateRuleVersion AWS API Documentation
     #
-    # @overload update_rule_version(params = {})
+    # @overload update_rule_version(**params)
     # @param [Hash] params ({})
-    def update_rule_version(params = {}, options = {})
+    def update_rule_version(params = {}, **options)
       req = build_request(:update_rule_version, params)
       req.send_request(options)
     end
@@ -2765,9 +2765,9 @@ module Aws::FraudDetector
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateVariable AWS API Documentation
     #
-    # @overload update_variable(params = {})
+    # @overload update_variable(**params)
     # @param [Hash] params ({})
-    def update_variable(params = {}, options = {})
+    def update_variable(params = {}, **options)
       req = build_request(:update_variable, params)
       req.send_request(options)
     end
@@ -2776,7 +2776,7 @@ module Aws::FraudDetector
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2784,15 +2784,15 @@ module Aws::FraudDetector
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-frauddetector'
-      context[:gem_version] = '1.14.0'
+      context[:gem_name] = "aws-sdk-frauddetector"
+      context[:gem_version] = "1.14.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

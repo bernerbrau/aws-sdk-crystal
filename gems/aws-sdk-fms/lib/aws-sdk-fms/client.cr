@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:fms)
 
@@ -290,7 +290,7 @@ module Aws::FMS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -368,9 +368,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/AssociateAdminAccount AWS API Documentation
     #
-    # @overload associate_admin_account(params = {})
+    # @overload associate_admin_account(**params)
     # @param [Hash] params ({})
-    def associate_admin_account(params = {}, options = {})
+    def associate_admin_account(params = {}, **options)
       req = build_request(:associate_admin_account, params)
       req.send_request(options)
     end
@@ -392,9 +392,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DeleteAppsList AWS API Documentation
     #
-    # @overload delete_apps_list(params = {})
+    # @overload delete_apps_list(**params)
     # @param [Hash] params ({})
-    def delete_apps_list(params = {}, options = {})
+    def delete_apps_list(params = {}, **options)
       req = build_request(:delete_apps_list, params)
       req.send_request(options)
     end
@@ -407,9 +407,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DeleteNotificationChannel AWS API Documentation
     #
-    # @overload delete_notification_channel(params = {})
+    # @overload delete_notification_channel(**params)
     # @param [Hash] params ({})
-    def delete_notification_channel(params = {}, options = {})
+    def delete_notification_channel(params = {}, **options)
       req = build_request(:delete_notification_channel, params)
       req.send_request(options)
     end
@@ -461,9 +461,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DeletePolicy AWS API Documentation
     #
-    # @overload delete_policy(params = {})
+    # @overload delete_policy(**params)
     # @param [Hash] params ({})
-    def delete_policy(params = {}, options = {})
+    def delete_policy(params = {}, **options)
       req = build_request(:delete_policy, params)
       req.send_request(options)
     end
@@ -485,9 +485,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DeleteProtocolsList AWS API Documentation
     #
-    # @overload delete_protocols_list(params = {})
+    # @overload delete_protocols_list(**params)
     # @param [Hash] params ({})
-    def delete_protocols_list(params = {}, options = {})
+    def delete_protocols_list(params = {}, **options)
       req = build_request(:delete_protocols_list, params)
       req.send_request(options)
     end
@@ -501,9 +501,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DisassociateAdminAccount AWS API Documentation
     #
-    # @overload disassociate_admin_account(params = {})
+    # @overload disassociate_admin_account(**params)
     # @param [Hash] params ({})
-    def disassociate_admin_account(params = {}, options = {})
+    def disassociate_admin_account(params = {}, **options)
       req = build_request(:disassociate_admin_account, params)
       req.send_request(options)
     end
@@ -523,9 +523,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetAdminAccount AWS API Documentation
     #
-    # @overload get_admin_account(params = {})
+    # @overload get_admin_account(**params)
     # @param [Hash] params ({})
-    def get_admin_account(params = {}, options = {})
+    def get_admin_account(params = {}, **options)
       req = build_request(:get_admin_account, params)
       req.send_request(options)
     end
@@ -573,9 +573,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetAppsList AWS API Documentation
     #
-    # @overload get_apps_list(params = {})
+    # @overload get_apps_list(**params)
     # @param [Hash] params ({})
-    def get_apps_list(params = {}, options = {})
+    def get_apps_list(params = {}, **options)
       req = build_request(:get_apps_list, params)
       req.send_request(options)
     end
@@ -629,9 +629,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetComplianceDetail AWS API Documentation
     #
-    # @overload get_compliance_detail(params = {})
+    # @overload get_compliance_detail(**params)
     # @param [Hash] params ({})
-    def get_compliance_detail(params = {}, options = {})
+    def get_compliance_detail(params = {}, **options)
       req = build_request(:get_compliance_detail, params)
       req.send_request(options)
     end
@@ -651,9 +651,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetNotificationChannel AWS API Documentation
     #
-    # @overload get_notification_channel(params = {})
+    # @overload get_notification_channel(**params)
     # @param [Hash] params ({})
-    def get_notification_channel(params = {}, options = {})
+    def get_notification_channel(params = {}, **options)
       req = build_request(:get_notification_channel, params)
       req.send_request(options)
     end
@@ -700,9 +700,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetPolicy AWS API Documentation
     #
-    # @overload get_policy(params = {})
+    # @overload get_policy(**params)
     # @param [Hash] params ({})
-    def get_policy(params = {}, options = {})
+    def get_policy(params = {}, **options)
       req = build_request(:get_policy, params)
       req.send_request(options)
     end
@@ -772,9 +772,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetProtectionStatus AWS API Documentation
     #
-    # @overload get_protection_status(params = {})
+    # @overload get_protection_status(**params)
     # @param [Hash] params ({})
-    def get_protection_status(params = {}, options = {})
+    def get_protection_status(params = {}, **options)
       req = build_request(:get_protection_status, params)
       req.send_request(options)
     end
@@ -818,9 +818,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetProtocolsList AWS API Documentation
     #
-    # @overload get_protocols_list(params = {})
+    # @overload get_protocols_list(**params)
     # @param [Hash] params ({})
-    def get_protocols_list(params = {}, options = {})
+    def get_protocols_list(params = {}, **options)
       req = build_request(:get_protocols_list, params)
       req.send_request(options)
     end
@@ -941,9 +941,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetViolationDetails AWS API Documentation
     #
-    # @overload get_violation_details(params = {})
+    # @overload get_violation_details(**params)
     # @param [Hash] params ({})
-    def get_violation_details(params = {}, options = {})
+    def get_violation_details(params = {}, **options)
       req = build_request(:get_violation_details, params)
       req.send_request(options)
     end
@@ -997,9 +997,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListAppsLists AWS API Documentation
     #
-    # @overload list_apps_lists(params = {})
+    # @overload list_apps_lists(**params)
     # @param [Hash] params ({})
-    def list_apps_lists(params = {}, options = {})
+    def list_apps_lists(params = {}, **options)
       req = build_request(:list_apps_lists, params)
       req.send_request(options)
     end
@@ -1062,9 +1062,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListComplianceStatus AWS API Documentation
     #
-    # @overload list_compliance_status(params = {})
+    # @overload list_compliance_status(**params)
     # @param [Hash] params ({})
-    def list_compliance_status(params = {}, options = {})
+    def list_compliance_status(params = {}, **options)
       req = build_request(:list_compliance_status, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListMemberAccounts AWS API Documentation
     #
-    # @overload list_member_accounts(params = {})
+    # @overload list_member_accounts(**params)
     # @param [Hash] params ({})
-    def list_member_accounts(params = {}, options = {})
+    def list_member_accounts(params = {}, **options)
       req = build_request(:list_member_accounts, params)
       req.send_request(options)
     end
@@ -1165,9 +1165,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListPolicies AWS API Documentation
     #
-    # @overload list_policies(params = {})
+    # @overload list_policies(**params)
     # @param [Hash] params ({})
-    def list_policies(params = {}, options = {})
+    def list_policies(params = {}, **options)
       req = build_request(:list_policies, params)
       req.send_request(options)
     end
@@ -1219,9 +1219,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListProtocolsLists AWS API Documentation
     #
-    # @overload list_protocols_lists(params = {})
+    # @overload list_protocols_lists(**params)
     # @param [Hash] params ({})
-    def list_protocols_lists(params = {}, options = {})
+    def list_protocols_lists(params = {}, **options)
       req = build_request(:list_protocols_lists, params)
       req.send_request(options)
     end
@@ -1251,9 +1251,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1326,9 +1326,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/PutAppsList AWS API Documentation
     #
-    # @overload put_apps_list(params = {})
+    # @overload put_apps_list(**params)
     # @param [Hash] params ({})
-    def put_apps_list(params = {}, options = {})
+    def put_apps_list(params = {}, **options)
       req = build_request(:put_apps_list, params)
       req.send_request(options)
     end
@@ -1365,9 +1365,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/PutNotificationChannel AWS API Documentation
     #
-    # @overload put_notification_channel(params = {})
+    # @overload put_notification_channel(**params)
     # @param [Hash] params ({})
-    def put_notification_channel(params = {}, options = {})
+    def put_notification_channel(params = {}, **options)
       req = build_request(:put_notification_channel, params)
       req.send_request(options)
     end
@@ -1475,9 +1475,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/PutPolicy AWS API Documentation
     #
-    # @overload put_policy(params = {})
+    # @overload put_policy(**params)
     # @param [Hash] params ({})
-    def put_policy(params = {}, options = {})
+    def put_policy(params = {}, **options)
       req = build_request(:put_policy, params)
       req.send_request(options)
     end
@@ -1533,9 +1533,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/PutProtocolsList AWS API Documentation
     #
-    # @overload put_protocols_list(params = {})
+    # @overload put_protocols_list(**params)
     # @param [Hash] params ({})
-    def put_protocols_list(params = {}, options = {})
+    def put_protocols_list(params = {}, **options)
       req = build_request(:put_protocols_list, params)
       req.send_request(options)
     end
@@ -1566,9 +1566,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1594,9 +1594,9 @@ module Aws::FMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1605,7 +1605,7 @@ module Aws::FMS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1613,15 +1613,15 @@ module Aws::FMS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-fms'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-fms"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-textract/types'
-require_relative 'aws-sdk-textract/client_api'
-require_relative 'aws-sdk-textract/client'
-require_relative 'aws-sdk-textract/errors'
-require_relative 'aws-sdk-textract/resource'
-require_relative 'aws-sdk-textract/customizations'
+require_relative "aws-sdk-textract/types"
+require_relative "aws-sdk-textract/client_api"
+require_relative "aws-sdk-textract/client"
+require_relative "aws-sdk-textract/errors"
+require_relative "aws-sdk-textract/resource"
+require_relative "aws-sdk-textract/customizations"
 
 # This module provides support for Amazon Textract. This module is available in the
 # `aws-sdk-textract` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-textract/customizations'
 # @!group service
 module Aws::Textract
 
-  GEM_VERSION = '1.22.0'
+  GEM_VERSION = "1.22.0"
 
 end

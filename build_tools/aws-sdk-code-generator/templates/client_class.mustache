@@ -4,7 +4,7 @@
 {{generated_src_warning}}
 {{/generated_src_warning}}
 {{#plugin_requires}}
-require '{{.}}'
+require "{{.}}"
 {{/plugin_requires}}
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:{{service_identifier}})
@@ -39,7 +39,7 @@ module {{module_name}}
     #   @param [Hash] options
     {{>documentation}}
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -91,9 +91,9 @@ module {{module_name}}
     {{#documentation}}
     {{>documentation}}
     {{/documentation}}
-    # @overload {{name}}(params = {})
+    # @overload {{name}}(**params)
     # @param [Hash] params ({})
-    def {{name}}(params = {}, options = {}{{{block_option}}})
+    def {{name}}(params = {}, **options{{{block_option}}})
       {{#eventstream_output}}
       params = params.dup
       event_stream_handler = case handler = params.delete(:event_stream_handler)
@@ -125,7 +125,7 @@ module {{module_name}}
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       {{#authorizer?}}
       authorizer = nil
@@ -143,8 +143,8 @@ module {{module_name}}
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = '{{gem_name}}'
-      context[:gem_version] = '{{gem_version}}'
+      context[:gem_name] = "{{gem_name}}"
+      context[:gem_version] = "{{gem_version}}"
       Seahorse::Client::Request.new(handlers, context)
     end
     {{#waiters?}}
@@ -238,7 +238,7 @@ module {{module_name}}
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -254,7 +254,7 @@ module {{module_name}}
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))
@@ -276,7 +276,7 @@ module {{module_name}}
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
     {{/waiters?}}
 

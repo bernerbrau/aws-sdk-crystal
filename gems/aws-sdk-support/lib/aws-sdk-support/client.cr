@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:support)
 
@@ -290,7 +290,7 @@ module Aws::Support
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -398,9 +398,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/AddAttachmentsToSet AWS API Documentation
     #
-    # @overload add_attachments_to_set(params = {})
+    # @overload add_attachments_to_set(**params)
     # @param [Hash] params ({})
-    def add_attachments_to_set(params = {}, options = {})
+    def add_attachments_to_set(params = {}, **options)
       req = build_request(:add_attachments_to_set, params)
       req.send_request(options)
     end
@@ -460,9 +460,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/AddCommunicationToCase AWS API Documentation
     #
-    # @overload add_communication_to_case(params = {})
+    # @overload add_communication_to_case(**params)
     # @param [Hash] params ({})
-    def add_communication_to_case(params = {}, options = {})
+    def add_communication_to_case(params = {}, **options)
       req = build_request(:add_communication_to_case, params)
       req.send_request(options)
     end
@@ -598,9 +598,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/CreateCase AWS API Documentation
     #
-    # @overload create_case(params = {})
+    # @overload create_case(**params)
     # @param [Hash] params ({})
-    def create_case(params = {}, options = {})
+    def create_case(params = {}, **options)
       req = build_request(:create_case, params)
       req.send_request(options)
     end
@@ -647,9 +647,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeAttachment AWS API Documentation
     #
-    # @overload describe_attachment(params = {})
+    # @overload describe_attachment(**params)
     # @param [Hash] params ({})
-    def describe_attachment(params = {}, options = {})
+    def describe_attachment(params = {}, **options)
       req = build_request(:describe_attachment, params)
       req.send_request(options)
     end
@@ -771,9 +771,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeCases AWS API Documentation
     #
-    # @overload describe_cases(params = {})
+    # @overload describe_cases(**params)
     # @param [Hash] params ({})
-    def describe_cases(params = {}, options = {})
+    def describe_cases(params = {}, **options)
       req = build_request(:describe_cases, params)
       req.send_request(options)
     end
@@ -858,9 +858,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeCommunications AWS API Documentation
     #
-    # @overload describe_communications(params = {})
+    # @overload describe_communications(**params)
     # @param [Hash] params ({})
-    def describe_communications(params = {}, options = {})
+    def describe_communications(params = {}, **options)
       req = build_request(:describe_communications, params)
       req.send_request(options)
     end
@@ -924,9 +924,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeServices AWS API Documentation
     #
-    # @overload describe_services(params = {})
+    # @overload describe_services(**params)
     # @param [Hash] params ({})
-    def describe_services(params = {}, options = {})
+    def describe_services(params = {}, **options)
       req = build_request(:describe_services, params)
       req.send_request(options)
     end
@@ -973,9 +973,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeSeverityLevels AWS API Documentation
     #
-    # @overload describe_severity_levels(params = {})
+    # @overload describe_severity_levels(**params)
     # @param [Hash] params ({})
-    def describe_severity_levels(params = {}, options = {})
+    def describe_severity_levels(params = {}, **options)
       req = build_request(:describe_severity_levels, params)
       req.send_request(options)
     end
@@ -1031,9 +1031,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeTrustedAdvisorCheckRefreshStatuses AWS API Documentation
     #
-    # @overload describe_trusted_advisor_check_refresh_statuses(params = {})
+    # @overload describe_trusted_advisor_check_refresh_statuses(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_check_refresh_statuses(params = {}, options = {})
+    def describe_trusted_advisor_check_refresh_statuses(params = {}, **options)
       req = build_request(:describe_trusted_advisor_check_refresh_statuses, params)
       req.send_request(options)
     end
@@ -1115,9 +1115,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeTrustedAdvisorCheckResult AWS API Documentation
     #
-    # @overload describe_trusted_advisor_check_result(params = {})
+    # @overload describe_trusted_advisor_check_result(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_check_result(params = {}, options = {})
+    def describe_trusted_advisor_check_result(params = {}, **options)
       req = build_request(:describe_trusted_advisor_check_result, params)
       req.send_request(options)
     end
@@ -1171,9 +1171,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeTrustedAdvisorCheckSummaries AWS API Documentation
     #
-    # @overload describe_trusted_advisor_check_summaries(params = {})
+    # @overload describe_trusted_advisor_check_summaries(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_check_summaries(params = {}, options = {})
+    def describe_trusted_advisor_check_summaries(params = {}, **options)
       req = build_request(:describe_trusted_advisor_check_summaries, params)
       req.send_request(options)
     end
@@ -1227,9 +1227,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/DescribeTrustedAdvisorChecks AWS API Documentation
     #
-    # @overload describe_trusted_advisor_checks(params = {})
+    # @overload describe_trusted_advisor_checks(**params)
     # @param [Hash] params ({})
-    def describe_trusted_advisor_checks(params = {}, options = {})
+    def describe_trusted_advisor_checks(params = {}, **options)
       req = build_request(:describe_trusted_advisor_checks, params)
       req.send_request(options)
     end
@@ -1283,9 +1283,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/RefreshTrustedAdvisorCheck AWS API Documentation
     #
-    # @overload refresh_trusted_advisor_check(params = {})
+    # @overload refresh_trusted_advisor_check(**params)
     # @param [Hash] params ({})
-    def refresh_trusted_advisor_check(params = {}, options = {})
+    def refresh_trusted_advisor_check(params = {}, **options)
       req = build_request(:refresh_trusted_advisor_check, params)
       req.send_request(options)
     end
@@ -1330,9 +1330,9 @@ module Aws::Support
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/support-2013-04-15/ResolveCase AWS API Documentation
     #
-    # @overload resolve_case(params = {})
+    # @overload resolve_case(**params)
     # @param [Hash] params ({})
-    def resolve_case(params = {}, options = {})
+    def resolve_case(params = {}, **options)
       req = build_request(:resolve_case, params)
       req.send_request(options)
     end
@@ -1341,7 +1341,7 @@ module Aws::Support
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1349,15 +1349,15 @@ module Aws::Support
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-support'
-      context[:gem_version] = '1.28.0'
+      context[:gem_name] = "aws-sdk-support"
+      context[:gem_version] = "1.28.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ssm)
 
@@ -290,7 +290,7 @@ module Aws::SSM
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -415,9 +415,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -445,9 +445,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CancelCommand AWS API Documentation
     #
-    # @overload cancel_command(params = {})
+    # @overload cancel_command(**params)
     # @param [Hash] params ({})
-    def cancel_command(params = {}, options = {})
+    def cancel_command(params = {}, **options)
       req = build_request(:cancel_command, params)
       req.send_request(options)
     end
@@ -475,9 +475,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CancelMaintenanceWindowExecution AWS API Documentation
     #
-    # @overload cancel_maintenance_window_execution(params = {})
+    # @overload cancel_maintenance_window_execution(**params)
     # @param [Hash] params ({})
-    def cancel_maintenance_window_execution(params = {}, options = {})
+    def cancel_maintenance_window_execution(params = {}, **options)
       req = build_request(:cancel_maintenance_window_execution, params)
       req.send_request(options)
     end
@@ -589,9 +589,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateActivation AWS API Documentation
     #
-    # @overload create_activation(params = {})
+    # @overload create_activation(**params)
     # @param [Hash] params ({})
-    def create_activation(params = {}, options = {})
+    def create_activation(params = {}, **options)
       req = build_request(:create_activation, params)
       req.send_request(options)
     end
@@ -832,9 +832,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateAssociation AWS API Documentation
     #
-    # @overload create_association(params = {})
+    # @overload create_association(**params)
     # @param [Hash] params ({})
-    def create_association(params = {}, options = {})
+    def create_association(params = {}, **options)
       req = build_request(:create_association, params)
       req.send_request(options)
     end
@@ -984,9 +984,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateAssociationBatch AWS API Documentation
     #
-    # @overload create_association_batch(params = {})
+    # @overload create_association_batch(**params)
     # @param [Hash] params ({})
-    def create_association_batch(params = {}, options = {})
+    def create_association_batch(params = {}, **options)
       req = build_request(:create_association_batch, params)
       req.send_request(options)
     end
@@ -1171,9 +1171,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateDocument AWS API Documentation
     #
-    # @overload create_document(params = {})
+    # @overload create_document(**params)
     # @param [Hash] params ({})
-    def create_document(params = {}, options = {})
+    def create_document(params = {}, **options)
       req = build_request(:create_document, params)
       req.send_request(options)
     end
@@ -1309,9 +1309,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateMaintenanceWindow AWS API Documentation
     #
-    # @overload create_maintenance_window(params = {})
+    # @overload create_maintenance_window(**params)
     # @param [Hash] params ({})
-    def create_maintenance_window(params = {}, options = {})
+    def create_maintenance_window(params = {}, **options)
       req = build_request(:create_maintenance_window, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateOpsItem AWS API Documentation
     #
-    # @overload create_ops_item(params = {})
+    # @overload create_ops_item(**params)
     # @param [Hash] params ({})
-    def create_ops_item(params = {}, options = {})
+    def create_ops_item(params = {}, **options)
       req = build_request(:create_ops_item, params)
       req.send_request(options)
     end
@@ -1520,9 +1520,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateOpsMetadata AWS API Documentation
     #
-    # @overload create_ops_metadata(params = {})
+    # @overload create_ops_metadata(**params)
     # @param [Hash] params ({})
-    def create_ops_metadata(params = {}, options = {})
+    def create_ops_metadata(params = {}, **options)
       req = build_request(:create_ops_metadata, params)
       req.send_request(options)
     end
@@ -1693,9 +1693,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreatePatchBaseline AWS API Documentation
     #
-    # @overload create_patch_baseline(params = {})
+    # @overload create_patch_baseline(**params)
     # @param [Hash] params ({})
-    def create_patch_baseline(params = {}, options = {})
+    def create_patch_baseline(params = {}, **options)
       req = build_request(:create_patch_baseline, params)
       req.send_request(options)
     end
@@ -1791,9 +1791,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateResourceDataSync AWS API Documentation
     #
-    # @overload create_resource_data_sync(params = {})
+    # @overload create_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def create_resource_data_sync(params = {}, options = {})
+    def create_resource_data_sync(params = {}, **options)
       req = build_request(:create_resource_data_sync, params)
       req.send_request(options)
     end
@@ -1817,9 +1817,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteActivation AWS API Documentation
     #
-    # @overload delete_activation(params = {})
+    # @overload delete_activation(**params)
     # @param [Hash] params ({})
-    def delete_activation(params = {}, options = {})
+    def delete_activation(params = {}, **options)
       req = build_request(:delete_activation, params)
       req.send_request(options)
     end
@@ -1854,9 +1854,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteAssociation AWS API Documentation
     #
-    # @overload delete_association(params = {})
+    # @overload delete_association(**params)
     # @param [Hash] params ({})
-    def delete_association(params = {}, options = {})
+    def delete_association(params = {}, **options)
       req = build_request(:delete_association, params)
       req.send_request(options)
     end
@@ -1899,9 +1899,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteDocument AWS API Documentation
     #
-    # @overload delete_document(params = {})
+    # @overload delete_document(**params)
     # @param [Hash] params ({})
-    def delete_document(params = {}, options = {})
+    def delete_document(params = {}, **options)
       req = build_request(:delete_document, params)
       req.send_request(options)
     end
@@ -1969,9 +1969,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteInventory AWS API Documentation
     #
-    # @overload delete_inventory(params = {})
+    # @overload delete_inventory(**params)
     # @param [Hash] params ({})
-    def delete_inventory(params = {}, options = {})
+    def delete_inventory(params = {}, **options)
       req = build_request(:delete_inventory, params)
       req.send_request(options)
     end
@@ -1997,9 +1997,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteMaintenanceWindow AWS API Documentation
     #
-    # @overload delete_maintenance_window(params = {})
+    # @overload delete_maintenance_window(**params)
     # @param [Hash] params ({})
-    def delete_maintenance_window(params = {}, options = {})
+    def delete_maintenance_window(params = {}, **options)
       req = build_request(:delete_maintenance_window, params)
       req.send_request(options)
     end
@@ -2019,9 +2019,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteOpsMetadata AWS API Documentation
     #
-    # @overload delete_ops_metadata(params = {})
+    # @overload delete_ops_metadata(**params)
     # @param [Hash] params ({})
-    def delete_ops_metadata(params = {}, options = {})
+    def delete_ops_metadata(params = {}, **options)
       req = build_request(:delete_ops_metadata, params)
       req.send_request(options)
     end
@@ -2041,9 +2041,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteParameter AWS API Documentation
     #
-    # @overload delete_parameter(params = {})
+    # @overload delete_parameter(**params)
     # @param [Hash] params ({})
-    def delete_parameter(params = {}, options = {})
+    def delete_parameter(params = {}, **options)
       req = build_request(:delete_parameter, params)
       req.send_request(options)
     end
@@ -2073,9 +2073,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteParameters AWS API Documentation
     #
-    # @overload delete_parameters(params = {})
+    # @overload delete_parameters(**params)
     # @param [Hash] params ({})
-    def delete_parameters(params = {}, options = {})
+    def delete_parameters(params = {}, **options)
       req = build_request(:delete_parameters, params)
       req.send_request(options)
     end
@@ -2101,9 +2101,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeletePatchBaseline AWS API Documentation
     #
-    # @overload delete_patch_baseline(params = {})
+    # @overload delete_patch_baseline(**params)
     # @param [Hash] params ({})
-    def delete_patch_baseline(params = {}, options = {})
+    def delete_patch_baseline(params = {}, **options)
       req = build_request(:delete_patch_baseline, params)
       req.send_request(options)
     end
@@ -2130,9 +2130,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteResourceDataSync AWS API Documentation
     #
-    # @overload delete_resource_data_sync(params = {})
+    # @overload delete_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def delete_resource_data_sync(params = {}, options = {})
+    def delete_resource_data_sync(params = {}, **options)
       req = build_request(:delete_resource_data_sync, params)
       req.send_request(options)
     end
@@ -2156,9 +2156,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeregisterManagedInstance AWS API Documentation
     #
-    # @overload deregister_managed_instance(params = {})
+    # @overload deregister_managed_instance(**params)
     # @param [Hash] params ({})
-    def deregister_managed_instance(params = {}, options = {})
+    def deregister_managed_instance(params = {}, **options)
       req = build_request(:deregister_managed_instance, params)
       req.send_request(options)
     end
@@ -2191,9 +2191,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeregisterPatchBaselineForPatchGroup AWS API Documentation
     #
-    # @overload deregister_patch_baseline_for_patch_group(params = {})
+    # @overload deregister_patch_baseline_for_patch_group(**params)
     # @param [Hash] params ({})
-    def deregister_patch_baseline_for_patch_group(params = {}, options = {})
+    def deregister_patch_baseline_for_patch_group(params = {}, **options)
       req = build_request(:deregister_patch_baseline_for_patch_group, params)
       req.send_request(options)
     end
@@ -2231,9 +2231,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeregisterTargetFromMaintenanceWindow AWS API Documentation
     #
-    # @overload deregister_target_from_maintenance_window(params = {})
+    # @overload deregister_target_from_maintenance_window(**params)
     # @param [Hash] params ({})
-    def deregister_target_from_maintenance_window(params = {}, options = {})
+    def deregister_target_from_maintenance_window(params = {}, **options)
       req = build_request(:deregister_target_from_maintenance_window, params)
       req.send_request(options)
     end
@@ -2265,9 +2265,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeregisterTaskFromMaintenanceWindow AWS API Documentation
     #
-    # @overload deregister_task_from_maintenance_window(params = {})
+    # @overload deregister_task_from_maintenance_window(**params)
     # @param [Hash] params ({})
-    def deregister_task_from_maintenance_window(params = {}, options = {})
+    def deregister_task_from_maintenance_window(params = {}, **options)
       req = build_request(:deregister_task_from_maintenance_window, params)
       req.send_request(options)
     end
@@ -2328,9 +2328,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeActivations AWS API Documentation
     #
-    # @overload describe_activations(params = {})
+    # @overload describe_activations(**params)
     # @param [Hash] params ({})
-    def describe_activations(params = {}, options = {})
+    def describe_activations(params = {}, **options)
       req = build_request(:describe_activations, params)
       req.send_request(options)
     end
@@ -2419,9 +2419,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeAssociation AWS API Documentation
     #
-    # @overload describe_association(params = {})
+    # @overload describe_association(**params)
     # @param [Hash] params ({})
-    def describe_association(params = {}, options = {})
+    def describe_association(params = {}, **options)
       req = build_request(:describe_association, params)
       req.send_request(options)
     end
@@ -2494,9 +2494,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeAssociationExecutionTargets AWS API Documentation
     #
-    # @overload describe_association_execution_targets(params = {})
+    # @overload describe_association_execution_targets(**params)
     # @param [Hash] params ({})
-    def describe_association_execution_targets(params = {}, options = {})
+    def describe_association_execution_targets(params = {}, **options)
       req = build_request(:describe_association_execution_targets, params)
       req.send_request(options)
     end
@@ -2564,9 +2564,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeAssociationExecutions AWS API Documentation
     #
-    # @overload describe_association_executions(params = {})
+    # @overload describe_association_executions(**params)
     # @param [Hash] params ({})
-    def describe_association_executions(params = {}, options = {})
+    def describe_association_executions(params = {}, **options)
       req = build_request(:describe_association_executions, params)
       req.send_request(options)
     end
@@ -2671,9 +2671,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeAutomationExecutions AWS API Documentation
     #
-    # @overload describe_automation_executions(params = {})
+    # @overload describe_automation_executions(**params)
     # @param [Hash] params ({})
-    def describe_automation_executions(params = {}, options = {})
+    def describe_automation_executions(params = {}, **options)
       req = build_request(:describe_automation_executions, params)
       req.send_request(options)
     end
@@ -2772,9 +2772,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeAutomationStepExecutions AWS API Documentation
     #
-    # @overload describe_automation_step_executions(params = {})
+    # @overload describe_automation_step_executions(**params)
     # @param [Hash] params ({})
-    def describe_automation_step_executions(params = {}, options = {})
+    def describe_automation_step_executions(params = {}, **options)
       req = build_request(:describe_automation_step_executions, params)
       req.send_request(options)
     end
@@ -2844,9 +2844,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeAvailablePatches AWS API Documentation
     #
-    # @overload describe_available_patches(params = {})
+    # @overload describe_available_patches(**params)
     # @param [Hash] params ({})
-    def describe_available_patches(params = {}, options = {})
+    def describe_available_patches(params = {}, **options)
       req = build_request(:describe_available_patches, params)
       req.send_request(options)
     end
@@ -2922,9 +2922,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeDocument AWS API Documentation
     #
-    # @overload describe_document(params = {})
+    # @overload describe_document(**params)
     # @param [Hash] params ({})
-    def describe_document(params = {}, options = {})
+    def describe_document(params = {}, **options)
       req = build_request(:describe_document, params)
       req.send_request(options)
     end
@@ -2963,9 +2963,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeDocumentPermission AWS API Documentation
     #
-    # @overload describe_document_permission(params = {})
+    # @overload describe_document_permission(**params)
     # @param [Hash] params ({})
-    def describe_document_permission(params = {}, options = {})
+    def describe_document_permission(params = {}, **options)
       req = build_request(:describe_document_permission, params)
       req.send_request(options)
     end
@@ -3010,9 +3010,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeEffectiveInstanceAssociations AWS API Documentation
     #
-    # @overload describe_effective_instance_associations(params = {})
+    # @overload describe_effective_instance_associations(**params)
     # @param [Hash] params ({})
-    def describe_effective_instance_associations(params = {}, options = {})
+    def describe_effective_instance_associations(params = {}, **options)
       req = build_request(:describe_effective_instance_associations, params)
       req.send_request(options)
     end
@@ -3082,9 +3082,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeEffectivePatchesForPatchBaseline AWS API Documentation
     #
-    # @overload describe_effective_patches_for_patch_baseline(params = {})
+    # @overload describe_effective_patches_for_patch_baseline(**params)
     # @param [Hash] params ({})
-    def describe_effective_patches_for_patch_baseline(params = {}, options = {})
+    def describe_effective_patches_for_patch_baseline(params = {}, **options)
       req = build_request(:describe_effective_patches_for_patch_baseline, params)
       req.send_request(options)
     end
@@ -3137,9 +3137,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstanceAssociationsStatus AWS API Documentation
     #
-    # @overload describe_instance_associations_status(params = {})
+    # @overload describe_instance_associations_status(**params)
     # @param [Hash] params ({})
-    def describe_instance_associations_status(params = {}, options = {})
+    def describe_instance_associations_status(params = {}, **options)
       req = build_request(:describe_instance_associations_status, params)
       req.send_request(options)
     end
@@ -3239,9 +3239,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstanceInformation AWS API Documentation
     #
-    # @overload describe_instance_information(params = {})
+    # @overload describe_instance_information(**params)
     # @param [Hash] params ({})
-    def describe_instance_information(params = {}, options = {})
+    def describe_instance_information(params = {}, **options)
       req = build_request(:describe_instance_information, params)
       req.send_request(options)
     end
@@ -3300,9 +3300,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstancePatchStates AWS API Documentation
     #
-    # @overload describe_instance_patch_states(params = {})
+    # @overload describe_instance_patch_states(**params)
     # @param [Hash] params ({})
-    def describe_instance_patch_states(params = {}, options = {})
+    def describe_instance_patch_states(params = {}, **options)
       req = build_request(:describe_instance_patch_states, params)
       req.send_request(options)
     end
@@ -3378,9 +3378,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstancePatchStatesForPatchGroup AWS API Documentation
     #
-    # @overload describe_instance_patch_states_for_patch_group(params = {})
+    # @overload describe_instance_patch_states_for_patch_group(**params)
     # @param [Hash] params ({})
-    def describe_instance_patch_states_for_patch_group(params = {}, options = {})
+    def describe_instance_patch_states_for_patch_group(params = {}, **options)
       req = build_request(:describe_instance_patch_states_for_patch_group, params)
       req.send_request(options)
     end
@@ -3440,9 +3440,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstancePatches AWS API Documentation
     #
-    # @overload describe_instance_patches(params = {})
+    # @overload describe_instance_patches(**params)
     # @param [Hash] params ({})
-    def describe_instance_patches(params = {}, options = {})
+    def describe_instance_patches(params = {}, **options)
       req = build_request(:describe_instance_patches, params)
       req.send_request(options)
     end
@@ -3496,9 +3496,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInventoryDeletions AWS API Documentation
     #
-    # @overload describe_inventory_deletions(params = {})
+    # @overload describe_inventory_deletions(**params)
     # @param [Hash] params ({})
-    def describe_inventory_deletions(params = {}, options = {})
+    def describe_inventory_deletions(params = {}, **options)
       req = build_request(:describe_inventory_deletions, params)
       req.send_request(options)
     end
@@ -3568,9 +3568,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowExecutionTaskInvocations AWS API Documentation
     #
-    # @overload describe_maintenance_window_execution_task_invocations(params = {})
+    # @overload describe_maintenance_window_execution_task_invocations(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_execution_task_invocations(params = {}, options = {})
+    def describe_maintenance_window_execution_task_invocations(params = {}, **options)
       req = build_request(:describe_maintenance_window_execution_task_invocations, params)
       req.send_request(options)
     end
@@ -3632,9 +3632,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowExecutionTasks AWS API Documentation
     #
-    # @overload describe_maintenance_window_execution_tasks(params = {})
+    # @overload describe_maintenance_window_execution_tasks(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_execution_tasks(params = {}, options = {})
+    def describe_maintenance_window_execution_tasks(params = {}, **options)
       req = build_request(:describe_maintenance_window_execution_tasks, params)
       req.send_request(options)
     end
@@ -3700,9 +3700,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowExecutions AWS API Documentation
     #
-    # @overload describe_maintenance_window_executions(params = {})
+    # @overload describe_maintenance_window_executions(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_executions(params = {}, options = {})
+    def describe_maintenance_window_executions(params = {}, **options)
       req = build_request(:describe_maintenance_window_executions, params)
       req.send_request(options)
     end
@@ -3772,9 +3772,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowSchedule AWS API Documentation
     #
-    # @overload describe_maintenance_window_schedule(params = {})
+    # @overload describe_maintenance_window_schedule(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_schedule(params = {}, options = {})
+    def describe_maintenance_window_schedule(params = {}, **options)
       req = build_request(:describe_maintenance_window_schedule, params)
       req.send_request(options)
     end
@@ -3836,9 +3836,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowTargets AWS API Documentation
     #
-    # @overload describe_maintenance_window_targets(params = {})
+    # @overload describe_maintenance_window_targets(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_targets(params = {}, options = {})
+    def describe_maintenance_window_targets(params = {}, **options)
       req = build_request(:describe_maintenance_window_targets, params)
       req.send_request(options)
     end
@@ -3910,9 +3910,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowTasks AWS API Documentation
     #
-    # @overload describe_maintenance_window_tasks(params = {})
+    # @overload describe_maintenance_window_tasks(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_window_tasks(params = {}, options = {})
+    def describe_maintenance_window_tasks(params = {}, **options)
       req = build_request(:describe_maintenance_window_tasks, params)
       req.send_request(options)
     end
@@ -3972,9 +3972,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindows AWS API Documentation
     #
-    # @overload describe_maintenance_windows(params = {})
+    # @overload describe_maintenance_windows(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_windows(params = {}, options = {})
+    def describe_maintenance_windows(params = {}, **options)
       req = build_request(:describe_maintenance_windows, params)
       req.send_request(options)
     end
@@ -4028,9 +4028,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeMaintenanceWindowsForTarget AWS API Documentation
     #
-    # @overload describe_maintenance_windows_for_target(params = {})
+    # @overload describe_maintenance_windows_for_target(**params)
     # @param [Hash] params ({})
-    def describe_maintenance_windows_for_target(params = {}, options = {})
+    def describe_maintenance_windows_for_target(params = {}, **options)
       req = build_request(:describe_maintenance_windows_for_target, params)
       req.send_request(options)
     end
@@ -4166,9 +4166,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeOpsItems AWS API Documentation
     #
-    # @overload describe_ops_items(params = {})
+    # @overload describe_ops_items(**params)
     # @param [Hash] params ({})
-    def describe_ops_items(params = {}, options = {})
+    def describe_ops_items(params = {}, **options)
       req = build_request(:describe_ops_items, params)
       req.send_request(options)
     end
@@ -4249,9 +4249,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeParameters AWS API Documentation
     #
-    # @overload describe_parameters(params = {})
+    # @overload describe_parameters(**params)
     # @param [Hash] params ({})
-    def describe_parameters(params = {}, options = {})
+    def describe_parameters(params = {}, **options)
       req = build_request(:describe_parameters, params)
       req.send_request(options)
     end
@@ -4305,9 +4305,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribePatchBaselines AWS API Documentation
     #
-    # @overload describe_patch_baselines(params = {})
+    # @overload describe_patch_baselines(**params)
     # @param [Hash] params ({})
-    def describe_patch_baselines(params = {}, options = {})
+    def describe_patch_baselines(params = {}, **options)
       req = build_request(:describe_patch_baselines, params)
       req.send_request(options)
     end
@@ -4350,9 +4350,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribePatchGroupState AWS API Documentation
     #
-    # @overload describe_patch_group_state(params = {})
+    # @overload describe_patch_group_state(**params)
     # @param [Hash] params ({})
-    def describe_patch_group_state(params = {}, options = {})
+    def describe_patch_group_state(params = {}, **options)
       req = build_request(:describe_patch_group_state, params)
       req.send_request(options)
     end
@@ -4419,9 +4419,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribePatchGroups AWS API Documentation
     #
-    # @overload describe_patch_groups(params = {})
+    # @overload describe_patch_groups(**params)
     # @param [Hash] params ({})
-    def describe_patch_groups(params = {}, options = {})
+    def describe_patch_groups(params = {}, **options)
       req = build_request(:describe_patch_groups, params)
       req.send_request(options)
     end
@@ -4523,9 +4523,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribePatchProperties AWS API Documentation
     #
-    # @overload describe_patch_properties(params = {})
+    # @overload describe_patch_properties(**params)
     # @param [Hash] params ({})
-    def describe_patch_properties(params = {}, options = {})
+    def describe_patch_properties(params = {}, **options)
       req = build_request(:describe_patch_properties, params)
       req.send_request(options)
     end
@@ -4588,9 +4588,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeSessions AWS API Documentation
     #
-    # @overload describe_sessions(params = {})
+    # @overload describe_sessions(**params)
     # @param [Hash] params ({})
-    def describe_sessions(params = {}, options = {})
+    def describe_sessions(params = {}, **options)
       req = build_request(:describe_sessions, params)
       req.send_request(options)
     end
@@ -4732,9 +4732,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetAutomationExecution AWS API Documentation
     #
-    # @overload get_automation_execution(params = {})
+    # @overload get_automation_execution(**params)
     # @param [Hash] params ({})
-    def get_automation_execution(params = {}, options = {})
+    def get_automation_execution(params = {}, **options)
       req = build_request(:get_automation_execution, params)
       req.send_request(options)
     end
@@ -4794,9 +4794,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetCalendarState AWS API Documentation
     #
-    # @overload get_calendar_state(params = {})
+    # @overload get_calendar_state(**params)
     # @param [Hash] params ({})
-    def get_calendar_state(params = {}, options = {})
+    def get_calendar_state(params = {}, **options)
       req = build_request(:get_calendar_state, params)
       req.send_request(options)
     end
@@ -4876,9 +4876,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetCommandInvocation AWS API Documentation
     #
-    # @overload get_command_invocation(params = {})
+    # @overload get_command_invocation(**params)
     # @param [Hash] params ({})
-    def get_command_invocation(params = {}, options = {})
+    def get_command_invocation(params = {}, **options)
       req = build_request(:get_command_invocation, params)
       req.send_request(options)
     end
@@ -4908,9 +4908,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetConnectionStatus AWS API Documentation
     #
-    # @overload get_connection_status(params = {})
+    # @overload get_connection_status(**params)
     # @param [Hash] params ({})
-    def get_connection_status(params = {}, options = {})
+    def get_connection_status(params = {}, **options)
       req = build_request(:get_connection_status, params)
       req.send_request(options)
     end
@@ -4943,9 +4943,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetDefaultPatchBaseline AWS API Documentation
     #
-    # @overload get_default_patch_baseline(params = {})
+    # @overload get_default_patch_baseline(**params)
     # @param [Hash] params ({})
-    def get_default_patch_baseline(params = {}, options = {})
+    def get_default_patch_baseline(params = {}, **options)
       req = build_request(:get_default_patch_baseline, params)
       req.send_request(options)
     end
@@ -4984,9 +4984,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetDeployablePatchSnapshotForInstance AWS API Documentation
     #
-    # @overload get_deployable_patch_snapshot_for_instance(params = {})
+    # @overload get_deployable_patch_snapshot_for_instance(**params)
     # @param [Hash] params ({})
-    def get_deployable_patch_snapshot_for_instance(params = {}, options = {})
+    def get_deployable_patch_snapshot_for_instance(params = {}, **options)
       req = build_request(:get_deployable_patch_snapshot_for_instance, params)
       req.send_request(options)
     end
@@ -5054,9 +5054,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetDocument AWS API Documentation
     #
-    # @overload get_document(params = {})
+    # @overload get_document(**params)
     # @param [Hash] params ({})
-    def get_document(params = {}, options = {})
+    def get_document(params = {}, **options)
       req = build_request(:get_document, params)
       req.send_request(options)
     end
@@ -5147,9 +5147,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetInventory AWS API Documentation
     #
-    # @overload get_inventory(params = {})
+    # @overload get_inventory(**params)
     # @param [Hash] params ({})
-    def get_inventory(params = {}, options = {})
+    def get_inventory(params = {}, **options)
       req = build_request(:get_inventory, params)
       req.send_request(options)
     end
@@ -5208,9 +5208,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetInventorySchema AWS API Documentation
     #
-    # @overload get_inventory_schema(params = {})
+    # @overload get_inventory_schema(**params)
     # @param [Hash] params ({})
-    def get_inventory_schema(params = {}, options = {})
+    def get_inventory_schema(params = {}, **options)
       req = build_request(:get_inventory_schema, params)
       req.send_request(options)
     end
@@ -5265,9 +5265,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetMaintenanceWindow AWS API Documentation
     #
-    # @overload get_maintenance_window(params = {})
+    # @overload get_maintenance_window(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window(params = {}, options = {})
+    def get_maintenance_window(params = {}, **options)
       req = build_request(:get_maintenance_window, params)
       req.send_request(options)
     end
@@ -5304,9 +5304,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetMaintenanceWindowExecution AWS API Documentation
     #
-    # @overload get_maintenance_window_execution(params = {})
+    # @overload get_maintenance_window_execution(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_execution(params = {}, options = {})
+    def get_maintenance_window_execution(params = {}, **options)
       req = build_request(:get_maintenance_window_execution, params)
       req.send_request(options)
     end
@@ -5365,9 +5365,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetMaintenanceWindowExecutionTask AWS API Documentation
     #
-    # @overload get_maintenance_window_execution_task(params = {})
+    # @overload get_maintenance_window_execution_task(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_execution_task(params = {}, options = {})
+    def get_maintenance_window_execution_task(params = {}, **options)
       req = build_request(:get_maintenance_window_execution_task, params)
       req.send_request(options)
     end
@@ -5426,9 +5426,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetMaintenanceWindowExecutionTaskInvocation AWS API Documentation
     #
-    # @overload get_maintenance_window_execution_task_invocation(params = {})
+    # @overload get_maintenance_window_execution_task_invocation(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_execution_task_invocation(params = {}, options = {})
+    def get_maintenance_window_execution_task_invocation(params = {}, **options)
       req = build_request(:get_maintenance_window_execution_task_invocation, params)
       req.send_request(options)
     end
@@ -5516,9 +5516,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetMaintenanceWindowTask AWS API Documentation
     #
-    # @overload get_maintenance_window_task(params = {})
+    # @overload get_maintenance_window_task(**params)
     # @param [Hash] params ({})
-    def get_maintenance_window_task(params = {}, options = {})
+    def get_maintenance_window_task(params = {}, **options)
       req = build_request(:get_maintenance_window_task, params)
       req.send_request(options)
     end
@@ -5582,9 +5582,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetOpsItem AWS API Documentation
     #
-    # @overload get_ops_item(params = {})
+    # @overload get_ops_item(**params)
     # @param [Hash] params ({})
-    def get_ops_item(params = {}, options = {})
+    def get_ops_item(params = {}, **options)
       req = build_request(:get_ops_item, params)
       req.send_request(options)
     end
@@ -5627,9 +5627,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetOpsMetadata AWS API Documentation
     #
-    # @overload get_ops_metadata(params = {})
+    # @overload get_ops_metadata(**params)
     # @param [Hash] params ({})
-    def get_ops_metadata(params = {}, options = {})
+    def get_ops_metadata(params = {}, **options)
       req = build_request(:get_ops_metadata, params)
       req.send_request(options)
     end
@@ -5718,9 +5718,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetOpsSummary AWS API Documentation
     #
-    # @overload get_ops_summary(params = {})
+    # @overload get_ops_summary(**params)
     # @param [Hash] params ({})
-    def get_ops_summary(params = {}, options = {})
+    def get_ops_summary(params = {}, **options)
       req = build_request(:get_ops_summary, params)
       req.send_request(options)
     end
@@ -5760,9 +5760,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetParameter AWS API Documentation
     #
-    # @overload get_parameter(params = {})
+    # @overload get_parameter(**params)
     # @param [Hash] params ({})
-    def get_parameter(params = {}, options = {})
+    def get_parameter(params = {}, **options)
       req = build_request(:get_parameter, params)
       req.send_request(options)
     end
@@ -5825,9 +5825,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetParameterHistory AWS API Documentation
     #
-    # @overload get_parameter_history(params = {})
+    # @overload get_parameter_history(**params)
     # @param [Hash] params ({})
-    def get_parameter_history(params = {}, options = {})
+    def get_parameter_history(params = {}, **options)
       req = build_request(:get_parameter_history, params)
       req.send_request(options)
     end
@@ -5872,9 +5872,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetParameters AWS API Documentation
     #
-    # @overload get_parameters(params = {})
+    # @overload get_parameters(**params)
     # @param [Hash] params ({})
-    def get_parameters(params = {}, options = {})
+    def get_parameters(params = {}, **options)
       req = build_request(:get_parameters, params)
       req.send_request(options)
     end
@@ -5972,9 +5972,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetParametersByPath AWS API Documentation
     #
-    # @overload get_parameters_by_path(params = {})
+    # @overload get_parameters_by_path(**params)
     # @param [Hash] params ({})
-    def get_parameters_by_path(params = {}, options = {})
+    def get_parameters_by_path(params = {}, **options)
       req = build_request(:get_parameters_by_path, params)
       req.send_request(options)
     end
@@ -6046,9 +6046,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetPatchBaseline AWS API Documentation
     #
-    # @overload get_patch_baseline(params = {})
+    # @overload get_patch_baseline(**params)
     # @param [Hash] params ({})
-    def get_patch_baseline(params = {}, options = {})
+    def get_patch_baseline(params = {}, **options)
       req = build_request(:get_patch_baseline, params)
       req.send_request(options)
     end
@@ -6084,9 +6084,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetPatchBaselineForPatchGroup AWS API Documentation
     #
-    # @overload get_patch_baseline_for_patch_group(params = {})
+    # @overload get_patch_baseline_for_patch_group(**params)
     # @param [Hash] params ({})
-    def get_patch_baseline_for_patch_group(params = {}, options = {})
+    def get_patch_baseline_for_patch_group(params = {}, **options)
       req = build_request(:get_patch_baseline_for_patch_group, params)
       req.send_request(options)
     end
@@ -6136,9 +6136,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetServiceSetting AWS API Documentation
     #
-    # @overload get_service_setting(params = {})
+    # @overload get_service_setting(**params)
     # @param [Hash] params ({})
-    def get_service_setting(params = {}, options = {})
+    def get_service_setting(params = {}, **options)
       req = build_request(:get_service_setting, params)
       req.send_request(options)
     end
@@ -6208,9 +6208,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/LabelParameterVersion AWS API Documentation
     #
-    # @overload label_parameter_version(params = {})
+    # @overload label_parameter_version(**params)
     # @param [Hash] params ({})
-    def label_parameter_version(params = {}, options = {})
+    def label_parameter_version(params = {}, **options)
       req = build_request(:label_parameter_version, params)
       req.send_request(options)
     end
@@ -6282,9 +6282,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListAssociationVersions AWS API Documentation
     #
-    # @overload list_association_versions(params = {})
+    # @overload list_association_versions(**params)
     # @param [Hash] params ({})
-    def list_association_versions(params = {}, options = {})
+    def list_association_versions(params = {}, **options)
       req = build_request(:list_association_versions, params)
       req.send_request(options)
     end
@@ -6356,9 +6356,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListAssociations AWS API Documentation
     #
-    # @overload list_associations(params = {})
+    # @overload list_associations(**params)
     # @param [Hash] params ({})
-    def list_associations(params = {}, options = {})
+    def list_associations(params = {}, **options)
       req = build_request(:list_associations, params)
       req.send_request(options)
     end
@@ -6455,9 +6455,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListCommandInvocations AWS API Documentation
     #
-    # @overload list_command_invocations(params = {})
+    # @overload list_command_invocations(**params)
     # @param [Hash] params ({})
-    def list_command_invocations(params = {}, options = {})
+    def list_command_invocations(params = {}, **options)
       req = build_request(:list_command_invocations, params)
       req.send_request(options)
     end
@@ -6552,9 +6552,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListCommands AWS API Documentation
     #
-    # @overload list_commands(params = {})
+    # @overload list_commands(**params)
     # @param [Hash] params ({})
-    def list_commands(params = {}, options = {})
+    def list_commands(params = {}, **options)
       req = build_request(:list_commands, params)
       req.send_request(options)
     end
@@ -6627,9 +6627,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListComplianceItems AWS API Documentation
     #
-    # @overload list_compliance_items(params = {})
+    # @overload list_compliance_items(**params)
     # @param [Hash] params ({})
-    def list_compliance_items(params = {}, options = {})
+    def list_compliance_items(params = {}, **options)
       req = build_request(:list_compliance_items, params)
       req.send_request(options)
     end
@@ -6695,9 +6695,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListComplianceSummaries AWS API Documentation
     #
-    # @overload list_compliance_summaries(params = {})
+    # @overload list_compliance_summaries(**params)
     # @param [Hash] params ({})
-    def list_compliance_summaries(params = {}, options = {})
+    def list_compliance_summaries(params = {}, **options)
       req = build_request(:list_compliance_summaries, params)
       req.send_request(options)
     end
@@ -6758,9 +6758,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListDocumentMetadataHistory AWS API Documentation
     #
-    # @overload list_document_metadata_history(params = {})
+    # @overload list_document_metadata_history(**params)
     # @param [Hash] params ({})
-    def list_document_metadata_history(params = {}, options = {})
+    def list_document_metadata_history(params = {}, **options)
       req = build_request(:list_document_metadata_history, params)
       req.send_request(options)
     end
@@ -6811,9 +6811,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListDocumentVersions AWS API Documentation
     #
-    # @overload list_document_versions(params = {})
+    # @overload list_document_versions(**params)
     # @param [Hash] params ({})
-    def list_document_versions(params = {}, options = {})
+    def list_document_versions(params = {}, **options)
       req = build_request(:list_document_versions, params)
       req.send_request(options)
     end
@@ -6894,9 +6894,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListDocuments AWS API Documentation
     #
-    # @overload list_documents(params = {})
+    # @overload list_documents(**params)
     # @param [Hash] params ({})
-    def list_documents(params = {}, options = {})
+    def list_documents(params = {}, **options)
       req = build_request(:list_documents, params)
       req.send_request(options)
     end
@@ -6960,9 +6960,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListInventoryEntries AWS API Documentation
     #
-    # @overload list_inventory_entries(params = {})
+    # @overload list_inventory_entries(**params)
     # @param [Hash] params ({})
-    def list_inventory_entries(params = {}, options = {})
+    def list_inventory_entries(params = {}, **options)
       req = build_request(:list_inventory_entries, params)
       req.send_request(options)
     end
@@ -7019,9 +7019,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListOpsItemEvents AWS API Documentation
     #
-    # @overload list_ops_item_events(params = {})
+    # @overload list_ops_item_events(**params)
     # @param [Hash] params ({})
-    def list_ops_item_events(params = {}, options = {})
+    def list_ops_item_events(params = {}, **options)
       req = build_request(:list_ops_item_events, params)
       req.send_request(options)
     end
@@ -7074,9 +7074,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListOpsMetadata AWS API Documentation
     #
-    # @overload list_ops_metadata(params = {})
+    # @overload list_ops_metadata(**params)
     # @param [Hash] params ({})
-    def list_ops_metadata(params = {}, options = {})
+    def list_ops_metadata(params = {}, **options)
       req = build_request(:list_ops_metadata, params)
       req.send_request(options)
     end
@@ -7149,9 +7149,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListResourceComplianceSummaries AWS API Documentation
     #
-    # @overload list_resource_compliance_summaries(params = {})
+    # @overload list_resource_compliance_summaries(**params)
     # @param [Hash] params ({})
-    def list_resource_compliance_summaries(params = {}, options = {})
+    def list_resource_compliance_summaries(params = {}, **options)
       req = build_request(:list_resource_compliance_summaries, params)
       req.send_request(options)
     end
@@ -7228,9 +7228,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListResourceDataSync AWS API Documentation
     #
-    # @overload list_resource_data_sync(params = {})
+    # @overload list_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def list_resource_data_sync(params = {}, options = {})
+    def list_resource_data_sync(params = {}, **options)
       req = build_request(:list_resource_data_sync, params)
       req.send_request(options)
     end
@@ -7262,9 +7262,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -7310,9 +7310,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ModifyDocumentPermission AWS API Documentation
     #
-    # @overload modify_document_permission(params = {})
+    # @overload modify_document_permission(**params)
     # @param [Hash] params ({})
-    def modify_document_permission(params = {}, options = {})
+    def modify_document_permission(params = {}, **options)
       req = build_request(:modify_document_permission, params)
       req.send_request(options)
     end
@@ -7436,9 +7436,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PutComplianceItems AWS API Documentation
     #
-    # @overload put_compliance_items(params = {})
+    # @overload put_compliance_items(**params)
     # @param [Hash] params ({})
-    def put_compliance_items(params = {}, options = {})
+    def put_compliance_items(params = {}, **options)
       req = build_request(:put_compliance_items, params)
       req.send_request(options)
     end
@@ -7485,9 +7485,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PutInventory AWS API Documentation
     #
-    # @overload put_inventory(params = {})
+    # @overload put_inventory(**params)
     # @param [Hash] params ({})
-    def put_inventory(params = {}, options = {})
+    def put_inventory(params = {}, **options)
       req = build_request(:put_inventory, params)
       req.send_request(options)
     end
@@ -7773,9 +7773,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PutParameter AWS API Documentation
     #
-    # @overload put_parameter(params = {})
+    # @overload put_parameter(**params)
     # @param [Hash] params ({})
-    def put_parameter(params = {}, options = {})
+    def put_parameter(params = {}, **options)
       req = build_request(:put_parameter, params)
       req.send_request(options)
     end
@@ -7808,9 +7808,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/RegisterDefaultPatchBaseline AWS API Documentation
     #
-    # @overload register_default_patch_baseline(params = {})
+    # @overload register_default_patch_baseline(**params)
     # @param [Hash] params ({})
-    def register_default_patch_baseline(params = {}, options = {})
+    def register_default_patch_baseline(params = {}, **options)
       req = build_request(:register_default_patch_baseline, params)
       req.send_request(options)
     end
@@ -7843,9 +7843,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/RegisterPatchBaselineForPatchGroup AWS API Documentation
     #
-    # @overload register_patch_baseline_for_patch_group(params = {})
+    # @overload register_patch_baseline_for_patch_group(**params)
     # @param [Hash] params ({})
-    def register_patch_baseline_for_patch_group(params = {}, options = {})
+    def register_patch_baseline_for_patch_group(params = {}, **options)
       req = build_request(:register_patch_baseline_for_patch_group, params)
       req.send_request(options)
     end
@@ -7946,9 +7946,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/RegisterTargetWithMaintenanceWindow AWS API Documentation
     #
-    # @overload register_target_with_maintenance_window(params = {})
+    # @overload register_target_with_maintenance_window(**params)
     # @param [Hash] params ({})
-    def register_target_with_maintenance_window(params = {}, options = {})
+    def register_target_with_maintenance_window(params = {}, **options)
       req = build_request(:register_target_with_maintenance_window, params)
       req.send_request(options)
     end
@@ -8129,9 +8129,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/RegisterTaskWithMaintenanceWindow AWS API Documentation
     #
-    # @overload register_task_with_maintenance_window(params = {})
+    # @overload register_task_with_maintenance_window(**params)
     # @param [Hash] params ({})
-    def register_task_with_maintenance_window(params = {}, options = {})
+    def register_task_with_maintenance_window(params = {}, **options)
       req = build_request(:register_task_with_maintenance_window, params)
       req.send_request(options)
     end
@@ -8180,9 +8180,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -8233,9 +8233,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ResetServiceSetting AWS API Documentation
     #
-    # @overload reset_service_setting(params = {})
+    # @overload reset_service_setting(**params)
     # @param [Hash] params ({})
-    def reset_service_setting(params = {}, options = {})
+    def reset_service_setting(params = {}, **options)
       req = build_request(:reset_service_setting, params)
       req.send_request(options)
     end
@@ -8273,9 +8273,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ResumeSession AWS API Documentation
     #
-    # @overload resume_session(params = {})
+    # @overload resume_session(**params)
     # @param [Hash] params ({})
-    def resume_session(params = {}, options = {})
+    def resume_session(params = {}, **options)
       req = build_request(:resume_session, params)
       req.send_request(options)
     end
@@ -8323,9 +8323,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/SendAutomationSignal AWS API Documentation
     #
-    # @overload send_automation_signal(params = {})
+    # @overload send_automation_signal(**params)
     # @param [Hash] params ({})
-    def send_automation_signal(params = {}, options = {})
+    def send_automation_signal(params = {}, **options)
       req = build_request(:send_automation_signal, params)
       req.send_request(options)
     end
@@ -8540,9 +8540,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/SendCommand AWS API Documentation
     #
-    # @overload send_command(params = {})
+    # @overload send_command(**params)
     # @param [Hash] params ({})
-    def send_command(params = {}, options = {})
+    def send_command(params = {}, **options)
       req = build_request(:send_command, params)
       req.send_request(options)
     end
@@ -8564,9 +8564,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/StartAssociationsOnce AWS API Documentation
     #
-    # @overload start_associations_once(params = {})
+    # @overload start_associations_once(**params)
     # @param [Hash] params ({})
-    def start_associations_once(params = {}, options = {})
+    def start_associations_once(params = {}, **options)
       req = build_request(:start_associations_once, params)
       req.send_request(options)
     end
@@ -8705,9 +8705,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/StartAutomationExecution AWS API Documentation
     #
-    # @overload start_automation_execution(params = {})
+    # @overload start_automation_execution(**params)
     # @param [Hash] params ({})
-    def start_automation_execution(params = {}, options = {})
+    def start_automation_execution(params = {}, **options)
       req = build_request(:start_automation_execution, params)
       req.send_request(options)
     end
@@ -8824,9 +8824,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/StartChangeRequestExecution AWS API Documentation
     #
-    # @overload start_change_request_execution(params = {})
+    # @overload start_change_request_execution(**params)
     # @param [Hash] params ({})
-    def start_change_request_execution(params = {}, options = {})
+    def start_change_request_execution(params = {}, **options)
       req = build_request(:start_change_request_execution, params)
       req.send_request(options)
     end
@@ -8886,9 +8886,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/StartSession AWS API Documentation
     #
-    # @overload start_session(params = {})
+    # @overload start_session(**params)
     # @param [Hash] params ({})
-    def start_session(params = {}, options = {})
+    def start_session(params = {}, **options)
       req = build_request(:start_session, params)
       req.send_request(options)
     end
@@ -8913,9 +8913,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/StopAutomationExecution AWS API Documentation
     #
-    # @overload stop_automation_execution(params = {})
+    # @overload stop_automation_execution(**params)
     # @param [Hash] params ({})
-    def stop_automation_execution(params = {}, options = {})
+    def stop_automation_execution(params = {}, **options)
       req = build_request(:stop_automation_execution, params)
       req.send_request(options)
     end
@@ -8943,9 +8943,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/TerminateSession AWS API Documentation
     #
-    # @overload terminate_session(params = {})
+    # @overload terminate_session(**params)
     # @param [Hash] params ({})
-    def terminate_session(params = {}, options = {})
+    def terminate_session(params = {}, **options)
       req = build_request(:terminate_session, params)
       req.send_request(options)
     end
@@ -9182,9 +9182,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateAssociation AWS API Documentation
     #
-    # @overload update_association(params = {})
+    # @overload update_association(**params)
     # @param [Hash] params ({})
-    def update_association(params = {}, options = {})
+    def update_association(params = {}, **options)
       req = build_request(:update_association, params)
       req.send_request(options)
     end
@@ -9266,9 +9266,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateAssociationStatus AWS API Documentation
     #
-    # @overload update_association_status(params = {})
+    # @overload update_association_status(**params)
     # @param [Hash] params ({})
-    def update_association_status(params = {}, options = {})
+    def update_association_status(params = {}, **options)
       req = build_request(:update_association_status, params)
       req.send_request(options)
     end
@@ -9371,9 +9371,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateDocument AWS API Documentation
     #
-    # @overload update_document(params = {})
+    # @overload update_document(**params)
     # @param [Hash] params ({})
-    def update_document(params = {}, options = {})
+    def update_document(params = {}, **options)
       req = build_request(:update_document, params)
       req.send_request(options)
     end
@@ -9407,9 +9407,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateDocumentDefaultVersion AWS API Documentation
     #
-    # @overload update_document_default_version(params = {})
+    # @overload update_document_default_version(**params)
     # @param [Hash] params ({})
-    def update_document_default_version(params = {}, options = {})
+    def update_document_default_version(params = {}, **options)
       req = build_request(:update_document_default_version, params)
       req.send_request(options)
     end
@@ -9446,9 +9446,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateDocumentMetadata AWS API Documentation
     #
-    # @overload update_document_metadata(params = {})
+    # @overload update_document_metadata(**params)
     # @param [Hash] params ({})
-    def update_document_metadata(params = {}, options = {})
+    def update_document_metadata(params = {}, **options)
       req = build_request(:update_document_metadata, params)
       req.send_request(options)
     end
@@ -9586,9 +9586,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateMaintenanceWindow AWS API Documentation
     #
-    # @overload update_maintenance_window(params = {})
+    # @overload update_maintenance_window(**params)
     # @param [Hash] params ({})
-    def update_maintenance_window(params = {}, options = {})
+    def update_maintenance_window(params = {}, **options)
       req = build_request(:update_maintenance_window, params)
       req.send_request(options)
     end
@@ -9679,9 +9679,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateMaintenanceWindowTarget AWS API Documentation
     #
-    # @overload update_maintenance_window_target(params = {})
+    # @overload update_maintenance_window_target(**params)
     # @param [Hash] params ({})
-    def update_maintenance_window_target(params = {}, options = {})
+    def update_maintenance_window_target(params = {}, **options)
       req = build_request(:update_maintenance_window_target, params)
       req.send_request(options)
     end
@@ -9958,9 +9958,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateMaintenanceWindowTask AWS API Documentation
     #
-    # @overload update_maintenance_window_task(params = {})
+    # @overload update_maintenance_window_task(**params)
     # @param [Hash] params ({})
-    def update_maintenance_window_task(params = {}, options = {})
+    def update_maintenance_window_task(params = {}, **options)
       req = build_request(:update_maintenance_window_task, params)
       req.send_request(options)
     end
@@ -9987,9 +9987,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateManagedInstanceRole AWS API Documentation
     #
-    # @overload update_managed_instance_role(params = {})
+    # @overload update_managed_instance_role(**params)
     # @param [Hash] params ({})
-    def update_managed_instance_role(params = {}, options = {})
+    def update_managed_instance_role(params = {}, **options)
       req = build_request(:update_managed_instance_role, params)
       req.send_request(options)
     end
@@ -10139,9 +10139,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateOpsItem AWS API Documentation
     #
-    # @overload update_ops_item(params = {})
+    # @overload update_ops_item(**params)
     # @param [Hash] params ({})
-    def update_ops_item(params = {}, options = {})
+    def update_ops_item(params = {}, **options)
       req = build_request(:update_ops_item, params)
       req.send_request(options)
     end
@@ -10180,9 +10180,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateOpsMetadata AWS API Documentation
     #
-    # @overload update_ops_metadata(params = {})
+    # @overload update_ops_metadata(**params)
     # @param [Hash] params ({})
-    def update_ops_metadata(params = {}, options = {})
+    def update_ops_metadata(params = {}, **options)
       req = build_request(:update_ops_metadata, params)
       req.send_request(options)
     end
@@ -10370,9 +10370,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdatePatchBaseline AWS API Documentation
     #
-    # @overload update_patch_baseline(params = {})
+    # @overload update_patch_baseline(**params)
     # @param [Hash] params ({})
-    def update_patch_baseline(params = {}, options = {})
+    def update_patch_baseline(params = {}, **options)
       req = build_request(:update_patch_baseline, params)
       req.send_request(options)
     end
@@ -10424,9 +10424,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateResourceDataSync AWS API Documentation
     #
-    # @overload update_resource_data_sync(params = {})
+    # @overload update_resource_data_sync(**params)
     # @param [Hash] params ({})
-    def update_resource_data_sync(params = {}, options = {})
+    def update_resource_data_sync(params = {}, **options)
       req = build_request(:update_resource_data_sync, params)
       req.send_request(options)
     end
@@ -10487,9 +10487,9 @@ module Aws::SSM
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateServiceSetting AWS API Documentation
     #
-    # @overload update_service_setting(params = {})
+    # @overload update_service_setting(**params)
     # @param [Hash] params ({})
-    def update_service_setting(params = {}, options = {})
+    def update_service_setting(params = {}, **options)
       req = build_request(:update_service_setting, params)
       req.send_request(options)
     end
@@ -10498,7 +10498,7 @@ module Aws::SSM
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -10506,8 +10506,8 @@ module Aws::SSM
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ssm'
-      context[:gem_version] = '1.100.0'
+      context[:gem_name] = "aws-sdk-ssm"
+      context[:gem_version] = "1.100.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -10599,7 +10599,7 @@ module Aws::SSM
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -10615,7 +10615,7 @@ module Aws::SSM
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

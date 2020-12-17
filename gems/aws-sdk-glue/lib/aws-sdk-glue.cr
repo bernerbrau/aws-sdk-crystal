@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-glue/types'
-require_relative 'aws-sdk-glue/client_api'
-require_relative 'aws-sdk-glue/client'
-require_relative 'aws-sdk-glue/errors'
-require_relative 'aws-sdk-glue/resource'
-require_relative 'aws-sdk-glue/customizations'
+require_relative "aws-sdk-glue/types"
+require_relative "aws-sdk-glue/client_api"
+require_relative "aws-sdk-glue/client"
+require_relative "aws-sdk-glue/errors"
+require_relative "aws-sdk-glue/resource"
+require_relative "aws-sdk-glue/customizations"
 
 # This module provides support for AWS Glue. This module is available in the
 # `aws-sdk-glue` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-glue/customizations'
 # @!group service
 module Aws::Glue
 
-  GEM_VERSION = '1.80.0'
+  GEM_VERSION = "1.80.0"
 
 end

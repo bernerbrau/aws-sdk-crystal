@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:secretsmanager)
 
@@ -290,7 +290,7 @@ module Aws::SecretsManager
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -450,9 +450,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/CancelRotateSecret AWS API Documentation
     #
-    # @overload cancel_rotate_secret(params = {})
+    # @overload cancel_rotate_secret(**params)
     # @param [Hash] params ({})
-    def cancel_rotate_secret(params = {}, options = {})
+    def cancel_rotate_secret(params = {}, **options)
       req = build_request(:cancel_rotate_secret, params)
       req.send_request(options)
     end
@@ -765,9 +765,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/CreateSecret AWS API Documentation
     #
-    # @overload create_secret(params = {})
+    # @overload create_secret(**params)
     # @param [Hash] params ({})
-    def create_secret(params = {}, options = {})
+    def create_secret(params = {}, **options)
       req = build_request(:create_secret, params)
       req.send_request(options)
     end
@@ -850,9 +850,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/DeleteResourcePolicy AWS API Documentation
     #
-    # @overload delete_resource_policy(params = {})
+    # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, options = {})
+    def delete_resource_policy(params = {}, **options)
       req = build_request(:delete_resource_policy, params)
       req.send_request(options)
     end
@@ -992,9 +992,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/DeleteSecret AWS API Documentation
     #
-    # @overload delete_secret(params = {})
+    # @overload delete_secret(**params)
     # @param [Hash] params ({})
-    def delete_secret(params = {}, options = {})
+    def delete_secret(params = {}, **options)
       req = build_request(:delete_secret, params)
       req.send_request(options)
     end
@@ -1139,9 +1139,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/DescribeSecret AWS API Documentation
     #
-    # @overload describe_secret(params = {})
+    # @overload describe_secret(**params)
     # @param [Hash] params ({})
-    def describe_secret(params = {}, options = {})
+    def describe_secret(params = {}, **options)
       req = build_request(:describe_secret, params)
       req.send_request(options)
     end
@@ -1247,9 +1247,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/GetRandomPassword AWS API Documentation
     #
-    # @overload get_random_password(params = {})
+    # @overload get_random_password(**params)
     # @param [Hash] params ({})
-    def get_random_password(params = {}, options = {})
+    def get_random_password(params = {}, **options)
       req = build_request(:get_random_password, params)
       req.send_request(options)
     end
@@ -1338,9 +1338,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/GetResourcePolicy AWS API Documentation
     #
-    # @overload get_resource_policy(params = {})
+    # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, options = {})
+    def get_resource_policy(params = {}, **options)
       req = build_request(:get_resource_policy, params)
       req.send_request(options)
     end
@@ -1472,9 +1472,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/GetSecretValue AWS API Documentation
     #
-    # @overload get_secret_value(params = {})
+    # @overload get_secret_value(**params)
     # @param [Hash] params ({})
-    def get_secret_value(params = {}, options = {})
+    def get_secret_value(params = {}, **options)
       req = build_request(:get_secret_value, params)
       req.send_request(options)
     end
@@ -1627,9 +1627,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/ListSecretVersionIds AWS API Documentation
     #
-    # @overload list_secret_version_ids(params = {})
+    # @overload list_secret_version_ids(**params)
     # @param [Hash] params ({})
-    def list_secret_version_ids(params = {}, options = {})
+    def list_secret_version_ids(params = {}, **options)
       req = build_request(:list_secret_version_ids, params)
       req.send_request(options)
     end
@@ -1771,9 +1771,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/ListSecrets AWS API Documentation
     #
-    # @overload list_secrets(params = {})
+    # @overload list_secrets(**params)
     # @param [Hash] params ({})
-    def list_secrets(params = {}, options = {})
+    def list_secrets(params = {}, **options)
       req = build_request(:list_secrets, params)
       req.send_request(options)
     end
@@ -1890,9 +1890,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/PutResourcePolicy AWS API Documentation
     #
-    # @overload put_resource_policy(params = {})
+    # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, options = {})
+    def put_resource_policy(params = {}, **options)
       req = build_request(:put_resource_policy, params)
       req.send_request(options)
     end
@@ -2151,9 +2151,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/PutSecretValue AWS API Documentation
     #
-    # @overload put_secret_value(params = {})
+    # @overload put_secret_value(**params)
     # @param [Hash] params ({})
-    def put_secret_value(params = {}, options = {})
+    def put_secret_value(params = {}, **options)
       req = build_request(:put_secret_value, params)
       req.send_request(options)
     end
@@ -2235,9 +2235,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/RestoreSecret AWS API Documentation
     #
-    # @overload restore_secret(params = {})
+    # @overload restore_secret(**params)
     # @param [Hash] params ({})
-    def restore_secret(params = {}, options = {})
+    def restore_secret(params = {}, **options)
       req = build_request(:restore_secret, params)
       req.send_request(options)
     end
@@ -2393,9 +2393,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/RotateSecret AWS API Documentation
     #
-    # @overload rotate_secret(params = {})
+    # @overload rotate_secret(**params)
     # @param [Hash] params ({})
-    def rotate_secret(params = {}, options = {})
+    def rotate_secret(params = {}, **options)
       req = build_request(:rotate_secret, params)
       req.send_request(options)
     end
@@ -2523,9 +2523,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2619,9 +2619,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2905,9 +2905,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/UpdateSecret AWS API Documentation
     #
-    # @overload update_secret(params = {})
+    # @overload update_secret(**params)
     # @param [Hash] params ({})
-    def update_secret(params = {}, options = {})
+    def update_secret(params = {}, **options)
       req = build_request(:update_secret, params)
       req.send_request(options)
     end
@@ -3081,9 +3081,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/UpdateSecretVersionStage AWS API Documentation
     #
-    # @overload update_secret_version_stage(params = {})
+    # @overload update_secret_version_stage(**params)
     # @param [Hash] params ({})
-    def update_secret_version_stage(params = {}, options = {})
+    def update_secret_version_stage(params = {}, **options)
       req = build_request(:update_secret_version_stage, params)
       req.send_request(options)
     end
@@ -3161,9 +3161,9 @@ module Aws::SecretsManager
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/ValidateResourcePolicy AWS API Documentation
     #
-    # @overload validate_resource_policy(params = {})
+    # @overload validate_resource_policy(**params)
     # @param [Hash] params ({})
-    def validate_resource_policy(params = {}, options = {})
+    def validate_resource_policy(params = {}, **options)
       req = build_request(:validate_resource_policy, params)
       req.send_request(options)
     end
@@ -3172,7 +3172,7 @@ module Aws::SecretsManager
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3180,15 +3180,15 @@ module Aws::SecretsManager
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-secretsmanager'
-      context[:gem_version] = '1.43.0'
+      context[:gem_name] = "aws-sdk-secretsmanager"
+      context[:gem_version] = "1.43.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mediapackagevod/types'
-require_relative 'aws-sdk-mediapackagevod/client_api'
-require_relative 'aws-sdk-mediapackagevod/client'
-require_relative 'aws-sdk-mediapackagevod/errors'
-require_relative 'aws-sdk-mediapackagevod/resource'
-require_relative 'aws-sdk-mediapackagevod/customizations'
+require_relative "aws-sdk-mediapackagevod/types"
+require_relative "aws-sdk-mediapackagevod/client_api"
+require_relative "aws-sdk-mediapackagevod/client"
+require_relative "aws-sdk-mediapackagevod/errors"
+require_relative "aws-sdk-mediapackagevod/resource"
+require_relative "aws-sdk-mediapackagevod/customizations"
 
 # This module provides support for AWS Elemental MediaPackage VOD. This module is available in the
 # `aws-sdk-mediapackagevod` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mediapackagevod/customizations'
 # @!group service
 module Aws::MediaPackageVod
 
-  GEM_VERSION = '1.19.0'
+  GEM_VERSION = "1.19.0"
 
 end

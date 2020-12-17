@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-dlm/types'
-require_relative 'aws-sdk-dlm/client_api'
-require_relative 'aws-sdk-dlm/client'
-require_relative 'aws-sdk-dlm/errors'
-require_relative 'aws-sdk-dlm/resource'
-require_relative 'aws-sdk-dlm/customizations'
+require_relative "aws-sdk-dlm/types"
+require_relative "aws-sdk-dlm/client_api"
+require_relative "aws-sdk-dlm/client"
+require_relative "aws-sdk-dlm/errors"
+require_relative "aws-sdk-dlm/resource"
+require_relative "aws-sdk-dlm/customizations"
 
 # This module provides support for Amazon Data Lifecycle Manager. This module is available in the
 # `aws-sdk-dlm` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-dlm/customizations'
 # @!group service
 module Aws::DLM
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

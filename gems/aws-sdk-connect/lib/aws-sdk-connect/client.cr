@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:connect)
 
@@ -280,7 +280,7 @@ module Aws::Connect
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -346,9 +346,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateApprovedOrigin AWS API Documentation
     #
-    # @overload associate_approved_origin(params = {})
+    # @overload associate_approved_origin(**params)
     # @param [Hash] params ({})
-    def associate_approved_origin(params = {}, options = {})
+    def associate_approved_origin(params = {}, **options)
       req = build_request(:associate_approved_origin, params)
       req.send_request(options)
     end
@@ -415,9 +415,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateInstanceStorageConfig AWS API Documentation
     #
-    # @overload associate_instance_storage_config(params = {})
+    # @overload associate_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def associate_instance_storage_config(params = {}, options = {})
+    def associate_instance_storage_config(params = {}, **options)
       req = build_request(:associate_instance_storage_config, params)
       req.send_request(options)
     end
@@ -443,9 +443,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateLambdaFunction AWS API Documentation
     #
-    # @overload associate_lambda_function(params = {})
+    # @overload associate_lambda_function(**params)
     # @param [Hash] params ({})
-    def associate_lambda_function(params = {}, options = {})
+    def associate_lambda_function(params = {}, **options)
       req = build_request(:associate_lambda_function, params)
       req.send_request(options)
     end
@@ -473,9 +473,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateLexBot AWS API Documentation
     #
-    # @overload associate_lex_bot(params = {})
+    # @overload associate_lex_bot(**params)
     # @param [Hash] params ({})
-    def associate_lex_bot(params = {}, options = {})
+    def associate_lex_bot(params = {}, **options)
       req = build_request(:associate_lex_bot, params)
       req.send_request(options)
     end
@@ -512,9 +512,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateRoutingProfileQueues AWS API Documentation
     #
-    # @overload associate_routing_profile_queues(params = {})
+    # @overload associate_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def associate_routing_profile_queues(params = {}, options = {})
+    def associate_routing_profile_queues(params = {}, **options)
       req = build_request(:associate_routing_profile_queues, params)
       req.send_request(options)
     end
@@ -544,9 +544,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateSecurityKey AWS API Documentation
     #
-    # @overload associate_security_key(params = {})
+    # @overload associate_security_key(**params)
     # @param [Hash] params ({})
-    def associate_security_key(params = {}, options = {})
+    def associate_security_key(params = {}, **options)
       req = build_request(:associate_security_key, params)
       req.send_request(options)
     end
@@ -609,9 +609,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateContactFlow AWS API Documentation
     #
-    # @overload create_contact_flow(params = {})
+    # @overload create_contact_flow(**params)
     # @param [Hash] params ({})
-    def create_contact_flow(params = {}, options = {})
+    def create_contact_flow(params = {}, **options)
       req = build_request(:create_contact_flow, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateInstance AWS API Documentation
     #
-    # @overload create_instance(params = {})
+    # @overload create_instance(**params)
     # @param [Hash] params ({})
-    def create_instance(params = {}, options = {})
+    def create_instance(params = {}, **options)
       req = build_request(:create_instance, params)
       req.send_request(options)
     end
@@ -718,9 +718,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateIntegrationAssociation AWS API Documentation
     #
-    # @overload create_integration_association(params = {})
+    # @overload create_integration_association(**params)
     # @param [Hash] params ({})
-    def create_integration_association(params = {}, options = {})
+    def create_integration_association(params = {}, **options)
       req = build_request(:create_integration_association, params)
       req.send_request(options)
     end
@@ -791,9 +791,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateRoutingProfile AWS API Documentation
     #
-    # @overload create_routing_profile(params = {})
+    # @overload create_routing_profile(**params)
     # @param [Hash] params ({})
-    def create_routing_profile(params = {}, options = {})
+    def create_routing_profile(params = {}, **options)
       req = build_request(:create_routing_profile, params)
       req.send_request(options)
     end
@@ -834,9 +834,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateUseCase AWS API Documentation
     #
-    # @overload create_use_case(params = {})
+    # @overload create_use_case(**params)
     # @param [Hash] params ({})
-    def create_use_case(params = {}, options = {})
+    def create_use_case(params = {}, **options)
       req = build_request(:create_use_case, params)
       req.send_request(options)
     end
@@ -934,9 +934,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -974,9 +974,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateUserHierarchyGroup AWS API Documentation
     #
-    # @overload create_user_hierarchy_group(params = {})
+    # @overload create_user_hierarchy_group(**params)
     # @param [Hash] params ({})
-    def create_user_hierarchy_group(params = {}, options = {})
+    def create_user_hierarchy_group(params = {}, **options)
       req = build_request(:create_user_hierarchy_group, params)
       req.send_request(options)
     end
@@ -999,9 +999,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteInstance AWS API Documentation
     #
-    # @overload delete_instance(params = {})
+    # @overload delete_instance(**params)
     # @param [Hash] params ({})
-    def delete_instance(params = {}, options = {})
+    def delete_instance(params = {}, **options)
       req = build_request(:delete_instance, params)
       req.send_request(options)
     end
@@ -1029,9 +1029,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteIntegrationAssociation AWS API Documentation
     #
-    # @overload delete_integration_association(params = {})
+    # @overload delete_integration_association(**params)
     # @param [Hash] params ({})
-    def delete_integration_association(params = {}, options = {})
+    def delete_integration_association(params = {}, **options)
       req = build_request(:delete_integration_association, params)
       req.send_request(options)
     end
@@ -1062,9 +1062,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteUseCase AWS API Documentation
     #
-    # @overload delete_use_case(params = {})
+    # @overload delete_use_case(**params)
     # @param [Hash] params ({})
-    def delete_use_case(params = {}, options = {})
+    def delete_use_case(params = {}, **options)
       req = build_request(:delete_use_case, params)
       req.send_request(options)
     end
@@ -1096,9 +1096,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -1123,9 +1123,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteUserHierarchyGroup AWS API Documentation
     #
-    # @overload delete_user_hierarchy_group(params = {})
+    # @overload delete_user_hierarchy_group(**params)
     # @param [Hash] params ({})
-    def delete_user_hierarchy_group(params = {}, options = {})
+    def delete_user_hierarchy_group(params = {}, **options)
       req = build_request(:delete_user_hierarchy_group, params)
       req.send_request(options)
     end
@@ -1169,9 +1169,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContactFlow AWS API Documentation
     #
-    # @overload describe_contact_flow(params = {})
+    # @overload describe_contact_flow(**params)
     # @param [Hash] params ({})
-    def describe_contact_flow(params = {}, options = {})
+    def describe_contact_flow(params = {}, **options)
       req = build_request(:describe_contact_flow, params)
       req.send_request(options)
     end
@@ -1213,9 +1213,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeInstance AWS API Documentation
     #
-    # @overload describe_instance(params = {})
+    # @overload describe_instance(**params)
     # @param [Hash] params ({})
-    def describe_instance(params = {}, options = {})
+    def describe_instance(params = {}, **options)
       req = build_request(:describe_instance, params)
       req.send_request(options)
     end
@@ -1246,9 +1246,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeInstanceAttribute AWS API Documentation
     #
-    # @overload describe_instance_attribute(params = {})
+    # @overload describe_instance_attribute(**params)
     # @param [Hash] params ({})
-    def describe_instance_attribute(params = {}, options = {})
+    def describe_instance_attribute(params = {}, **options)
       req = build_request(:describe_instance_attribute, params)
       req.send_request(options)
     end
@@ -1295,9 +1295,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeInstanceStorageConfig AWS API Documentation
     #
-    # @overload describe_instance_storage_config(params = {})
+    # @overload describe_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def describe_instance_storage_config(params = {}, options = {})
+    def describe_instance_storage_config(params = {}, **options)
       req = build_request(:describe_instance_storage_config, params)
       req.send_request(options)
     end
@@ -1337,9 +1337,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeRoutingProfile AWS API Documentation
     #
-    # @overload describe_routing_profile(params = {})
+    # @overload describe_routing_profile(**params)
     # @param [Hash] params ({})
-    def describe_routing_profile(params = {}, options = {})
+    def describe_routing_profile(params = {}, **options)
       req = build_request(:describe_routing_profile, params)
       req.send_request(options)
     end
@@ -1388,9 +1388,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeUser AWS API Documentation
     #
-    # @overload describe_user(params = {})
+    # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, options = {})
+    def describe_user(params = {}, **options)
       req = build_request(:describe_user, params)
       req.send_request(options)
     end
@@ -1438,9 +1438,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeUserHierarchyGroup AWS API Documentation
     #
-    # @overload describe_user_hierarchy_group(params = {})
+    # @overload describe_user_hierarchy_group(**params)
     # @param [Hash] params ({})
-    def describe_user_hierarchy_group(params = {}, options = {})
+    def describe_user_hierarchy_group(params = {}, **options)
       req = build_request(:describe_user_hierarchy_group, params)
       req.send_request(options)
     end
@@ -1481,9 +1481,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeUserHierarchyStructure AWS API Documentation
     #
-    # @overload describe_user_hierarchy_structure(params = {})
+    # @overload describe_user_hierarchy_structure(**params)
     # @param [Hash] params ({})
-    def describe_user_hierarchy_structure(params = {}, options = {})
+    def describe_user_hierarchy_structure(params = {}, **options)
       req = build_request(:describe_user_hierarchy_structure, params)
       req.send_request(options)
     end
@@ -1507,9 +1507,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateApprovedOrigin AWS API Documentation
     #
-    # @overload disassociate_approved_origin(params = {})
+    # @overload disassociate_approved_origin(**params)
     # @param [Hash] params ({})
-    def disassociate_approved_origin(params = {}, options = {})
+    def disassociate_approved_origin(params = {}, **options)
       req = build_request(:disassociate_approved_origin, params)
       req.send_request(options)
     end
@@ -1539,9 +1539,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateInstanceStorageConfig AWS API Documentation
     #
-    # @overload disassociate_instance_storage_config(params = {})
+    # @overload disassociate_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def disassociate_instance_storage_config(params = {}, options = {})
+    def disassociate_instance_storage_config(params = {}, **options)
       req = build_request(:disassociate_instance_storage_config, params)
       req.send_request(options)
     end
@@ -1567,9 +1567,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateLambdaFunction AWS API Documentation
     #
-    # @overload disassociate_lambda_function(params = {})
+    # @overload disassociate_lambda_function(**params)
     # @param [Hash] params ({})
-    def disassociate_lambda_function(params = {}, options = {})
+    def disassociate_lambda_function(params = {}, **options)
       req = build_request(:disassociate_lambda_function, params)
       req.send_request(options)
     end
@@ -1598,9 +1598,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateLexBot AWS API Documentation
     #
-    # @overload disassociate_lex_bot(params = {})
+    # @overload disassociate_lex_bot(**params)
     # @param [Hash] params ({})
-    def disassociate_lex_bot(params = {}, options = {})
+    def disassociate_lex_bot(params = {}, **options)
       req = build_request(:disassociate_lex_bot, params)
       req.send_request(options)
     end
@@ -1633,9 +1633,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateRoutingProfileQueues AWS API Documentation
     #
-    # @overload disassociate_routing_profile_queues(params = {})
+    # @overload disassociate_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def disassociate_routing_profile_queues(params = {}, options = {})
+    def disassociate_routing_profile_queues(params = {}, **options)
       req = build_request(:disassociate_routing_profile_queues, params)
       req.send_request(options)
     end
@@ -1660,9 +1660,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateSecurityKey AWS API Documentation
     #
-    # @overload disassociate_security_key(params = {})
+    # @overload disassociate_security_key(**params)
     # @param [Hash] params ({})
-    def disassociate_security_key(params = {}, options = {})
+    def disassociate_security_key(params = {}, **options)
       req = build_request(:disassociate_security_key, params)
       req.send_request(options)
     end
@@ -1693,9 +1693,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetContactAttributes AWS API Documentation
     #
-    # @overload get_contact_attributes(params = {})
+    # @overload get_contact_attributes(**params)
     # @param [Hash] params ({})
-    def get_contact_attributes(params = {}, options = {})
+    def get_contact_attributes(params = {}, **options)
       req = build_request(:get_contact_attributes, params)
       req.send_request(options)
     end
@@ -1892,9 +1892,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetCurrentMetricData AWS API Documentation
     #
-    # @overload get_current_metric_data(params = {})
+    # @overload get_current_metric_data(**params)
     # @param [Hash] params ({})
-    def get_current_metric_data(params = {}, options = {})
+    def get_current_metric_data(params = {}, **options)
       req = build_request(:get_current_metric_data, params)
       req.send_request(options)
     end
@@ -1923,9 +1923,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetFederationToken AWS API Documentation
     #
-    # @overload get_federation_token(params = {})
+    # @overload get_federation_token(**params)
     # @param [Hash] params ({})
-    def get_federation_token(params = {}, options = {})
+    def get_federation_token(params = {}, **options)
       req = build_request(:get_federation_token, params)
       req.send_request(options)
     end
@@ -2201,9 +2201,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetMetricData AWS API Documentation
     #
-    # @overload get_metric_data(params = {})
+    # @overload get_metric_data(**params)
     # @param [Hash] params ({})
-    def get_metric_data(params = {}, options = {})
+    def get_metric_data(params = {}, **options)
       req = build_request(:get_metric_data, params)
       req.send_request(options)
     end
@@ -2245,9 +2245,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListApprovedOrigins AWS API Documentation
     #
-    # @overload list_approved_origins(params = {})
+    # @overload list_approved_origins(**params)
     # @param [Hash] params ({})
-    def list_approved_origins(params = {}, options = {})
+    def list_approved_origins(params = {}, **options)
       req = build_request(:list_approved_origins, params)
       req.send_request(options)
     end
@@ -2307,9 +2307,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactFlows AWS API Documentation
     #
-    # @overload list_contact_flows(params = {})
+    # @overload list_contact_flows(**params)
     # @param [Hash] params ({})
-    def list_contact_flows(params = {}, options = {})
+    def list_contact_flows(params = {}, **options)
       req = build_request(:list_contact_flows, params)
       req.send_request(options)
     end
@@ -2360,9 +2360,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListHoursOfOperations AWS API Documentation
     #
-    # @overload list_hours_of_operations(params = {})
+    # @overload list_hours_of_operations(**params)
     # @param [Hash] params ({})
-    def list_hours_of_operations(params = {}, options = {})
+    def list_hours_of_operations(params = {}, **options)
       req = build_request(:list_hours_of_operations, params)
       req.send_request(options)
     end
@@ -2408,9 +2408,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListInstanceAttributes AWS API Documentation
     #
-    # @overload list_instance_attributes(params = {})
+    # @overload list_instance_attributes(**params)
     # @param [Hash] params ({})
-    def list_instance_attributes(params = {}, options = {})
+    def list_instance_attributes(params = {}, **options)
       req = build_request(:list_instance_attributes, params)
       req.send_request(options)
     end
@@ -2470,9 +2470,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListInstanceStorageConfigs AWS API Documentation
     #
-    # @overload list_instance_storage_configs(params = {})
+    # @overload list_instance_storage_configs(**params)
     # @param [Hash] params ({})
-    def list_instance_storage_configs(params = {}, options = {})
+    def list_instance_storage_configs(params = {}, **options)
       req = build_request(:list_instance_storage_configs, params)
       req.send_request(options)
     end
@@ -2523,9 +2523,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListInstances AWS API Documentation
     #
-    # @overload list_instances(params = {})
+    # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, options = {})
+    def list_instances(params = {}, **options)
       req = build_request(:list_instances, params)
       req.send_request(options)
     end
@@ -2577,9 +2577,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListIntegrationAssociations AWS API Documentation
     #
-    # @overload list_integration_associations(params = {})
+    # @overload list_integration_associations(**params)
     # @param [Hash] params ({})
-    def list_integration_associations(params = {}, options = {})
+    def list_integration_associations(params = {}, **options)
       req = build_request(:list_integration_associations, params)
       req.send_request(options)
     end
@@ -2621,9 +2621,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListLambdaFunctions AWS API Documentation
     #
-    # @overload list_lambda_functions(params = {})
+    # @overload list_lambda_functions(**params)
     # @param [Hash] params ({})
-    def list_lambda_functions(params = {}, options = {})
+    def list_lambda_functions(params = {}, **options)
       req = build_request(:list_lambda_functions, params)
       req.send_request(options)
     end
@@ -2666,9 +2666,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListLexBots AWS API Documentation
     #
-    # @overload list_lex_bots(params = {})
+    # @overload list_lex_bots(**params)
     # @param [Hash] params ({})
-    def list_lex_bots(params = {}, options = {})
+    def list_lex_bots(params = {}, **options)
       req = build_request(:list_lex_bots, params)
       req.send_request(options)
     end
@@ -2730,9 +2730,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPhoneNumbers AWS API Documentation
     #
-    # @overload list_phone_numbers(params = {})
+    # @overload list_phone_numbers(**params)
     # @param [Hash] params ({})
-    def list_phone_numbers(params = {}, options = {})
+    def list_phone_numbers(params = {}, **options)
       req = build_request(:list_phone_numbers, params)
       req.send_request(options)
     end
@@ -2776,9 +2776,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPrompts AWS API Documentation
     #
-    # @overload list_prompts(params = {})
+    # @overload list_prompts(**params)
     # @param [Hash] params ({})
-    def list_prompts(params = {}, options = {})
+    def list_prompts(params = {}, **options)
       req = build_request(:list_prompts, params)
       req.send_request(options)
     end
@@ -2834,9 +2834,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListQueues AWS API Documentation
     #
-    # @overload list_queues(params = {})
+    # @overload list_queues(**params)
     # @param [Hash] params ({})
-    def list_queues(params = {}, options = {})
+    def list_queues(params = {}, **options)
       req = build_request(:list_queues, params)
       req.send_request(options)
     end
@@ -2886,9 +2886,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRoutingProfileQueues AWS API Documentation
     #
-    # @overload list_routing_profile_queues(params = {})
+    # @overload list_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def list_routing_profile_queues(params = {}, options = {})
+    def list_routing_profile_queues(params = {}, **options)
       req = build_request(:list_routing_profile_queues, params)
       req.send_request(options)
     end
@@ -2941,9 +2941,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRoutingProfiles AWS API Documentation
     #
-    # @overload list_routing_profiles(params = {})
+    # @overload list_routing_profiles(**params)
     # @param [Hash] params ({})
-    def list_routing_profiles(params = {}, options = {})
+    def list_routing_profiles(params = {}, **options)
       req = build_request(:list_routing_profiles, params)
       req.send_request(options)
     end
@@ -2987,9 +2987,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListSecurityKeys AWS API Documentation
     #
-    # @overload list_security_keys(params = {})
+    # @overload list_security_keys(**params)
     # @param [Hash] params ({})
-    def list_security_keys(params = {}, options = {})
+    def list_security_keys(params = {}, **options)
       req = build_request(:list_security_keys, params)
       req.send_request(options)
     end
@@ -3040,9 +3040,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListSecurityProfiles AWS API Documentation
     #
-    # @overload list_security_profiles(params = {})
+    # @overload list_security_profiles(**params)
     # @param [Hash] params ({})
-    def list_security_profiles(params = {}, options = {})
+    def list_security_profiles(params = {}, **options)
       req = build_request(:list_security_profiles, params)
       req.send_request(options)
     end
@@ -3076,9 +3076,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3128,9 +3128,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUseCases AWS API Documentation
     #
-    # @overload list_use_cases(params = {})
+    # @overload list_use_cases(**params)
     # @param [Hash] params ({})
-    def list_use_cases(params = {}, options = {})
+    def list_use_cases(params = {}, **options)
       req = build_request(:list_use_cases, params)
       req.send_request(options)
     end
@@ -3181,9 +3181,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUserHierarchyGroups AWS API Documentation
     #
-    # @overload list_user_hierarchy_groups(params = {})
+    # @overload list_user_hierarchy_groups(**params)
     # @param [Hash] params ({})
-    def list_user_hierarchy_groups(params = {}, options = {})
+    def list_user_hierarchy_groups(params = {}, **options)
       req = build_request(:list_user_hierarchy_groups, params)
       req.send_request(options)
     end
@@ -3227,9 +3227,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -3261,9 +3261,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ResumeContactRecording AWS API Documentation
     #
-    # @overload resume_contact_recording(params = {})
+    # @overload resume_contact_recording(**params)
     # @param [Hash] params ({})
-    def resume_contact_recording(params = {}, options = {})
+    def resume_contact_recording(params = {}, **options)
       req = build_request(:resume_contact_recording, params)
       req.send_request(options)
     end
@@ -3363,9 +3363,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartChatContact AWS API Documentation
     #
-    # @overload start_chat_contact(params = {})
+    # @overload start_chat_contact(**params)
     # @param [Hash] params ({})
-    def start_chat_contact(params = {}, options = {})
+    def start_chat_contact(params = {}, **options)
       req = build_request(:start_chat_contact, params)
       req.send_request(options)
     end
@@ -3415,9 +3415,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactRecording AWS API Documentation
     #
-    # @overload start_contact_recording(params = {})
+    # @overload start_contact_recording(**params)
     # @param [Hash] params ({})
-    def start_contact_recording(params = {}, options = {})
+    def start_contact_recording(params = {}, **options)
       req = build_request(:start_contact_recording, params)
       req.send_request(options)
     end
@@ -3514,9 +3514,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartOutboundVoiceContact AWS API Documentation
     #
-    # @overload start_outbound_voice_contact(params = {})
+    # @overload start_outbound_voice_contact(**params)
     # @param [Hash] params ({})
-    def start_outbound_voice_contact(params = {}, options = {})
+    def start_outbound_voice_contact(params = {}, **options)
       req = build_request(:start_outbound_voice_contact, params)
       req.send_request(options)
     end
@@ -3597,9 +3597,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartTaskContact AWS API Documentation
     #
-    # @overload start_task_contact(params = {})
+    # @overload start_task_contact(**params)
     # @param [Hash] params ({})
-    def start_task_contact(params = {}, options = {})
+    def start_task_contact(params = {}, **options)
       req = build_request(:start_task_contact, params)
       req.send_request(options)
     end
@@ -3623,9 +3623,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StopContact AWS API Documentation
     #
-    # @overload stop_contact(params = {})
+    # @overload stop_contact(**params)
     # @param [Hash] params ({})
-    def stop_contact(params = {}, options = {})
+    def stop_contact(params = {}, **options)
       req = build_request(:stop_contact, params)
       req.send_request(options)
     end
@@ -3662,9 +3662,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StopContactRecording AWS API Documentation
     #
-    # @overload stop_contact_recording(params = {})
+    # @overload stop_contact_recording(**params)
     # @param [Hash] params ({})
-    def stop_contact_recording(params = {}, options = {})
+    def stop_contact_recording(params = {}, **options)
       req = build_request(:stop_contact_recording, params)
       req.send_request(options)
     end
@@ -3701,9 +3701,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SuspendContactRecording AWS API Documentation
     #
-    # @overload suspend_contact_recording(params = {})
+    # @overload suspend_contact_recording(**params)
     # @param [Hash] params ({})
-    def suspend_contact_recording(params = {}, options = {})
+    def suspend_contact_recording(params = {}, **options)
       req = build_request(:suspend_contact_recording, params)
       req.send_request(options)
     end
@@ -3740,9 +3740,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3766,9 +3766,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3826,9 +3826,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactAttributes AWS API Documentation
     #
-    # @overload update_contact_attributes(params = {})
+    # @overload update_contact_attributes(**params)
     # @param [Hash] params ({})
-    def update_contact_attributes(params = {}, options = {})
+    def update_contact_attributes(params = {}, **options)
       req = build_request(:update_contact_attributes, params)
       req.send_request(options)
     end
@@ -3869,9 +3869,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactFlowContent AWS API Documentation
     #
-    # @overload update_contact_flow_content(params = {})
+    # @overload update_contact_flow_content(**params)
     # @param [Hash] params ({})
-    def update_contact_flow_content(params = {}, options = {})
+    def update_contact_flow_content(params = {}, **options)
       req = build_request(:update_contact_flow_content, params)
       req.send_request(options)
     end
@@ -3910,9 +3910,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactFlowName AWS API Documentation
     #
-    # @overload update_contact_flow_name(params = {})
+    # @overload update_contact_flow_name(**params)
     # @param [Hash] params ({})
-    def update_contact_flow_name(params = {}, options = {})
+    def update_contact_flow_name(params = {}, **options)
       req = build_request(:update_contact_flow_name, params)
       req.send_request(options)
     end
@@ -3943,9 +3943,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateInstanceAttribute AWS API Documentation
     #
-    # @overload update_instance_attribute(params = {})
+    # @overload update_instance_attribute(**params)
     # @param [Hash] params ({})
-    def update_instance_attribute(params = {}, options = {})
+    def update_instance_attribute(params = {}, **options)
       req = build_request(:update_instance_attribute, params)
       req.send_request(options)
     end
@@ -4007,9 +4007,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateInstanceStorageConfig AWS API Documentation
     #
-    # @overload update_instance_storage_config(params = {})
+    # @overload update_instance_storage_config(**params)
     # @param [Hash] params ({})
-    def update_instance_storage_config(params = {}, options = {})
+    def update_instance_storage_config(params = {}, **options)
       req = build_request(:update_instance_storage_config, params)
       req.send_request(options)
     end
@@ -4043,9 +4043,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileConcurrency AWS API Documentation
     #
-    # @overload update_routing_profile_concurrency(params = {})
+    # @overload update_routing_profile_concurrency(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_concurrency(params = {}, options = {})
+    def update_routing_profile_concurrency(params = {}, **options)
       req = build_request(:update_routing_profile_concurrency, params)
       req.send_request(options)
     end
@@ -4073,9 +4073,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileDefaultOutboundQueue AWS API Documentation
     #
-    # @overload update_routing_profile_default_outbound_queue(params = {})
+    # @overload update_routing_profile_default_outbound_queue(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_default_outbound_queue(params = {}, options = {})
+    def update_routing_profile_default_outbound_queue(params = {}, **options)
       req = build_request(:update_routing_profile_default_outbound_queue, params)
       req.send_request(options)
     end
@@ -4110,9 +4110,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileName AWS API Documentation
     #
-    # @overload update_routing_profile_name(params = {})
+    # @overload update_routing_profile_name(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_name(params = {}, options = {})
+    def update_routing_profile_name(params = {}, **options)
       req = build_request(:update_routing_profile_name, params)
       req.send_request(options)
     end
@@ -4152,9 +4152,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileQueues AWS API Documentation
     #
-    # @overload update_routing_profile_queues(params = {})
+    # @overload update_routing_profile_queues(**params)
     # @param [Hash] params ({})
-    def update_routing_profile_queues(params = {}, options = {})
+    def update_routing_profile_queues(params = {}, **options)
       req = build_request(:update_routing_profile_queues, params)
       req.send_request(options)
     end
@@ -4182,9 +4182,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserHierarchy AWS API Documentation
     #
-    # @overload update_user_hierarchy(params = {})
+    # @overload update_user_hierarchy(**params)
     # @param [Hash] params ({})
-    def update_user_hierarchy(params = {}, options = {})
+    def update_user_hierarchy(params = {}, **options)
       req = build_request(:update_user_hierarchy, params)
       req.send_request(options)
     end
@@ -4212,9 +4212,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserHierarchyGroupName AWS API Documentation
     #
-    # @overload update_user_hierarchy_group_name(params = {})
+    # @overload update_user_hierarchy_group_name(**params)
     # @param [Hash] params ({})
-    def update_user_hierarchy_group_name(params = {}, options = {})
+    def update_user_hierarchy_group_name(params = {}, **options)
       req = build_request(:update_user_hierarchy_group_name, params)
       req.send_request(options)
     end
@@ -4255,9 +4255,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserHierarchyStructure AWS API Documentation
     #
-    # @overload update_user_hierarchy_structure(params = {})
+    # @overload update_user_hierarchy_structure(**params)
     # @param [Hash] params ({})
-    def update_user_hierarchy_structure(params = {}, options = {})
+    def update_user_hierarchy_structure(params = {}, **options)
       req = build_request(:update_user_hierarchy_structure, params)
       req.send_request(options)
     end
@@ -4302,9 +4302,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserIdentityInfo AWS API Documentation
     #
-    # @overload update_user_identity_info(params = {})
+    # @overload update_user_identity_info(**params)
     # @param [Hash] params ({})
-    def update_user_identity_info(params = {}, options = {})
+    def update_user_identity_info(params = {}, **options)
       req = build_request(:update_user_identity_info, params)
       req.send_request(options)
     end
@@ -4337,9 +4337,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserPhoneConfig AWS API Documentation
     #
-    # @overload update_user_phone_config(params = {})
+    # @overload update_user_phone_config(**params)
     # @param [Hash] params ({})
-    def update_user_phone_config(params = {}, options = {})
+    def update_user_phone_config(params = {}, **options)
       req = build_request(:update_user_phone_config, params)
       req.send_request(options)
     end
@@ -4367,9 +4367,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserRoutingProfile AWS API Documentation
     #
-    # @overload update_user_routing_profile(params = {})
+    # @overload update_user_routing_profile(**params)
     # @param [Hash] params ({})
-    def update_user_routing_profile(params = {}, options = {})
+    def update_user_routing_profile(params = {}, **options)
       req = build_request(:update_user_routing_profile, params)
       req.send_request(options)
     end
@@ -4397,9 +4397,9 @@ module Aws::Connect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserSecurityProfiles AWS API Documentation
     #
-    # @overload update_user_security_profiles(params = {})
+    # @overload update_user_security_profiles(**params)
     # @param [Hash] params ({})
-    def update_user_security_profiles(params = {}, options = {})
+    def update_user_security_profiles(params = {}, **options)
       req = build_request(:update_user_security_profiles, params)
       req.send_request(options)
     end
@@ -4408,7 +4408,7 @@ module Aws::Connect
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4416,15 +4416,15 @@ module Aws::Connect
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-connect'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-connect"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

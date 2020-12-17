@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-autoscalingplans/types'
-require_relative 'aws-sdk-autoscalingplans/client_api'
-require_relative 'aws-sdk-autoscalingplans/client'
-require_relative 'aws-sdk-autoscalingplans/errors'
-require_relative 'aws-sdk-autoscalingplans/resource'
-require_relative 'aws-sdk-autoscalingplans/customizations'
+require_relative "aws-sdk-autoscalingplans/types"
+require_relative "aws-sdk-autoscalingplans/client_api"
+require_relative "aws-sdk-autoscalingplans/client"
+require_relative "aws-sdk-autoscalingplans/errors"
+require_relative "aws-sdk-autoscalingplans/resource"
+require_relative "aws-sdk-autoscalingplans/customizations"
 
 # This module provides support for AWS Auto Scaling Plans. This module is available in the
 # `aws-sdk-autoscalingplans` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-autoscalingplans/customizations'
 # @!group service
 module Aws::AutoScalingPlans
 
-  GEM_VERSION = '1.28.0'
+  GEM_VERSION = "1.28.0"
 
 end

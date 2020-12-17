@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-honeycode/types'
-require_relative 'aws-sdk-honeycode/client_api'
-require_relative 'aws-sdk-honeycode/client'
-require_relative 'aws-sdk-honeycode/errors'
-require_relative 'aws-sdk-honeycode/resource'
-require_relative 'aws-sdk-honeycode/customizations'
+require_relative "aws-sdk-honeycode/types"
+require_relative "aws-sdk-honeycode/client_api"
+require_relative "aws-sdk-honeycode/client"
+require_relative "aws-sdk-honeycode/errors"
+require_relative "aws-sdk-honeycode/resource"
+require_relative "aws-sdk-honeycode/customizations"
 
 # This module provides support for Amazon Honeycode. This module is available in the
 # `aws-sdk-honeycode` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-honeycode/customizations'
 # @!group service
 module Aws::Honeycode
 
-  GEM_VERSION = '1.4.0'
+  GEM_VERSION = "1.4.0"
 
 end

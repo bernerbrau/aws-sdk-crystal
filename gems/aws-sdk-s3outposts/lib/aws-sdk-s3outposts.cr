@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-s3outposts/types'
-require_relative 'aws-sdk-s3outposts/client_api'
-require_relative 'aws-sdk-s3outposts/client'
-require_relative 'aws-sdk-s3outposts/errors'
-require_relative 'aws-sdk-s3outposts/resource'
-require_relative 'aws-sdk-s3outposts/customizations'
+require_relative "aws-sdk-s3outposts/types"
+require_relative "aws-sdk-s3outposts/client_api"
+require_relative "aws-sdk-s3outposts/client"
+require_relative "aws-sdk-s3outposts/errors"
+require_relative "aws-sdk-s3outposts/resource"
+require_relative "aws-sdk-s3outposts/customizations"
 
 # This module provides support for Amazon S3 on Outposts. This module is available in the
 # `aws-sdk-s3outposts` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-s3outposts/customizations'
 # @!group service
 module Aws::S3Outposts
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

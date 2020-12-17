@@ -8,11 +8,11 @@
 Feature: Smoke tests for IoTDataPlane
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @iotdataplane @smoke
   Scenario: Call Aws::Aws::IoTDataPlane::Client#get_thing_shadow and expect it to fail
-  When I call the operation 'get_thing_shadow' with params:
+  When I call the operation "get_thing_shadow" with params:
     """
 {"thing_name":"fake-thing"}
     """

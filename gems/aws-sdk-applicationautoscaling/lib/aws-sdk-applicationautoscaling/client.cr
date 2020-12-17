@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:applicationautoscaling)
 
@@ -290,7 +290,7 @@ module Aws::ApplicationAutoScaling
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -514,9 +514,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DeleteScalingPolicy AWS API Documentation
     #
-    # @overload delete_scaling_policy(params = {})
+    # @overload delete_scaling_policy(**params)
     # @param [Hash] params ({})
-    def delete_scaling_policy(params = {}, options = {})
+    def delete_scaling_policy(params = {}, **options)
       req = build_request(:delete_scaling_policy, params)
       req.send_request(options)
     end
@@ -675,9 +675,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DeleteScheduledAction AWS API Documentation
     #
-    # @overload delete_scheduled_action(params = {})
+    # @overload delete_scheduled_action(**params)
     # @param [Hash] params ({})
-    def delete_scheduled_action(params = {}, options = {})
+    def delete_scheduled_action(params = {}, **options)
       req = build_request(:delete_scheduled_action, params)
       req.send_request(options)
     end
@@ -852,9 +852,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DeregisterScalableTarget AWS API Documentation
     #
-    # @overload deregister_scalable_target(params = {})
+    # @overload deregister_scalable_target(**params)
     # @param [Hash] params ({})
-    def deregister_scalable_target(params = {}, options = {})
+    def deregister_scalable_target(params = {}, **options)
       req = build_request(:deregister_scalable_target, params)
       req.send_request(options)
     end
@@ -1072,9 +1072,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DescribeScalableTargets AWS API Documentation
     #
-    # @overload describe_scalable_targets(params = {})
+    # @overload describe_scalable_targets(**params)
     # @param [Hash] params ({})
-    def describe_scalable_targets(params = {}, options = {})
+    def describe_scalable_targets(params = {}, **options)
       req = build_request(:describe_scalable_targets, params)
       req.send_request(options)
     end
@@ -1292,9 +1292,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DescribeScalingActivities AWS API Documentation
     #
-    # @overload describe_scaling_activities(params = {})
+    # @overload describe_scaling_activities(**params)
     # @param [Hash] params ({})
-    def describe_scaling_activities(params = {}, options = {})
+    def describe_scaling_activities(params = {}, **options)
       req = build_request(:describe_scaling_activities, params)
       req.send_request(options)
     end
@@ -1557,9 +1557,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DescribeScalingPolicies AWS API Documentation
     #
-    # @overload describe_scaling_policies(params = {})
+    # @overload describe_scaling_policies(**params)
     # @param [Hash] params ({})
-    def describe_scaling_policies(params = {}, options = {})
+    def describe_scaling_policies(params = {}, **options)
       req = build_request(:describe_scaling_policies, params)
       req.send_request(options)
     end
@@ -1759,9 +1759,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/DescribeScheduledActions AWS API Documentation
     #
-    # @overload describe_scheduled_actions(params = {})
+    # @overload describe_scheduled_actions(**params)
     # @param [Hash] params ({})
-    def describe_scheduled_actions(params = {}, options = {})
+    def describe_scheduled_actions(params = {}, **options)
       req = build_request(:describe_scheduled_actions, params)
       req.send_request(options)
     end
@@ -2071,9 +2071,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/PutScalingPolicy AWS API Documentation
     #
-    # @overload put_scaling_policy(params = {})
+    # @overload put_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_scaling_policy(params = {}, options = {})
+    def put_scaling_policy(params = {}, **options)
       req = build_request(:put_scaling_policy, params)
       req.send_request(options)
     end
@@ -2299,9 +2299,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/PutScheduledAction AWS API Documentation
     #
-    # @overload put_scheduled_action(params = {})
+    # @overload put_scheduled_action(**params)
     # @param [Hash] params ({})
-    def put_scheduled_action(params = {}, options = {})
+    def put_scheduled_action(params = {}, **options)
       req = build_request(:put_scheduled_action, params)
       req.send_request(options)
     end
@@ -2571,9 +2571,9 @@ module Aws::ApplicationAutoScaling
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/RegisterScalableTarget AWS API Documentation
     #
-    # @overload register_scalable_target(params = {})
+    # @overload register_scalable_target(**params)
     # @param [Hash] params ({})
-    def register_scalable_target(params = {}, options = {})
+    def register_scalable_target(params = {}, **options)
       req = build_request(:register_scalable_target, params)
       req.send_request(options)
     end
@@ -2582,7 +2582,7 @@ module Aws::ApplicationAutoScaling
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2590,15 +2590,15 @@ module Aws::ApplicationAutoScaling
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-applicationautoscaling'
-      context[:gem_version] = '1.48.0'
+      context[:gem_name] = "aws-sdk-applicationautoscaling"
+      context[:gem_version] = "1.48.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

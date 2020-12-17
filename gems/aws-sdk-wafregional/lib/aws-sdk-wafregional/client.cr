@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:wafregional)
 
@@ -290,7 +290,7 @@ module Aws::WAFRegional
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -381,9 +381,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/AssociateWebACL AWS API Documentation
     #
-    # @overload associate_web_acl(params = {})
+    # @overload associate_web_acl(**params)
     # @param [Hash] params ({})
-    def associate_web_acl(params = {}, options = {})
+    def associate_web_acl(params = {}, **options)
       req = build_request(:associate_web_acl, params)
       req.send_request(options)
     end
@@ -460,9 +460,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateByteMatchSet AWS API Documentation
     #
-    # @overload create_byte_match_set(params = {})
+    # @overload create_byte_match_set(**params)
     # @param [Hash] params ({})
-    def create_byte_match_set(params = {}, options = {})
+    def create_byte_match_set(params = {}, **options)
       req = build_request(:create_byte_match_set, params)
       req.send_request(options)
     end
@@ -535,9 +535,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateGeoMatchSet AWS API Documentation
     #
-    # @overload create_geo_match_set(params = {})
+    # @overload create_geo_match_set(**params)
     # @param [Hash] params ({})
-    def create_geo_match_set(params = {}, options = {})
+    def create_geo_match_set(params = {}, **options)
       req = build_request(:create_geo_match_set, params)
       req.send_request(options)
     end
@@ -636,9 +636,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateIPSet AWS API Documentation
     #
-    # @overload create_ip_set(params = {})
+    # @overload create_ip_set(**params)
     # @param [Hash] params ({})
-    def create_ip_set(params = {}, options = {})
+    def create_ip_set(params = {}, **options)
       req = build_request(:create_ip_set, params)
       req.send_request(options)
     end
@@ -794,9 +794,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateRateBasedRule AWS API Documentation
     #
-    # @overload create_rate_based_rule(params = {})
+    # @overload create_rate_based_rule(**params)
     # @param [Hash] params ({})
-    def create_rate_based_rule(params = {}, options = {})
+    def create_rate_based_rule(params = {}, **options)
       req = build_request(:create_rate_based_rule, params)
       req.send_request(options)
     end
@@ -875,9 +875,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateRegexMatchSet AWS API Documentation
     #
-    # @overload create_regex_match_set(params = {})
+    # @overload create_regex_match_set(**params)
     # @param [Hash] params ({})
-    def create_regex_match_set(params = {}, options = {})
+    def create_regex_match_set(params = {}, **options)
       req = build_request(:create_regex_match_set, params)
       req.send_request(options)
     end
@@ -948,9 +948,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateRegexPatternSet AWS API Documentation
     #
-    # @overload create_regex_pattern_set(params = {})
+    # @overload create_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def create_regex_pattern_set(params = {}, options = {})
+    def create_regex_pattern_set(params = {}, **options)
       req = build_request(:create_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -1085,9 +1085,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateRule AWS API Documentation
     #
-    # @overload create_rule(params = {})
+    # @overload create_rule(**params)
     # @param [Hash] params ({})
-    def create_rule(params = {}, options = {})
+    def create_rule(params = {}, **options)
       req = build_request(:create_rule, params)
       req.send_request(options)
     end
@@ -1168,9 +1168,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateRuleGroup AWS API Documentation
     #
-    # @overload create_rule_group(params = {})
+    # @overload create_rule_group(**params)
     # @param [Hash] params ({})
-    def create_rule_group(params = {}, options = {})
+    def create_rule_group(params = {}, **options)
       req = build_request(:create_rule_group, params)
       req.send_request(options)
     end
@@ -1279,9 +1279,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateSizeConstraintSet AWS API Documentation
     #
-    # @overload create_size_constraint_set(params = {})
+    # @overload create_size_constraint_set(**params)
     # @param [Hash] params ({})
-    def create_size_constraint_set(params = {}, options = {})
+    def create_size_constraint_set(params = {}, **options)
       req = build_request(:create_size_constraint_set, params)
       req.send_request(options)
     end
@@ -1384,9 +1384,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateSqlInjectionMatchSet AWS API Documentation
     #
-    # @overload create_sql_injection_match_set(params = {})
+    # @overload create_sql_injection_match_set(**params)
     # @param [Hash] params ({})
-    def create_sql_injection_match_set(params = {}, options = {})
+    def create_sql_injection_match_set(params = {}, **options)
       req = build_request(:create_sql_injection_match_set, params)
       req.send_request(options)
     end
@@ -1539,9 +1539,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateWebACL AWS API Documentation
     #
-    # @overload create_web_acl(params = {})
+    # @overload create_web_acl(**params)
     # @param [Hash] params ({})
-    def create_web_acl(params = {}, options = {})
+    def create_web_acl(params = {}, **options)
       req = build_request(:create_web_acl, params)
       req.send_request(options)
     end
@@ -1606,9 +1606,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateWebACLMigrationStack AWS API Documentation
     #
-    # @overload create_web_acl_migration_stack(params = {})
+    # @overload create_web_acl_migration_stack(**params)
     # @param [Hash] params ({})
-    def create_web_acl_migration_stack(params = {}, options = {})
+    def create_web_acl_migration_stack(params = {}, **options)
       req = build_request(:create_web_acl_migration_stack, params)
       req.send_request(options)
     end
@@ -1708,9 +1708,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/CreateXssMatchSet AWS API Documentation
     #
-    # @overload create_xss_match_set(params = {})
+    # @overload create_xss_match_set(**params)
     # @param [Hash] params ({})
-    def create_xss_match_set(params = {}, options = {})
+    def create_xss_match_set(params = {}, **options)
       req = build_request(:create_xss_match_set, params)
       req.send_request(options)
     end
@@ -1786,9 +1786,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteByteMatchSet AWS API Documentation
     #
-    # @overload delete_byte_match_set(params = {})
+    # @overload delete_byte_match_set(**params)
     # @param [Hash] params ({})
-    def delete_byte_match_set(params = {}, options = {})
+    def delete_byte_match_set(params = {}, **options)
       req = build_request(:delete_byte_match_set, params)
       req.send_request(options)
     end
@@ -1850,9 +1850,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteGeoMatchSet AWS API Documentation
     #
-    # @overload delete_geo_match_set(params = {})
+    # @overload delete_geo_match_set(**params)
     # @param [Hash] params ({})
-    def delete_geo_match_set(params = {}, options = {})
+    def delete_geo_match_set(params = {}, **options)
       req = build_request(:delete_geo_match_set, params)
       req.send_request(options)
     end
@@ -1926,9 +1926,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteIPSet AWS API Documentation
     #
-    # @overload delete_ip_set(params = {})
+    # @overload delete_ip_set(**params)
     # @param [Hash] params ({})
-    def delete_ip_set(params = {}, options = {})
+    def delete_ip_set(params = {}, **options)
       req = build_request(:delete_ip_set, params)
       req.send_request(options)
     end
@@ -1964,9 +1964,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteLoggingConfiguration AWS API Documentation
     #
-    # @overload delete_logging_configuration(params = {})
+    # @overload delete_logging_configuration(**params)
     # @param [Hash] params ({})
-    def delete_logging_configuration(params = {}, options = {})
+    def delete_logging_configuration(params = {}, **options)
       req = build_request(:delete_logging_configuration, params)
       req.send_request(options)
     end
@@ -2005,9 +2005,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeletePermissionPolicy AWS API Documentation
     #
-    # @overload delete_permission_policy(params = {})
+    # @overload delete_permission_policy(**params)
     # @param [Hash] params ({})
-    def delete_permission_policy(params = {}, options = {})
+    def delete_permission_policy(params = {}, **options)
       req = build_request(:delete_permission_policy, params)
       req.send_request(options)
     end
@@ -2067,9 +2067,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteRateBasedRule AWS API Documentation
     #
-    # @overload delete_rate_based_rule(params = {})
+    # @overload delete_rate_based_rule(**params)
     # @param [Hash] params ({})
-    def delete_rate_based_rule(params = {}, options = {})
+    def delete_rate_based_rule(params = {}, **options)
       req = build_request(:delete_rate_based_rule, params)
       req.send_request(options)
     end
@@ -2130,9 +2130,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteRegexMatchSet AWS API Documentation
     #
-    # @overload delete_regex_match_set(params = {})
+    # @overload delete_regex_match_set(**params)
     # @param [Hash] params ({})
-    def delete_regex_match_set(params = {}, options = {})
+    def delete_regex_match_set(params = {}, **options)
       req = build_request(:delete_regex_match_set, params)
       req.send_request(options)
     end
@@ -2180,9 +2180,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteRegexPatternSet AWS API Documentation
     #
-    # @overload delete_regex_pattern_set(params = {})
+    # @overload delete_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def delete_regex_pattern_set(params = {}, options = {})
+    def delete_regex_pattern_set(params = {}, **options)
       req = build_request(:delete_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -2257,9 +2257,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteRule AWS API Documentation
     #
-    # @overload delete_rule(params = {})
+    # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, options = {})
+    def delete_rule(params = {}, **options)
       req = build_request(:delete_rule, params)
       req.send_request(options)
     end
@@ -2320,9 +2320,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteRuleGroup AWS API Documentation
     #
-    # @overload delete_rule_group(params = {})
+    # @overload delete_rule_group(**params)
     # @param [Hash] params ({})
-    def delete_rule_group(params = {}, options = {})
+    def delete_rule_group(params = {}, **options)
       req = build_request(:delete_rule_group, params)
       req.send_request(options)
     end
@@ -2399,9 +2399,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteSizeConstraintSet AWS API Documentation
     #
-    # @overload delete_size_constraint_set(params = {})
+    # @overload delete_size_constraint_set(**params)
     # @param [Hash] params ({})
-    def delete_size_constraint_set(params = {}, options = {})
+    def delete_size_constraint_set(params = {}, **options)
       req = build_request(:delete_size_constraint_set, params)
       req.send_request(options)
     end
@@ -2478,9 +2478,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteSqlInjectionMatchSet AWS API Documentation
     #
-    # @overload delete_sql_injection_match_set(params = {})
+    # @overload delete_sql_injection_match_set(**params)
     # @param [Hash] params ({})
-    def delete_sql_injection_match_set(params = {}, options = {})
+    def delete_sql_injection_match_set(params = {}, **options)
       req = build_request(:delete_sql_injection_match_set, params)
       req.send_request(options)
     end
@@ -2551,9 +2551,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteWebACL AWS API Documentation
     #
-    # @overload delete_web_acl(params = {})
+    # @overload delete_web_acl(**params)
     # @param [Hash] params ({})
-    def delete_web_acl(params = {}, options = {})
+    def delete_web_acl(params = {}, **options)
       req = build_request(:delete_web_acl, params)
       req.send_request(options)
     end
@@ -2630,9 +2630,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DeleteXssMatchSet AWS API Documentation
     #
-    # @overload delete_xss_match_set(params = {})
+    # @overload delete_xss_match_set(**params)
     # @param [Hash] params ({})
-    def delete_xss_match_set(params = {}, options = {})
+    def delete_xss_match_set(params = {}, **options)
       req = build_request(:delete_xss_match_set, params)
       req.send_request(options)
     end
@@ -2678,9 +2678,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/DisassociateWebACL AWS API Documentation
     #
-    # @overload disassociate_web_acl(params = {})
+    # @overload disassociate_web_acl(**params)
     # @param [Hash] params ({})
-    def disassociate_web_acl(params = {}, options = {})
+    def disassociate_web_acl(params = {}, **options)
       req = build_request(:disassociate_web_acl, params)
       req.send_request(options)
     end
@@ -2757,9 +2757,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetByteMatchSet AWS API Documentation
     #
-    # @overload get_byte_match_set(params = {})
+    # @overload get_byte_match_set(**params)
     # @param [Hash] params ({})
-    def get_byte_match_set(params = {}, options = {})
+    def get_byte_match_set(params = {}, **options)
       req = build_request(:get_byte_match_set, params)
       req.send_request(options)
     end
@@ -2817,9 +2817,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetChangeToken AWS API Documentation
     #
-    # @overload get_change_token(params = {})
+    # @overload get_change_token(**params)
     # @param [Hash] params ({})
-    def get_change_token(params = {}, options = {})
+    def get_change_token(params = {}, **options)
       req = build_request(:get_change_token, params)
       req.send_request(options)
     end
@@ -2884,9 +2884,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetChangeTokenStatus AWS API Documentation
     #
-    # @overload get_change_token_status(params = {})
+    # @overload get_change_token_status(**params)
     # @param [Hash] params ({})
-    def get_change_token_status(params = {}, options = {})
+    def get_change_token_status(params = {}, **options)
       req = build_request(:get_change_token_status, params)
       req.send_request(options)
     end
@@ -2932,9 +2932,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetGeoMatchSet AWS API Documentation
     #
-    # @overload get_geo_match_set(params = {})
+    # @overload get_geo_match_set(**params)
     # @param [Hash] params ({})
-    def get_geo_match_set(params = {}, options = {})
+    def get_geo_match_set(params = {}, **options)
       req = build_request(:get_geo_match_set, params)
       req.send_request(options)
     end
@@ -3002,9 +3002,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetIPSet AWS API Documentation
     #
-    # @overload get_ip_set(params = {})
+    # @overload get_ip_set(**params)
     # @param [Hash] params ({})
-    def get_ip_set(params = {}, options = {})
+    def get_ip_set(params = {}, **options)
       req = build_request(:get_ip_set, params)
       req.send_request(options)
     end
@@ -3050,9 +3050,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetLoggingConfiguration AWS API Documentation
     #
-    # @overload get_logging_configuration(params = {})
+    # @overload get_logging_configuration(**params)
     # @param [Hash] params ({})
-    def get_logging_configuration(params = {}, options = {})
+    def get_logging_configuration(params = {}, **options)
       req = build_request(:get_logging_configuration, params)
       req.send_request(options)
     end
@@ -3093,9 +3093,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetPermissionPolicy AWS API Documentation
     #
-    # @overload get_permission_policy(params = {})
+    # @overload get_permission_policy(**params)
     # @param [Hash] params ({})
-    def get_permission_policy(params = {}, options = {})
+    def get_permission_policy(params = {}, **options)
       req = build_request(:get_permission_policy, params)
       req.send_request(options)
     end
@@ -3145,9 +3145,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetRateBasedRule AWS API Documentation
     #
-    # @overload get_rate_based_rule(params = {})
+    # @overload get_rate_based_rule(**params)
     # @param [Hash] params ({})
-    def get_rate_based_rule(params = {}, options = {})
+    def get_rate_based_rule(params = {}, **options)
       req = build_request(:get_rate_based_rule, params)
       req.send_request(options)
     end
@@ -3201,9 +3201,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetRateBasedRuleManagedKeys AWS API Documentation
     #
-    # @overload get_rate_based_rule_managed_keys(params = {})
+    # @overload get_rate_based_rule_managed_keys(**params)
     # @param [Hash] params ({})
-    def get_rate_based_rule_managed_keys(params = {}, options = {})
+    def get_rate_based_rule_managed_keys(params = {}, **options)
       req = build_request(:get_rate_based_rule_managed_keys, params)
       req.send_request(options)
     end
@@ -3251,9 +3251,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetRegexMatchSet AWS API Documentation
     #
-    # @overload get_regex_match_set(params = {})
+    # @overload get_regex_match_set(**params)
     # @param [Hash] params ({})
-    def get_regex_match_set(params = {}, options = {})
+    def get_regex_match_set(params = {}, **options)
       req = build_request(:get_regex_match_set, params)
       req.send_request(options)
     end
@@ -3298,9 +3298,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetRegexPatternSet AWS API Documentation
     #
-    # @overload get_regex_pattern_set(params = {})
+    # @overload get_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def get_regex_pattern_set(params = {}, options = {})
+    def get_regex_pattern_set(params = {}, **options)
       req = build_request(:get_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -3373,9 +3373,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetRule AWS API Documentation
     #
-    # @overload get_rule(params = {})
+    # @overload get_rule(**params)
     # @param [Hash] params ({})
-    def get_rule(params = {}, options = {})
+    def get_rule(params = {}, **options)
       req = build_request(:get_rule, params)
       req.send_request(options)
     end
@@ -3421,9 +3421,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetRuleGroup AWS API Documentation
     #
-    # @overload get_rule_group(params = {})
+    # @overload get_rule_group(**params)
     # @param [Hash] params ({})
-    def get_rule_group(params = {}, options = {})
+    def get_rule_group(params = {}, **options)
       req = build_request(:get_rule_group, params)
       req.send_request(options)
     end
@@ -3569,9 +3569,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetSampledRequests AWS API Documentation
     #
-    # @overload get_sampled_requests(params = {})
+    # @overload get_sampled_requests(**params)
     # @param [Hash] params ({})
-    def get_sampled_requests(params = {}, options = {})
+    def get_sampled_requests(params = {}, **options)
       req = build_request(:get_sampled_requests, params)
       req.send_request(options)
     end
@@ -3648,9 +3648,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetSizeConstraintSet AWS API Documentation
     #
-    # @overload get_size_constraint_set(params = {})
+    # @overload get_size_constraint_set(**params)
     # @param [Hash] params ({})
-    def get_size_constraint_set(params = {}, options = {})
+    def get_size_constraint_set(params = {}, **options)
       req = build_request(:get_size_constraint_set, params)
       req.send_request(options)
     end
@@ -3724,9 +3724,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetSqlInjectionMatchSet AWS API Documentation
     #
-    # @overload get_sql_injection_match_set(params = {})
+    # @overload get_sql_injection_match_set(**params)
     # @param [Hash] params ({})
-    def get_sql_injection_match_set(params = {}, options = {})
+    def get_sql_injection_match_set(params = {}, **options)
       req = build_request(:get_sql_injection_match_set, params)
       req.send_request(options)
     end
@@ -3809,9 +3809,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetWebACL AWS API Documentation
     #
-    # @overload get_web_acl(params = {})
+    # @overload get_web_acl(**params)
     # @param [Hash] params ({})
-    def get_web_acl(params = {}, options = {})
+    def get_web_acl(params = {}, **options)
       req = build_request(:get_web_acl, params)
       req.send_request(options)
     end
@@ -3864,9 +3864,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetWebACLForResource AWS API Documentation
     #
-    # @overload get_web_acl_for_resource(params = {})
+    # @overload get_web_acl_for_resource(**params)
     # @param [Hash] params ({})
-    def get_web_acl_for_resource(params = {}, options = {})
+    def get_web_acl_for_resource(params = {}, **options)
       req = build_request(:get_web_acl_for_resource, params)
       req.send_request(options)
     end
@@ -3938,9 +3938,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/GetXssMatchSet AWS API Documentation
     #
-    # @overload get_xss_match_set(params = {})
+    # @overload get_xss_match_set(**params)
     # @param [Hash] params ({})
-    def get_xss_match_set(params = {}, options = {})
+    def get_xss_match_set(params = {}, **options)
       req = build_request(:get_xss_match_set, params)
       req.send_request(options)
     end
@@ -4007,9 +4007,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListActivatedRulesInRuleGroup AWS API Documentation
     #
-    # @overload list_activated_rules_in_rule_group(params = {})
+    # @overload list_activated_rules_in_rule_group(**params)
     # @param [Hash] params ({})
-    def list_activated_rules_in_rule_group(params = {}, options = {})
+    def list_activated_rules_in_rule_group(params = {}, **options)
       req = build_request(:list_activated_rules_in_rule_group, params)
       req.send_request(options)
     end
@@ -4066,9 +4066,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListByteMatchSets AWS API Documentation
     #
-    # @overload list_byte_match_sets(params = {})
+    # @overload list_byte_match_sets(**params)
     # @param [Hash] params ({})
-    def list_byte_match_sets(params = {}, options = {})
+    def list_byte_match_sets(params = {}, **options)
       req = build_request(:list_byte_match_sets, params)
       req.send_request(options)
     end
@@ -4125,9 +4125,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListGeoMatchSets AWS API Documentation
     #
-    # @overload list_geo_match_sets(params = {})
+    # @overload list_geo_match_sets(**params)
     # @param [Hash] params ({})
-    def list_geo_match_sets(params = {}, options = {})
+    def list_geo_match_sets(params = {}, **options)
       req = build_request(:list_geo_match_sets, params)
       req.send_request(options)
     end
@@ -4200,9 +4200,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListIPSets AWS API Documentation
     #
-    # @overload list_ip_sets(params = {})
+    # @overload list_ip_sets(**params)
     # @param [Hash] params ({})
-    def list_ip_sets(params = {}, options = {})
+    def list_ip_sets(params = {}, **options)
       req = build_request(:list_ip_sets, params)
       req.send_request(options)
     end
@@ -4264,9 +4264,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListLoggingConfigurations AWS API Documentation
     #
-    # @overload list_logging_configurations(params = {})
+    # @overload list_logging_configurations(**params)
     # @param [Hash] params ({})
-    def list_logging_configurations(params = {}, options = {})
+    def list_logging_configurations(params = {}, **options)
       req = build_request(:list_logging_configurations, params)
       req.send_request(options)
     end
@@ -4322,9 +4322,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListRateBasedRules AWS API Documentation
     #
-    # @overload list_rate_based_rules(params = {})
+    # @overload list_rate_based_rules(**params)
     # @param [Hash] params ({})
-    def list_rate_based_rules(params = {}, options = {})
+    def list_rate_based_rules(params = {}, **options)
       req = build_request(:list_rate_based_rules, params)
       req.send_request(options)
     end
@@ -4381,9 +4381,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListRegexMatchSets AWS API Documentation
     #
-    # @overload list_regex_match_sets(params = {})
+    # @overload list_regex_match_sets(**params)
     # @param [Hash] params ({})
-    def list_regex_match_sets(params = {}, options = {})
+    def list_regex_match_sets(params = {}, **options)
       req = build_request(:list_regex_match_sets, params)
       req.send_request(options)
     end
@@ -4441,9 +4441,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListRegexPatternSets AWS API Documentation
     #
-    # @overload list_regex_pattern_sets(params = {})
+    # @overload list_regex_pattern_sets(**params)
     # @param [Hash] params ({})
-    def list_regex_pattern_sets(params = {}, options = {})
+    def list_regex_pattern_sets(params = {}, **options)
       req = build_request(:list_regex_pattern_sets, params)
       req.send_request(options)
     end
@@ -4490,9 +4490,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListResourcesForWebACL AWS API Documentation
     #
-    # @overload list_resources_for_web_acl(params = {})
+    # @overload list_resources_for_web_acl(**params)
     # @param [Hash] params ({})
-    def list_resources_for_web_acl(params = {}, options = {})
+    def list_resources_for_web_acl(params = {}, **options)
       req = build_request(:list_resources_for_web_acl, params)
       req.send_request(options)
     end
@@ -4548,9 +4548,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListRuleGroups AWS API Documentation
     #
-    # @overload list_rule_groups(params = {})
+    # @overload list_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_rule_groups(params = {}, options = {})
+    def list_rule_groups(params = {}, **options)
       req = build_request(:list_rule_groups, params)
       req.send_request(options)
     end
@@ -4625,9 +4625,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListRules AWS API Documentation
     #
-    # @overload list_rules(params = {})
+    # @overload list_rules(**params)
     # @param [Hash] params ({})
-    def list_rules(params = {}, options = {})
+    def list_rules(params = {}, **options)
       req = build_request(:list_rules, params)
       req.send_request(options)
     end
@@ -4704,9 +4704,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListSizeConstraintSets AWS API Documentation
     #
-    # @overload list_size_constraint_sets(params = {})
+    # @overload list_size_constraint_sets(**params)
     # @param [Hash] params ({})
-    def list_size_constraint_sets(params = {}, options = {})
+    def list_size_constraint_sets(params = {}, **options)
       req = build_request(:list_size_constraint_sets, params)
       req.send_request(options)
     end
@@ -4783,9 +4783,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListSqlInjectionMatchSets AWS API Documentation
     #
-    # @overload list_sql_injection_match_sets(params = {})
+    # @overload list_sql_injection_match_sets(**params)
     # @param [Hash] params ({})
-    def list_sql_injection_match_sets(params = {}, options = {})
+    def list_sql_injection_match_sets(params = {}, **options)
       req = build_request(:list_sql_injection_match_sets, params)
       req.send_request(options)
     end
@@ -4843,9 +4843,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListSubscribedRuleGroups AWS API Documentation
     #
-    # @overload list_subscribed_rule_groups(params = {})
+    # @overload list_subscribed_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_subscribed_rule_groups(params = {}, options = {})
+    def list_subscribed_rule_groups(params = {}, **options)
       req = build_request(:list_subscribed_rule_groups, params)
       req.send_request(options)
     end
@@ -4905,9 +4905,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4983,9 +4983,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListWebACLs AWS API Documentation
     #
-    # @overload list_web_acls(params = {})
+    # @overload list_web_acls(**params)
     # @param [Hash] params ({})
-    def list_web_acls(params = {}, options = {})
+    def list_web_acls(params = {}, **options)
       req = build_request(:list_web_acls, params)
       req.send_request(options)
     end
@@ -5060,9 +5060,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/ListXssMatchSets AWS API Documentation
     #
-    # @overload list_xss_match_sets(params = {})
+    # @overload list_xss_match_sets(**params)
     # @param [Hash] params ({})
-    def list_xss_match_sets(params = {}, options = {})
+    def list_xss_match_sets(params = {}, **options)
       req = build_request(:list_xss_match_sets, params)
       req.send_request(options)
     end
@@ -5147,9 +5147,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/PutLoggingConfiguration AWS API Documentation
     #
-    # @overload put_logging_configuration(params = {})
+    # @overload put_logging_configuration(**params)
     # @param [Hash] params ({})
-    def put_logging_configuration(params = {}, options = {})
+    def put_logging_configuration(params = {}, **options)
       req = build_request(:put_logging_configuration, params)
       req.send_request(options)
     end
@@ -5218,9 +5218,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/PutPermissionPolicy AWS API Documentation
     #
-    # @overload put_permission_policy(params = {})
+    # @overload put_permission_policy(**params)
     # @param [Hash] params ({})
-    def put_permission_policy(params = {}, options = {})
+    def put_permission_policy(params = {}, **options)
       req = build_request(:put_permission_policy, params)
       req.send_request(options)
     end
@@ -5271,9 +5271,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5309,9 +5309,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5453,9 +5453,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateByteMatchSet AWS API Documentation
     #
-    # @overload update_byte_match_set(params = {})
+    # @overload update_byte_match_set(**params)
     # @param [Hash] params ({})
-    def update_byte_match_set(params = {}, options = {})
+    def update_byte_match_set(params = {}, **options)
       req = build_request(:update_byte_match_set, params)
       req.send_request(options)
     end
@@ -5552,9 +5552,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateGeoMatchSet AWS API Documentation
     #
-    # @overload update_geo_match_set(params = {})
+    # @overload update_geo_match_set(**params)
     # @param [Hash] params ({})
-    def update_geo_match_set(params = {}, options = {})
+    def update_geo_match_set(params = {}, **options)
       req = build_request(:update_geo_match_set, params)
       req.send_request(options)
     end
@@ -5699,9 +5699,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateIPSet AWS API Documentation
     #
-    # @overload update_ip_set(params = {})
+    # @overload update_ip_set(**params)
     # @param [Hash] params ({})
-    def update_ip_set(params = {}, options = {})
+    def update_ip_set(params = {}, **options)
       req = build_request(:update_ip_set, params)
       req.send_request(options)
     end
@@ -5808,9 +5808,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateRateBasedRule AWS API Documentation
     #
-    # @overload update_rate_based_rule(params = {})
+    # @overload update_rate_based_rule(**params)
     # @param [Hash] params ({})
-    def update_rate_based_rule(params = {}, options = {})
+    def update_rate_based_rule(params = {}, **options)
       req = build_request(:update_rate_based_rule, params)
       req.send_request(options)
     end
@@ -5914,9 +5914,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateRegexMatchSet AWS API Documentation
     #
-    # @overload update_regex_match_set(params = {})
+    # @overload update_regex_match_set(**params)
     # @param [Hash] params ({})
-    def update_regex_match_set(params = {}, options = {})
+    def update_regex_match_set(params = {}, **options)
       req = build_request(:update_regex_match_set, params)
       req.send_request(options)
     end
@@ -6006,9 +6006,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateRegexPatternSet AWS API Documentation
     #
-    # @overload update_regex_pattern_set(params = {})
+    # @overload update_regex_pattern_set(**params)
     # @param [Hash] params ({})
-    def update_regex_pattern_set(params = {}, options = {})
+    def update_regex_pattern_set(params = {}, **options)
       req = build_request(:update_regex_pattern_set, params)
       req.send_request(options)
     end
@@ -6136,9 +6136,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateRule AWS API Documentation
     #
-    # @overload update_rule(params = {})
+    # @overload update_rule(**params)
     # @param [Hash] params ({})
-    def update_rule(params = {}, options = {})
+    def update_rule(params = {}, **options)
       req = build_request(:update_rule, params)
       req.send_request(options)
     end
@@ -6241,9 +6241,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateRuleGroup AWS API Documentation
     #
-    # @overload update_rule_group(params = {})
+    # @overload update_rule_group(**params)
     # @param [Hash] params ({})
-    def update_rule_group(params = {}, options = {})
+    def update_rule_group(params = {}, **options)
       req = build_request(:update_rule_group, params)
       req.send_request(options)
     end
@@ -6393,9 +6393,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateSizeConstraintSet AWS API Documentation
     #
-    # @overload update_size_constraint_set(params = {})
+    # @overload update_size_constraint_set(**params)
     # @param [Hash] params ({})
-    def update_size_constraint_set(params = {}, options = {})
+    def update_size_constraint_set(params = {}, **options)
       req = build_request(:update_size_constraint_set, params)
       req.send_request(options)
     end
@@ -6532,9 +6532,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateSqlInjectionMatchSet AWS API Documentation
     #
-    # @overload update_sql_injection_match_set(params = {})
+    # @overload update_sql_injection_match_set(**params)
     # @param [Hash] params ({})
-    def update_sql_injection_match_set(params = {}, options = {})
+    def update_sql_injection_match_set(params = {}, **options)
       req = build_request(:update_sql_injection_match_set, params)
       req.send_request(options)
     end
@@ -6718,9 +6718,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateWebACL AWS API Documentation
     #
-    # @overload update_web_acl(params = {})
+    # @overload update_web_acl(**params)
     # @param [Hash] params ({})
-    def update_web_acl(params = {}, options = {})
+    def update_web_acl(params = {}, **options)
       req = build_request(:update_web_acl, params)
       req.send_request(options)
     end
@@ -6853,9 +6853,9 @@ module Aws::WAFRegional
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/waf-regional-2016-11-28/UpdateXssMatchSet AWS API Documentation
     #
-    # @overload update_xss_match_set(params = {})
+    # @overload update_xss_match_set(**params)
     # @param [Hash] params ({})
-    def update_xss_match_set(params = {}, options = {})
+    def update_xss_match_set(params = {}, **options)
       req = build_request(:update_xss_match_set, params)
       req.send_request(options)
     end
@@ -6864,7 +6864,7 @@ module Aws::WAFRegional
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -6872,15 +6872,15 @@ module Aws::WAFRegional
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-wafregional'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-wafregional"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

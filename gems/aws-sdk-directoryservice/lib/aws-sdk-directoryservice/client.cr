@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:directoryservice)
 
@@ -290,7 +290,7 @@ module Aws::DirectoryService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -368,9 +368,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AcceptSharedDirectory AWS API Documentation
     #
-    # @overload accept_shared_directory(params = {})
+    # @overload accept_shared_directory(**params)
     # @param [Hash] params ({})
-    def accept_shared_directory(params = {}, options = {})
+    def accept_shared_directory(params = {}, **options)
       req = build_request(:accept_shared_directory, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AddIpRoutes AWS API Documentation
     #
-    # @overload add_ip_routes(params = {})
+    # @overload add_ip_routes(**params)
     # @param [Hash] params ({})
-    def add_ip_routes(params = {}, options = {})
+    def add_ip_routes(params = {}, **options)
       req = build_request(:add_ip_routes, params)
       req.send_request(options)
     end
@@ -508,9 +508,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AddRegion AWS API Documentation
     #
-    # @overload add_region(params = {})
+    # @overload add_region(**params)
     # @param [Hash] params ({})
-    def add_region(params = {}, options = {})
+    def add_region(params = {}, **options)
       req = build_request(:add_region, params)
       req.send_request(options)
     end
@@ -541,9 +541,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -572,9 +572,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CancelSchemaExtension AWS API Documentation
     #
-    # @overload cancel_schema_extension(params = {})
+    # @overload cancel_schema_extension(**params)
     # @param [Hash] params ({})
-    def cancel_schema_extension(params = {}, options = {})
+    def cancel_schema_extension(params = {}, **options)
       req = build_request(:cancel_schema_extension, params)
       req.send_request(options)
     end
@@ -646,9 +646,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ConnectDirectory AWS API Documentation
     #
-    # @overload connect_directory(params = {})
+    # @overload connect_directory(**params)
     # @param [Hash] params ({})
-    def connect_directory(params = {}, options = {})
+    def connect_directory(params = {}, **options)
       req = build_request(:connect_directory, params)
       req.send_request(options)
     end
@@ -689,9 +689,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateAlias AWS API Documentation
     #
-    # @overload create_alias(params = {})
+    # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, options = {})
+    def create_alias(params = {}, **options)
       req = build_request(:create_alias, params)
       req.send_request(options)
     end
@@ -748,9 +748,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateComputer AWS API Documentation
     #
-    # @overload create_computer(params = {})
+    # @overload create_computer(**params)
     # @param [Hash] params ({})
-    def create_computer(params = {}, options = {})
+    def create_computer(params = {}, **options)
       req = build_request(:create_computer, params)
       req.send_request(options)
     end
@@ -784,9 +784,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateConditionalForwarder AWS API Documentation
     #
-    # @overload create_conditional_forwarder(params = {})
+    # @overload create_conditional_forwarder(**params)
     # @param [Hash] params ({})
-    def create_conditional_forwarder(params = {}, options = {})
+    def create_conditional_forwarder(params = {}, **options)
       req = build_request(:create_conditional_forwarder, params)
       req.send_request(options)
     end
@@ -893,9 +893,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateDirectory AWS API Documentation
     #
-    # @overload create_directory(params = {})
+    # @overload create_directory(**params)
     # @param [Hash] params ({})
-    def create_directory(params = {}, options = {})
+    def create_directory(params = {}, **options)
       req = build_request(:create_directory, params)
       req.send_request(options)
     end
@@ -923,9 +923,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateLogSubscription AWS API Documentation
     #
-    # @overload create_log_subscription(params = {})
+    # @overload create_log_subscription(**params)
     # @param [Hash] params ({})
-    def create_log_subscription(params = {}, options = {})
+    def create_log_subscription(params = {}, **options)
       req = build_request(:create_log_subscription, params)
       req.send_request(options)
     end
@@ -1007,9 +1007,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateMicrosoftAD AWS API Documentation
     #
-    # @overload create_microsoft_ad(params = {})
+    # @overload create_microsoft_ad(**params)
     # @param [Hash] params ({})
-    def create_microsoft_ad(params = {}, options = {})
+    def create_microsoft_ad(params = {}, **options)
       req = build_request(:create_microsoft_ad, params)
       req.send_request(options)
     end
@@ -1044,9 +1044,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateSnapshot AWS API Documentation
     #
-    # @overload create_snapshot(params = {})
+    # @overload create_snapshot(**params)
     # @param [Hash] params ({})
-    def create_snapshot(params = {}, options = {})
+    def create_snapshot(params = {}, **options)
       req = build_request(:create_snapshot, params)
       req.send_request(options)
     end
@@ -1110,9 +1110,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateTrust AWS API Documentation
     #
-    # @overload create_trust(params = {})
+    # @overload create_trust(**params)
     # @param [Hash] params ({})
-    def create_trust(params = {}, options = {})
+    def create_trust(params = {}, **options)
       req = build_request(:create_trust, params)
       req.send_request(options)
     end
@@ -1138,9 +1138,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteConditionalForwarder AWS API Documentation
     #
-    # @overload delete_conditional_forwarder(params = {})
+    # @overload delete_conditional_forwarder(**params)
     # @param [Hash] params ({})
-    def delete_conditional_forwarder(params = {}, options = {})
+    def delete_conditional_forwarder(params = {}, **options)
       req = build_request(:delete_conditional_forwarder, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteDirectory AWS API Documentation
     #
-    # @overload delete_directory(params = {})
+    # @overload delete_directory(**params)
     # @param [Hash] params ({})
-    def delete_directory(params = {}, options = {})
+    def delete_directory(params = {}, **options)
       req = build_request(:delete_directory, params)
       req.send_request(options)
     end
@@ -1198,9 +1198,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteLogSubscription AWS API Documentation
     #
-    # @overload delete_log_subscription(params = {})
+    # @overload delete_log_subscription(**params)
     # @param [Hash] params ({})
-    def delete_log_subscription(params = {}, options = {})
+    def delete_log_subscription(params = {}, **options)
       req = build_request(:delete_log_subscription, params)
       req.send_request(options)
     end
@@ -1226,9 +1226,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteSnapshot AWS API Documentation
     #
-    # @overload delete_snapshot(params = {})
+    # @overload delete_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_snapshot(params = {}, options = {})
+    def delete_snapshot(params = {}, **options)
       req = build_request(:delete_snapshot, params)
       req.send_request(options)
     end
@@ -1259,9 +1259,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteTrust AWS API Documentation
     #
-    # @overload delete_trust(params = {})
+    # @overload delete_trust(**params)
     # @param [Hash] params ({})
-    def delete_trust(params = {}, options = {})
+    def delete_trust(params = {}, **options)
       req = build_request(:delete_trust, params)
       req.send_request(options)
     end
@@ -1286,9 +1286,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeregisterCertificate AWS API Documentation
     #
-    # @overload deregister_certificate(params = {})
+    # @overload deregister_certificate(**params)
     # @param [Hash] params ({})
-    def deregister_certificate(params = {}, options = {})
+    def deregister_certificate(params = {}, **options)
       req = build_request(:deregister_certificate, params)
       req.send_request(options)
     end
@@ -1315,9 +1315,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeregisterEventTopic AWS API Documentation
     #
-    # @overload deregister_event_topic(params = {})
+    # @overload deregister_event_topic(**params)
     # @param [Hash] params ({})
-    def deregister_event_topic(params = {}, options = {})
+    def deregister_event_topic(params = {}, **options)
       req = build_request(:deregister_event_topic, params)
       req.send_request(options)
     end
@@ -1355,9 +1355,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeCertificate AWS API Documentation
     #
-    # @overload describe_certificate(params = {})
+    # @overload describe_certificate(**params)
     # @param [Hash] params ({})
-    def describe_certificate(params = {}, options = {})
+    def describe_certificate(params = {}, **options)
       req = build_request(:describe_certificate, params)
       req.send_request(options)
     end
@@ -1398,9 +1398,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeConditionalForwarders AWS API Documentation
     #
-    # @overload describe_conditional_forwarders(params = {})
+    # @overload describe_conditional_forwarders(**params)
     # @param [Hash] params ({})
-    def describe_conditional_forwarders(params = {}, options = {})
+    def describe_conditional_forwarders(params = {}, **options)
       req = build_request(:describe_conditional_forwarders, params)
       req.send_request(options)
     end
@@ -1524,9 +1524,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeDirectories AWS API Documentation
     #
-    # @overload describe_directories(params = {})
+    # @overload describe_directories(**params)
     # @param [Hash] params ({})
-    def describe_directories(params = {}, options = {})
+    def describe_directories(params = {}, **options)
       req = build_request(:describe_directories, params)
       req.send_request(options)
     end
@@ -1581,9 +1581,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeDomainControllers AWS API Documentation
     #
-    # @overload describe_domain_controllers(params = {})
+    # @overload describe_domain_controllers(**params)
     # @param [Hash] params ({})
-    def describe_domain_controllers(params = {}, options = {})
+    def describe_domain_controllers(params = {}, **options)
       req = build_request(:describe_domain_controllers, params)
       req.send_request(options)
     end
@@ -1628,9 +1628,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeEventTopics AWS API Documentation
     #
-    # @overload describe_event_topics(params = {})
+    # @overload describe_event_topics(**params)
     # @param [Hash] params ({})
-    def describe_event_topics(params = {}, options = {})
+    def describe_event_topics(params = {}, **options)
       req = build_request(:describe_event_topics, params)
       req.send_request(options)
     end
@@ -1674,9 +1674,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeLDAPSSettings AWS API Documentation
     #
-    # @overload describe_ldaps_settings(params = {})
+    # @overload describe_ldaps_settings(**params)
     # @param [Hash] params ({})
-    def describe_ldaps_settings(params = {}, options = {})
+    def describe_ldaps_settings(params = {}, **options)
       req = build_request(:describe_ldaps_settings, params)
       req.send_request(options)
     end
@@ -1725,9 +1725,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeRegions AWS API Documentation
     #
-    # @overload describe_regions(params = {})
+    # @overload describe_regions(**params)
     # @param [Hash] params ({})
-    def describe_regions(params = {}, options = {})
+    def describe_regions(params = {}, **options)
       req = build_request(:describe_regions, params)
       req.send_request(options)
     end
@@ -1779,9 +1779,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSharedDirectories AWS API Documentation
     #
-    # @overload describe_shared_directories(params = {})
+    # @overload describe_shared_directories(**params)
     # @param [Hash] params ({})
-    def describe_shared_directories(params = {}, options = {})
+    def describe_shared_directories(params = {}, **options)
       req = build_request(:describe_shared_directories, params)
       req.send_request(options)
     end
@@ -1840,9 +1840,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSnapshots AWS API Documentation
     #
-    # @overload describe_snapshots(params = {})
+    # @overload describe_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_snapshots(params = {}, options = {})
+    def describe_snapshots(params = {}, **options)
       req = build_request(:describe_snapshots, params)
       req.send_request(options)
     end
@@ -1903,9 +1903,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeTrusts AWS API Documentation
     #
-    # @overload describe_trusts(params = {})
+    # @overload describe_trusts(**params)
     # @param [Hash] params ({})
-    def describe_trusts(params = {}, options = {})
+    def describe_trusts(params = {}, **options)
       req = build_request(:describe_trusts, params)
       req.send_request(options)
     end
@@ -1931,9 +1931,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableClientAuthentication AWS API Documentation
     #
-    # @overload disable_client_authentication(params = {})
+    # @overload disable_client_authentication(**params)
     # @param [Hash] params ({})
-    def disable_client_authentication(params = {}, options = {})
+    def disable_client_authentication(params = {}, **options)
       req = build_request(:disable_client_authentication, params)
       req.send_request(options)
     end
@@ -1958,9 +1958,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableLDAPS AWS API Documentation
     #
-    # @overload disable_ldaps(params = {})
+    # @overload disable_ldaps(**params)
     # @param [Hash] params ({})
-    def disable_ldaps(params = {}, options = {})
+    def disable_ldaps(params = {}, **options)
       req = build_request(:disable_ldaps, params)
       req.send_request(options)
     end
@@ -1982,9 +1982,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableRadius AWS API Documentation
     #
-    # @overload disable_radius(params = {})
+    # @overload disable_radius(**params)
     # @param [Hash] params ({})
-    def disable_radius(params = {}, options = {})
+    def disable_radius(params = {}, **options)
       req = build_request(:disable_radius, params)
       req.send_request(options)
     end
@@ -2022,9 +2022,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableSso AWS API Documentation
     #
-    # @overload disable_sso(params = {})
+    # @overload disable_sso(**params)
     # @param [Hash] params ({})
-    def disable_sso(params = {}, options = {})
+    def disable_sso(params = {}, **options)
       req = build_request(:disable_sso, params)
       req.send_request(options)
     end
@@ -2052,9 +2052,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableClientAuthentication AWS API Documentation
     #
-    # @overload enable_client_authentication(params = {})
+    # @overload enable_client_authentication(**params)
     # @param [Hash] params ({})
-    def enable_client_authentication(params = {}, options = {})
+    def enable_client_authentication(params = {}, **options)
       req = build_request(:enable_client_authentication, params)
       req.send_request(options)
     end
@@ -2080,9 +2080,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableLDAPS AWS API Documentation
     #
-    # @overload enable_ldaps(params = {})
+    # @overload enable_ldaps(**params)
     # @param [Hash] params ({})
-    def enable_ldaps(params = {}, options = {})
+    def enable_ldaps(params = {}, **options)
       req = build_request(:enable_ldaps, params)
       req.send_request(options)
     end
@@ -2118,9 +2118,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableRadius AWS API Documentation
     #
-    # @overload enable_radius(params = {})
+    # @overload enable_radius(**params)
     # @param [Hash] params ({})
-    def enable_radius(params = {}, options = {})
+    def enable_radius(params = {}, **options)
       req = build_request(:enable_radius, params)
       req.send_request(options)
     end
@@ -2160,9 +2160,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableSso AWS API Documentation
     #
-    # @overload enable_sso(params = {})
+    # @overload enable_sso(**params)
     # @param [Hash] params ({})
-    def enable_sso(params = {}, options = {})
+    def enable_sso(params = {}, **options)
       req = build_request(:enable_sso, params)
       req.send_request(options)
     end
@@ -2187,9 +2187,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/GetDirectoryLimits AWS API Documentation
     #
-    # @overload get_directory_limits(params = {})
+    # @overload get_directory_limits(**params)
     # @param [Hash] params ({})
-    def get_directory_limits(params = {}, options = {})
+    def get_directory_limits(params = {}, **options)
       req = build_request(:get_directory_limits, params)
       req.send_request(options)
     end
@@ -2217,9 +2217,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/GetSnapshotLimits AWS API Documentation
     #
-    # @overload get_snapshot_limits(params = {})
+    # @overload get_snapshot_limits(**params)
     # @param [Hash] params ({})
-    def get_snapshot_limits(params = {}, options = {})
+    def get_snapshot_limits(params = {}, **options)
       req = build_request(:get_snapshot_limits, params)
       req.send_request(options)
     end
@@ -2264,9 +2264,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListCertificates AWS API Documentation
     #
-    # @overload list_certificates(params = {})
+    # @overload list_certificates(**params)
     # @param [Hash] params ({})
-    def list_certificates(params = {}, options = {})
+    def list_certificates(params = {}, **options)
       req = build_request(:list_certificates, params)
       req.send_request(options)
     end
@@ -2311,9 +2311,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListIpRoutes AWS API Documentation
     #
-    # @overload list_ip_routes(params = {})
+    # @overload list_ip_routes(**params)
     # @param [Hash] params ({})
-    def list_ip_routes(params = {}, options = {})
+    def list_ip_routes(params = {}, **options)
       req = build_request(:list_ip_routes, params)
       req.send_request(options)
     end
@@ -2356,9 +2356,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListLogSubscriptions AWS API Documentation
     #
-    # @overload list_log_subscriptions(params = {})
+    # @overload list_log_subscriptions(**params)
     # @param [Hash] params ({})
-    def list_log_subscriptions(params = {}, options = {})
+    def list_log_subscriptions(params = {}, **options)
       req = build_request(:list_log_subscriptions, params)
       req.send_request(options)
     end
@@ -2403,9 +2403,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListSchemaExtensions AWS API Documentation
     #
-    # @overload list_schema_extensions(params = {})
+    # @overload list_schema_extensions(**params)
     # @param [Hash] params ({})
-    def list_schema_extensions(params = {}, options = {})
+    def list_schema_extensions(params = {}, **options)
       req = build_request(:list_schema_extensions, params)
       req.send_request(options)
     end
@@ -2443,9 +2443,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2489,9 +2489,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RegisterCertificate AWS API Documentation
     #
-    # @overload register_certificate(params = {})
+    # @overload register_certificate(**params)
     # @param [Hash] params ({})
-    def register_certificate(params = {}, options = {})
+    def register_certificate(params = {}, **options)
       req = build_request(:register_certificate, params)
       req.send_request(options)
     end
@@ -2522,9 +2522,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RegisterEventTopic AWS API Documentation
     #
-    # @overload register_event_topic(params = {})
+    # @overload register_event_topic(**params)
     # @param [Hash] params ({})
-    def register_event_topic(params = {}, options = {})
+    def register_event_topic(params = {}, **options)
       req = build_request(:register_event_topic, params)
       req.send_request(options)
     end
@@ -2552,9 +2552,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RejectSharedDirectory AWS API Documentation
     #
-    # @overload reject_shared_directory(params = {})
+    # @overload reject_shared_directory(**params)
     # @param [Hash] params ({})
-    def reject_shared_directory(params = {}, options = {})
+    def reject_shared_directory(params = {}, **options)
       req = build_request(:reject_shared_directory, params)
       req.send_request(options)
     end
@@ -2579,9 +2579,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RemoveIpRoutes AWS API Documentation
     #
-    # @overload remove_ip_routes(params = {})
+    # @overload remove_ip_routes(**params)
     # @param [Hash] params ({})
-    def remove_ip_routes(params = {}, options = {})
+    def remove_ip_routes(params = {}, **options)
       req = build_request(:remove_ip_routes, params)
       req.send_request(options)
     end
@@ -2604,9 +2604,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RemoveRegion AWS API Documentation
     #
-    # @overload remove_region(params = {})
+    # @overload remove_region(**params)
     # @param [Hash] params ({})
-    def remove_region(params = {}, options = {})
+    def remove_region(params = {}, **options)
       req = build_request(:remove_region, params)
       req.send_request(options)
     end
@@ -2630,9 +2630,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -2681,9 +2681,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ResetUserPassword AWS API Documentation
     #
-    # @overload reset_user_password(params = {})
+    # @overload reset_user_password(**params)
     # @param [Hash] params ({})
-    def reset_user_password(params = {}, options = {})
+    def reset_user_password(params = {}, **options)
       req = build_request(:reset_user_password, params)
       req.send_request(options)
     end
@@ -2712,9 +2712,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RestoreFromSnapshot AWS API Documentation
     #
-    # @overload restore_from_snapshot(params = {})
+    # @overload restore_from_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_from_snapshot(params = {}, options = {})
+    def restore_from_snapshot(params = {}, **options)
       req = build_request(:restore_from_snapshot, params)
       req.send_request(options)
     end
@@ -2781,9 +2781,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ShareDirectory AWS API Documentation
     #
-    # @overload share_directory(params = {})
+    # @overload share_directory(**params)
     # @param [Hash] params ({})
-    def share_directory(params = {}, options = {})
+    def share_directory(params = {}, **options)
       req = build_request(:share_directory, params)
       req.send_request(options)
     end
@@ -2826,9 +2826,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/StartSchemaExtension AWS API Documentation
     #
-    # @overload start_schema_extension(params = {})
+    # @overload start_schema_extension(**params)
     # @param [Hash] params ({})
-    def start_schema_extension(params = {}, options = {})
+    def start_schema_extension(params = {}, **options)
       req = build_request(:start_schema_extension, params)
       req.send_request(options)
     end
@@ -2864,9 +2864,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UnshareDirectory AWS API Documentation
     #
-    # @overload unshare_directory(params = {})
+    # @overload unshare_directory(**params)
     # @param [Hash] params ({})
-    def unshare_directory(params = {}, options = {})
+    def unshare_directory(params = {}, **options)
       req = build_request(:unshare_directory, params)
       req.send_request(options)
     end
@@ -2898,9 +2898,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateConditionalForwarder AWS API Documentation
     #
-    # @overload update_conditional_forwarder(params = {})
+    # @overload update_conditional_forwarder(**params)
     # @param [Hash] params ({})
-    def update_conditional_forwarder(params = {}, options = {})
+    def update_conditional_forwarder(params = {}, **options)
       req = build_request(:update_conditional_forwarder, params)
       req.send_request(options)
     end
@@ -2930,9 +2930,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateNumberOfDomainControllers AWS API Documentation
     #
-    # @overload update_number_of_domain_controllers(params = {})
+    # @overload update_number_of_domain_controllers(**params)
     # @param [Hash] params ({})
-    def update_number_of_domain_controllers(params = {}, options = {})
+    def update_number_of_domain_controllers(params = {}, **options)
       req = build_request(:update_number_of_domain_controllers, params)
       req.send_request(options)
     end
@@ -2968,9 +2968,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateRadius AWS API Documentation
     #
-    # @overload update_radius(params = {})
+    # @overload update_radius(**params)
     # @param [Hash] params ({})
-    def update_radius(params = {}, options = {})
+    def update_radius(params = {}, **options)
       req = build_request(:update_radius, params)
       req.send_request(options)
     end
@@ -3003,9 +3003,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateTrust AWS API Documentation
     #
-    # @overload update_trust(params = {})
+    # @overload update_trust(**params)
     # @param [Hash] params ({})
-    def update_trust(params = {}, options = {})
+    def update_trust(params = {}, **options)
       req = build_request(:update_trust, params)
       req.send_request(options)
     end
@@ -3035,9 +3035,9 @@ module Aws::DirectoryService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/VerifyTrust AWS API Documentation
     #
-    # @overload verify_trust(params = {})
+    # @overload verify_trust(**params)
     # @param [Hash] params ({})
-    def verify_trust(params = {}, options = {})
+    def verify_trust(params = {}, **options)
       req = build_request(:verify_trust, params)
       req.send_request(options)
     end
@@ -3046,7 +3046,7 @@ module Aws::DirectoryService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3054,15 +3054,15 @@ module Aws::DirectoryService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-directoryservice'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-directoryservice"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

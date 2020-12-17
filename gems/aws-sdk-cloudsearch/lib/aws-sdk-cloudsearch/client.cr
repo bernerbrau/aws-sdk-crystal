@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudsearch)
 
@@ -280,7 +280,7 @@ module Aws::CloudSearch
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -355,9 +355,9 @@ module Aws::CloudSearch
     #   resp.field_names #=> Array
     #   resp.field_names[0] #=> String
     #
-    # @overload build_suggesters(params = {})
+    # @overload build_suggesters(**params)
     # @param [Hash] params ({})
-    def build_suggesters(params = {}, options = {})
+    def build_suggesters(params = {}, **options)
       req = build_request(:build_suggesters, params)
       req.send_request(options)
     end
@@ -402,9 +402,9 @@ module Aws::CloudSearch
     #   resp.domain_status.limits.maximum_replication_count #=> Integer
     #   resp.domain_status.limits.maximum_partition_count #=> Integer
     #
-    # @overload create_domain(params = {})
+    # @overload create_domain(**params)
     # @param [Hash] params ({})
-    def create_domain(params = {}, options = {})
+    def create_domain(params = {}, **options)
       req = build_request(:create_domain, params)
       req.send_request(options)
     end
@@ -467,9 +467,9 @@ module Aws::CloudSearch
     #   resp.analysis_scheme.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.analysis_scheme.status.pending_deletion #=> Boolean
     #
-    # @overload define_analysis_scheme(params = {})
+    # @overload define_analysis_scheme(**params)
     # @param [Hash] params ({})
-    def define_analysis_scheme(params = {}, options = {})
+    def define_analysis_scheme(params = {}, **options)
       req = build_request(:define_analysis_scheme, params)
       req.send_request(options)
     end
@@ -519,9 +519,9 @@ module Aws::CloudSearch
     #   resp.expression.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.expression.status.pending_deletion #=> Boolean
     #
-    # @overload define_expression(params = {})
+    # @overload define_expression(**params)
     # @param [Hash] params ({})
-    def define_expression(params = {}, options = {})
+    def define_expression(params = {}, **options)
       req = build_request(:define_expression, params)
       req.send_request(options)
     end
@@ -717,9 +717,9 @@ module Aws::CloudSearch
     #   resp.index_field.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.index_field.status.pending_deletion #=> Boolean
     #
-    # @overload define_index_field(params = {})
+    # @overload define_index_field(**params)
     # @param [Hash] params ({})
-    def define_index_field(params = {}, options = {})
+    def define_index_field(params = {}, **options)
       req = build_request(:define_index_field, params)
       req.send_request(options)
     end
@@ -777,9 +777,9 @@ module Aws::CloudSearch
     #   resp.suggester.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.suggester.status.pending_deletion #=> Boolean
     #
-    # @overload define_suggester(params = {})
+    # @overload define_suggester(**params)
     # @param [Hash] params ({})
-    def define_suggester(params = {}, options = {})
+    def define_suggester(params = {}, **options)
       req = build_request(:define_suggester, params)
       req.send_request(options)
     end
@@ -826,9 +826,9 @@ module Aws::CloudSearch
     #   resp.analysis_scheme.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.analysis_scheme.status.pending_deletion #=> Boolean
     #
-    # @overload delete_analysis_scheme(params = {})
+    # @overload delete_analysis_scheme(**params)
     # @param [Hash] params ({})
-    def delete_analysis_scheme(params = {}, options = {})
+    def delete_analysis_scheme(params = {}, **options)
       req = build_request(:delete_analysis_scheme, params)
       req.send_request(options)
     end
@@ -872,9 +872,9 @@ module Aws::CloudSearch
     #   resp.domain_status.limits.maximum_replication_count #=> Integer
     #   resp.domain_status.limits.maximum_partition_count #=> Integer
     #
-    # @overload delete_domain(params = {})
+    # @overload delete_domain(**params)
     # @param [Hash] params ({})
-    def delete_domain(params = {}, options = {})
+    def delete_domain(params = {}, **options)
       req = build_request(:delete_domain, params)
       req.send_request(options)
     end
@@ -917,9 +917,9 @@ module Aws::CloudSearch
     #   resp.expression.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.expression.status.pending_deletion #=> Boolean
     #
-    # @overload delete_expression(params = {})
+    # @overload delete_expression(**params)
     # @param [Hash] params ({})
-    def delete_expression(params = {}, options = {})
+    def delete_expression(params = {}, **options)
       req = build_request(:delete_expression, params)
       req.send_request(options)
     end
@@ -1024,9 +1024,9 @@ module Aws::CloudSearch
     #   resp.index_field.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.index_field.status.pending_deletion #=> Boolean
     #
-    # @overload delete_index_field(params = {})
+    # @overload delete_index_field(**params)
     # @param [Hash] params ({})
-    def delete_index_field(params = {}, options = {})
+    def delete_index_field(params = {}, **options)
       req = build_request(:delete_index_field, params)
       req.send_request(options)
     end
@@ -1070,9 +1070,9 @@ module Aws::CloudSearch
     #   resp.suggester.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.suggester.status.pending_deletion #=> Boolean
     #
-    # @overload delete_suggester(params = {})
+    # @overload delete_suggester(**params)
     # @param [Hash] params ({})
-    def delete_suggester(params = {}, options = {})
+    def delete_suggester(params = {}, **options)
       req = build_request(:delete_suggester, params)
       req.send_request(options)
     end
@@ -1128,9 +1128,9 @@ module Aws::CloudSearch
     #   resp.analysis_schemes[0].status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.analysis_schemes[0].status.pending_deletion #=> Boolean
     #
-    # @overload describe_analysis_schemes(params = {})
+    # @overload describe_analysis_schemes(**params)
     # @param [Hash] params ({})
-    def describe_analysis_schemes(params = {}, options = {})
+    def describe_analysis_schemes(params = {}, **options)
       req = build_request(:describe_analysis_schemes, params)
       req.send_request(options)
     end
@@ -1172,9 +1172,9 @@ module Aws::CloudSearch
     #   resp.availability_options.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.availability_options.status.pending_deletion #=> Boolean
     #
-    # @overload describe_availability_options(params = {})
+    # @overload describe_availability_options(**params)
     # @param [Hash] params ({})
-    def describe_availability_options(params = {}, options = {})
+    def describe_availability_options(params = {}, **options)
       req = build_request(:describe_availability_options, params)
       req.send_request(options)
     end
@@ -1217,9 +1217,9 @@ module Aws::CloudSearch
     #   resp.domain_endpoint_options.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.domain_endpoint_options.status.pending_deletion #=> Boolean
     #
-    # @overload describe_domain_endpoint_options(params = {})
+    # @overload describe_domain_endpoint_options(**params)
     # @param [Hash] params ({})
-    def describe_domain_endpoint_options(params = {}, options = {})
+    def describe_domain_endpoint_options(params = {}, **options)
       req = build_request(:describe_domain_endpoint_options, params)
       req.send_request(options)
     end
@@ -1267,9 +1267,9 @@ module Aws::CloudSearch
     #   resp.domain_status_list[0].limits.maximum_replication_count #=> Integer
     #   resp.domain_status_list[0].limits.maximum_partition_count #=> Integer
     #
-    # @overload describe_domains(params = {})
+    # @overload describe_domains(**params)
     # @param [Hash] params ({})
-    def describe_domains(params = {}, options = {})
+    def describe_domains(params = {}, **options)
       req = build_request(:describe_domains, params)
       req.send_request(options)
     end
@@ -1319,9 +1319,9 @@ module Aws::CloudSearch
     #   resp.expressions[0].status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.expressions[0].status.pending_deletion #=> Boolean
     #
-    # @overload describe_expressions(params = {})
+    # @overload describe_expressions(**params)
     # @param [Hash] params ({})
-    def describe_expressions(params = {}, options = {})
+    def describe_expressions(params = {}, **options)
       req = build_request(:describe_expressions, params)
       req.send_request(options)
     end
@@ -1432,9 +1432,9 @@ module Aws::CloudSearch
     #   resp.index_fields[0].status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.index_fields[0].status.pending_deletion #=> Boolean
     #
-    # @overload describe_index_fields(params = {})
+    # @overload describe_index_fields(**params)
     # @param [Hash] params ({})
-    def describe_index_fields(params = {}, options = {})
+    def describe_index_fields(params = {}, **options)
       req = build_request(:describe_index_fields, params)
       req.send_request(options)
     end
@@ -1475,9 +1475,9 @@ module Aws::CloudSearch
     #   resp.scaling_parameters.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.scaling_parameters.status.pending_deletion #=> Boolean
     #
-    # @overload describe_scaling_parameters(params = {})
+    # @overload describe_scaling_parameters(**params)
     # @param [Hash] params ({})
-    def describe_scaling_parameters(params = {}, options = {})
+    def describe_scaling_parameters(params = {}, **options)
       req = build_request(:describe_scaling_parameters, params)
       req.send_request(options)
     end
@@ -1520,9 +1520,9 @@ module Aws::CloudSearch
     #   resp.access_policies.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.access_policies.status.pending_deletion #=> Boolean
     #
-    # @overload describe_service_access_policies(params = {})
+    # @overload describe_service_access_policies(**params)
     # @param [Hash] params ({})
-    def describe_service_access_policies(params = {}, options = {})
+    def describe_service_access_policies(params = {}, **options)
       req = build_request(:describe_service_access_policies, params)
       req.send_request(options)
     end
@@ -1574,9 +1574,9 @@ module Aws::CloudSearch
     #   resp.suggesters[0].status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.suggesters[0].status.pending_deletion #=> Boolean
     #
-    # @overload describe_suggesters(params = {})
+    # @overload describe_suggesters(**params)
     # @param [Hash] params ({})
-    def describe_suggesters(params = {}, options = {})
+    def describe_suggesters(params = {}, **options)
       req = build_request(:describe_suggesters, params)
       req.send_request(options)
     end
@@ -1606,9 +1606,9 @@ module Aws::CloudSearch
     #   resp.field_names #=> Array
     #   resp.field_names[0] #=> String
     #
-    # @overload index_documents(params = {})
+    # @overload index_documents(**params)
     # @param [Hash] params ({})
-    def index_documents(params = {}, options = {})
+    def index_documents(params = {}, **options)
       req = build_request(:index_documents, params)
       req.send_request(options)
     end
@@ -1624,9 +1624,9 @@ module Aws::CloudSearch
     #   resp.domain_names #=> Hash
     #   resp.domain_names["DomainName"] #=> String
     #
-    # @overload list_domain_names(params = {})
+    # @overload list_domain_names(**params)
     # @param [Hash] params ({})
-    def list_domain_names(params = {}, options = {})
+    def list_domain_names(params = {}, **options)
       req = build_request(:list_domain_names, params)
       req.send_request(options)
     end
@@ -1675,9 +1675,9 @@ module Aws::CloudSearch
     #   resp.availability_options.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.availability_options.status.pending_deletion #=> Boolean
     #
-    # @overload update_availability_options(params = {})
+    # @overload update_availability_options(**params)
     # @param [Hash] params ({})
-    def update_availability_options(params = {}, options = {})
+    def update_availability_options(params = {}, **options)
       req = build_request(:update_availability_options, params)
       req.send_request(options)
     end
@@ -1724,9 +1724,9 @@ module Aws::CloudSearch
     #   resp.domain_endpoint_options.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.domain_endpoint_options.status.pending_deletion #=> Boolean
     #
-    # @overload update_domain_endpoint_options(params = {})
+    # @overload update_domain_endpoint_options(**params)
     # @param [Hash] params ({})
-    def update_domain_endpoint_options(params = {}, options = {})
+    def update_domain_endpoint_options(params = {}, **options)
       req = build_request(:update_domain_endpoint_options, params)
       req.send_request(options)
     end
@@ -1780,9 +1780,9 @@ module Aws::CloudSearch
     #   resp.scaling_parameters.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.scaling_parameters.status.pending_deletion #=> Boolean
     #
-    # @overload update_scaling_parameters(params = {})
+    # @overload update_scaling_parameters(**params)
     # @param [Hash] params ({})
-    def update_scaling_parameters(params = {}, options = {})
+    def update_scaling_parameters(params = {}, **options)
       req = build_request(:update_scaling_parameters, params)
       req.send_request(options)
     end
@@ -1825,9 +1825,9 @@ module Aws::CloudSearch
     #   resp.access_policies.status.state #=> String, one of "RequiresIndexDocuments", "Processing", "Active", "FailedToValidate"
     #   resp.access_policies.status.pending_deletion #=> Boolean
     #
-    # @overload update_service_access_policies(params = {})
+    # @overload update_service_access_policies(**params)
     # @param [Hash] params ({})
-    def update_service_access_policies(params = {}, options = {})
+    def update_service_access_policies(params = {}, **options)
       req = build_request(:update_service_access_policies, params)
       req.send_request(options)
     end
@@ -1836,7 +1836,7 @@ module Aws::CloudSearch
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1844,15 +1844,15 @@ module Aws::CloudSearch
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudsearch'
-      context[:gem_version] = '1.26.0'
+      context[:gem_name] = "aws-sdk-cloudsearch"
+      context[:gem_version] = "1.26.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

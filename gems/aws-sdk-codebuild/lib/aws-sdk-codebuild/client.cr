@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codebuild)
 
@@ -290,7 +290,7 @@ module Aws::CodeBuild
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -363,9 +363,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchDeleteBuilds AWS API Documentation
     #
-    # @overload batch_delete_builds(params = {})
+    # @overload batch_delete_builds(**params)
     # @param [Hash] params ({})
-    def batch_delete_builds(params = {}, options = {})
+    def batch_delete_builds(params = {}, **options)
       req = build_request(:batch_delete_builds, params)
       req.send_request(options)
     end
@@ -525,9 +525,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetBuildBatches AWS API Documentation
     #
-    # @overload batch_get_build_batches(params = {})
+    # @overload batch_get_build_batches(**params)
     # @param [Hash] params ({})
-    def batch_get_build_batches(params = {}, options = {})
+    def batch_get_build_batches(params = {}, **options)
       req = build_request(:batch_get_build_batches, params)
       req.send_request(options)
     end
@@ -924,9 +924,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetBuilds AWS API Documentation
     #
-    # @overload batch_get_builds(params = {})
+    # @overload batch_get_builds(**params)
     # @param [Hash] params ({})
-    def batch_get_builds(params = {}, options = {})
+    def batch_get_builds(params = {}, **options)
       req = build_request(:batch_get_builds, params)
       req.send_request(options)
     end
@@ -1069,9 +1069,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetProjects AWS API Documentation
     #
-    # @overload batch_get_projects(params = {})
+    # @overload batch_get_projects(**params)
     # @param [Hash] params ({})
-    def batch_get_projects(params = {}, options = {})
+    def batch_get_projects(params = {}, **options)
       req = build_request(:batch_get_projects, params)
       req.send_request(options)
     end
@@ -1116,9 +1116,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetReportGroups AWS API Documentation
     #
-    # @overload batch_get_report_groups(params = {})
+    # @overload batch_get_report_groups(**params)
     # @param [Hash] params ({})
-    def batch_get_report_groups(params = {}, options = {})
+    def batch_get_report_groups(params = {}, **options)
       req = build_request(:batch_get_report_groups, params)
       req.send_request(options)
     end
@@ -1172,9 +1172,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetReports AWS API Documentation
     #
-    # @overload batch_get_reports(params = {})
+    # @overload batch_get_reports(**params)
     # @param [Hash] params ({})
-    def batch_get_reports(params = {}, options = {})
+    def batch_get_reports(params = {}, **options)
       req = build_request(:batch_get_reports, params)
       req.send_request(options)
     end
@@ -1570,9 +1570,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -1643,9 +1643,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateReportGroup AWS API Documentation
     #
-    # @overload create_report_group(params = {})
+    # @overload create_report_group(**params)
     # @param [Hash] params ({})
-    def create_report_group(params = {}, options = {})
+    def create_report_group(params = {}, **options)
       req = build_request(:create_report_group, params)
       req.send_request(options)
     end
@@ -1731,9 +1731,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateWebhook AWS API Documentation
     #
-    # @overload create_webhook(params = {})
+    # @overload create_webhook(**params)
     # @param [Hash] params ({})
-    def create_webhook(params = {}, options = {})
+    def create_webhook(params = {}, **options)
       req = build_request(:create_webhook, params)
       req.send_request(options)
     end
@@ -1766,9 +1766,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteBuildBatch AWS API Documentation
     #
-    # @overload delete_build_batch(params = {})
+    # @overload delete_build_batch(**params)
     # @param [Hash] params ({})
-    def delete_build_batch(params = {}, options = {})
+    def delete_build_batch(params = {}, **options)
       req = build_request(:delete_build_batch, params)
       req.send_request(options)
     end
@@ -1789,9 +1789,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -1811,9 +1811,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteReport AWS API Documentation
     #
-    # @overload delete_report(params = {})
+    # @overload delete_report(**params)
     # @param [Hash] params ({})
-    def delete_report(params = {}, options = {})
+    def delete_report(params = {}, **options)
       req = build_request(:delete_report, params)
       req.send_request(options)
     end
@@ -1850,9 +1850,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteReportGroup AWS API Documentation
     #
-    # @overload delete_report_group(params = {})
+    # @overload delete_report_group(**params)
     # @param [Hash] params ({})
-    def delete_report_group(params = {}, options = {})
+    def delete_report_group(params = {}, **options)
       req = build_request(:delete_report_group, params)
       req.send_request(options)
     end
@@ -1872,9 +1872,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteResourcePolicy AWS API Documentation
     #
-    # @overload delete_resource_policy(params = {})
+    # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, options = {})
+    def delete_resource_policy(params = {}, **options)
       req = build_request(:delete_resource_policy, params)
       req.send_request(options)
     end
@@ -1901,9 +1901,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteSourceCredentials AWS API Documentation
     #
-    # @overload delete_source_credentials(params = {})
+    # @overload delete_source_credentials(**params)
     # @param [Hash] params ({})
-    def delete_source_credentials(params = {}, options = {})
+    def delete_source_credentials(params = {}, **options)
       req = build_request(:delete_source_credentials, params)
       req.send_request(options)
     end
@@ -1926,9 +1926,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteWebhook AWS API Documentation
     #
-    # @overload delete_webhook(params = {})
+    # @overload delete_webhook(**params)
     # @param [Hash] params ({})
-    def delete_webhook(params = {}, options = {})
+    def delete_webhook(params = {}, **options)
       req = build_request(:delete_webhook, params)
       req.send_request(options)
     end
@@ -2002,9 +2002,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DescribeCodeCoverages AWS API Documentation
     #
-    # @overload describe_code_coverages(params = {})
+    # @overload describe_code_coverages(**params)
     # @param [Hash] params ({})
-    def describe_code_coverages(params = {}, options = {})
+    def describe_code_coverages(params = {}, **options)
       req = build_request(:describe_code_coverages, params)
       req.send_request(options)
     end
@@ -2065,9 +2065,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DescribeTestCases AWS API Documentation
     #
-    # @overload describe_test_cases(params = {})
+    # @overload describe_test_cases(**params)
     # @param [Hash] params ({})
-    def describe_test_cases(params = {}, options = {})
+    def describe_test_cases(params = {}, **options)
       req = build_request(:describe_test_cases, params)
       req.send_request(options)
     end
@@ -2102,9 +2102,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/GetReportGroupTrend AWS API Documentation
     #
-    # @overload get_report_group_trend(params = {})
+    # @overload get_report_group_trend(**params)
     # @param [Hash] params ({})
-    def get_report_group_trend(params = {}, options = {})
+    def get_report_group_trend(params = {}, **options)
       req = build_request(:get_report_group_trend, params)
       req.send_request(options)
     end
@@ -2130,9 +2130,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/GetResourcePolicy AWS API Documentation
     #
-    # @overload get_resource_policy(params = {})
+    # @overload get_resource_policy(**params)
     # @param [Hash] params ({})
-    def get_resource_policy(params = {}, options = {})
+    def get_resource_policy(params = {}, **options)
       req = build_request(:get_resource_policy, params)
       req.send_request(options)
     end
@@ -2184,9 +2184,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ImportSourceCredentials AWS API Documentation
     #
-    # @overload import_source_credentials(params = {})
+    # @overload import_source_credentials(**params)
     # @param [Hash] params ({})
-    def import_source_credentials(params = {}, options = {})
+    def import_source_credentials(params = {}, **options)
       req = build_request(:import_source_credentials, params)
       req.send_request(options)
     end
@@ -2207,9 +2207,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/InvalidateProjectCache AWS API Documentation
     #
-    # @overload invalidate_project_cache(params = {})
+    # @overload invalidate_project_cache(**params)
     # @param [Hash] params ({})
-    def invalidate_project_cache(params = {}, options = {})
+    def invalidate_project_cache(params = {}, **options)
       req = build_request(:invalidate_project_cache, params)
       req.send_request(options)
     end
@@ -2262,9 +2262,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListBuildBatches AWS API Documentation
     #
-    # @overload list_build_batches(params = {})
+    # @overload list_build_batches(**params)
     # @param [Hash] params ({})
-    def list_build_batches(params = {}, options = {})
+    def list_build_batches(params = {}, **options)
       req = build_request(:list_build_batches, params)
       req.send_request(options)
     end
@@ -2321,9 +2321,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListBuildBatchesForProject AWS API Documentation
     #
-    # @overload list_build_batches_for_project(params = {})
+    # @overload list_build_batches_for_project(**params)
     # @param [Hash] params ({})
-    def list_build_batches_for_project(params = {}, options = {})
+    def list_build_batches_for_project(params = {}, **options)
       req = build_request(:list_build_batches_for_project, params)
       req.send_request(options)
     end
@@ -2369,9 +2369,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListBuilds AWS API Documentation
     #
-    # @overload list_builds(params = {})
+    # @overload list_builds(**params)
     # @param [Hash] params ({})
-    def list_builds(params = {}, options = {})
+    def list_builds(params = {}, **options)
       req = build_request(:list_builds, params)
       req.send_request(options)
     end
@@ -2421,9 +2421,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListBuildsForProject AWS API Documentation
     #
-    # @overload list_builds_for_project(params = {})
+    # @overload list_builds_for_project(**params)
     # @param [Hash] params ({})
-    def list_builds_for_project(params = {}, options = {})
+    def list_builds_for_project(params = {}, **options)
       req = build_request(:list_builds_for_project, params)
       req.send_request(options)
     end
@@ -2449,9 +2449,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListCuratedEnvironmentImages AWS API Documentation
     #
-    # @overload list_curated_environment_images(params = {})
+    # @overload list_curated_environment_images(**params)
     # @param [Hash] params ({})
-    def list_curated_environment_images(params = {}, options = {})
+    def list_curated_environment_images(params = {}, **options)
       req = build_request(:list_curated_environment_images, params)
       req.send_request(options)
     end
@@ -2515,9 +2515,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -2577,9 +2577,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListReportGroups AWS API Documentation
     #
-    # @overload list_report_groups(params = {})
+    # @overload list_report_groups(**params)
     # @param [Hash] params ({})
-    def list_report_groups(params = {}, options = {})
+    def list_report_groups(params = {}, **options)
       req = build_request(:list_report_groups, params)
       req.send_request(options)
     end
@@ -2639,9 +2639,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListReports AWS API Documentation
     #
-    # @overload list_reports(params = {})
+    # @overload list_reports(**params)
     # @param [Hash] params ({})
-    def list_reports(params = {}, options = {})
+    def list_reports(params = {}, **options)
       req = build_request(:list_reports, params)
       req.send_request(options)
     end
@@ -2699,9 +2699,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListReportsForReportGroup AWS API Documentation
     #
-    # @overload list_reports_for_report_group(params = {})
+    # @overload list_reports_for_report_group(**params)
     # @param [Hash] params ({})
-    def list_reports_for_report_group(params = {}, options = {})
+    def list_reports_for_report_group(params = {}, **options)
       req = build_request(:list_reports_for_report_group, params)
       req.send_request(options)
     end
@@ -2764,9 +2764,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListSharedProjects AWS API Documentation
     #
-    # @overload list_shared_projects(params = {})
+    # @overload list_shared_projects(**params)
     # @param [Hash] params ({})
-    def list_shared_projects(params = {}, options = {})
+    def list_shared_projects(params = {}, **options)
       req = build_request(:list_shared_projects, params)
       req.send_request(options)
     end
@@ -2828,9 +2828,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListSharedReportGroups AWS API Documentation
     #
-    # @overload list_shared_report_groups(params = {})
+    # @overload list_shared_report_groups(**params)
     # @param [Hash] params ({})
-    def list_shared_report_groups(params = {}, options = {})
+    def list_shared_report_groups(params = {}, **options)
       req = build_request(:list_shared_report_groups, params)
       req.send_request(options)
     end
@@ -2850,9 +2850,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListSourceCredentials AWS API Documentation
     #
-    # @overload list_source_credentials(params = {})
+    # @overload list_source_credentials(**params)
     # @param [Hash] params ({})
-    def list_source_credentials(params = {}, options = {})
+    def list_source_credentials(params = {}, **options)
       req = build_request(:list_source_credentials, params)
       req.send_request(options)
     end
@@ -2891,9 +2891,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/PutResourcePolicy AWS API Documentation
     #
-    # @overload put_resource_policy(params = {})
+    # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, options = {})
+    def put_resource_policy(params = {}, **options)
       req = build_request(:put_resource_policy, params)
       req.send_request(options)
     end
@@ -3041,9 +3041,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/RetryBuild AWS API Documentation
     #
-    # @overload retry_build(params = {})
+    # @overload retry_build(**params)
     # @param [Hash] params ({})
-    def retry_build(params = {}, options = {})
+    def retry_build(params = {}, **options)
       req = build_request(:retry_build, params)
       req.send_request(options)
     end
@@ -3212,9 +3212,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/RetryBuildBatch AWS API Documentation
     #
-    # @overload retry_build_batch(params = {})
+    # @overload retry_build_batch(**params)
     # @param [Hash] params ({})
-    def retry_build_batch(params = {}, options = {})
+    def retry_build_batch(params = {}, **options)
       req = build_request(:retry_build_batch, params)
       req.send_request(options)
     end
@@ -3677,9 +3677,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/StartBuild AWS API Documentation
     #
-    # @overload start_build(params = {})
+    # @overload start_build(**params)
     # @param [Hash] params ({})
-    def start_build(params = {}, options = {})
+    def start_build(params = {}, **options)
       req = build_request(:start_build, params)
       req.send_request(options)
     end
@@ -4153,9 +4153,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/StartBuildBatch AWS API Documentation
     #
-    # @overload start_build_batch(params = {})
+    # @overload start_build_batch(**params)
     # @param [Hash] params ({})
-    def start_build_batch(params = {}, options = {})
+    def start_build_batch(params = {}, **options)
       req = build_request(:start_build_batch, params)
       req.send_request(options)
     end
@@ -4295,9 +4295,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/StopBuild AWS API Documentation
     #
-    # @overload stop_build(params = {})
+    # @overload stop_build(**params)
     # @param [Hash] params ({})
-    def stop_build(params = {}, options = {})
+    def stop_build(params = {}, **options)
       req = build_request(:stop_build, params)
       req.send_request(options)
     end
@@ -4453,9 +4453,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/StopBuildBatch AWS API Documentation
     #
-    # @overload stop_build_batch(params = {})
+    # @overload stop_build_batch(**params)
     # @param [Hash] params ({})
-    def stop_build_batch(params = {}, options = {})
+    def stop_build_batch(params = {}, **options)
       req = build_request(:stop_build_batch, params)
       req.send_request(options)
     end
@@ -4856,9 +4856,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateProject AWS API Documentation
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -4928,9 +4928,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateReportGroup AWS API Documentation
     #
-    # @overload update_report_group(params = {})
+    # @overload update_report_group(**params)
     # @param [Hash] params ({})
-    def update_report_group(params = {}, options = {})
+    def update_report_group(params = {}, **options)
       req = build_request(:update_report_group, params)
       req.send_request(options)
     end
@@ -5006,9 +5006,9 @@ module Aws::CodeBuild
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateWebhook AWS API Documentation
     #
-    # @overload update_webhook(params = {})
+    # @overload update_webhook(**params)
     # @param [Hash] params ({})
-    def update_webhook(params = {}, options = {})
+    def update_webhook(params = {}, **options)
       req = build_request(:update_webhook, params)
       req.send_request(options)
     end
@@ -5017,7 +5017,7 @@ module Aws::CodeBuild
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5025,15 +5025,15 @@ module Aws::CodeBuild
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codebuild'
-      context[:gem_version] = '1.65.0'
+      context[:gem_name] = "aws-sdk-codebuild"
+      context[:gem_version] = "1.65.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

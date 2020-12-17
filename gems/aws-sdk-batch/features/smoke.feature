@@ -8,11 +8,11 @@
 Feature: Smoke tests for Batch
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @batch @smoke
   Scenario: Call Aws::Batch::Client#describe_compute_environments and expect it to succeed
-  When I call the operation 'describe_compute_environments' with params:
+  When I call the operation "describe_compute_environments" with params:
     """
 {}
     """

@@ -8,11 +8,11 @@
 Feature: Smoke tests for CloudWatchLogs
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @cloudwatchlogs @smoke
   Scenario: Call Aws::CloudWatchLogs::Client#describe_log_groups and expect it to succeed
-  When I call the operation 'describe_log_groups' with params:
+  When I call the operation "describe_log_groups" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @cloudwatchlogs @smoke
   Scenario: Call Aws::Aws::CloudWatchLogs::Client#get_log_events and expect it to fail
-  When I call the operation 'get_log_events' with params:
+  When I call the operation "get_log_events" with params:
     """
 {"log_group_name":"fakegroup","log_stream_name":"fakestream"}
     """

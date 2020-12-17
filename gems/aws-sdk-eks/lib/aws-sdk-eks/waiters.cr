@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::EKS
   # Waiters are utility methods that poll for a particular state to occur
@@ -113,7 +113,7 @@ module Aws::EKS
 
       # @option (see Client#describe_addon)
       # @return (see Client#describe_addon)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -156,7 +156,7 @@ module Aws::EKS
 
       # @option (see Client#describe_addon)
       # @return (see Client#describe_addon)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -206,7 +206,7 @@ module Aws::EKS
 
       # @option (see Client#describe_cluster)
       # @return (see Client#describe_cluster)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -255,7 +255,7 @@ module Aws::EKS
 
       # @option (see Client#describe_cluster)
       # @return (see Client#describe_cluster)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -299,7 +299,7 @@ module Aws::EKS
 
       # @option (see Client#describe_nodegroup)
       # @return (see Client#describe_nodegroup)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -342,7 +342,7 @@ module Aws::EKS
 
       # @option (see Client#describe_nodegroup)
       # @return (see Client#describe_nodegroup)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

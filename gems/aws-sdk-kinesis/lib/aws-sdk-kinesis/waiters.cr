@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::Kinesis
   # Waiters are utility methods that poll for a particular state to occur
@@ -101,7 +101,7 @@ module Aws::Kinesis
 
       # @option (see Client#describe_stream)
       # @return (see Client#describe_stream)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -136,7 +136,7 @@ module Aws::Kinesis
 
       # @option (see Client#describe_stream)
       # @return (see Client#describe_stream)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

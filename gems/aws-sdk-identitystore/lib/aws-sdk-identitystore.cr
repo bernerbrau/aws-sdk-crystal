@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-identitystore/types'
-require_relative 'aws-sdk-identitystore/client_api'
-require_relative 'aws-sdk-identitystore/client'
-require_relative 'aws-sdk-identitystore/errors'
-require_relative 'aws-sdk-identitystore/resource'
-require_relative 'aws-sdk-identitystore/customizations'
+require_relative "aws-sdk-identitystore/types"
+require_relative "aws-sdk-identitystore/client_api"
+require_relative "aws-sdk-identitystore/client"
+require_relative "aws-sdk-identitystore/errors"
+require_relative "aws-sdk-identitystore/resource"
+require_relative "aws-sdk-identitystore/customizations"
 
 # This module provides support for AWS SSO Identity Store. This module is available in the
 # `aws-sdk-identitystore` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-identitystore/customizations'
 # @!group service
 module Aws::IdentityStore
 
-  GEM_VERSION = '1.3.0'
+  GEM_VERSION = "1.3.0"
 
 end

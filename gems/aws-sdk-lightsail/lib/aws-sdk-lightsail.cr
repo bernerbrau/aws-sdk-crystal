@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lightsail/types'
-require_relative 'aws-sdk-lightsail/client_api'
-require_relative 'aws-sdk-lightsail/client'
-require_relative 'aws-sdk-lightsail/errors'
-require_relative 'aws-sdk-lightsail/resource'
-require_relative 'aws-sdk-lightsail/customizations'
+require_relative "aws-sdk-lightsail/types"
+require_relative "aws-sdk-lightsail/client_api"
+require_relative "aws-sdk-lightsail/client"
+require_relative "aws-sdk-lightsail/errors"
+require_relative "aws-sdk-lightsail/resource"
+require_relative "aws-sdk-lightsail/customizations"
 
 # This module provides support for Amazon Lightsail. This module is available in the
 # `aws-sdk-lightsail` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-lightsail/customizations'
 # @!group service
 module Aws::Lightsail
 
-  GEM_VERSION = '1.40.0'
+  GEM_VERSION = "1.40.0"
 
 end

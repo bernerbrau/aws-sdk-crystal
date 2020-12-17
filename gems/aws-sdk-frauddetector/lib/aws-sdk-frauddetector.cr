@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-frauddetector/types'
-require_relative 'aws-sdk-frauddetector/client_api'
-require_relative 'aws-sdk-frauddetector/client'
-require_relative 'aws-sdk-frauddetector/errors'
-require_relative 'aws-sdk-frauddetector/resource'
-require_relative 'aws-sdk-frauddetector/customizations'
+require_relative "aws-sdk-frauddetector/types"
+require_relative "aws-sdk-frauddetector/client_api"
+require_relative "aws-sdk-frauddetector/client"
+require_relative "aws-sdk-frauddetector/errors"
+require_relative "aws-sdk-frauddetector/resource"
+require_relative "aws-sdk-frauddetector/customizations"
 
 # This module provides support for Amazon Fraud Detector. This module is available in the
 # `aws-sdk-frauddetector` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-frauddetector/customizations'
 # @!group service
 module Aws::FraudDetector
 
-  GEM_VERSION = '1.14.0'
+  GEM_VERSION = "1.14.0"
 
 end

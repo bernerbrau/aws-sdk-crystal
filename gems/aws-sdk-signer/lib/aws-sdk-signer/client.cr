@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:signer)
 
@@ -280,7 +280,7 @@ module Aws::Signer
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -369,9 +369,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/AddProfilePermission AWS API Documentation
     #
-    # @overload add_profile_permission(params = {})
+    # @overload add_profile_permission(**params)
     # @param [Hash] params ({})
-    def add_profile_permission(params = {}, options = {})
+    def add_profile_permission(params = {}, **options)
       req = build_request(:add_profile_permission, params)
       req.send_request(options)
     end
@@ -394,9 +394,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/CancelSigningProfile AWS API Documentation
     #
-    # @overload cancel_signing_profile(params = {})
+    # @overload cancel_signing_profile(**params)
     # @param [Hash] params ({})
-    def cancel_signing_profile(params = {}, options = {})
+    def cancel_signing_profile(params = {}, **options)
       req = build_request(:cancel_signing_profile, params)
       req.send_request(options)
     end
@@ -473,9 +473,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/DescribeSigningJob AWS API Documentation
     #
-    # @overload describe_signing_job(params = {})
+    # @overload describe_signing_job(**params)
     # @param [Hash] params ({})
-    def describe_signing_job(params = {}, options = {})
+    def describe_signing_job(params = {}, **options)
       req = build_request(:describe_signing_job, params)
       req.send_request(options)
     end
@@ -524,9 +524,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/GetSigningPlatform AWS API Documentation
     #
-    # @overload get_signing_platform(params = {})
+    # @overload get_signing_platform(**params)
     # @param [Hash] params ({})
-    def get_signing_platform(params = {}, options = {})
+    def get_signing_platform(params = {}, **options)
       req = build_request(:get_signing_platform, params)
       req.send_request(options)
     end
@@ -589,9 +589,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/GetSigningProfile AWS API Documentation
     #
-    # @overload get_signing_profile(params = {})
+    # @overload get_signing_profile(**params)
     # @param [Hash] params ({})
-    def get_signing_profile(params = {}, options = {})
+    def get_signing_profile(params = {}, **options)
       req = build_request(:get_signing_profile, params)
       req.send_request(options)
     end
@@ -631,9 +631,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/ListProfilePermissions AWS API Documentation
     #
-    # @overload list_profile_permissions(params = {})
+    # @overload list_profile_permissions(**params)
     # @param [Hash] params ({})
-    def list_profile_permissions(params = {}, options = {})
+    def list_profile_permissions(params = {}, **options)
       req = build_request(:list_profile_permissions, params)
       req.send_request(options)
     end
@@ -730,9 +730,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/ListSigningJobs AWS API Documentation
     #
-    # @overload list_signing_jobs(params = {})
+    # @overload list_signing_jobs(**params)
     # @param [Hash] params ({})
-    def list_signing_jobs(params = {}, options = {})
+    def list_signing_jobs(params = {}, **options)
       req = build_request(:list_signing_jobs, params)
       req.send_request(options)
     end
@@ -803,9 +803,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/ListSigningPlatforms AWS API Documentation
     #
-    # @overload list_signing_platforms(params = {})
+    # @overload list_signing_platforms(**params)
     # @param [Hash] params ({})
-    def list_signing_platforms(params = {}, options = {})
+    def list_signing_platforms(params = {}, **options)
       req = build_request(:list_signing_platforms, params)
       req.send_request(options)
     end
@@ -877,9 +877,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/ListSigningProfiles AWS API Documentation
     #
-    # @overload list_signing_profiles(params = {})
+    # @overload list_signing_profiles(**params)
     # @param [Hash] params ({})
-    def list_signing_profiles(params = {}, options = {})
+    def list_signing_profiles(params = {}, **options)
       req = build_request(:list_signing_profiles, params)
       req.send_request(options)
     end
@@ -906,9 +906,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -989,9 +989,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/PutSigningProfile AWS API Documentation
     #
-    # @overload put_signing_profile(params = {})
+    # @overload put_signing_profile(**params)
     # @param [Hash] params ({})
-    def put_signing_profile(params = {}, options = {})
+    def put_signing_profile(params = {}, **options)
       req = build_request(:put_signing_profile, params)
       req.send_request(options)
     end
@@ -1027,9 +1027,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/RemoveProfilePermission AWS API Documentation
     #
-    # @overload remove_profile_permission(params = {})
+    # @overload remove_profile_permission(**params)
     # @param [Hash] params ({})
-    def remove_profile_permission(params = {}, options = {})
+    def remove_profile_permission(params = {}, **options)
       req = build_request(:remove_profile_permission, params)
       req.send_request(options)
     end
@@ -1058,9 +1058,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/RevokeSignature AWS API Documentation
     #
-    # @overload revoke_signature(params = {})
+    # @overload revoke_signature(**params)
     # @param [Hash] params ({})
-    def revoke_signature(params = {}, options = {})
+    def revoke_signature(params = {}, **options)
       req = build_request(:revoke_signature, params)
       req.send_request(options)
     end
@@ -1096,9 +1096,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/RevokeSigningProfile AWS API Documentation
     #
-    # @overload revoke_signing_profile(params = {})
+    # @overload revoke_signing_profile(**params)
     # @param [Hash] params ({})
-    def revoke_signing_profile(params = {}, options = {})
+    def revoke_signing_profile(params = {}, **options)
       req = build_request(:revoke_signing_profile, params)
       req.send_request(options)
     end
@@ -1186,9 +1186,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/StartSigningJob AWS API Documentation
     #
-    # @overload start_signing_job(params = {})
+    # @overload start_signing_job(**params)
     # @param [Hash] params ({})
-    def start_signing_job(params = {}, options = {})
+    def start_signing_job(params = {}, **options)
       req = build_request(:start_signing_job, params)
       req.send_request(options)
     end
@@ -1218,9 +1218,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1245,9 +1245,9 @@ module Aws::Signer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/signer-2017-08-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1256,7 +1256,7 @@ module Aws::Signer
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1264,8 +1264,8 @@ module Aws::Signer
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-signer'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-signer"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -1357,7 +1357,7 @@ module Aws::Signer
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -1373,7 +1373,7 @@ module Aws::Signer
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

@@ -7,29 +7,29 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
-require 'aws-sdk-rds/plugins/cross_region_copying.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
+require "aws-sdk-rds/plugins/cross_region_copying.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:rds)
 
@@ -282,7 +282,7 @@ module Aws::RDS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -367,9 +367,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddRoleToDBCluster AWS API Documentation
     #
-    # @overload add_role_to_db_cluster(params = {})
+    # @overload add_role_to_db_cluster(**params)
     # @param [Hash] params ({})
-    def add_role_to_db_cluster(params = {}, options = {})
+    def add_role_to_db_cluster(params = {}, **options)
       req = build_request(:add_role_to_db_cluster, params)
       req.send_request(options)
     end
@@ -406,9 +406,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddRoleToDBInstance AWS API Documentation
     #
-    # @overload add_role_to_db_instance(params = {})
+    # @overload add_role_to_db_instance(**params)
     # @param [Hash] params ({})
-    def add_role_to_db_instance(params = {}, options = {})
+    def add_role_to_db_instance(params = {}, **options)
       req = build_request(:add_role_to_db_instance, params)
       req.send_request(options)
     end
@@ -487,9 +487,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddSourceIdentifierToSubscription AWS API Documentation
     #
-    # @overload add_source_identifier_to_subscription(params = {})
+    # @overload add_source_identifier_to_subscription(**params)
     # @param [Hash] params ({})
-    def add_source_identifier_to_subscription(params = {}, options = {})
+    def add_source_identifier_to_subscription(params = {}, **options)
       req = build_request(:add_source_identifier_to_subscription, params)
       req.send_request(options)
     end
@@ -549,9 +549,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddTagsToResource AWS API Documentation
     #
-    # @overload add_tags_to_resource(params = {})
+    # @overload add_tags_to_resource(**params)
     # @param [Hash] params ({})
-    def add_tags_to_resource(params = {}, options = {})
+    def add_tags_to_resource(params = {}, **options)
       req = build_request(:add_tags_to_resource, params)
       req.send_request(options)
     end
@@ -630,9 +630,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ApplyPendingMaintenanceAction AWS API Documentation
     #
-    # @overload apply_pending_maintenance_action(params = {})
+    # @overload apply_pending_maintenance_action(**params)
     # @param [Hash] params ({})
-    def apply_pending_maintenance_action(params = {}, options = {})
+    def apply_pending_maintenance_action(params = {}, **options)
       req = build_request(:apply_pending_maintenance_action, params)
       req.send_request(options)
     end
@@ -732,9 +732,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AuthorizeDBSecurityGroupIngress AWS API Documentation
     #
-    # @overload authorize_db_security_group_ingress(params = {})
+    # @overload authorize_db_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def authorize_db_security_group_ingress(params = {}, options = {})
+    def authorize_db_security_group_ingress(params = {}, **options)
       req = build_request(:authorize_db_security_group_ingress, params)
       req.send_request(options)
     end
@@ -831,9 +831,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/BacktrackDBCluster AWS API Documentation
     #
-    # @overload backtrack_db_cluster(params = {})
+    # @overload backtrack_db_cluster(**params)
     # @param [Hash] params ({})
-    def backtrack_db_cluster(params = {}, options = {})
+    def backtrack_db_cluster(params = {}, **options)
       req = build_request(:backtrack_db_cluster, params)
       req.send_request(options)
     end
@@ -890,9 +890,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CancelExportTask AWS API Documentation
     #
-    # @overload cancel_export_task(params = {})
+    # @overload cancel_export_task(**params)
     # @param [Hash] params ({})
-    def cancel_export_task(params = {}, options = {})
+    def cancel_export_task(params = {}, **options)
       req = build_request(:cancel_export_task, params)
       req.send_request(options)
     end
@@ -996,9 +996,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CopyDBClusterParameterGroup AWS API Documentation
     #
-    # @overload copy_db_cluster_parameter_group(params = {})
+    # @overload copy_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def copy_db_cluster_parameter_group(params = {}, options = {})
+    def copy_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:copy_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -1288,9 +1288,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CopyDBClusterSnapshot AWS API Documentation
     #
-    # @overload copy_db_cluster_snapshot(params = {})
+    # @overload copy_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_db_cluster_snapshot(params = {}, options = {})
+    def copy_db_cluster_snapshot(params = {}, **options)
       req = build_request(:copy_db_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -1383,9 +1383,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CopyDBParameterGroup AWS API Documentation
     #
-    # @overload copy_db_parameter_group(params = {})
+    # @overload copy_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def copy_db_parameter_group(params = {}, options = {})
+    def copy_db_parameter_group(params = {}, **options)
       req = build_request(:copy_db_parameter_group, params)
       req.send_request(options)
     end
@@ -1641,9 +1641,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CopyDBSnapshot AWS API Documentation
     #
-    # @overload copy_db_snapshot(params = {})
+    # @overload copy_db_snapshot(**params)
     # @param [Hash] params ({})
-    def copy_db_snapshot(params = {}, options = {})
+    def copy_db_snapshot(params = {}, **options)
       req = build_request(:copy_db_snapshot, params)
       req.send_request(options)
     end
@@ -1755,9 +1755,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CopyOptionGroup AWS API Documentation
     #
-    # @overload copy_option_group(params = {})
+    # @overload copy_option_group(**params)
     # @param [Hash] params ({})
-    def copy_option_group(params = {}, options = {})
+    def copy_option_group(params = {}, **options)
       req = build_request(:copy_option_group, params)
       req.send_request(options)
     end
@@ -1820,9 +1820,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateCustomAvailabilityZone AWS API Documentation
     #
-    # @overload create_custom_availability_zone(params = {})
+    # @overload create_custom_availability_zone(**params)
     # @param [Hash] params ({})
-    def create_custom_availability_zone(params = {}, options = {})
+    def create_custom_availability_zone(params = {}, **options)
       req = build_request(:create_custom_availability_zone, params)
       req.send_request(options)
     end
@@ -2421,9 +2421,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBCluster AWS API Documentation
     #
-    # @overload create_db_cluster(params = {})
+    # @overload create_db_cluster(**params)
     # @param [Hash] params ({})
-    def create_db_cluster(params = {}, options = {})
+    def create_db_cluster(params = {}, **options)
       req = build_request(:create_db_cluster, params)
       req.send_request(options)
     end
@@ -2504,9 +2504,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBClusterEndpoint AWS API Documentation
     #
-    # @overload create_db_cluster_endpoint(params = {})
+    # @overload create_db_cluster_endpoint(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_endpoint(params = {}, options = {})
+    def create_db_cluster_endpoint(params = {}, **options)
       req = build_request(:create_db_cluster_endpoint, params)
       req.send_request(options)
     end
@@ -2629,9 +2629,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBClusterParameterGroup AWS API Documentation
     #
-    # @overload create_db_cluster_parameter_group(params = {})
+    # @overload create_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_parameter_group(params = {}, options = {})
+    def create_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:create_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -2739,9 +2739,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBClusterSnapshot AWS API Documentation
     #
-    # @overload create_db_cluster_snapshot(params = {})
+    # @overload create_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def create_db_cluster_snapshot(params = {}, options = {})
+    def create_db_cluster_snapshot(params = {}, **options)
       req = build_request(:create_db_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -3819,9 +3819,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstance AWS API Documentation
     #
-    # @overload create_db_instance(params = {})
+    # @overload create_db_instance(**params)
     # @param [Hash] params ({})
-    def create_db_instance(params = {}, options = {})
+    def create_db_instance(params = {}, **options)
       req = build_request(:create_db_instance, params)
       req.send_request(options)
     end
@@ -4466,9 +4466,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstanceReadReplica AWS API Documentation
     #
-    # @overload create_db_instance_read_replica(params = {})
+    # @overload create_db_instance_read_replica(**params)
     # @param [Hash] params ({})
-    def create_db_instance_read_replica(params = {}, options = {})
+    def create_db_instance_read_replica(params = {}, **options)
       req = build_request(:create_db_instance_read_replica, params)
       req.send_request(options)
     end
@@ -4582,9 +4582,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBParameterGroup AWS API Documentation
     #
-    # @overload create_db_parameter_group(params = {})
+    # @overload create_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def create_db_parameter_group(params = {}, options = {})
+    def create_db_parameter_group(params = {}, **options)
       req = build_request(:create_db_parameter_group, params)
       req.send_request(options)
     end
@@ -4698,9 +4698,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBProxy AWS API Documentation
     #
-    # @overload create_db_proxy(params = {})
+    # @overload create_db_proxy(**params)
     # @param [Hash] params ({})
-    def create_db_proxy(params = {}, options = {})
+    def create_db_proxy(params = {}, **options)
       req = build_request(:create_db_proxy, params)
       req.send_request(options)
     end
@@ -4786,9 +4786,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBSecurityGroup AWS API Documentation
     #
-    # @overload create_db_security_group(params = {})
+    # @overload create_db_security_group(**params)
     # @param [Hash] params ({})
-    def create_db_security_group(params = {}, options = {})
+    def create_db_security_group(params = {}, **options)
       req = build_request(:create_db_security_group, params)
       req.send_request(options)
     end
@@ -4900,9 +4900,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBSnapshot AWS API Documentation
     #
-    # @overload create_db_snapshot(params = {})
+    # @overload create_db_snapshot(**params)
     # @param [Hash] params ({})
-    def create_db_snapshot(params = {}, options = {})
+    def create_db_snapshot(params = {}, **options)
       req = build_request(:create_db_snapshot, params)
       req.send_request(options)
     end
@@ -4981,9 +4981,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBSubnetGroup AWS API Documentation
     #
-    # @overload create_db_subnet_group(params = {})
+    # @overload create_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def create_db_subnet_group(params = {}, options = {})
+    def create_db_subnet_group(params = {}, **options)
       req = build_request(:create_db_subnet_group, params)
       req.send_request(options)
     end
@@ -5151,9 +5151,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateEventSubscription AWS API Documentation
     #
-    # @overload create_event_subscription(params = {})
+    # @overload create_event_subscription(**params)
     # @param [Hash] params ({})
-    def create_event_subscription(params = {}, options = {})
+    def create_event_subscription(params = {}, **options)
       req = build_request(:create_event_subscription, params)
       req.send_request(options)
     end
@@ -5234,9 +5234,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateGlobalCluster AWS API Documentation
     #
-    # @overload create_global_cluster(params = {})
+    # @overload create_global_cluster(**params)
     # @param [Hash] params ({})
-    def create_global_cluster(params = {}, options = {})
+    def create_global_cluster(params = {}, **options)
       req = build_request(:create_global_cluster, params)
       req.send_request(options)
     end
@@ -5342,9 +5342,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateOptionGroup AWS API Documentation
     #
-    # @overload create_option_group(params = {})
+    # @overload create_option_group(**params)
     # @param [Hash] params ({})
-    def create_option_group(params = {}, options = {})
+    def create_option_group(params = {}, **options)
       req = build_request(:create_option_group, params)
       req.send_request(options)
     end
@@ -5388,9 +5388,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteCustomAvailabilityZone AWS API Documentation
     #
-    # @overload delete_custom_availability_zone(params = {})
+    # @overload delete_custom_availability_zone(**params)
     # @param [Hash] params ({})
-    def delete_custom_availability_zone(params = {}, options = {})
+    def delete_custom_availability_zone(params = {}, **options)
       req = build_request(:delete_custom_availability_zone, params)
       req.send_request(options)
     end
@@ -5567,9 +5567,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBCluster AWS API Documentation
     #
-    # @overload delete_db_cluster(params = {})
+    # @overload delete_db_cluster(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster(params = {}, options = {})
+    def delete_db_cluster(params = {}, **options)
       req = build_request(:delete_db_cluster, params)
       req.send_request(options)
     end
@@ -5621,9 +5621,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBClusterEndpoint AWS API Documentation
     #
-    # @overload delete_db_cluster_endpoint(params = {})
+    # @overload delete_db_cluster_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_endpoint(params = {}, options = {})
+    def delete_db_cluster_endpoint(params = {}, **options)
       req = build_request(:delete_db_cluster_endpoint, params)
       req.send_request(options)
     end
@@ -5673,9 +5673,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBClusterParameterGroup AWS API Documentation
     #
-    # @overload delete_db_cluster_parameter_group(params = {})
+    # @overload delete_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_parameter_group(params = {}, options = {})
+    def delete_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:delete_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -5759,9 +5759,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBClusterSnapshot AWS API Documentation
     #
-    # @overload delete_db_cluster_snapshot(params = {})
+    # @overload delete_db_cluster_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_db_cluster_snapshot(params = {}, options = {})
+    def delete_db_cluster_snapshot(params = {}, **options)
       req = build_request(:delete_db_cluster_snapshot, params)
       req.send_request(options)
     end
@@ -6005,9 +6005,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBInstance AWS API Documentation
     #
-    # @overload delete_db_instance(params = {})
+    # @overload delete_db_instance(**params)
     # @param [Hash] params ({})
-    def delete_db_instance(params = {}, options = {})
+    def delete_db_instance(params = {}, **options)
       req = build_request(:delete_db_instance, params)
       req.send_request(options)
     end
@@ -6069,9 +6069,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBInstanceAutomatedBackup AWS API Documentation
     #
-    # @overload delete_db_instance_automated_backup(params = {})
+    # @overload delete_db_instance_automated_backup(**params)
     # @param [Hash] params ({})
-    def delete_db_instance_automated_backup(params = {}, options = {})
+    def delete_db_instance_automated_backup(params = {}, **options)
       req = build_request(:delete_db_instance_automated_backup, params)
       req.send_request(options)
     end
@@ -6109,9 +6109,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBParameterGroup AWS API Documentation
     #
-    # @overload delete_db_parameter_group(params = {})
+    # @overload delete_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def delete_db_parameter_group(params = {}, options = {})
+    def delete_db_parameter_group(params = {}, **options)
       req = build_request(:delete_db_parameter_group, params)
       req.send_request(options)
     end
@@ -6157,9 +6157,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBProxy AWS API Documentation
     #
-    # @overload delete_db_proxy(params = {})
+    # @overload delete_db_proxy(**params)
     # @param [Hash] params ({})
-    def delete_db_proxy(params = {}, options = {})
+    def delete_db_proxy(params = {}, **options)
       req = build_request(:delete_db_proxy, params)
       req.send_request(options)
     end
@@ -6207,9 +6207,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBSecurityGroup AWS API Documentation
     #
-    # @overload delete_db_security_group(params = {})
+    # @overload delete_db_security_group(**params)
     # @param [Hash] params ({})
-    def delete_db_security_group(params = {}, options = {})
+    def delete_db_security_group(params = {}, **options)
       req = build_request(:delete_db_security_group, params)
       req.send_request(options)
     end
@@ -6290,9 +6290,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBSnapshot AWS API Documentation
     #
-    # @overload delete_db_snapshot(params = {})
+    # @overload delete_db_snapshot(**params)
     # @param [Hash] params ({})
-    def delete_db_snapshot(params = {}, options = {})
+    def delete_db_snapshot(params = {}, **options)
       req = build_request(:delete_db_snapshot, params)
       req.send_request(options)
     end
@@ -6337,9 +6337,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBSubnetGroup AWS API Documentation
     #
-    # @overload delete_db_subnet_group(params = {})
+    # @overload delete_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def delete_db_subnet_group(params = {}, options = {})
+    def delete_db_subnet_group(params = {}, **options)
       req = build_request(:delete_db_subnet_group, params)
       req.send_request(options)
     end
@@ -6392,9 +6392,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteEventSubscription AWS API Documentation
     #
-    # @overload delete_event_subscription(params = {})
+    # @overload delete_event_subscription(**params)
     # @param [Hash] params ({})
-    def delete_event_subscription(params = {}, options = {})
+    def delete_event_subscription(params = {}, **options)
       req = build_request(:delete_event_subscription, params)
       req.send_request(options)
     end
@@ -6439,9 +6439,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteGlobalCluster AWS API Documentation
     #
-    # @overload delete_global_cluster(params = {})
+    # @overload delete_global_cluster(**params)
     # @param [Hash] params ({})
-    def delete_global_cluster(params = {}, options = {})
+    def delete_global_cluster(params = {}, **options)
       req = build_request(:delete_global_cluster, params)
       req.send_request(options)
     end
@@ -6482,9 +6482,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteInstallationMedia AWS API Documentation
     #
-    # @overload delete_installation_media(params = {})
+    # @overload delete_installation_media(**params)
     # @param [Hash] params ({})
-    def delete_installation_media(params = {}, options = {})
+    def delete_installation_media(params = {}, **options)
       req = build_request(:delete_installation_media, params)
       req.send_request(options)
     end
@@ -6517,9 +6517,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteOptionGroup AWS API Documentation
     #
-    # @overload delete_option_group(params = {})
+    # @overload delete_option_group(**params)
     # @param [Hash] params ({})
-    def delete_option_group(params = {}, options = {})
+    def delete_option_group(params = {}, **options)
       req = build_request(:delete_option_group, params)
       req.send_request(options)
     end
@@ -6553,9 +6553,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeregisterDBProxyTargets AWS API Documentation
     #
-    # @overload deregister_db_proxy_targets(params = {})
+    # @overload deregister_db_proxy_targets(**params)
     # @param [Hash] params ({})
-    def deregister_db_proxy_targets(params = {}, options = {})
+    def deregister_db_proxy_targets(params = {}, **options)
       req = build_request(:deregister_db_proxy_targets, params)
       req.send_request(options)
     end
@@ -6592,9 +6592,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeAccountAttributes AWS API Documentation
     #
-    # @overload describe_account_attributes(params = {})
+    # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, options = {})
+    def describe_account_attributes(params = {}, **options)
       req = build_request(:describe_account_attributes, params)
       req.send_request(options)
     end
@@ -6682,9 +6682,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeCertificates AWS API Documentation
     #
-    # @overload describe_certificates(params = {})
+    # @overload describe_certificates(**params)
     # @param [Hash] params ({})
-    def describe_certificates(params = {}, options = {})
+    def describe_certificates(params = {}, **options)
       req = build_request(:describe_certificates, params)
       req.send_request(options)
     end
@@ -6761,9 +6761,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeCustomAvailabilityZones AWS API Documentation
     #
-    # @overload describe_custom_availability_zones(params = {})
+    # @overload describe_custom_availability_zones(**params)
     # @param [Hash] params ({})
-    def describe_custom_availability_zones(params = {}, options = {})
+    def describe_custom_availability_zones(params = {}, **options)
       req = build_request(:describe_custom_availability_zones, params)
       req.send_request(options)
     end
@@ -6886,9 +6886,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusterBacktracks AWS API Documentation
     #
-    # @overload describe_db_cluster_backtracks(params = {})
+    # @overload describe_db_cluster_backtracks(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_backtracks(params = {}, options = {})
+    def describe_db_cluster_backtracks(params = {}, **options)
       req = build_request(:describe_db_cluster_backtracks, params)
       req.send_request(options)
     end
@@ -6977,9 +6977,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusterEndpoints AWS API Documentation
     #
-    # @overload describe_db_cluster_endpoints(params = {})
+    # @overload describe_db_cluster_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_endpoints(params = {}, options = {})
+    def describe_db_cluster_endpoints(params = {}, **options)
       req = build_request(:describe_db_cluster_endpoints, params)
       req.send_request(options)
     end
@@ -7075,9 +7075,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusterParameterGroups AWS API Documentation
     #
-    # @overload describe_db_cluster_parameter_groups(params = {})
+    # @overload describe_db_cluster_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_parameter_groups(params = {}, options = {})
+    def describe_db_cluster_parameter_groups(params = {}, **options)
       req = build_request(:describe_db_cluster_parameter_groups, params)
       req.send_request(options)
     end
@@ -7185,9 +7185,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusterParameters AWS API Documentation
     #
-    # @overload describe_db_cluster_parameters(params = {})
+    # @overload describe_db_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_parameters(params = {}, options = {})
+    def describe_db_cluster_parameters(params = {}, **options)
       req = build_request(:describe_db_cluster_parameters, params)
       req.send_request(options)
     end
@@ -7249,9 +7249,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusterSnapshotAttributes AWS API Documentation
     #
-    # @overload describe_db_cluster_snapshot_attributes(params = {})
+    # @overload describe_db_cluster_snapshot_attributes(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_snapshot_attributes(params = {}, options = {})
+    def describe_db_cluster_snapshot_attributes(params = {}, **options)
       req = build_request(:describe_db_cluster_snapshot_attributes, params)
       req.send_request(options)
     end
@@ -7447,9 +7447,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusterSnapshots AWS API Documentation
     #
-    # @overload describe_db_cluster_snapshots(params = {})
+    # @overload describe_db_cluster_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_db_cluster_snapshots(params = {}, options = {})
+    def describe_db_cluster_snapshots(params = {}, **options)
       req = build_request(:describe_db_cluster_snapshots, params)
       req.send_request(options)
     end
@@ -7633,9 +7633,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBClusters AWS API Documentation
     #
-    # @overload describe_db_clusters(params = {})
+    # @overload describe_db_clusters(**params)
     # @param [Hash] params ({})
-    def describe_db_clusters(params = {}, options = {})
+    def describe_db_clusters(params = {}, **options)
       req = build_request(:describe_db_clusters, params)
       req.send_request(options)
     end
@@ -7786,9 +7786,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBEngineVersions AWS API Documentation
     #
-    # @overload describe_db_engine_versions(params = {})
+    # @overload describe_db_engine_versions(**params)
     # @param [Hash] params ({})
-    def describe_db_engine_versions(params = {}, options = {})
+    def describe_db_engine_versions(params = {}, **options)
       req = build_request(:describe_db_engine_versions, params)
       req.send_request(options)
     end
@@ -7913,9 +7913,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBInstanceAutomatedBackups AWS API Documentation
     #
-    # @overload describe_db_instance_automated_backups(params = {})
+    # @overload describe_db_instance_automated_backups(**params)
     # @param [Hash] params ({})
-    def describe_db_instance_automated_backups(params = {}, options = {})
+    def describe_db_instance_automated_backups(params = {}, **options)
       req = build_request(:describe_db_instance_automated_backups, params)
       req.send_request(options)
     end
@@ -8148,9 +8148,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBInstances AWS API Documentation
     #
-    # @overload describe_db_instances(params = {})
+    # @overload describe_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_db_instances(params = {}, options = {})
+    def describe_db_instances(params = {}, **options)
       req = build_request(:describe_db_instances, params)
       req.send_request(options)
     end
@@ -8244,9 +8244,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBLogFiles AWS API Documentation
     #
-    # @overload describe_db_log_files(params = {})
+    # @overload describe_db_log_files(**params)
     # @param [Hash] params ({})
-    def describe_db_log_files(params = {}, options = {})
+    def describe_db_log_files(params = {}, **options)
       req = build_request(:describe_db_log_files, params)
       req.send_request(options)
     end
@@ -8329,9 +8329,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBParameterGroups AWS API Documentation
     #
-    # @overload describe_db_parameter_groups(params = {})
+    # @overload describe_db_parameter_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_parameter_groups(params = {}, options = {})
+    def describe_db_parameter_groups(params = {}, **options)
       req = build_request(:describe_db_parameter_groups, params)
       req.send_request(options)
     end
@@ -8430,9 +8430,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBParameters AWS API Documentation
     #
-    # @overload describe_db_parameters(params = {})
+    # @overload describe_db_parameters(**params)
     # @param [Hash] params ({})
-    def describe_db_parameters(params = {}, options = {})
+    def describe_db_parameters(params = {}, **options)
       req = build_request(:describe_db_parameters, params)
       req.send_request(options)
     end
@@ -8509,9 +8509,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBProxies AWS API Documentation
     #
-    # @overload describe_db_proxies(params = {})
+    # @overload describe_db_proxies(**params)
     # @param [Hash] params ({})
-    def describe_db_proxies(params = {}, options = {})
+    def describe_db_proxies(params = {}, **options)
       req = build_request(:describe_db_proxies, params)
       req.send_request(options)
     end
@@ -8585,9 +8585,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBProxyTargetGroups AWS API Documentation
     #
-    # @overload describe_db_proxy_target_groups(params = {})
+    # @overload describe_db_proxy_target_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_proxy_target_groups(params = {}, options = {})
+    def describe_db_proxy_target_groups(params = {}, **options)
       req = build_request(:describe_db_proxy_target_groups, params)
       req.send_request(options)
     end
@@ -8657,9 +8657,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBProxyTargets AWS API Documentation
     #
-    # @overload describe_db_proxy_targets(params = {})
+    # @overload describe_db_proxy_targets(**params)
     # @param [Hash] params ({})
-    def describe_db_proxy_targets(params = {}, options = {})
+    def describe_db_proxy_targets(params = {}, **options)
       req = build_request(:describe_db_proxy_targets, params)
       req.send_request(options)
     end
@@ -8744,9 +8744,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSecurityGroups AWS API Documentation
     #
-    # @overload describe_db_security_groups(params = {})
+    # @overload describe_db_security_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_security_groups(params = {}, options = {})
+    def describe_db_security_groups(params = {}, **options)
       req = build_request(:describe_db_security_groups, params)
       req.send_request(options)
     end
@@ -8803,9 +8803,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSnapshotAttributes AWS API Documentation
     #
-    # @overload describe_db_snapshot_attributes(params = {})
+    # @overload describe_db_snapshot_attributes(**params)
     # @param [Hash] params ({})
-    def describe_db_snapshot_attributes(params = {}, options = {})
+    def describe_db_snapshot_attributes(params = {}, **options)
       req = build_request(:describe_db_snapshot_attributes, params)
       req.send_request(options)
     end
@@ -9017,9 +9017,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSnapshots AWS API Documentation
     #
-    # @overload describe_db_snapshots(params = {})
+    # @overload describe_db_snapshots(**params)
     # @param [Hash] params ({})
-    def describe_db_snapshots(params = {}, options = {})
+    def describe_db_snapshots(params = {}, **options)
       req = build_request(:describe_db_snapshots, params)
       req.send_request(options)
     end
@@ -9107,9 +9107,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSubnetGroups AWS API Documentation
     #
-    # @overload describe_db_subnet_groups(params = {})
+    # @overload describe_db_subnet_groups(**params)
     # @param [Hash] params ({})
-    def describe_db_subnet_groups(params = {}, options = {})
+    def describe_db_subnet_groups(params = {}, **options)
       req = build_request(:describe_db_subnet_groups, params)
       req.send_request(options)
     end
@@ -9200,9 +9200,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeEngineDefaultClusterParameters AWS API Documentation
     #
-    # @overload describe_engine_default_cluster_parameters(params = {})
+    # @overload describe_engine_default_cluster_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_cluster_parameters(params = {}, options = {})
+    def describe_engine_default_cluster_parameters(params = {}, **options)
       req = build_request(:describe_engine_default_cluster_parameters, params)
       req.send_request(options)
     end
@@ -9287,9 +9287,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeEngineDefaultParameters AWS API Documentation
     #
-    # @overload describe_engine_default_parameters(params = {})
+    # @overload describe_engine_default_parameters(**params)
     # @param [Hash] params ({})
-    def describe_engine_default_parameters(params = {}, options = {})
+    def describe_engine_default_parameters(params = {}, **options)
       req = build_request(:describe_engine_default_parameters, params)
       req.send_request(options)
     end
@@ -9350,9 +9350,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeEventCategories AWS API Documentation
     #
-    # @overload describe_event_categories(params = {})
+    # @overload describe_event_categories(**params)
     # @param [Hash] params ({})
-    def describe_event_categories(params = {}, options = {})
+    def describe_event_categories(params = {}, **options)
       req = build_request(:describe_event_categories, params)
       req.send_request(options)
     end
@@ -9441,9 +9441,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeEventSubscriptions AWS API Documentation
     #
-    # @overload describe_event_subscriptions(params = {})
+    # @overload describe_event_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_event_subscriptions(params = {}, options = {})
+    def describe_event_subscriptions(params = {}, **options)
       req = build_request(:describe_event_subscriptions, params)
       req.send_request(options)
     end
@@ -9600,9 +9600,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -9695,9 +9695,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeExportTasks AWS API Documentation
     #
-    # @overload describe_export_tasks(params = {})
+    # @overload describe_export_tasks(**params)
     # @param [Hash] params ({})
-    def describe_export_tasks(params = {}, options = {})
+    def describe_export_tasks(params = {}, **options)
       req = build_request(:describe_export_tasks, params)
       req.send_request(options)
     end
@@ -9797,9 +9797,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeGlobalClusters AWS API Documentation
     #
-    # @overload describe_global_clusters(params = {})
+    # @overload describe_global_clusters(**params)
     # @param [Hash] params ({})
-    def describe_global_clusters(params = {}, options = {})
+    def describe_global_clusters(params = {}, **options)
       req = build_request(:describe_global_clusters, params)
       req.send_request(options)
     end
@@ -9873,9 +9873,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeInstallationMedia AWS API Documentation
     #
-    # @overload describe_installation_media(params = {})
+    # @overload describe_installation_media(**params)
     # @param [Hash] params ({})
-    def describe_installation_media(params = {}, options = {})
+    def describe_installation_media(params = {}, **options)
       req = build_request(:describe_installation_media, params)
       req.send_request(options)
     end
@@ -9981,9 +9981,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeOptionGroupOptions AWS API Documentation
     #
-    # @overload describe_option_group_options(params = {})
+    # @overload describe_option_group_options(**params)
     # @param [Hash] params ({})
-    def describe_option_group_options(params = {}, options = {})
+    def describe_option_group_options(params = {}, **options)
       req = build_request(:describe_option_group_options, params)
       req.send_request(options)
     end
@@ -10096,9 +10096,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeOptionGroups AWS API Documentation
     #
-    # @overload describe_option_groups(params = {})
+    # @overload describe_option_groups(**params)
     # @param [Hash] params ({})
-    def describe_option_groups(params = {}, options = {})
+    def describe_option_groups(params = {}, **options)
       req = build_request(:describe_option_groups, params)
       req.send_request(options)
     end
@@ -10234,9 +10234,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeOrderableDBInstanceOptions AWS API Documentation
     #
-    # @overload describe_orderable_db_instance_options(params = {})
+    # @overload describe_orderable_db_instance_options(**params)
     # @param [Hash] params ({})
-    def describe_orderable_db_instance_options(params = {}, options = {})
+    def describe_orderable_db_instance_options(params = {}, **options)
       req = build_request(:describe_orderable_db_instance_options, params)
       req.send_request(options)
     end
@@ -10327,9 +10327,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribePendingMaintenanceActions AWS API Documentation
     #
-    # @overload describe_pending_maintenance_actions(params = {})
+    # @overload describe_pending_maintenance_actions(**params)
     # @param [Hash] params ({})
-    def describe_pending_maintenance_actions(params = {}, options = {})
+    def describe_pending_maintenance_actions(params = {}, **options)
       req = build_request(:describe_pending_maintenance_actions, params)
       req.send_request(options)
     end
@@ -10469,9 +10469,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeReservedDBInstances AWS API Documentation
     #
-    # @overload describe_reserved_db_instances(params = {})
+    # @overload describe_reserved_db_instances(**params)
     # @param [Hash] params ({})
-    def describe_reserved_db_instances(params = {}, options = {})
+    def describe_reserved_db_instances(params = {}, **options)
       req = build_request(:describe_reserved_db_instances, params)
       req.send_request(options)
     end
@@ -10595,9 +10595,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeReservedDBInstancesOfferings AWS API Documentation
     #
-    # @overload describe_reserved_db_instances_offerings(params = {})
+    # @overload describe_reserved_db_instances_offerings(**params)
     # @param [Hash] params ({})
-    def describe_reserved_db_instances_offerings(params = {}, options = {})
+    def describe_reserved_db_instances_offerings(params = {}, **options)
       req = build_request(:describe_reserved_db_instances_offerings, params)
       req.send_request(options)
     end
@@ -10730,9 +10730,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeSourceRegions AWS API Documentation
     #
-    # @overload describe_source_regions(params = {})
+    # @overload describe_source_regions(**params)
     # @param [Hash] params ({})
-    def describe_source_regions(params = {}, options = {})
+    def describe_source_regions(params = {}, **options)
       req = build_request(:describe_source_regions, params)
       req.send_request(options)
     end
@@ -10777,9 +10777,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeValidDBInstanceModifications AWS API Documentation
     #
-    # @overload describe_valid_db_instance_modifications(params = {})
+    # @overload describe_valid_db_instance_modifications(**params)
     # @param [Hash] params ({})
-    def describe_valid_db_instance_modifications(params = {}, options = {})
+    def describe_valid_db_instance_modifications(params = {}, **options)
       req = build_request(:describe_valid_db_instance_modifications, params)
       req.send_request(options)
     end
@@ -10870,9 +10870,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DownloadDBLogFilePortion AWS API Documentation
     #
-    # @overload download_db_log_file_portion(params = {})
+    # @overload download_db_log_file_portion(**params)
     # @param [Hash] params ({})
-    def download_db_log_file_portion(params = {}, options = {})
+    def download_db_log_file_portion(params = {}, **options)
       req = build_request(:download_db_log_file_portion, params)
       req.send_request(options)
     end
@@ -11029,9 +11029,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/FailoverDBCluster AWS API Documentation
     #
-    # @overload failover_db_cluster(params = {})
+    # @overload failover_db_cluster(**params)
     # @param [Hash] params ({})
-    def failover_db_cluster(params = {}, options = {})
+    def failover_db_cluster(params = {}, **options)
       req = build_request(:failover_db_cluster, params)
       req.send_request(options)
     end
@@ -11123,9 +11123,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ImportInstallationMedia AWS API Documentation
     #
-    # @overload import_installation_media(params = {})
+    # @overload import_installation_media(**params)
     # @param [Hash] params ({})
-    def import_installation_media(params = {}, options = {})
+    def import_installation_media(params = {}, **options)
       req = build_request(:import_installation_media, params)
       req.send_request(options)
     end
@@ -11189,9 +11189,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -11268,9 +11268,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyCertificates AWS API Documentation
     #
-    # @overload modify_certificates(params = {})
+    # @overload modify_certificates(**params)
     # @param [Hash] params ({})
-    def modify_certificates(params = {}, options = {})
+    def modify_certificates(params = {}, **options)
       req = build_request(:modify_certificates, params)
       req.send_request(options)
     end
@@ -11376,9 +11376,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyCurrentDBClusterCapacity AWS API Documentation
     #
-    # @overload modify_current_db_cluster_capacity(params = {})
+    # @overload modify_current_db_cluster_capacity(**params)
     # @param [Hash] params ({})
-    def modify_current_db_cluster_capacity(params = {}, options = {})
+    def modify_current_db_cluster_capacity(params = {}, **options)
       req = build_request(:modify_current_db_cluster_capacity, params)
       req.send_request(options)
     end
@@ -11810,9 +11810,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBCluster AWS API Documentation
     #
-    # @overload modify_db_cluster(params = {})
+    # @overload modify_db_cluster(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster(params = {}, options = {})
+    def modify_db_cluster(params = {}, **options)
       req = build_request(:modify_db_cluster, params)
       req.send_request(options)
     end
@@ -11878,9 +11878,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBClusterEndpoint AWS API Documentation
     #
-    # @overload modify_db_cluster_endpoint(params = {})
+    # @overload modify_db_cluster_endpoint(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_endpoint(params = {}, options = {})
+    def modify_db_cluster_endpoint(params = {}, **options)
       req = build_request(:modify_db_cluster_endpoint, params)
       req.send_request(options)
     end
@@ -11983,9 +11983,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBClusterParameterGroup AWS API Documentation
     #
-    # @overload modify_db_cluster_parameter_group(params = {})
+    # @overload modify_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_parameter_group(params = {}, options = {})
+    def modify_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:modify_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -12105,9 +12105,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBClusterSnapshotAttribute AWS API Documentation
     #
-    # @overload modify_db_cluster_snapshot_attribute(params = {})
+    # @overload modify_db_cluster_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_db_cluster_snapshot_attribute(params = {}, options = {})
+    def modify_db_cluster_snapshot_attribute(params = {}, **options)
       req = build_request(:modify_db_cluster_snapshot_attribute, params)
       req.send_request(options)
     end
@@ -12963,9 +12963,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBInstance AWS API Documentation
     #
-    # @overload modify_db_instance(params = {})
+    # @overload modify_db_instance(**params)
     # @param [Hash] params ({})
-    def modify_db_instance(params = {}, options = {})
+    def modify_db_instance(params = {}, **options)
       req = build_request(:modify_db_instance, params)
       req.send_request(options)
     end
@@ -13073,9 +13073,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBParameterGroup AWS API Documentation
     #
-    # @overload modify_db_parameter_group(params = {})
+    # @overload modify_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def modify_db_parameter_group(params = {}, options = {})
+    def modify_db_parameter_group(params = {}, **options)
       req = build_request(:modify_db_parameter_group, params)
       req.send_request(options)
     end
@@ -13171,9 +13171,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBProxy AWS API Documentation
     #
-    # @overload modify_db_proxy(params = {})
+    # @overload modify_db_proxy(**params)
     # @param [Hash] params ({})
-    def modify_db_proxy(params = {}, options = {})
+    def modify_db_proxy(params = {}, **options)
       req = build_request(:modify_db_proxy, params)
       req.send_request(options)
     end
@@ -13233,9 +13233,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBProxyTargetGroup AWS API Documentation
     #
-    # @overload modify_db_proxy_target_group(params = {})
+    # @overload modify_db_proxy_target_group(**params)
     # @param [Hash] params ({})
-    def modify_db_proxy_target_group(params = {}, options = {})
+    def modify_db_proxy_target_group(params = {}, **options)
       req = build_request(:modify_db_proxy_target_group, params)
       req.send_request(options)
     end
@@ -13340,9 +13340,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBSnapshot AWS API Documentation
     #
-    # @overload modify_db_snapshot(params = {})
+    # @overload modify_db_snapshot(**params)
     # @param [Hash] params ({})
-    def modify_db_snapshot(params = {}, options = {})
+    def modify_db_snapshot(params = {}, **options)
       req = build_request(:modify_db_snapshot, params)
       req.send_request(options)
     end
@@ -13450,9 +13450,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBSnapshotAttribute AWS API Documentation
     #
-    # @overload modify_db_snapshot_attribute(params = {})
+    # @overload modify_db_snapshot_attribute(**params)
     # @param [Hash] params ({})
-    def modify_db_snapshot_attribute(params = {}, options = {})
+    def modify_db_snapshot_attribute(params = {}, **options)
       req = build_request(:modify_db_snapshot_attribute, params)
       req.send_request(options)
     end
@@ -13521,9 +13521,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBSubnetGroup AWS API Documentation
     #
-    # @overload modify_db_subnet_group(params = {})
+    # @overload modify_db_subnet_group(**params)
     # @param [Hash] params ({})
-    def modify_db_subnet_group(params = {}, options = {})
+    def modify_db_subnet_group(params = {}, **options)
       req = build_request(:modify_db_subnet_group, params)
       req.send_request(options)
     end
@@ -13624,9 +13624,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyEventSubscription AWS API Documentation
     #
-    # @overload modify_event_subscription(params = {})
+    # @overload modify_event_subscription(**params)
     # @param [Hash] params ({})
-    def modify_event_subscription(params = {}, options = {})
+    def modify_event_subscription(params = {}, **options)
       req = build_request(:modify_event_subscription, params)
       req.send_request(options)
     end
@@ -13707,9 +13707,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyGlobalCluster AWS API Documentation
     #
-    # @overload modify_global_cluster(params = {})
+    # @overload modify_global_cluster(**params)
     # @param [Hash] params ({})
-    def modify_global_cluster(params = {}, options = {})
+    def modify_global_cluster(params = {}, **options)
       req = build_request(:modify_global_cluster, params)
       req.send_request(options)
     end
@@ -13830,9 +13830,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyOptionGroup AWS API Documentation
     #
-    # @overload modify_option_group(params = {})
+    # @overload modify_option_group(**params)
     # @param [Hash] params ({})
-    def modify_option_group(params = {}, options = {})
+    def modify_option_group(params = {}, **options)
       req = build_request(:modify_option_group, params)
       req.send_request(options)
     end
@@ -14056,9 +14056,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/PromoteReadReplica AWS API Documentation
     #
-    # @overload promote_read_replica(params = {})
+    # @overload promote_read_replica(**params)
     # @param [Hash] params ({})
-    def promote_read_replica(params = {}, options = {})
+    def promote_read_replica(params = {}, **options)
       req = build_request(:promote_read_replica, params)
       req.send_request(options)
     end
@@ -14176,9 +14176,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/PromoteReadReplicaDBCluster AWS API Documentation
     #
-    # @overload promote_read_replica_db_cluster(params = {})
+    # @overload promote_read_replica_db_cluster(**params)
     # @param [Hash] params ({})
-    def promote_read_replica_db_cluster(params = {}, options = {})
+    def promote_read_replica_db_cluster(params = {}, **options)
       req = build_request(:promote_read_replica_db_cluster, params)
       req.send_request(options)
     end
@@ -14265,9 +14265,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/PurchaseReservedDBInstancesOffering AWS API Documentation
     #
-    # @overload purchase_reserved_db_instances_offering(params = {})
+    # @overload purchase_reserved_db_instances_offering(**params)
     # @param [Hash] params ({})
-    def purchase_reserved_db_instances_offering(params = {}, options = {})
+    def purchase_reserved_db_instances_offering(params = {}, **options)
       req = build_request(:purchase_reserved_db_instances_offering, params)
       req.send_request(options)
     end
@@ -14458,9 +14458,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RebootDBInstance AWS API Documentation
     #
-    # @overload reboot_db_instance(params = {})
+    # @overload reboot_db_instance(**params)
     # @param [Hash] params ({})
-    def reboot_db_instance(params = {}, options = {})
+    def reboot_db_instance(params = {}, **options)
       req = build_request(:reboot_db_instance, params)
       req.send_request(options)
     end
@@ -14509,9 +14509,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RegisterDBProxyTargets AWS API Documentation
     #
-    # @overload register_db_proxy_targets(params = {})
+    # @overload register_db_proxy_targets(**params)
     # @param [Hash] params ({})
-    def register_db_proxy_targets(params = {}, options = {})
+    def register_db_proxy_targets(params = {}, **options)
       req = build_request(:register_db_proxy_targets, params)
       req.send_request(options)
     end
@@ -14564,9 +14564,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveFromGlobalCluster AWS API Documentation
     #
-    # @overload remove_from_global_cluster(params = {})
+    # @overload remove_from_global_cluster(**params)
     # @param [Hash] params ({})
-    def remove_from_global_cluster(params = {}, options = {})
+    def remove_from_global_cluster(params = {}, **options)
       req = build_request(:remove_from_global_cluster, params)
       req.send_request(options)
     end
@@ -14609,9 +14609,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveRoleFromDBCluster AWS API Documentation
     #
-    # @overload remove_role_from_db_cluster(params = {})
+    # @overload remove_role_from_db_cluster(**params)
     # @param [Hash] params ({})
-    def remove_role_from_db_cluster(params = {}, options = {})
+    def remove_role_from_db_cluster(params = {}, **options)
       req = build_request(:remove_role_from_db_cluster, params)
       req.send_request(options)
     end
@@ -14644,9 +14644,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveRoleFromDBInstance AWS API Documentation
     #
-    # @overload remove_role_from_db_instance(params = {})
+    # @overload remove_role_from_db_instance(**params)
     # @param [Hash] params ({})
-    def remove_role_from_db_instance(params = {}, options = {})
+    def remove_role_from_db_instance(params = {}, **options)
       req = build_request(:remove_role_from_db_instance, params)
       req.send_request(options)
     end
@@ -14707,9 +14707,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveSourceIdentifierFromSubscription AWS API Documentation
     #
-    # @overload remove_source_identifier_from_subscription(params = {})
+    # @overload remove_source_identifier_from_subscription(**params)
     # @param [Hash] params ({})
-    def remove_source_identifier_from_subscription(params = {}, options = {})
+    def remove_source_identifier_from_subscription(params = {}, **options)
       req = build_request(:remove_source_identifier_from_subscription, params)
       req.send_request(options)
     end
@@ -14759,9 +14759,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveTagsFromResource AWS API Documentation
     #
-    # @overload remove_tags_from_resource(params = {})
+    # @overload remove_tags_from_resource(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_resource(params = {}, options = {})
+    def remove_tags_from_resource(params = {}, **options)
       req = build_request(:remove_tags_from_resource, params)
       req.send_request(options)
     end
@@ -14849,9 +14849,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ResetDBClusterParameterGroup AWS API Documentation
     #
-    # @overload reset_db_cluster_parameter_group(params = {})
+    # @overload reset_db_cluster_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_db_cluster_parameter_group(params = {}, options = {})
+    def reset_db_cluster_parameter_group(params = {}, **options)
       req = build_request(:reset_db_cluster_parameter_group, params)
       req.send_request(options)
     end
@@ -14952,9 +14952,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ResetDBParameterGroup AWS API Documentation
     #
-    # @overload reset_db_parameter_group(params = {})
+    # @overload reset_db_parameter_group(**params)
     # @param [Hash] params ({})
-    def reset_db_parameter_group(params = {}, options = {})
+    def reset_db_parameter_group(params = {}, **options)
       req = build_request(:reset_db_parameter_group, params)
       req.send_request(options)
     end
@@ -15406,9 +15406,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBClusterFromS3 AWS API Documentation
     #
-    # @overload restore_db_cluster_from_s3(params = {})
+    # @overload restore_db_cluster_from_s3(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_from_s3(params = {}, options = {})
+    def restore_db_cluster_from_s3(params = {}, **options)
       req = build_request(:restore_db_cluster_from_s3, params)
       req.send_request(options)
     end
@@ -15800,9 +15800,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBClusterFromSnapshot AWS API Documentation
     #
-    # @overload restore_db_cluster_from_snapshot(params = {})
+    # @overload restore_db_cluster_from_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_from_snapshot(params = {}, options = {})
+    def restore_db_cluster_from_snapshot(params = {}, **options)
       req = build_request(:restore_db_cluster_from_snapshot, params)
       req.send_request(options)
     end
@@ -16171,9 +16171,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBClusterToPointInTime AWS API Documentation
     #
-    # @overload restore_db_cluster_to_point_in_time(params = {})
+    # @overload restore_db_cluster_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_db_cluster_to_point_in_time(params = {}, options = {})
+    def restore_db_cluster_to_point_in_time(params = {}, **options)
       req = build_request(:restore_db_cluster_to_point_in_time, params)
       req.send_request(options)
     end
@@ -16748,9 +16748,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromDBSnapshot AWS API Documentation
     #
-    # @overload restore_db_instance_from_db_snapshot(params = {})
+    # @overload restore_db_instance_from_db_snapshot(**params)
     # @param [Hash] params ({})
-    def restore_db_instance_from_db_snapshot(params = {}, options = {})
+    def restore_db_instance_from_db_snapshot(params = {}, **options)
       req = build_request(:restore_db_instance_from_db_snapshot, params)
       req.send_request(options)
     end
@@ -17316,9 +17316,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromS3 AWS API Documentation
     #
-    # @overload restore_db_instance_from_s3(params = {})
+    # @overload restore_db_instance_from_s3(**params)
     # @param [Hash] params ({})
-    def restore_db_instance_from_s3(params = {}, options = {})
+    def restore_db_instance_from_s3(params = {}, **options)
       req = build_request(:restore_db_instance_from_s3, params)
       req.send_request(options)
     end
@@ -17911,9 +17911,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceToPointInTime AWS API Documentation
     #
-    # @overload restore_db_instance_to_point_in_time(params = {})
+    # @overload restore_db_instance_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_db_instance_to_point_in_time(params = {}, options = {})
+    def restore_db_instance_to_point_in_time(params = {}, **options)
       req = build_request(:restore_db_instance_to_point_in_time, params)
       req.send_request(options)
     end
@@ -18000,9 +18000,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RevokeDBSecurityGroupIngress AWS API Documentation
     #
-    # @overload revoke_db_security_group_ingress(params = {})
+    # @overload revoke_db_security_group_ingress(**params)
     # @param [Hash] params ({})
-    def revoke_db_security_group_ingress(params = {}, options = {})
+    def revoke_db_security_group_ingress(params = {}, **options)
       req = build_request(:revoke_db_security_group_ingress, params)
       req.send_request(options)
     end
@@ -18062,9 +18062,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StartActivityStream AWS API Documentation
     #
-    # @overload start_activity_stream(params = {})
+    # @overload start_activity_stream(**params)
     # @param [Hash] params ({})
-    def start_activity_stream(params = {}, options = {})
+    def start_activity_stream(params = {}, **options)
       req = build_request(:start_activity_stream, params)
       req.send_request(options)
     end
@@ -18183,9 +18183,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StartDBCluster AWS API Documentation
     #
-    # @overload start_db_cluster(params = {})
+    # @overload start_db_cluster(**params)
     # @param [Hash] params ({})
-    def start_db_cluster(params = {}, options = {})
+    def start_db_cluster(params = {}, **options)
       req = build_request(:start_db_cluster, params)
       req.send_request(options)
     end
@@ -18345,9 +18345,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StartDBInstance AWS API Documentation
     #
-    # @overload start_db_instance(params = {})
+    # @overload start_db_instance(**params)
     # @param [Hash] params ({})
-    def start_db_instance(params = {}, options = {})
+    def start_db_instance(params = {}, **options)
       req = build_request(:start_db_instance, params)
       req.send_request(options)
     end
@@ -18434,9 +18434,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StartDBInstanceAutomatedBackupsReplication AWS API Documentation
     #
-    # @overload start_db_instance_automated_backups_replication(params = {})
+    # @overload start_db_instance_automated_backups_replication(**params)
     # @param [Hash] params ({})
-    def start_db_instance_automated_backups_replication(params = {}, options = {})
+    def start_db_instance_automated_backups_replication(params = {}, **options)
       req = build_request(:start_db_instance_automated_backups_replication, params)
       req.send_request(options)
     end
@@ -18558,9 +18558,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StartExportTask AWS API Documentation
     #
-    # @overload start_export_task(params = {})
+    # @overload start_export_task(**params)
     # @param [Hash] params ({})
-    def start_export_task(params = {}, options = {})
+    def start_export_task(params = {}, **options)
       req = build_request(:start_export_task, params)
       req.send_request(options)
     end
@@ -18607,9 +18607,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StopActivityStream AWS API Documentation
     #
-    # @overload stop_activity_stream(params = {})
+    # @overload stop_activity_stream(**params)
     # @param [Hash] params ({})
-    def stop_activity_stream(params = {}, options = {})
+    def stop_activity_stream(params = {}, **options)
       req = build_request(:stop_activity_stream, params)
       req.send_request(options)
     end
@@ -18729,9 +18729,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StopDBCluster AWS API Documentation
     #
-    # @overload stop_db_cluster(params = {})
+    # @overload stop_db_cluster(**params)
     # @param [Hash] params ({})
-    def stop_db_cluster(params = {}, options = {})
+    def stop_db_cluster(params = {}, **options)
       req = build_request(:stop_db_cluster, params)
       req.send_request(options)
     end
@@ -18898,9 +18898,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StopDBInstance AWS API Documentation
     #
-    # @overload stop_db_instance(params = {})
+    # @overload stop_db_instance(**params)
     # @param [Hash] params ({})
-    def stop_db_instance(params = {}, options = {})
+    def stop_db_instance(params = {}, **options)
       req = build_request(:stop_db_instance, params)
       req.send_request(options)
     end
@@ -18962,9 +18962,9 @@ module Aws::RDS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StopDBInstanceAutomatedBackupsReplication AWS API Documentation
     #
-    # @overload stop_db_instance_automated_backups_replication(params = {})
+    # @overload stop_db_instance_automated_backups_replication(**params)
     # @param [Hash] params ({})
-    def stop_db_instance_automated_backups_replication(params = {}, options = {})
+    def stop_db_instance_automated_backups_replication(params = {}, **options)
       req = build_request(:stop_db_instance_automated_backups_replication, params)
       req.send_request(options)
     end
@@ -18973,7 +18973,7 @@ module Aws::RDS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -18981,8 +18981,8 @@ module Aws::RDS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-rds'
-      context[:gem_version] = '1.107.0'
+      context[:gem_name] = "aws-sdk-rds"
+      context[:gem_version] = "1.107.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -19079,7 +19079,7 @@ module Aws::RDS
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -19095,7 +19095,7 @@ module Aws::RDS
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

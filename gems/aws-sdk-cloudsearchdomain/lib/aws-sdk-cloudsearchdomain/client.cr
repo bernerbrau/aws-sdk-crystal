@@ -7,27 +7,27 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
-require 'aws-sdk-cloudsearchdomain/plugins/conditional_signing.rb'
-require 'aws-sdk-cloudsearchdomain/plugins/switch_to_post.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
+require "aws-sdk-cloudsearchdomain/plugins/conditional_signing.rb"
+require "aws-sdk-cloudsearchdomain/plugins/switch_to_post.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudsearchdomain)
 
@@ -242,7 +242,7 @@ module Aws::CloudSearchDomain
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -736,9 +736,9 @@ module Aws::CloudSearchDomain
     #   resp.stats["String"].mean #=> String
     #   resp.stats["String"].stddev #=> Float
     #
-    # @overload search(params = {})
+    # @overload search(**params)
     # @param [Hash] params ({})
-    def search(params = {}, options = {})
+    def search(params = {}, **options)
       req = build_request(:search, params)
       req.send_request(options)
     end
@@ -799,9 +799,9 @@ module Aws::CloudSearchDomain
     #   resp.suggest.suggestions[0].score #=> Integer
     #   resp.suggest.suggestions[0].id #=> String
     #
-    # @overload suggest(params = {})
+    # @overload suggest(**params)
     # @param [Hash] params ({})
-    def suggest(params = {}, options = {})
+    def suggest(params = {}, **options)
       req = build_request(:suggest, params)
       req.send_request(options)
     end
@@ -868,9 +868,9 @@ module Aws::CloudSearchDomain
     #   resp.warnings #=> Array
     #   resp.warnings[0].message #=> String
     #
-    # @overload upload_documents(params = {})
+    # @overload upload_documents(**params)
     # @param [Hash] params ({})
-    def upload_documents(params = {}, options = {})
+    def upload_documents(params = {}, **options)
       req = build_request(:upload_documents, params)
       req.send_request(options)
     end
@@ -879,7 +879,7 @@ module Aws::CloudSearchDomain
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -887,15 +887,15 @@ module Aws::CloudSearchDomain
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudsearchdomain'
-      context[:gem_version] = '1.22.0'
+      context[:gem_name] = "aws-sdk-cloudsearchdomain"
+      context[:gem_version] = "1.22.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

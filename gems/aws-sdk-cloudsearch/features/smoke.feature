@@ -8,11 +8,11 @@
 Feature: Smoke tests for CloudSearch
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @cloudsearch @smoke
   Scenario: Call Aws::CloudSearch::Client#describe_domains and expect it to succeed
-  When I call the operation 'describe_domains' with params:
+  When I call the operation "describe_domains" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @cloudsearch @smoke
   Scenario: Call Aws::Aws::CloudSearch::Client#describe_index_fields and expect it to fail
-  When I call the operation 'describe_index_fields' with params:
+  When I call the operation "describe_index_fields" with params:
     """
 {"domain_name":"fakedomain"}
     """

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mturk)
 
@@ -290,7 +290,7 @@ module Aws::MTurk
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -366,9 +366,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/AcceptQualificationRequest AWS API Documentation
     #
-    # @overload accept_qualification_request(params = {})
+    # @overload accept_qualification_request(**params)
     # @param [Hash] params ({})
-    def accept_qualification_request(params = {}, options = {})
+    def accept_qualification_request(params = {}, **options)
       req = build_request(:accept_qualification_request, params)
       req.send_request(options)
     end
@@ -420,9 +420,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ApproveAssignment AWS API Documentation
     #
-    # @overload approve_assignment(params = {})
+    # @overload approve_assignment(**params)
     # @param [Hash] params ({})
-    def approve_assignment(params = {}, options = {})
+    def approve_assignment(params = {}, **options)
       req = build_request(:approve_assignment, params)
       req.send_request(options)
     end
@@ -475,9 +475,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/AssociateQualificationWithWorker AWS API Documentation
     #
-    # @overload associate_qualification_with_worker(params = {})
+    # @overload associate_qualification_with_worker(**params)
     # @param [Hash] params ({})
-    def associate_qualification_with_worker(params = {}, options = {})
+    def associate_qualification_with_worker(params = {}, **options)
       req = build_request(:associate_qualification_with_worker, params)
       req.send_request(options)
     end
@@ -528,9 +528,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/CreateAdditionalAssignmentsForHIT AWS API Documentation
     #
-    # @overload create_additional_assignments_for_hit(params = {})
+    # @overload create_additional_assignments_for_hit(**params)
     # @param [Hash] params ({})
-    def create_additional_assignments_for_hit(params = {}, options = {})
+    def create_additional_assignments_for_hit(params = {}, **options)
       req = build_request(:create_additional_assignments_for_hit, params)
       req.send_request(options)
     end
@@ -788,9 +788,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/CreateHIT AWS API Documentation
     #
-    # @overload create_hit(params = {})
+    # @overload create_hit(**params)
     # @param [Hash] params ({})
-    def create_hit(params = {}, options = {})
+    def create_hit(params = {}, **options)
       req = build_request(:create_hit, params)
       req.send_request(options)
     end
@@ -879,9 +879,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/CreateHITType AWS API Documentation
     #
-    # @overload create_hit_type(params = {})
+    # @overload create_hit_type(**params)
     # @param [Hash] params ({})
-    def create_hit_type(params = {}, options = {})
+    def create_hit_type(params = {}, **options)
       req = build_request(:create_hit_type, params)
       req.send_request(options)
     end
@@ -1071,9 +1071,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/CreateHITWithHITType AWS API Documentation
     #
-    # @overload create_hit_with_hit_type(params = {})
+    # @overload create_hit_with_hit_type(**params)
     # @param [Hash] params ({})
-    def create_hit_with_hit_type(params = {}, options = {})
+    def create_hit_with_hit_type(params = {}, **options)
       req = build_request(:create_hit_with_hit_type, params)
       req.send_request(options)
     end
@@ -1189,9 +1189,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/CreateQualificationType AWS API Documentation
     #
-    # @overload create_qualification_type(params = {})
+    # @overload create_qualification_type(**params)
     # @param [Hash] params ({})
-    def create_qualification_type(params = {}, options = {})
+    def create_qualification_type(params = {}, **options)
       req = build_request(:create_qualification_type, params)
       req.send_request(options)
     end
@@ -1219,9 +1219,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/CreateWorkerBlock AWS API Documentation
     #
-    # @overload create_worker_block(params = {})
+    # @overload create_worker_block(**params)
     # @param [Hash] params ({})
-    def create_worker_block(params = {}, options = {})
+    def create_worker_block(params = {}, **options)
       req = build_request(:create_worker_block, params)
       req.send_request(options)
     end
@@ -1263,9 +1263,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/DeleteHIT AWS API Documentation
     #
-    # @overload delete_hit(params = {})
+    # @overload delete_hit(**params)
     # @param [Hash] params ({})
-    def delete_hit(params = {}, options = {})
+    def delete_hit(params = {}, **options)
       req = build_request(:delete_hit, params)
       req.send_request(options)
     end
@@ -1301,9 +1301,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/DeleteQualificationType AWS API Documentation
     #
-    # @overload delete_qualification_type(params = {})
+    # @overload delete_qualification_type(**params)
     # @param [Hash] params ({})
-    def delete_qualification_type(params = {}, options = {})
+    def delete_qualification_type(params = {}, **options)
       req = build_request(:delete_qualification_type, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/DeleteWorkerBlock AWS API Documentation
     #
-    # @overload delete_worker_block(params = {})
+    # @overload delete_worker_block(**params)
     # @param [Hash] params ({})
-    def delete_worker_block(params = {}, options = {})
+    def delete_worker_block(params = {}, **options)
       req = build_request(:delete_worker_block, params)
       req.send_request(options)
     end
@@ -1368,9 +1368,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/DisassociateQualificationFromWorker AWS API Documentation
     #
-    # @overload disassociate_qualification_from_worker(params = {})
+    # @overload disassociate_qualification_from_worker(**params)
     # @param [Hash] params ({})
-    def disassociate_qualification_from_worker(params = {}, options = {})
+    def disassociate_qualification_from_worker(params = {}, **options)
       req = build_request(:disassociate_qualification_from_worker, params)
       req.send_request(options)
     end
@@ -1390,9 +1390,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/GetAccountBalance AWS API Documentation
     #
-    # @overload get_account_balance(params = {})
+    # @overload get_account_balance(**params)
     # @param [Hash] params ({})
-    def get_account_balance(params = {}, options = {})
+    def get_account_balance(params = {}, **options)
       req = build_request(:get_account_balance, params)
       req.send_request(options)
     end
@@ -1461,9 +1461,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/GetAssignment AWS API Documentation
     #
-    # @overload get_assignment(params = {})
+    # @overload get_assignment(**params)
     # @param [Hash] params ({})
-    def get_assignment(params = {}, options = {})
+    def get_assignment(params = {}, **options)
       req = build_request(:get_assignment, params)
       req.send_request(options)
     end
@@ -1506,9 +1506,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/GetFileUploadURL AWS API Documentation
     #
-    # @overload get_file_upload_url(params = {})
+    # @overload get_file_upload_url(**params)
     # @param [Hash] params ({})
-    def get_file_upload_url(params = {}, options = {})
+    def get_file_upload_url(params = {}, **options)
       req = build_request(:get_file_upload_url, params)
       req.send_request(options)
     end
@@ -1563,9 +1563,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/GetHIT AWS API Documentation
     #
-    # @overload get_hit(params = {})
+    # @overload get_hit(**params)
     # @param [Hash] params ({})
-    def get_hit(params = {}, options = {})
+    def get_hit(params = {}, **options)
       req = build_request(:get_hit, params)
       req.send_request(options)
     end
@@ -1609,9 +1609,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/GetQualificationScore AWS API Documentation
     #
-    # @overload get_qualification_score(params = {})
+    # @overload get_qualification_score(**params)
     # @param [Hash] params ({})
-    def get_qualification_score(params = {}, options = {})
+    def get_qualification_score(params = {}, **options)
       req = build_request(:get_qualification_score, params)
       req.send_request(options)
     end
@@ -1650,9 +1650,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/GetQualificationType AWS API Documentation
     #
-    # @overload get_qualification_type(params = {})
+    # @overload get_qualification_type(**params)
     # @param [Hash] params ({})
-    def get_qualification_type(params = {}, options = {})
+    def get_qualification_type(params = {}, **options)
       req = build_request(:get_qualification_type, params)
       req.send_request(options)
     end
@@ -1729,9 +1729,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListAssignmentsForHIT AWS API Documentation
     #
-    # @overload list_assignments_for_hit(params = {})
+    # @overload list_assignments_for_hit(**params)
     # @param [Hash] params ({})
-    def list_assignments_for_hit(params = {}, options = {})
+    def list_assignments_for_hit(params = {}, **options)
       req = build_request(:list_assignments_for_hit, params)
       req.send_request(options)
     end
@@ -1786,9 +1786,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListBonusPayments AWS API Documentation
     #
-    # @overload list_bonus_payments(params = {})
+    # @overload list_bonus_payments(**params)
     # @param [Hash] params ({})
-    def list_bonus_payments(params = {}, options = {})
+    def list_bonus_payments(params = {}, **options)
       req = build_request(:list_bonus_payments, params)
       req.send_request(options)
     end
@@ -1856,9 +1856,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListHITs AWS API Documentation
     #
-    # @overload list_hits(params = {})
+    # @overload list_hits(**params)
     # @param [Hash] params ({})
-    def list_hits(params = {}, options = {})
+    def list_hits(params = {}, **options)
       req = build_request(:list_hits, params)
       req.send_request(options)
     end
@@ -1931,9 +1931,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListHITsForQualificationType AWS API Documentation
     #
-    # @overload list_hits_for_qualification_type(params = {})
+    # @overload list_hits_for_qualification_type(**params)
     # @param [Hash] params ({})
-    def list_hits_for_qualification_type(params = {}, options = {})
+    def list_hits_for_qualification_type(params = {}, **options)
       req = build_request(:list_hits_for_qualification_type, params)
       req.send_request(options)
     end
@@ -1985,9 +1985,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListQualificationRequests AWS API Documentation
     #
-    # @overload list_qualification_requests(params = {})
+    # @overload list_qualification_requests(**params)
     # @param [Hash] params ({})
-    def list_qualification_requests(params = {}, options = {})
+    def list_qualification_requests(params = {}, **options)
       req = build_request(:list_qualification_requests, params)
       req.send_request(options)
     end
@@ -2060,9 +2060,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListQualificationTypes AWS API Documentation
     #
-    # @overload list_qualification_types(params = {})
+    # @overload list_qualification_types(**params)
     # @param [Hash] params ({})
-    def list_qualification_types(params = {}, options = {})
+    def list_qualification_types(params = {}, **options)
       req = build_request(:list_qualification_types, params)
       req.send_request(options)
     end
@@ -2176,9 +2176,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListReviewPolicyResultsForHIT AWS API Documentation
     #
-    # @overload list_review_policy_results_for_hit(params = {})
+    # @overload list_review_policy_results_for_hit(**params)
     # @param [Hash] params ({})
-    def list_review_policy_results_for_hit(params = {}, options = {})
+    def list_review_policy_results_for_hit(params = {}, **options)
       req = build_request(:list_review_policy_results_for_hit, params)
       req.send_request(options)
     end
@@ -2256,9 +2256,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListReviewableHITs AWS API Documentation
     #
-    # @overload list_reviewable_hits(params = {})
+    # @overload list_reviewable_hits(**params)
     # @param [Hash] params ({})
-    def list_reviewable_hits(params = {}, options = {})
+    def list_reviewable_hits(params = {}, **options)
       req = build_request(:list_reviewable_hits, params)
       req.send_request(options)
     end
@@ -2296,9 +2296,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListWorkerBlocks AWS API Documentation
     #
-    # @overload list_worker_blocks(params = {})
+    # @overload list_worker_blocks(**params)
     # @param [Hash] params ({})
-    def list_worker_blocks(params = {}, options = {})
+    def list_worker_blocks(params = {}, **options)
       req = build_request(:list_worker_blocks, params)
       req.send_request(options)
     end
@@ -2351,9 +2351,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/ListWorkersWithQualificationType AWS API Documentation
     #
-    # @overload list_workers_with_qualification_type(params = {})
+    # @overload list_workers_with_qualification_type(**params)
     # @param [Hash] params ({})
-    def list_workers_with_qualification_type(params = {}, options = {})
+    def list_workers_with_qualification_type(params = {}, **options)
       req = build_request(:list_workers_with_qualification_type, params)
       req.send_request(options)
     end
@@ -2398,9 +2398,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/NotifyWorkers AWS API Documentation
     #
-    # @overload notify_workers(params = {})
+    # @overload notify_workers(**params)
     # @param [Hash] params ({})
-    def notify_workers(params = {}, options = {})
+    def notify_workers(params = {}, **options)
       req = build_request(:notify_workers, params)
       req.send_request(options)
     end
@@ -2436,9 +2436,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/RejectAssignment AWS API Documentation
     #
-    # @overload reject_assignment(params = {})
+    # @overload reject_assignment(**params)
     # @param [Hash] params ({})
-    def reject_assignment(params = {}, options = {})
+    def reject_assignment(params = {}, **options)
       req = build_request(:reject_assignment, params)
       req.send_request(options)
     end
@@ -2468,9 +2468,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/RejectQualificationRequest AWS API Documentation
     #
-    # @overload reject_qualification_request(params = {})
+    # @overload reject_qualification_request(**params)
     # @param [Hash] params ({})
-    def reject_qualification_request(params = {}, options = {})
+    def reject_qualification_request(params = {}, **options)
       req = build_request(:reject_qualification_request, params)
       req.send_request(options)
     end
@@ -2524,9 +2524,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/SendBonus AWS API Documentation
     #
-    # @overload send_bonus(params = {})
+    # @overload send_bonus(**params)
     # @param [Hash] params ({})
-    def send_bonus(params = {}, options = {})
+    def send_bonus(params = {}, **options)
       req = build_request(:send_bonus, params)
       req.send_request(options)
     end
@@ -2566,9 +2566,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/SendTestEventNotification AWS API Documentation
     #
-    # @overload send_test_event_notification(params = {})
+    # @overload send_test_event_notification(**params)
     # @param [Hash] params ({})
-    def send_test_event_notification(params = {}, options = {})
+    def send_test_event_notification(params = {}, **options)
       req = build_request(:send_test_event_notification, params)
       req.send_request(options)
     end
@@ -2594,9 +2594,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/UpdateExpirationForHIT AWS API Documentation
     #
-    # @overload update_expiration_for_hit(params = {})
+    # @overload update_expiration_for_hit(**params)
     # @param [Hash] params ({})
-    def update_expiration_for_hit(params = {}, options = {})
+    def update_expiration_for_hit(params = {}, **options)
       req = build_request(:update_expiration_for_hit, params)
       req.send_request(options)
     end
@@ -2629,9 +2629,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/UpdateHITReviewStatus AWS API Documentation
     #
-    # @overload update_hit_review_status(params = {})
+    # @overload update_hit_review_status(**params)
     # @param [Hash] params ({})
-    def update_hit_review_status(params = {}, options = {})
+    def update_hit_review_status(params = {}, **options)
       req = build_request(:update_hit_review_status, params)
       req.send_request(options)
     end
@@ -2659,9 +2659,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/UpdateHITTypeOfHIT AWS API Documentation
     #
-    # @overload update_hit_type_of_hit(params = {})
+    # @overload update_hit_type_of_hit(**params)
     # @param [Hash] params ({})
-    def update_hit_type_of_hit(params = {}, options = {})
+    def update_hit_type_of_hit(params = {}, **options)
       req = build_request(:update_hit_type_of_hit, params)
       req.send_request(options)
     end
@@ -2709,9 +2709,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/UpdateNotificationSettings AWS API Documentation
     #
-    # @overload update_notification_settings(params = {})
+    # @overload update_notification_settings(**params)
     # @param [Hash] params ({})
-    def update_notification_settings(params = {}, options = {})
+    def update_notification_settings(params = {}, **options)
       req = build_request(:update_notification_settings, params)
       req.send_request(options)
     end
@@ -2839,9 +2839,9 @@ module Aws::MTurk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mturk-requester-2017-01-17/UpdateQualificationType AWS API Documentation
     #
-    # @overload update_qualification_type(params = {})
+    # @overload update_qualification_type(**params)
     # @param [Hash] params ({})
-    def update_qualification_type(params = {}, options = {})
+    def update_qualification_type(params = {}, **options)
       req = build_request(:update_qualification_type, params)
       req.send_request(options)
     end
@@ -2850,7 +2850,7 @@ module Aws::MTurk
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2858,15 +2858,15 @@ module Aws::MTurk
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mturk'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-mturk"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

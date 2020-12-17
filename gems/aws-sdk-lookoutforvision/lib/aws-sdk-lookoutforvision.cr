@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lookoutforvision/types'
-require_relative 'aws-sdk-lookoutforvision/client_api'
-require_relative 'aws-sdk-lookoutforvision/client'
-require_relative 'aws-sdk-lookoutforvision/errors'
-require_relative 'aws-sdk-lookoutforvision/resource'
-require_relative 'aws-sdk-lookoutforvision/customizations'
+require_relative "aws-sdk-lookoutforvision/types"
+require_relative "aws-sdk-lookoutforvision/client_api"
+require_relative "aws-sdk-lookoutforvision/client"
+require_relative "aws-sdk-lookoutforvision/errors"
+require_relative "aws-sdk-lookoutforvision/resource"
+require_relative "aws-sdk-lookoutforvision/customizations"
 
 # This module provides support for Amazon Lookout for Vision. This module is available in the
 # `aws-sdk-lookoutforvision` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-lookoutforvision/customizations'
 # @!group service
 module Aws::LookoutforVision
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

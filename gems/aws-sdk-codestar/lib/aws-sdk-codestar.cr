@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codestar/types'
-require_relative 'aws-sdk-codestar/client_api'
-require_relative 'aws-sdk-codestar/client'
-require_relative 'aws-sdk-codestar/errors'
-require_relative 'aws-sdk-codestar/resource'
-require_relative 'aws-sdk-codestar/customizations'
+require_relative "aws-sdk-codestar/types"
+require_relative "aws-sdk-codestar/client_api"
+require_relative "aws-sdk-codestar/client"
+require_relative "aws-sdk-codestar/errors"
+require_relative "aws-sdk-codestar/resource"
+require_relative "aws-sdk-codestar/customizations"
 
 # This module provides support for AWS CodeStar. This module is available in the
 # `aws-sdk-codestar` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-codestar/customizations'
 # @!group service
 module Aws::CodeStar
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

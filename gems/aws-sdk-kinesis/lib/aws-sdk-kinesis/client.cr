@@ -7,29 +7,29 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
-require 'aws-sdk-core/plugins/event_stream_configuration.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
+require "aws-sdk-core/plugins/event_stream_configuration.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kinesis)
 
@@ -301,7 +301,7 @@ module Aws::Kinesis
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -379,9 +379,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/AddTagsToStream AWS API Documentation
     #
-    # @overload add_tags_to_stream(params = {})
+    # @overload add_tags_to_stream(**params)
     # @param [Hash] params ({})
-    def add_tags_to_stream(params = {}, options = {})
+    def add_tags_to_stream(params = {}, **options)
       req = build_request(:add_tags_to_stream, params)
       req.send_request(options)
     end
@@ -456,9 +456,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/CreateStream AWS API Documentation
     #
-    # @overload create_stream(params = {})
+    # @overload create_stream(**params)
     # @param [Hash] params ({})
-    def create_stream(params = {}, options = {})
+    def create_stream(params = {}, **options)
       req = build_request(:create_stream, params)
       req.send_request(options)
     end
@@ -489,9 +489,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DecreaseStreamRetentionPeriod AWS API Documentation
     #
-    # @overload decrease_stream_retention_period(params = {})
+    # @overload decrease_stream_retention_period(**params)
     # @param [Hash] params ({})
-    def decrease_stream_retention_period(params = {}, options = {})
+    def decrease_stream_retention_period(params = {}, **options)
       req = build_request(:decrease_stream_retention_period, params)
       req.send_request(options)
     end
@@ -536,9 +536,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DeleteStream AWS API Documentation
     #
-    # @overload delete_stream(params = {})
+    # @overload delete_stream(**params)
     # @param [Hash] params ({})
-    def delete_stream(params = {}, options = {})
+    def delete_stream(params = {}, **options)
       req = build_request(:delete_stream, params)
       req.send_request(options)
     end
@@ -586,9 +586,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DeregisterStreamConsumer AWS API Documentation
     #
-    # @overload deregister_stream_consumer(params = {})
+    # @overload deregister_stream_consumer(**params)
     # @param [Hash] params ({})
-    def deregister_stream_consumer(params = {}, options = {})
+    def deregister_stream_consumer(params = {}, **options)
       req = build_request(:deregister_stream_consumer, params)
       req.send_request(options)
     end
@@ -612,9 +612,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DescribeLimits AWS API Documentation
     #
-    # @overload describe_limits(params = {})
+    # @overload describe_limits(**params)
     # @param [Hash] params ({})
-    def describe_limits(params = {}, options = {})
+    def describe_limits(params = {}, **options)
       req = build_request(:describe_limits, params)
       req.send_request(options)
     end
@@ -699,9 +699,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DescribeStream AWS API Documentation
     #
-    # @overload describe_stream(params = {})
+    # @overload describe_stream(**params)
     # @param [Hash] params ({})
-    def describe_stream(params = {}, options = {})
+    def describe_stream(params = {}, **options)
       req = build_request(:describe_stream, params)
       req.send_request(options)
     end
@@ -755,9 +755,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DescribeStreamConsumer AWS API Documentation
     #
-    # @overload describe_stream_consumer(params = {})
+    # @overload describe_stream_consumer(**params)
     # @param [Hash] params ({})
-    def describe_stream_consumer(params = {}, options = {})
+    def describe_stream_consumer(params = {}, **options)
       req = build_request(:describe_stream_consumer, params)
       req.send_request(options)
     end
@@ -802,9 +802,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DescribeStreamSummary AWS API Documentation
     #
-    # @overload describe_stream_summary(params = {})
+    # @overload describe_stream_summary(**params)
     # @param [Hash] params ({})
-    def describe_stream_summary(params = {}, options = {})
+    def describe_stream_summary(params = {}, **options)
       req = build_request(:describe_stream_summary, params)
       req.send_request(options)
     end
@@ -868,9 +868,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DisableEnhancedMonitoring AWS API Documentation
     #
-    # @overload disable_enhanced_monitoring(params = {})
+    # @overload disable_enhanced_monitoring(**params)
     # @param [Hash] params ({})
-    def disable_enhanced_monitoring(params = {}, options = {})
+    def disable_enhanced_monitoring(params = {}, **options)
       req = build_request(:disable_enhanced_monitoring, params)
       req.send_request(options)
     end
@@ -934,9 +934,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/EnableEnhancedMonitoring AWS API Documentation
     #
-    # @overload enable_enhanced_monitoring(params = {})
+    # @overload enable_enhanced_monitoring(**params)
     # @param [Hash] params ({})
-    def enable_enhanced_monitoring(params = {}, options = {})
+    def enable_enhanced_monitoring(params = {}, **options)
       req = build_request(:enable_enhanced_monitoring, params)
       req.send_request(options)
     end
@@ -1050,9 +1050,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/GetRecords AWS API Documentation
     #
-    # @overload get_records(params = {})
+    # @overload get_records(**params)
     # @param [Hash] params ({})
-    def get_records(params = {}, options = {})
+    def get_records(params = {}, **options)
       req = build_request(:get_records, params)
       req.send_request(options)
     end
@@ -1169,9 +1169,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/GetShardIterator AWS API Documentation
     #
-    # @overload get_shard_iterator(params = {})
+    # @overload get_shard_iterator(**params)
     # @param [Hash] params ({})
-    def get_shard_iterator(params = {}, options = {})
+    def get_shard_iterator(params = {}, **options)
       req = build_request(:get_shard_iterator, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/IncreaseStreamRetentionPeriod AWS API Documentation
     #
-    # @overload increase_stream_retention_period(params = {})
+    # @overload increase_stream_retention_period(**params)
     # @param [Hash] params ({})
-    def increase_stream_retention_period(params = {}, options = {})
+    def increase_stream_retention_period(params = {}, **options)
       req = build_request(:increase_stream_retention_period, params)
       req.send_request(options)
     end
@@ -1326,9 +1326,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/ListShards AWS API Documentation
     #
-    # @overload list_shards(params = {})
+    # @overload list_shards(**params)
     # @param [Hash] params ({})
-    def list_shards(params = {}, options = {})
+    def list_shards(params = {}, **options)
       req = build_request(:list_shards, params)
       req.send_request(options)
     end
@@ -1414,9 +1414,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/ListStreamConsumers AWS API Documentation
     #
-    # @overload list_stream_consumers(params = {})
+    # @overload list_stream_consumers(**params)
     # @param [Hash] params ({})
-    def list_stream_consumers(params = {}, options = {})
+    def list_stream_consumers(params = {}, **options)
       req = build_request(:list_stream_consumers, params)
       req.send_request(options)
     end
@@ -1468,9 +1468,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/ListStreams AWS API Documentation
     #
-    # @overload list_streams(params = {})
+    # @overload list_streams(**params)
     # @param [Hash] params ({})
-    def list_streams(params = {}, options = {})
+    def list_streams(params = {}, **options)
       req = build_request(:list_streams, params)
       req.send_request(options)
     end
@@ -1514,9 +1514,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/ListTagsForStream AWS API Documentation
     #
-    # @overload list_tags_for_stream(params = {})
+    # @overload list_tags_for_stream(**params)
     # @param [Hash] params ({})
-    def list_tags_for_stream(params = {}, options = {})
+    def list_tags_for_stream(params = {}, **options)
       req = build_request(:list_tags_for_stream, params)
       req.send_request(options)
     end
@@ -1589,9 +1589,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/MergeShards AWS API Documentation
     #
-    # @overload merge_shards(params = {})
+    # @overload merge_shards(**params)
     # @param [Hash] params ({})
-    def merge_shards(params = {}, options = {})
+    def merge_shards(params = {}, **options)
       req = build_request(:merge_shards, params)
       req.send_request(options)
     end
@@ -1706,9 +1706,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/PutRecord AWS API Documentation
     #
-    # @overload put_record(params = {})
+    # @overload put_record(**params)
     # @param [Hash] params ({})
-    def put_record(params = {}, options = {})
+    def put_record(params = {}, **options)
       req = build_request(:put_record, params)
       req.send_request(options)
     end
@@ -1831,9 +1831,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/PutRecords AWS API Documentation
     #
-    # @overload put_records(params = {})
+    # @overload put_records(**params)
     # @param [Hash] params ({})
-    def put_records(params = {}, options = {})
+    def put_records(params = {}, **options)
       req = build_request(:put_records, params)
       req.send_request(options)
     end
@@ -1892,9 +1892,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/RegisterStreamConsumer AWS API Documentation
     #
-    # @overload register_stream_consumer(params = {})
+    # @overload register_stream_consumer(**params)
     # @param [Hash] params ({})
-    def register_stream_consumer(params = {}, options = {})
+    def register_stream_consumer(params = {}, **options)
       req = build_request(:register_stream_consumer, params)
       req.send_request(options)
     end
@@ -1925,9 +1925,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/RemoveTagsFromStream AWS API Documentation
     #
-    # @overload remove_tags_from_stream(params = {})
+    # @overload remove_tags_from_stream(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_stream(params = {}, options = {})
+    def remove_tags_from_stream(params = {}, **options)
       req = build_request(:remove_tags_from_stream, params)
       req.send_request(options)
     end
@@ -2017,9 +2017,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/SplitShard AWS API Documentation
     #
-    # @overload split_shard(params = {})
+    # @overload split_shard(**params)
     # @param [Hash] params ({})
-    def split_shard(params = {}, options = {})
+    def split_shard(params = {}, **options)
       req = build_request(:split_shard, params)
       req.send_request(options)
     end
@@ -2082,9 +2082,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/StartStreamEncryption AWS API Documentation
     #
-    # @overload start_stream_encryption(params = {})
+    # @overload start_stream_encryption(**params)
     # @param [Hash] params ({})
-    def start_stream_encryption(params = {}, options = {})
+    def start_stream_encryption(params = {}, **options)
       req = build_request(:start_stream_encryption, params)
       req.send_request(options)
     end
@@ -2148,9 +2148,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/StopStreamEncryption AWS API Documentation
     #
-    # @overload stop_stream_encryption(params = {})
+    # @overload stop_stream_encryption(**params)
     # @param [Hash] params ({})
-    def stop_stream_encryption(params = {}, options = {})
+    def stop_stream_encryption(params = {}, **options)
       req = build_request(:stop_stream_encryption, params)
       req.send_request(options)
     end
@@ -2247,9 +2247,9 @@ module Aws::Kinesis
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/UpdateShardCount AWS API Documentation
     #
-    # @overload update_shard_count(params = {})
+    # @overload update_shard_count(**params)
     # @param [Hash] params ({})
-    def update_shard_count(params = {}, options = {})
+    def update_shard_count(params = {}, **options)
       req = build_request(:update_shard_count, params)
       req.send_request(options)
     end
@@ -2258,7 +2258,7 @@ module Aws::Kinesis
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2266,8 +2266,8 @@ module Aws::Kinesis
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kinesis'
-      context[:gem_version] = '1.30.0'
+      context[:gem_name] = "aws-sdk-kinesis"
+      context[:gem_version] = "1.30.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -2360,7 +2360,7 @@ module Aws::Kinesis
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -2376,7 +2376,7 @@ module Aws::Kinesis
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

@@ -8,11 +8,11 @@
 Feature: Smoke tests for CodeBuild
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @codebuild @smoke
   Scenario: Call Aws::CodeBuild::Client#list_builds and expect it to succeed
-  When I call the operation 'list_builds' with params:
+  When I call the operation "list_builds" with params:
     """
 {}
     """

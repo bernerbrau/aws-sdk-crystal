@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-gluedatabrew/types'
-require_relative 'aws-sdk-gluedatabrew/client_api'
-require_relative 'aws-sdk-gluedatabrew/client'
-require_relative 'aws-sdk-gluedatabrew/errors'
-require_relative 'aws-sdk-gluedatabrew/resource'
-require_relative 'aws-sdk-gluedatabrew/customizations'
+require_relative "aws-sdk-gluedatabrew/types"
+require_relative "aws-sdk-gluedatabrew/client_api"
+require_relative "aws-sdk-gluedatabrew/client"
+require_relative "aws-sdk-gluedatabrew/errors"
+require_relative "aws-sdk-gluedatabrew/resource"
+require_relative "aws-sdk-gluedatabrew/customizations"
 
 # This module provides support for AWS Glue DataBrew. This module is available in the
 # `aws-sdk-gluedatabrew` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-gluedatabrew/customizations'
 # @!group service
 module Aws::GlueDataBrew
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

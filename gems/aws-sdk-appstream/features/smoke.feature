@@ -8,11 +8,11 @@
 Feature: Smoke tests for AppStream
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @appstream @smoke
   Scenario: Call Aws::AppStream::Client#describe_stacks and expect it to succeed
-  When I call the operation 'describe_stacks' with params:
+  When I call the operation "describe_stacks" with params:
     """
 {}
     """

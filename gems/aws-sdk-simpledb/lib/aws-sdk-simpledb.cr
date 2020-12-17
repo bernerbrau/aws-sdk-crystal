@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv2'
+require "aws-sdk-core"
+require "aws-sigv2"
 
-require_relative 'aws-sdk-simpledb/types'
-require_relative 'aws-sdk-simpledb/client_api'
-require_relative 'aws-sdk-simpledb/client'
-require_relative 'aws-sdk-simpledb/errors'
-require_relative 'aws-sdk-simpledb/resource'
-require_relative 'aws-sdk-simpledb/customizations'
+require_relative "aws-sdk-simpledb/types"
+require_relative "aws-sdk-simpledb/client_api"
+require_relative "aws-sdk-simpledb/client"
+require_relative "aws-sdk-simpledb/errors"
+require_relative "aws-sdk-simpledb/resource"
+require_relative "aws-sdk-simpledb/customizations"
 
 # This module provides support for Amazon SimpleDB. This module is available in the
 # `aws-sdk-simpledb` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-simpledb/customizations'
 # @!group service
 module Aws::SimpleDB
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-prometheusservice/types'
-require_relative 'aws-sdk-prometheusservice/client_api'
-require_relative 'aws-sdk-prometheusservice/client'
-require_relative 'aws-sdk-prometheusservice/errors'
-require_relative 'aws-sdk-prometheusservice/resource'
-require_relative 'aws-sdk-prometheusservice/customizations'
+require_relative "aws-sdk-prometheusservice/types"
+require_relative "aws-sdk-prometheusservice/client_api"
+require_relative "aws-sdk-prometheusservice/client"
+require_relative "aws-sdk-prometheusservice/errors"
+require_relative "aws-sdk-prometheusservice/resource"
+require_relative "aws-sdk-prometheusservice/customizations"
 
 # This module provides support for Amazon Prometheus Service. This module is available in the
 # `aws-sdk-prometheusservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-prometheusservice/customizations'
 # @!group service
 module Aws::PrometheusService
 
-  GEM_VERSION = '1.1.0'
+  GEM_VERSION = "1.1.0"
 
 end

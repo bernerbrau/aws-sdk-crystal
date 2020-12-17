@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-swf/types'
-require_relative 'aws-sdk-swf/client_api'
-require_relative 'aws-sdk-swf/client'
-require_relative 'aws-sdk-swf/errors'
-require_relative 'aws-sdk-swf/resource'
-require_relative 'aws-sdk-swf/customizations'
+require_relative "aws-sdk-swf/types"
+require_relative "aws-sdk-swf/client_api"
+require_relative "aws-sdk-swf/client"
+require_relative "aws-sdk-swf/errors"
+require_relative "aws-sdk-swf/resource"
+require_relative "aws-sdk-swf/customizations"
 
 # This module provides support for Amazon Simple Workflow Service. This module is available in the
 # `aws-sdk-swf` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-swf/customizations'
 # @!group service
 module Aws::SWF
 
-  GEM_VERSION = '1.25.0'
+  GEM_VERSION = "1.25.0"
 
 end

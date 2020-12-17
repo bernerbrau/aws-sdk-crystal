@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:devopsguru)
 
@@ -280,7 +280,7 @@ module Aws::DevOpsGuru
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -372,9 +372,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AddNotificationChannel AWS API Documentation
     #
-    # @overload add_notification_channel(params = {})
+    # @overload add_notification_channel(**params)
     # @param [Hash] params ({})
-    def add_notification_channel(params = {}, options = {})
+    def add_notification_channel(params = {}, **options)
       req = build_request(:add_notification_channel, params)
       req.send_request(options)
     end
@@ -398,9 +398,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeAccountHealth AWS API Documentation
     #
-    # @overload describe_account_health(params = {})
+    # @overload describe_account_health(**params)
     # @param [Hash] params ({})
-    def describe_account_health(params = {}, options = {})
+    def describe_account_health(params = {}, **options)
       req = build_request(:describe_account_health, params)
       req.send_request(options)
     end
@@ -442,9 +442,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeAccountOverview AWS API Documentation
     #
-    # @overload describe_account_overview(params = {})
+    # @overload describe_account_overview(**params)
     # @param [Hash] params ({})
-    def describe_account_overview(params = {}, options = {})
+    def describe_account_overview(params = {}, **options)
       req = build_request(:describe_account_overview, params)
       req.send_request(options)
     end
@@ -508,9 +508,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeAnomaly AWS API Documentation
     #
-    # @overload describe_anomaly(params = {})
+    # @overload describe_anomaly(**params)
     # @param [Hash] params ({})
-    def describe_anomaly(params = {}, options = {})
+    def describe_anomaly(params = {}, **options)
       req = build_request(:describe_anomaly, params)
       req.send_request(options)
     end
@@ -556,9 +556,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeInsight AWS API Documentation
     #
-    # @overload describe_insight(params = {})
+    # @overload describe_insight(**params)
     # @param [Hash] params ({})
-    def describe_insight(params = {}, options = {})
+    def describe_insight(params = {}, **options)
       req = build_request(:describe_insight, params)
       req.send_request(options)
     end
@@ -605,9 +605,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeResourceCollectionHealth AWS API Documentation
     #
-    # @overload describe_resource_collection_health(params = {})
+    # @overload describe_resource_collection_health(**params)
     # @param [Hash] params ({})
-    def describe_resource_collection_health(params = {}, options = {})
+    def describe_resource_collection_health(params = {}, **options)
       req = build_request(:describe_resource_collection_health, params)
       req.send_request(options)
     end
@@ -627,9 +627,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeServiceIntegration AWS API Documentation
     #
-    # @overload describe_service_integration(params = {})
+    # @overload describe_service_integration(**params)
     # @param [Hash] params ({})
-    def describe_service_integration(params = {}, options = {})
+    def describe_service_integration(params = {}, **options)
       req = build_request(:describe_service_integration, params)
       req.send_request(options)
     end
@@ -669,9 +669,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetResourceCollection AWS API Documentation
     #
-    # @overload get_resource_collection(params = {})
+    # @overload get_resource_collection(**params)
     # @param [Hash] params ({})
-    def get_resource_collection(params = {}, options = {})
+    def get_resource_collection(params = {}, **options)
       req = build_request(:get_resource_collection, params)
       req.send_request(options)
     end
@@ -761,9 +761,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListAnomaliesForInsight AWS API Documentation
     #
-    # @overload list_anomalies_for_insight(params = {})
+    # @overload list_anomalies_for_insight(**params)
     # @param [Hash] params ({})
-    def list_anomalies_for_insight(params = {}, options = {})
+    def list_anomalies_for_insight(params = {}, **options)
       req = build_request(:list_anomalies_for_insight, params)
       req.send_request(options)
     end
@@ -832,9 +832,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListEvents AWS API Documentation
     #
-    # @overload list_events(params = {})
+    # @overload list_events(**params)
     # @param [Hash] params ({})
-    def list_events(params = {}, options = {})
+    def list_events(params = {}, **options)
       req = build_request(:list_events, params)
       req.send_request(options)
     end
@@ -916,9 +916,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListInsights AWS API Documentation
     #
-    # @overload list_insights(params = {})
+    # @overload list_insights(**params)
     # @param [Hash] params ({})
-    def list_insights(params = {}, options = {})
+    def list_insights(params = {}, **options)
       req = build_request(:list_insights, params)
       req.send_request(options)
     end
@@ -955,9 +955,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListNotificationChannels AWS API Documentation
     #
-    # @overload list_notification_channels(params = {})
+    # @overload list_notification_channels(**params)
     # @param [Hash] params ({})
-    def list_notification_channels(params = {}, options = {})
+    def list_notification_channels(params = {}, **options)
       req = build_request(:list_notification_channels, params)
       req.send_request(options)
     end
@@ -1011,9 +1011,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListRecommendations AWS API Documentation
     #
-    # @overload list_recommendations(params = {})
+    # @overload list_recommendations(**params)
     # @param [Hash] params ({})
-    def list_recommendations(params = {}, options = {})
+    def list_recommendations(params = {}, **options)
       req = build_request(:list_recommendations, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/PutFeedback AWS API Documentation
     #
-    # @overload put_feedback(params = {})
+    # @overload put_feedback(**params)
     # @param [Hash] params ({})
-    def put_feedback(params = {}, options = {})
+    def put_feedback(params = {}, **options)
       req = build_request(:put_feedback, params)
       req.send_request(options)
     end
@@ -1061,9 +1061,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/RemoveNotificationChannel AWS API Documentation
     #
-    # @overload remove_notification_channel(params = {})
+    # @overload remove_notification_channel(**params)
     # @param [Hash] params ({})
-    def remove_notification_channel(params = {}, options = {})
+    def remove_notification_channel(params = {}, **options)
       req = build_request(:remove_notification_channel, params)
       req.send_request(options)
     end
@@ -1153,9 +1153,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/SearchInsights AWS API Documentation
     #
-    # @overload search_insights(params = {})
+    # @overload search_insights(**params)
     # @param [Hash] params ({})
-    def search_insights(params = {}, options = {})
+    def search_insights(params = {}, **options)
       req = build_request(:search_insights, params)
       req.send_request(options)
     end
@@ -1188,9 +1188,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateResourceCollection AWS API Documentation
     #
-    # @overload update_resource_collection(params = {})
+    # @overload update_resource_collection(**params)
     # @param [Hash] params ({})
-    def update_resource_collection(params = {}, options = {})
+    def update_resource_collection(params = {}, **options)
       req = build_request(:update_resource_collection, params)
       req.send_request(options)
     end
@@ -1219,9 +1219,9 @@ module Aws::DevOpsGuru
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateServiceIntegration AWS API Documentation
     #
-    # @overload update_service_integration(params = {})
+    # @overload update_service_integration(**params)
     # @param [Hash] params ({})
-    def update_service_integration(params = {}, options = {})
+    def update_service_integration(params = {}, **options)
       req = build_request(:update_service_integration, params)
       req.send_request(options)
     end
@@ -1230,7 +1230,7 @@ module Aws::DevOpsGuru
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1238,15 +1238,15 @@ module Aws::DevOpsGuru
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-devopsguru'
-      context[:gem_version] = '1.1.0'
+      context[:gem_name] = "aws-sdk-devopsguru"
+      context[:gem_version] = "1.1.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

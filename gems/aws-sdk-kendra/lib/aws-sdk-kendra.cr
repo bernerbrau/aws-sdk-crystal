@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-kendra/types'
-require_relative 'aws-sdk-kendra/client_api'
-require_relative 'aws-sdk-kendra/client'
-require_relative 'aws-sdk-kendra/errors'
-require_relative 'aws-sdk-kendra/resource'
-require_relative 'aws-sdk-kendra/customizations'
+require_relative "aws-sdk-kendra/types"
+require_relative "aws-sdk-kendra/client_api"
+require_relative "aws-sdk-kendra/client"
+require_relative "aws-sdk-kendra/errors"
+require_relative "aws-sdk-kendra/resource"
+require_relative "aws-sdk-kendra/customizations"
 
 # This module provides support for AWSKendraFrontendService. This module is available in the
 # `aws-sdk-kendra` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-kendra/customizations'
 # @!group service
 module Aws::Kendra
 
-  GEM_VERSION = '1.20.0'
+  GEM_VERSION = "1.20.0"
 
 end

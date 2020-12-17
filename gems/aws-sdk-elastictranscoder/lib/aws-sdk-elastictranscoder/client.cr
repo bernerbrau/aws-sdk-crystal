@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:elastictranscoder)
 
@@ -280,7 +280,7 @@ module Aws::ElasticTranscoder
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -350,9 +350,9 @@ module Aws::ElasticTranscoder
     #     id: "Id", # required
     #   })
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -922,9 +922,9 @@ module Aws::ElasticTranscoder
     #   resp.job.timing.start_time_millis #=> Integer
     #   resp.job.timing.finish_time_millis #=> Integer
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -1229,9 +1229,9 @@ module Aws::ElasticTranscoder
     #   resp.warnings[0].code #=> String
     #   resp.warnings[0].message #=> String
     #
-    # @overload create_pipeline(params = {})
+    # @overload create_pipeline(**params)
     # @param [Hash] params ({})
-    def create_pipeline(params = {}, options = {})
+    def create_pipeline(params = {}, **options)
       req = build_request(:create_pipeline, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::ElasticTranscoder
     #   resp.preset.type #=> String
     #   resp.warning #=> String
     #
-    # @overload create_preset(params = {})
+    # @overload create_preset(**params)
     # @param [Hash] params ({})
-    def create_preset(params = {}, options = {})
+    def create_preset(params = {}, **options)
       req = build_request(:create_preset, params)
       req.send_request(options)
     end
@@ -1423,9 +1423,9 @@ module Aws::ElasticTranscoder
     #     id: "Id", # required
     #   })
     #
-    # @overload delete_pipeline(params = {})
+    # @overload delete_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_pipeline(params = {}, options = {})
+    def delete_pipeline(params = {}, **options)
       req = build_request(:delete_pipeline, params)
       req.send_request(options)
     end
@@ -1450,9 +1450,9 @@ module Aws::ElasticTranscoder
     #     id: "Id", # required
     #   })
     #
-    # @overload delete_preset(params = {})
+    # @overload delete_preset(**params)
     # @param [Hash] params ({})
-    def delete_preset(params = {}, options = {})
+    def delete_preset(params = {}, **options)
       req = build_request(:delete_preset, params)
       req.send_request(options)
     end
@@ -1706,9 +1706,9 @@ module Aws::ElasticTranscoder
     #   resp.jobs[0].timing.finish_time_millis #=> Integer
     #   resp.next_page_token #=> String
     #
-    # @overload list_jobs_by_pipeline(params = {})
+    # @overload list_jobs_by_pipeline(**params)
     # @param [Hash] params ({})
-    def list_jobs_by_pipeline(params = {}, options = {})
+    def list_jobs_by_pipeline(params = {}, **options)
       req = build_request(:list_jobs_by_pipeline, params)
       req.send_request(options)
     end
@@ -1961,9 +1961,9 @@ module Aws::ElasticTranscoder
     #   resp.jobs[0].timing.finish_time_millis #=> Integer
     #   resp.next_page_token #=> String
     #
-    # @overload list_jobs_by_status(params = {})
+    # @overload list_jobs_by_status(**params)
     # @param [Hash] params ({})
-    def list_jobs_by_status(params = {}, options = {})
+    def list_jobs_by_status(params = {}, **options)
       req = build_request(:list_jobs_by_status, params)
       req.send_request(options)
     end
@@ -2026,9 +2026,9 @@ module Aws::ElasticTranscoder
     #   resp.pipelines[0].thumbnail_config.permissions[0].access[0] #=> String
     #   resp.next_page_token #=> String
     #
-    # @overload list_pipelines(params = {})
+    # @overload list_pipelines(**params)
     # @param [Hash] params ({})
-    def list_pipelines(params = {}, options = {})
+    def list_pipelines(params = {}, **options)
       req = build_request(:list_pipelines, params)
       req.send_request(options)
     end
@@ -2115,9 +2115,9 @@ module Aws::ElasticTranscoder
     #   resp.presets[0].type #=> String
     #   resp.next_page_token #=> String
     #
-    # @overload list_presets(params = {})
+    # @overload list_presets(**params)
     # @param [Hash] params ({})
-    def list_presets(params = {}, options = {})
+    def list_presets(params = {}, **options)
       req = build_request(:list_presets, params)
       req.send_request(options)
     end
@@ -2355,9 +2355,9 @@ module Aws::ElasticTranscoder
     #
     #   * job_complete
     #
-    # @overload read_job(params = {})
+    # @overload read_job(**params)
     # @param [Hash] params ({})
-    def read_job(params = {}, options = {})
+    def read_job(params = {}, **options)
       req = build_request(:read_job, params)
       req.send_request(options)
     end
@@ -2410,9 +2410,9 @@ module Aws::ElasticTranscoder
     #   resp.warnings[0].code #=> String
     #   resp.warnings[0].message #=> String
     #
-    # @overload read_pipeline(params = {})
+    # @overload read_pipeline(**params)
     # @param [Hash] params ({})
-    def read_pipeline(params = {}, options = {})
+    def read_pipeline(params = {}, **options)
       req = build_request(:read_pipeline, params)
       req.send_request(options)
     end
@@ -2485,9 +2485,9 @@ module Aws::ElasticTranscoder
     #   resp.preset.thumbnails.padding_policy #=> String
     #   resp.preset.type #=> String
     #
-    # @overload read_preset(params = {})
+    # @overload read_preset(**params)
     # @param [Hash] params ({})
-    def read_preset(params = {}, options = {})
+    def read_preset(params = {}, **options)
       req = build_request(:read_preset, params)
       req.send_request(options)
     end
@@ -2537,9 +2537,9 @@ module Aws::ElasticTranscoder
     #   resp.messages #=> Array
     #   resp.messages[0] #=> String
     #
-    # @overload test_role(params = {})
+    # @overload test_role(**params)
     # @param [Hash] params ({})
-    def test_role(params = {}, options = {})
+    def test_role(params = {}, **options)
       req = build_request(:test_role, params)
       req.send_request(options)
     end
@@ -2818,9 +2818,9 @@ module Aws::ElasticTranscoder
     #   resp.warnings[0].code #=> String
     #   resp.warnings[0].message #=> String
     #
-    # @overload update_pipeline(params = {})
+    # @overload update_pipeline(**params)
     # @param [Hash] params ({})
-    def update_pipeline(params = {}, options = {})
+    def update_pipeline(params = {}, **options)
       req = build_request(:update_pipeline, params)
       req.send_request(options)
     end
@@ -2905,9 +2905,9 @@ module Aws::ElasticTranscoder
     #   resp.pipeline.thumbnail_config.permissions[0].access #=> Array
     #   resp.pipeline.thumbnail_config.permissions[0].access[0] #=> String
     #
-    # @overload update_pipeline_notifications(params = {})
+    # @overload update_pipeline_notifications(**params)
     # @param [Hash] params ({})
-    def update_pipeline_notifications(params = {}, options = {})
+    def update_pipeline_notifications(params = {}, **options)
       req = build_request(:update_pipeline_notifications, params)
       req.send_request(options)
     end
@@ -2971,9 +2971,9 @@ module Aws::ElasticTranscoder
     #   resp.pipeline.thumbnail_config.permissions[0].access #=> Array
     #   resp.pipeline.thumbnail_config.permissions[0].access[0] #=> String
     #
-    # @overload update_pipeline_status(params = {})
+    # @overload update_pipeline_status(**params)
     # @param [Hash] params ({})
-    def update_pipeline_status(params = {}, options = {})
+    def update_pipeline_status(params = {}, **options)
       req = build_request(:update_pipeline_status, params)
       req.send_request(options)
     end
@@ -2982,7 +2982,7 @@ module Aws::ElasticTranscoder
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2990,8 +2990,8 @@ module Aws::ElasticTranscoder
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-elastictranscoder'
-      context[:gem_version] = '1.27.0'
+      context[:gem_name] = "aws-sdk-elastictranscoder"
+      context[:gem_version] = "1.27.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3083,7 +3083,7 @@ module Aws::ElasticTranscoder
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3099,7 +3099,7 @@ module Aws::ElasticTranscoder
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

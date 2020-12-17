@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-marketplaceentitlementservice/types'
-require_relative 'aws-sdk-marketplaceentitlementservice/client_api'
-require_relative 'aws-sdk-marketplaceentitlementservice/client'
-require_relative 'aws-sdk-marketplaceentitlementservice/errors'
-require_relative 'aws-sdk-marketplaceentitlementservice/resource'
-require_relative 'aws-sdk-marketplaceentitlementservice/customizations'
+require_relative "aws-sdk-marketplaceentitlementservice/types"
+require_relative "aws-sdk-marketplaceentitlementservice/client_api"
+require_relative "aws-sdk-marketplaceentitlementservice/client"
+require_relative "aws-sdk-marketplaceentitlementservice/errors"
+require_relative "aws-sdk-marketplaceentitlementservice/resource"
+require_relative "aws-sdk-marketplaceentitlementservice/customizations"
 
 # This module provides support for AWS Marketplace Entitlement Service. This module is available in the
 # `aws-sdk-marketplaceentitlementservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-marketplaceentitlementservice/customizations'
 # @!group service
 module Aws::MarketplaceEntitlementService
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

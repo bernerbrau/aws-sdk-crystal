@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-timestreamwrite/types'
-require_relative 'aws-sdk-timestreamwrite/client_api'
-require_relative 'aws-sdk-timestreamwrite/client'
-require_relative 'aws-sdk-timestreamwrite/errors'
-require_relative 'aws-sdk-timestreamwrite/resource'
-require_relative 'aws-sdk-timestreamwrite/customizations'
+require_relative "aws-sdk-timestreamwrite/types"
+require_relative "aws-sdk-timestreamwrite/client_api"
+require_relative "aws-sdk-timestreamwrite/client"
+require_relative "aws-sdk-timestreamwrite/errors"
+require_relative "aws-sdk-timestreamwrite/resource"
+require_relative "aws-sdk-timestreamwrite/customizations"
 
 # This module provides support for Amazon Timestream Write. This module is available in the
 # `aws-sdk-timestreamwrite` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-timestreamwrite/customizations'
 # @!group service
 module Aws::TimestreamWrite
 
-  GEM_VERSION = '1.2.0'
+  GEM_VERSION = "1.2.0"
 
 end

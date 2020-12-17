@@ -8,11 +8,11 @@
 Feature: Smoke tests for CostandUsageReportService
 
 Background:
-  Given I create a client in region 'us-east-1'
+  Given I create a client in region "us-east-1"
 
   @costandusagereportservice @smoke
   Scenario: Call Aws::CostandUsageReportService::Client#describe_report_definitions and expect it to succeed
-  When I call the operation 'describe_report_definitions' with params:
+  When I call the operation "describe_report_definitions" with params:
     """
 {}
     """

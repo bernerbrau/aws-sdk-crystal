@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ElasticLoadBalancingV2
   # Waiters are utility methods that poll for a particular state to occur
@@ -117,7 +117,7 @@ module Aws::ElasticLoadBalancingV2
 
       # @option (see Client#describe_load_balancers)
       # @return (see Client#describe_load_balancers)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -159,7 +159,7 @@ module Aws::ElasticLoadBalancingV2
 
       # @option (see Client#describe_load_balancers)
       # @return (see Client#describe_load_balancers)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -202,7 +202,7 @@ module Aws::ElasticLoadBalancingV2
 
       # @option (see Client#describe_load_balancers)
       # @return (see Client#describe_load_balancers)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -245,7 +245,7 @@ module Aws::ElasticLoadBalancingV2
 
       # @option (see Client#describe_target_health)
       # @return (see Client#describe_target_health)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -288,7 +288,7 @@ module Aws::ElasticLoadBalancingV2
 
       # @option (see Client#describe_target_health)
       # @return (see Client#describe_target_health)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

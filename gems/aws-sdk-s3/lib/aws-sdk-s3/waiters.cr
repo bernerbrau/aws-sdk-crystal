@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::S3
   # Waiters are utility methods that poll for a particular state to occur
@@ -119,7 +119,7 @@ module Aws::S3
 
       # @option (see Client#head_bucket)
       # @return (see Client#head_bucket)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -154,7 +154,7 @@ module Aws::S3
 
       # @option (see Client#head_bucket)
       # @return (see Client#head_bucket)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -196,7 +196,7 @@ module Aws::S3
 
       # @option (see Client#head_object)
       # @return (see Client#head_object)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -231,7 +231,7 @@ module Aws::S3
 
       # @option (see Client#head_object)
       # @return (see Client#head_object)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

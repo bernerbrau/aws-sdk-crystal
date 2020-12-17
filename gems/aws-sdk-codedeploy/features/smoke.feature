@@ -8,11 +8,11 @@
 Feature: Smoke tests for CodeDeploy
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @codedeploy @smoke
   Scenario: Call Aws::CodeDeploy::Client#list_applications and expect it to succeed
-  When I call the operation 'list_applications' with params:
+  When I call the operation "list_applications" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @codedeploy @smoke
   Scenario: Call Aws::Aws::CodeDeploy::Client#get_deployment and expect it to fail
-  When I call the operation 'get_deployment' with params:
+  When I call the operation "get_deployment" with params:
     """
 {"deployment_id":"d-USUAELQEX"}
     """

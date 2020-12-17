@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:networkfirewall)
 
@@ -290,7 +290,7 @@ module Aws::NetworkFirewall
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -402,9 +402,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/AssociateFirewallPolicy AWS API Documentation
     #
-    # @overload associate_firewall_policy(params = {})
+    # @overload associate_firewall_policy(**params)
     # @param [Hash] params ({})
-    def associate_firewall_policy(params = {}, options = {})
+    def associate_firewall_policy(params = {}, **options)
       req = build_request(:associate_firewall_policy, params)
       req.send_request(options)
     end
@@ -482,9 +482,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/AssociateSubnets AWS API Documentation
     #
-    # @overload associate_subnets(params = {})
+    # @overload associate_subnets(**params)
     # @param [Hash] params ({})
-    def associate_subnets(params = {}, options = {})
+    def associate_subnets(params = {}, **options)
       req = build_request(:associate_subnets, params)
       req.send_request(options)
     end
@@ -613,9 +613,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateFirewall AWS API Documentation
     #
-    # @overload create_firewall(params = {})
+    # @overload create_firewall(**params)
     # @param [Hash] params ({})
-    def create_firewall(params = {}, options = {})
+    def create_firewall(params = {}, **options)
       req = build_request(:create_firewall, params)
       req.send_request(options)
     end
@@ -718,9 +718,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateFirewallPolicy AWS API Documentation
     #
-    # @overload create_firewall_policy(params = {})
+    # @overload create_firewall_policy(**params)
     # @param [Hash] params ({})
-    def create_firewall_policy(params = {}, options = {})
+    def create_firewall_policy(params = {}, **options)
       req = build_request(:create_firewall_policy, params)
       req.send_request(options)
     end
@@ -971,9 +971,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateRuleGroup AWS API Documentation
     #
-    # @overload create_rule_group(params = {})
+    # @overload create_rule_group(**params)
     # @param [Hash] params ({})
-    def create_rule_group(params = {}, options = {})
+    def create_rule_group(params = {}, **options)
       req = build_request(:create_rule_group, params)
       req.send_request(options)
     end
@@ -1044,9 +1044,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteFirewall AWS API Documentation
     #
-    # @overload delete_firewall(params = {})
+    # @overload delete_firewall(**params)
     # @param [Hash] params ({})
-    def delete_firewall(params = {}, options = {})
+    def delete_firewall(params = {}, **options)
       req = build_request(:delete_firewall, params)
       req.send_request(options)
     end
@@ -1088,9 +1088,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteFirewallPolicy AWS API Documentation
     #
-    # @overload delete_firewall_policy(params = {})
+    # @overload delete_firewall_policy(**params)
     # @param [Hash] params ({})
-    def delete_firewall_policy(params = {}, options = {})
+    def delete_firewall_policy(params = {}, **options)
       req = build_request(:delete_firewall_policy, params)
       req.send_request(options)
     end
@@ -1112,9 +1112,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteResourcePolicy AWS API Documentation
     #
-    # @overload delete_resource_policy(params = {})
+    # @overload delete_resource_policy(**params)
     # @param [Hash] params ({})
-    def delete_resource_policy(params = {}, options = {})
+    def delete_resource_policy(params = {}, **options)
       req = build_request(:delete_resource_policy, params)
       req.send_request(options)
     end
@@ -1169,9 +1169,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteRuleGroup AWS API Documentation
     #
-    # @overload delete_rule_group(params = {})
+    # @overload delete_rule_group(**params)
     # @param [Hash] params ({})
-    def delete_rule_group(params = {}, options = {})
+    def delete_rule_group(params = {}, **options)
       req = build_request(:delete_rule_group, params)
       req.send_request(options)
     end
@@ -1230,9 +1230,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeFirewall AWS API Documentation
     #
-    # @overload describe_firewall(params = {})
+    # @overload describe_firewall(**params)
     # @param [Hash] params ({})
-    def describe_firewall(params = {}, options = {})
+    def describe_firewall(params = {}, **options)
       req = build_request(:describe_firewall, params)
       req.send_request(options)
     end
@@ -1290,9 +1290,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeFirewallPolicy AWS API Documentation
     #
-    # @overload describe_firewall_policy(params = {})
+    # @overload describe_firewall_policy(**params)
     # @param [Hash] params ({})
-    def describe_firewall_policy(params = {}, options = {})
+    def describe_firewall_policy(params = {}, **options)
       req = build_request(:describe_firewall_policy, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeLoggingConfiguration AWS API Documentation
     #
-    # @overload describe_logging_configuration(params = {})
+    # @overload describe_logging_configuration(**params)
     # @param [Hash] params ({})
-    def describe_logging_configuration(params = {}, options = {})
+    def describe_logging_configuration(params = {}, **options)
       req = build_request(:describe_logging_configuration, params)
       req.send_request(options)
     end
@@ -1363,9 +1363,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeResourcePolicy AWS API Documentation
     #
-    # @overload describe_resource_policy(params = {})
+    # @overload describe_resource_policy(**params)
     # @param [Hash] params ({})
-    def describe_resource_policy(params = {}, options = {})
+    def describe_resource_policy(params = {}, **options)
       req = build_request(:describe_resource_policy, params)
       req.send_request(options)
     end
@@ -1472,9 +1472,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeRuleGroup AWS API Documentation
     #
-    # @overload describe_rule_group(params = {})
+    # @overload describe_rule_group(**params)
     # @param [Hash] params ({})
-    def describe_rule_group(params = {}, options = {})
+    def describe_rule_group(params = {}, **options)
       req = build_request(:describe_rule_group, params)
       req.send_request(options)
     end
@@ -1542,9 +1542,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DisassociateSubnets AWS API Documentation
     #
-    # @overload disassociate_subnets(params = {})
+    # @overload disassociate_subnets(**params)
     # @param [Hash] params ({})
-    def disassociate_subnets(params = {}, options = {})
+    def disassociate_subnets(params = {}, **options)
       req = build_request(:disassociate_subnets, params)
       req.send_request(options)
     end
@@ -1589,9 +1589,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListFirewallPolicies AWS API Documentation
     #
-    # @overload list_firewall_policies(params = {})
+    # @overload list_firewall_policies(**params)
     # @param [Hash] params ({})
-    def list_firewall_policies(params = {}, options = {})
+    def list_firewall_policies(params = {}, **options)
       req = build_request(:list_firewall_policies, params)
       req.send_request(options)
     end
@@ -1645,9 +1645,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListFirewalls AWS API Documentation
     #
-    # @overload list_firewalls(params = {})
+    # @overload list_firewalls(**params)
     # @param [Hash] params ({})
-    def list_firewalls(params = {}, options = {})
+    def list_firewalls(params = {}, **options)
       req = build_request(:list_firewalls, params)
       req.send_request(options)
     end
@@ -1692,9 +1692,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListRuleGroups AWS API Documentation
     #
-    # @overload list_rule_groups(params = {})
+    # @overload list_rule_groups(**params)
     # @param [Hash] params ({})
-    def list_rule_groups(params = {}, options = {})
+    def list_rule_groups(params = {}, **options)
       req = build_request(:list_rule_groups, params)
       req.send_request(options)
     end
@@ -1749,9 +1749,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1831,9 +1831,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/PutResourcePolicy AWS API Documentation
     #
-    # @overload put_resource_policy(params = {})
+    # @overload put_resource_policy(**params)
     # @param [Hash] params ({})
-    def put_resource_policy(params = {}, options = {})
+    def put_resource_policy(params = {}, **options)
       req = build_request(:put_resource_policy, params)
       req.send_request(options)
     end
@@ -1869,9 +1869,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1902,9 +1902,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1976,9 +1976,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallDeleteProtection AWS API Documentation
     #
-    # @overload update_firewall_delete_protection(params = {})
+    # @overload update_firewall_delete_protection(**params)
     # @param [Hash] params ({})
-    def update_firewall_delete_protection(params = {}, options = {})
+    def update_firewall_delete_protection(params = {}, **options)
       req = build_request(:update_firewall_delete_protection, params)
       req.send_request(options)
     end
@@ -2046,9 +2046,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallDescription AWS API Documentation
     #
-    # @overload update_firewall_description(params = {})
+    # @overload update_firewall_description(**params)
     # @param [Hash] params ({})
-    def update_firewall_description(params = {}, options = {})
+    def update_firewall_description(params = {}, **options)
       req = build_request(:update_firewall_description, params)
       req.send_request(options)
     end
@@ -2158,9 +2158,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallPolicy AWS API Documentation
     #
-    # @overload update_firewall_policy(params = {})
+    # @overload update_firewall_policy(**params)
     # @param [Hash] params ({})
-    def update_firewall_policy(params = {}, options = {})
+    def update_firewall_policy(params = {}, **options)
       req = build_request(:update_firewall_policy, params)
       req.send_request(options)
     end
@@ -2227,9 +2227,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallPolicyChangeProtection AWS API Documentation
     #
-    # @overload update_firewall_policy_change_protection(params = {})
+    # @overload update_firewall_policy_change_protection(**params)
     # @param [Hash] params ({})
-    def update_firewall_policy_change_protection(params = {}, options = {})
+    def update_firewall_policy_change_protection(params = {}, **options)
       req = build_request(:update_firewall_policy_change_protection, params)
       req.send_request(options)
     end
@@ -2310,9 +2310,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateLoggingConfiguration AWS API Documentation
     #
-    # @overload update_logging_configuration(params = {})
+    # @overload update_logging_configuration(**params)
     # @param [Hash] params ({})
-    def update_logging_configuration(params = {}, options = {})
+    def update_logging_configuration(params = {}, **options)
       req = build_request(:update_logging_configuration, params)
       req.send_request(options)
     end
@@ -2533,9 +2533,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateRuleGroup AWS API Documentation
     #
-    # @overload update_rule_group(params = {})
+    # @overload update_rule_group(**params)
     # @param [Hash] params ({})
-    def update_rule_group(params = {}, options = {})
+    def update_rule_group(params = {}, **options)
       req = build_request(:update_rule_group, params)
       req.send_request(options)
     end
@@ -2602,9 +2602,9 @@ module Aws::NetworkFirewall
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateSubnetChangeProtection AWS API Documentation
     #
-    # @overload update_subnet_change_protection(params = {})
+    # @overload update_subnet_change_protection(**params)
     # @param [Hash] params ({})
-    def update_subnet_change_protection(params = {}, options = {})
+    def update_subnet_change_protection(params = {}, **options)
       req = build_request(:update_subnet_change_protection, params)
       req.send_request(options)
     end
@@ -2613,7 +2613,7 @@ module Aws::NetworkFirewall
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2621,15 +2621,15 @@ module Aws::NetworkFirewall
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-networkfirewall'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-networkfirewall"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

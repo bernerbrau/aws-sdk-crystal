@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-sagemakerruntime/types'
-require_relative 'aws-sdk-sagemakerruntime/client_api'
-require_relative 'aws-sdk-sagemakerruntime/client'
-require_relative 'aws-sdk-sagemakerruntime/errors'
-require_relative 'aws-sdk-sagemakerruntime/resource'
-require_relative 'aws-sdk-sagemakerruntime/customizations'
+require_relative "aws-sdk-sagemakerruntime/types"
+require_relative "aws-sdk-sagemakerruntime/client_api"
+require_relative "aws-sdk-sagemakerruntime/client"
+require_relative "aws-sdk-sagemakerruntime/errors"
+require_relative "aws-sdk-sagemakerruntime/resource"
+require_relative "aws-sdk-sagemakerruntime/customizations"
 
 # This module provides support for Amazon SageMaker Runtime. This module is available in the
 # `aws-sdk-sagemakerruntime` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-sagemakerruntime/customizations'
 # @!group service
 module Aws::SageMakerRuntime
 
-  GEM_VERSION = '1.28.0'
+  GEM_VERSION = "1.28.0"
 
 end

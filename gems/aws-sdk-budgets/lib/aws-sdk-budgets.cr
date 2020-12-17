@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-budgets/types'
-require_relative 'aws-sdk-budgets/client_api'
-require_relative 'aws-sdk-budgets/client'
-require_relative 'aws-sdk-budgets/errors'
-require_relative 'aws-sdk-budgets/resource'
-require_relative 'aws-sdk-budgets/customizations'
+require_relative "aws-sdk-budgets/types"
+require_relative "aws-sdk-budgets/client_api"
+require_relative "aws-sdk-budgets/client"
+require_relative "aws-sdk-budgets/errors"
+require_relative "aws-sdk-budgets/resource"
+require_relative "aws-sdk-budgets/customizations"
 
 # This module provides support for AWS Budgets. This module is available in the
 # `aws-sdk-budgets` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-budgets/customizations'
 # @!group service
 module Aws::Budgets
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

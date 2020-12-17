@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:pinpointemail)
 
@@ -280,7 +280,7 @@ module Aws::PinpointEmail
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -388,9 +388,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/CreateConfigurationSet AWS API Documentation
     #
-    # @overload create_configuration_set(params = {})
+    # @overload create_configuration_set(**params)
     # @param [Hash] params ({})
-    def create_configuration_set(params = {}, options = {})
+    def create_configuration_set(params = {}, **options)
       req = build_request(:create_configuration_set, params)
       req.send_request(options)
     end
@@ -451,9 +451,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/CreateConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload create_configuration_set_event_destination(params = {})
+    # @overload create_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def create_configuration_set_event_destination(params = {}, options = {})
+    def create_configuration_set_event_destination(params = {}, **options)
       req = build_request(:create_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -487,9 +487,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/CreateDedicatedIpPool AWS API Documentation
     #
-    # @overload create_dedicated_ip_pool(params = {})
+    # @overload create_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def create_dedicated_ip_pool(params = {}, options = {})
+    def create_dedicated_ip_pool(params = {}, **options)
       req = build_request(:create_dedicated_ip_pool, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/CreateDeliverabilityTestReport AWS API Documentation
     #
-    # @overload create_deliverability_test_report(params = {})
+    # @overload create_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def create_deliverability_test_report(params = {}, options = {})
+    def create_deliverability_test_report(params = {}, **options)
       req = build_request(:create_deliverability_test_report, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/CreateEmailIdentity AWS API Documentation
     #
-    # @overload create_email_identity(params = {})
+    # @overload create_email_identity(**params)
     # @param [Hash] params ({})
-    def create_email_identity(params = {}, options = {})
+    def create_email_identity(params = {}, **options)
       req = build_request(:create_email_identity, params)
       req.send_request(options)
     end
@@ -660,9 +660,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/DeleteConfigurationSet AWS API Documentation
     #
-    # @overload delete_configuration_set(params = {})
+    # @overload delete_configuration_set(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set(params = {}, options = {})
+    def delete_configuration_set(params = {}, **options)
       req = build_request(:delete_configuration_set, params)
       req.send_request(options)
     end
@@ -694,9 +694,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/DeleteConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload delete_configuration_set_event_destination(params = {})
+    # @overload delete_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def delete_configuration_set_event_destination(params = {}, options = {})
+    def delete_configuration_set_event_destination(params = {}, **options)
       req = build_request(:delete_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -716,9 +716,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/DeleteDedicatedIpPool AWS API Documentation
     #
-    # @overload delete_dedicated_ip_pool(params = {})
+    # @overload delete_dedicated_ip_pool(**params)
     # @param [Hash] params ({})
-    def delete_dedicated_ip_pool(params = {}, options = {})
+    def delete_dedicated_ip_pool(params = {}, **options)
       req = build_request(:delete_dedicated_ip_pool, params)
       req.send_request(options)
     end
@@ -741,9 +741,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/DeleteEmailIdentity AWS API Documentation
     #
-    # @overload delete_email_identity(params = {})
+    # @overload delete_email_identity(**params)
     # @param [Hash] params ({})
-    def delete_email_identity(params = {}, options = {})
+    def delete_email_identity(params = {}, **options)
       req = build_request(:delete_email_identity, params)
       req.send_request(options)
     end
@@ -771,9 +771,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetAccount AWS API Documentation
     #
-    # @overload get_account(params = {})
+    # @overload get_account(**params)
     # @param [Hash] params ({})
-    def get_account(params = {}, options = {})
+    def get_account(params = {}, **options)
       req = build_request(:get_account, params)
       req.send_request(options)
     end
@@ -806,9 +806,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetBlacklistReports AWS API Documentation
     #
-    # @overload get_blacklist_reports(params = {})
+    # @overload get_blacklist_reports(**params)
     # @param [Hash] params ({})
-    def get_blacklist_reports(params = {}, options = {})
+    def get_blacklist_reports(params = {}, **options)
       req = build_request(:get_blacklist_reports, params)
       req.send_request(options)
     end
@@ -857,9 +857,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetConfigurationSet AWS API Documentation
     #
-    # @overload get_configuration_set(params = {})
+    # @overload get_configuration_set(**params)
     # @param [Hash] params ({})
-    def get_configuration_set(params = {}, options = {})
+    def get_configuration_set(params = {}, **options)
       req = build_request(:get_configuration_set, params)
       req.send_request(options)
     end
@@ -905,9 +905,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetConfigurationSetEventDestinations AWS API Documentation
     #
-    # @overload get_configuration_set_event_destinations(params = {})
+    # @overload get_configuration_set_event_destinations(**params)
     # @param [Hash] params ({})
-    def get_configuration_set_event_destinations(params = {}, options = {})
+    def get_configuration_set_event_destinations(params = {}, **options)
       req = build_request(:get_configuration_set_event_destinations, params)
       req.send_request(options)
     end
@@ -940,9 +940,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetDedicatedIp AWS API Documentation
     #
-    # @overload get_dedicated_ip(params = {})
+    # @overload get_dedicated_ip(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ip(params = {}, options = {})
+    def get_dedicated_ip(params = {}, **options)
       req = build_request(:get_dedicated_ip, params)
       req.send_request(options)
     end
@@ -990,9 +990,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetDedicatedIps AWS API Documentation
     #
-    # @overload get_dedicated_ips(params = {})
+    # @overload get_dedicated_ips(**params)
     # @param [Hash] params ({})
-    def get_dedicated_ips(params = {}, options = {})
+    def get_dedicated_ips(params = {}, **options)
       req = build_request(:get_dedicated_ips, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetDeliverabilityDashboardOptions AWS API Documentation
     #
-    # @overload get_deliverability_dashboard_options(params = {})
+    # @overload get_deliverability_dashboard_options(**params)
     # @param [Hash] params ({})
-    def get_deliverability_dashboard_options(params = {}, options = {})
+    def get_deliverability_dashboard_options(params = {}, **options)
       req = build_request(:get_deliverability_dashboard_options, params)
       req.send_request(options)
     end
@@ -1095,9 +1095,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetDeliverabilityTestReport AWS API Documentation
     #
-    # @overload get_deliverability_test_report(params = {})
+    # @overload get_deliverability_test_report(**params)
     # @param [Hash] params ({})
-    def get_deliverability_test_report(params = {}, options = {})
+    def get_deliverability_test_report(params = {}, **options)
       req = build_request(:get_deliverability_test_report, params)
       req.send_request(options)
     end
@@ -1145,9 +1145,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetDomainDeliverabilityCampaign AWS API Documentation
     #
-    # @overload get_domain_deliverability_campaign(params = {})
+    # @overload get_domain_deliverability_campaign(**params)
     # @param [Hash] params ({})
-    def get_domain_deliverability_campaign(params = {}, options = {})
+    def get_domain_deliverability_campaign(params = {}, **options)
       req = build_request(:get_domain_deliverability_campaign, params)
       req.send_request(options)
     end
@@ -1208,9 +1208,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetDomainStatisticsReport AWS API Documentation
     #
-    # @overload get_domain_statistics_report(params = {})
+    # @overload get_domain_statistics_report(**params)
     # @param [Hash] params ({})
-    def get_domain_statistics_report(params = {}, options = {})
+    def get_domain_statistics_report(params = {}, **options)
       req = build_request(:get_domain_statistics_report, params)
       req.send_request(options)
     end
@@ -1256,9 +1256,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/GetEmailIdentity AWS API Documentation
     #
-    # @overload get_email_identity(params = {})
+    # @overload get_email_identity(**params)
     # @param [Hash] params ({})
-    def get_email_identity(params = {}, options = {})
+    def get_email_identity(params = {}, **options)
       req = build_request(:get_email_identity, params)
       req.send_request(options)
     end
@@ -1304,9 +1304,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/ListConfigurationSets AWS API Documentation
     #
-    # @overload list_configuration_sets(params = {})
+    # @overload list_configuration_sets(**params)
     # @param [Hash] params ({})
-    def list_configuration_sets(params = {}, options = {})
+    def list_configuration_sets(params = {}, **options)
       req = build_request(:list_configuration_sets, params)
       req.send_request(options)
     end
@@ -1346,9 +1346,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/ListDedicatedIpPools AWS API Documentation
     #
-    # @overload list_dedicated_ip_pools(params = {})
+    # @overload list_dedicated_ip_pools(**params)
     # @param [Hash] params ({})
-    def list_dedicated_ip_pools(params = {}, options = {})
+    def list_dedicated_ip_pools(params = {}, **options)
       req = build_request(:list_dedicated_ip_pools, params)
       req.send_request(options)
     end
@@ -1400,9 +1400,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/ListDeliverabilityTestReports AWS API Documentation
     #
-    # @overload list_deliverability_test_reports(params = {})
+    # @overload list_deliverability_test_reports(**params)
     # @param [Hash] params ({})
-    def list_deliverability_test_reports(params = {}, options = {})
+    def list_deliverability_test_reports(params = {}, **options)
       req = build_request(:list_deliverability_test_reports, params)
       req.send_request(options)
     end
@@ -1477,9 +1477,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/ListDomainDeliverabilityCampaigns AWS API Documentation
     #
-    # @overload list_domain_deliverability_campaigns(params = {})
+    # @overload list_domain_deliverability_campaigns(**params)
     # @param [Hash] params ({})
-    def list_domain_deliverability_campaigns(params = {}, options = {})
+    def list_domain_deliverability_campaigns(params = {}, **options)
       req = build_request(:list_domain_deliverability_campaigns, params)
       req.send_request(options)
     end
@@ -1526,9 +1526,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/ListEmailIdentities AWS API Documentation
     #
-    # @overload list_email_identities(params = {})
+    # @overload list_email_identities(**params)
     # @param [Hash] params ({})
-    def list_email_identities(params = {}, options = {})
+    def list_email_identities(params = {}, **options)
       req = build_request(:list_email_identities, params)
       req.send_request(options)
     end
@@ -1562,9 +1562,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1588,9 +1588,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutAccountDedicatedIpWarmupAttributes AWS API Documentation
     #
-    # @overload put_account_dedicated_ip_warmup_attributes(params = {})
+    # @overload put_account_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_dedicated_ip_warmup_attributes(params = {}, options = {})
+    def put_account_dedicated_ip_warmup_attributes(params = {}, **options)
       req = build_request(:put_account_dedicated_ip_warmup_attributes, params)
       req.send_request(options)
     end
@@ -1617,9 +1617,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutAccountSendingAttributes AWS API Documentation
     #
-    # @overload put_account_sending_attributes(params = {})
+    # @overload put_account_sending_attributes(**params)
     # @param [Hash] params ({})
-    def put_account_sending_attributes(params = {}, options = {})
+    def put_account_sending_attributes(params = {}, **options)
       req = build_request(:put_account_sending_attributes, params)
       req.send_request(options)
     end
@@ -1655,9 +1655,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutConfigurationSetDeliveryOptions AWS API Documentation
     #
-    # @overload put_configuration_set_delivery_options(params = {})
+    # @overload put_configuration_set_delivery_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_delivery_options(params = {}, options = {})
+    def put_configuration_set_delivery_options(params = {}, **options)
       req = build_request(:put_configuration_set_delivery_options, params)
       req.send_request(options)
     end
@@ -1685,9 +1685,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutConfigurationSetReputationOptions AWS API Documentation
     #
-    # @overload put_configuration_set_reputation_options(params = {})
+    # @overload put_configuration_set_reputation_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_reputation_options(params = {}, options = {})
+    def put_configuration_set_reputation_options(params = {}, **options)
       req = build_request(:put_configuration_set_reputation_options, params)
       req.send_request(options)
     end
@@ -1714,9 +1714,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutConfigurationSetSendingOptions AWS API Documentation
     #
-    # @overload put_configuration_set_sending_options(params = {})
+    # @overload put_configuration_set_sending_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_sending_options(params = {}, options = {})
+    def put_configuration_set_sending_options(params = {}, **options)
       req = build_request(:put_configuration_set_sending_options, params)
       req.send_request(options)
     end
@@ -1742,9 +1742,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutConfigurationSetTrackingOptions AWS API Documentation
     #
-    # @overload put_configuration_set_tracking_options(params = {})
+    # @overload put_configuration_set_tracking_options(**params)
     # @param [Hash] params ({})
-    def put_configuration_set_tracking_options(params = {}, options = {})
+    def put_configuration_set_tracking_options(params = {}, **options)
       req = build_request(:put_configuration_set_tracking_options, params)
       req.send_request(options)
     end
@@ -1779,9 +1779,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutDedicatedIpInPool AWS API Documentation
     #
-    # @overload put_dedicated_ip_in_pool(params = {})
+    # @overload put_dedicated_ip_in_pool(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_in_pool(params = {}, options = {})
+    def put_dedicated_ip_in_pool(params = {}, **options)
       req = build_request(:put_dedicated_ip_in_pool, params)
       req.send_request(options)
     end
@@ -1805,9 +1805,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutDedicatedIpWarmupAttributes AWS API Documentation
     #
-    # @overload put_dedicated_ip_warmup_attributes(params = {})
+    # @overload put_dedicated_ip_warmup_attributes(**params)
     # @param [Hash] params ({})
-    def put_dedicated_ip_warmup_attributes(params = {}, options = {})
+    def put_dedicated_ip_warmup_attributes(params = {}, **options)
       req = build_request(:put_dedicated_ip_warmup_attributes, params)
       req.send_request(options)
     end
@@ -1857,9 +1857,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutDeliverabilityDashboardOption AWS API Documentation
     #
-    # @overload put_deliverability_dashboard_option(params = {})
+    # @overload put_deliverability_dashboard_option(**params)
     # @param [Hash] params ({})
-    def put_deliverability_dashboard_option(params = {}, options = {})
+    def put_deliverability_dashboard_option(params = {}, **options)
       req = build_request(:put_deliverability_dashboard_option, params)
       req.send_request(options)
     end
@@ -1888,9 +1888,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutEmailIdentityDkimAttributes AWS API Documentation
     #
-    # @overload put_email_identity_dkim_attributes(params = {})
+    # @overload put_email_identity_dkim_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_dkim_attributes(params = {}, options = {})
+    def put_email_identity_dkim_attributes(params = {}, **options)
       req = build_request(:put_email_identity_dkim_attributes, params)
       req.send_request(options)
     end
@@ -1943,9 +1943,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutEmailIdentityFeedbackAttributes AWS API Documentation
     #
-    # @overload put_email_identity_feedback_attributes(params = {})
+    # @overload put_email_identity_feedback_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_feedback_attributes(params = {}, options = {})
+    def put_email_identity_feedback_attributes(params = {}, **options)
       req = build_request(:put_email_identity_feedback_attributes, params)
       req.send_request(options)
     end
@@ -1992,9 +1992,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/PutEmailIdentityMailFromAttributes AWS API Documentation
     #
-    # @overload put_email_identity_mail_from_attributes(params = {})
+    # @overload put_email_identity_mail_from_attributes(**params)
     # @param [Hash] params ({})
-    def put_email_identity_mail_from_attributes(params = {}, options = {})
+    def put_email_identity_mail_from_attributes(params = {}, **options)
       req = build_request(:put_email_identity_mail_from_attributes, params)
       req.send_request(options)
     end
@@ -2096,9 +2096,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/SendEmail AWS API Documentation
     #
-    # @overload send_email(params = {})
+    # @overload send_email(**params)
     # @param [Hash] params ({})
-    def send_email(params = {}, options = {})
+    def send_email(params = {}, **options)
       req = build_request(:send_email, params)
       req.send_request(options)
     end
@@ -2140,9 +2140,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2174,9 +2174,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2235,9 +2235,9 @@ module Aws::PinpointEmail
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/pinpoint-email-2018-07-26/UpdateConfigurationSetEventDestination AWS API Documentation
     #
-    # @overload update_configuration_set_event_destination(params = {})
+    # @overload update_configuration_set_event_destination(**params)
     # @param [Hash] params ({})
-    def update_configuration_set_event_destination(params = {}, options = {})
+    def update_configuration_set_event_destination(params = {}, **options)
       req = build_request(:update_configuration_set_event_destination, params)
       req.send_request(options)
     end
@@ -2246,7 +2246,7 @@ module Aws::PinpointEmail
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2254,15 +2254,15 @@ module Aws::PinpointEmail
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-pinpointemail'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-pinpointemail"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

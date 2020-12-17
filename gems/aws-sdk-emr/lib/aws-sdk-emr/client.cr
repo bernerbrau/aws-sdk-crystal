@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:emr)
 
@@ -290,7 +290,7 @@ module Aws::EMR
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -419,9 +419,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddInstanceFleet AWS API Documentation
     #
-    # @overload add_instance_fleet(params = {})
+    # @overload add_instance_fleet(**params)
     # @param [Hash] params ({})
-    def add_instance_fleet(params = {}, options = {})
+    def add_instance_fleet(params = {}, **options)
       req = build_request(:add_instance_fleet, params)
       req.send_request(options)
     end
@@ -527,9 +527,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddInstanceGroups AWS API Documentation
     #
-    # @overload add_instance_groups(params = {})
+    # @overload add_instance_groups(**params)
     # @param [Hash] params ({})
-    def add_instance_groups(params = {}, options = {})
+    def add_instance_groups(params = {}, **options)
       req = build_request(:add_instance_groups, params)
       req.send_request(options)
     end
@@ -604,9 +604,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddJobFlowSteps AWS API Documentation
     #
-    # @overload add_job_flow_steps(params = {})
+    # @overload add_job_flow_steps(**params)
     # @param [Hash] params ({})
-    def add_job_flow_steps(params = {}, options = {})
+    def add_job_flow_steps(params = {}, **options)
       req = build_request(:add_job_flow_steps, params)
       req.send_request(options)
     end
@@ -646,9 +646,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddTags AWS API Documentation
     #
-    # @overload add_tags(params = {})
+    # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, options = {})
+    def add_tags(params = {}, **options)
       req = build_request(:add_tags, params)
       req.send_request(options)
     end
@@ -693,9 +693,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CancelSteps AWS API Documentation
     #
-    # @overload cancel_steps(params = {})
+    # @overload cancel_steps(**params)
     # @param [Hash] params ({})
-    def cancel_steps(params = {}, options = {})
+    def cancel_steps(params = {}, **options)
       req = build_request(:cancel_steps, params)
       req.send_request(options)
     end
@@ -734,9 +734,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateSecurityConfiguration AWS API Documentation
     #
-    # @overload create_security_configuration(params = {})
+    # @overload create_security_configuration(**params)
     # @param [Hash] params ({})
-    def create_security_configuration(params = {}, options = {})
+    def create_security_configuration(params = {}, **options)
       req = build_request(:create_security_configuration, params)
       req.send_request(options)
     end
@@ -833,9 +833,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudio AWS API Documentation
     #
-    # @overload create_studio(params = {})
+    # @overload create_studio(**params)
     # @param [Hash] params ({})
-    def create_studio(params = {}, options = {})
+    def create_studio(params = {}, **options)
       req = build_request(:create_studio, params)
       req.send_request(options)
     end
@@ -897,9 +897,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudioSessionMapping AWS API Documentation
     #
-    # @overload create_studio_session_mapping(params = {})
+    # @overload create_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def create_studio_session_mapping(params = {}, options = {})
+    def create_studio_session_mapping(params = {}, **options)
       req = build_request(:create_studio_session_mapping, params)
       req.send_request(options)
     end
@@ -919,9 +919,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteSecurityConfiguration AWS API Documentation
     #
-    # @overload delete_security_configuration(params = {})
+    # @overload delete_security_configuration(**params)
     # @param [Hash] params ({})
-    def delete_security_configuration(params = {}, options = {})
+    def delete_security_configuration(params = {}, **options)
       req = build_request(:delete_security_configuration, params)
       req.send_request(options)
     end
@@ -946,9 +946,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudio AWS API Documentation
     #
-    # @overload delete_studio(params = {})
+    # @overload delete_studio(**params)
     # @param [Hash] params ({})
-    def delete_studio(params = {}, options = {})
+    def delete_studio(params = {}, **options)
       req = build_request(:delete_studio, params)
       req.send_request(options)
     end
@@ -1002,9 +1002,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudioSessionMapping AWS API Documentation
     #
-    # @overload delete_studio_session_mapping(params = {})
+    # @overload delete_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def delete_studio_session_mapping(params = {}, options = {})
+    def delete_studio_session_mapping(params = {}, **options)
       req = build_request(:delete_studio_session_mapping, params)
       req.send_request(options)
     end
@@ -1103,9 +1103,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeCluster AWS API Documentation
     #
-    # @overload describe_cluster(params = {})
+    # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, options = {})
+    def describe_cluster(params = {}, **options)
       req = build_request(:describe_cluster, params)
       req.send_request(options)
     end
@@ -1230,9 +1230,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeJobFlows AWS API Documentation
     #
-    # @overload describe_job_flows(params = {})
+    # @overload describe_job_flows(**params)
     # @param [Hash] params ({})
-    def describe_job_flows(params = {}, options = {})
+    def describe_job_flows(params = {}, **options)
       req = build_request(:describe_job_flows, params)
       req.send_request(options)
     end
@@ -1274,9 +1274,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeNotebookExecution AWS API Documentation
     #
-    # @overload describe_notebook_execution(params = {})
+    # @overload describe_notebook_execution(**params)
     # @param [Hash] params ({})
-    def describe_notebook_execution(params = {}, options = {})
+    def describe_notebook_execution(params = {}, **options)
       req = build_request(:describe_notebook_execution, params)
       req.send_request(options)
     end
@@ -1307,9 +1307,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeSecurityConfiguration AWS API Documentation
     #
-    # @overload describe_security_configuration(params = {})
+    # @overload describe_security_configuration(**params)
     # @param [Hash] params ({})
-    def describe_security_configuration(params = {}, options = {})
+    def describe_security_configuration(params = {}, **options)
       req = build_request(:describe_security_configuration, params)
       req.send_request(options)
     end
@@ -1361,9 +1361,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeStep AWS API Documentation
     #
-    # @overload describe_step(params = {})
+    # @overload describe_step(**params)
     # @param [Hash] params ({})
-    def describe_step(params = {}, options = {})
+    def describe_step(params = {}, **options)
       req = build_request(:describe_step, params)
       req.send_request(options)
     end
@@ -1412,9 +1412,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeStudio AWS API Documentation
     #
-    # @overload describe_studio(params = {})
+    # @overload describe_studio(**params)
     # @param [Hash] params ({})
-    def describe_studio(params = {}, options = {})
+    def describe_studio(params = {}, **options)
       req = build_request(:describe_studio, params)
       req.send_request(options)
     end
@@ -1444,9 +1444,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetBlockPublicAccessConfiguration AWS API Documentation
     #
-    # @overload get_block_public_access_configuration(params = {})
+    # @overload get_block_public_access_configuration(**params)
     # @param [Hash] params ({})
-    def get_block_public_access_configuration(params = {}, options = {})
+    def get_block_public_access_configuration(params = {}, **options)
       req = build_request(:get_block_public_access_configuration, params)
       req.send_request(options)
     end
@@ -1477,9 +1477,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetManagedScalingPolicy AWS API Documentation
     #
-    # @overload get_managed_scaling_policy(params = {})
+    # @overload get_managed_scaling_policy(**params)
     # @param [Hash] params ({})
-    def get_managed_scaling_policy(params = {}, options = {})
+    def get_managed_scaling_policy(params = {}, **options)
       req = build_request(:get_managed_scaling_policy, params)
       req.send_request(options)
     end
@@ -1544,9 +1544,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetStudioSessionMapping AWS API Documentation
     #
-    # @overload get_studio_session_mapping(params = {})
+    # @overload get_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def get_studio_session_mapping(params = {}, options = {})
+    def get_studio_session_mapping(params = {}, **options)
       req = build_request(:get_studio_session_mapping, params)
       req.send_request(options)
     end
@@ -1586,9 +1586,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListBootstrapActions AWS API Documentation
     #
-    # @overload list_bootstrap_actions(params = {})
+    # @overload list_bootstrap_actions(**params)
     # @param [Hash] params ({})
-    def list_bootstrap_actions(params = {}, options = {})
+    def list_bootstrap_actions(params = {}, **options)
       req = build_request(:list_bootstrap_actions, params)
       req.send_request(options)
     end
@@ -1648,9 +1648,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListClusters AWS API Documentation
     #
-    # @overload list_clusters(params = {})
+    # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, options = {})
+    def list_clusters(params = {}, **options)
       req = build_request(:list_clusters, params)
       req.send_request(options)
     end
@@ -1724,9 +1724,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListInstanceFleets AWS API Documentation
     #
-    # @overload list_instance_fleets(params = {})
+    # @overload list_instance_fleets(**params)
     # @param [Hash] params ({})
-    def list_instance_fleets(params = {}, options = {})
+    def list_instance_fleets(params = {}, **options)
       req = build_request(:list_instance_fleets, params)
       req.send_request(options)
     end
@@ -1822,9 +1822,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListInstanceGroups AWS API Documentation
     #
-    # @overload list_instance_groups(params = {})
+    # @overload list_instance_groups(**params)
     # @param [Hash] params ({})
-    def list_instance_groups(params = {}, options = {})
+    def list_instance_groups(params = {}, **options)
       req = build_request(:list_instance_groups, params)
       req.send_request(options)
     end
@@ -1903,9 +1903,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListInstances AWS API Documentation
     #
-    # @overload list_instances(params = {})
+    # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, options = {})
+    def list_instances(params = {}, **options)
       req = build_request(:list_instances, params)
       req.send_request(options)
     end
@@ -1992,9 +1992,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListNotebookExecutions AWS API Documentation
     #
-    # @overload list_notebook_executions(params = {})
+    # @overload list_notebook_executions(**params)
     # @param [Hash] params ({})
-    def list_notebook_executions(params = {}, options = {})
+    def list_notebook_executions(params = {}, **options)
       req = build_request(:list_notebook_executions, params)
       req.send_request(options)
     end
@@ -2030,9 +2030,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSecurityConfigurations AWS API Documentation
     #
-    # @overload list_security_configurations(params = {})
+    # @overload list_security_configurations(**params)
     # @param [Hash] params ({})
-    def list_security_configurations(params = {}, options = {})
+    def list_security_configurations(params = {}, **options)
       req = build_request(:list_security_configurations, params)
       req.send_request(options)
     end
@@ -2097,9 +2097,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSteps AWS API Documentation
     #
-    # @overload list_steps(params = {})
+    # @overload list_steps(**params)
     # @param [Hash] params ({})
-    def list_steps(params = {}, options = {})
+    def list_steps(params = {}, **options)
       req = build_request(:list_steps, params)
       req.send_request(options)
     end
@@ -2151,9 +2151,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudioSessionMappings AWS API Documentation
     #
-    # @overload list_studio_session_mappings(params = {})
+    # @overload list_studio_session_mappings(**params)
     # @param [Hash] params ({})
-    def list_studio_session_mappings(params = {}, options = {})
+    def list_studio_session_mappings(params = {}, **options)
       req = build_request(:list_studio_session_mappings, params)
       req.send_request(options)
     end
@@ -2196,9 +2196,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudios AWS API Documentation
     #
-    # @overload list_studios(params = {})
+    # @overload list_studios(**params)
     # @param [Hash] params ({})
-    def list_studios(params = {}, options = {})
+    def list_studios(params = {}, **options)
       req = build_request(:list_studios, params)
       req.send_request(options)
     end
@@ -2230,9 +2230,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ModifyCluster AWS API Documentation
     #
-    # @overload modify_cluster(params = {})
+    # @overload modify_cluster(**params)
     # @param [Hash] params ({})
-    def modify_cluster(params = {}, options = {})
+    def modify_cluster(params = {}, **options)
       req = build_request(:modify_cluster, params)
       req.send_request(options)
     end
@@ -2268,9 +2268,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ModifyInstanceFleet AWS API Documentation
     #
-    # @overload modify_instance_fleet(params = {})
+    # @overload modify_instance_fleet(**params)
     # @param [Hash] params ({})
-    def modify_instance_fleet(params = {}, options = {})
+    def modify_instance_fleet(params = {}, **options)
       req = build_request(:modify_instance_fleet, params)
       req.send_request(options)
     end
@@ -2322,9 +2322,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ModifyInstanceGroups AWS API Documentation
     #
-    # @overload modify_instance_groups(params = {})
+    # @overload modify_instance_groups(**params)
     # @param [Hash] params ({})
-    def modify_instance_groups(params = {}, options = {})
+    def modify_instance_groups(params = {}, **options)
       req = build_request(:modify_instance_groups, params)
       req.send_request(options)
     end
@@ -2429,9 +2429,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoScalingPolicy AWS API Documentation
     #
-    # @overload put_auto_scaling_policy(params = {})
+    # @overload put_auto_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_auto_scaling_policy(params = {}, options = {})
+    def put_auto_scaling_policy(params = {}, **options)
       req = build_request(:put_auto_scaling_policy, params)
       req.send_request(options)
     end
@@ -2484,9 +2484,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutBlockPublicAccessConfiguration AWS API Documentation
     #
-    # @overload put_block_public_access_configuration(params = {})
+    # @overload put_block_public_access_configuration(**params)
     # @param [Hash] params ({})
-    def put_block_public_access_configuration(params = {}, options = {})
+    def put_block_public_access_configuration(params = {}, **options)
       req = build_request(:put_block_public_access_configuration, params)
       req.send_request(options)
     end
@@ -2523,9 +2523,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutManagedScalingPolicy AWS API Documentation
     #
-    # @overload put_managed_scaling_policy(params = {})
+    # @overload put_managed_scaling_policy(**params)
     # @param [Hash] params ({})
-    def put_managed_scaling_policy(params = {}, options = {})
+    def put_managed_scaling_policy(params = {}, **options)
       req = build_request(:put_managed_scaling_policy, params)
       req.send_request(options)
     end
@@ -2552,9 +2552,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoScalingPolicy AWS API Documentation
     #
-    # @overload remove_auto_scaling_policy(params = {})
+    # @overload remove_auto_scaling_policy(**params)
     # @param [Hash] params ({})
-    def remove_auto_scaling_policy(params = {}, options = {})
+    def remove_auto_scaling_policy(params = {}, **options)
       req = build_request(:remove_auto_scaling_policy, params)
       req.send_request(options)
     end
@@ -2575,9 +2575,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveManagedScalingPolicy AWS API Documentation
     #
-    # @overload remove_managed_scaling_policy(params = {})
+    # @overload remove_managed_scaling_policy(**params)
     # @param [Hash] params ({})
-    def remove_managed_scaling_policy(params = {}, options = {})
+    def remove_managed_scaling_policy(params = {}, **options)
       req = build_request(:remove_managed_scaling_policy, params)
       req.send_request(options)
     end
@@ -2612,9 +2612,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveTags AWS API Documentation
     #
-    # @overload remove_tags(params = {})
+    # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, options = {})
+    def remove_tags(params = {}, **options)
       req = build_request(:remove_tags, params)
       req.send_request(options)
     end
@@ -3126,9 +3126,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RunJobFlow AWS API Documentation
     #
-    # @overload run_job_flow(params = {})
+    # @overload run_job_flow(**params)
     # @param [Hash] params ({})
-    def run_job_flow(params = {}, options = {})
+    def run_job_flow(params = {}, **options)
       req = build_request(:run_job_flow, params)
       req.send_request(options)
     end
@@ -3179,9 +3179,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetTerminationProtection AWS API Documentation
     #
-    # @overload set_termination_protection(params = {})
+    # @overload set_termination_protection(**params)
     # @param [Hash] params ({})
-    def set_termination_protection(params = {}, options = {})
+    def set_termination_protection(params = {}, **options)
       req = build_request(:set_termination_protection, params)
       req.send_request(options)
     end
@@ -3217,9 +3217,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetVisibleToAllUsers AWS API Documentation
     #
-    # @overload set_visible_to_all_users(params = {})
+    # @overload set_visible_to_all_users(**params)
     # @param [Hash] params ({})
-    def set_visible_to_all_users(params = {}, options = {})
+    def set_visible_to_all_users(params = {}, **options)
       req = build_request(:set_visible_to_all_users, params)
       req.send_request(options)
     end
@@ -3298,9 +3298,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/StartNotebookExecution AWS API Documentation
     #
-    # @overload start_notebook_execution(params = {})
+    # @overload start_notebook_execution(**params)
     # @param [Hash] params ({})
-    def start_notebook_execution(params = {}, options = {})
+    def start_notebook_execution(params = {}, **options)
       req = build_request(:start_notebook_execution, params)
       req.send_request(options)
     end
@@ -3320,9 +3320,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/StopNotebookExecution AWS API Documentation
     #
-    # @overload stop_notebook_execution(params = {})
+    # @overload stop_notebook_execution(**params)
     # @param [Hash] params ({})
-    def stop_notebook_execution(params = {}, options = {})
+    def stop_notebook_execution(params = {}, **options)
       req = build_request(:stop_notebook_execution, params)
       req.send_request(options)
     end
@@ -3352,9 +3352,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/TerminateJobFlows AWS API Documentation
     #
-    # @overload terminate_job_flows(params = {})
+    # @overload terminate_job_flows(**params)
     # @param [Hash] params ({})
-    def terminate_job_flows(params = {}, options = {})
+    def terminate_job_flows(params = {}, **options)
       req = build_request(:terminate_job_flows, params)
       req.send_request(options)
     end
@@ -3412,9 +3412,9 @@ module Aws::EMR
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudioSessionMapping AWS API Documentation
     #
-    # @overload update_studio_session_mapping(params = {})
+    # @overload update_studio_session_mapping(**params)
     # @param [Hash] params ({})
-    def update_studio_session_mapping(params = {}, options = {})
+    def update_studio_session_mapping(params = {}, **options)
       req = build_request(:update_studio_session_mapping, params)
       req.send_request(options)
     end
@@ -3423,7 +3423,7 @@ module Aws::EMR
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3431,8 +3431,8 @@ module Aws::EMR
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-emr'
-      context[:gem_version] = '1.40.0'
+      context[:gem_name] = "aws-sdk-emr"
+      context[:gem_version] = "1.40.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3526,7 +3526,7 @@ module Aws::EMR
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3542,7 +3542,7 @@ module Aws::EMR
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

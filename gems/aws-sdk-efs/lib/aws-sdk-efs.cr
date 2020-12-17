@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-efs/types'
-require_relative 'aws-sdk-efs/client_api'
-require_relative 'aws-sdk-efs/client'
-require_relative 'aws-sdk-efs/errors'
-require_relative 'aws-sdk-efs/resource'
-require_relative 'aws-sdk-efs/customizations'
+require_relative "aws-sdk-efs/types"
+require_relative "aws-sdk-efs/client_api"
+require_relative "aws-sdk-efs/client"
+require_relative "aws-sdk-efs/errors"
+require_relative "aws-sdk-efs/resource"
+require_relative "aws-sdk-efs/customizations"
 
 # This module provides support for Amazon Elastic File System. This module is available in the
 # `aws-sdk-efs` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-efs/customizations'
 # @!group service
 module Aws::EFS
 
-  GEM_VERSION = '1.36.0'
+  GEM_VERSION = "1.36.0"
 
 end

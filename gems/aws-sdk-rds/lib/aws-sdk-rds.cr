@@ -8,41 +8,41 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sigv4'
-require 'aws-sdk-core'
+require "aws-sigv4"
+require "aws-sdk-core"
 
-require_relative 'aws-sdk-rds/types'
-require_relative 'aws-sdk-rds/client_api'
-require_relative 'aws-sdk-rds/client'
-require_relative 'aws-sdk-rds/errors'
-require_relative 'aws-sdk-rds/waiters'
-require_relative 'aws-sdk-rds/resource'
-require_relative 'aws-sdk-rds/account_quota'
-require_relative 'aws-sdk-rds/certificate'
-require_relative 'aws-sdk-rds/db_cluster'
-require_relative 'aws-sdk-rds/db_cluster_parameter_group'
-require_relative 'aws-sdk-rds/db_cluster_snapshot'
-require_relative 'aws-sdk-rds/db_engine'
-require_relative 'aws-sdk-rds/db_engine_version'
-require_relative 'aws-sdk-rds/db_instance'
-require_relative 'aws-sdk-rds/db_log_file'
-require_relative 'aws-sdk-rds/db_parameter_group'
-require_relative 'aws-sdk-rds/db_parameter_group_family'
-require_relative 'aws-sdk-rds/db_security_group'
-require_relative 'aws-sdk-rds/db_snapshot'
-require_relative 'aws-sdk-rds/db_snapshot_attribute'
-require_relative 'aws-sdk-rds/db_subnet_group'
-require_relative 'aws-sdk-rds/event_category_map'
-require_relative 'aws-sdk-rds/event'
-require_relative 'aws-sdk-rds/event_subscription'
-require_relative 'aws-sdk-rds/option_group'
-require_relative 'aws-sdk-rds/option_group_option'
-require_relative 'aws-sdk-rds/parameter'
-require_relative 'aws-sdk-rds/pending_maintenance_action'
-require_relative 'aws-sdk-rds/reserved_db_instance'
-require_relative 'aws-sdk-rds/reserved_db_instances_offering'
-require_relative 'aws-sdk-rds/resource_pending_maintenance_action_list'
-require_relative 'aws-sdk-rds/customizations'
+require_relative "aws-sdk-rds/types"
+require_relative "aws-sdk-rds/client_api"
+require_relative "aws-sdk-rds/client"
+require_relative "aws-sdk-rds/errors"
+require_relative "aws-sdk-rds/waiters"
+require_relative "aws-sdk-rds/resource"
+require_relative "aws-sdk-rds/account_quota"
+require_relative "aws-sdk-rds/certificate"
+require_relative "aws-sdk-rds/db_cluster"
+require_relative "aws-sdk-rds/db_cluster_parameter_group"
+require_relative "aws-sdk-rds/db_cluster_snapshot"
+require_relative "aws-sdk-rds/db_engine"
+require_relative "aws-sdk-rds/db_engine_version"
+require_relative "aws-sdk-rds/db_instance"
+require_relative "aws-sdk-rds/db_log_file"
+require_relative "aws-sdk-rds/db_parameter_group"
+require_relative "aws-sdk-rds/db_parameter_group_family"
+require_relative "aws-sdk-rds/db_security_group"
+require_relative "aws-sdk-rds/db_snapshot"
+require_relative "aws-sdk-rds/db_snapshot_attribute"
+require_relative "aws-sdk-rds/db_subnet_group"
+require_relative "aws-sdk-rds/event_category_map"
+require_relative "aws-sdk-rds/event"
+require_relative "aws-sdk-rds/event_subscription"
+require_relative "aws-sdk-rds/option_group"
+require_relative "aws-sdk-rds/option_group_option"
+require_relative "aws-sdk-rds/parameter"
+require_relative "aws-sdk-rds/pending_maintenance_action"
+require_relative "aws-sdk-rds/reserved_db_instance"
+require_relative "aws-sdk-rds/reserved_db_instances_offering"
+require_relative "aws-sdk-rds/resource_pending_maintenance_action_list"
+require_relative "aws-sdk-rds/customizations"
 
 # This module provides support for Amazon Relational Database Service. This module is available in the
 # `aws-sdk-rds` gem.
@@ -74,6 +74,6 @@ require_relative 'aws-sdk-rds/customizations'
 # @!group service
 module Aws::RDS
 
-  GEM_VERSION = '1.107.0'
+  GEM_VERSION = "1.107.0"
 
 end

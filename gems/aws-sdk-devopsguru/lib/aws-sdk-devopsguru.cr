@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-devopsguru/types'
-require_relative 'aws-sdk-devopsguru/client_api'
-require_relative 'aws-sdk-devopsguru/client'
-require_relative 'aws-sdk-devopsguru/errors'
-require_relative 'aws-sdk-devopsguru/resource'
-require_relative 'aws-sdk-devopsguru/customizations'
+require_relative "aws-sdk-devopsguru/types"
+require_relative "aws-sdk-devopsguru/client_api"
+require_relative "aws-sdk-devopsguru/client"
+require_relative "aws-sdk-devopsguru/errors"
+require_relative "aws-sdk-devopsguru/resource"
+require_relative "aws-sdk-devopsguru/customizations"
 
 # This module provides support for Amazon DevOps Guru. This module is available in the
 # `aws-sdk-devopsguru` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-devopsguru/customizations'
 # @!group service
 module Aws::DevOpsGuru
 
-  GEM_VERSION = '1.1.0'
+  GEM_VERSION = "1.1.0"
 
 end

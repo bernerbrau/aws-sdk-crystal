@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:forecastservice)
 
@@ -290,7 +290,7 @@ module Aws::ForecastService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -481,9 +481,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateDataset AWS API Documentation
     #
-    # @overload create_dataset(params = {})
+    # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, options = {})
+    def create_dataset(params = {}, **options)
       req = build_request(:create_dataset, params)
       req.send_request(options)
     end
@@ -580,9 +580,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateDatasetGroup AWS API Documentation
     #
-    # @overload create_dataset_group(params = {})
+    # @overload create_dataset_group(**params)
     # @param [Hash] params ({})
-    def create_dataset_group(params = {}, options = {})
+    def create_dataset_group(params = {}, **options)
       req = build_request(:create_dataset_group, params)
       req.send_request(options)
     end
@@ -746,9 +746,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateDatasetImportJob AWS API Documentation
     #
-    # @overload create_dataset_import_job(params = {})
+    # @overload create_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def create_dataset_import_job(params = {}, options = {})
+    def create_dataset_import_job(params = {}, **options)
       req = build_request(:create_dataset_import_job, params)
       req.send_request(options)
     end
@@ -851,9 +851,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateForecast AWS API Documentation
     #
-    # @overload create_forecast(params = {})
+    # @overload create_forecast(**params)
     # @param [Hash] params ({})
-    def create_forecast(params = {}, options = {})
+    def create_forecast(params = {}, **options)
       req = build_request(:create_forecast, params)
       req.send_request(options)
     end
@@ -962,9 +962,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateForecastExportJob AWS API Documentation
     #
-    # @overload create_forecast_export_job(params = {})
+    # @overload create_forecast_export_job(**params)
     # @param [Hash] params ({})
-    def create_forecast_export_job(params = {}, options = {})
+    def create_forecast_export_job(params = {}, **options)
       req = build_request(:create_forecast_export_job, params)
       req.send_request(options)
     end
@@ -1254,9 +1254,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreatePredictor AWS API Documentation
     #
-    # @overload create_predictor(params = {})
+    # @overload create_predictor(**params)
     # @param [Hash] params ({})
-    def create_predictor(params = {}, options = {})
+    def create_predictor(params = {}, **options)
       req = build_request(:create_predictor, params)
       req.send_request(options)
     end
@@ -1353,9 +1353,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreatePredictorBacktestExportJob AWS API Documentation
     #
-    # @overload create_predictor_backtest_export_job(params = {})
+    # @overload create_predictor_backtest_export_job(**params)
     # @param [Hash] params ({})
-    def create_predictor_backtest_export_job(params = {}, options = {})
+    def create_predictor_backtest_export_job(params = {}, **options)
       req = build_request(:create_predictor_backtest_export_job, params)
       req.send_request(options)
     end
@@ -1384,9 +1384,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteDataset AWS API Documentation
     #
-    # @overload delete_dataset(params = {})
+    # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, options = {})
+    def delete_dataset(params = {}, **options)
       req = build_request(:delete_dataset, params)
       req.send_request(options)
     end
@@ -1412,9 +1412,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteDatasetGroup AWS API Documentation
     #
-    # @overload delete_dataset_group(params = {})
+    # @overload delete_dataset_group(**params)
     # @param [Hash] params ({})
-    def delete_dataset_group(params = {}, options = {})
+    def delete_dataset_group(params = {}, **options)
       req = build_request(:delete_dataset_group, params)
       req.send_request(options)
     end
@@ -1437,9 +1437,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteDatasetImportJob AWS API Documentation
     #
-    # @overload delete_dataset_import_job(params = {})
+    # @overload delete_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def delete_dataset_import_job(params = {}, options = {})
+    def delete_dataset_import_job(params = {}, **options)
       req = build_request(:delete_dataset_import_job, params)
       req.send_request(options)
     end
@@ -1465,9 +1465,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteForecast AWS API Documentation
     #
-    # @overload delete_forecast(params = {})
+    # @overload delete_forecast(**params)
     # @param [Hash] params ({})
-    def delete_forecast(params = {}, options = {})
+    def delete_forecast(params = {}, **options)
       req = build_request(:delete_forecast, params)
       req.send_request(options)
     end
@@ -1490,9 +1490,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteForecastExportJob AWS API Documentation
     #
-    # @overload delete_forecast_export_job(params = {})
+    # @overload delete_forecast_export_job(**params)
     # @param [Hash] params ({})
-    def delete_forecast_export_job(params = {}, options = {})
+    def delete_forecast_export_job(params = {}, **options)
       req = build_request(:delete_forecast_export_job, params)
       req.send_request(options)
     end
@@ -1515,9 +1515,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeletePredictor AWS API Documentation
     #
-    # @overload delete_predictor(params = {})
+    # @overload delete_predictor(**params)
     # @param [Hash] params ({})
-    def delete_predictor(params = {}, options = {})
+    def delete_predictor(params = {}, **options)
       req = build_request(:delete_predictor, params)
       req.send_request(options)
     end
@@ -1538,9 +1538,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeletePredictorBacktestExportJob AWS API Documentation
     #
-    # @overload delete_predictor_backtest_export_job(params = {})
+    # @overload delete_predictor_backtest_export_job(**params)
     # @param [Hash] params ({})
-    def delete_predictor_backtest_export_job(params = {}, options = {})
+    def delete_predictor_backtest_export_job(params = {}, **options)
       req = build_request(:delete_predictor_backtest_export_job, params)
       req.send_request(options)
     end
@@ -1597,9 +1597,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeDataset AWS API Documentation
     #
-    # @overload describe_dataset(params = {})
+    # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, options = {})
+    def describe_dataset(params = {}, **options)
       req = build_request(:describe_dataset, params)
       req.send_request(options)
     end
@@ -1651,9 +1651,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeDatasetGroup AWS API Documentation
     #
-    # @overload describe_dataset_group(params = {})
+    # @overload describe_dataset_group(**params)
     # @param [Hash] params ({})
-    def describe_dataset_group(params = {}, options = {})
+    def describe_dataset_group(params = {}, **options)
       req = build_request(:describe_dataset_group, params)
       req.send_request(options)
     end
@@ -1732,9 +1732,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeDatasetImportJob AWS API Documentation
     #
-    # @overload describe_dataset_import_job(params = {})
+    # @overload describe_dataset_import_job(**params)
     # @param [Hash] params ({})
-    def describe_dataset_import_job(params = {}, options = {})
+    def describe_dataset_import_job(params = {}, **options)
       req = build_request(:describe_dataset_import_job, params)
       req.send_request(options)
     end
@@ -1791,9 +1791,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeForecast AWS API Documentation
     #
-    # @overload describe_forecast(params = {})
+    # @overload describe_forecast(**params)
     # @param [Hash] params ({})
-    def describe_forecast(params = {}, options = {})
+    def describe_forecast(params = {}, **options)
       req = build_request(:describe_forecast, params)
       req.send_request(options)
     end
@@ -1848,9 +1848,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeForecastExportJob AWS API Documentation
     #
-    # @overload describe_forecast_export_job(params = {})
+    # @overload describe_forecast_export_job(**params)
     # @param [Hash] params ({})
-    def describe_forecast_export_job(params = {}, options = {})
+    def describe_forecast_export_job(params = {}, **options)
       req = build_request(:describe_forecast_export_job, params)
       req.send_request(options)
     end
@@ -1969,9 +1969,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribePredictor AWS API Documentation
     #
-    # @overload describe_predictor(params = {})
+    # @overload describe_predictor(**params)
     # @param [Hash] params ({})
-    def describe_predictor(params = {}, options = {})
+    def describe_predictor(params = {}, **options)
       req = build_request(:describe_predictor, params)
       req.send_request(options)
     end
@@ -2026,9 +2026,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribePredictorBacktestExportJob AWS API Documentation
     #
-    # @overload describe_predictor_backtest_export_job(params = {})
+    # @overload describe_predictor_backtest_export_job(**params)
     # @param [Hash] params ({})
-    def describe_predictor_backtest_export_job(params = {}, options = {})
+    def describe_predictor_backtest_export_job(params = {}, **options)
       req = build_request(:describe_predictor_backtest_export_job, params)
       req.send_request(options)
     end
@@ -2094,9 +2094,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/GetAccuracyMetrics AWS API Documentation
     #
-    # @overload get_accuracy_metrics(params = {})
+    # @overload get_accuracy_metrics(**params)
     # @param [Hash] params ({})
-    def get_accuracy_metrics(params = {}, options = {})
+    def get_accuracy_metrics(params = {}, **options)
       req = build_request(:get_accuracy_metrics, params)
       req.send_request(options)
     end
@@ -2140,9 +2140,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListDatasetGroups AWS API Documentation
     #
-    # @overload list_dataset_groups(params = {})
+    # @overload list_dataset_groups(**params)
     # @param [Hash] params ({})
-    def list_dataset_groups(params = {}, options = {})
+    def list_dataset_groups(params = {}, **options)
       req = build_request(:list_dataset_groups, params)
       req.send_request(options)
     end
@@ -2223,9 +2223,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListDatasetImportJobs AWS API Documentation
     #
-    # @overload list_dataset_import_jobs(params = {})
+    # @overload list_dataset_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_dataset_import_jobs(params = {}, options = {})
+    def list_dataset_import_jobs(params = {}, **options)
       req = build_request(:list_dataset_import_jobs, params)
       req.send_request(options)
     end
@@ -2270,9 +2270,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListDatasets AWS API Documentation
     #
-    # @overload list_datasets(params = {})
+    # @overload list_datasets(**params)
     # @param [Hash] params ({})
-    def list_datasets(params = {}, options = {})
+    def list_datasets(params = {}, **options)
       req = build_request(:list_datasets, params)
       req.send_request(options)
     end
@@ -2355,9 +2355,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListForecastExportJobs AWS API Documentation
     #
-    # @overload list_forecast_export_jobs(params = {})
+    # @overload list_forecast_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_forecast_export_jobs(params = {}, options = {})
+    def list_forecast_export_jobs(params = {}, **options)
       req = build_request(:list_forecast_export_jobs, params)
       req.send_request(options)
     end
@@ -2436,9 +2436,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListForecasts AWS API Documentation
     #
-    # @overload list_forecasts(params = {})
+    # @overload list_forecasts(**params)
     # @param [Hash] params ({})
-    def list_forecasts(params = {}, options = {})
+    def list_forecasts(params = {}, **options)
       req = build_request(:list_forecasts, params)
       req.send_request(options)
     end
@@ -2516,9 +2516,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListPredictorBacktestExportJobs AWS API Documentation
     #
-    # @overload list_predictor_backtest_export_jobs(params = {})
+    # @overload list_predictor_backtest_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_predictor_backtest_export_jobs(params = {}, options = {})
+    def list_predictor_backtest_export_jobs(params = {}, **options)
       req = build_request(:list_predictor_backtest_export_jobs, params)
       req.send_request(options)
     end
@@ -2597,9 +2597,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListPredictors AWS API Documentation
     #
-    # @overload list_predictors(params = {})
+    # @overload list_predictors(**params)
     # @param [Hash] params ({})
-    def list_predictors(params = {}, options = {})
+    def list_predictors(params = {}, **options)
       req = build_request(:list_predictors, params)
       req.send_request(options)
     end
@@ -2630,9 +2630,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2694,9 +2694,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2723,9 +2723,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2756,9 +2756,9 @@ module Aws::ForecastService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/UpdateDatasetGroup AWS API Documentation
     #
-    # @overload update_dataset_group(params = {})
+    # @overload update_dataset_group(**params)
     # @param [Hash] params ({})
-    def update_dataset_group(params = {}, options = {})
+    def update_dataset_group(params = {}, **options)
       req = build_request(:update_dataset_group, params)
       req.send_request(options)
     end
@@ -2767,7 +2767,7 @@ module Aws::ForecastService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2775,15 +2775,15 @@ module Aws::ForecastService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-forecastservice'
-      context[:gem_version] = '1.14.0'
+      context[:gem_name] = "aws-sdk-forecastservice"
+      context[:gem_version] = "1.14.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

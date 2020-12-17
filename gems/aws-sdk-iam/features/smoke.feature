@@ -8,11 +8,11 @@
 Feature: Smoke tests for IAM
 
 Background:
-  Given I create a client in region 'us-east-1'
+  Given I create a client in region "us-east-1"
 
   @iam @smoke
   Scenario: Call Aws::IAM::Client#list_users and expect it to succeed
-  When I call the operation 'list_users' with params:
+  When I call the operation "list_users" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @iam @smoke
   Scenario: Call Aws::Aws::IAM::Client#get_user and expect it to fail
-  When I call the operation 'get_user' with params:
+  When I call the operation "get_user" with params:
     """
 {"user_name":"fake_user"}
     """

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:elasticbeanstalk)
 
@@ -280,7 +280,7 @@ module Aws::ElasticBeanstalk
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -358,9 +358,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/AbortEnvironmentUpdate AWS API Documentation
     #
-    # @overload abort_environment_update(params = {})
+    # @overload abort_environment_update(**params)
     # @param [Hash] params ({})
-    def abort_environment_update(params = {}, options = {})
+    def abort_environment_update(params = {}, **options)
       req = build_request(:abort_environment_update, params)
       req.send_request(options)
     end
@@ -402,9 +402,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ApplyEnvironmentManagedAction AWS API Documentation
     #
-    # @overload apply_environment_managed_action(params = {})
+    # @overload apply_environment_managed_action(**params)
     # @param [Hash] params ({})
-    def apply_environment_managed_action(params = {}, options = {})
+    def apply_environment_managed_action(params = {}, **options)
       req = build_request(:apply_environment_managed_action, params)
       req.send_request(options)
     end
@@ -437,9 +437,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/AssociateEnvironmentOperationsRole AWS API Documentation
     #
-    # @overload associate_environment_operations_role(params = {})
+    # @overload associate_environment_operations_role(**params)
     # @param [Hash] params ({})
-    def associate_environment_operations_role(params = {}, options = {})
+    def associate_environment_operations_role(params = {}, **options)
       req = build_request(:associate_environment_operations_role, params)
       req.send_request(options)
     end
@@ -482,9 +482,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CheckDNSAvailability AWS API Documentation
     #
-    # @overload check_dns_availability(params = {})
+    # @overload check_dns_availability(**params)
     # @param [Hash] params ({})
-    def check_dns_availability(params = {}, options = {})
+    def check_dns_availability(params = {}, **options)
       req = build_request(:check_dns_availability, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ComposeEnvironments AWS API Documentation
     #
-    # @overload compose_environments(params = {})
+    # @overload compose_environments(**params)
     # @param [Hash] params ({})
-    def compose_environments(params = {}, options = {})
+    def compose_environments(params = {}, **options)
       req = build_request(:compose_environments, params)
       req.send_request(options)
     end
@@ -672,9 +672,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CreateApplication AWS API Documentation
     #
-    # @overload create_application(params = {})
+    # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, options = {})
+    def create_application(params = {}, **options)
       req = build_request(:create_application, params)
       req.send_request(options)
     end
@@ -849,9 +849,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CreateApplicationVersion AWS API Documentation
     #
-    # @overload create_application_version(params = {})
+    # @overload create_application_version(**params)
     # @param [Hash] params ({})
-    def create_application_version(params = {}, options = {})
+    def create_application_version(params = {}, **options)
       req = build_request(:create_application_version, params)
       req.send_request(options)
     end
@@ -1034,9 +1034,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CreateConfigurationTemplate AWS API Documentation
     #
-    # @overload create_configuration_template(params = {})
+    # @overload create_configuration_template(**params)
     # @param [Hash] params ({})
-    def create_configuration_template(params = {}, options = {})
+    def create_configuration_template(params = {}, **options)
       req = build_request(:create_configuration_template, params)
       req.send_request(options)
     end
@@ -1288,9 +1288,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CreateEnvironment AWS API Documentation
     #
-    # @overload create_environment(params = {})
+    # @overload create_environment(**params)
     # @param [Hash] params ({})
-    def create_environment(params = {}, options = {})
+    def create_environment(params = {}, **options)
       req = build_request(:create_environment, params)
       req.send_request(options)
     end
@@ -1370,9 +1370,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CreatePlatformVersion AWS API Documentation
     #
-    # @overload create_platform_version(params = {})
+    # @overload create_platform_version(**params)
     # @param [Hash] params ({})
-    def create_platform_version(params = {}, options = {})
+    def create_platform_version(params = {}, **options)
       req = build_request(:create_platform_version, params)
       req.send_request(options)
     end
@@ -1407,9 +1407,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/CreateStorageLocation AWS API Documentation
     #
-    # @overload create_storage_location(params = {})
+    # @overload create_storage_location(**params)
     # @param [Hash] params ({})
-    def create_storage_location(params = {}, options = {})
+    def create_storage_location(params = {}, **options)
       req = build_request(:create_storage_location, params)
       req.send_request(options)
     end
@@ -1449,9 +1449,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DeleteApplication AWS API Documentation
     #
-    # @overload delete_application(params = {})
+    # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, options = {})
+    def delete_application(params = {}, **options)
       req = build_request(:delete_application, params)
       req.send_request(options)
     end
@@ -1497,9 +1497,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DeleteApplicationVersion AWS API Documentation
     #
-    # @overload delete_application_version(params = {})
+    # @overload delete_application_version(**params)
     # @param [Hash] params ({})
-    def delete_application_version(params = {}, options = {})
+    def delete_application_version(params = {}, **options)
       req = build_request(:delete_application_version, params)
       req.send_request(options)
     end
@@ -1540,9 +1540,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DeleteConfigurationTemplate AWS API Documentation
     #
-    # @overload delete_configuration_template(params = {})
+    # @overload delete_configuration_template(**params)
     # @param [Hash] params ({})
-    def delete_configuration_template(params = {}, options = {})
+    def delete_configuration_template(params = {}, **options)
       req = build_request(:delete_configuration_template, params)
       req.send_request(options)
     end
@@ -1585,9 +1585,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DeleteEnvironmentConfiguration AWS API Documentation
     #
-    # @overload delete_environment_configuration(params = {})
+    # @overload delete_environment_configuration(**params)
     # @param [Hash] params ({})
-    def delete_environment_configuration(params = {}, options = {})
+    def delete_environment_configuration(params = {}, **options)
       req = build_request(:delete_environment_configuration, params)
       req.send_request(options)
     end
@@ -1626,9 +1626,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DeletePlatformVersion AWS API Documentation
     #
-    # @overload delete_platform_version(params = {})
+    # @overload delete_platform_version(**params)
     # @param [Hash] params ({})
-    def delete_platform_version(params = {}, options = {})
+    def delete_platform_version(params = {}, **options)
       req = build_request(:delete_platform_version, params)
       req.send_request(options)
     end
@@ -1652,9 +1652,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeAccountAttributes AWS API Documentation
     #
-    # @overload describe_account_attributes(params = {})
+    # @overload describe_account_attributes(**params)
     # @param [Hash] params ({})
-    def describe_account_attributes(params = {}, options = {})
+    def describe_account_attributes(params = {}, **options)
       req = build_request(:describe_account_attributes, params)
       req.send_request(options)
     end
@@ -1756,9 +1756,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeApplicationVersions AWS API Documentation
     #
-    # @overload describe_application_versions(params = {})
+    # @overload describe_application_versions(**params)
     # @param [Hash] params ({})
-    def describe_application_versions(params = {}, options = {})
+    def describe_application_versions(params = {}, **options)
       req = build_request(:describe_application_versions, params)
       req.send_request(options)
     end
@@ -1847,9 +1847,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeApplications AWS API Documentation
     #
-    # @overload describe_applications(params = {})
+    # @overload describe_applications(**params)
     # @param [Hash] params ({})
-    def describe_applications(params = {}, options = {})
+    def describe_applications(params = {}, **options)
       req = build_request(:describe_applications, params)
       req.send_request(options)
     end
@@ -1964,9 +1964,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeConfigurationOptions AWS API Documentation
     #
-    # @overload describe_configuration_options(params = {})
+    # @overload describe_configuration_options(**params)
     # @param [Hash] params ({})
-    def describe_configuration_options(params = {}, options = {})
+    def describe_configuration_options(params = {}, **options)
       req = build_request(:describe_configuration_options, params)
       req.send_request(options)
     end
@@ -2090,9 +2090,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeConfigurationSettings AWS API Documentation
     #
-    # @overload describe_configuration_settings(params = {})
+    # @overload describe_configuration_settings(**params)
     # @param [Hash] params ({})
-    def describe_configuration_settings(params = {}, options = {})
+    def describe_configuration_settings(params = {}, **options)
       req = build_request(:describe_configuration_settings, params)
       req.send_request(options)
     end
@@ -2221,9 +2221,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeEnvironmentHealth AWS API Documentation
     #
-    # @overload describe_environment_health(params = {})
+    # @overload describe_environment_health(**params)
     # @param [Hash] params ({})
-    def describe_environment_health(params = {}, options = {})
+    def describe_environment_health(params = {}, **options)
       req = build_request(:describe_environment_health, params)
       req.send_request(options)
     end
@@ -2273,9 +2273,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeEnvironmentManagedActionHistory AWS API Documentation
     #
-    # @overload describe_environment_managed_action_history(params = {})
+    # @overload describe_environment_managed_action_history(**params)
     # @param [Hash] params ({})
-    def describe_environment_managed_action_history(params = {}, options = {})
+    def describe_environment_managed_action_history(params = {}, **options)
       req = build_request(:describe_environment_managed_action_history, params)
       req.send_request(options)
     end
@@ -2314,9 +2314,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeEnvironmentManagedActions AWS API Documentation
     #
-    # @overload describe_environment_managed_actions(params = {})
+    # @overload describe_environment_managed_actions(**params)
     # @param [Hash] params ({})
-    def describe_environment_managed_actions(params = {}, options = {})
+    def describe_environment_managed_actions(params = {}, **options)
       req = build_request(:describe_environment_managed_actions, params)
       req.send_request(options)
     end
@@ -2409,9 +2409,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeEnvironmentResources AWS API Documentation
     #
-    # @overload describe_environment_resources(params = {})
+    # @overload describe_environment_resources(**params)
     # @param [Hash] params ({})
-    def describe_environment_resources(params = {}, options = {})
+    def describe_environment_resources(params = {}, **options)
       req = build_request(:describe_environment_resources, params)
       req.send_request(options)
     end
@@ -2559,9 +2559,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeEnvironments AWS API Documentation
     #
-    # @overload describe_environments(params = {})
+    # @overload describe_environments(**params)
     # @param [Hash] params ({})
-    def describe_environments(params = {}, options = {})
+    def describe_environments(params = {}, **options)
       req = build_request(:describe_environments, params)
       req.send_request(options)
     end
@@ -2711,9 +2711,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeEvents AWS API Documentation
     #
-    # @overload describe_events(params = {})
+    # @overload describe_events(**params)
     # @param [Hash] params ({})
-    def describe_events(params = {}, options = {})
+    def describe_events(params = {}, **options)
       req = build_request(:describe_events, params)
       req.send_request(options)
     end
@@ -2862,9 +2862,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribeInstancesHealth AWS API Documentation
     #
-    # @overload describe_instances_health(params = {})
+    # @overload describe_instances_health(**params)
     # @param [Hash] params ({})
-    def describe_instances_health(params = {}, options = {})
+    def describe_instances_health(params = {}, **options)
       req = build_request(:describe_instances_health, params)
       req.send_request(options)
     end
@@ -2927,9 +2927,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DescribePlatformVersion AWS API Documentation
     #
-    # @overload describe_platform_version(params = {})
+    # @overload describe_platform_version(**params)
     # @param [Hash] params ({})
-    def describe_platform_version(params = {}, options = {})
+    def describe_platform_version(params = {}, **options)
       req = build_request(:describe_platform_version, params)
       req.send_request(options)
     end
@@ -2958,9 +2958,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/DisassociateEnvironmentOperationsRole AWS API Documentation
     #
-    # @overload disassociate_environment_operations_role(params = {})
+    # @overload disassociate_environment_operations_role(**params)
     # @param [Hash] params ({})
-    def disassociate_environment_operations_role(params = {}, options = {})
+    def disassociate_environment_operations_role(params = {}, **options)
       req = build_request(:disassociate_environment_operations_role, params)
       req.send_request(options)
     end
@@ -3035,9 +3035,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ListAvailableSolutionStacks AWS API Documentation
     #
-    # @overload list_available_solution_stacks(params = {})
+    # @overload list_available_solution_stacks(**params)
     # @param [Hash] params ({})
-    def list_available_solution_stacks(params = {}, options = {})
+    def list_available_solution_stacks(params = {}, **options)
       req = build_request(:list_available_solution_stacks, params)
       req.send_request(options)
     end
@@ -3136,9 +3136,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ListPlatformBranches AWS API Documentation
     #
-    # @overload list_platform_branches(params = {})
+    # @overload list_platform_branches(**params)
     # @param [Hash] params ({})
-    def list_platform_branches(params = {}, options = {})
+    def list_platform_branches(params = {}, **options)
       req = build_request(:list_platform_branches, params)
       req.send_request(options)
     end
@@ -3212,9 +3212,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ListPlatformVersions AWS API Documentation
     #
-    # @overload list_platform_versions(params = {})
+    # @overload list_platform_versions(**params)
     # @param [Hash] params ({})
-    def list_platform_versions(params = {}, options = {})
+    def list_platform_versions(params = {}, **options)
       req = build_request(:list_platform_versions, params)
       req.send_request(options)
     end
@@ -3256,9 +3256,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3301,9 +3301,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/RebuildEnvironment AWS API Documentation
     #
-    # @overload rebuild_environment(params = {})
+    # @overload rebuild_environment(**params)
     # @param [Hash] params ({})
-    def rebuild_environment(params = {}, options = {})
+    def rebuild_environment(params = {}, **options)
       req = build_request(:rebuild_environment, params)
       req.send_request(options)
     end
@@ -3372,9 +3372,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/RequestEnvironmentInfo AWS API Documentation
     #
-    # @overload request_environment_info(params = {})
+    # @overload request_environment_info(**params)
     # @param [Hash] params ({})
-    def request_environment_info(params = {}, options = {})
+    def request_environment_info(params = {}, **options)
       req = build_request(:request_environment_info, params)
       req.send_request(options)
     end
@@ -3416,9 +3416,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/RestartAppServer AWS API Documentation
     #
-    # @overload restart_app_server(params = {})
+    # @overload restart_app_server(**params)
     # @param [Hash] params ({})
-    def restart_app_server(params = {}, options = {})
+    def restart_app_server(params = {}, **options)
       req = build_request(:restart_app_server, params)
       req.send_request(options)
     end
@@ -3499,9 +3499,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/RetrieveEnvironmentInfo AWS API Documentation
     #
-    # @overload retrieve_environment_info(params = {})
+    # @overload retrieve_environment_info(**params)
     # @param [Hash] params ({})
-    def retrieve_environment_info(params = {}, options = {})
+    def retrieve_environment_info(params = {}, **options)
       req = build_request(:retrieve_environment_info, params)
       req.send_request(options)
     end
@@ -3562,9 +3562,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/SwapEnvironmentCNAMEs AWS API Documentation
     #
-    # @overload swap_environment_cnames(params = {})
+    # @overload swap_environment_cnames(**params)
     # @param [Hash] params ({})
-    def swap_environment_cnames(params = {}, options = {})
+    def swap_environment_cnames(params = {}, **options)
       req = build_request(:swap_environment_cnames, params)
       req.send_request(options)
     end
@@ -3706,9 +3706,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/TerminateEnvironment AWS API Documentation
     #
-    # @overload terminate_environment(params = {})
+    # @overload terminate_environment(**params)
     # @param [Hash] params ({})
-    def terminate_environment(params = {}, options = {})
+    def terminate_environment(params = {}, **options)
       req = build_request(:terminate_environment, params)
       req.send_request(options)
     end
@@ -3791,9 +3791,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/UpdateApplication AWS API Documentation
     #
-    # @overload update_application(params = {})
+    # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, options = {})
+    def update_application(params = {}, **options)
       req = build_request(:update_application, params)
       req.send_request(options)
     end
@@ -3845,9 +3845,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/UpdateApplicationResourceLifecycle AWS API Documentation
     #
-    # @overload update_application_resource_lifecycle(params = {})
+    # @overload update_application_resource_lifecycle(**params)
     # @param [Hash] params ({})
-    def update_application_resource_lifecycle(params = {}, options = {})
+    def update_application_resource_lifecycle(params = {}, **options)
       req = build_request(:update_application_resource_lifecycle, params)
       req.send_request(options)
     end
@@ -3931,9 +3931,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/UpdateApplicationVersion AWS API Documentation
     #
-    # @overload update_application_version(params = {})
+    # @overload update_application_version(**params)
     # @param [Hash] params ({})
-    def update_application_version(params = {}, options = {})
+    def update_application_version(params = {}, **options)
       req = build_request(:update_application_version, params)
       req.send_request(options)
     end
@@ -4061,9 +4061,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/UpdateConfigurationTemplate AWS API Documentation
     #
-    # @overload update_configuration_template(params = {})
+    # @overload update_configuration_template(**params)
     # @param [Hash] params ({})
-    def update_configuration_template(params = {}, options = {})
+    def update_configuration_template(params = {}, **options)
       req = build_request(:update_configuration_template, params)
       req.send_request(options)
     end
@@ -4324,9 +4324,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/UpdateEnvironment AWS API Documentation
     #
-    # @overload update_environment(params = {})
+    # @overload update_environment(**params)
     # @param [Hash] params ({})
-    def update_environment(params = {}, options = {})
+    def update_environment(params = {}, **options)
       req = build_request(:update_environment, params)
       req.send_request(options)
     end
@@ -4395,9 +4395,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/UpdateTagsForResource AWS API Documentation
     #
-    # @overload update_tags_for_resource(params = {})
+    # @overload update_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def update_tags_for_resource(params = {}, options = {})
+    def update_tags_for_resource(params = {}, **options)
       req = build_request(:update_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4481,9 +4481,9 @@ module Aws::ElasticBeanstalk
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticbeanstalk-2010-12-01/ValidateConfigurationSettings AWS API Documentation
     #
-    # @overload validate_configuration_settings(params = {})
+    # @overload validate_configuration_settings(**params)
     # @param [Hash] params ({})
-    def validate_configuration_settings(params = {}, options = {})
+    def validate_configuration_settings(params = {}, **options)
       req = build_request(:validate_configuration_settings, params)
       req.send_request(options)
     end
@@ -4492,7 +4492,7 @@ module Aws::ElasticBeanstalk
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4500,8 +4500,8 @@ module Aws::ElasticBeanstalk
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-elasticbeanstalk'
-      context[:gem_version] = '1.40.0'
+      context[:gem_name] = "aws-sdk-elasticbeanstalk"
+      context[:gem_version] = "1.40.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -4595,7 +4595,7 @@ module Aws::ElasticBeanstalk
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -4611,7 +4611,7 @@ module Aws::ElasticBeanstalk
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

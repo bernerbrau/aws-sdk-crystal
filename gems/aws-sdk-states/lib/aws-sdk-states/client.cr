@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:states)
 
@@ -290,7 +290,7 @@ module Aws::States
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -424,9 +424,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/CreateActivity AWS API Documentation
     #
-    # @overload create_activity(params = {})
+    # @overload create_activity(**params)
     # @param [Hash] params ({})
-    def create_activity(params = {}, options = {})
+    def create_activity(params = {}, **options)
       req = build_request(:create_activity, params)
       req.send_request(options)
     end
@@ -565,9 +565,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/CreateStateMachine AWS API Documentation
     #
-    # @overload create_state_machine(params = {})
+    # @overload create_state_machine(**params)
     # @param [Hash] params ({})
-    def create_state_machine(params = {}, options = {})
+    def create_state_machine(params = {}, **options)
       req = build_request(:create_state_machine, params)
       req.send_request(options)
     end
@@ -587,9 +587,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DeleteActivity AWS API Documentation
     #
-    # @overload delete_activity(params = {})
+    # @overload delete_activity(**params)
     # @param [Hash] params ({})
-    def delete_activity(params = {}, options = {})
+    def delete_activity(params = {}, **options)
       req = build_request(:delete_activity, params)
       req.send_request(options)
     end
@@ -617,9 +617,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DeleteStateMachine AWS API Documentation
     #
-    # @overload delete_state_machine(params = {})
+    # @overload delete_state_machine(**params)
     # @param [Hash] params ({})
-    def delete_state_machine(params = {}, options = {})
+    def delete_state_machine(params = {}, **options)
       req = build_request(:delete_state_machine, params)
       req.send_request(options)
     end
@@ -654,9 +654,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DescribeActivity AWS API Documentation
     #
-    # @overload describe_activity(params = {})
+    # @overload describe_activity(**params)
     # @param [Hash] params ({})
-    def describe_activity(params = {}, options = {})
+    def describe_activity(params = {}, **options)
       req = build_request(:describe_activity, params)
       req.send_request(options)
     end
@@ -709,9 +709,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DescribeExecution AWS API Documentation
     #
-    # @overload describe_execution(params = {})
+    # @overload describe_execution(**params)
     # @param [Hash] params ({})
-    def describe_execution(params = {}, options = {})
+    def describe_execution(params = {}, **options)
       req = build_request(:describe_execution, params)
       req.send_request(options)
     end
@@ -761,9 +761,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DescribeStateMachine AWS API Documentation
     #
-    # @overload describe_state_machine(params = {})
+    # @overload describe_state_machine(**params)
     # @param [Hash] params ({})
-    def describe_state_machine(params = {}, options = {})
+    def describe_state_machine(params = {}, **options)
       req = build_request(:describe_state_machine, params)
       req.send_request(options)
     end
@@ -812,9 +812,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DescribeStateMachineForExecution AWS API Documentation
     #
-    # @overload describe_state_machine_for_execution(params = {})
+    # @overload describe_state_machine_for_execution(**params)
     # @param [Hash] params ({})
-    def describe_state_machine_for_execution(params = {}, options = {})
+    def describe_state_machine_for_execution(params = {}, **options)
       req = build_request(:describe_state_machine_for_execution, params)
       req.send_request(options)
     end
@@ -868,9 +868,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/GetActivityTask AWS API Documentation
     #
-    # @overload get_activity_task(params = {})
+    # @overload get_activity_task(**params)
     # @param [Hash] params ({})
-    def get_activity_task(params = {}, options = {})
+    def get_activity_task(params = {}, **options)
       req = build_request(:get_activity_task, params)
       req.send_request(options)
     end
@@ -1029,9 +1029,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/GetExecutionHistory AWS API Documentation
     #
-    # @overload get_execution_history(params = {})
+    # @overload get_execution_history(**params)
     # @param [Hash] params ({})
-    def get_execution_history(params = {}, options = {})
+    def get_execution_history(params = {}, **options)
       req = build_request(:get_execution_history, params)
       req.send_request(options)
     end
@@ -1090,9 +1090,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ListActivities AWS API Documentation
     #
-    # @overload list_activities(params = {})
+    # @overload list_activities(**params)
     # @param [Hash] params ({})
-    def list_activities(params = {}, options = {})
+    def list_activities(params = {}, **options)
       req = build_request(:list_activities, params)
       req.send_request(options)
     end
@@ -1168,9 +1168,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ListExecutions AWS API Documentation
     #
-    # @overload list_executions(params = {})
+    # @overload list_executions(**params)
     # @param [Hash] params ({})
-    def list_executions(params = {}, options = {})
+    def list_executions(params = {}, **options)
       req = build_request(:list_executions, params)
       req.send_request(options)
     end
@@ -1230,9 +1230,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ListStateMachines AWS API Documentation
     #
-    # @overload list_state_machines(params = {})
+    # @overload list_state_machines(**params)
     # @param [Hash] params ({})
-    def list_state_machines(params = {}, options = {})
+    def list_state_machines(params = {}, **options)
       req = build_request(:list_state_machines, params)
       req.send_request(options)
     end
@@ -1264,9 +1264,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1306,9 +1306,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/SendTaskFailure AWS API Documentation
     #
-    # @overload send_task_failure(params = {})
+    # @overload send_task_failure(**params)
     # @param [Hash] params ({})
-    def send_task_failure(params = {}, options = {})
+    def send_task_failure(params = {}, **options)
       req = build_request(:send_task_failure, params)
       req.send_request(options)
     end
@@ -1356,9 +1356,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/SendTaskHeartbeat AWS API Documentation
     #
-    # @overload send_task_heartbeat(params = {})
+    # @overload send_task_heartbeat(**params)
     # @param [Hash] params ({})
-    def send_task_heartbeat(params = {}, options = {})
+    def send_task_heartbeat(params = {}, **options)
       req = build_request(:send_task_heartbeat, params)
       req.send_request(options)
     end
@@ -1396,9 +1396,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/SendTaskSuccess AWS API Documentation
     #
-    # @overload send_task_success(params = {})
+    # @overload send_task_success(**params)
     # @param [Hash] params ({})
-    def send_task_success(params = {}, options = {})
+    def send_task_success(params = {}, **options)
       req = build_request(:send_task_success, params)
       req.send_request(options)
     end
@@ -1480,9 +1480,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/StartExecution AWS API Documentation
     #
-    # @overload start_execution(params = {})
+    # @overload start_execution(**params)
     # @param [Hash] params ({})
-    def start_execution(params = {}, options = {})
+    def start_execution(params = {}, **options)
       req = build_request(:start_execution, params)
       req.send_request(options)
     end
@@ -1559,9 +1559,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/StartSyncExecution AWS API Documentation
     #
-    # @overload start_sync_execution(params = {})
+    # @overload start_sync_execution(**params)
     # @param [Hash] params ({})
-    def start_sync_execution(params = {}, options = {})
+    def start_sync_execution(params = {}, **options)
       req = build_request(:start_sync_execution, params)
       req.send_request(options)
     end
@@ -1597,9 +1597,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/StopExecution AWS API Documentation
     #
-    # @overload stop_execution(params = {})
+    # @overload stop_execution(**params)
     # @param [Hash] params ({})
-    def stop_execution(params = {}, options = {})
+    def stop_execution(params = {}, **options)
       req = build_request(:stop_execution, params)
       req.send_request(options)
     end
@@ -1644,9 +1644,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1671,9 +1671,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1744,9 +1744,9 @@ module Aws::States
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/UpdateStateMachine AWS API Documentation
     #
-    # @overload update_state_machine(params = {})
+    # @overload update_state_machine(**params)
     # @param [Hash] params ({})
-    def update_state_machine(params = {}, options = {})
+    def update_state_machine(params = {}, **options)
       req = build_request(:update_state_machine, params)
       req.send_request(options)
     end
@@ -1755,7 +1755,7 @@ module Aws::States
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1763,15 +1763,15 @@ module Aws::States
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-states'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-states"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

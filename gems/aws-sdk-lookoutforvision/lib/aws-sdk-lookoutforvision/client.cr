@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:lookoutforvision)
 
@@ -280,7 +280,7 @@ module Aws::LookoutforVision
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -404,9 +404,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateDataset AWS API Documentation
     #
-    # @overload create_dataset(params = {})
+    # @overload create_dataset(**params)
     # @param [Hash] params ({})
-    def create_dataset(params = {}, options = {})
+    def create_dataset(params = {}, **options)
       req = build_request(:create_dataset, params)
       req.send_request(options)
     end
@@ -518,9 +518,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateModel AWS API Documentation
     #
-    # @overload create_model(params = {})
+    # @overload create_model(**params)
     # @param [Hash] params ({})
-    def create_model(params = {}, options = {})
+    def create_model(params = {}, **options)
       req = build_request(:create_model, params)
       req.send_request(options)
     end
@@ -564,9 +564,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -626,9 +626,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteDataset AWS API Documentation
     #
-    # @overload delete_dataset(params = {})
+    # @overload delete_dataset(**params)
     # @param [Hash] params ({})
-    def delete_dataset(params = {}, options = {})
+    def delete_dataset(params = {}, **options)
       req = build_request(:delete_dataset, params)
       req.send_request(options)
     end
@@ -675,9 +675,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteModel AWS API Documentation
     #
-    # @overload delete_model(params = {})
+    # @overload delete_model(**params)
     # @param [Hash] params ({})
-    def delete_model(params = {}, options = {})
+    def delete_model(params = {}, **options)
       req = build_request(:delete_model, params)
       req.send_request(options)
     end
@@ -725,9 +725,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -769,9 +769,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeDataset AWS API Documentation
     #
-    # @overload describe_dataset(params = {})
+    # @overload describe_dataset(**params)
     # @param [Hash] params ({})
-    def describe_dataset(params = {}, options = {})
+    def describe_dataset(params = {}, **options)
       req = build_request(:describe_dataset, params)
       req.send_request(options)
     end
@@ -818,9 +818,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModel AWS API Documentation
     #
-    # @overload describe_model(params = {})
+    # @overload describe_model(**params)
     # @param [Hash] params ({})
-    def describe_model(params = {}, options = {})
+    def describe_model(params = {}, **options)
       req = build_request(:describe_model, params)
       req.send_request(options)
     end
@@ -853,9 +853,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeProject AWS API Documentation
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -909,9 +909,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DetectAnomalies AWS API Documentation
     #
-    # @overload detect_anomalies(params = {})
+    # @overload detect_anomalies(**params)
     # @param [Hash] params ({})
-    def detect_anomalies(params = {}, options = {})
+    def detect_anomalies(params = {}, **options)
       req = build_request(:detect_anomalies, params)
       req.send_request(options)
     end
@@ -992,9 +992,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListDatasetEntries AWS API Documentation
     #
-    # @overload list_dataset_entries(params = {})
+    # @overload list_dataset_entries(**params)
     # @param [Hash] params ({})
-    def list_dataset_entries(params = {}, options = {})
+    def list_dataset_entries(params = {}, **options)
       req = build_request(:list_dataset_entries, params)
       req.send_request(options)
     end
@@ -1048,9 +1048,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModels AWS API Documentation
     #
-    # @overload list_models(params = {})
+    # @overload list_models(**params)
     # @param [Hash] params ({})
-    def list_models(params = {}, options = {})
+    def list_models(params = {}, **options)
       req = build_request(:list_models, params)
       req.send_request(options)
     end
@@ -1093,9 +1093,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -1159,9 +1159,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModel AWS API Documentation
     #
-    # @overload start_model(params = {})
+    # @overload start_model(**params)
     # @param [Hash] params ({})
-    def start_model(params = {}, options = {})
+    def start_model(params = {}, **options)
       req = build_request(:start_model, params)
       req.send_request(options)
     end
@@ -1206,9 +1206,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StopModel AWS API Documentation
     #
-    # @overload stop_model(params = {})
+    # @overload stop_model(**params)
     # @param [Hash] params ({})
-    def stop_model(params = {}, options = {})
+    def stop_model(params = {}, **options)
       req = build_request(:stop_model, params)
       req.send_request(options)
     end
@@ -1266,9 +1266,9 @@ module Aws::LookoutforVision
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UpdateDatasetEntries AWS API Documentation
     #
-    # @overload update_dataset_entries(params = {})
+    # @overload update_dataset_entries(**params)
     # @param [Hash] params ({})
-    def update_dataset_entries(params = {}, options = {})
+    def update_dataset_entries(params = {}, **options)
       req = build_request(:update_dataset_entries, params)
       req.send_request(options)
     end
@@ -1277,7 +1277,7 @@ module Aws::LookoutforVision
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1285,15 +1285,15 @@ module Aws::LookoutforVision
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-lookoutforvision'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-lookoutforvision"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

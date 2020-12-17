@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appintegrationsservice/types'
-require_relative 'aws-sdk-appintegrationsservice/client_api'
-require_relative 'aws-sdk-appintegrationsservice/client'
-require_relative 'aws-sdk-appintegrationsservice/errors'
-require_relative 'aws-sdk-appintegrationsservice/resource'
-require_relative 'aws-sdk-appintegrationsservice/customizations'
+require_relative "aws-sdk-appintegrationsservice/types"
+require_relative "aws-sdk-appintegrationsservice/client_api"
+require_relative "aws-sdk-appintegrationsservice/client"
+require_relative "aws-sdk-appintegrationsservice/errors"
+require_relative "aws-sdk-appintegrationsservice/resource"
+require_relative "aws-sdk-appintegrationsservice/customizations"
 
 # This module provides support for Amazon AppIntegrations Service. This module is available in the
 # `aws-sdk-appintegrationsservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-appintegrationsservice/customizations'
 # @!group service
 module Aws::AppIntegrationsService
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

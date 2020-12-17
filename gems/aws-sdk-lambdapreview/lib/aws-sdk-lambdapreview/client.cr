@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:lambdapreview)
 
@@ -280,7 +280,7 @@ module Aws::LambdaPreview
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -425,9 +425,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/AddEventSource AWS API Documentation
     #
-    # @overload add_event_source(params = {})
+    # @overload add_event_source(**params)
     # @param [Hash] params ({})
-    def add_event_source(params = {}, options = {})
+    def add_event_source(params = {}, **options)
       req = build_request(:add_event_source, params)
       req.send_request(options)
     end
@@ -450,9 +450,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/DeleteFunction AWS API Documentation
     #
-    # @overload delete_function(params = {})
+    # @overload delete_function(**params)
     # @param [Hash] params ({})
-    def delete_function(params = {}, options = {})
+    def delete_function(params = {}, **options)
       req = build_request(:delete_function, params)
       req.send_request(options)
     end
@@ -499,9 +499,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/GetEventSource AWS API Documentation
     #
-    # @overload get_event_source(params = {})
+    # @overload get_event_source(**params)
     # @param [Hash] params ({})
-    def get_event_source(params = {}, options = {})
+    def get_event_source(params = {}, **options)
       req = build_request(:get_event_source, params)
       req.send_request(options)
     end
@@ -548,9 +548,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/GetFunction AWS API Documentation
     #
-    # @overload get_function(params = {})
+    # @overload get_function(**params)
     # @param [Hash] params ({})
-    def get_function(params = {}, options = {})
+    def get_function(params = {}, **options)
       req = build_request(:get_function, params)
       req.send_request(options)
     end
@@ -604,9 +604,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/GetFunctionConfiguration AWS API Documentation
     #
-    # @overload get_function_configuration(params = {})
+    # @overload get_function_configuration(**params)
     # @param [Hash] params ({})
-    def get_function_configuration(params = {}, options = {})
+    def get_function_configuration(params = {}, **options)
       req = build_request(:get_function_configuration, params)
       req.send_request(options)
     end
@@ -642,9 +642,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/InvokeAsync AWS API Documentation
     #
-    # @overload invoke_async(params = {})
+    # @overload invoke_async(**params)
     # @param [Hash] params ({})
-    def invoke_async(params = {}, options = {})
+    def invoke_async(params = {}, **options)
       req = build_request(:invoke_async, params)
       req.send_request(options)
     end
@@ -707,9 +707,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/ListEventSources AWS API Documentation
     #
-    # @overload list_event_sources(params = {})
+    # @overload list_event_sources(**params)
     # @param [Hash] params ({})
-    def list_event_sources(params = {}, options = {})
+    def list_event_sources(params = {}, **options)
       req = build_request(:list_event_sources, params)
       req.send_request(options)
     end
@@ -763,9 +763,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/ListFunctions AWS API Documentation
     #
-    # @overload list_functions(params = {})
+    # @overload list_functions(**params)
     # @param [Hash] params ({})
-    def list_functions(params = {}, options = {})
+    def list_functions(params = {}, **options)
       req = build_request(:list_functions, params)
       req.send_request(options)
     end
@@ -789,9 +789,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/RemoveEventSource AWS API Documentation
     #
-    # @overload remove_event_source(params = {})
+    # @overload remove_event_source(**params)
     # @param [Hash] params ({})
-    def remove_event_source(params = {}, options = {})
+    def remove_event_source(params = {}, **options)
       req = build_request(:remove_event_source, params)
       req.send_request(options)
     end
@@ -877,9 +877,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/UpdateFunctionConfiguration AWS API Documentation
     #
-    # @overload update_function_configuration(params = {})
+    # @overload update_function_configuration(**params)
     # @param [Hash] params ({})
-    def update_function_configuration(params = {}, options = {})
+    def update_function_configuration(params = {}, **options)
       req = build_request(:update_function_configuration, params)
       req.send_request(options)
     end
@@ -989,9 +989,9 @@ module Aws::LambdaPreview
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lambda-2014-11-11/UploadFunction AWS API Documentation
     #
-    # @overload upload_function(params = {})
+    # @overload upload_function(**params)
     # @param [Hash] params ({})
-    def upload_function(params = {}, options = {})
+    def upload_function(params = {}, **options)
       req = build_request(:upload_function, params)
       req.send_request(options)
     end
@@ -1000,7 +1000,7 @@ module Aws::LambdaPreview
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1008,15 +1008,15 @@ module Aws::LambdaPreview
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-lambdapreview'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-lambdapreview"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

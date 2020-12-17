@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-devicefarm/types'
-require_relative 'aws-sdk-devicefarm/client_api'
-require_relative 'aws-sdk-devicefarm/client'
-require_relative 'aws-sdk-devicefarm/errors'
-require_relative 'aws-sdk-devicefarm/resource'
-require_relative 'aws-sdk-devicefarm/customizations'
+require_relative "aws-sdk-devicefarm/types"
+require_relative "aws-sdk-devicefarm/client_api"
+require_relative "aws-sdk-devicefarm/client"
+require_relative "aws-sdk-devicefarm/errors"
+require_relative "aws-sdk-devicefarm/resource"
+require_relative "aws-sdk-devicefarm/customizations"
 
 # This module provides support for AWS Device Farm. This module is available in the
 # `aws-sdk-devicefarm` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-devicefarm/customizations'
 # @!group service
 module Aws::DeviceFarm
 
-  GEM_VERSION = '1.39.0'
+  GEM_VERSION = "1.39.0"
 
 end

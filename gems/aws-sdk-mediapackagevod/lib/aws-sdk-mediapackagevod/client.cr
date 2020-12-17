@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mediapackagevod)
 
@@ -280,7 +280,7 @@ module Aws::MediaPackageVod
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -384,9 +384,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/CreateAsset AWS API Documentation
     #
-    # @overload create_asset(params = {})
+    # @overload create_asset(**params)
     # @param [Hash] params ({})
-    def create_asset(params = {}, options = {})
+    def create_asset(params = {}, **options)
       req = build_request(:create_asset, params)
       req.send_request(options)
     end
@@ -596,9 +596,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/CreatePackagingConfiguration AWS API Documentation
     #
-    # @overload create_packaging_configuration(params = {})
+    # @overload create_packaging_configuration(**params)
     # @param [Hash] params ({})
-    def create_packaging_configuration(params = {}, options = {})
+    def create_packaging_configuration(params = {}, **options)
       req = build_request(:create_packaging_configuration, params)
       req.send_request(options)
     end
@@ -646,9 +646,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/CreatePackagingGroup AWS API Documentation
     #
-    # @overload create_packaging_group(params = {})
+    # @overload create_packaging_group(**params)
     # @param [Hash] params ({})
-    def create_packaging_group(params = {}, options = {})
+    def create_packaging_group(params = {}, **options)
       req = build_request(:create_packaging_group, params)
       req.send_request(options)
     end
@@ -667,9 +667,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/DeleteAsset AWS API Documentation
     #
-    # @overload delete_asset(params = {})
+    # @overload delete_asset(**params)
     # @param [Hash] params ({})
-    def delete_asset(params = {}, options = {})
+    def delete_asset(params = {}, **options)
       req = build_request(:delete_asset, params)
       req.send_request(options)
     end
@@ -688,9 +688,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/DeletePackagingConfiguration AWS API Documentation
     #
-    # @overload delete_packaging_configuration(params = {})
+    # @overload delete_packaging_configuration(**params)
     # @param [Hash] params ({})
-    def delete_packaging_configuration(params = {}, options = {})
+    def delete_packaging_configuration(params = {}, **options)
       req = build_request(:delete_packaging_configuration, params)
       req.send_request(options)
     end
@@ -709,9 +709,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/DeletePackagingGroup AWS API Documentation
     #
-    # @overload delete_packaging_group(params = {})
+    # @overload delete_packaging_group(**params)
     # @param [Hash] params ({})
-    def delete_packaging_group(params = {}, options = {})
+    def delete_packaging_group(params = {}, **options)
       req = build_request(:delete_packaging_group, params)
       req.send_request(options)
     end
@@ -755,9 +755,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/DescribeAsset AWS API Documentation
     #
-    # @overload describe_asset(params = {})
+    # @overload describe_asset(**params)
     # @param [Hash] params ({})
-    def describe_asset(params = {}, options = {})
+    def describe_asset(params = {}, **options)
       req = build_request(:describe_asset, params)
       req.send_request(options)
     end
@@ -851,9 +851,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/DescribePackagingConfiguration AWS API Documentation
     #
-    # @overload describe_packaging_configuration(params = {})
+    # @overload describe_packaging_configuration(**params)
     # @param [Hash] params ({})
-    def describe_packaging_configuration(params = {}, options = {})
+    def describe_packaging_configuration(params = {}, **options)
       req = build_request(:describe_packaging_configuration, params)
       req.send_request(options)
     end
@@ -888,9 +888,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/DescribePackagingGroup AWS API Documentation
     #
-    # @overload describe_packaging_group(params = {})
+    # @overload describe_packaging_group(**params)
     # @param [Hash] params ({})
-    def describe_packaging_group(params = {}, options = {})
+    def describe_packaging_group(params = {}, **options)
       req = build_request(:describe_packaging_group, params)
       req.send_request(options)
     end
@@ -934,9 +934,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/ListAssets AWS API Documentation
     #
-    # @overload list_assets(params = {})
+    # @overload list_assets(**params)
     # @param [Hash] params ({})
-    def list_assets(params = {}, options = {})
+    def list_assets(params = {}, **options)
       req = build_request(:list_assets, params)
       req.send_request(options)
     end
@@ -1034,9 +1034,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/ListPackagingConfigurations AWS API Documentation
     #
-    # @overload list_packaging_configurations(params = {})
+    # @overload list_packaging_configurations(**params)
     # @param [Hash] params ({})
-    def list_packaging_configurations(params = {}, options = {})
+    def list_packaging_configurations(params = {}, **options)
       req = build_request(:list_packaging_configurations, params)
       req.send_request(options)
     end
@@ -1075,9 +1075,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/ListPackagingGroups AWS API Documentation
     #
-    # @overload list_packaging_groups(params = {})
+    # @overload list_packaging_groups(**params)
     # @param [Hash] params ({})
-    def list_packaging_groups(params = {}, options = {})
+    def list_packaging_groups(params = {}, **options)
       req = build_request(:list_packaging_groups, params)
       req.send_request(options)
     end
@@ -1103,9 +1103,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1130,9 +1130,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1155,9 +1155,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1200,9 +1200,9 @@ module Aws::MediaPackageVod
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-vod-2018-11-07/UpdatePackagingGroup AWS API Documentation
     #
-    # @overload update_packaging_group(params = {})
+    # @overload update_packaging_group(**params)
     # @param [Hash] params ({})
-    def update_packaging_group(params = {}, options = {})
+    def update_packaging_group(params = {}, **options)
       req = build_request(:update_packaging_group, params)
       req.send_request(options)
     end
@@ -1211,7 +1211,7 @@ module Aws::MediaPackageVod
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1219,15 +1219,15 @@ module Aws::MediaPackageVod
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mediapackagevod'
-      context[:gem_version] = '1.19.0'
+      context[:gem_name] = "aws-sdk-mediapackagevod"
+      context[:gem_version] = "1.19.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

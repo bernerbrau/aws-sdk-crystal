@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:configservice)
 
@@ -290,7 +290,7 @@ module Aws::ConfigService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -402,9 +402,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/BatchGetAggregateResourceConfig AWS API Documentation
     #
-    # @overload batch_get_aggregate_resource_config(params = {})
+    # @overload batch_get_aggregate_resource_config(**params)
     # @param [Hash] params ({})
-    def batch_get_aggregate_resource_config(params = {}, options = {})
+    def batch_get_aggregate_resource_config(params = {}, **options)
       req = build_request(:batch_get_aggregate_resource_config, params)
       req.send_request(options)
     end
@@ -466,9 +466,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/BatchGetResourceConfig AWS API Documentation
     #
-    # @overload batch_get_resource_config(params = {})
+    # @overload batch_get_resource_config(**params)
     # @param [Hash] params ({})
-    def batch_get_resource_config(params = {}, options = {})
+    def batch_get_resource_config(params = {}, **options)
       req = build_request(:batch_get_resource_config, params)
       req.send_request(options)
     end
@@ -493,9 +493,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteAggregationAuthorization AWS API Documentation
     #
-    # @overload delete_aggregation_authorization(params = {})
+    # @overload delete_aggregation_authorization(**params)
     # @param [Hash] params ({})
-    def delete_aggregation_authorization(params = {}, options = {})
+    def delete_aggregation_authorization(params = {}, **options)
       req = build_request(:delete_aggregation_authorization, params)
       req.send_request(options)
     end
@@ -524,9 +524,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteConfigRule AWS API Documentation
     #
-    # @overload delete_config_rule(params = {})
+    # @overload delete_config_rule(**params)
     # @param [Hash] params ({})
-    def delete_config_rule(params = {}, options = {})
+    def delete_config_rule(params = {}, **options)
       req = build_request(:delete_config_rule, params)
       req.send_request(options)
     end
@@ -547,9 +547,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteConfigurationAggregator AWS API Documentation
     #
-    # @overload delete_configuration_aggregator(params = {})
+    # @overload delete_configuration_aggregator(**params)
     # @param [Hash] params ({})
-    def delete_configuration_aggregator(params = {}, options = {})
+    def delete_configuration_aggregator(params = {}, **options)
       req = build_request(:delete_configuration_aggregator, params)
       req.send_request(options)
     end
@@ -581,9 +581,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteConfigurationRecorder AWS API Documentation
     #
-    # @overload delete_configuration_recorder(params = {})
+    # @overload delete_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def delete_configuration_recorder(params = {}, options = {})
+    def delete_configuration_recorder(params = {}, **options)
       req = build_request(:delete_configuration_recorder, params)
       req.send_request(options)
     end
@@ -609,9 +609,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteConformancePack AWS API Documentation
     #
-    # @overload delete_conformance_pack(params = {})
+    # @overload delete_conformance_pack(**params)
     # @param [Hash] params ({})
-    def delete_conformance_pack(params = {}, options = {})
+    def delete_conformance_pack(params = {}, **options)
       req = build_request(:delete_conformance_pack, params)
       req.send_request(options)
     end
@@ -634,9 +634,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteDeliveryChannel AWS API Documentation
     #
-    # @overload delete_delivery_channel(params = {})
+    # @overload delete_delivery_channel(**params)
     # @param [Hash] params ({})
-    def delete_delivery_channel(params = {}, options = {})
+    def delete_delivery_channel(params = {}, **options)
       req = build_request(:delete_delivery_channel, params)
       req.send_request(options)
     end
@@ -660,9 +660,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteEvaluationResults AWS API Documentation
     #
-    # @overload delete_evaluation_results(params = {})
+    # @overload delete_evaluation_results(**params)
     # @param [Hash] params ({})
-    def delete_evaluation_results(params = {}, options = {})
+    def delete_evaluation_results(params = {}, **options)
       req = build_request(:delete_evaluation_results, params)
       req.send_request(options)
     end
@@ -692,9 +692,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteOrganizationConfigRule AWS API Documentation
     #
-    # @overload delete_organization_config_rule(params = {})
+    # @overload delete_organization_config_rule(**params)
     # @param [Hash] params ({})
-    def delete_organization_config_rule(params = {}, options = {})
+    def delete_organization_config_rule(params = {}, **options)
       req = build_request(:delete_organization_config_rule, params)
       req.send_request(options)
     end
@@ -725,9 +725,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteOrganizationConformancePack AWS API Documentation
     #
-    # @overload delete_organization_conformance_pack(params = {})
+    # @overload delete_organization_conformance_pack(**params)
     # @param [Hash] params ({})
-    def delete_organization_conformance_pack(params = {}, options = {})
+    def delete_organization_conformance_pack(params = {}, **options)
       req = build_request(:delete_organization_conformance_pack, params)
       req.send_request(options)
     end
@@ -752,9 +752,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeletePendingAggregationRequest AWS API Documentation
     #
-    # @overload delete_pending_aggregation_request(params = {})
+    # @overload delete_pending_aggregation_request(**params)
     # @param [Hash] params ({})
-    def delete_pending_aggregation_request(params = {}, options = {})
+    def delete_pending_aggregation_request(params = {}, **options)
       req = build_request(:delete_pending_aggregation_request, params)
       req.send_request(options)
     end
@@ -779,9 +779,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteRemediationConfiguration AWS API Documentation
     #
-    # @overload delete_remediation_configuration(params = {})
+    # @overload delete_remediation_configuration(**params)
     # @param [Hash] params ({})
-    def delete_remediation_configuration(params = {}, options = {})
+    def delete_remediation_configuration(params = {}, **options)
       req = build_request(:delete_remediation_configuration, params)
       req.send_request(options)
     end
@@ -830,9 +830,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteRemediationExceptions AWS API Documentation
     #
-    # @overload delete_remediation_exceptions(params = {})
+    # @overload delete_remediation_exceptions(**params)
     # @param [Hash] params ({})
-    def delete_remediation_exceptions(params = {}, options = {})
+    def delete_remediation_exceptions(params = {}, **options)
       req = build_request(:delete_remediation_exceptions, params)
       req.send_request(options)
     end
@@ -859,9 +859,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteResourceConfig AWS API Documentation
     #
-    # @overload delete_resource_config(params = {})
+    # @overload delete_resource_config(**params)
     # @param [Hash] params ({})
-    def delete_resource_config(params = {}, options = {})
+    def delete_resource_config(params = {}, **options)
       req = build_request(:delete_resource_config, params)
       req.send_request(options)
     end
@@ -881,9 +881,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteRetentionConfiguration AWS API Documentation
     #
-    # @overload delete_retention_configuration(params = {})
+    # @overload delete_retention_configuration(**params)
     # @param [Hash] params ({})
-    def delete_retention_configuration(params = {}, options = {})
+    def delete_retention_configuration(params = {}, **options)
       req = build_request(:delete_retention_configuration, params)
       req.send_request(options)
     end
@@ -920,9 +920,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeliverConfigSnapshot AWS API Documentation
     #
-    # @overload deliver_config_snapshot(params = {})
+    # @overload deliver_config_snapshot(**params)
     # @param [Hash] params ({})
-    def deliver_config_snapshot(params = {}, options = {})
+    def deliver_config_snapshot(params = {}, **options)
       req = build_request(:deliver_config_snapshot, params)
       req.send_request(options)
     end
@@ -981,9 +981,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeAggregateComplianceByConfigRules AWS API Documentation
     #
-    # @overload describe_aggregate_compliance_by_config_rules(params = {})
+    # @overload describe_aggregate_compliance_by_config_rules(**params)
     # @param [Hash] params ({})
-    def describe_aggregate_compliance_by_config_rules(params = {}, options = {})
+    def describe_aggregate_compliance_by_config_rules(params = {}, **options)
       req = build_request(:describe_aggregate_compliance_by_config_rules, params)
       req.send_request(options)
     end
@@ -1022,9 +1022,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeAggregationAuthorizations AWS API Documentation
     #
-    # @overload describe_aggregation_authorizations(params = {})
+    # @overload describe_aggregation_authorizations(**params)
     # @param [Hash] params ({})
-    def describe_aggregation_authorizations(params = {}, options = {})
+    def describe_aggregation_authorizations(params = {}, **options)
       req = build_request(:describe_aggregation_authorizations, params)
       req.send_request(options)
     end
@@ -1092,9 +1092,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeComplianceByConfigRule AWS API Documentation
     #
-    # @overload describe_compliance_by_config_rule(params = {})
+    # @overload describe_compliance_by_config_rule(**params)
     # @param [Hash] params ({})
-    def describe_compliance_by_config_rule(params = {}, options = {})
+    def describe_compliance_by_config_rule(params = {}, **options)
       req = build_request(:describe_compliance_by_config_rule, params)
       req.send_request(options)
     end
@@ -1179,9 +1179,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeComplianceByResource AWS API Documentation
     #
-    # @overload describe_compliance_by_resource(params = {})
+    # @overload describe_compliance_by_resource(**params)
     # @param [Hash] params ({})
-    def describe_compliance_by_resource(params = {}, options = {})
+    def describe_compliance_by_resource(params = {}, **options)
       req = build_request(:describe_compliance_by_resource, params)
       req.send_request(options)
     end
@@ -1245,9 +1245,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigRuleEvaluationStatus AWS API Documentation
     #
-    # @overload describe_config_rule_evaluation_status(params = {})
+    # @overload describe_config_rule_evaluation_status(**params)
     # @param [Hash] params ({})
-    def describe_config_rule_evaluation_status(params = {}, options = {})
+    def describe_config_rule_evaluation_status(params = {}, **options)
       req = build_request(:describe_config_rule_evaluation_status, params)
       req.send_request(options)
     end
@@ -1301,9 +1301,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigRules AWS API Documentation
     #
-    # @overload describe_config_rules(params = {})
+    # @overload describe_config_rules(**params)
     # @param [Hash] params ({})
-    def describe_config_rules(params = {}, options = {})
+    def describe_config_rules(params = {}, **options)
       req = build_request(:describe_config_rules, params)
       req.send_request(options)
     end
@@ -1362,9 +1362,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigurationAggregatorSourcesStatus AWS API Documentation
     #
-    # @overload describe_configuration_aggregator_sources_status(params = {})
+    # @overload describe_configuration_aggregator_sources_status(**params)
     # @param [Hash] params ({})
-    def describe_configuration_aggregator_sources_status(params = {}, options = {})
+    def describe_configuration_aggregator_sources_status(params = {}, **options)
       req = build_request(:describe_configuration_aggregator_sources_status, params)
       req.send_request(options)
     end
@@ -1420,9 +1420,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigurationAggregators AWS API Documentation
     #
-    # @overload describe_configuration_aggregators(params = {})
+    # @overload describe_configuration_aggregators(**params)
     # @param [Hash] params ({})
-    def describe_configuration_aggregators(params = {}, options = {})
+    def describe_configuration_aggregators(params = {}, **options)
       req = build_request(:describe_configuration_aggregators, params)
       req.send_request(options)
     end
@@ -1465,9 +1465,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigurationRecorderStatus AWS API Documentation
     #
-    # @overload describe_configuration_recorder_status(params = {})
+    # @overload describe_configuration_recorder_status(**params)
     # @param [Hash] params ({})
-    def describe_configuration_recorder_status(params = {}, options = {})
+    def describe_configuration_recorder_status(params = {}, **options)
       req = build_request(:describe_configuration_recorder_status, params)
       req.send_request(options)
     end
@@ -1506,9 +1506,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigurationRecorders AWS API Documentation
     #
-    # @overload describe_configuration_recorders(params = {})
+    # @overload describe_configuration_recorders(**params)
     # @param [Hash] params ({})
-    def describe_configuration_recorders(params = {}, options = {})
+    def describe_configuration_recorders(params = {}, **options)
       req = build_request(:describe_configuration_recorders, params)
       req.send_request(options)
     end
@@ -1561,9 +1561,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConformancePackCompliance AWS API Documentation
     #
-    # @overload describe_conformance_pack_compliance(params = {})
+    # @overload describe_conformance_pack_compliance(**params)
     # @param [Hash] params ({})
-    def describe_conformance_pack_compliance(params = {}, options = {})
+    def describe_conformance_pack_compliance(params = {}, **options)
       req = build_request(:describe_conformance_pack_compliance, params)
       req.send_request(options)
     end
@@ -1612,9 +1612,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConformancePackStatus AWS API Documentation
     #
-    # @overload describe_conformance_pack_status(params = {})
+    # @overload describe_conformance_pack_status(**params)
     # @param [Hash] params ({})
-    def describe_conformance_pack_status(params = {}, options = {})
+    def describe_conformance_pack_status(params = {}, **options)
       req = build_request(:describe_conformance_pack_status, params)
       req.send_request(options)
     end
@@ -1663,9 +1663,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConformancePacks AWS API Documentation
     #
-    # @overload describe_conformance_packs(params = {})
+    # @overload describe_conformance_packs(**params)
     # @param [Hash] params ({})
-    def describe_conformance_packs(params = {}, options = {})
+    def describe_conformance_packs(params = {}, **options)
       req = build_request(:describe_conformance_packs, params)
       req.send_request(options)
     end
@@ -1715,9 +1715,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeDeliveryChannelStatus AWS API Documentation
     #
-    # @overload describe_delivery_channel_status(params = {})
+    # @overload describe_delivery_channel_status(**params)
     # @param [Hash] params ({})
-    def describe_delivery_channel_status(params = {}, options = {})
+    def describe_delivery_channel_status(params = {}, **options)
       req = build_request(:describe_delivery_channel_status, params)
       req.send_request(options)
     end
@@ -1755,9 +1755,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeDeliveryChannels AWS API Documentation
     #
-    # @overload describe_delivery_channels(params = {})
+    # @overload describe_delivery_channels(**params)
     # @param [Hash] params ({})
-    def describe_delivery_channels(params = {}, options = {})
+    def describe_delivery_channels(params = {}, **options)
       req = build_request(:describe_delivery_channels, params)
       req.send_request(options)
     end
@@ -1820,9 +1820,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeOrganizationConfigRuleStatuses AWS API Documentation
     #
-    # @overload describe_organization_config_rule_statuses(params = {})
+    # @overload describe_organization_config_rule_statuses(**params)
     # @param [Hash] params ({})
-    def describe_organization_config_rule_statuses(params = {}, options = {})
+    def describe_organization_config_rule_statuses(params = {}, **options)
       req = build_request(:describe_organization_config_rule_statuses, params)
       req.send_request(options)
     end
@@ -1900,9 +1900,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeOrganizationConfigRules AWS API Documentation
     #
-    # @overload describe_organization_config_rules(params = {})
+    # @overload describe_organization_config_rules(**params)
     # @param [Hash] params ({})
-    def describe_organization_config_rules(params = {}, options = {})
+    def describe_organization_config_rules(params = {}, **options)
       req = build_request(:describe_organization_config_rules, params)
       req.send_request(options)
     end
@@ -1965,9 +1965,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeOrganizationConformancePackStatuses AWS API Documentation
     #
-    # @overload describe_organization_conformance_pack_statuses(params = {})
+    # @overload describe_organization_conformance_pack_statuses(**params)
     # @param [Hash] params ({})
-    def describe_organization_conformance_pack_statuses(params = {}, options = {})
+    def describe_organization_conformance_pack_statuses(params = {}, **options)
       req = build_request(:describe_organization_conformance_pack_statuses, params)
       req.send_request(options)
     end
@@ -2030,9 +2030,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeOrganizationConformancePacks AWS API Documentation
     #
-    # @overload describe_organization_conformance_packs(params = {})
+    # @overload describe_organization_conformance_packs(**params)
     # @param [Hash] params ({})
-    def describe_organization_conformance_packs(params = {}, options = {})
+    def describe_organization_conformance_packs(params = {}, **options)
       req = build_request(:describe_organization_conformance_packs, params)
       req.send_request(options)
     end
@@ -2068,9 +2068,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribePendingAggregationRequests AWS API Documentation
     #
-    # @overload describe_pending_aggregation_requests(params = {})
+    # @overload describe_pending_aggregation_requests(**params)
     # @param [Hash] params ({})
-    def describe_pending_aggregation_requests(params = {}, options = {})
+    def describe_pending_aggregation_requests(params = {}, **options)
       req = build_request(:describe_pending_aggregation_requests, params)
       req.send_request(options)
     end
@@ -2113,9 +2113,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRemediationConfigurations AWS API Documentation
     #
-    # @overload describe_remediation_configurations(params = {})
+    # @overload describe_remediation_configurations(**params)
     # @param [Hash] params ({})
-    def describe_remediation_configurations(params = {}, options = {})
+    def describe_remediation_configurations(params = {}, **options)
       req = build_request(:describe_remediation_configurations, params)
       req.send_request(options)
     end
@@ -2188,9 +2188,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRemediationExceptions AWS API Documentation
     #
-    # @overload describe_remediation_exceptions(params = {})
+    # @overload describe_remediation_exceptions(**params)
     # @param [Hash] params ({})
-    def describe_remediation_exceptions(params = {}, options = {})
+    def describe_remediation_exceptions(params = {}, **options)
       req = build_request(:describe_remediation_exceptions, params)
       req.send_request(options)
     end
@@ -2256,9 +2256,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRemediationExecutionStatus AWS API Documentation
     #
-    # @overload describe_remediation_execution_status(params = {})
+    # @overload describe_remediation_execution_status(**params)
     # @param [Hash] params ({})
-    def describe_remediation_execution_status(params = {}, options = {})
+    def describe_remediation_execution_status(params = {}, **options)
       req = build_request(:describe_remediation_execution_status, params)
       req.send_request(options)
     end
@@ -2307,9 +2307,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRetentionConfigurations AWS API Documentation
     #
-    # @overload describe_retention_configurations(params = {})
+    # @overload describe_retention_configurations(**params)
     # @param [Hash] params ({})
-    def describe_retention_configurations(params = {}, options = {})
+    def describe_retention_configurations(params = {}, **options)
       req = build_request(:describe_retention_configurations, params)
       req.send_request(options)
     end
@@ -2390,9 +2390,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetAggregateComplianceDetailsByConfigRule AWS API Documentation
     #
-    # @overload get_aggregate_compliance_details_by_config_rule(params = {})
+    # @overload get_aggregate_compliance_details_by_config_rule(**params)
     # @param [Hash] params ({})
-    def get_aggregate_compliance_details_by_config_rule(params = {}, options = {})
+    def get_aggregate_compliance_details_by_config_rule(params = {}, **options)
       req = build_request(:get_aggregate_compliance_details_by_config_rule, params)
       req.send_request(options)
     end
@@ -2457,9 +2457,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetAggregateConfigRuleComplianceSummary AWS API Documentation
     #
-    # @overload get_aggregate_config_rule_compliance_summary(params = {})
+    # @overload get_aggregate_config_rule_compliance_summary(**params)
     # @param [Hash] params ({})
-    def get_aggregate_config_rule_compliance_summary(params = {}, options = {})
+    def get_aggregate_config_rule_compliance_summary(params = {}, **options)
       req = build_request(:get_aggregate_config_rule_compliance_summary, params)
       req.send_request(options)
     end
@@ -2524,9 +2524,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetAggregateDiscoveredResourceCounts AWS API Documentation
     #
-    # @overload get_aggregate_discovered_resource_counts(params = {})
+    # @overload get_aggregate_discovered_resource_counts(**params)
     # @param [Hash] params ({})
-    def get_aggregate_discovered_resource_counts(params = {}, options = {})
+    def get_aggregate_discovered_resource_counts(params = {}, **options)
       req = build_request(:get_aggregate_discovered_resource_counts, params)
       req.send_request(options)
     end
@@ -2587,9 +2587,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetAggregateResourceConfig AWS API Documentation
     #
-    # @overload get_aggregate_resource_config(params = {})
+    # @overload get_aggregate_resource_config(**params)
     # @param [Hash] params ({})
-    def get_aggregate_resource_config(params = {}, options = {})
+    def get_aggregate_resource_config(params = {}, **options)
       req = build_request(:get_aggregate_resource_config, params)
       req.send_request(options)
     end
@@ -2648,9 +2648,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceDetailsByConfigRule AWS API Documentation
     #
-    # @overload get_compliance_details_by_config_rule(params = {})
+    # @overload get_compliance_details_by_config_rule(**params)
     # @param [Hash] params ({})
-    def get_compliance_details_by_config_rule(params = {}, options = {})
+    def get_compliance_details_by_config_rule(params = {}, **options)
       req = build_request(:get_compliance_details_by_config_rule, params)
       req.send_request(options)
     end
@@ -2707,9 +2707,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceDetailsByResource AWS API Documentation
     #
-    # @overload get_compliance_details_by_resource(params = {})
+    # @overload get_compliance_details_by_resource(**params)
     # @param [Hash] params ({})
-    def get_compliance_details_by_resource(params = {}, options = {})
+    def get_compliance_details_by_resource(params = {}, **options)
       req = build_request(:get_compliance_details_by_resource, params)
       req.send_request(options)
     end
@@ -2731,9 +2731,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceSummaryByConfigRule AWS API Documentation
     #
-    # @overload get_compliance_summary_by_config_rule(params = {})
+    # @overload get_compliance_summary_by_config_rule(**params)
     # @param [Hash] params ({})
-    def get_compliance_summary_by_config_rule(params = {}, options = {})
+    def get_compliance_summary_by_config_rule(params = {}, **options)
       req = build_request(:get_compliance_summary_by_config_rule, params)
       req.send_request(options)
     end
@@ -2774,9 +2774,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceSummaryByResourceType AWS API Documentation
     #
-    # @overload get_compliance_summary_by_resource_type(params = {})
+    # @overload get_compliance_summary_by_resource_type(**params)
     # @param [Hash] params ({})
-    def get_compliance_summary_by_resource_type(params = {}, options = {})
+    def get_compliance_summary_by_resource_type(params = {}, **options)
       req = build_request(:get_compliance_summary_by_resource_type, params)
       req.send_request(options)
     end
@@ -2835,9 +2835,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetConformancePackComplianceDetails AWS API Documentation
     #
-    # @overload get_conformance_pack_compliance_details(params = {})
+    # @overload get_conformance_pack_compliance_details(**params)
     # @param [Hash] params ({})
-    def get_conformance_pack_compliance_details(params = {}, options = {})
+    def get_conformance_pack_compliance_details(params = {}, **options)
       req = build_request(:get_conformance_pack_compliance_details, params)
       req.send_request(options)
     end
@@ -2878,9 +2878,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetConformancePackComplianceSummary AWS API Documentation
     #
-    # @overload get_conformance_pack_compliance_summary(params = {})
+    # @overload get_conformance_pack_compliance_summary(**params)
     # @param [Hash] params ({})
-    def get_conformance_pack_compliance_summary(params = {}, options = {})
+    def get_conformance_pack_compliance_summary(params = {}, **options)
       req = build_request(:get_conformance_pack_compliance_summary, params)
       req.send_request(options)
     end
@@ -2975,9 +2975,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetDiscoveredResourceCounts AWS API Documentation
     #
-    # @overload get_discovered_resource_counts(params = {})
+    # @overload get_discovered_resource_counts(**params)
     # @param [Hash] params ({})
-    def get_discovered_resource_counts(params = {}, options = {})
+    def get_discovered_resource_counts(params = {}, **options)
       req = build_request(:get_discovered_resource_counts, params)
       req.send_request(options)
     end
@@ -3036,9 +3036,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetOrganizationConfigRuleDetailedStatus AWS API Documentation
     #
-    # @overload get_organization_config_rule_detailed_status(params = {})
+    # @overload get_organization_config_rule_detailed_status(**params)
     # @param [Hash] params ({})
-    def get_organization_config_rule_detailed_status(params = {}, options = {})
+    def get_organization_config_rule_detailed_status(params = {}, **options)
       req = build_request(:get_organization_config_rule_detailed_status, params)
       req.send_request(options)
     end
@@ -3097,9 +3097,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetOrganizationConformancePackDetailedStatus AWS API Documentation
     #
-    # @overload get_organization_conformance_pack_detailed_status(params = {})
+    # @overload get_organization_conformance_pack_detailed_status(**params)
     # @param [Hash] params ({})
-    def get_organization_conformance_pack_detailed_status(params = {}, options = {})
+    def get_organization_conformance_pack_detailed_status(params = {}, **options)
       req = build_request(:get_organization_conformance_pack_detailed_status, params)
       req.send_request(options)
     end
@@ -3203,9 +3203,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetResourceConfigHistory AWS API Documentation
     #
-    # @overload get_resource_config_history(params = {})
+    # @overload get_resource_config_history(**params)
     # @param [Hash] params ({})
-    def get_resource_config_history(params = {}, options = {})
+    def get_resource_config_history(params = {}, **options)
       req = build_request(:get_resource_config_history, params)
       req.send_request(options)
     end
@@ -3274,9 +3274,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListAggregateDiscoveredResources AWS API Documentation
     #
-    # @overload list_aggregate_discovered_resources(params = {})
+    # @overload list_aggregate_discovered_resources(**params)
     # @param [Hash] params ({})
-    def list_aggregate_discovered_resources(params = {}, options = {})
+    def list_aggregate_discovered_resources(params = {}, **options)
       req = build_request(:list_aggregate_discovered_resources, params)
       req.send_request(options)
     end
@@ -3354,9 +3354,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListDiscoveredResources AWS API Documentation
     #
-    # @overload list_discovered_resources(params = {})
+    # @overload list_discovered_resources(**params)
     # @param [Hash] params ({})
-    def list_discovered_resources(params = {}, options = {})
+    def list_discovered_resources(params = {}, **options)
       req = build_request(:list_discovered_resources, params)
       req.send_request(options)
     end
@@ -3399,9 +3399,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3444,9 +3444,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutAggregationAuthorization AWS API Documentation
     #
-    # @overload put_aggregation_authorization(params = {})
+    # @overload put_aggregation_authorization(**params)
     # @param [Hash] params ({})
-    def put_aggregation_authorization(params = {}, options = {})
+    def put_aggregation_authorization(params = {}, **options)
       req = build_request(:put_aggregation_authorization, params)
       req.send_request(options)
     end
@@ -3543,9 +3543,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutConfigRule AWS API Documentation
     #
-    # @overload put_config_rule(params = {})
+    # @overload put_config_rule(**params)
     # @param [Hash] params ({})
-    def put_config_rule(params = {}, options = {})
+    def put_config_rule(params = {}, **options)
       req = build_request(:put_config_rule, params)
       req.send_request(options)
     end
@@ -3624,9 +3624,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutConfigurationAggregator AWS API Documentation
     #
-    # @overload put_configuration_aggregator(params = {})
+    # @overload put_configuration_aggregator(**params)
     # @param [Hash] params ({})
-    def put_configuration_aggregator(params = {}, options = {})
+    def put_configuration_aggregator(params = {}, **options)
       req = build_request(:put_configuration_aggregator, params)
       req.send_request(options)
     end
@@ -3669,9 +3669,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutConfigurationRecorder AWS API Documentation
     #
-    # @overload put_configuration_recorder(params = {})
+    # @overload put_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def put_configuration_recorder(params = {}, options = {})
+    def put_configuration_recorder(params = {}, **options)
       req = build_request(:put_configuration_recorder, params)
       req.send_request(options)
     end
@@ -3749,9 +3749,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutConformancePack AWS API Documentation
     #
-    # @overload put_conformance_pack(params = {})
+    # @overload put_conformance_pack(**params)
     # @param [Hash] params ({})
-    def put_conformance_pack(params = {}, options = {})
+    def put_conformance_pack(params = {}, **options)
       req = build_request(:put_conformance_pack, params)
       req.send_request(options)
     end
@@ -3796,9 +3796,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutDeliveryChannel AWS API Documentation
     #
-    # @overload put_delivery_channel(params = {})
+    # @overload put_delivery_channel(**params)
     # @param [Hash] params ({})
-    def put_delivery_channel(params = {}, options = {})
+    def put_delivery_channel(params = {}, **options)
       req = build_request(:put_delivery_channel, params)
       req.send_request(options)
     end
@@ -3858,9 +3858,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutEvaluations AWS API Documentation
     #
-    # @overload put_evaluations(params = {})
+    # @overload put_evaluations(**params)
     # @param [Hash] params ({})
-    def put_evaluations(params = {}, options = {})
+    def put_evaluations(params = {}, **options)
       req = build_request(:put_evaluations, params)
       req.send_request(options)
     end
@@ -3958,9 +3958,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutOrganizationConfigRule AWS API Documentation
     #
-    # @overload put_organization_config_rule(params = {})
+    # @overload put_organization_config_rule(**params)
     # @param [Hash] params ({})
-    def put_organization_config_rule(params = {}, options = {})
+    def put_organization_config_rule(params = {}, **options)
       req = build_request(:put_organization_config_rule, params)
       req.send_request(options)
     end
@@ -4066,9 +4066,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutOrganizationConformancePack AWS API Documentation
     #
-    # @overload put_organization_conformance_pack(params = {})
+    # @overload put_organization_conformance_pack(**params)
     # @param [Hash] params ({})
-    def put_organization_conformance_pack(params = {}, options = {})
+    def put_organization_conformance_pack(params = {}, **options)
       req = build_request(:put_organization_conformance_pack, params)
       req.send_request(options)
     end
@@ -4151,9 +4151,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutRemediationConfigurations AWS API Documentation
     #
-    # @overload put_remediation_configurations(params = {})
+    # @overload put_remediation_configurations(**params)
     # @param [Hash] params ({})
-    def put_remediation_configurations(params = {}, options = {})
+    def put_remediation_configurations(params = {}, **options)
       req = build_request(:put_remediation_configurations, params)
       req.send_request(options)
     end
@@ -4215,9 +4215,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutRemediationExceptions AWS API Documentation
     #
-    # @overload put_remediation_exceptions(params = {})
+    # @overload put_remediation_exceptions(**params)
     # @param [Hash] params ({})
-    def put_remediation_exceptions(params = {}, options = {})
+    def put_remediation_exceptions(params = {}, **options)
       req = build_request(:put_remediation_exceptions, params)
       req.send_request(options)
     end
@@ -4289,9 +4289,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutResourceConfig AWS API Documentation
     #
-    # @overload put_resource_config(params = {})
+    # @overload put_resource_config(**params)
     # @param [Hash] params ({})
-    def put_resource_config(params = {}, options = {})
+    def put_resource_config(params = {}, **options)
       req = build_request(:put_resource_config, params)
       req.send_request(options)
     end
@@ -4332,9 +4332,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutRetentionConfiguration AWS API Documentation
     #
-    # @overload put_retention_configuration(params = {})
+    # @overload put_retention_configuration(**params)
     # @param [Hash] params ({})
-    def put_retention_configuration(params = {}, options = {})
+    def put_retention_configuration(params = {}, **options)
       req = build_request(:put_retention_configuration, params)
       req.send_request(options)
     end
@@ -4396,9 +4396,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/SelectAggregateResourceConfig AWS API Documentation
     #
-    # @overload select_aggregate_resource_config(params = {})
+    # @overload select_aggregate_resource_config(**params)
     # @param [Hash] params ({})
-    def select_aggregate_resource_config(params = {}, options = {})
+    def select_aggregate_resource_config(params = {}, **options)
       req = build_request(:select_aggregate_resource_config, params)
       req.send_request(options)
     end
@@ -4448,9 +4448,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/SelectResourceConfig AWS API Documentation
     #
-    # @overload select_resource_config(params = {})
+    # @overload select_resource_config(**params)
     # @param [Hash] params ({})
-    def select_resource_config(params = {}, options = {})
+    def select_resource_config(params = {}, **options)
       req = build_request(:select_resource_config, params)
       req.send_request(options)
     end
@@ -4507,9 +4507,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartConfigRulesEvaluation AWS API Documentation
     #
-    # @overload start_config_rules_evaluation(params = {})
+    # @overload start_config_rules_evaluation(**params)
     # @param [Hash] params ({})
-    def start_config_rules_evaluation(params = {}, options = {})
+    def start_config_rules_evaluation(params = {}, **options)
       req = build_request(:start_config_rules_evaluation, params)
       req.send_request(options)
     end
@@ -4534,9 +4534,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartConfigurationRecorder AWS API Documentation
     #
-    # @overload start_configuration_recorder(params = {})
+    # @overload start_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def start_configuration_recorder(params = {}, options = {})
+    def start_configuration_recorder(params = {}, **options)
       req = build_request(:start_configuration_recorder, params)
       req.send_request(options)
     end
@@ -4584,9 +4584,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartRemediationExecution AWS API Documentation
     #
-    # @overload start_remediation_execution(params = {})
+    # @overload start_remediation_execution(**params)
     # @param [Hash] params ({})
-    def start_remediation_execution(params = {}, options = {})
+    def start_remediation_execution(params = {}, **options)
       req = build_request(:start_remediation_execution, params)
       req.send_request(options)
     end
@@ -4608,9 +4608,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StopConfigurationRecorder AWS API Documentation
     #
-    # @overload stop_configuration_recorder(params = {})
+    # @overload stop_configuration_recorder(**params)
     # @param [Hash] params ({})
-    def stop_configuration_recorder(params = {}, options = {})
+    def stop_configuration_recorder(params = {}, **options)
       req = build_request(:stop_configuration_recorder, params)
       req.send_request(options)
     end
@@ -4644,9 +4644,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -4672,9 +4672,9 @@ module Aws::ConfigService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -4683,7 +4683,7 @@ module Aws::ConfigService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4691,15 +4691,15 @@ module Aws::ConfigService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-configservice'
-      context[:gem_version] = '1.53.0'
+      context[:gem_name] = "aws-sdk-configservice"
+      context[:gem_version] = "1.53.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotthingsgraph)
 
@@ -290,7 +290,7 @@ module Aws::IoTThingsGraph
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -368,9 +368,9 @@ module Aws::IoTThingsGraph
     #     namespace_version: 1,
     #   })
     #
-    # @overload associate_entity_to_thing(params = {})
+    # @overload associate_entity_to_thing(**params)
     # @param [Hash] params ({})
-    def associate_entity_to_thing(params = {}, options = {})
+    def associate_entity_to_thing(params = {}, **options)
       req = build_request(:associate_entity_to_thing, params)
       req.send_request(options)
     end
@@ -411,9 +411,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.revision_number #=> Integer
     #   resp.summary.created_at #=> Time
     #
-    # @overload create_flow_template(params = {})
+    # @overload create_flow_template(**params)
     # @param [Hash] params ({})
-    def create_flow_template(params = {}, options = {})
+    def create_flow_template(params = {}, **options)
       req = build_request(:create_flow_template, params)
       req.send_request(options)
     end
@@ -512,9 +512,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.greengrass_group_id #=> String
     #   resp.summary.greengrass_group_version_id #=> String
     #
-    # @overload create_system_instance(params = {})
+    # @overload create_system_instance(**params)
     # @param [Hash] params ({})
-    def create_system_instance(params = {}, options = {})
+    def create_system_instance(params = {}, **options)
       req = build_request(:create_system_instance, params)
       req.send_request(options)
     end
@@ -552,9 +552,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.revision_number #=> Integer
     #   resp.summary.created_at #=> Time
     #
-    # @overload create_system_template(params = {})
+    # @overload create_system_template(**params)
     # @param [Hash] params ({})
-    def create_system_template(params = {}, options = {})
+    def create_system_template(params = {}, **options)
       req = build_request(:create_system_template, params)
       req.send_request(options)
     end
@@ -579,9 +579,9 @@ module Aws::IoTThingsGraph
     #     id: "Urn", # required
     #   })
     #
-    # @overload delete_flow_template(params = {})
+    # @overload delete_flow_template(**params)
     # @param [Hash] params ({})
-    def delete_flow_template(params = {}, options = {})
+    def delete_flow_template(params = {}, **options)
       req = build_request(:delete_flow_template, params)
       req.send_request(options)
     end
@@ -600,9 +600,9 @@ module Aws::IoTThingsGraph
     #   resp.namespace_arn #=> String
     #   resp.namespace_name #=> String
     #
-    # @overload delete_namespace(params = {})
+    # @overload delete_namespace(**params)
     # @param [Hash] params ({})
-    def delete_namespace(params = {}, options = {})
+    def delete_namespace(params = {}, **options)
       req = build_request(:delete_namespace, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::IoTThingsGraph
     #     id: "Urn",
     #   })
     #
-    # @overload delete_system_instance(params = {})
+    # @overload delete_system_instance(**params)
     # @param [Hash] params ({})
-    def delete_system_instance(params = {}, options = {})
+    def delete_system_instance(params = {}, **options)
       req = build_request(:delete_system_instance, params)
       req.send_request(options)
     end
@@ -651,9 +651,9 @@ module Aws::IoTThingsGraph
     #     id: "Urn", # required
     #   })
     #
-    # @overload delete_system_template(params = {})
+    # @overload delete_system_template(**params)
     # @param [Hash] params ({})
-    def delete_system_template(params = {}, options = {})
+    def delete_system_template(params = {}, **options)
       req = build_request(:delete_system_template, params)
       req.send_request(options)
     end
@@ -714,9 +714,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.greengrass_group_version_id #=> String
     #   resp.greengrass_deployment_id #=> String
     #
-    # @overload deploy_system_instance(params = {})
+    # @overload deploy_system_instance(**params)
     # @param [Hash] params ({})
-    def deploy_system_instance(params = {}, options = {})
+    def deploy_system_instance(params = {}, **options)
       req = build_request(:deploy_system_instance, params)
       req.send_request(options)
     end
@@ -740,9 +740,9 @@ module Aws::IoTThingsGraph
     #     id: "Urn", # required
     #   })
     #
-    # @overload deprecate_flow_template(params = {})
+    # @overload deprecate_flow_template(**params)
     # @param [Hash] params ({})
-    def deprecate_flow_template(params = {}, options = {})
+    def deprecate_flow_template(params = {}, **options)
       req = build_request(:deprecate_flow_template, params)
       req.send_request(options)
     end
@@ -764,9 +764,9 @@ module Aws::IoTThingsGraph
     #     id: "Urn", # required
     #   })
     #
-    # @overload deprecate_system_template(params = {})
+    # @overload deprecate_system_template(**params)
     # @param [Hash] params ({})
-    def deprecate_system_template(params = {}, options = {})
+    def deprecate_system_template(params = {}, **options)
       req = build_request(:deprecate_system_template, params)
       req.send_request(options)
     end
@@ -800,9 +800,9 @@ module Aws::IoTThingsGraph
     #   resp.tracking_namespace_version #=> Integer
     #   resp.namespace_version #=> Integer
     #
-    # @overload describe_namespace(params = {})
+    # @overload describe_namespace(**params)
     # @param [Hash] params ({})
-    def describe_namespace(params = {}, options = {})
+    def describe_namespace(params = {}, **options)
       req = build_request(:describe_namespace, params)
       req.send_request(options)
     end
@@ -826,9 +826,9 @@ module Aws::IoTThingsGraph
     #     entity_type: "DEVICE", # required, accepts DEVICE, SERVICE, DEVICE_MODEL, CAPABILITY, STATE, ACTION, EVENT, PROPERTY, MAPPING, ENUM
     #   })
     #
-    # @overload dissociate_entity_from_thing(params = {})
+    # @overload dissociate_entity_from_thing(**params)
     # @param [Hash] params ({})
-    def dissociate_entity_from_thing(params = {}, options = {})
+    def dissociate_entity_from_thing(params = {}, **options)
       req = build_request(:dissociate_entity_from_thing, params)
       req.send_request(options)
     end
@@ -890,9 +890,9 @@ module Aws::IoTThingsGraph
     #   resp.descriptions[0].definition.language #=> String, one of "GRAPHQL"
     #   resp.descriptions[0].definition.text #=> String
     #
-    # @overload get_entities(params = {})
+    # @overload get_entities(**params)
     # @param [Hash] params ({})
-    def get_entities(params = {}, options = {})
+    def get_entities(params = {}, **options)
       req = build_request(:get_entities, params)
       req.send_request(options)
     end
@@ -931,9 +931,9 @@ module Aws::IoTThingsGraph
     #   resp.description.definition.text #=> String
     #   resp.description.validated_namespace_version #=> Integer
     #
-    # @overload get_flow_template(params = {})
+    # @overload get_flow_template(**params)
     # @param [Hash] params ({})
-    def get_flow_template(params = {}, options = {})
+    def get_flow_template(params = {}, **options)
       req = build_request(:get_flow_template, params)
       req.send_request(options)
     end
@@ -981,9 +981,9 @@ module Aws::IoTThingsGraph
     #   resp.summaries[0].created_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload get_flow_template_revisions(params = {})
+    # @overload get_flow_template_revisions(**params)
     # @param [Hash] params ({})
-    def get_flow_template_revisions(params = {}, options = {})
+    def get_flow_template_revisions(params = {}, **options)
       req = build_request(:get_flow_template_revisions, params)
       req.send_request(options)
     end
@@ -1006,9 +1006,9 @@ module Aws::IoTThingsGraph
     #   resp.error_code #=> String, one of "VALIDATION_FAILED"
     #   resp.error_message #=> String
     #
-    # @overload get_namespace_deletion_status(params = {})
+    # @overload get_namespace_deletion_status(**params)
     # @param [Hash] params ({})
-    def get_namespace_deletion_status(params = {}, options = {})
+    def get_namespace_deletion_status(params = {}, **options)
       req = build_request(:get_namespace_deletion_status, params)
       req.send_request(options)
     end
@@ -1055,9 +1055,9 @@ module Aws::IoTThingsGraph
     #   resp.description.validated_dependency_revisions[0].revision_number #=> Integer
     #   resp.description.flow_actions_role_arn #=> String
     #
-    # @overload get_system_instance(params = {})
+    # @overload get_system_instance(**params)
     # @param [Hash] params ({})
-    def get_system_instance(params = {}, options = {})
+    def get_system_instance(params = {}, **options)
       req = build_request(:get_system_instance, params)
       req.send_request(options)
     end
@@ -1095,9 +1095,9 @@ module Aws::IoTThingsGraph
     #   resp.description.definition.text #=> String
     #   resp.description.validated_namespace_version #=> Integer
     #
-    # @overload get_system_template(params = {})
+    # @overload get_system_template(**params)
     # @param [Hash] params ({})
-    def get_system_template(params = {}, options = {})
+    def get_system_template(params = {}, **options)
       req = build_request(:get_system_template, params)
       req.send_request(options)
     end
@@ -1146,9 +1146,9 @@ module Aws::IoTThingsGraph
     #   resp.summaries[0].created_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload get_system_template_revisions(params = {})
+    # @overload get_system_template_revisions(**params)
     # @param [Hash] params ({})
-    def get_system_template_revisions(params = {}, options = {})
+    def get_system_template_revisions(params = {}, **options)
       req = build_request(:get_system_template_revisions, params)
       req.send_request(options)
     end
@@ -1186,9 +1186,9 @@ module Aws::IoTThingsGraph
     #   resp.failure_reason[0] #=> String
     #   resp.created_date #=> Time
     #
-    # @overload get_upload_status(params = {})
+    # @overload get_upload_status(**params)
     # @param [Hash] params ({})
-    def get_upload_status(params = {}, options = {})
+    def get_upload_status(params = {}, **options)
       req = build_request(:get_upload_status, params)
       req.send_request(options)
     end
@@ -1230,9 +1230,9 @@ module Aws::IoTThingsGraph
     #   resp.messages[0].payload #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_flow_execution_messages(params = {})
+    # @overload list_flow_execution_messages(**params)
     # @param [Hash] params ({})
-    def list_flow_execution_messages(params = {}, options = {})
+    def list_flow_execution_messages(params = {}, **options)
       req = build_request(:list_flow_execution_messages, params)
       req.send_request(options)
     end
@@ -1271,9 +1271,9 @@ module Aws::IoTThingsGraph
     #   resp.tags[0].value #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1339,9 +1339,9 @@ module Aws::IoTThingsGraph
     #   resp.descriptions[0].definition.text #=> String
     #   resp.next_token #=> String
     #
-    # @overload search_entities(params = {})
+    # @overload search_entities(**params)
     # @param [Hash] params ({})
-    def search_entities(params = {}, options = {})
+    def search_entities(params = {}, **options)
       req = build_request(:search_entities, params)
       req.send_request(options)
     end
@@ -1396,9 +1396,9 @@ module Aws::IoTThingsGraph
     #   resp.summaries[0].updated_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload search_flow_executions(params = {})
+    # @overload search_flow_executions(**params)
     # @param [Hash] params ({})
-    def search_flow_executions(params = {}, options = {})
+    def search_flow_executions(params = {}, **options)
       req = build_request(:search_flow_executions, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::IoTThingsGraph
     #   resp.summaries[0].created_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload search_flow_templates(params = {})
+    # @overload search_flow_templates(**params)
     # @param [Hash] params ({})
-    def search_flow_templates(params = {}, options = {})
+    def search_flow_templates(params = {}, **options)
       req = build_request(:search_flow_templates, params)
       req.send_request(options)
     end
@@ -1502,9 +1502,9 @@ module Aws::IoTThingsGraph
     #   resp.summaries[0].greengrass_group_version_id #=> String
     #   resp.next_token #=> String
     #
-    # @overload search_system_instances(params = {})
+    # @overload search_system_instances(**params)
     # @param [Hash] params ({})
-    def search_system_instances(params = {}, options = {})
+    def search_system_instances(params = {}, **options)
       req = build_request(:search_system_instances, params)
       req.send_request(options)
     end
@@ -1553,9 +1553,9 @@ module Aws::IoTThingsGraph
     #   resp.summaries[0].created_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload search_system_templates(params = {})
+    # @overload search_system_templates(**params)
     # @param [Hash] params ({})
-    def search_system_templates(params = {}, options = {})
+    def search_system_templates(params = {}, **options)
       req = build_request(:search_system_templates, params)
       req.send_request(options)
     end
@@ -1612,9 +1612,9 @@ module Aws::IoTThingsGraph
     #   resp.things[0].thing_name #=> String
     #   resp.next_token #=> String
     #
-    # @overload search_things(params = {})
+    # @overload search_things(**params)
     # @param [Hash] params ({})
-    def search_things(params = {}, options = {})
+    def search_things(params = {}, **options)
       req = build_request(:search_things, params)
       req.send_request(options)
     end
@@ -1642,9 +1642,9 @@ module Aws::IoTThingsGraph
     #     ],
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1676,9 +1676,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.greengrass_group_id #=> String
     #   resp.summary.greengrass_group_version_id #=> String
     #
-    # @overload undeploy_system_instance(params = {})
+    # @overload undeploy_system_instance(**params)
     # @param [Hash] params ({})
-    def undeploy_system_instance(params = {}, options = {})
+    def undeploy_system_instance(params = {}, **options)
       req = build_request(:undeploy_system_instance, params)
       req.send_request(options)
     end
@@ -1711,9 +1711,9 @@ module Aws::IoTThingsGraph
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1764,9 +1764,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.revision_number #=> Integer
     #   resp.summary.created_at #=> Time
     #
-    # @overload update_flow_template(params = {})
+    # @overload update_flow_template(**params)
     # @param [Hash] params ({})
-    def update_flow_template(params = {}, options = {})
+    def update_flow_template(params = {}, **options)
       req = build_request(:update_flow_template, params)
       req.send_request(options)
     end
@@ -1813,9 +1813,9 @@ module Aws::IoTThingsGraph
     #   resp.summary.revision_number #=> Integer
     #   resp.summary.created_at #=> Time
     #
-    # @overload update_system_template(params = {})
+    # @overload update_system_template(**params)
     # @param [Hash] params ({})
-    def update_system_template(params = {}, options = {})
+    def update_system_template(params = {}, **options)
       req = build_request(:update_system_template, params)
       req.send_request(options)
     end
@@ -1877,9 +1877,9 @@ module Aws::IoTThingsGraph
     #
     #   resp.upload_id #=> String
     #
-    # @overload upload_entity_definitions(params = {})
+    # @overload upload_entity_definitions(**params)
     # @param [Hash] params ({})
-    def upload_entity_definitions(params = {}, options = {})
+    def upload_entity_definitions(params = {}, **options)
       req = build_request(:upload_entity_definitions, params)
       req.send_request(options)
     end
@@ -1888,7 +1888,7 @@ module Aws::IoTThingsGraph
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1896,15 +1896,15 @@ module Aws::IoTThingsGraph
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotthingsgraph'
-      context[:gem_version] = '1.12.0'
+      context[:gem_name] = "aws-sdk-iotthingsgraph"
+      context[:gem_version] = "1.12.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

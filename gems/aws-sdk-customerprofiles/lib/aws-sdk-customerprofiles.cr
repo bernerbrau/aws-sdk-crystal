@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-customerprofiles/types'
-require_relative 'aws-sdk-customerprofiles/client_api'
-require_relative 'aws-sdk-customerprofiles/client'
-require_relative 'aws-sdk-customerprofiles/errors'
-require_relative 'aws-sdk-customerprofiles/resource'
-require_relative 'aws-sdk-customerprofiles/customizations'
+require_relative "aws-sdk-customerprofiles/types"
+require_relative "aws-sdk-customerprofiles/client_api"
+require_relative "aws-sdk-customerprofiles/client"
+require_relative "aws-sdk-customerprofiles/errors"
+require_relative "aws-sdk-customerprofiles/resource"
+require_relative "aws-sdk-customerprofiles/customizations"
 
 # This module provides support for Amazon Connect Customer Profiles. This module is available in the
 # `aws-sdk-customerprofiles` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-customerprofiles/customizations'
 # @!group service
 module Aws::CustomerProfiles
 
-  GEM_VERSION = '1.1.0'
+  GEM_VERSION = "1.1.0"
 
 end

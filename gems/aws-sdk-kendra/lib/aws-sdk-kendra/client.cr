@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kendra)
 
@@ -290,7 +290,7 @@ module Aws::Kendra
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -377,9 +377,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchDeleteDocument AWS API Documentation
     #
-    # @overload batch_delete_document(params = {})
+    # @overload batch_delete_document(**params)
     # @param [Hash] params ({})
-    def batch_delete_document(params = {}, options = {})
+    def batch_delete_document(params = {}, **options)
       req = build_request(:batch_delete_document, params)
       req.send_request(options)
     end
@@ -477,9 +477,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchPutDocument AWS API Documentation
     #
-    # @overload batch_put_document(params = {})
+    # @overload batch_put_document(**params)
     # @param [Hash] params ({})
-    def batch_put_document(params = {}, options = {})
+    def batch_put_document(params = {}, **options)
       req = build_request(:batch_put_document, params)
       req.send_request(options)
     end
@@ -846,9 +846,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateDataSource AWS API Documentation
     #
-    # @overload create_data_source(params = {})
+    # @overload create_data_source(**params)
     # @param [Hash] params ({})
-    def create_data_source(params = {}, options = {})
+    def create_data_source(params = {}, **options)
       req = build_request(:create_data_source, params)
       req.send_request(options)
     end
@@ -935,9 +935,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateFaq AWS API Documentation
     #
-    # @overload create_faq(params = {})
+    # @overload create_faq(**params)
     # @param [Hash] params ({})
-    def create_faq(params = {}, options = {})
+    def create_faq(params = {}, **options)
       req = build_request(:create_faq, params)
       req.send_request(options)
     end
@@ -1055,9 +1055,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateIndex AWS API Documentation
     #
-    # @overload create_index(params = {})
+    # @overload create_index(**params)
     # @param [Hash] params ({})
-    def create_index(params = {}, options = {})
+    def create_index(params = {}, **options)
       req = build_request(:create_index, params)
       req.send_request(options)
     end
@@ -1125,9 +1125,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateThesaurus AWS API Documentation
     #
-    # @overload create_thesaurus(params = {})
+    # @overload create_thesaurus(**params)
     # @param [Hash] params ({})
-    def create_thesaurus(params = {}, options = {})
+    def create_thesaurus(params = {}, **options)
       req = build_request(:create_thesaurus, params)
       req.send_request(options)
     end
@@ -1159,9 +1159,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteDataSource AWS API Documentation
     #
-    # @overload delete_data_source(params = {})
+    # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, options = {})
+    def delete_data_source(params = {}, **options)
       req = build_request(:delete_data_source, params)
       req.send_request(options)
     end
@@ -1185,9 +1185,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteFaq AWS API Documentation
     #
-    # @overload delete_faq(params = {})
+    # @overload delete_faq(**params)
     # @param [Hash] params ({})
-    def delete_faq(params = {}, options = {})
+    def delete_faq(params = {}, **options)
       req = build_request(:delete_faq, params)
       req.send_request(options)
     end
@@ -1210,9 +1210,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteIndex AWS API Documentation
     #
-    # @overload delete_index(params = {})
+    # @overload delete_index(**params)
     # @param [Hash] params ({})
-    def delete_index(params = {}, options = {})
+    def delete_index(params = {}, **options)
       req = build_request(:delete_index, params)
       req.send_request(options)
     end
@@ -1236,9 +1236,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteThesaurus AWS API Documentation
     #
-    # @overload delete_thesaurus(params = {})
+    # @overload delete_thesaurus(**params)
     # @param [Hash] params ({})
-    def delete_thesaurus(params = {}, options = {})
+    def delete_thesaurus(params = {}, **options)
       req = build_request(:delete_thesaurus, params)
       req.send_request(options)
     end
@@ -1472,9 +1472,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeDataSource AWS API Documentation
     #
-    # @overload describe_data_source(params = {})
+    # @overload describe_data_source(**params)
     # @param [Hash] params ({})
-    def describe_data_source(params = {}, options = {})
+    def describe_data_source(params = {}, **options)
       req = build_request(:describe_data_source, params)
       req.send_request(options)
     end
@@ -1525,9 +1525,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeFaq AWS API Documentation
     #
-    # @overload describe_faq(params = {})
+    # @overload describe_faq(**params)
     # @param [Hash] params ({})
-    def describe_faq(params = {}, options = {})
+    def describe_faq(params = {}, **options)
       req = build_request(:describe_faq, params)
       req.send_request(options)
     end
@@ -1605,9 +1605,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeIndex AWS API Documentation
     #
-    # @overload describe_index(params = {})
+    # @overload describe_index(**params)
     # @param [Hash] params ({})
-    def describe_index(params = {}, options = {})
+    def describe_index(params = {}, **options)
       req = build_request(:describe_index, params)
       req.send_request(options)
     end
@@ -1662,9 +1662,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeThesaurus AWS API Documentation
     #
-    # @overload describe_thesaurus(params = {})
+    # @overload describe_thesaurus(**params)
     # @param [Hash] params ({})
-    def describe_thesaurus(params = {}, options = {})
+    def describe_thesaurus(params = {}, **options)
       req = build_request(:describe_thesaurus, params)
       req.send_request(options)
     end
@@ -1734,9 +1734,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListDataSourceSyncJobs AWS API Documentation
     #
-    # @overload list_data_source_sync_jobs(params = {})
+    # @overload list_data_source_sync_jobs(**params)
     # @param [Hash] params ({})
-    def list_data_source_sync_jobs(params = {}, options = {})
+    def list_data_source_sync_jobs(params = {}, **options)
       req = build_request(:list_data_source_sync_jobs, params)
       req.send_request(options)
     end
@@ -1783,9 +1783,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListDataSources AWS API Documentation
     #
-    # @overload list_data_sources(params = {})
+    # @overload list_data_sources(**params)
     # @param [Hash] params ({})
-    def list_data_sources(params = {}, options = {})
+    def list_data_sources(params = {}, **options)
       req = build_request(:list_data_sources, params)
       req.send_request(options)
     end
@@ -1830,9 +1830,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListFaqs AWS API Documentation
     #
-    # @overload list_faqs(params = {})
+    # @overload list_faqs(**params)
     # @param [Hash] params ({})
-    def list_faqs(params = {}, options = {})
+    def list_faqs(params = {}, **options)
       req = build_request(:list_faqs, params)
       req.send_request(options)
     end
@@ -1875,9 +1875,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListIndices AWS API Documentation
     #
-    # @overload list_indices(params = {})
+    # @overload list_indices(**params)
     # @param [Hash] params ({})
-    def list_indices(params = {}, options = {})
+    def list_indices(params = {}, **options)
       req = build_request(:list_indices, params)
       req.send_request(options)
     end
@@ -1907,9 +1907,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1953,9 +1953,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListThesauri AWS API Documentation
     #
-    # @overload list_thesauri(params = {})
+    # @overload list_thesauri(**params)
     # @param [Hash] params ({})
-    def list_thesauri(params = {}, options = {})
+    def list_thesauri(params = {}, **options)
       req = build_request(:list_thesauri, params)
       req.send_request(options)
     end
@@ -2203,9 +2203,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/Query AWS API Documentation
     #
-    # @overload query(params = {})
+    # @overload query(**params)
     # @param [Hash] params ({})
-    def query(params = {}, options = {})
+    def query(params = {}, **options)
       req = build_request(:query, params)
       req.send_request(options)
     end
@@ -2237,9 +2237,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/StartDataSourceSyncJob AWS API Documentation
     #
-    # @overload start_data_source_sync_job(params = {})
+    # @overload start_data_source_sync_job(**params)
     # @param [Hash] params ({})
-    def start_data_source_sync_job(params = {}, options = {})
+    def start_data_source_sync_job(params = {}, **options)
       req = build_request(:start_data_source_sync_job, params)
       req.send_request(options)
     end
@@ -2265,9 +2265,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/StopDataSourceSyncJob AWS API Documentation
     #
-    # @overload stop_data_source_sync_job(params = {})
+    # @overload stop_data_source_sync_job(**params)
     # @param [Hash] params ({})
-    def stop_data_source_sync_job(params = {}, options = {})
+    def stop_data_source_sync_job(params = {}, **options)
       req = build_request(:stop_data_source_sync_job, params)
       req.send_request(options)
     end
@@ -2313,9 +2313,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SubmitFeedback AWS API Documentation
     #
-    # @overload submit_feedback(params = {})
+    # @overload submit_feedback(**params)
     # @param [Hash] params ({})
-    def submit_feedback(params = {}, options = {})
+    def submit_feedback(params = {}, **options)
       req = build_request(:submit_feedback, params)
       req.send_request(options)
     end
@@ -2348,9 +2348,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2376,9 +2376,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2685,9 +2685,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateDataSource AWS API Documentation
     #
-    # @overload update_data_source(params = {})
+    # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, options = {})
+    def update_data_source(params = {}, **options)
       req = build_request(:update_data_source, params)
       req.send_request(options)
     end
@@ -2780,9 +2780,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateIndex AWS API Documentation
     #
-    # @overload update_index(params = {})
+    # @overload update_index(**params)
     # @param [Hash] params ({})
-    def update_index(params = {}, options = {})
+    def update_index(params = {}, **options)
       req = build_request(:update_index, params)
       req.send_request(options)
     end
@@ -2825,9 +2825,9 @@ module Aws::Kendra
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateThesaurus AWS API Documentation
     #
-    # @overload update_thesaurus(params = {})
+    # @overload update_thesaurus(**params)
     # @param [Hash] params ({})
-    def update_thesaurus(params = {}, options = {})
+    def update_thesaurus(params = {}, **options)
       req = build_request(:update_thesaurus, params)
       req.send_request(options)
     end
@@ -2836,7 +2836,7 @@ module Aws::Kendra
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2844,15 +2844,15 @@ module Aws::Kendra
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kendra'
-      context[:gem_version] = '1.20.0'
+      context[:gem_name] = "aws-sdk-kendra"
+      context[:gem_version] = "1.20.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

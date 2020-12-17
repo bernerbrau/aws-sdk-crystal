@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-pinpointemail/types'
-require_relative 'aws-sdk-pinpointemail/client_api'
-require_relative 'aws-sdk-pinpointemail/client'
-require_relative 'aws-sdk-pinpointemail/errors'
-require_relative 'aws-sdk-pinpointemail/resource'
-require_relative 'aws-sdk-pinpointemail/customizations'
+require_relative "aws-sdk-pinpointemail/types"
+require_relative "aws-sdk-pinpointemail/client_api"
+require_relative "aws-sdk-pinpointemail/client"
+require_relative "aws-sdk-pinpointemail/errors"
+require_relative "aws-sdk-pinpointemail/resource"
+require_relative "aws-sdk-pinpointemail/customizations"
 
 # This module provides support for Amazon Pinpoint Email Service. This module is available in the
 # `aws-sdk-pinpointemail` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-pinpointemail/customizations'
 # @!group service
 module Aws::PinpointEmail
 
-  GEM_VERSION = '1.24.0'
+  GEM_VERSION = "1.24.0"
 
 end

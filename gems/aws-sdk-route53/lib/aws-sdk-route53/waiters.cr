@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::Route53
   # Waiters are utility methods that poll for a particular state to occur
@@ -100,7 +100,7 @@ module Aws::Route53
 
       # @option (see Client#get_change)
       # @return (see Client#get_change)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-route53resolver/types'
-require_relative 'aws-sdk-route53resolver/client_api'
-require_relative 'aws-sdk-route53resolver/client'
-require_relative 'aws-sdk-route53resolver/errors'
-require_relative 'aws-sdk-route53resolver/resource'
-require_relative 'aws-sdk-route53resolver/customizations'
+require_relative "aws-sdk-route53resolver/types"
+require_relative "aws-sdk-route53resolver/client_api"
+require_relative "aws-sdk-route53resolver/client"
+require_relative "aws-sdk-route53resolver/errors"
+require_relative "aws-sdk-route53resolver/resource"
+require_relative "aws-sdk-route53resolver/customizations"
 
 # This module provides support for Amazon Route 53 Resolver. This module is available in the
 # `aws-sdk-route53resolver` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-route53resolver/customizations'
 # @!group service
 module Aws::Route53Resolver
 
-  GEM_VERSION = '1.21.0'
+  GEM_VERSION = "1.21.0"
 
 end

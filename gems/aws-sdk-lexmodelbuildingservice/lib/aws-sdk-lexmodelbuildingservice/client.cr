@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:lexmodelbuildingservice)
 
@@ -280,7 +280,7 @@ module Aws::LexModelBuildingService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -416,9 +416,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/CreateBotVersion AWS API Documentation
     #
-    # @overload create_bot_version(params = {})
+    # @overload create_bot_version(**params)
     # @param [Hash] params ({})
-    def create_bot_version(params = {}, options = {})
+    def create_bot_version(params = {}, **options)
       req = build_request(:create_bot_version, params)
       req.send_request(options)
     end
@@ -555,9 +555,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/CreateIntentVersion AWS API Documentation
     #
-    # @overload create_intent_version(params = {})
+    # @overload create_intent_version(**params)
     # @param [Hash] params ({})
-    def create_intent_version(params = {}, options = {})
+    def create_intent_version(params = {}, **options)
       req = build_request(:create_intent_version, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/CreateSlotTypeVersion AWS API Documentation
     #
-    # @overload create_slot_type_version(params = {})
+    # @overload create_slot_type_version(**params)
     # @param [Hash] params ({})
-    def create_slot_type_version(params = {}, options = {})
+    def create_slot_type_version(params = {}, **options)
       req = build_request(:create_slot_type_version, params)
       req.send_request(options)
     end
@@ -671,9 +671,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteBot AWS API Documentation
     #
-    # @overload delete_bot(params = {})
+    # @overload delete_bot(**params)
     # @param [Hash] params ({})
-    def delete_bot(params = {}, options = {})
+    def delete_bot(params = {}, **options)
       req = build_request(:delete_bot, params)
       req.send_request(options)
     end
@@ -706,9 +706,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteBotAlias AWS API Documentation
     #
-    # @overload delete_bot_alias(params = {})
+    # @overload delete_bot_alias(**params)
     # @param [Hash] params ({})
-    def delete_bot_alias(params = {}, options = {})
+    def delete_bot_alias(params = {}, **options)
       req = build_request(:delete_bot_alias, params)
       req.send_request(options)
     end
@@ -741,9 +741,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteBotChannelAssociation AWS API Documentation
     #
-    # @overload delete_bot_channel_association(params = {})
+    # @overload delete_bot_channel_association(**params)
     # @param [Hash] params ({})
-    def delete_bot_channel_association(params = {}, options = {})
+    def delete_bot_channel_association(params = {}, **options)
       req = build_request(:delete_bot_channel_association, params)
       req.send_request(options)
     end
@@ -773,9 +773,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteBotVersion AWS API Documentation
     #
-    # @overload delete_bot_version(params = {})
+    # @overload delete_bot_version(**params)
     # @param [Hash] params ({})
-    def delete_bot_version(params = {}, options = {})
+    def delete_bot_version(params = {}, **options)
       req = build_request(:delete_bot_version, params)
       req.send_request(options)
     end
@@ -812,9 +812,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteIntent AWS API Documentation
     #
-    # @overload delete_intent(params = {})
+    # @overload delete_intent(**params)
     # @param [Hash] params ({})
-    def delete_intent(params = {}, options = {})
+    def delete_intent(params = {}, **options)
       req = build_request(:delete_intent, params)
       req.send_request(options)
     end
@@ -844,9 +844,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteIntentVersion AWS API Documentation
     #
-    # @overload delete_intent_version(params = {})
+    # @overload delete_intent_version(**params)
     # @param [Hash] params ({})
-    def delete_intent_version(params = {}, options = {})
+    def delete_intent_version(params = {}, **options)
       req = build_request(:delete_intent_version, params)
       req.send_request(options)
     end
@@ -884,9 +884,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteSlotType AWS API Documentation
     #
-    # @overload delete_slot_type(params = {})
+    # @overload delete_slot_type(**params)
     # @param [Hash] params ({})
-    def delete_slot_type(params = {}, options = {})
+    def delete_slot_type(params = {}, **options)
       req = build_request(:delete_slot_type, params)
       req.send_request(options)
     end
@@ -916,9 +916,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteSlotTypeVersion AWS API Documentation
     #
-    # @overload delete_slot_type_version(params = {})
+    # @overload delete_slot_type_version(**params)
     # @param [Hash] params ({})
-    def delete_slot_type_version(params = {}, options = {})
+    def delete_slot_type_version(params = {}, **options)
       req = build_request(:delete_slot_type_version, params)
       req.send_request(options)
     end
@@ -963,9 +963,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/DeleteUtterances AWS API Documentation
     #
-    # @overload delete_utterances(params = {})
+    # @overload delete_utterances(**params)
     # @param [Hash] params ({})
-    def delete_utterances(params = {}, options = {})
+    def delete_utterances(params = {}, **options)
       req = build_request(:delete_utterances, params)
       req.send_request(options)
     end
@@ -1098,9 +1098,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBot AWS API Documentation
     #
-    # @overload get_bot(params = {})
+    # @overload get_bot(**params)
     # @param [Hash] params ({})
-    def get_bot(params = {}, options = {})
+    def get_bot(params = {}, **options)
       req = build_request(:get_bot, params)
       req.send_request(options)
     end
@@ -1153,9 +1153,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBotAlias AWS API Documentation
     #
-    # @overload get_bot_alias(params = {})
+    # @overload get_bot_alias(**params)
     # @param [Hash] params ({})
-    def get_bot_alias(params = {}, options = {})
+    def get_bot_alias(params = {}, **options)
       req = build_request(:get_bot_alias, params)
       req.send_request(options)
     end
@@ -1220,9 +1220,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBotAliases AWS API Documentation
     #
-    # @overload get_bot_aliases(params = {})
+    # @overload get_bot_aliases(**params)
     # @param [Hash] params ({})
-    def get_bot_aliases(params = {}, options = {})
+    def get_bot_aliases(params = {}, **options)
       req = build_request(:get_bot_aliases, params)
       req.send_request(options)
     end
@@ -1279,9 +1279,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBotChannelAssociation AWS API Documentation
     #
-    # @overload get_bot_channel_association(params = {})
+    # @overload get_bot_channel_association(**params)
     # @param [Hash] params ({})
-    def get_bot_channel_association(params = {}, options = {})
+    def get_bot_channel_association(params = {}, **options)
       req = build_request(:get_bot_channel_association, params)
       req.send_request(options)
     end
@@ -1350,9 +1350,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBotChannelAssociations AWS API Documentation
     #
-    # @overload get_bot_channel_associations(params = {})
+    # @overload get_bot_channel_associations(**params)
     # @param [Hash] params ({})
-    def get_bot_channel_associations(params = {}, options = {})
+    def get_bot_channel_associations(params = {}, **options)
       req = build_request(:get_bot_channel_associations, params)
       req.send_request(options)
     end
@@ -1412,9 +1412,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBotVersions AWS API Documentation
     #
-    # @overload get_bot_versions(params = {})
+    # @overload get_bot_versions(**params)
     # @param [Hash] params ({})
-    def get_bot_versions(params = {}, options = {})
+    def get_bot_versions(params = {}, **options)
       req = build_request(:get_bot_versions, params)
       req.send_request(options)
     end
@@ -1497,9 +1497,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBots AWS API Documentation
     #
-    # @overload get_bots(params = {})
+    # @overload get_bots(**params)
     # @param [Hash] params ({})
-    def get_bots(params = {}, options = {})
+    def get_bots(params = {}, **options)
       req = build_request(:get_bots, params)
       req.send_request(options)
     end
@@ -1540,9 +1540,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBuiltinIntent AWS API Documentation
     #
-    # @overload get_builtin_intent(params = {})
+    # @overload get_builtin_intent(**params)
     # @param [Hash] params ({})
-    def get_builtin_intent(params = {}, options = {})
+    def get_builtin_intent(params = {}, **options)
       req = build_request(:get_builtin_intent, params)
       req.send_request(options)
     end
@@ -1602,9 +1602,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBuiltinIntents AWS API Documentation
     #
-    # @overload get_builtin_intents(params = {})
+    # @overload get_builtin_intents(**params)
     # @param [Hash] params ({})
-    def get_builtin_intents(params = {}, options = {})
+    def get_builtin_intents(params = {}, **options)
       req = build_request(:get_builtin_intents, params)
       req.send_request(options)
     end
@@ -1665,9 +1665,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetBuiltinSlotTypes AWS API Documentation
     #
-    # @overload get_builtin_slot_types(params = {})
+    # @overload get_builtin_slot_types(**params)
     # @param [Hash] params ({})
-    def get_builtin_slot_types(params = {}, options = {})
+    def get_builtin_slot_types(params = {}, **options)
       req = build_request(:get_builtin_slot_types, params)
       req.send_request(options)
     end
@@ -1717,9 +1717,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetExport AWS API Documentation
     #
-    # @overload get_export(params = {})
+    # @overload get_export(**params)
     # @param [Hash] params ({})
-    def get_export(params = {}, options = {})
+    def get_export(params = {}, **options)
       req = build_request(:get_export, params)
       req.send_request(options)
     end
@@ -1759,9 +1759,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetImport AWS API Documentation
     #
-    # @overload get_import(params = {})
+    # @overload get_import(**params)
     # @param [Hash] params ({})
-    def get_import(params = {}, options = {})
+    def get_import(params = {}, **options)
       req = build_request(:get_import, params)
       req.send_request(options)
     end
@@ -2025,9 +2025,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetIntent AWS API Documentation
     #
-    # @overload get_intent(params = {})
+    # @overload get_intent(**params)
     # @param [Hash] params ({})
-    def get_intent(params = {}, options = {})
+    def get_intent(params = {}, **options)
       req = build_request(:get_intent, params)
       req.send_request(options)
     end
@@ -2086,9 +2086,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetIntentVersions AWS API Documentation
     #
-    # @overload get_intent_versions(params = {})
+    # @overload get_intent_versions(**params)
     # @param [Hash] params ({})
-    def get_intent_versions(params = {}, options = {})
+    def get_intent_versions(params = {}, **options)
       req = build_request(:get_intent_versions, params)
       req.send_request(options)
     end
@@ -2168,9 +2168,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetIntents AWS API Documentation
     #
-    # @overload get_intents(params = {})
+    # @overload get_intents(**params)
     # @param [Hash] params ({})
-    def get_intents(params = {}, options = {})
+    def get_intents(params = {}, **options)
       req = build_request(:get_intents, params)
       req.send_request(options)
     end
@@ -2254,9 +2254,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetSlotType AWS API Documentation
     #
-    # @overload get_slot_type(params = {})
+    # @overload get_slot_type(**params)
     # @param [Hash] params ({})
-    def get_slot_type(params = {}, options = {})
+    def get_slot_type(params = {}, **options)
       req = build_request(:get_slot_type, params)
       req.send_request(options)
     end
@@ -2315,9 +2315,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetSlotTypeVersions AWS API Documentation
     #
-    # @overload get_slot_type_versions(params = {})
+    # @overload get_slot_type_versions(**params)
     # @param [Hash] params ({})
-    def get_slot_type_versions(params = {}, options = {})
+    def get_slot_type_versions(params = {}, **options)
       req = build_request(:get_slot_type_versions, params)
       req.send_request(options)
     end
@@ -2411,9 +2411,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetSlotTypes AWS API Documentation
     #
-    # @overload get_slot_types(params = {})
+    # @overload get_slot_types(**params)
     # @param [Hash] params ({})
-    def get_slot_types(params = {}, options = {})
+    def get_slot_types(params = {}, **options)
       req = build_request(:get_slot_types, params)
       req.send_request(options)
     end
@@ -2486,9 +2486,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/GetUtterancesView AWS API Documentation
     #
-    # @overload get_utterances_view(params = {})
+    # @overload get_utterances_view(**params)
     # @param [Hash] params ({})
-    def get_utterances_view(params = {}, options = {})
+    def get_utterances_view(params = {}, **options)
       req = build_request(:get_utterances_view, params)
       req.send_request(options)
     end
@@ -2518,9 +2518,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2995,9 +2995,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/PutBot AWS API Documentation
     #
-    # @overload put_bot(params = {})
+    # @overload put_bot(**params)
     # @param [Hash] params ({})
-    def put_bot(params = {}, options = {})
+    def put_bot(params = {}, **options)
       req = build_request(:put_bot, params)
       req.send_request(options)
     end
@@ -3103,9 +3103,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/PutBotAlias AWS API Documentation
     #
-    # @overload put_bot_alias(params = {})
+    # @overload put_bot_alias(**params)
     # @param [Hash] params ({})
-    def put_bot_alias(params = {}, options = {})
+    def put_bot_alias(params = {}, **options)
       req = build_request(:put_bot_alias, params)
       req.send_request(options)
     end
@@ -3808,9 +3808,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/PutIntent AWS API Documentation
     #
-    # @overload put_intent(params = {})
+    # @overload put_intent(**params)
     # @param [Hash] params ({})
-    def put_intent(params = {}, options = {})
+    def put_intent(params = {}, **options)
       req = build_request(:put_intent, params)
       req.send_request(options)
     end
@@ -4002,9 +4002,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/PutSlotType AWS API Documentation
     #
-    # @overload put_slot_type(params = {})
+    # @overload put_slot_type(**params)
     # @param [Hash] params ({})
-    def put_slot_type(params = {}, options = {})
+    def put_slot_type(params = {}, **options)
       req = build_request(:put_slot_type, params)
       req.send_request(options)
     end
@@ -4079,9 +4079,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/StartImport AWS API Documentation
     #
-    # @overload start_import(params = {})
+    # @overload start_import(**params)
     # @param [Hash] params ({})
-    def start_import(params = {}, options = {})
+    def start_import(params = {}, **options)
       req = build_request(:start_import, params)
       req.send_request(options)
     end
@@ -4113,9 +4113,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -4141,9 +4141,9 @@ module Aws::LexModelBuildingService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/lex-models-2017-04-19/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -4152,7 +4152,7 @@ module Aws::LexModelBuildingService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4160,15 +4160,15 @@ module Aws::LexModelBuildingService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-lexmodelbuildingservice'
-      context[:gem_version] = '1.42.0'
+      context[:gem_name] = "aws-sdk-lexmodelbuildingservice"
+      context[:gem_version] = "1.42.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

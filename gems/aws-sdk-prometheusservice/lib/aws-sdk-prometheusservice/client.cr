@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:prometheusservice)
 
@@ -280,7 +280,7 @@ module Aws::PrometheusService
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -361,9 +361,9 @@ module Aws::PrometheusService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateWorkspace AWS API Documentation
     #
-    # @overload create_workspace(params = {})
+    # @overload create_workspace(**params)
     # @param [Hash] params ({})
-    def create_workspace(params = {}, options = {})
+    def create_workspace(params = {}, **options)
       req = build_request(:create_workspace, params)
       req.send_request(options)
     end
@@ -391,9 +391,9 @@ module Aws::PrometheusService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteWorkspace AWS API Documentation
     #
-    # @overload delete_workspace(params = {})
+    # @overload delete_workspace(**params)
     # @param [Hash] params ({})
-    def delete_workspace(params = {}, options = {})
+    def delete_workspace(params = {}, **options)
       req = build_request(:delete_workspace, params)
       req.send_request(options)
     end
@@ -424,9 +424,9 @@ module Aws::PrometheusService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeWorkspace AWS API Documentation
     #
-    # @overload describe_workspace(params = {})
+    # @overload describe_workspace(**params)
     # @param [Hash] params ({})
-    def describe_workspace(params = {}, options = {})
+    def describe_workspace(params = {}, **options)
       req = build_request(:describe_workspace, params)
       req.send_request(options)
     end
@@ -473,9 +473,9 @@ module Aws::PrometheusService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListWorkspaces AWS API Documentation
     #
-    # @overload list_workspaces(params = {})
+    # @overload list_workspaces(**params)
     # @param [Hash] params ({})
-    def list_workspaces(params = {}, options = {})
+    def list_workspaces(params = {}, **options)
       req = build_request(:list_workspaces, params)
       req.send_request(options)
     end
@@ -507,9 +507,9 @@ module Aws::PrometheusService
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/UpdateWorkspaceAlias AWS API Documentation
     #
-    # @overload update_workspace_alias(params = {})
+    # @overload update_workspace_alias(**params)
     # @param [Hash] params ({})
-    def update_workspace_alias(params = {}, options = {})
+    def update_workspace_alias(params = {}, **options)
       req = build_request(:update_workspace_alias, params)
       req.send_request(options)
     end
@@ -518,7 +518,7 @@ module Aws::PrometheusService
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -526,15 +526,15 @@ module Aws::PrometheusService
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-prometheusservice'
-      context[:gem_version] = '1.1.0'
+      context[:gem_name] = "aws-sdk-prometheusservice"
+      context[:gem_version] = "1.1.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

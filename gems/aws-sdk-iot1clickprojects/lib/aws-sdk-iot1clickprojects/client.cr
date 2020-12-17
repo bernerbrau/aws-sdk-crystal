@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iot1clickprojects)
 
@@ -280,7 +280,7 @@ module Aws::IoT1ClickProjects
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -355,9 +355,9 @@ module Aws::IoT1ClickProjects
     #     device_template_name: "DeviceTemplateName", # required
     #   })
     #
-    # @overload associate_device_with_placement(params = {})
+    # @overload associate_device_with_placement(**params)
     # @param [Hash] params ({})
-    def associate_device_with_placement(params = {}, options = {})
+    def associate_device_with_placement(params = {}, **options)
       req = build_request(:associate_device_with_placement, params)
       req.send_request(options)
     end
@@ -386,9 +386,9 @@ module Aws::IoT1ClickProjects
     #     },
     #   })
     #
-    # @overload create_placement(params = {})
+    # @overload create_placement(**params)
     # @param [Hash] params ({})
-    def create_placement(params = {}, options = {})
+    def create_placement(params = {}, **options)
       req = build_request(:create_placement, params)
       req.send_request(options)
     end
@@ -444,9 +444,9 @@ module Aws::IoT1ClickProjects
     #     },
     #   })
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -474,9 +474,9 @@ module Aws::IoT1ClickProjects
     #     project_name: "ProjectName", # required
     #   })
     #
-    # @overload delete_placement(params = {})
+    # @overload delete_placement(**params)
     # @param [Hash] params ({})
-    def delete_placement(params = {}, options = {})
+    def delete_placement(params = {}, **options)
       req = build_request(:delete_placement, params)
       req.send_request(options)
     end
@@ -499,9 +499,9 @@ module Aws::IoT1ClickProjects
     #     project_name: "ProjectName", # required
     #   })
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -534,9 +534,9 @@ module Aws::IoT1ClickProjects
     #   resp.placement.created_date #=> Time
     #   resp.placement.updated_date #=> Time
     #
-    # @overload describe_placement(params = {})
+    # @overload describe_placement(**params)
     # @param [Hash] params ({})
-    def describe_placement(params = {}, options = {})
+    def describe_placement(params = {}, **options)
       req = build_request(:describe_placement, params)
       req.send_request(options)
     end
@@ -572,9 +572,9 @@ module Aws::IoT1ClickProjects
     #   resp.project.tags #=> Hash
     #   resp.project.tags["TagKey"] #=> String
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -600,9 +600,9 @@ module Aws::IoT1ClickProjects
     #     device_template_name: "DeviceTemplateName", # required
     #   })
     #
-    # @overload disassociate_device_from_placement(params = {})
+    # @overload disassociate_device_from_placement(**params)
     # @param [Hash] params ({})
-    def disassociate_device_from_placement(params = {}, options = {})
+    def disassociate_device_from_placement(params = {}, **options)
       req = build_request(:disassociate_device_from_placement, params)
       req.send_request(options)
     end
@@ -631,9 +631,9 @@ module Aws::IoT1ClickProjects
     #   resp.devices #=> Hash
     #   resp.devices["DeviceTemplateName"] #=> String
     #
-    # @overload get_devices_in_placement(params = {})
+    # @overload get_devices_in_placement(**params)
     # @param [Hash] params ({})
-    def get_devices_in_placement(params = {}, options = {})
+    def get_devices_in_placement(params = {}, **options)
       req = build_request(:get_devices_in_placement, params)
       req.send_request(options)
     end
@@ -674,9 +674,9 @@ module Aws::IoT1ClickProjects
     #   resp.placements[0].updated_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_placements(params = {})
+    # @overload list_placements(**params)
     # @param [Hash] params ({})
-    def list_placements(params = {}, options = {})
+    def list_placements(params = {}, **options)
       req = build_request(:list_placements, params)
       req.send_request(options)
     end
@@ -716,9 +716,9 @@ module Aws::IoT1ClickProjects
     #   resp.projects[0].tags["TagKey"] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -744,9 +744,9 @@ module Aws::IoT1ClickProjects
     #   resp.tags #=> Hash
     #   resp.tags["TagKey"] #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -782,9 +782,9 @@ module Aws::IoT1ClickProjects
     #     },
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -806,9 +806,9 @@ module Aws::IoT1ClickProjects
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -838,9 +838,9 @@ module Aws::IoT1ClickProjects
     #     },
     #   })
     #
-    # @overload update_placement(params = {})
+    # @overload update_placement(**params)
     # @param [Hash] params ({})
-    def update_placement(params = {}, options = {})
+    def update_placement(params = {}, **options)
       req = build_request(:update_placement, params)
       req.send_request(options)
     end
@@ -885,9 +885,9 @@ module Aws::IoT1ClickProjects
     #     },
     #   })
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -896,7 +896,7 @@ module Aws::IoT1ClickProjects
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -904,15 +904,15 @@ module Aws::IoT1ClickProjects
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iot1clickprojects'
-      context[:gem_version] = '1.26.0'
+      context[:gem_name] = "aws-sdk-iot1clickprojects"
+      context[:gem_version] = "1.26.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,11 +8,11 @@
 Feature: Smoke tests for CodeStar
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @codestar @smoke
   Scenario: Call Aws::CodeStar::Client#list_projects and expect it to succeed
-  When I call the operation 'list_projects' with params:
+  When I call the operation "list_projects" with params:
     """
 {}
     """

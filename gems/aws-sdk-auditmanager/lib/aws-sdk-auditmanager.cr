@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-auditmanager/types'
-require_relative 'aws-sdk-auditmanager/client_api'
-require_relative 'aws-sdk-auditmanager/client'
-require_relative 'aws-sdk-auditmanager/errors'
-require_relative 'aws-sdk-auditmanager/resource'
-require_relative 'aws-sdk-auditmanager/customizations'
+require_relative "aws-sdk-auditmanager/types"
+require_relative "aws-sdk-auditmanager/client_api"
+require_relative "aws-sdk-auditmanager/client"
+require_relative "aws-sdk-auditmanager/errors"
+require_relative "aws-sdk-auditmanager/resource"
+require_relative "aws-sdk-auditmanager/customizations"
 
 # This module provides support for AWS Audit Manager. This module is available in the
 # `aws-sdk-auditmanager` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-auditmanager/customizations'
 # @!group service
 module Aws::AuditManager
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

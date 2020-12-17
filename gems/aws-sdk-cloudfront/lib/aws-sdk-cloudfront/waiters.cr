@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::CloudFront
   # Waiters are utility methods that poll for a particular state to occur
@@ -103,7 +103,7 @@ module Aws::CloudFront
 
       # @option (see Client#get_distribution)
       # @return (see Client#get_distribution)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -140,7 +140,7 @@ module Aws::CloudFront
 
       # @option (see Client#get_invalidation)
       # @return (see Client#get_invalidation)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -177,7 +177,7 @@ module Aws::CloudFront
 
       # @option (see Client#get_streaming_distribution)
       # @return (see Client#get_streaming_distribution)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

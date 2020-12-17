@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codedeploy/types'
-require_relative 'aws-sdk-codedeploy/client_api'
-require_relative 'aws-sdk-codedeploy/client'
-require_relative 'aws-sdk-codedeploy/errors'
-require_relative 'aws-sdk-codedeploy/waiters'
-require_relative 'aws-sdk-codedeploy/resource'
-require_relative 'aws-sdk-codedeploy/customizations'
+require_relative "aws-sdk-codedeploy/types"
+require_relative "aws-sdk-codedeploy/client_api"
+require_relative "aws-sdk-codedeploy/client"
+require_relative "aws-sdk-codedeploy/errors"
+require_relative "aws-sdk-codedeploy/waiters"
+require_relative "aws-sdk-codedeploy/resource"
+require_relative "aws-sdk-codedeploy/customizations"
 
 # This module provides support for AWS CodeDeploy. This module is available in the
 # `aws-sdk-codedeploy` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-codedeploy/customizations'
 # @!group service
 module Aws::CodeDeploy
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

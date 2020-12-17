@@ -13,12 +13,12 @@ module Aws::Glacier
 
     extend Aws::Deprecations
 
-    # @overload def initialize(account_id, vault_name, id, options = {})
+    # @overload def initialize(account_id, vault_name, id, **options)
     #   @param [String] account_id
     #   @param [String] vault_name
     #   @param [String] id
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :account_id
     #   @option options [required, String] :vault_name
     #   @option options [required, String] :id
@@ -98,7 +98,7 @@ module Aws::Glacier
     # ## Example
     #
     #     instance.wait_until(max_attempts:10, delay:5) do |instance|
-    #       instance.state.name == 'running'
+    #       instance.state.name == "running"
     #     end
     #
     # ## Configuration
@@ -158,7 +158,7 @@ module Aws::Glacier
     # @option options [Proc] :before_wait (nil) Callback
     # invoked before each wait
     # @return [Resource] if the waiter was successful
-    def wait_until(options = {}, &block)
+    def wait_until(**options, &block)
       self_copy = self.dup
       attempts = 0
       options[:max_attempts] = 10 unless options.key?(:max_attempts)

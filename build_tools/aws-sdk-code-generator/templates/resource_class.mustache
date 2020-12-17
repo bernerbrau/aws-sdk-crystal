@@ -9,13 +9,13 @@ module {{module_name}}
 
     extend Aws::Deprecations
 
-    # @overload def initialize({{#identifiers}}{{name}}, {{/identifiers}}options = {})
+    # @overload def initialize({{#identifiers}}{{name}}, {{/identifiers}}**options)
     {{#identifiers}}
     #   @param [{{type}}] {{name}}
     {{/identifiers}}
     #   @option options [Client] :client
     {{#identifiers?}}
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     {{#identifiers}}
     #   @option options [required, {{type}}] :{{name}}
     {{/identifiers}}
@@ -82,7 +82,7 @@ module {{module_name}}
     # @param [Hash] options ({})
     # @return [Boolean]
     #   Returns `true` if the {{class_name}} exists.
-    def exists?(options = {})
+    def exists?(**options)
       begin
         wait_until_exists(options.merge(max_attempts: 1))
         true
@@ -101,7 +101,7 @@ module {{module_name}}
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
     # @return [{{class_name}}]
-    def wait_until_{{name}}(options = {}, &block)
+    def wait_until_{{name}}(**options, &block)
       options, params = separate_params_and_options(options)
       waiter = Waiters::{{waiter_class_name}}.new(options)
       yield_waiter_and_warn(waiter, &block) if block_given?
@@ -139,7 +139,7 @@ module {{module_name}}
     # ## Example
     #
     #     instance.wait_until(max_attempts:10, delay:5) do |instance|
-    #       instance.state.name == 'running'
+    #       instance.state.name == "running"
     #     end
     #
     # ## Configuration
@@ -199,7 +199,7 @@ module {{module_name}}
     # @option options [Proc] :before_wait (nil) Callback
     # invoked before each wait
     # @return [Resource] if the waiter was successful
-    def wait_until(options = {}, &block)
+    def wait_until(**options, &block)
       self_copy = self.dup
       attempts = 0
       options[:max_attempts] = 10 unless options.key?(:max_attempts)

@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::Redshift
   # Waiters are utility methods that poll for a particular state to occur
@@ -116,7 +116,7 @@ module Aws::Redshift
 
       # @option (see Client#describe_clusters)
       # @return (see Client#describe_clusters)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -165,7 +165,7 @@ module Aws::Redshift
 
       # @option (see Client#describe_clusters)
       # @return (see Client#describe_clusters)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -209,7 +209,7 @@ module Aws::Redshift
 
       # @option (see Client#describe_clusters)
       # @return (see Client#describe_clusters)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -259,7 +259,7 @@ module Aws::Redshift
 
       # @option (see Client#describe_cluster_snapshots)
       # @return (see Client#describe_cluster_snapshots)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

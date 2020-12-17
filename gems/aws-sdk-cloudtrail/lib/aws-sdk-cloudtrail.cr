@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudtrail/types'
-require_relative 'aws-sdk-cloudtrail/client_api'
-require_relative 'aws-sdk-cloudtrail/client'
-require_relative 'aws-sdk-cloudtrail/errors'
-require_relative 'aws-sdk-cloudtrail/resource'
-require_relative 'aws-sdk-cloudtrail/customizations'
+require_relative "aws-sdk-cloudtrail/types"
+require_relative "aws-sdk-cloudtrail/client_api"
+require_relative "aws-sdk-cloudtrail/client"
+require_relative "aws-sdk-cloudtrail/errors"
+require_relative "aws-sdk-cloudtrail/resource"
+require_relative "aws-sdk-cloudtrail/customizations"
 
 # This module provides support for AWS CloudTrail. This module is available in the
 # `aws-sdk-cloudtrail` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-cloudtrail/customizations'
 # @!group service
 module Aws::CloudTrail
 
-  GEM_VERSION = '1.31.0'
+  GEM_VERSION = "1.31.0"
 
 end

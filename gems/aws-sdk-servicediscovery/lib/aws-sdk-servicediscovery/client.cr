@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:servicediscovery)
 
@@ -290,7 +290,7 @@ module Aws::ServiceDiscovery
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -410,9 +410,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreateHttpNamespace AWS API Documentation
     #
-    # @overload create_http_namespace(params = {})
+    # @overload create_http_namespace(**params)
     # @param [Hash] params ({})
-    def create_http_namespace(params = {}, options = {})
+    def create_http_namespace(params = {}, **options)
       req = build_request(:create_http_namespace, params)
       req.send_request(options)
     end
@@ -497,9 +497,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreatePrivateDnsNamespace AWS API Documentation
     #
-    # @overload create_private_dns_namespace(params = {})
+    # @overload create_private_dns_namespace(**params)
     # @param [Hash] params ({})
-    def create_private_dns_namespace(params = {}, options = {})
+    def create_private_dns_namespace(params = {}, **options)
       req = build_request(:create_private_dns_namespace, params)
       req.send_request(options)
     end
@@ -577,9 +577,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreatePublicDnsNamespace AWS API Documentation
     #
-    # @overload create_public_dns_namespace(params = {})
+    # @overload create_public_dns_namespace(**params)
     # @param [Hash] params ({})
-    def create_public_dns_namespace(params = {}, options = {})
+    def create_public_dns_namespace(params = {}, **options)
       req = build_request(:create_public_dns_namespace, params)
       req.send_request(options)
     end
@@ -790,9 +790,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreateService AWS API Documentation
     #
-    # @overload create_service(params = {})
+    # @overload create_service(**params)
     # @param [Hash] params ({})
-    def create_service(params = {}, options = {})
+    def create_service(params = {}, **options)
       req = build_request(:create_service, params)
       req.send_request(options)
     end
@@ -833,9 +833,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DeleteNamespace AWS API Documentation
     #
-    # @overload delete_namespace(params = {})
+    # @overload delete_namespace(**params)
     # @param [Hash] params ({})
-    def delete_namespace(params = {}, options = {})
+    def delete_namespace(params = {}, **options)
       req = build_request(:delete_namespace, params)
       req.send_request(options)
     end
@@ -869,9 +869,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DeleteService AWS API Documentation
     #
-    # @overload delete_service(params = {})
+    # @overload delete_service(**params)
     # @param [Hash] params ({})
-    def delete_service(params = {}, options = {})
+    def delete_service(params = {}, **options)
       req = build_request(:delete_service, params)
       req.send_request(options)
     end
@@ -922,9 +922,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DeregisterInstance AWS API Documentation
     #
-    # @overload deregister_instance(params = {})
+    # @overload deregister_instance(**params)
     # @param [Hash] params ({})
-    def deregister_instance(params = {}, options = {})
+    def deregister_instance(params = {}, **options)
       req = build_request(:deregister_instance, params)
       req.send_request(options)
     end
@@ -1022,9 +1022,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DiscoverInstances AWS API Documentation
     #
-    # @overload discover_instances(params = {})
+    # @overload discover_instances(**params)
     # @param [Hash] params ({})
-    def discover_instances(params = {}, options = {})
+    def discover_instances(params = {}, **options)
       req = build_request(:discover_instances, params)
       req.send_request(options)
     end
@@ -1081,9 +1081,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetInstance AWS API Documentation
     #
-    # @overload get_instance(params = {})
+    # @overload get_instance(**params)
     # @param [Hash] params ({})
-    def get_instance(params = {}, options = {})
+    def get_instance(params = {}, **options)
       req = build_request(:get_instance, params)
       req.send_request(options)
     end
@@ -1170,9 +1170,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetInstancesHealthStatus AWS API Documentation
     #
-    # @overload get_instances_health_status(params = {})
+    # @overload get_instances_health_status(**params)
     # @param [Hash] params ({})
-    def get_instances_health_status(params = {}, options = {})
+    def get_instances_health_status(params = {}, **options)
       req = build_request(:get_instances_health_status, params)
       req.send_request(options)
     end
@@ -1236,9 +1236,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetNamespace AWS API Documentation
     #
-    # @overload get_namespace(params = {})
+    # @overload get_namespace(**params)
     # @param [Hash] params ({})
-    def get_namespace(params = {}, options = {})
+    def get_namespace(params = {}, **options)
       req = build_request(:get_namespace, params)
       req.send_request(options)
     end
@@ -1305,9 +1305,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetOperation AWS API Documentation
     #
-    # @overload get_operation(params = {})
+    # @overload get_operation(**params)
     # @param [Hash] params ({})
-    def get_operation(params = {}, options = {})
+    def get_operation(params = {}, **options)
       req = build_request(:get_operation, params)
       req.send_request(options)
     end
@@ -1376,9 +1376,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetService AWS API Documentation
     #
-    # @overload get_service(params = {})
+    # @overload get_service(**params)
     # @param [Hash] params ({})
-    def get_service(params = {}, options = {})
+    def get_service(params = {}, **options)
       req = build_request(:get_service, params)
       req.send_request(options)
     end
@@ -1449,9 +1449,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListInstances AWS API Documentation
     #
-    # @overload list_instances(params = {})
+    # @overload list_instances(**params)
     # @param [Hash] params ({})
-    def list_instances(params = {}, options = {})
+    def list_instances(params = {}, **options)
       req = build_request(:list_instances, params)
       req.send_request(options)
     end
@@ -1582,9 +1582,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListNamespaces AWS API Documentation
     #
-    # @overload list_namespaces(params = {})
+    # @overload list_namespaces(**params)
     # @param [Hash] params ({})
-    def list_namespaces(params = {}, options = {})
+    def list_namespaces(params = {}, **options)
       req = build_request(:list_namespaces, params)
       req.send_request(options)
     end
@@ -1685,9 +1685,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListOperations AWS API Documentation
     #
-    # @overload list_operations(params = {})
+    # @overload list_operations(**params)
     # @param [Hash] params ({})
-    def list_operations(params = {}, options = {})
+    def list_operations(params = {}, **options)
       req = build_request(:list_operations, params)
       req.send_request(options)
     end
@@ -1794,9 +1794,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListServices AWS API Documentation
     #
-    # @overload list_services(params = {})
+    # @overload list_services(**params)
     # @param [Hash] params ({})
-    def list_services(params = {}, options = {})
+    def list_services(params = {}, **options)
       req = build_request(:list_services, params)
       req.send_request(options)
     end
@@ -1848,9 +1848,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2089,9 +2089,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/RegisterInstance AWS API Documentation
     #
-    # @overload register_instance(params = {})
+    # @overload register_instance(**params)
     # @param [Hash] params ({})
-    def register_instance(params = {}, options = {})
+    def register_instance(params = {}, **options)
       req = build_request(:register_instance, params)
       req.send_request(options)
     end
@@ -2146,9 +2146,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2190,9 +2190,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2246,9 +2246,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdateInstanceCustomHealthStatus AWS API Documentation
     #
-    # @overload update_instance_custom_health_status(params = {})
+    # @overload update_instance_custom_health_status(**params)
     # @param [Hash] params ({})
-    def update_instance_custom_health_status(params = {}, options = {})
+    def update_instance_custom_health_status(params = {}, **options)
       req = build_request(:update_instance_custom_health_status, params)
       req.send_request(options)
     end
@@ -2345,9 +2345,9 @@ module Aws::ServiceDiscovery
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdateService AWS API Documentation
     #
-    # @overload update_service(params = {})
+    # @overload update_service(**params)
     # @param [Hash] params ({})
-    def update_service(params = {}, options = {})
+    def update_service(params = {}, **options)
       req = build_request(:update_service, params)
       req.send_request(options)
     end
@@ -2356,7 +2356,7 @@ module Aws::ServiceDiscovery
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2364,15 +2364,15 @@ module Aws::ServiceDiscovery
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-servicediscovery'
-      context[:gem_version] = '1.31.0'
+      context[:gem_name] = "aws-sdk-servicediscovery"
+      context[:gem_version] = "1.31.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

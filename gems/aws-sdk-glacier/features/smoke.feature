@@ -8,11 +8,11 @@
 Feature: Smoke tests for Glacier
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @glacier @smoke
   Scenario: Call Aws::Glacier::Client#list_vaults and expect it to succeed
-  When I call the operation 'list_vaults' with params:
+  When I call the operation "list_vaults" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @glacier @smoke
   Scenario: Call Aws::Aws::Glacier::Client#list_vaults and expect it to fail
-  When I call the operation 'list_vaults' with params:
+  When I call the operation "list_vaults" with params:
     """
 {"account_id":"abcmnoxyz"}
     """

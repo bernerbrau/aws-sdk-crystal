@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mediatailor/types'
-require_relative 'aws-sdk-mediatailor/client_api'
-require_relative 'aws-sdk-mediatailor/client'
-require_relative 'aws-sdk-mediatailor/errors'
-require_relative 'aws-sdk-mediatailor/resource'
-require_relative 'aws-sdk-mediatailor/customizations'
+require_relative "aws-sdk-mediatailor/types"
+require_relative "aws-sdk-mediatailor/client_api"
+require_relative "aws-sdk-mediatailor/client"
+require_relative "aws-sdk-mediatailor/errors"
+require_relative "aws-sdk-mediatailor/resource"
+require_relative "aws-sdk-mediatailor/customizations"
 
 # This module provides support for AWS MediaTailor. This module is available in the
 # `aws-sdk-mediatailor` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mediatailor/customizations'
 # @!group service
 module Aws::MediaTailor
 
-  GEM_VERSION = '1.33.0'
+  GEM_VERSION = "1.33.0"
 
 end

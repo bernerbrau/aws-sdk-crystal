@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codebuild/types'
-require_relative 'aws-sdk-codebuild/client_api'
-require_relative 'aws-sdk-codebuild/client'
-require_relative 'aws-sdk-codebuild/errors'
-require_relative 'aws-sdk-codebuild/resource'
-require_relative 'aws-sdk-codebuild/customizations'
+require_relative "aws-sdk-codebuild/types"
+require_relative "aws-sdk-codebuild/client_api"
+require_relative "aws-sdk-codebuild/client"
+require_relative "aws-sdk-codebuild/errors"
+require_relative "aws-sdk-codebuild/resource"
+require_relative "aws-sdk-codebuild/customizations"
 
 # This module provides support for AWS CodeBuild. This module is available in the
 # `aws-sdk-codebuild` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-codebuild/customizations'
 # @!group service
 module Aws::CodeBuild
 
-  GEM_VERSION = '1.65.0'
+  GEM_VERSION = "1.65.0"
 
 end

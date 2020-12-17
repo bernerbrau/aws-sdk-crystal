@@ -8,11 +8,11 @@
 Feature: Smoke tests for DirectConnect
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @directconnect @smoke
   Scenario: Call Aws::DirectConnect::Client#describe_connections and expect it to succeed
-  When I call the operation 'describe_connections' with params:
+  When I call the operation "describe_connections" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @directconnect @smoke
   Scenario: Call Aws::Aws::DirectConnect::Client#describe_connections and expect it to fail
-  When I call the operation 'describe_connections' with params:
+  When I call the operation "describe_connections" with params:
     """
 {"connection_id":"fake-connection"}
     """

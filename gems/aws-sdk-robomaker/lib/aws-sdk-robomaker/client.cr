@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:robomaker)
 
@@ -280,7 +280,7 @@ module Aws::RoboMaker
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -350,9 +350,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/BatchDeleteWorlds AWS API Documentation
     #
-    # @overload batch_delete_worlds(params = {})
+    # @overload batch_delete_worlds(**params)
     # @param [Hash] params ({})
-    def batch_delete_worlds(params = {}, options = {})
+    def batch_delete_worlds(params = {}, **options)
       req = build_request(:batch_delete_worlds, params)
       req.send_request(options)
     end
@@ -440,9 +440,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/BatchDescribeSimulationJob AWS API Documentation
     #
-    # @overload batch_describe_simulation_job(params = {})
+    # @overload batch_describe_simulation_job(**params)
     # @param [Hash] params ({})
-    def batch_describe_simulation_job(params = {}, options = {})
+    def batch_describe_simulation_job(params = {}, **options)
       req = build_request(:batch_describe_simulation_job, params)
       req.send_request(options)
     end
@@ -462,9 +462,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelDeploymentJob AWS API Documentation
     #
-    # @overload cancel_deployment_job(params = {})
+    # @overload cancel_deployment_job(**params)
     # @param [Hash] params ({})
-    def cancel_deployment_job(params = {}, options = {})
+    def cancel_deployment_job(params = {}, **options)
       req = build_request(:cancel_deployment_job, params)
       req.send_request(options)
     end
@@ -484,9 +484,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelSimulationJob AWS API Documentation
     #
-    # @overload cancel_simulation_job(params = {})
+    # @overload cancel_simulation_job(**params)
     # @param [Hash] params ({})
-    def cancel_simulation_job(params = {}, options = {})
+    def cancel_simulation_job(params = {}, **options)
       req = build_request(:cancel_simulation_job, params)
       req.send_request(options)
     end
@@ -508,9 +508,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelSimulationJobBatch AWS API Documentation
     #
-    # @overload cancel_simulation_job_batch(params = {})
+    # @overload cancel_simulation_job_batch(**params)
     # @param [Hash] params ({})
-    def cancel_simulation_job_batch(params = {}, options = {})
+    def cancel_simulation_job_batch(params = {}, **options)
       req = build_request(:cancel_simulation_job_batch, params)
       req.send_request(options)
     end
@@ -530,9 +530,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelWorldExportJob AWS API Documentation
     #
-    # @overload cancel_world_export_job(params = {})
+    # @overload cancel_world_export_job(**params)
     # @param [Hash] params ({})
-    def cancel_world_export_job(params = {}, options = {})
+    def cancel_world_export_job(params = {}, **options)
       req = build_request(:cancel_world_export_job, params)
       req.send_request(options)
     end
@@ -552,9 +552,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelWorldGenerationJob AWS API Documentation
     #
-    # @overload cancel_world_generation_job(params = {})
+    # @overload cancel_world_generation_job(**params)
     # @param [Hash] params ({})
-    def cancel_world_generation_job(params = {}, options = {})
+    def cancel_world_generation_job(params = {}, **options)
       req = build_request(:cancel_world_generation_job, params)
       req.send_request(options)
     end
@@ -671,9 +671,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateDeploymentJob AWS API Documentation
     #
-    # @overload create_deployment_job(params = {})
+    # @overload create_deployment_job(**params)
     # @param [Hash] params ({})
-    def create_deployment_job(params = {}, options = {})
+    def create_deployment_job(params = {}, **options)
       req = build_request(:create_deployment_job, params)
       req.send_request(options)
     end
@@ -714,9 +714,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateFleet AWS API Documentation
     #
-    # @overload create_fleet(params = {})
+    # @overload create_fleet(**params)
     # @param [Hash] params ({})
-    def create_fleet(params = {}, options = {})
+    def create_fleet(params = {}, **options)
       req = build_request(:create_fleet, params)
       req.send_request(options)
     end
@@ -768,9 +768,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateRobot AWS API Documentation
     #
-    # @overload create_robot(params = {})
+    # @overload create_robot(**params)
     # @param [Hash] params ({})
-    def create_robot(params = {}, options = {})
+    def create_robot(params = {}, **options)
       req = build_request(:create_robot, params)
       req.send_request(options)
     end
@@ -841,9 +841,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateRobotApplication AWS API Documentation
     #
-    # @overload create_robot_application(params = {})
+    # @overload create_robot_application(**params)
     # @param [Hash] params ({})
-    def create_robot_application(params = {}, options = {})
+    def create_robot_application(params = {}, **options)
       req = build_request(:create_robot_application, params)
       req.send_request(options)
     end
@@ -892,9 +892,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateRobotApplicationVersion AWS API Documentation
     #
-    # @overload create_robot_application_version(params = {})
+    # @overload create_robot_application_version(**params)
     # @param [Hash] params ({})
-    def create_robot_application_version(params = {}, options = {})
+    def create_robot_application_version(params = {}, **options)
       req = build_request(:create_robot_application_version, params)
       req.send_request(options)
     end
@@ -985,9 +985,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateSimulationApplication AWS API Documentation
     #
-    # @overload create_simulation_application(params = {})
+    # @overload create_simulation_application(**params)
     # @param [Hash] params ({})
-    def create_simulation_application(params = {}, options = {})
+    def create_simulation_application(params = {}, **options)
       req = build_request(:create_simulation_application, params)
       req.send_request(options)
     end
@@ -1042,9 +1042,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateSimulationApplicationVersion AWS API Documentation
     #
-    # @overload create_simulation_application_version(params = {})
+    # @overload create_simulation_application_version(**params)
     # @param [Hash] params ({})
-    def create_simulation_application_version(params = {}, options = {})
+    def create_simulation_application_version(params = {}, **options)
       req = build_request(:create_simulation_application_version, params)
       req.send_request(options)
     end
@@ -1284,9 +1284,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateSimulationJob AWS API Documentation
     #
-    # @overload create_simulation_job(params = {})
+    # @overload create_simulation_job(**params)
     # @param [Hash] params ({})
-    def create_simulation_job(params = {}, options = {})
+    def create_simulation_job(params = {}, **options)
       req = build_request(:create_simulation_job, params)
       req.send_request(options)
     end
@@ -1356,9 +1356,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateWorldExportJob AWS API Documentation
     #
-    # @overload create_world_export_job(params = {})
+    # @overload create_world_export_job(**params)
     # @param [Hash] params ({})
-    def create_world_export_job(params = {}, options = {})
+    def create_world_export_job(params = {}, **options)
       req = build_request(:create_world_export_job, params)
       req.send_request(options)
     end
@@ -1433,9 +1433,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateWorldGenerationJob AWS API Documentation
     #
-    # @overload create_world_generation_job(params = {})
+    # @overload create_world_generation_job(**params)
     # @param [Hash] params ({})
-    def create_world_generation_job(params = {}, options = {})
+    def create_world_generation_job(params = {}, **options)
       req = build_request(:create_world_generation_job, params)
       req.send_request(options)
     end
@@ -1493,9 +1493,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateWorldTemplate AWS API Documentation
     #
-    # @overload create_world_template(params = {})
+    # @overload create_world_template(**params)
     # @param [Hash] params ({})
-    def create_world_template(params = {}, options = {})
+    def create_world_template(params = {}, **options)
       req = build_request(:create_world_template, params)
       req.send_request(options)
     end
@@ -1515,9 +1515,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteFleet AWS API Documentation
     #
-    # @overload delete_fleet(params = {})
+    # @overload delete_fleet(**params)
     # @param [Hash] params ({})
-    def delete_fleet(params = {}, options = {})
+    def delete_fleet(params = {}, **options)
       req = build_request(:delete_fleet, params)
       req.send_request(options)
     end
@@ -1537,9 +1537,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteRobot AWS API Documentation
     #
-    # @overload delete_robot(params = {})
+    # @overload delete_robot(**params)
     # @param [Hash] params ({})
-    def delete_robot(params = {}, options = {})
+    def delete_robot(params = {}, **options)
       req = build_request(:delete_robot, params)
       req.send_request(options)
     end
@@ -1563,9 +1563,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteRobotApplication AWS API Documentation
     #
-    # @overload delete_robot_application(params = {})
+    # @overload delete_robot_application(**params)
     # @param [Hash] params ({})
-    def delete_robot_application(params = {}, options = {})
+    def delete_robot_application(params = {}, **options)
       req = build_request(:delete_robot_application, params)
       req.send_request(options)
     end
@@ -1589,9 +1589,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteSimulationApplication AWS API Documentation
     #
-    # @overload delete_simulation_application(params = {})
+    # @overload delete_simulation_application(**params)
     # @param [Hash] params ({})
-    def delete_simulation_application(params = {}, options = {})
+    def delete_simulation_application(params = {}, **options)
       req = build_request(:delete_simulation_application, params)
       req.send_request(options)
     end
@@ -1612,9 +1612,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteWorldTemplate AWS API Documentation
     #
-    # @overload delete_world_template(params = {})
+    # @overload delete_world_template(**params)
     # @param [Hash] params ({})
-    def delete_world_template(params = {}, options = {})
+    def delete_world_template(params = {}, **options)
       req = build_request(:delete_world_template, params)
       req.send_request(options)
     end
@@ -1646,9 +1646,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeregisterRobot AWS API Documentation
     #
-    # @overload deregister_robot(params = {})
+    # @overload deregister_robot(**params)
     # @param [Hash] params ({})
-    def deregister_robot(params = {}, options = {})
+    def deregister_robot(params = {}, **options)
       req = build_request(:deregister_robot, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeDeploymentJob AWS API Documentation
     #
-    # @overload describe_deployment_job(params = {})
+    # @overload describe_deployment_job(**params)
     # @param [Hash] params ({})
-    def describe_deployment_job(params = {}, options = {})
+    def describe_deployment_job(params = {}, **options)
       req = build_request(:describe_deployment_job, params)
       req.send_request(options)
     end
@@ -1768,9 +1768,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeFleet AWS API Documentation
     #
-    # @overload describe_fleet(params = {})
+    # @overload describe_fleet(**params)
     # @param [Hash] params ({})
-    def describe_fleet(params = {}, options = {})
+    def describe_fleet(params = {}, **options)
       req = build_request(:describe_fleet, params)
       req.send_request(options)
     end
@@ -1815,9 +1815,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeRobot AWS API Documentation
     #
-    # @overload describe_robot(params = {})
+    # @overload describe_robot(**params)
     # @param [Hash] params ({})
-    def describe_robot(params = {}, options = {})
+    def describe_robot(params = {}, **options)
       req = build_request(:describe_robot, params)
       req.send_request(options)
     end
@@ -1867,9 +1867,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeRobotApplication AWS API Documentation
     #
-    # @overload describe_robot_application(params = {})
+    # @overload describe_robot_application(**params)
     # @param [Hash] params ({})
-    def describe_robot_application(params = {}, options = {})
+    def describe_robot_application(params = {}, **options)
       req = build_request(:describe_robot_application, params)
       req.send_request(options)
     end
@@ -1925,9 +1925,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeSimulationApplication AWS API Documentation
     #
-    # @overload describe_simulation_application(params = {})
+    # @overload describe_simulation_application(**params)
     # @param [Hash] params ({})
-    def describe_simulation_application(params = {}, options = {})
+    def describe_simulation_application(params = {}, **options)
       req = build_request(:describe_simulation_application, params)
       req.send_request(options)
     end
@@ -2031,9 +2031,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeSimulationJob AWS API Documentation
     #
-    # @overload describe_simulation_job(params = {})
+    # @overload describe_simulation_job(**params)
     # @param [Hash] params ({})
-    def describe_simulation_job(params = {}, options = {})
+    def describe_simulation_job(params = {}, **options)
       req = build_request(:describe_simulation_job, params)
       req.send_request(options)
     end
@@ -2188,9 +2188,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeSimulationJobBatch AWS API Documentation
     #
-    # @overload describe_simulation_job_batch(params = {})
+    # @overload describe_simulation_job_batch(**params)
     # @param [Hash] params ({})
-    def describe_simulation_job_batch(params = {}, options = {})
+    def describe_simulation_job_batch(params = {}, **options)
       req = build_request(:describe_simulation_job_batch, params)
       req.send_request(options)
     end
@@ -2225,9 +2225,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeWorld AWS API Documentation
     #
-    # @overload describe_world(params = {})
+    # @overload describe_world(**params)
     # @param [Hash] params ({})
-    def describe_world(params = {}, options = {})
+    def describe_world(params = {}, **options)
       req = build_request(:describe_world, params)
       req.send_request(options)
     end
@@ -2274,9 +2274,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeWorldExportJob AWS API Documentation
     #
-    # @overload describe_world_export_job(params = {})
+    # @overload describe_world_export_job(**params)
     # @param [Hash] params ({})
-    def describe_world_export_job(params = {}, options = {})
+    def describe_world_export_job(params = {}, **options)
       req = build_request(:describe_world_export_job, params)
       req.send_request(options)
     end
@@ -2333,9 +2333,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeWorldGenerationJob AWS API Documentation
     #
-    # @overload describe_world_generation_job(params = {})
+    # @overload describe_world_generation_job(**params)
     # @param [Hash] params ({})
-    def describe_world_generation_job(params = {}, options = {})
+    def describe_world_generation_job(params = {}, **options)
       req = build_request(:describe_world_generation_job, params)
       req.send_request(options)
     end
@@ -2373,9 +2373,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeWorldTemplate AWS API Documentation
     #
-    # @overload describe_world_template(params = {})
+    # @overload describe_world_template(**params)
     # @param [Hash] params ({})
-    def describe_world_template(params = {}, options = {})
+    def describe_world_template(params = {}, **options)
       req = build_request(:describe_world_template, params)
       req.send_request(options)
     end
@@ -2405,9 +2405,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/GetWorldTemplateBody AWS API Documentation
     #
-    # @overload get_world_template_body(params = {})
+    # @overload get_world_template_body(**params)
     # @param [Hash] params ({})
-    def get_world_template_body(params = {}, options = {})
+    def get_world_template_body(params = {}, **options)
       req = build_request(:get_world_template_body, params)
       req.send_request(options)
     end
@@ -2489,9 +2489,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListDeploymentJobs AWS API Documentation
     #
-    # @overload list_deployment_jobs(params = {})
+    # @overload list_deployment_jobs(**params)
     # @param [Hash] params ({})
-    def list_deployment_jobs(params = {}, options = {})
+    def list_deployment_jobs(params = {}, **options)
       req = build_request(:list_deployment_jobs, params)
       req.send_request(options)
     end
@@ -2561,9 +2561,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListFleets AWS API Documentation
     #
-    # @overload list_fleets(params = {})
+    # @overload list_fleets(**params)
     # @param [Hash] params ({})
-    def list_fleets(params = {}, options = {})
+    def list_fleets(params = {}, **options)
       req = build_request(:list_fleets, params)
       req.send_request(options)
     end
@@ -2631,9 +2631,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListRobotApplications AWS API Documentation
     #
-    # @overload list_robot_applications(params = {})
+    # @overload list_robot_applications(**params)
     # @param [Hash] params ({})
-    def list_robot_applications(params = {}, options = {})
+    def list_robot_applications(params = {}, **options)
       req = build_request(:list_robot_applications, params)
       req.send_request(options)
     end
@@ -2703,9 +2703,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListRobots AWS API Documentation
     #
-    # @overload list_robots(params = {})
+    # @overload list_robots(**params)
     # @param [Hash] params ({})
-    def list_robots(params = {}, options = {})
+    def list_robots(params = {}, **options)
       req = build_request(:list_robots, params)
       req.send_request(options)
     end
@@ -2776,9 +2776,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListSimulationApplications AWS API Documentation
     #
-    # @overload list_simulation_applications(params = {})
+    # @overload list_simulation_applications(**params)
     # @param [Hash] params ({})
-    def list_simulation_applications(params = {}, options = {})
+    def list_simulation_applications(params = {}, **options)
       req = build_request(:list_simulation_applications, params)
       req.send_request(options)
     end
@@ -2838,9 +2838,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListSimulationJobBatches AWS API Documentation
     #
-    # @overload list_simulation_job_batches(params = {})
+    # @overload list_simulation_job_batches(**params)
     # @param [Hash] params ({})
-    def list_simulation_job_batches(params = {}, options = {})
+    def list_simulation_job_batches(params = {}, **options)
       req = build_request(:list_simulation_job_batches, params)
       req.send_request(options)
     end
@@ -2911,9 +2911,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListSimulationJobs AWS API Documentation
     #
-    # @overload list_simulation_jobs(params = {})
+    # @overload list_simulation_jobs(**params)
     # @param [Hash] params ({})
-    def list_simulation_jobs(params = {}, options = {})
+    def list_simulation_jobs(params = {}, **options)
       req = build_request(:list_simulation_jobs, params)
       req.send_request(options)
     end
@@ -2940,9 +2940,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3002,9 +3002,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListWorldExportJobs AWS API Documentation
     #
-    # @overload list_world_export_jobs(params = {})
+    # @overload list_world_export_jobs(**params)
     # @param [Hash] params ({})
-    def list_world_export_jobs(params = {}, options = {})
+    def list_world_export_jobs(params = {}, **options)
       req = build_request(:list_world_export_jobs, params)
       req.send_request(options)
     end
@@ -3068,9 +3068,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListWorldGenerationJobs AWS API Documentation
     #
-    # @overload list_world_generation_jobs(params = {})
+    # @overload list_world_generation_jobs(**params)
     # @param [Hash] params ({})
-    def list_world_generation_jobs(params = {}, options = {})
+    def list_world_generation_jobs(params = {}, **options)
       req = build_request(:list_world_generation_jobs, params)
       req.send_request(options)
     end
@@ -3119,9 +3119,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListWorldTemplates AWS API Documentation
     #
-    # @overload list_world_templates(params = {})
+    # @overload list_world_templates(**params)
     # @param [Hash] params ({})
-    def list_world_templates(params = {}, options = {})
+    def list_world_templates(params = {}, **options)
       req = build_request(:list_world_templates, params)
       req.send_request(options)
     end
@@ -3179,9 +3179,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListWorlds AWS API Documentation
     #
-    # @overload list_worlds(params = {})
+    # @overload list_worlds(**params)
     # @param [Hash] params ({})
-    def list_worlds(params = {}, options = {})
+    def list_worlds(params = {}, **options)
       req = build_request(:list_worlds, params)
       req.send_request(options)
     end
@@ -3213,9 +3213,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/RegisterRobot AWS API Documentation
     #
-    # @overload register_robot(params = {})
+    # @overload register_robot(**params)
     # @param [Hash] params ({})
-    def register_robot(params = {}, options = {})
+    def register_robot(params = {}, **options)
       req = build_request(:register_robot, params)
       req.send_request(options)
     end
@@ -3235,9 +3235,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/RestartSimulationJob AWS API Documentation
     #
-    # @overload restart_simulation_job(params = {})
+    # @overload restart_simulation_job(**params)
     # @param [Hash] params ({})
-    def restart_simulation_job(params = {}, options = {})
+    def restart_simulation_job(params = {}, **options)
       req = build_request(:restart_simulation_job, params)
       req.send_request(options)
     end
@@ -3496,9 +3496,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/StartSimulationJobBatch AWS API Documentation
     #
-    # @overload start_simulation_job_batch(params = {})
+    # @overload start_simulation_job_batch(**params)
     # @param [Hash] params ({})
-    def start_simulation_job_batch(params = {}, options = {})
+    def start_simulation_job_batch(params = {}, **options)
       req = build_request(:start_simulation_job_batch, params)
       req.send_request(options)
     end
@@ -3560,9 +3560,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/SyncDeploymentJob AWS API Documentation
     #
-    # @overload sync_deployment_job(params = {})
+    # @overload sync_deployment_job(**params)
     # @param [Hash] params ({})
-    def sync_deployment_job(params = {}, options = {})
+    def sync_deployment_job(params = {}, **options)
       req = build_request(:sync_deployment_job, params)
       req.send_request(options)
     end
@@ -3601,9 +3601,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3636,9 +3636,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3703,9 +3703,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/UpdateRobotApplication AWS API Documentation
     #
-    # @overload update_robot_application(params = {})
+    # @overload update_robot_application(**params)
     # @param [Hash] params ({})
-    def update_robot_application(params = {}, options = {})
+    def update_robot_application(params = {}, **options)
       req = build_request(:update_robot_application, params)
       req.send_request(options)
     end
@@ -3789,9 +3789,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/UpdateSimulationApplication AWS API Documentation
     #
-    # @overload update_simulation_application(params = {})
+    # @overload update_simulation_application(**params)
     # @param [Hash] params ({})
-    def update_simulation_application(params = {}, options = {})
+    def update_simulation_application(params = {}, **options)
       req = build_request(:update_simulation_application, params)
       req.send_request(options)
     end
@@ -3838,9 +3838,9 @@ module Aws::RoboMaker
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/UpdateWorldTemplate AWS API Documentation
     #
-    # @overload update_world_template(params = {})
+    # @overload update_world_template(**params)
     # @param [Hash] params ({})
-    def update_world_template(params = {}, options = {})
+    def update_world_template(params = {}, **options)
       req = build_request(:update_world_template, params)
       req.send_request(options)
     end
@@ -3849,7 +3849,7 @@ module Aws::RoboMaker
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3857,15 +3857,15 @@ module Aws::RoboMaker
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-robomaker'
-      context[:gem_version] = '1.31.0'
+      context[:gem_name] = "aws-sdk-robomaker"
+      context[:gem_version] = "1.31.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

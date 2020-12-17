@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:route53domains)
 
@@ -290,7 +290,7 @@ module Aws::Route53Domains
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -385,9 +385,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/AcceptDomainTransferFromAnotherAwsAccount AWS API Documentation
     #
-    # @overload accept_domain_transfer_from_another_aws_account(params = {})
+    # @overload accept_domain_transfer_from_another_aws_account(**params)
     # @param [Hash] params ({})
-    def accept_domain_transfer_from_another_aws_account(params = {}, options = {})
+    def accept_domain_transfer_from_another_aws_account(params = {}, **options)
       req = build_request(:accept_domain_transfer_from_another_aws_account, params)
       req.send_request(options)
     end
@@ -431,9 +431,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/CancelDomainTransferToAnotherAwsAccount AWS API Documentation
     #
-    # @overload cancel_domain_transfer_to_another_aws_account(params = {})
+    # @overload cancel_domain_transfer_to_another_aws_account(**params)
     # @param [Hash] params ({})
-    def cancel_domain_transfer_to_another_aws_account(params = {}, options = {})
+    def cancel_domain_transfer_to_another_aws_account(params = {}, **options)
       req = build_request(:cancel_domain_transfer_to_another_aws_account, params)
       req.send_request(options)
     end
@@ -492,9 +492,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/CheckDomainAvailability AWS API Documentation
     #
-    # @overload check_domain_availability(params = {})
+    # @overload check_domain_availability(**params)
     # @param [Hash] params ({})
-    def check_domain_availability(params = {}, options = {})
+    def check_domain_availability(params = {}, **options)
       req = build_request(:check_domain_availability, params)
       req.send_request(options)
     end
@@ -546,9 +546,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/CheckDomainTransferability AWS API Documentation
     #
-    # @overload check_domain_transferability(params = {})
+    # @overload check_domain_transferability(**params)
     # @param [Hash] params ({})
-    def check_domain_transferability(params = {}, options = {})
+    def check_domain_transferability(params = {}, **options)
       req = build_request(:check_domain_transferability, params)
       req.send_request(options)
     end
@@ -575,9 +575,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/DeleteTagsForDomain AWS API Documentation
     #
-    # @overload delete_tags_for_domain(params = {})
+    # @overload delete_tags_for_domain(**params)
     # @param [Hash] params ({})
-    def delete_tags_for_domain(params = {}, options = {})
+    def delete_tags_for_domain(params = {}, **options)
       req = build_request(:delete_tags_for_domain, params)
       req.send_request(options)
     end
@@ -598,9 +598,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/DisableDomainAutoRenew AWS API Documentation
     #
-    # @overload disable_domain_auto_renew(params = {})
+    # @overload disable_domain_auto_renew(**params)
     # @param [Hash] params ({})
-    def disable_domain_auto_renew(params = {}, options = {})
+    def disable_domain_auto_renew(params = {}, **options)
       req = build_request(:disable_domain_auto_renew, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/DisableDomainTransferLock AWS API Documentation
     #
-    # @overload disable_domain_transfer_lock(params = {})
+    # @overload disable_domain_transfer_lock(**params)
     # @param [Hash] params ({})
-    def disable_domain_transfer_lock(params = {}, options = {})
+    def disable_domain_transfer_lock(params = {}, **options)
       req = build_request(:disable_domain_transfer_lock, params)
       req.send_request(options)
     end
@@ -666,9 +666,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/EnableDomainAutoRenew AWS API Documentation
     #
-    # @overload enable_domain_auto_renew(params = {})
+    # @overload enable_domain_auto_renew(**params)
     # @param [Hash] params ({})
-    def enable_domain_auto_renew(params = {}, options = {})
+    def enable_domain_auto_renew(params = {}, **options)
       req = build_request(:enable_domain_auto_renew, params)
       req.send_request(options)
     end
@@ -699,9 +699,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/EnableDomainTransferLock AWS API Documentation
     #
-    # @overload enable_domain_transfer_lock(params = {})
+    # @overload enable_domain_transfer_lock(**params)
     # @param [Hash] params ({})
-    def enable_domain_transfer_lock(params = {}, options = {})
+    def enable_domain_transfer_lock(params = {}, **options)
       req = build_request(:enable_domain_transfer_lock, params)
       req.send_request(options)
     end
@@ -736,9 +736,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/GetContactReachabilityStatus AWS API Documentation
     #
-    # @overload get_contact_reachability_status(params = {})
+    # @overload get_contact_reachability_status(**params)
     # @param [Hash] params ({})
-    def get_contact_reachability_status(params = {}, options = {})
+    def get_contact_reachability_status(params = {}, **options)
       req = build_request(:get_contact_reachability_status, params)
       req.send_request(options)
     end
@@ -856,9 +856,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/GetDomainDetail AWS API Documentation
     #
-    # @overload get_domain_detail(params = {})
+    # @overload get_domain_detail(**params)
     # @param [Hash] params ({})
-    def get_domain_detail(params = {}, options = {})
+    def get_domain_detail(params = {}, **options)
       req = build_request(:get_domain_detail, params)
       req.send_request(options)
     end
@@ -925,9 +925,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/GetDomainSuggestions AWS API Documentation
     #
-    # @overload get_domain_suggestions(params = {})
+    # @overload get_domain_suggestions(**params)
     # @param [Hash] params ({})
-    def get_domain_suggestions(params = {}, options = {})
+    def get_domain_suggestions(params = {}, **options)
       req = build_request(:get_domain_suggestions, params)
       req.send_request(options)
     end
@@ -966,9 +966,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/GetOperationDetail AWS API Documentation
     #
-    # @overload get_operation_detail(params = {})
+    # @overload get_operation_detail(**params)
     # @param [Hash] params ({})
-    def get_operation_detail(params = {}, options = {})
+    def get_operation_detail(params = {}, **options)
       req = build_request(:get_operation_detail, params)
       req.send_request(options)
     end
@@ -1018,9 +1018,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/ListDomains AWS API Documentation
     #
-    # @overload list_domains(params = {})
+    # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, options = {})
+    def list_domains(params = {}, **options)
       req = build_request(:list_domains, params)
       req.send_request(options)
     end
@@ -1074,9 +1074,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/ListOperations AWS API Documentation
     #
-    # @overload list_operations(params = {})
+    # @overload list_operations(**params)
     # @param [Hash] params ({})
-    def list_operations(params = {}, options = {})
+    def list_operations(params = {}, **options)
       req = build_request(:list_operations, params)
       req.send_request(options)
     end
@@ -1108,9 +1108,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/ListTagsForDomain AWS API Documentation
     #
-    # @overload list_tags_for_domain(params = {})
+    # @overload list_tags_for_domain(**params)
     # @param [Hash] params ({})
-    def list_tags_for_domain(params = {}, options = {})
+    def list_tags_for_domain(params = {}, **options)
       req = build_request(:list_tags_for_domain, params)
       req.send_request(options)
     end
@@ -1341,9 +1341,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/RegisterDomain AWS API Documentation
     #
-    # @overload register_domain(params = {})
+    # @overload register_domain(**params)
     # @param [Hash] params ({})
-    def register_domain(params = {}, options = {})
+    def register_domain(params = {}, **options)
       req = build_request(:register_domain, params)
       req.send_request(options)
     end
@@ -1387,9 +1387,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/RejectDomainTransferFromAnotherAwsAccount AWS API Documentation
     #
-    # @overload reject_domain_transfer_from_another_aws_account(params = {})
+    # @overload reject_domain_transfer_from_another_aws_account(**params)
     # @param [Hash] params ({})
-    def reject_domain_transfer_from_another_aws_account(params = {}, options = {})
+    def reject_domain_transfer_from_another_aws_account(params = {}, **options)
       req = build_request(:reject_domain_transfer_from_another_aws_account, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/RenewDomain AWS API Documentation
     #
-    # @overload renew_domain(params = {})
+    # @overload renew_domain(**params)
     # @param [Hash] params ({})
-    def renew_domain(params = {}, options = {})
+    def renew_domain(params = {}, **options)
       req = build_request(:renew_domain, params)
       req.send_request(options)
     end
@@ -1481,9 +1481,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/ResendContactReachabilityEmail AWS API Documentation
     #
-    # @overload resend_contact_reachability_email(params = {})
+    # @overload resend_contact_reachability_email(**params)
     # @param [Hash] params ({})
-    def resend_contact_reachability_email(params = {}, options = {})
+    def resend_contact_reachability_email(params = {}, **options)
       req = build_request(:resend_contact_reachability_email, params)
       req.send_request(options)
     end
@@ -1511,9 +1511,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/RetrieveDomainAuthCode AWS API Documentation
     #
-    # @overload retrieve_domain_auth_code(params = {})
+    # @overload retrieve_domain_auth_code(**params)
     # @param [Hash] params ({})
-    def retrieve_domain_auth_code(params = {}, options = {})
+    def retrieve_domain_auth_code(params = {}, **options)
       req = build_request(:retrieve_domain_auth_code, params)
       req.send_request(options)
     end
@@ -1740,9 +1740,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/TransferDomain AWS API Documentation
     #
-    # @overload transfer_domain(params = {})
+    # @overload transfer_domain(**params)
     # @param [Hash] params ({})
-    def transfer_domain(params = {}, options = {})
+    def transfer_domain(params = {}, **options)
       req = build_request(:transfer_domain, params)
       req.send_request(options)
     end
@@ -1810,9 +1810,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/TransferDomainToAnotherAwsAccount AWS API Documentation
     #
-    # @overload transfer_domain_to_another_aws_account(params = {})
+    # @overload transfer_domain_to_another_aws_account(**params)
     # @param [Hash] params ({})
-    def transfer_domain_to_another_aws_account(params = {}, options = {})
+    def transfer_domain_to_another_aws_account(params = {}, **options)
       req = build_request(:transfer_domain_to_another_aws_account, params)
       req.send_request(options)
     end
@@ -1918,9 +1918,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/UpdateDomainContact AWS API Documentation
     #
-    # @overload update_domain_contact(params = {})
+    # @overload update_domain_contact(**params)
     # @param [Hash] params ({})
-    def update_domain_contact(params = {}, options = {})
+    def update_domain_contact(params = {}, **options)
       req = build_request(:update_domain_contact, params)
       req.send_request(options)
     end
@@ -2000,9 +2000,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/UpdateDomainContactPrivacy AWS API Documentation
     #
-    # @overload update_domain_contact_privacy(params = {})
+    # @overload update_domain_contact_privacy(**params)
     # @param [Hash] params ({})
-    def update_domain_contact_privacy(params = {}, options = {})
+    def update_domain_contact_privacy(params = {}, **options)
       req = build_request(:update_domain_contact_privacy, params)
       req.send_request(options)
     end
@@ -2049,9 +2049,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/UpdateDomainNameservers AWS API Documentation
     #
-    # @overload update_domain_nameservers(params = {})
+    # @overload update_domain_nameservers(**params)
     # @param [Hash] params ({})
-    def update_domain_nameservers(params = {}, options = {})
+    def update_domain_nameservers(params = {}, **options)
       req = build_request(:update_domain_nameservers, params)
       req.send_request(options)
     end
@@ -2085,9 +2085,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/UpdateTagsForDomain AWS API Documentation
     #
-    # @overload update_tags_for_domain(params = {})
+    # @overload update_tags_for_domain(**params)
     # @param [Hash] params ({})
-    def update_tags_for_domain(params = {}, options = {})
+    def update_tags_for_domain(params = {}, **options)
       req = build_request(:update_tags_for_domain, params)
       req.send_request(options)
     end
@@ -2148,9 +2148,9 @@ module Aws::Route53Domains
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/ViewBilling AWS API Documentation
     #
-    # @overload view_billing(params = {})
+    # @overload view_billing(**params)
     # @param [Hash] params ({})
-    def view_billing(params = {}, options = {})
+    def view_billing(params = {}, **options)
       req = build_request(:view_billing, params)
       req.send_request(options)
     end
@@ -2159,7 +2159,7 @@ module Aws::Route53Domains
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2167,15 +2167,15 @@ module Aws::Route53Domains
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-route53domains'
-      context[:gem_version] = '1.28.0'
+      context[:gem_name] = "aws-sdk-route53domains"
+      context[:gem_version] = "1.28.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

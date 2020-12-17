@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ivs/types'
-require_relative 'aws-sdk-ivs/client_api'
-require_relative 'aws-sdk-ivs/client'
-require_relative 'aws-sdk-ivs/errors'
-require_relative 'aws-sdk-ivs/resource'
-require_relative 'aws-sdk-ivs/customizations'
+require_relative "aws-sdk-ivs/types"
+require_relative "aws-sdk-ivs/client_api"
+require_relative "aws-sdk-ivs/client"
+require_relative "aws-sdk-ivs/errors"
+require_relative "aws-sdk-ivs/resource"
+require_relative "aws-sdk-ivs/customizations"
 
 # This module provides support for Amazon Interactive Video Service. This module is available in the
 # `aws-sdk-ivs` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-ivs/customizations'
 # @!group service
 module Aws::IVS
 
-  GEM_VERSION = '1.5.0'
+  GEM_VERSION = "1.5.0"
 
 end

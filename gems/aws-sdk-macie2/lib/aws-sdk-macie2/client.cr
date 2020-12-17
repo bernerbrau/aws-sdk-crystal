@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:macie2)
 
@@ -280,7 +280,7 @@ module Aws::Macie2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -345,9 +345,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/AcceptInvitation AWS API Documentation
     #
-    # @overload accept_invitation(params = {})
+    # @overload accept_invitation(**params)
     # @param [Hash] params ({})
-    def accept_invitation(params = {}, options = {})
+    def accept_invitation(params = {}, **options)
       req = build_request(:accept_invitation, params)
       req.send_request(options)
     end
@@ -381,9 +381,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/BatchGetCustomDataIdentifiers AWS API Documentation
     #
-    # @overload batch_get_custom_data_identifiers(params = {})
+    # @overload batch_get_custom_data_identifiers(**params)
     # @param [Hash] params ({})
-    def batch_get_custom_data_identifiers(params = {}, options = {})
+    def batch_get_custom_data_identifiers(params = {}, **options)
       req = build_request(:batch_get_custom_data_identifiers, params)
       req.send_request(options)
     end
@@ -510,9 +510,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateClassificationJob AWS API Documentation
     #
-    # @overload create_classification_job(params = {})
+    # @overload create_classification_job(**params)
     # @param [Hash] params ({})
-    def create_classification_job(params = {}, options = {})
+    def create_classification_job(params = {}, **options)
       req = build_request(:create_classification_job, params)
       req.send_request(options)
     end
@@ -566,9 +566,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateCustomDataIdentifier AWS API Documentation
     #
-    # @overload create_custom_data_identifier(params = {})
+    # @overload create_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def create_custom_data_identifier(params = {}, options = {})
+    def create_custom_data_identifier(params = {}, **options)
       req = build_request(:create_custom_data_identifier, params)
       req.send_request(options)
     end
@@ -638,9 +638,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateFindingsFilter AWS API Documentation
     #
-    # @overload create_findings_filter(params = {})
+    # @overload create_findings_filter(**params)
     # @param [Hash] params ({})
-    def create_findings_filter(params = {}, options = {})
+    def create_findings_filter(params = {}, **options)
       req = build_request(:create_findings_filter, params)
       req.send_request(options)
     end
@@ -674,9 +674,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateInvitations AWS API Documentation
     #
-    # @overload create_invitations(params = {})
+    # @overload create_invitations(**params)
     # @param [Hash] params ({})
-    def create_invitations(params = {}, options = {})
+    def create_invitations(params = {}, **options)
       req = build_request(:create_invitations, params)
       req.send_request(options)
     end
@@ -714,9 +714,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateMember AWS API Documentation
     #
-    # @overload create_member(params = {})
+    # @overload create_member(**params)
     # @param [Hash] params ({})
-    def create_member(params = {}, options = {})
+    def create_member(params = {}, **options)
       req = build_request(:create_member, params)
       req.send_request(options)
     end
@@ -735,9 +735,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateSampleFindings AWS API Documentation
     #
-    # @overload create_sample_findings(params = {})
+    # @overload create_sample_findings(**params)
     # @param [Hash] params ({})
-    def create_sample_findings(params = {}, options = {})
+    def create_sample_findings(params = {}, **options)
       req = build_request(:create_sample_findings, params)
       req.send_request(options)
     end
@@ -766,9 +766,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeclineInvitations AWS API Documentation
     #
-    # @overload decline_invitations(params = {})
+    # @overload decline_invitations(**params)
     # @param [Hash] params ({})
-    def decline_invitations(params = {}, options = {})
+    def decline_invitations(params = {}, **options)
       req = build_request(:decline_invitations, params)
       req.send_request(options)
     end
@@ -787,9 +787,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteCustomDataIdentifier AWS API Documentation
     #
-    # @overload delete_custom_data_identifier(params = {})
+    # @overload delete_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def delete_custom_data_identifier(params = {}, options = {})
+    def delete_custom_data_identifier(params = {}, **options)
       req = build_request(:delete_custom_data_identifier, params)
       req.send_request(options)
     end
@@ -808,9 +808,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteFindingsFilter AWS API Documentation
     #
-    # @overload delete_findings_filter(params = {})
+    # @overload delete_findings_filter(**params)
     # @param [Hash] params ({})
-    def delete_findings_filter(params = {}, options = {})
+    def delete_findings_filter(params = {}, **options)
       req = build_request(:delete_findings_filter, params)
       req.send_request(options)
     end
@@ -839,9 +839,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteInvitations AWS API Documentation
     #
-    # @overload delete_invitations(params = {})
+    # @overload delete_invitations(**params)
     # @param [Hash] params ({})
-    def delete_invitations(params = {}, options = {})
+    def delete_invitations(params = {}, **options)
       req = build_request(:delete_invitations, params)
       req.send_request(options)
     end
@@ -861,9 +861,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteMember AWS API Documentation
     #
-    # @overload delete_member(params = {})
+    # @overload delete_member(**params)
     # @param [Hash] params ({})
-    def delete_member(params = {}, options = {})
+    def delete_member(params = {}, **options)
       req = build_request(:delete_member, params)
       req.send_request(options)
     end
@@ -966,9 +966,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DescribeBuckets AWS API Documentation
     #
-    # @overload describe_buckets(params = {})
+    # @overload describe_buckets(**params)
     # @param [Hash] params ({})
-    def describe_buckets(params = {}, options = {})
+    def describe_buckets(params = {}, **options)
       req = build_request(:describe_buckets, params)
       req.send_request(options)
     end
@@ -1058,9 +1058,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DescribeClassificationJob AWS API Documentation
     #
-    # @overload describe_classification_job(params = {})
+    # @overload describe_classification_job(**params)
     # @param [Hash] params ({})
-    def describe_classification_job(params = {}, options = {})
+    def describe_classification_job(params = {}, **options)
       req = build_request(:describe_classification_job, params)
       req.send_request(options)
     end
@@ -1080,9 +1080,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DescribeOrganizationConfiguration AWS API Documentation
     #
-    # @overload describe_organization_configuration(params = {})
+    # @overload describe_organization_configuration(**params)
     # @param [Hash] params ({})
-    def describe_organization_configuration(params = {}, options = {})
+    def describe_organization_configuration(params = {}, **options)
       req = build_request(:describe_organization_configuration, params)
       req.send_request(options)
     end
@@ -1094,9 +1094,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DisableMacie AWS API Documentation
     #
-    # @overload disable_macie(params = {})
+    # @overload disable_macie(**params)
     # @param [Hash] params ({})
-    def disable_macie(params = {}, options = {})
+    def disable_macie(params = {}, **options)
       req = build_request(:disable_macie, params)
       req.send_request(options)
     end
@@ -1116,9 +1116,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DisableOrganizationAdminAccount AWS API Documentation
     #
-    # @overload disable_organization_admin_account(params = {})
+    # @overload disable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def disable_organization_admin_account(params = {}, options = {})
+    def disable_organization_admin_account(params = {}, **options)
       req = build_request(:disable_organization_admin_account, params)
       req.send_request(options)
     end
@@ -1129,9 +1129,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DisassociateFromMasterAccount AWS API Documentation
     #
-    # @overload disassociate_from_master_account(params = {})
+    # @overload disassociate_from_master_account(**params)
     # @param [Hash] params ({})
-    def disassociate_from_master_account(params = {}, options = {})
+    def disassociate_from_master_account(params = {}, **options)
       req = build_request(:disassociate_from_master_account, params)
       req.send_request(options)
     end
@@ -1150,9 +1150,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DisassociateMember AWS API Documentation
     #
-    # @overload disassociate_member(params = {})
+    # @overload disassociate_member(**params)
     # @param [Hash] params ({})
-    def disassociate_member(params = {}, options = {})
+    def disassociate_member(params = {}, **options)
       req = build_request(:disassociate_member, params)
       req.send_request(options)
     end
@@ -1185,9 +1185,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/EnableMacie AWS API Documentation
     #
-    # @overload enable_macie(params = {})
+    # @overload enable_macie(**params)
     # @param [Hash] params ({})
-    def enable_macie(params = {}, options = {})
+    def enable_macie(params = {}, **options)
       req = build_request(:enable_macie, params)
       req.send_request(options)
     end
@@ -1212,9 +1212,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/EnableOrganizationAdminAccount AWS API Documentation
     #
-    # @overload enable_organization_admin_account(params = {})
+    # @overload enable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def enable_organization_admin_account(params = {}, options = {})
+    def enable_organization_admin_account(params = {}, **options)
       req = build_request(:enable_organization_admin_account, params)
       req.send_request(options)
     end
@@ -1274,9 +1274,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetBucketStatistics AWS API Documentation
     #
-    # @overload get_bucket_statistics(params = {})
+    # @overload get_bucket_statistics(**params)
     # @param [Hash] params ({})
-    def get_bucket_statistics(params = {}, options = {})
+    def get_bucket_statistics(params = {}, **options)
       req = build_request(:get_bucket_statistics, params)
       req.send_request(options)
     end
@@ -1296,9 +1296,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetClassificationExportConfiguration AWS API Documentation
     #
-    # @overload get_classification_export_configuration(params = {})
+    # @overload get_classification_export_configuration(**params)
     # @param [Hash] params ({})
-    def get_classification_export_configuration(params = {}, options = {})
+    def get_classification_export_configuration(params = {}, **options)
       req = build_request(:get_classification_export_configuration, params)
       req.send_request(options)
     end
@@ -1347,9 +1347,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetCustomDataIdentifier AWS API Documentation
     #
-    # @overload get_custom_data_identifier(params = {})
+    # @overload get_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def get_custom_data_identifier(params = {}, options = {})
+    def get_custom_data_identifier(params = {}, **options)
       req = build_request(:get_custom_data_identifier, params)
       req.send_request(options)
     end
@@ -1404,9 +1404,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetFindingStatistics AWS API Documentation
     #
-    # @overload get_finding_statistics(params = {})
+    # @overload get_finding_statistics(**params)
     # @param [Hash] params ({})
-    def get_finding_statistics(params = {}, options = {})
+    def get_finding_statistics(params = {}, **options)
       req = build_request(:get_finding_statistics, params)
       req.send_request(options)
     end
@@ -1608,9 +1608,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetFindings AWS API Documentation
     #
-    # @overload get_findings(params = {})
+    # @overload get_findings(**params)
     # @param [Hash] params ({})
-    def get_findings(params = {}, options = {})
+    def get_findings(params = {}, **options)
       req = build_request(:get_findings, params)
       req.send_request(options)
     end
@@ -1660,9 +1660,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetFindingsFilter AWS API Documentation
     #
-    # @overload get_findings_filter(params = {})
+    # @overload get_findings_filter(**params)
     # @param [Hash] params ({})
-    def get_findings_filter(params = {}, options = {})
+    def get_findings_filter(params = {}, **options)
       req = build_request(:get_findings_filter, params)
       req.send_request(options)
     end
@@ -1680,9 +1680,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetInvitationsCount AWS API Documentation
     #
-    # @overload get_invitations_count(params = {})
+    # @overload get_invitations_count(**params)
     # @param [Hash] params ({})
-    def get_invitations_count(params = {}, options = {})
+    def get_invitations_count(params = {}, **options)
       req = build_request(:get_invitations_count, params)
       req.send_request(options)
     end
@@ -1708,9 +1708,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetMacieSession AWS API Documentation
     #
-    # @overload get_macie_session(params = {})
+    # @overload get_macie_session(**params)
     # @param [Hash] params ({})
-    def get_macie_session(params = {}, options = {})
+    def get_macie_session(params = {}, **options)
       req = build_request(:get_macie_session, params)
       req.send_request(options)
     end
@@ -1731,9 +1731,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetMasterAccount AWS API Documentation
     #
-    # @overload get_master_account(params = {})
+    # @overload get_master_account(**params)
     # @param [Hash] params ({})
-    def get_master_account(params = {}, options = {})
+    def get_master_account(params = {}, **options)
       req = build_request(:get_master_account, params)
       req.send_request(options)
     end
@@ -1774,9 +1774,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetMember AWS API Documentation
     #
-    # @overload get_member(params = {})
+    # @overload get_member(**params)
     # @param [Hash] params ({})
-    def get_member(params = {}, options = {})
+    def get_member(params = {}, **options)
       req = build_request(:get_member, params)
       req.send_request(options)
     end
@@ -1835,9 +1835,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetUsageStatistics AWS API Documentation
     #
-    # @overload get_usage_statistics(params = {})
+    # @overload get_usage_statistics(**params)
     # @param [Hash] params ({})
-    def get_usage_statistics(params = {}, options = {})
+    def get_usage_statistics(params = {}, **options)
       req = build_request(:get_usage_statistics, params)
       req.send_request(options)
     end
@@ -1857,9 +1857,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetUsageTotals AWS API Documentation
     #
-    # @overload get_usage_totals(params = {})
+    # @overload get_usage_totals(**params)
     # @param [Hash] params ({})
-    def get_usage_totals(params = {}, options = {})
+    def get_usage_totals(params = {}, **options)
       req = build_request(:get_usage_totals, params)
       req.send_request(options)
     end
@@ -1933,9 +1933,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListClassificationJobs AWS API Documentation
     #
-    # @overload list_classification_jobs(params = {})
+    # @overload list_classification_jobs(**params)
     # @param [Hash] params ({})
-    def list_classification_jobs(params = {}, options = {})
+    def list_classification_jobs(params = {}, **options)
       req = build_request(:list_classification_jobs, params)
       req.send_request(options)
     end
@@ -1973,9 +1973,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListCustomDataIdentifiers AWS API Documentation
     #
-    # @overload list_custom_data_identifiers(params = {})
+    # @overload list_custom_data_identifiers(**params)
     # @param [Hash] params ({})
-    def list_custom_data_identifiers(params = {}, options = {})
+    def list_custom_data_identifiers(params = {}, **options)
       req = build_request(:list_custom_data_identifiers, params)
       req.send_request(options)
     end
@@ -2032,9 +2032,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListFindings AWS API Documentation
     #
-    # @overload list_findings(params = {})
+    # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, options = {})
+    def list_findings(params = {}, **options)
       req = build_request(:list_findings, params)
       req.send_request(options)
     end
@@ -2073,9 +2073,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListFindingsFilters AWS API Documentation
     #
-    # @overload list_findings_filters(params = {})
+    # @overload list_findings_filters(**params)
     # @param [Hash] params ({})
-    def list_findings_filters(params = {}, options = {})
+    def list_findings_filters(params = {}, **options)
       req = build_request(:list_findings_filters, params)
       req.send_request(options)
     end
@@ -2112,9 +2112,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListInvitations AWS API Documentation
     #
-    # @overload list_invitations(params = {})
+    # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, options = {})
+    def list_invitations(params = {}, **options)
       req = build_request(:list_invitations, params)
       req.send_request(options)
     end
@@ -2159,9 +2159,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListMembers AWS API Documentation
     #
-    # @overload list_members(params = {})
+    # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, options = {})
+    def list_members(params = {}, **options)
       req = build_request(:list_members, params)
       req.send_request(options)
     end
@@ -2196,9 +2196,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListOrganizationAdminAccounts AWS API Documentation
     #
-    # @overload list_organization_admin_accounts(params = {})
+    # @overload list_organization_admin_accounts(**params)
     # @param [Hash] params ({})
-    def list_organization_admin_accounts(params = {}, options = {})
+    def list_organization_admin_accounts(params = {}, **options)
       req = build_request(:list_organization_admin_accounts, params)
       req.send_request(options)
     end
@@ -2226,9 +2226,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2265,9 +2265,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/PutClassificationExportConfiguration AWS API Documentation
     #
-    # @overload put_classification_export_configuration(params = {})
+    # @overload put_classification_export_configuration(**params)
     # @param [Hash] params ({})
-    def put_classification_export_configuration(params = {}, options = {})
+    def put_classification_export_configuration(params = {}, **options)
       req = build_request(:put_classification_export_configuration, params)
       req.send_request(options)
     end
@@ -2296,9 +2296,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2335,9 +2335,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/TestCustomDataIdentifier AWS API Documentation
     #
-    # @overload test_custom_data_identifier(params = {})
+    # @overload test_custom_data_identifier(**params)
     # @param [Hash] params ({})
-    def test_custom_data_identifier(params = {}, options = {})
+    def test_custom_data_identifier(params = {}, **options)
       req = build_request(:test_custom_data_identifier, params)
       req.send_request(options)
     end
@@ -2360,9 +2360,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2385,9 +2385,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateClassificationJob AWS API Documentation
     #
-    # @overload update_classification_job(params = {})
+    # @overload update_classification_job(**params)
     # @param [Hash] params ({})
-    def update_classification_job(params = {}, options = {})
+    def update_classification_job(params = {}, **options)
       req = build_request(:update_classification_job, params)
       req.send_request(options)
     end
@@ -2446,9 +2446,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateFindingsFilter AWS API Documentation
     #
-    # @overload update_findings_filter(params = {})
+    # @overload update_findings_filter(**params)
     # @param [Hash] params ({})
-    def update_findings_filter(params = {}, options = {})
+    def update_findings_filter(params = {}, **options)
       req = build_request(:update_findings_filter, params)
       req.send_request(options)
     end
@@ -2476,9 +2476,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateMacieSession AWS API Documentation
     #
-    # @overload update_macie_session(params = {})
+    # @overload update_macie_session(**params)
     # @param [Hash] params ({})
-    def update_macie_session(params = {}, options = {})
+    def update_macie_session(params = {}, **options)
       req = build_request(:update_macie_session, params)
       req.send_request(options)
     end
@@ -2502,9 +2502,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateMemberSession AWS API Documentation
     #
-    # @overload update_member_session(params = {})
+    # @overload update_member_session(**params)
     # @param [Hash] params ({})
-    def update_member_session(params = {}, options = {})
+    def update_member_session(params = {}, **options)
       req = build_request(:update_member_session, params)
       req.send_request(options)
     end
@@ -2524,9 +2524,9 @@ module Aws::Macie2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateOrganizationConfiguration AWS API Documentation
     #
-    # @overload update_organization_configuration(params = {})
+    # @overload update_organization_configuration(**params)
     # @param [Hash] params ({})
-    def update_organization_configuration(params = {}, options = {})
+    def update_organization_configuration(params = {}, **options)
       req = build_request(:update_organization_configuration, params)
       req.send_request(options)
     end
@@ -2535,7 +2535,7 @@ module Aws::Macie2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2543,15 +2543,15 @@ module Aws::Macie2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-macie2'
-      context[:gem_version] = '1.18.0'
+      context[:gem_name] = "aws-sdk-macie2"
+      context[:gem_version] = "1.18.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

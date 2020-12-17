@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:applicationinsights)
 
@@ -290,7 +290,7 @@ module Aws::ApplicationInsights
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -391,9 +391,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/CreateApplication AWS API Documentation
     #
-    # @overload create_application(params = {})
+    # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, options = {})
+    def create_application(params = {}, **options)
       req = build_request(:create_application, params)
       req.send_request(options)
     end
@@ -422,9 +422,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/CreateComponent AWS API Documentation
     #
-    # @overload create_component(params = {})
+    # @overload create_component(**params)
     # @param [Hash] params ({})
-    def create_component(params = {}, options = {})
+    def create_component(params = {}, **options)
       req = build_request(:create_component, params)
       req.send_request(options)
     end
@@ -482,9 +482,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/CreateLogPattern AWS API Documentation
     #
-    # @overload create_log_pattern(params = {})
+    # @overload create_log_pattern(**params)
     # @param [Hash] params ({})
-    def create_log_pattern(params = {}, options = {})
+    def create_log_pattern(params = {}, **options)
       req = build_request(:create_log_pattern, params)
       req.send_request(options)
     end
@@ -505,9 +505,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DeleteApplication AWS API Documentation
     #
-    # @overload delete_application(params = {})
+    # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, options = {})
+    def delete_application(params = {}, **options)
       req = build_request(:delete_application, params)
       req.send_request(options)
     end
@@ -533,9 +533,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DeleteComponent AWS API Documentation
     #
-    # @overload delete_component(params = {})
+    # @overload delete_component(**params)
     # @param [Hash] params ({})
-    def delete_component(params = {}, options = {})
+    def delete_component(params = {}, **options)
       req = build_request(:delete_component, params)
       req.send_request(options)
     end
@@ -563,9 +563,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DeleteLogPattern AWS API Documentation
     #
-    # @overload delete_log_pattern(params = {})
+    # @overload delete_log_pattern(**params)
     # @param [Hash] params ({})
-    def delete_log_pattern(params = {}, options = {})
+    def delete_log_pattern(params = {}, **options)
       req = build_request(:delete_log_pattern, params)
       req.send_request(options)
     end
@@ -596,9 +596,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeApplication AWS API Documentation
     #
-    # @overload describe_application(params = {})
+    # @overload describe_application(**params)
     # @param [Hash] params ({})
-    def describe_application(params = {}, options = {})
+    def describe_application(params = {}, **options)
       req = build_request(:describe_application, params)
       req.send_request(options)
     end
@@ -640,9 +640,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeComponent AWS API Documentation
     #
-    # @overload describe_component(params = {})
+    # @overload describe_component(**params)
     # @param [Hash] params ({})
-    def describe_component(params = {}, options = {})
+    def describe_component(params = {}, **options)
       req = build_request(:describe_component, params)
       req.send_request(options)
     end
@@ -676,9 +676,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeComponentConfiguration AWS API Documentation
     #
-    # @overload describe_component_configuration(params = {})
+    # @overload describe_component_configuration(**params)
     # @param [Hash] params ({})
-    def describe_component_configuration(params = {}, options = {})
+    def describe_component_configuration(params = {}, **options)
       req = build_request(:describe_component_configuration, params)
       req.send_request(options)
     end
@@ -714,9 +714,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeComponentConfigurationRecommendation AWS API Documentation
     #
-    # @overload describe_component_configuration_recommendation(params = {})
+    # @overload describe_component_configuration_recommendation(**params)
     # @param [Hash] params ({})
-    def describe_component_configuration_recommendation(params = {}, options = {})
+    def describe_component_configuration_recommendation(params = {}, **options)
       req = build_request(:describe_component_configuration_recommendation, params)
       req.send_request(options)
     end
@@ -755,9 +755,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeLogPattern AWS API Documentation
     #
-    # @overload describe_log_pattern(params = {})
+    # @overload describe_log_pattern(**params)
     # @param [Hash] params ({})
-    def describe_log_pattern(params = {}, options = {})
+    def describe_log_pattern(params = {}, **options)
       req = build_request(:describe_log_pattern, params)
       req.send_request(options)
     end
@@ -827,9 +827,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeObservation AWS API Documentation
     #
-    # @overload describe_observation(params = {})
+    # @overload describe_observation(**params)
     # @param [Hash] params ({})
-    def describe_observation(params = {}, options = {})
+    def describe_observation(params = {}, **options)
       req = build_request(:describe_observation, params)
       req.send_request(options)
     end
@@ -865,9 +865,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeProblem AWS API Documentation
     #
-    # @overload describe_problem(params = {})
+    # @overload describe_problem(**params)
     # @param [Hash] params ({})
-    def describe_problem(params = {}, options = {})
+    def describe_problem(params = {}, **options)
       req = build_request(:describe_problem, params)
       req.send_request(options)
     end
@@ -938,9 +938,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/DescribeProblemObservations AWS API Documentation
     #
-    # @overload describe_problem_observations(params = {})
+    # @overload describe_problem_observations(**params)
     # @param [Hash] params ({})
-    def describe_problem_observations(params = {}, options = {})
+    def describe_problem_observations(params = {}, **options)
       req = build_request(:describe_problem_observations, params)
       req.send_request(options)
     end
@@ -982,9 +982,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListApplications AWS API Documentation
     #
-    # @overload list_applications(params = {})
+    # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, options = {})
+    def list_applications(params = {}, **options)
       req = build_request(:list_applications, params)
       req.send_request(options)
     end
@@ -1034,9 +1034,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListComponents AWS API Documentation
     #
-    # @overload list_components(params = {})
+    # @overload list_components(**params)
     # @param [Hash] params ({})
-    def list_components(params = {}, options = {})
+    def list_components(params = {}, **options)
       req = build_request(:list_components, params)
       req.send_request(options)
     end
@@ -1114,9 +1114,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListConfigurationHistory AWS API Documentation
     #
-    # @overload list_configuration_history(params = {})
+    # @overload list_configuration_history(**params)
     # @param [Hash] params ({})
-    def list_configuration_history(params = {}, options = {})
+    def list_configuration_history(params = {}, **options)
       req = build_request(:list_configuration_history, params)
       req.send_request(options)
     end
@@ -1159,9 +1159,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListLogPatternSets AWS API Documentation
     #
-    # @overload list_log_pattern_sets(params = {})
+    # @overload list_log_pattern_sets(**params)
     # @param [Hash] params ({})
-    def list_log_pattern_sets(params = {}, options = {})
+    def list_log_pattern_sets(params = {}, **options)
       req = build_request(:list_log_pattern_sets, params)
       req.send_request(options)
     end
@@ -1211,9 +1211,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListLogPatterns AWS API Documentation
     #
-    # @overload list_log_patterns(params = {})
+    # @overload list_log_patterns(**params)
     # @param [Hash] params ({})
-    def list_log_patterns(params = {}, options = {})
+    def list_log_patterns(params = {}, **options)
       req = build_request(:list_log_patterns, params)
       req.send_request(options)
     end
@@ -1275,9 +1275,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListProblems AWS API Documentation
     #
-    # @overload list_problems(params = {})
+    # @overload list_problems(**params)
     # @param [Hash] params ({})
-    def list_problems(params = {}, options = {})
+    def list_problems(params = {}, **options)
       req = build_request(:list_problems, params)
       req.send_request(options)
     end
@@ -1311,9 +1311,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1355,9 +1355,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1389,9 +1389,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1444,9 +1444,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/UpdateApplication AWS API Documentation
     #
-    # @overload update_application(params = {})
+    # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, options = {})
+    def update_application(params = {}, **options)
       req = build_request(:update_application, params)
       req.send_request(options)
     end
@@ -1479,9 +1479,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/UpdateComponent AWS API Documentation
     #
-    # @overload update_component(params = {})
+    # @overload update_component(**params)
     # @param [Hash] params ({})
-    def update_component(params = {}, options = {})
+    def update_component(params = {}, **options)
       req = build_request(:update_component, params)
       req.send_request(options)
     end
@@ -1532,9 +1532,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/UpdateComponentConfiguration AWS API Documentation
     #
-    # @overload update_component_configuration(params = {})
+    # @overload update_component_configuration(**params)
     # @param [Hash] params ({})
-    def update_component_configuration(params = {}, options = {})
+    def update_component_configuration(params = {}, **options)
       req = build_request(:update_component_configuration, params)
       req.send_request(options)
     end
@@ -1592,9 +1592,9 @@ module Aws::ApplicationInsights
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/UpdateLogPattern AWS API Documentation
     #
-    # @overload update_log_pattern(params = {})
+    # @overload update_log_pattern(**params)
     # @param [Hash] params ({})
-    def update_log_pattern(params = {}, options = {})
+    def update_log_pattern(params = {}, **options)
       req = build_request(:update_log_pattern, params)
       req.send_request(options)
     end
@@ -1603,7 +1603,7 @@ module Aws::ApplicationInsights
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1611,15 +1611,15 @@ module Aws::ApplicationInsights
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-applicationinsights'
-      context[:gem_version] = '1.16.0'
+      context[:gem_name] = "aws-sdk-applicationinsights"
+      context[:gem_version] = "1.16.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

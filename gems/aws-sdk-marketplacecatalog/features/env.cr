@@ -7,12 +7,12 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-$:.unshift(File.expand_path('../../lib', __FILE__))
-$:.unshift(File.expand_path('../../../aws-sdk-core/features', __FILE__))
-$:.unshift(File.expand_path('../../../aws-sdk-core/lib', __FILE__))
-$:.unshift(File.expand_path('../../../aws-sigv4/lib', __FILE__))
+$:.unshift(File.expand_path("../../lib", __FILE__))
+$:.unshift(File.expand_path("../../../aws-sdk-core/features", __FILE__))
+$:.unshift(File.expand_path("../../../aws-sdk-core/lib", __FILE__))
+$:.unshift(File.expand_path("../../../aws-sigv4/lib", __FILE__))
 
-require 'features_helper'
-require 'aws-sdk-marketplacecatalog'
+require "features_helper"
+require "aws-sdk-marketplacecatalog"
 
 Aws::MarketplaceCatalog::Client.add_plugin(ApiCallTracker)

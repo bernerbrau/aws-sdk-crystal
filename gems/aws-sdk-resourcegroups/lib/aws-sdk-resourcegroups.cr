@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-resourcegroups/types'
-require_relative 'aws-sdk-resourcegroups/client_api'
-require_relative 'aws-sdk-resourcegroups/client'
-require_relative 'aws-sdk-resourcegroups/errors'
-require_relative 'aws-sdk-resourcegroups/resource'
-require_relative 'aws-sdk-resourcegroups/customizations'
+require_relative "aws-sdk-resourcegroups/types"
+require_relative "aws-sdk-resourcegroups/client_api"
+require_relative "aws-sdk-resourcegroups/client"
+require_relative "aws-sdk-resourcegroups/errors"
+require_relative "aws-sdk-resourcegroups/resource"
+require_relative "aws-sdk-resourcegroups/customizations"
 
 # This module provides support for AWS Resource Groups. This module is available in the
 # `aws-sdk-resourcegroups` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-resourcegroups/customizations'
 # @!group service
 module Aws::ResourceGroups
 
-  GEM_VERSION = '1.32.0'
+  GEM_VERSION = "1.32.0"
 
 end

@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-ssm/types'
-require_relative 'aws-sdk-ssm/client_api'
-require_relative 'aws-sdk-ssm/client'
-require_relative 'aws-sdk-ssm/errors'
-require_relative 'aws-sdk-ssm/waiters'
-require_relative 'aws-sdk-ssm/resource'
-require_relative 'aws-sdk-ssm/customizations'
+require_relative "aws-sdk-ssm/types"
+require_relative "aws-sdk-ssm/client_api"
+require_relative "aws-sdk-ssm/client"
+require_relative "aws-sdk-ssm/errors"
+require_relative "aws-sdk-ssm/waiters"
+require_relative "aws-sdk-ssm/resource"
+require_relative "aws-sdk-ssm/customizations"
 
 # This module provides support for Amazon Simple Systems Manager (SSM). This module is available in the
 # `aws-sdk-ssm` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-ssm/customizations'
 # @!group service
 module Aws::SSM
 
-  GEM_VERSION = '1.100.0'
+  GEM_VERSION = "1.100.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotwireless)
 
@@ -280,7 +280,7 @@ module Aws::IoTWireless
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -360,9 +360,9 @@ module Aws::IoTWireless
     #   resp.sidewalk.amazon_id #=> String
     #   resp.sidewalk.app_server_private_key #=> String
     #
-    # @overload associate_aws_account_with_partner_account(params = {})
+    # @overload associate_aws_account_with_partner_account(**params)
     # @param [Hash] params ({})
-    def associate_aws_account_with_partner_account(params = {}, options = {})
+    def associate_aws_account_with_partner_account(params = {}, **options)
       req = build_request(:associate_aws_account_with_partner_account, params)
       req.send_request(options)
     end
@@ -384,9 +384,9 @@ module Aws::IoTWireless
     #     thing_arn: "ThingArn", # required
     #   })
     #
-    # @overload associate_wireless_device_with_thing(params = {})
+    # @overload associate_wireless_device_with_thing(**params)
     # @param [Hash] params ({})
-    def associate_wireless_device_with_thing(params = {}, options = {})
+    def associate_wireless_device_with_thing(params = {}, **options)
       req = build_request(:associate_wireless_device_with_thing, params)
       req.send_request(options)
     end
@@ -414,9 +414,9 @@ module Aws::IoTWireless
     #
     #   resp.iot_certificate_id #=> String
     #
-    # @overload associate_wireless_gateway_with_certificate(params = {})
+    # @overload associate_wireless_gateway_with_certificate(**params)
     # @param [Hash] params ({})
-    def associate_wireless_gateway_with_certificate(params = {}, options = {})
+    def associate_wireless_gateway_with_certificate(params = {}, **options)
       req = build_request(:associate_wireless_gateway_with_certificate, params)
       req.send_request(options)
     end
@@ -438,9 +438,9 @@ module Aws::IoTWireless
     #     thing_arn: "ThingArn", # required
     #   })
     #
-    # @overload associate_wireless_gateway_with_thing(params = {})
+    # @overload associate_wireless_gateway_with_thing(**params)
     # @param [Hash] params ({})
-    def associate_wireless_gateway_with_thing(params = {}, options = {})
+    def associate_wireless_gateway_with_thing(params = {}, **options)
       req = build_request(:associate_wireless_gateway_with_thing, params)
       req.send_request(options)
     end
@@ -503,9 +503,9 @@ module Aws::IoTWireless
     #   resp.arn #=> String
     #   resp.name #=> String
     #
-    # @overload create_destination(params = {})
+    # @overload create_destination(**params)
     # @param [Hash] params ({})
-    def create_destination(params = {}, options = {})
+    def create_destination(params = {}, **options)
       req = build_request(:create_destination, params)
       req.send_request(options)
     end
@@ -575,9 +575,9 @@ module Aws::IoTWireless
     #   resp.arn #=> String
     #   resp.id #=> String
     #
-    # @overload create_device_profile(params = {})
+    # @overload create_device_profile(**params)
     # @param [Hash] params ({})
-    def create_device_profile(params = {}, options = {})
+    def create_device_profile(params = {}, **options)
       req = build_request(:create_device_profile, params)
       req.send_request(options)
     end
@@ -629,9 +629,9 @@ module Aws::IoTWireless
     #   resp.arn #=> String
     #   resp.id #=> String
     #
-    # @overload create_service_profile(params = {})
+    # @overload create_service_profile(**params)
     # @param [Hash] params ({})
-    def create_service_profile(params = {}, options = {})
+    def create_service_profile(params = {}, **options)
       req = build_request(:create_service_profile, params)
       req.send_request(options)
     end
@@ -713,9 +713,9 @@ module Aws::IoTWireless
     #   resp.arn #=> String
     #   resp.id #=> String
     #
-    # @overload create_wireless_device(params = {})
+    # @overload create_wireless_device(**params)
     # @param [Hash] params ({})
-    def create_wireless_device(params = {}, options = {})
+    def create_wireless_device(params = {}, **options)
       req = build_request(:create_wireless_device, params)
       req.send_request(options)
     end
@@ -773,9 +773,9 @@ module Aws::IoTWireless
     #   resp.arn #=> String
     #   resp.id #=> String
     #
-    # @overload create_wireless_gateway(params = {})
+    # @overload create_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def create_wireless_gateway(params = {}, options = {})
+    def create_wireless_gateway(params = {}, **options)
       req = build_request(:create_wireless_gateway, params)
       req.send_request(options)
     end
@@ -805,9 +805,9 @@ module Aws::IoTWireless
     #   resp.wireless_gateway_task_definition_id #=> String
     #   resp.status #=> String, one of "PENDING", "IN_PROGRESS", "FIRST_RETRY", "SECOND_RETRY", "COMPLETED", "FAILED"
     #
-    # @overload create_wireless_gateway_task(params = {})
+    # @overload create_wireless_gateway_task(**params)
     # @param [Hash] params ({})
-    def create_wireless_gateway_task(params = {}, options = {})
+    def create_wireless_gateway_task(params = {}, **options)
       req = build_request(:create_wireless_gateway_task, params)
       req.send_request(options)
     end
@@ -868,9 +868,9 @@ module Aws::IoTWireless
     #
     #   resp.id #=> String
     #
-    # @overload create_wireless_gateway_task_definition(params = {})
+    # @overload create_wireless_gateway_task_definition(**params)
     # @param [Hash] params ({})
-    def create_wireless_gateway_task_definition(params = {}, options = {})
+    def create_wireless_gateway_task_definition(params = {}, **options)
       req = build_request(:create_wireless_gateway_task_definition, params)
       req.send_request(options)
     end
@@ -888,9 +888,9 @@ module Aws::IoTWireless
     #     name: "DestinationName", # required
     #   })
     #
-    # @overload delete_destination(params = {})
+    # @overload delete_destination(**params)
     # @param [Hash] params ({})
-    def delete_destination(params = {}, options = {})
+    def delete_destination(params = {}, **options)
       req = build_request(:delete_destination, params)
       req.send_request(options)
     end
@@ -908,9 +908,9 @@ module Aws::IoTWireless
     #     id: "DeviceProfileId", # required
     #   })
     #
-    # @overload delete_device_profile(params = {})
+    # @overload delete_device_profile(**params)
     # @param [Hash] params ({})
-    def delete_device_profile(params = {}, options = {})
+    def delete_device_profile(params = {}, **options)
       req = build_request(:delete_device_profile, params)
       req.send_request(options)
     end
@@ -928,9 +928,9 @@ module Aws::IoTWireless
     #     id: "ServiceProfileId", # required
     #   })
     #
-    # @overload delete_service_profile(params = {})
+    # @overload delete_service_profile(**params)
     # @param [Hash] params ({})
-    def delete_service_profile(params = {}, options = {})
+    def delete_service_profile(params = {}, **options)
       req = build_request(:delete_service_profile, params)
       req.send_request(options)
     end
@@ -948,9 +948,9 @@ module Aws::IoTWireless
     #     id: "WirelessDeviceId", # required
     #   })
     #
-    # @overload delete_wireless_device(params = {})
+    # @overload delete_wireless_device(**params)
     # @param [Hash] params ({})
-    def delete_wireless_device(params = {}, options = {})
+    def delete_wireless_device(params = {}, **options)
       req = build_request(:delete_wireless_device, params)
       req.send_request(options)
     end
@@ -968,9 +968,9 @@ module Aws::IoTWireless
     #     id: "WirelessGatewayId", # required
     #   })
     #
-    # @overload delete_wireless_gateway(params = {})
+    # @overload delete_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def delete_wireless_gateway(params = {}, options = {})
+    def delete_wireless_gateway(params = {}, **options)
       req = build_request(:delete_wireless_gateway, params)
       req.send_request(options)
     end
@@ -988,9 +988,9 @@ module Aws::IoTWireless
     #     id: "WirelessGatewayId", # required
     #   })
     #
-    # @overload delete_wireless_gateway_task(params = {})
+    # @overload delete_wireless_gateway_task(**params)
     # @param [Hash] params ({})
-    def delete_wireless_gateway_task(params = {}, options = {})
+    def delete_wireless_gateway_task(params = {}, **options)
       req = build_request(:delete_wireless_gateway_task, params)
       req.send_request(options)
     end
@@ -1009,9 +1009,9 @@ module Aws::IoTWireless
     #     id: "WirelessGatewayTaskDefinitionId", # required
     #   })
     #
-    # @overload delete_wireless_gateway_task_definition(params = {})
+    # @overload delete_wireless_gateway_task_definition(**params)
     # @param [Hash] params ({})
-    def delete_wireless_gateway_task_definition(params = {}, options = {})
+    def delete_wireless_gateway_task_definition(params = {}, **options)
       req = build_request(:delete_wireless_gateway_task_definition, params)
       req.send_request(options)
     end
@@ -1035,9 +1035,9 @@ module Aws::IoTWireless
     #     partner_type: "Sidewalk", # required, accepts Sidewalk
     #   })
     #
-    # @overload disassociate_aws_account_from_partner_account(params = {})
+    # @overload disassociate_aws_account_from_partner_account(**params)
     # @param [Hash] params ({})
-    def disassociate_aws_account_from_partner_account(params = {}, options = {})
+    def disassociate_aws_account_from_partner_account(params = {}, **options)
       req = build_request(:disassociate_aws_account_from_partner_account, params)
       req.send_request(options)
     end
@@ -1055,9 +1055,9 @@ module Aws::IoTWireless
     #     id: "WirelessDeviceId", # required
     #   })
     #
-    # @overload disassociate_wireless_device_from_thing(params = {})
+    # @overload disassociate_wireless_device_from_thing(**params)
     # @param [Hash] params ({})
-    def disassociate_wireless_device_from_thing(params = {}, options = {})
+    def disassociate_wireless_device_from_thing(params = {}, **options)
       req = build_request(:disassociate_wireless_device_from_thing, params)
       req.send_request(options)
     end
@@ -1076,9 +1076,9 @@ module Aws::IoTWireless
     #     id: "WirelessGatewayId", # required
     #   })
     #
-    # @overload disassociate_wireless_gateway_from_certificate(params = {})
+    # @overload disassociate_wireless_gateway_from_certificate(**params)
     # @param [Hash] params ({})
-    def disassociate_wireless_gateway_from_certificate(params = {}, options = {})
+    def disassociate_wireless_gateway_from_certificate(params = {}, **options)
       req = build_request(:disassociate_wireless_gateway_from_certificate, params)
       req.send_request(options)
     end
@@ -1096,9 +1096,9 @@ module Aws::IoTWireless
     #     id: "WirelessGatewayId", # required
     #   })
     #
-    # @overload disassociate_wireless_gateway_from_thing(params = {})
+    # @overload disassociate_wireless_gateway_from_thing(**params)
     # @param [Hash] params ({})
-    def disassociate_wireless_gateway_from_thing(params = {}, options = {})
+    def disassociate_wireless_gateway_from_thing(params = {}, **options)
       req = build_request(:disassociate_wireless_gateway_from_thing, params)
       req.send_request(options)
     end
@@ -1132,9 +1132,9 @@ module Aws::IoTWireless
     #   resp.description #=> String
     #   resp.role_arn #=> String
     #
-    # @overload get_destination(params = {})
+    # @overload get_destination(**params)
     # @param [Hash] params ({})
-    def get_destination(params = {}, options = {})
+    def get_destination(params = {}, **options)
       req = build_request(:get_destination, params)
       req.send_request(options)
     end
@@ -1183,9 +1183,9 @@ module Aws::IoTWireless
     #   resp.lo_ra_wan.supports_join #=> Boolean
     #   resp.lo_ra_wan.supports_32_bit_f_cnt #=> Boolean
     #
-    # @overload get_device_profile(params = {})
+    # @overload get_device_profile(**params)
     # @param [Hash] params ({})
-    def get_device_profile(params = {}, options = {})
+    def get_device_profile(params = {}, **options)
       req = build_request(:get_device_profile, params)
       req.send_request(options)
     end
@@ -1217,9 +1217,9 @@ module Aws::IoTWireless
     #   resp.sidewalk.app_server_private_key #=> String
     #   resp.account_linked #=> Boolean
     #
-    # @overload get_partner_account(params = {})
+    # @overload get_partner_account(**params)
     # @param [Hash] params ({})
-    def get_partner_account(params = {}, options = {})
+    def get_partner_account(params = {}, **options)
       req = build_request(:get_partner_account, params)
       req.send_request(options)
     end
@@ -1250,9 +1250,9 @@ module Aws::IoTWireless
     #   resp.service_endpoint #=> String
     #   resp.server_trust #=> String
     #
-    # @overload get_service_endpoint(params = {})
+    # @overload get_service_endpoint(**params)
     # @param [Hash] params ({})
-    def get_service_endpoint(params = {}, options = {})
+    def get_service_endpoint(params = {}, **options)
       req = build_request(:get_service_endpoint, params)
       req.send_request(options)
     end
@@ -1300,9 +1300,9 @@ module Aws::IoTWireless
     #   resp.lo_ra_wan.target_per #=> Integer
     #   resp.lo_ra_wan.min_gw_diversity #=> Integer
     #
-    # @overload get_service_profile(params = {})
+    # @overload get_service_profile(**params)
     # @param [Hash] params ({})
-    def get_service_profile(params = {}, options = {})
+    def get_service_profile(params = {}, **options)
       req = build_request(:get_service_profile, params)
       req.send_request(options)
     end
@@ -1361,9 +1361,9 @@ module Aws::IoTWireless
     #   resp.lo_ra_wan.abp_v1_0_x.session_keys.nwk_s_key #=> String
     #   resp.lo_ra_wan.abp_v1_0_x.session_keys.app_s_key #=> String
     #
-    # @overload get_wireless_device(params = {})
+    # @overload get_wireless_device(**params)
     # @param [Hash] params ({})
-    def get_wireless_device(params = {}, options = {})
+    def get_wireless_device(params = {}, **options)
       req = build_request(:get_wireless_device, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::IoTWireless
     #   resp.lo_ra_wan.gateways[0].snr #=> Float
     #   resp.lo_ra_wan.gateways[0].rssi #=> Float
     #
-    # @overload get_wireless_device_statistics(params = {})
+    # @overload get_wireless_device_statistics(**params)
     # @param [Hash] params ({})
-    def get_wireless_device_statistics(params = {}, options = {})
+    def get_wireless_device_statistics(params = {}, **options)
       req = build_request(:get_wireless_device_statistics, params)
       req.send_request(options)
     end
@@ -1442,9 +1442,9 @@ module Aws::IoTWireless
     #   resp.thing_name #=> String
     #   resp.thing_arn #=> String
     #
-    # @overload get_wireless_gateway(params = {})
+    # @overload get_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway(params = {}, options = {})
+    def get_wireless_gateway(params = {}, **options)
       req = build_request(:get_wireless_gateway, params)
       req.send_request(options)
     end
@@ -1469,9 +1469,9 @@ module Aws::IoTWireless
     #
     #   resp.iot_certificate_id #=> String
     #
-    # @overload get_wireless_gateway_certificate(params = {})
+    # @overload get_wireless_gateway_certificate(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_certificate(params = {}, options = {})
+    def get_wireless_gateway_certificate(params = {}, **options)
       req = build_request(:get_wireless_gateway_certificate, params)
       req.send_request(options)
     end
@@ -1498,9 +1498,9 @@ module Aws::IoTWireless
     #   resp.lo_ra_wan.current_version.model #=> String
     #   resp.lo_ra_wan.current_version.station #=> String
     #
-    # @overload get_wireless_gateway_firmware_information(params = {})
+    # @overload get_wireless_gateway_firmware_information(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_firmware_information(params = {}, options = {})
+    def get_wireless_gateway_firmware_information(params = {}, **options)
       req = build_request(:get_wireless_gateway_firmware_information, params)
       req.send_request(options)
     end
@@ -1526,9 +1526,9 @@ module Aws::IoTWireless
     #   resp.wireless_gateway_id #=> String
     #   resp.last_uplink_received_at #=> String
     #
-    # @overload get_wireless_gateway_statistics(params = {})
+    # @overload get_wireless_gateway_statistics(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_statistics(params = {}, options = {})
+    def get_wireless_gateway_statistics(params = {}, **options)
       req = build_request(:get_wireless_gateway_statistics, params)
       req.send_request(options)
     end
@@ -1560,9 +1560,9 @@ module Aws::IoTWireless
     #   resp.task_created_at #=> String
     #   resp.status #=> String, one of "PENDING", "IN_PROGRESS", "FIRST_RETRY", "SECOND_RETRY", "COMPLETED", "FAILED"
     #
-    # @overload get_wireless_gateway_task(params = {})
+    # @overload get_wireless_gateway_task(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_task(params = {}, options = {})
+    def get_wireless_gateway_task(params = {}, **options)
       req = build_request(:get_wireless_gateway_task, params)
       req.send_request(options)
     end
@@ -1599,9 +1599,9 @@ module Aws::IoTWireless
     #   resp.update.lo_ra_wan.update_version.model #=> String
     #   resp.update.lo_ra_wan.update_version.station #=> String
     #
-    # @overload get_wireless_gateway_task_definition(params = {})
+    # @overload get_wireless_gateway_task_definition(**params)
     # @param [Hash] params ({})
-    def get_wireless_gateway_task_definition(params = {}, options = {})
+    def get_wireless_gateway_task_definition(params = {}, **options)
       req = build_request(:get_wireless_gateway_task_definition, params)
       req.send_request(options)
     end
@@ -1641,9 +1641,9 @@ module Aws::IoTWireless
     #   resp.destination_list[0].description #=> String
     #   resp.destination_list[0].role_arn #=> String
     #
-    # @overload list_destinations(params = {})
+    # @overload list_destinations(**params)
     # @param [Hash] params ({})
-    def list_destinations(params = {}, options = {})
+    def list_destinations(params = {}, **options)
       req = build_request(:list_destinations, params)
       req.send_request(options)
     end
@@ -1680,9 +1680,9 @@ module Aws::IoTWireless
     #   resp.device_profile_list[0].name #=> String
     #   resp.device_profile_list[0].id #=> String
     #
-    # @overload list_device_profiles(params = {})
+    # @overload list_device_profiles(**params)
     # @param [Hash] params ({})
-    def list_device_profiles(params = {}, options = {})
+    def list_device_profiles(params = {}, **options)
       req = build_request(:list_device_profiles, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::IoTWireless
     #   resp.sidewalk[0].amazon_id #=> String
     #   resp.sidewalk[0].app_server_private_key #=> String
     #
-    # @overload list_partner_accounts(params = {})
+    # @overload list_partner_accounts(**params)
     # @param [Hash] params ({})
-    def list_partner_accounts(params = {}, options = {})
+    def list_partner_accounts(params = {}, **options)
       req = build_request(:list_partner_accounts, params)
       req.send_request(options)
     end
@@ -1755,9 +1755,9 @@ module Aws::IoTWireless
     #   resp.service_profile_list[0].name #=> String
     #   resp.service_profile_list[0].id #=> String
     #
-    # @overload list_service_profiles(params = {})
+    # @overload list_service_profiles(**params)
     # @param [Hash] params ({})
-    def list_service_profiles(params = {}, options = {})
+    def list_service_profiles(params = {}, **options)
       req = build_request(:list_service_profiles, params)
       req.send_request(options)
     end
@@ -1783,9 +1783,9 @@ module Aws::IoTWireless
     #   resp.tags[0].key #=> String
     #   resp.tags[0].value #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1846,9 +1846,9 @@ module Aws::IoTWireless
     #   resp.wireless_device_list[0].lo_ra_wan.dev_eui #=> String
     #   resp.wireless_device_list[0].sidewalk.amazon_id #=> String
     #
-    # @overload list_wireless_devices(params = {})
+    # @overload list_wireless_devices(**params)
     # @param [Hash] params ({})
-    def list_wireless_devices(params = {}, options = {})
+    def list_wireless_devices(params = {}, **options)
       req = build_request(:list_wireless_devices, params)
       req.send_request(options)
     end
@@ -1893,9 +1893,9 @@ module Aws::IoTWireless
     #   resp.task_definitions[0].lo_ra_wan.update_version.model #=> String
     #   resp.task_definitions[0].lo_ra_wan.update_version.station #=> String
     #
-    # @overload list_wireless_gateway_task_definitions(params = {})
+    # @overload list_wireless_gateway_task_definitions(**params)
     # @param [Hash] params ({})
-    def list_wireless_gateway_task_definitions(params = {}, options = {})
+    def list_wireless_gateway_task_definitions(params = {}, **options)
       req = build_request(:list_wireless_gateway_task_definitions, params)
       req.send_request(options)
     end
@@ -1936,9 +1936,9 @@ module Aws::IoTWireless
     #   resp.wireless_gateway_list[0].lo_ra_wan.rf_region #=> String
     #   resp.wireless_gateway_list[0].last_uplink_received_at #=> String
     #
-    # @overload list_wireless_gateways(params = {})
+    # @overload list_wireless_gateways(**params)
     # @param [Hash] params ({})
-    def list_wireless_gateways(params = {}, options = {})
+    def list_wireless_gateways(params = {}, **options)
       req = build_request(:list_wireless_gateways, params)
       req.send_request(options)
     end
@@ -1983,9 +1983,9 @@ module Aws::IoTWireless
     #
     #   resp.message_id #=> String
     #
-    # @overload send_data_to_wireless_device(params = {})
+    # @overload send_data_to_wireless_device(**params)
     # @param [Hash] params ({})
-    def send_data_to_wireless_device(params = {}, options = {})
+    def send_data_to_wireless_device(params = {}, **options)
       req = build_request(:send_data_to_wireless_device, params)
       req.send_request(options)
     end
@@ -2013,9 +2013,9 @@ module Aws::IoTWireless
     #     ],
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2040,9 +2040,9 @@ module Aws::IoTWireless
     #
     #   resp.result #=> String
     #
-    # @overload test_wireless_device(params = {})
+    # @overload test_wireless_device(**params)
     # @param [Hash] params ({})
-    def test_wireless_device(params = {}, options = {})
+    def test_wireless_device(params = {}, **options)
       req = build_request(:test_wireless_device, params)
       req.send_request(options)
     end
@@ -2064,9 +2064,9 @@ module Aws::IoTWireless
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2100,9 +2100,9 @@ module Aws::IoTWireless
     #     role_arn: "RoleArn",
     #   })
     #
-    # @overload update_destination(params = {})
+    # @overload update_destination(**params)
     # @param [Hash] params ({})
-    def update_destination(params = {}, options = {})
+    def update_destination(params = {}, **options)
       req = build_request(:update_destination, params)
       req.send_request(options)
     end
@@ -2130,9 +2130,9 @@ module Aws::IoTWireless
     #     partner_type: "Sidewalk", # required, accepts Sidewalk
     #   })
     #
-    # @overload update_partner_account(params = {})
+    # @overload update_partner_account(**params)
     # @param [Hash] params ({})
-    def update_partner_account(params = {}, options = {})
+    def update_partner_account(params = {}, **options)
       req = build_request(:update_partner_account, params)
       req.send_request(options)
     end
@@ -2169,9 +2169,9 @@ module Aws::IoTWireless
     #     },
     #   })
     #
-    # @overload update_wireless_device(params = {})
+    # @overload update_wireless_device(**params)
     # @param [Hash] params ({})
-    def update_wireless_device(params = {}, options = {})
+    def update_wireless_device(params = {}, **options)
       req = build_request(:update_wireless_device, params)
       req.send_request(options)
     end
@@ -2197,9 +2197,9 @@ module Aws::IoTWireless
     #     description: "Description",
     #   })
     #
-    # @overload update_wireless_gateway(params = {})
+    # @overload update_wireless_gateway(**params)
     # @param [Hash] params ({})
-    def update_wireless_gateway(params = {}, options = {})
+    def update_wireless_gateway(params = {}, **options)
       req = build_request(:update_wireless_gateway, params)
       req.send_request(options)
     end
@@ -2208,7 +2208,7 @@ module Aws::IoTWireless
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2216,15 +2216,15 @@ module Aws::IoTWireless
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotwireless'
-      context[:gem_version] = '1.0.0'
+      context[:gem_name] = "aws-sdk-iotwireless"
+      context[:gem_version] = "1.0.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

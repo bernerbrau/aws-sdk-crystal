@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:servicecatalog)
 
@@ -290,7 +290,7 @@ module Aws::ServiceCatalog
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -378,9 +378,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/AcceptPortfolioShare AWS API Documentation
     #
-    # @overload accept_portfolio_share(params = {})
+    # @overload accept_portfolio_share(**params)
     # @param [Hash] params ({})
-    def accept_portfolio_share(params = {}, options = {})
+    def accept_portfolio_share(params = {}, **options)
       req = build_request(:accept_portfolio_share, params)
       req.send_request(options)
     end
@@ -404,9 +404,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/AssociateBudgetWithResource AWS API Documentation
     #
-    # @overload associate_budget_with_resource(params = {})
+    # @overload associate_budget_with_resource(**params)
     # @param [Hash] params ({})
-    def associate_budget_with_resource(params = {}, options = {})
+    def associate_budget_with_resource(params = {}, **options)
       req = build_request(:associate_budget_with_resource, params)
       req.send_request(options)
     end
@@ -444,9 +444,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/AssociatePrincipalWithPortfolio AWS API Documentation
     #
-    # @overload associate_principal_with_portfolio(params = {})
+    # @overload associate_principal_with_portfolio(**params)
     # @param [Hash] params ({})
-    def associate_principal_with_portfolio(params = {}, options = {})
+    def associate_principal_with_portfolio(params = {}, **options)
       req = build_request(:associate_principal_with_portfolio, params)
       req.send_request(options)
     end
@@ -486,9 +486,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/AssociateProductWithPortfolio AWS API Documentation
     #
-    # @overload associate_product_with_portfolio(params = {})
+    # @overload associate_product_with_portfolio(**params)
     # @param [Hash] params ({})
-    def associate_product_with_portfolio(params = {}, options = {})
+    def associate_product_with_portfolio(params = {}, **options)
       req = build_request(:associate_product_with_portfolio, params)
       req.send_request(options)
     end
@@ -527,9 +527,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/AssociateServiceActionWithProvisioningArtifact AWS API Documentation
     #
-    # @overload associate_service_action_with_provisioning_artifact(params = {})
+    # @overload associate_service_action_with_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def associate_service_action_with_provisioning_artifact(params = {}, options = {})
+    def associate_service_action_with_provisioning_artifact(params = {}, **options)
       req = build_request(:associate_service_action_with_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -554,9 +554,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/AssociateTagOptionWithResource AWS API Documentation
     #
-    # @overload associate_tag_option_with_resource(params = {})
+    # @overload associate_tag_option_with_resource(**params)
     # @param [Hash] params ({})
-    def associate_tag_option_with_resource(params = {}, options = {})
+    def associate_tag_option_with_resource(params = {}, **options)
       req = build_request(:associate_tag_option_with_resource, params)
       req.send_request(options)
     end
@@ -604,9 +604,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/BatchAssociateServiceActionWithProvisioningArtifact AWS API Documentation
     #
-    # @overload batch_associate_service_action_with_provisioning_artifact(params = {})
+    # @overload batch_associate_service_action_with_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def batch_associate_service_action_with_provisioning_artifact(params = {}, options = {})
+    def batch_associate_service_action_with_provisioning_artifact(params = {}, **options)
       req = build_request(:batch_associate_service_action_with_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -655,9 +655,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/BatchDisassociateServiceActionFromProvisioningArtifact AWS API Documentation
     #
-    # @overload batch_disassociate_service_action_from_provisioning_artifact(params = {})
+    # @overload batch_disassociate_service_action_from_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_service_action_from_provisioning_artifact(params = {}, options = {})
+    def batch_disassociate_service_action_from_provisioning_artifact(params = {}, **options)
       req = build_request(:batch_disassociate_service_action_from_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -734,9 +734,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CopyProduct AWS API Documentation
     #
-    # @overload copy_product(params = {})
+    # @overload copy_product(**params)
     # @param [Hash] params ({})
-    def copy_product(params = {}, options = {})
+    def copy_product(params = {}, **options)
       req = build_request(:copy_product, params)
       req.send_request(options)
     end
@@ -890,9 +890,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreateConstraint AWS API Documentation
     #
-    # @overload create_constraint(params = {})
+    # @overload create_constraint(**params)
     # @param [Hash] params ({})
-    def create_constraint(params = {}, options = {})
+    def create_constraint(params = {}, **options)
       req = build_request(:create_constraint, params)
       req.send_request(options)
     end
@@ -965,9 +965,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreatePortfolio AWS API Documentation
     #
-    # @overload create_portfolio(params = {})
+    # @overload create_portfolio(**params)
     # @param [Hash] params ({})
-    def create_portfolio(params = {}, options = {})
+    def create_portfolio(params = {}, **options)
       req = build_request(:create_portfolio, params)
       req.send_request(options)
     end
@@ -1032,9 +1032,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreatePortfolioShare AWS API Documentation
     #
-    # @overload create_portfolio_share(params = {})
+    # @overload create_portfolio_share(**params)
     # @param [Hash] params ({})
-    def create_portfolio_share(params = {}, options = {})
+    def create_portfolio_share(params = {}, **options)
       req = build_request(:create_portfolio_share, params)
       req.send_request(options)
     end
@@ -1156,9 +1156,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreateProduct AWS API Documentation
     #
-    # @overload create_product(params = {})
+    # @overload create_product(**params)
     # @param [Hash] params ({})
-    def create_product(params = {}, options = {})
+    def create_product(params = {}, **options)
       req = build_request(:create_product, params)
       req.send_request(options)
     end
@@ -1275,9 +1275,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreateProvisionedProductPlan AWS API Documentation
     #
-    # @overload create_provisioned_product_plan(params = {})
+    # @overload create_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def create_provisioned_product_plan(params = {}, options = {})
+    def create_provisioned_product_plan(params = {}, **options)
       req = build_request(:create_provisioned_product_plan, params)
       req.send_request(options)
     end
@@ -1350,9 +1350,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreateProvisioningArtifact AWS API Documentation
     #
-    # @overload create_provisioning_artifact(params = {})
+    # @overload create_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def create_provisioning_artifact(params = {}, options = {})
+    def create_provisioning_artifact(params = {}, **options)
       req = build_request(:create_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreateServiceAction AWS API Documentation
     #
-    # @overload create_service_action(params = {})
+    # @overload create_service_action(**params)
     # @param [Hash] params ({})
-    def create_service_action(params = {}, options = {})
+    def create_service_action(params = {}, **options)
       req = build_request(:create_service_action, params)
       req.send_request(options)
     end
@@ -1480,9 +1480,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/CreateTagOption AWS API Documentation
     #
-    # @overload create_tag_option(params = {})
+    # @overload create_tag_option(**params)
     # @param [Hash] params ({})
-    def create_tag_option(params = {}, options = {})
+    def create_tag_option(params = {}, **options)
       req = build_request(:create_tag_option, params)
       req.send_request(options)
     end
@@ -1514,9 +1514,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeleteConstraint AWS API Documentation
     #
-    # @overload delete_constraint(params = {})
+    # @overload delete_constraint(**params)
     # @param [Hash] params ({})
-    def delete_constraint(params = {}, options = {})
+    def delete_constraint(params = {}, **options)
       req = build_request(:delete_constraint, params)
       req.send_request(options)
     end
@@ -1551,9 +1551,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeletePortfolio AWS API Documentation
     #
-    # @overload delete_portfolio(params = {})
+    # @overload delete_portfolio(**params)
     # @param [Hash] params ({})
-    def delete_portfolio(params = {}, options = {})
+    def delete_portfolio(params = {}, **options)
       req = build_request(:delete_portfolio, params)
       req.send_request(options)
     end
@@ -1606,9 +1606,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeletePortfolioShare AWS API Documentation
     #
-    # @overload delete_portfolio_share(params = {})
+    # @overload delete_portfolio_share(**params)
     # @param [Hash] params ({})
-    def delete_portfolio_share(params = {}, options = {})
+    def delete_portfolio_share(params = {}, **options)
       req = build_request(:delete_portfolio_share, params)
       req.send_request(options)
     end
@@ -1643,9 +1643,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeleteProduct AWS API Documentation
     #
-    # @overload delete_product(params = {})
+    # @overload delete_product(**params)
     # @param [Hash] params ({})
-    def delete_product(params = {}, options = {})
+    def delete_product(params = {}, **options)
       req = build_request(:delete_product, params)
       req.send_request(options)
     end
@@ -1680,9 +1680,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeleteProvisionedProductPlan AWS API Documentation
     #
-    # @overload delete_provisioned_product_plan(params = {})
+    # @overload delete_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def delete_provisioned_product_plan(params = {}, options = {})
+    def delete_provisioned_product_plan(params = {}, **options)
       req = build_request(:delete_provisioned_product_plan, params)
       req.send_request(options)
     end
@@ -1722,9 +1722,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeleteProvisioningArtifact AWS API Documentation
     #
-    # @overload delete_provisioning_artifact(params = {})
+    # @overload delete_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def delete_provisioning_artifact(params = {}, options = {})
+    def delete_provisioning_artifact(params = {}, **options)
       req = build_request(:delete_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -1754,9 +1754,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeleteServiceAction AWS API Documentation
     #
-    # @overload delete_service_action(params = {})
+    # @overload delete_service_action(**params)
     # @param [Hash] params ({})
-    def delete_service_action(params = {}, options = {})
+    def delete_service_action(params = {}, **options)
       req = build_request(:delete_service_action, params)
       req.send_request(options)
     end
@@ -1779,9 +1779,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DeleteTagOption AWS API Documentation
     #
-    # @overload delete_tag_option(params = {})
+    # @overload delete_tag_option(**params)
     # @param [Hash] params ({})
-    def delete_tag_option(params = {}, options = {})
+    def delete_tag_option(params = {}, **options)
       req = build_request(:delete_tag_option, params)
       req.send_request(options)
     end
@@ -1826,9 +1826,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeConstraint AWS API Documentation
     #
-    # @overload describe_constraint(params = {})
+    # @overload describe_constraint(**params)
     # @param [Hash] params ({})
-    def describe_constraint(params = {}, options = {})
+    def describe_constraint(params = {}, **options)
       req = build_request(:describe_constraint, params)
       req.send_request(options)
     end
@@ -1869,9 +1869,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeCopyProductStatus AWS API Documentation
     #
-    # @overload describe_copy_product_status(params = {})
+    # @overload describe_copy_product_status(**params)
     # @param [Hash] params ({})
-    def describe_copy_product_status(params = {}, options = {})
+    def describe_copy_product_status(params = {}, **options)
       req = build_request(:describe_copy_product_status, params)
       req.send_request(options)
     end
@@ -1927,9 +1927,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribePortfolio AWS API Documentation
     #
-    # @overload describe_portfolio(params = {})
+    # @overload describe_portfolio(**params)
     # @param [Hash] params ({})
-    def describe_portfolio(params = {}, options = {})
+    def describe_portfolio(params = {}, **options)
       req = build_request(:describe_portfolio, params)
       req.send_request(options)
     end
@@ -1972,9 +1972,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribePortfolioShareStatus AWS API Documentation
     #
-    # @overload describe_portfolio_share_status(params = {})
+    # @overload describe_portfolio_share_status(**params)
     # @param [Hash] params ({})
-    def describe_portfolio_share_status(params = {}, options = {})
+    def describe_portfolio_share_status(params = {}, **options)
       req = build_request(:describe_portfolio_share_status, params)
       req.send_request(options)
     end
@@ -2038,9 +2038,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProduct AWS API Documentation
     #
-    # @overload describe_product(params = {})
+    # @overload describe_product(**params)
     # @param [Hash] params ({})
-    def describe_product(params = {}, options = {})
+    def describe_product(params = {}, **options)
       req = build_request(:describe_product, params)
       req.send_request(options)
     end
@@ -2115,9 +2115,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProductAsAdmin AWS API Documentation
     #
-    # @overload describe_product_as_admin(params = {})
+    # @overload describe_product_as_admin(**params)
     # @param [Hash] params ({})
-    def describe_product_as_admin(params = {}, options = {})
+    def describe_product_as_admin(params = {}, **options)
       req = build_request(:describe_product_as_admin, params)
       req.send_request(options)
     end
@@ -2170,9 +2170,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProductView AWS API Documentation
     #
-    # @overload describe_product_view(params = {})
+    # @overload describe_product_view(**params)
     # @param [Hash] params ({})
-    def describe_product_view(params = {}, options = {})
+    def describe_product_view(params = {}, **options)
       req = build_request(:describe_product_view, params)
       req.send_request(options)
     end
@@ -2236,9 +2236,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProvisionedProduct AWS API Documentation
     #
-    # @overload describe_provisioned_product(params = {})
+    # @overload describe_provisioned_product(**params)
     # @param [Hash] params ({})
-    def describe_provisioned_product(params = {}, options = {})
+    def describe_provisioned_product(params = {}, **options)
       req = build_request(:describe_provisioned_product, params)
       req.send_request(options)
     end
@@ -2320,9 +2320,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProvisionedProductPlan AWS API Documentation
     #
-    # @overload describe_provisioned_product_plan(params = {})
+    # @overload describe_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def describe_provisioned_product_plan(params = {}, options = {})
+    def describe_provisioned_product_plan(params = {}, **options)
       req = build_request(:describe_provisioned_product_plan, params)
       req.send_request(options)
     end
@@ -2386,9 +2386,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProvisioningArtifact AWS API Documentation
     #
-    # @overload describe_provisioning_artifact(params = {})
+    # @overload describe_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_artifact(params = {}, options = {})
+    def describe_provisioning_artifact(params = {}, **options)
       req = build_request(:describe_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -2489,9 +2489,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeProvisioningParameters AWS API Documentation
     #
-    # @overload describe_provisioning_parameters(params = {})
+    # @overload describe_provisioning_parameters(**params)
     # @param [Hash] params ({})
-    def describe_provisioning_parameters(params = {}, options = {})
+    def describe_provisioning_parameters(params = {}, **options)
       req = build_request(:describe_provisioning_parameters, params)
       req.send_request(options)
     end
@@ -2574,9 +2574,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeRecord AWS API Documentation
     #
-    # @overload describe_record(params = {})
+    # @overload describe_record(**params)
     # @param [Hash] params ({})
-    def describe_record(params = {}, options = {})
+    def describe_record(params = {}, **options)
       req = build_request(:describe_record, params)
       req.send_request(options)
     end
@@ -2617,9 +2617,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeServiceAction AWS API Documentation
     #
-    # @overload describe_service_action(params = {})
+    # @overload describe_service_action(**params)
     # @param [Hash] params ({})
-    def describe_service_action(params = {}, options = {})
+    def describe_service_action(params = {}, **options)
       req = build_request(:describe_service_action, params)
       req.send_request(options)
     end
@@ -2665,9 +2665,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeServiceActionExecutionParameters AWS API Documentation
     #
-    # @overload describe_service_action_execution_parameters(params = {})
+    # @overload describe_service_action_execution_parameters(**params)
     # @param [Hash] params ({})
-    def describe_service_action_execution_parameters(params = {}, options = {})
+    def describe_service_action_execution_parameters(params = {}, **options)
       req = build_request(:describe_service_action_execution_parameters, params)
       req.send_request(options)
     end
@@ -2696,9 +2696,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DescribeTagOption AWS API Documentation
     #
-    # @overload describe_tag_option(params = {})
+    # @overload describe_tag_option(**params)
     # @param [Hash] params ({})
-    def describe_tag_option(params = {}, options = {})
+    def describe_tag_option(params = {}, **options)
       req = build_request(:describe_tag_option, params)
       req.send_request(options)
     end
@@ -2720,9 +2720,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DisableAWSOrganizationsAccess AWS API Documentation
     #
-    # @overload disable_aws_organizations_access(params = {})
+    # @overload disable_aws_organizations_access(**params)
     # @param [Hash] params ({})
-    def disable_aws_organizations_access(params = {}, options = {})
+    def disable_aws_organizations_access(params = {}, **options)
       req = build_request(:disable_aws_organizations_access, params)
       req.send_request(options)
     end
@@ -2747,9 +2747,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DisassociateBudgetFromResource AWS API Documentation
     #
-    # @overload disassociate_budget_from_resource(params = {})
+    # @overload disassociate_budget_from_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_budget_from_resource(params = {}, options = {})
+    def disassociate_budget_from_resource(params = {}, **options)
       req = build_request(:disassociate_budget_from_resource, params)
       req.send_request(options)
     end
@@ -2784,9 +2784,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DisassociatePrincipalFromPortfolio AWS API Documentation
     #
-    # @overload disassociate_principal_from_portfolio(params = {})
+    # @overload disassociate_principal_from_portfolio(**params)
     # @param [Hash] params ({})
-    def disassociate_principal_from_portfolio(params = {}, options = {})
+    def disassociate_principal_from_portfolio(params = {}, **options)
       req = build_request(:disassociate_principal_from_portfolio, params)
       req.send_request(options)
     end
@@ -2822,9 +2822,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DisassociateProductFromPortfolio AWS API Documentation
     #
-    # @overload disassociate_product_from_portfolio(params = {})
+    # @overload disassociate_product_from_portfolio(**params)
     # @param [Hash] params ({})
-    def disassociate_product_from_portfolio(params = {}, options = {})
+    def disassociate_product_from_portfolio(params = {}, **options)
       req = build_request(:disassociate_product_from_portfolio, params)
       req.send_request(options)
     end
@@ -2864,9 +2864,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DisassociateServiceActionFromProvisioningArtifact AWS API Documentation
     #
-    # @overload disassociate_service_action_from_provisioning_artifact(params = {})
+    # @overload disassociate_service_action_from_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def disassociate_service_action_from_provisioning_artifact(params = {}, options = {})
+    def disassociate_service_action_from_provisioning_artifact(params = {}, **options)
       req = build_request(:disassociate_service_action_from_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -2890,9 +2890,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/DisassociateTagOptionFromResource AWS API Documentation
     #
-    # @overload disassociate_tag_option_from_resource(params = {})
+    # @overload disassociate_tag_option_from_resource(**params)
     # @param [Hash] params ({})
-    def disassociate_tag_option_from_resource(params = {}, options = {})
+    def disassociate_tag_option_from_resource(params = {}, **options)
       req = build_request(:disassociate_tag_option_from_resource, params)
       req.send_request(options)
     end
@@ -2914,9 +2914,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/EnableAWSOrganizationsAccess AWS API Documentation
     #
-    # @overload enable_aws_organizations_access(params = {})
+    # @overload enable_aws_organizations_access(**params)
     # @param [Hash] params ({})
-    def enable_aws_organizations_access(params = {}, options = {})
+    def enable_aws_organizations_access(params = {}, **options)
       req = build_request(:enable_aws_organizations_access, params)
       req.send_request(options)
     end
@@ -2979,9 +2979,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ExecuteProvisionedProductPlan AWS API Documentation
     #
-    # @overload execute_provisioned_product_plan(params = {})
+    # @overload execute_provisioned_product_plan(**params)
     # @param [Hash] params ({})
-    def execute_provisioned_product_plan(params = {}, options = {})
+    def execute_provisioned_product_plan(params = {}, **options)
       req = build_request(:execute_provisioned_product_plan, params)
       req.send_request(options)
     end
@@ -3056,9 +3056,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ExecuteProvisionedProductServiceAction AWS API Documentation
     #
-    # @overload execute_provisioned_product_service_action(params = {})
+    # @overload execute_provisioned_product_service_action(**params)
     # @param [Hash] params ({})
-    def execute_provisioned_product_service_action(params = {}, options = {})
+    def execute_provisioned_product_service_action(params = {}, **options)
       req = build_request(:execute_provisioned_product_service_action, params)
       req.send_request(options)
     end
@@ -3077,9 +3077,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/GetAWSOrganizationsAccessStatus AWS API Documentation
     #
-    # @overload get_aws_organizations_access_status(params = {})
+    # @overload get_aws_organizations_access_status(**params)
     # @param [Hash] params ({})
-    def get_aws_organizations_access_status(params = {}, options = {})
+    def get_aws_organizations_access_status(params = {}, **options)
       req = build_request(:get_aws_organizations_access_status, params)
       req.send_request(options)
     end
@@ -3144,9 +3144,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/GetProvisionedProductOutputs AWS API Documentation
     #
-    # @overload get_provisioned_product_outputs(params = {})
+    # @overload get_provisioned_product_outputs(**params)
     # @param [Hash] params ({})
-    def get_provisioned_product_outputs(params = {}, options = {})
+    def get_provisioned_product_outputs(params = {}, **options)
       req = build_request(:get_provisioned_product_outputs, params)
       req.send_request(options)
     end
@@ -3237,9 +3237,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ImportAsProvisionedProduct AWS API Documentation
     #
-    # @overload import_as_provisioned_product(params = {})
+    # @overload import_as_provisioned_product(**params)
     # @param [Hash] params ({})
-    def import_as_provisioned_product(params = {}, options = {})
+    def import_as_provisioned_product(params = {}, **options)
       req = build_request(:import_as_provisioned_product, params)
       req.send_request(options)
     end
@@ -3302,9 +3302,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListAcceptedPortfolioShares AWS API Documentation
     #
-    # @overload list_accepted_portfolio_shares(params = {})
+    # @overload list_accepted_portfolio_shares(**params)
     # @param [Hash] params ({})
-    def list_accepted_portfolio_shares(params = {}, options = {})
+    def list_accepted_portfolio_shares(params = {}, **options)
       req = build_request(:list_accepted_portfolio_shares, params)
       req.send_request(options)
     end
@@ -3354,9 +3354,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListBudgetsForResource AWS API Documentation
     #
-    # @overload list_budgets_for_resource(params = {})
+    # @overload list_budgets_for_resource(**params)
     # @param [Hash] params ({})
-    def list_budgets_for_resource(params = {}, options = {})
+    def list_budgets_for_resource(params = {}, **options)
       req = build_request(:list_budgets_for_resource, params)
       req.send_request(options)
     end
@@ -3415,9 +3415,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListConstraintsForPortfolio AWS API Documentation
     #
-    # @overload list_constraints_for_portfolio(params = {})
+    # @overload list_constraints_for_portfolio(**params)
     # @param [Hash] params ({})
-    def list_constraints_for_portfolio(params = {}, options = {})
+    def list_constraints_for_portfolio(params = {}, **options)
       req = build_request(:list_constraints_for_portfolio, params)
       req.send_request(options)
     end
@@ -3476,9 +3476,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListLaunchPaths AWS API Documentation
     #
-    # @overload list_launch_paths(params = {})
+    # @overload list_launch_paths(**params)
     # @param [Hash] params ({})
-    def list_launch_paths(params = {}, options = {})
+    def list_launch_paths(params = {}, **options)
       req = build_request(:list_launch_paths, params)
       req.send_request(options)
     end
@@ -3546,9 +3546,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListOrganizationPortfolioAccess AWS API Documentation
     #
-    # @overload list_organization_portfolio_access(params = {})
+    # @overload list_organization_portfolio_access(**params)
     # @param [Hash] params ({})
-    def list_organization_portfolio_access(params = {}, options = {})
+    def list_organization_portfolio_access(params = {}, **options)
       req = build_request(:list_organization_portfolio_access, params)
       req.send_request(options)
     end
@@ -3608,9 +3608,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListPortfolioAccess AWS API Documentation
     #
-    # @overload list_portfolio_access(params = {})
+    # @overload list_portfolio_access(**params)
     # @param [Hash] params ({})
-    def list_portfolio_access(params = {}, options = {})
+    def list_portfolio_access(params = {}, **options)
       req = build_request(:list_portfolio_access, params)
       req.send_request(options)
     end
@@ -3661,9 +3661,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListPortfolios AWS API Documentation
     #
-    # @overload list_portfolios(params = {})
+    # @overload list_portfolios(**params)
     # @param [Hash] params ({})
-    def list_portfolios(params = {}, options = {})
+    def list_portfolios(params = {}, **options)
       req = build_request(:list_portfolios, params)
       req.send_request(options)
     end
@@ -3718,9 +3718,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListPortfoliosForProduct AWS API Documentation
     #
-    # @overload list_portfolios_for_product(params = {})
+    # @overload list_portfolios_for_product(**params)
     # @param [Hash] params ({})
-    def list_portfolios_for_product(params = {}, options = {})
+    def list_portfolios_for_product(params = {}, **options)
       req = build_request(:list_portfolios_for_product, params)
       req.send_request(options)
     end
@@ -3771,9 +3771,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListPrincipalsForPortfolio AWS API Documentation
     #
-    # @overload list_principals_for_portfolio(params = {})
+    # @overload list_principals_for_portfolio(**params)
     # @param [Hash] params ({})
-    def list_principals_for_portfolio(params = {}, options = {})
+    def list_principals_for_portfolio(params = {}, **options)
       req = build_request(:list_principals_for_portfolio, params)
       req.send_request(options)
     end
@@ -3834,9 +3834,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListProvisionedProductPlans AWS API Documentation
     #
-    # @overload list_provisioned_product_plans(params = {})
+    # @overload list_provisioned_product_plans(**params)
     # @param [Hash] params ({})
-    def list_provisioned_product_plans(params = {}, options = {})
+    def list_provisioned_product_plans(params = {}, **options)
       req = build_request(:list_provisioned_product_plans, params)
       req.send_request(options)
     end
@@ -3882,9 +3882,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListProvisioningArtifacts AWS API Documentation
     #
-    # @overload list_provisioning_artifacts(params = {})
+    # @overload list_provisioning_artifacts(**params)
     # @param [Hash] params ({})
-    def list_provisioning_artifacts(params = {}, options = {})
+    def list_provisioning_artifacts(params = {}, **options)
       req = build_request(:list_provisioning_artifacts, params)
       req.send_request(options)
     end
@@ -3950,9 +3950,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListProvisioningArtifactsForServiceAction AWS API Documentation
     #
-    # @overload list_provisioning_artifacts_for_service_action(params = {})
+    # @overload list_provisioning_artifacts_for_service_action(**params)
     # @param [Hash] params ({})
-    def list_provisioning_artifacts_for_service_action(params = {}, options = {})
+    def list_provisioning_artifacts_for_service_action(params = {}, **options)
       req = build_request(:list_provisioning_artifacts_for_service_action, params)
       req.send_request(options)
     end
@@ -4027,9 +4027,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListRecordHistory AWS API Documentation
     #
-    # @overload list_record_history(params = {})
+    # @overload list_record_history(**params)
     # @param [Hash] params ({})
-    def list_record_history(params = {}, options = {})
+    def list_record_history(params = {}, **options)
       req = build_request(:list_record_history, params)
       req.send_request(options)
     end
@@ -4081,9 +4081,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListResourcesForTagOption AWS API Documentation
     #
-    # @overload list_resources_for_tag_option(params = {})
+    # @overload list_resources_for_tag_option(**params)
     # @param [Hash] params ({})
-    def list_resources_for_tag_option(params = {}, options = {})
+    def list_resources_for_tag_option(params = {}, **options)
       req = build_request(:list_resources_for_tag_option, params)
       req.send_request(options)
     end
@@ -4132,9 +4132,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListServiceActions AWS API Documentation
     #
-    # @overload list_service_actions(params = {})
+    # @overload list_service_actions(**params)
     # @param [Hash] params ({})
-    def list_service_actions(params = {}, options = {})
+    def list_service_actions(params = {}, **options)
       req = build_request(:list_service_actions, params)
       req.send_request(options)
     end
@@ -4193,9 +4193,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListServiceActionsForProvisioningArtifact AWS API Documentation
     #
-    # @overload list_service_actions_for_provisioning_artifact(params = {})
+    # @overload list_service_actions_for_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def list_service_actions_for_provisioning_artifact(params = {}, options = {})
+    def list_service_actions_for_provisioning_artifact(params = {}, **options)
       req = build_request(:list_service_actions_for_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -4248,9 +4248,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListStackInstancesForProvisionedProduct AWS API Documentation
     #
-    # @overload list_stack_instances_for_provisioned_product(params = {})
+    # @overload list_stack_instances_for_provisioned_product(**params)
     # @param [Hash] params ({})
-    def list_stack_instances_for_provisioned_product(params = {}, options = {})
+    def list_stack_instances_for_provisioned_product(params = {}, **options)
       req = build_request(:list_stack_instances_for_provisioned_product, params)
       req.send_request(options)
     end
@@ -4298,9 +4298,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ListTagOptions AWS API Documentation
     #
-    # @overload list_tag_options(params = {})
+    # @overload list_tag_options(**params)
     # @param [Hash] params ({})
-    def list_tag_options(params = {}, options = {})
+    def list_tag_options(params = {}, **options)
       req = build_request(:list_tag_options, params)
       req.send_request(options)
     end
@@ -4439,9 +4439,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ProvisionProduct AWS API Documentation
     #
-    # @overload provision_product(params = {})
+    # @overload provision_product(**params)
     # @param [Hash] params ({})
-    def provision_product(params = {}, options = {})
+    def provision_product(params = {}, **options)
       req = build_request(:provision_product, params)
       req.send_request(options)
     end
@@ -4487,9 +4487,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/RejectPortfolioShare AWS API Documentation
     #
-    # @overload reject_portfolio_share(params = {})
+    # @overload reject_portfolio_share(**params)
     # @param [Hash] params ({})
-    def reject_portfolio_share(params = {}, options = {})
+    def reject_portfolio_share(params = {}, **options)
       req = build_request(:reject_portfolio_share, params)
       req.send_request(options)
     end
@@ -4555,9 +4555,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/ScanProvisionedProducts AWS API Documentation
     #
-    # @overload scan_provisioned_products(params = {})
+    # @overload scan_provisioned_products(**params)
     # @param [Hash] params ({})
-    def scan_provisioned_products(params = {}, options = {})
+    def scan_provisioned_products(params = {}, **options)
       req = build_request(:scan_provisioned_products, params)
       req.send_request(options)
     end
@@ -4633,9 +4633,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/SearchProducts AWS API Documentation
     #
-    # @overload search_products(params = {})
+    # @overload search_products(**params)
     # @param [Hash] params ({})
-    def search_products(params = {}, options = {})
+    def search_products(params = {}, **options)
       req = build_request(:search_products, params)
       req.send_request(options)
     end
@@ -4718,9 +4718,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/SearchProductsAsAdmin AWS API Documentation
     #
-    # @overload search_products_as_admin(params = {})
+    # @overload search_products_as_admin(**params)
     # @param [Hash] params ({})
-    def search_products_as_admin(params = {}, options = {})
+    def search_products_as_admin(params = {}, **options)
       req = build_request(:search_products_as_admin, params)
       req.send_request(options)
     end
@@ -4820,9 +4820,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/SearchProvisionedProducts AWS API Documentation
     #
-    # @overload search_provisioned_products(params = {})
+    # @overload search_provisioned_products(**params)
     # @param [Hash] params ({})
-    def search_provisioned_products(params = {}, options = {})
+    def search_provisioned_products(params = {}, **options)
       req = build_request(:search_provisioned_products, params)
       req.send_request(options)
     end
@@ -4909,9 +4909,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/TerminateProvisionedProduct AWS API Documentation
     #
-    # @overload terminate_provisioned_product(params = {})
+    # @overload terminate_provisioned_product(**params)
     # @param [Hash] params ({})
-    def terminate_provisioned_product(params = {}, options = {})
+    def terminate_provisioned_product(params = {}, **options)
       req = build_request(:terminate_provisioned_product, params)
       req.send_request(options)
     end
@@ -5036,9 +5036,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateConstraint AWS API Documentation
     #
-    # @overload update_constraint(params = {})
+    # @overload update_constraint(**params)
     # @param [Hash] params ({})
-    def update_constraint(params = {}, options = {})
+    def update_constraint(params = {}, **options)
       req = build_request(:update_constraint, params)
       req.send_request(options)
     end
@@ -5110,9 +5110,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdatePortfolio AWS API Documentation
     #
-    # @overload update_portfolio(params = {})
+    # @overload update_portfolio(**params)
     # @param [Hash] params ({})
-    def update_portfolio(params = {}, options = {})
+    def update_portfolio(params = {}, **options)
       req = build_request(:update_portfolio, params)
       req.send_request(options)
     end
@@ -5206,9 +5206,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateProduct AWS API Documentation
     #
-    # @overload update_product(params = {})
+    # @overload update_product(**params)
     # @param [Hash] params ({})
-    def update_product(params = {}, options = {})
+    def update_product(params = {}, **options)
       req = build_request(:update_product, params)
       req.send_request(options)
     end
@@ -5346,9 +5346,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateProvisionedProduct AWS API Documentation
     #
-    # @overload update_provisioned_product(params = {})
+    # @overload update_provisioned_product(**params)
     # @param [Hash] params ({})
-    def update_provisioned_product(params = {}, options = {})
+    def update_provisioned_product(params = {}, **options)
       req = build_request(:update_provisioned_product, params)
       req.send_request(options)
     end
@@ -5435,9 +5435,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateProvisionedProductProperties AWS API Documentation
     #
-    # @overload update_provisioned_product_properties(params = {})
+    # @overload update_provisioned_product_properties(**params)
     # @param [Hash] params ({})
-    def update_provisioned_product_properties(params = {}, options = {})
+    def update_provisioned_product_properties(params = {}, **options)
       req = build_request(:update_provisioned_product_properties, params)
       req.send_request(options)
     end
@@ -5520,9 +5520,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateProvisioningArtifact AWS API Documentation
     #
-    # @overload update_provisioning_artifact(params = {})
+    # @overload update_provisioning_artifact(**params)
     # @param [Hash] params ({})
-    def update_provisioning_artifact(params = {}, options = {})
+    def update_provisioning_artifact(params = {}, **options)
       req = build_request(:update_provisioning_artifact, params)
       req.send_request(options)
     end
@@ -5577,9 +5577,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateServiceAction AWS API Documentation
     #
-    # @overload update_service_action(params = {})
+    # @overload update_service_action(**params)
     # @param [Hash] params ({})
-    def update_service_action(params = {}, options = {})
+    def update_service_action(params = {}, **options)
       req = build_request(:update_service_action, params)
       req.send_request(options)
     end
@@ -5616,9 +5616,9 @@ module Aws::ServiceCatalog
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/servicecatalog-2015-12-10/UpdateTagOption AWS API Documentation
     #
-    # @overload update_tag_option(params = {})
+    # @overload update_tag_option(**params)
     # @param [Hash] params ({})
-    def update_tag_option(params = {}, options = {})
+    def update_tag_option(params = {}, **options)
       req = build_request(:update_tag_option, params)
       req.send_request(options)
     end
@@ -5627,7 +5627,7 @@ module Aws::ServiceCatalog
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5635,15 +5635,15 @@ module Aws::ServiceCatalog
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-servicecatalog'
-      context[:gem_version] = '1.55.0'
+      context[:gem_name] = "aws-sdk-servicecatalog"
+      context[:gem_version] = "1.55.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

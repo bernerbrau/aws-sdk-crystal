@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotdataplane/types'
-require_relative 'aws-sdk-iotdataplane/client_api'
-require_relative 'aws-sdk-iotdataplane/client'
-require_relative 'aws-sdk-iotdataplane/errors'
-require_relative 'aws-sdk-iotdataplane/resource'
-require_relative 'aws-sdk-iotdataplane/customizations'
+require_relative "aws-sdk-iotdataplane/types"
+require_relative "aws-sdk-iotdataplane/client_api"
+require_relative "aws-sdk-iotdataplane/client"
+require_relative "aws-sdk-iotdataplane/errors"
+require_relative "aws-sdk-iotdataplane/resource"
+require_relative "aws-sdk-iotdataplane/customizations"
 
 # This module provides support for AWS IoT Data Plane. This module is available in the
 # `aws-sdk-iotdataplane` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotdataplane/customizations'
 # @!group service
 module Aws::IoTDataPlane
 
-  GEM_VERSION = '1.26.0'
+  GEM_VERSION = "1.26.0"
 
 end

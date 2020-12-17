@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:securityhub)
 
@@ -280,7 +280,7 @@ module Aws::SecurityHub
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -355,9 +355,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AcceptInvitation AWS API Documentation
     #
-    # @overload accept_invitation(params = {})
+    # @overload accept_invitation(**params)
     # @param [Hash] params ({})
-    def accept_invitation(params = {}, options = {})
+    def accept_invitation(params = {}, **options)
       req = build_request(:accept_invitation, params)
       req.send_request(options)
     end
@@ -396,9 +396,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDisableStandards AWS API Documentation
     #
-    # @overload batch_disable_standards(params = {})
+    # @overload batch_disable_standards(**params)
     # @param [Hash] params ({})
-    def batch_disable_standards(params = {}, options = {})
+    def batch_disable_standards(params = {}, **options)
       req = build_request(:batch_disable_standards, params)
       req.send_request(options)
     end
@@ -445,9 +445,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchEnableStandards AWS API Documentation
     #
-    # @overload batch_enable_standards(params = {})
+    # @overload batch_enable_standards(**params)
     # @param [Hash] params ({})
-    def batch_enable_standards(params = {}, options = {})
+    def batch_enable_standards(params = {}, **options)
       req = build_request(:batch_enable_standards, params)
       req.send_request(options)
     end
@@ -2036,9 +2036,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchImportFindings AWS API Documentation
     #
-    # @overload batch_import_findings(params = {})
+    # @overload batch_import_findings(**params)
     # @param [Hash] params ({})
-    def batch_import_findings(params = {}, options = {})
+    def batch_import_findings(params = {}, **options)
       req = build_request(:batch_import_findings, params)
       req.send_request(options)
     end
@@ -2209,9 +2209,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateFindings AWS API Documentation
     #
-    # @overload batch_update_findings(params = {})
+    # @overload batch_update_findings(**params)
     # @param [Hash] params ({})
-    def batch_update_findings(params = {}, options = {})
+    def batch_update_findings(params = {}, **options)
       req = build_request(:batch_update_findings, params)
       req.send_request(options)
     end
@@ -2248,9 +2248,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateActionTarget AWS API Documentation
     #
-    # @overload create_action_target(params = {})
+    # @overload create_action_target(**params)
     # @param [Hash] params ({})
-    def create_action_target(params = {}, options = {})
+    def create_action_target(params = {}, **options)
       req = build_request(:create_action_target, params)
       req.send_request(options)
     end
@@ -2848,9 +2848,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateInsight AWS API Documentation
     #
-    # @overload create_insight(params = {})
+    # @overload create_insight(**params)
     # @param [Hash] params ({})
-    def create_insight(params = {}, options = {})
+    def create_insight(params = {}, **options)
       req = build_request(:create_insight, params)
       req.send_request(options)
     end
@@ -2923,9 +2923,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateMembers AWS API Documentation
     #
-    # @overload create_members(params = {})
+    # @overload create_members(**params)
     # @param [Hash] params ({})
-    def create_members(params = {}, options = {})
+    def create_members(params = {}, **options)
       req = build_request(:create_members, params)
       req.send_request(options)
     end
@@ -2957,9 +2957,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeclineInvitations AWS API Documentation
     #
-    # @overload decline_invitations(params = {})
+    # @overload decline_invitations(**params)
     # @param [Hash] params ({})
-    def decline_invitations(params = {}, options = {})
+    def decline_invitations(params = {}, **options)
       req = build_request(:decline_invitations, params)
       req.send_request(options)
     end
@@ -2989,9 +2989,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteActionTarget AWS API Documentation
     #
-    # @overload delete_action_target(params = {})
+    # @overload delete_action_target(**params)
     # @param [Hash] params ({})
-    def delete_action_target(params = {}, options = {})
+    def delete_action_target(params = {}, **options)
       req = build_request(:delete_action_target, params)
       req.send_request(options)
     end
@@ -3017,9 +3017,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteInsight AWS API Documentation
     #
-    # @overload delete_insight(params = {})
+    # @overload delete_insight(**params)
     # @param [Hash] params ({})
-    def delete_insight(params = {}, options = {})
+    def delete_insight(params = {}, **options)
       req = build_request(:delete_insight, params)
       req.send_request(options)
     end
@@ -3051,9 +3051,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteInvitations AWS API Documentation
     #
-    # @overload delete_invitations(params = {})
+    # @overload delete_invitations(**params)
     # @param [Hash] params ({})
-    def delete_invitations(params = {}, options = {})
+    def delete_invitations(params = {}, **options)
       req = build_request(:delete_invitations, params)
       req.send_request(options)
     end
@@ -3084,9 +3084,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteMembers AWS API Documentation
     #
-    # @overload delete_members(params = {})
+    # @overload delete_members(**params)
     # @param [Hash] params ({})
-    def delete_members(params = {}, options = {})
+    def delete_members(params = {}, **options)
       req = build_request(:delete_members, params)
       req.send_request(options)
     end
@@ -3135,9 +3135,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeActionTargets AWS API Documentation
     #
-    # @overload describe_action_targets(params = {})
+    # @overload describe_action_targets(**params)
     # @param [Hash] params ({})
-    def describe_action_targets(params = {}, options = {})
+    def describe_action_targets(params = {}, **options)
       req = build_request(:describe_action_targets, params)
       req.send_request(options)
     end
@@ -3168,9 +3168,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeHub AWS API Documentation
     #
-    # @overload describe_hub(params = {})
+    # @overload describe_hub(**params)
     # @param [Hash] params ({})
-    def describe_hub(params = {}, options = {})
+    def describe_hub(params = {}, **options)
       req = build_request(:describe_hub, params)
       req.send_request(options)
     end
@@ -3190,9 +3190,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeOrganizationConfiguration AWS API Documentation
     #
-    # @overload describe_organization_configuration(params = {})
+    # @overload describe_organization_configuration(**params)
     # @param [Hash] params ({})
-    def describe_organization_configuration(params = {}, options = {})
+    def describe_organization_configuration(params = {}, **options)
       req = build_request(:describe_organization_configuration, params)
       req.send_request(options)
     end
@@ -3245,9 +3245,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeProducts AWS API Documentation
     #
-    # @overload describe_products(params = {})
+    # @overload describe_products(**params)
     # @param [Hash] params ({})
-    def describe_products(params = {}, options = {})
+    def describe_products(params = {}, **options)
       req = build_request(:describe_products, params)
       req.send_request(options)
     end
@@ -3294,9 +3294,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeStandards AWS API Documentation
     #
-    # @overload describe_standards(params = {})
+    # @overload describe_standards(**params)
     # @param [Hash] params ({})
-    def describe_standards(params = {}, options = {})
+    def describe_standards(params = {}, **options)
       req = build_request(:describe_standards, params)
       req.send_request(options)
     end
@@ -3357,9 +3357,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeStandardsControls AWS API Documentation
     #
-    # @overload describe_standards_controls(params = {})
+    # @overload describe_standards_controls(**params)
     # @param [Hash] params ({})
-    def describe_standards_controls(params = {}, options = {})
+    def describe_standards_controls(params = {}, **options)
       req = build_request(:describe_standards_controls, params)
       req.send_request(options)
     end
@@ -3381,9 +3381,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableImportFindingsForProduct AWS API Documentation
     #
-    # @overload disable_import_findings_for_product(params = {})
+    # @overload disable_import_findings_for_product(**params)
     # @param [Hash] params ({})
-    def disable_import_findings_for_product(params = {}, options = {})
+    def disable_import_findings_for_product(params = {}, **options)
       req = build_request(:disable_import_findings_for_product, params)
       req.send_request(options)
     end
@@ -3404,9 +3404,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableOrganizationAdminAccount AWS API Documentation
     #
-    # @overload disable_organization_admin_account(params = {})
+    # @overload disable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def disable_organization_admin_account(params = {}, options = {})
+    def disable_organization_admin_account(params = {}, **options)
       req = build_request(:disable_organization_admin_account, params)
       req.send_request(options)
     end
@@ -3430,9 +3430,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableSecurityHub AWS API Documentation
     #
-    # @overload disable_security_hub(params = {})
+    # @overload disable_security_hub(**params)
     # @param [Hash] params ({})
-    def disable_security_hub(params = {}, options = {})
+    def disable_security_hub(params = {}, **options)
       req = build_request(:disable_security_hub, params)
       req.send_request(options)
     end
@@ -3449,9 +3449,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisassociateFromMasterAccount AWS API Documentation
     #
-    # @overload disassociate_from_master_account(params = {})
+    # @overload disassociate_from_master_account(**params)
     # @param [Hash] params ({})
-    def disassociate_from_master_account(params = {}, options = {})
+    def disassociate_from_master_account(params = {}, **options)
       req = build_request(:disassociate_from_master_account, params)
       req.send_request(options)
     end
@@ -3476,9 +3476,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisassociateMembers AWS API Documentation
     #
-    # @overload disassociate_members(params = {})
+    # @overload disassociate_members(**params)
     # @param [Hash] params ({})
-    def disassociate_members(params = {}, options = {})
+    def disassociate_members(params = {}, **options)
       req = build_request(:disassociate_members, params)
       req.send_request(options)
     end
@@ -3509,9 +3509,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableImportFindingsForProduct AWS API Documentation
     #
-    # @overload enable_import_findings_for_product(params = {})
+    # @overload enable_import_findings_for_product(**params)
     # @param [Hash] params ({})
-    def enable_import_findings_for_product(params = {}, options = {})
+    def enable_import_findings_for_product(params = {}, **options)
       req = build_request(:enable_import_findings_for_product, params)
       req.send_request(options)
     end
@@ -3533,9 +3533,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableOrganizationAdminAccount AWS API Documentation
     #
-    # @overload enable_organization_admin_account(params = {})
+    # @overload enable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def enable_organization_admin_account(params = {}, options = {})
+    def enable_organization_admin_account(params = {}, **options)
       req = build_request(:enable_organization_admin_account, params)
       req.send_request(options)
     end
@@ -3594,9 +3594,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableSecurityHub AWS API Documentation
     #
-    # @overload enable_security_hub(params = {})
+    # @overload enable_security_hub(**params)
     # @param [Hash] params ({})
-    def enable_security_hub(params = {}, options = {})
+    def enable_security_hub(params = {}, **options)
       req = build_request(:enable_security_hub, params)
       req.send_request(options)
     end
@@ -3646,9 +3646,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetEnabledStandards AWS API Documentation
     #
-    # @overload get_enabled_standards(params = {})
+    # @overload get_enabled_standards(**params)
     # @param [Hash] params ({})
-    def get_enabled_standards(params = {}, options = {})
+    def get_enabled_standards(params = {}, **options)
       req = build_request(:get_enabled_standards, params)
       req.send_request(options)
     end
@@ -5302,9 +5302,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetFindings AWS API Documentation
     #
-    # @overload get_findings(params = {})
+    # @overload get_findings(**params)
     # @param [Hash] params ({})
-    def get_findings(params = {}, options = {})
+    def get_findings(params = {}, **options)
       req = build_request(:get_findings, params)
       req.send_request(options)
     end
@@ -5335,9 +5335,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetInsightResults AWS API Documentation
     #
-    # @overload get_insight_results(params = {})
+    # @overload get_insight_results(**params)
     # @param [Hash] params ({})
-    def get_insight_results(params = {}, options = {})
+    def get_insight_results(params = {}, **options)
       req = build_request(:get_insight_results, params)
       req.send_request(options)
     end
@@ -5664,9 +5664,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetInsights AWS API Documentation
     #
-    # @overload get_insights(params = {})
+    # @overload get_insights(**params)
     # @param [Hash] params ({})
-    def get_insights(params = {}, options = {})
+    def get_insights(params = {}, **options)
       req = build_request(:get_insights, params)
       req.send_request(options)
     end
@@ -5685,9 +5685,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetInvitationsCount AWS API Documentation
     #
-    # @overload get_invitations_count(params = {})
+    # @overload get_invitations_count(**params)
     # @param [Hash] params ({})
-    def get_invitations_count(params = {}, options = {})
+    def get_invitations_count(params = {}, **options)
       req = build_request(:get_invitations_count, params)
       req.send_request(options)
     end
@@ -5711,9 +5711,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetMasterAccount AWS API Documentation
     #
-    # @overload get_master_account(params = {})
+    # @overload get_master_account(**params)
     # @param [Hash] params ({})
-    def get_master_account(params = {}, options = {})
+    def get_master_account(params = {}, **options)
       req = build_request(:get_master_account, params)
       req.send_request(options)
     end
@@ -5758,9 +5758,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetMembers AWS API Documentation
     #
-    # @overload get_members(params = {})
+    # @overload get_members(**params)
     # @param [Hash] params ({})
-    def get_members(params = {}, options = {})
+    def get_members(params = {}, **options)
       req = build_request(:get_members, params)
       req.send_request(options)
     end
@@ -5801,9 +5801,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/InviteMembers AWS API Documentation
     #
-    # @overload invite_members(params = {})
+    # @overload invite_members(**params)
     # @param [Hash] params ({})
-    def invite_members(params = {}, options = {})
+    def invite_members(params = {}, **options)
       req = build_request(:invite_members, params)
       req.send_request(options)
     end
@@ -5845,9 +5845,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListEnabledProductsForImport AWS API Documentation
     #
-    # @overload list_enabled_products_for_import(params = {})
+    # @overload list_enabled_products_for_import(**params)
     # @param [Hash] params ({})
-    def list_enabled_products_for_import(params = {}, options = {})
+    def list_enabled_products_for_import(params = {}, **options)
       req = build_request(:list_enabled_products_for_import, params)
       req.send_request(options)
     end
@@ -5895,9 +5895,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListInvitations AWS API Documentation
     #
-    # @overload list_invitations(params = {})
+    # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, options = {})
+    def list_invitations(params = {}, **options)
       req = build_request(:list_invitations, params)
       req.send_request(options)
     end
@@ -5959,9 +5959,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListMembers AWS API Documentation
     #
-    # @overload list_members(params = {})
+    # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, options = {})
+    def list_members(params = {}, **options)
       req = build_request(:list_members, params)
       req.send_request(options)
     end
@@ -6002,9 +6002,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListOrganizationAdminAccounts AWS API Documentation
     #
-    # @overload list_organization_admin_accounts(params = {})
+    # @overload list_organization_admin_accounts(**params)
     # @param [Hash] params ({})
-    def list_organization_admin_accounts(params = {}, options = {})
+    def list_organization_admin_accounts(params = {}, **options)
       req = build_request(:list_organization_admin_accounts, params)
       req.send_request(options)
     end
@@ -6031,9 +6031,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -6059,9 +6059,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -6085,9 +6085,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -6116,9 +6116,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateActionTarget AWS API Documentation
     #
-    # @overload update_action_target(params = {})
+    # @overload update_action_target(**params)
     # @param [Hash] params ({})
-    def update_action_target(params = {}, options = {})
+    def update_action_target(params = {}, **options)
       req = build_request(:update_action_target, params)
       req.send_request(options)
     end
@@ -6709,9 +6709,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateFindings AWS API Documentation
     #
-    # @overload update_findings(params = {})
+    # @overload update_findings(**params)
     # @param [Hash] params ({})
-    def update_findings(params = {}, options = {})
+    def update_findings(params = {}, **options)
       req = build_request(:update_findings, params)
       req.send_request(options)
     end
@@ -7298,9 +7298,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateInsight AWS API Documentation
     #
-    # @overload update_insight(params = {})
+    # @overload update_insight(**params)
     # @param [Hash] params ({})
-    def update_insight(params = {}, options = {})
+    def update_insight(params = {}, **options)
       req = build_request(:update_insight, params)
       req.send_request(options)
     end
@@ -7328,9 +7328,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateOrganizationConfiguration AWS API Documentation
     #
-    # @overload update_organization_configuration(params = {})
+    # @overload update_organization_configuration(**params)
     # @param [Hash] params ({})
-    def update_organization_configuration(params = {}, options = {})
+    def update_organization_configuration(params = {}, **options)
       req = build_request(:update_organization_configuration, params)
       req.send_request(options)
     end
@@ -7355,9 +7355,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityHubConfiguration AWS API Documentation
     #
-    # @overload update_security_hub_configuration(params = {})
+    # @overload update_security_hub_configuration(**params)
     # @param [Hash] params ({})
-    def update_security_hub_configuration(params = {}, options = {})
+    def update_security_hub_configuration(params = {}, **options)
       req = build_request(:update_security_hub_configuration, params)
       req.send_request(options)
     end
@@ -7387,9 +7387,9 @@ module Aws::SecurityHub
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateStandardsControl AWS API Documentation
     #
-    # @overload update_standards_control(params = {})
+    # @overload update_standards_control(**params)
     # @param [Hash] params ({})
-    def update_standards_control(params = {}, options = {})
+    def update_standards_control(params = {}, **options)
       req = build_request(:update_standards_control, params)
       req.send_request(options)
     end
@@ -7398,7 +7398,7 @@ module Aws::SecurityHub
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -7406,15 +7406,15 @@ module Aws::SecurityHub
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-securityhub'
-      context[:gem_version] = '1.36.0'
+      context[:gem_name] = "aws-sdk-securityhub"
+      context[:gem_version] = "1.36.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

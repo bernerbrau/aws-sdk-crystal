@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-lexmodelbuildingservice/types'
-require_relative 'aws-sdk-lexmodelbuildingservice/client_api'
-require_relative 'aws-sdk-lexmodelbuildingservice/client'
-require_relative 'aws-sdk-lexmodelbuildingservice/errors'
-require_relative 'aws-sdk-lexmodelbuildingservice/resource'
-require_relative 'aws-sdk-lexmodelbuildingservice/customizations'
+require_relative "aws-sdk-lexmodelbuildingservice/types"
+require_relative "aws-sdk-lexmodelbuildingservice/client_api"
+require_relative "aws-sdk-lexmodelbuildingservice/client"
+require_relative "aws-sdk-lexmodelbuildingservice/errors"
+require_relative "aws-sdk-lexmodelbuildingservice/resource"
+require_relative "aws-sdk-lexmodelbuildingservice/customizations"
 
 # This module provides support for Amazon Lex Model Building Service. This module is available in the
 # `aws-sdk-lexmodelbuildingservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-lexmodelbuildingservice/customizations'
 # @!group service
 module Aws::LexModelBuildingService
 
-  GEM_VERSION = '1.42.0'
+  GEM_VERSION = "1.42.0"
 
 end

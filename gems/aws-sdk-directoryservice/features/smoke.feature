@@ -8,11 +8,11 @@
 Feature: Smoke tests for DirectoryService
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @directoryservice @smoke
   Scenario: Call Aws::DirectoryService::Client#describe_directories and expect it to succeed
-  When I call the operation 'describe_directories' with params:
+  When I call the operation "describe_directories" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @directoryservice @smoke
   Scenario: Call Aws::Aws::DirectoryService::Client#create_directory and expect it to fail
-  When I call the operation 'create_directory' with params:
+  When I call the operation "create_directory" with params:
     """
 {"name":"","password":"","size":""}
     """

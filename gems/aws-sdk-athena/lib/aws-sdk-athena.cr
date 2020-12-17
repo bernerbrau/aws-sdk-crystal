@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-athena/types'
-require_relative 'aws-sdk-athena/client_api'
-require_relative 'aws-sdk-athena/client'
-require_relative 'aws-sdk-athena/errors'
-require_relative 'aws-sdk-athena/resource'
-require_relative 'aws-sdk-athena/customizations'
+require_relative "aws-sdk-athena/types"
+require_relative "aws-sdk-athena/client_api"
+require_relative "aws-sdk-athena/client"
+require_relative "aws-sdk-athena/errors"
+require_relative "aws-sdk-athena/resource"
+require_relative "aws-sdk-athena/customizations"
 
 # This module provides support for Amazon Athena. This module is available in the
 # `aws-sdk-athena` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-athena/customizations'
 # @!group service
 module Aws::Athena
 
-  GEM_VERSION = '1.33.0'
+  GEM_VERSION = "1.33.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-gamelift/types'
-require_relative 'aws-sdk-gamelift/client_api'
-require_relative 'aws-sdk-gamelift/client'
-require_relative 'aws-sdk-gamelift/errors'
-require_relative 'aws-sdk-gamelift/resource'
-require_relative 'aws-sdk-gamelift/customizations'
+require_relative "aws-sdk-gamelift/types"
+require_relative "aws-sdk-gamelift/client_api"
+require_relative "aws-sdk-gamelift/client"
+require_relative "aws-sdk-gamelift/errors"
+require_relative "aws-sdk-gamelift/resource"
+require_relative "aws-sdk-gamelift/customizations"
 
 # This module provides support for Amazon GameLift. This module is available in the
 # `aws-sdk-gamelift` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-gamelift/customizations'
 # @!group service
 module Aws::GameLift
 
-  GEM_VERSION = '1.39.0'
+  GEM_VERSION = "1.39.0"
 
 end

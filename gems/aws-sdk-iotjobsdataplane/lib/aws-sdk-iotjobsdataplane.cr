@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotjobsdataplane/types'
-require_relative 'aws-sdk-iotjobsdataplane/client_api'
-require_relative 'aws-sdk-iotjobsdataplane/client'
-require_relative 'aws-sdk-iotjobsdataplane/errors'
-require_relative 'aws-sdk-iotjobsdataplane/resource'
-require_relative 'aws-sdk-iotjobsdataplane/customizations'
+require_relative "aws-sdk-iotjobsdataplane/types"
+require_relative "aws-sdk-iotjobsdataplane/client_api"
+require_relative "aws-sdk-iotjobsdataplane/client"
+require_relative "aws-sdk-iotjobsdataplane/errors"
+require_relative "aws-sdk-iotjobsdataplane/resource"
+require_relative "aws-sdk-iotjobsdataplane/customizations"
 
 # This module provides support for AWS IoT Jobs Data Plane. This module is available in the
 # `aws-sdk-iotjobsdataplane` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotjobsdataplane/customizations'
 # @!group service
 module Aws::IoTJobsDataPlane
 
-  GEM_VERSION = '1.25.0'
+  GEM_VERSION = "1.25.0"
 
 end

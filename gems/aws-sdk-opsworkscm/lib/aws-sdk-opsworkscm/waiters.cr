@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::OpsWorksCM
   # Waiters are utility methods that poll for a particular state to occur
@@ -109,7 +109,7 @@ module Aws::OpsWorksCM
 
       # @option (see Client#describe_node_association_status)
       # @return (see Client#describe_node_association_status)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

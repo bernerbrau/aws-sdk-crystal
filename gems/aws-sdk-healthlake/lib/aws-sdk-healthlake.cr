@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-healthlake/types'
-require_relative 'aws-sdk-healthlake/client_api'
-require_relative 'aws-sdk-healthlake/client'
-require_relative 'aws-sdk-healthlake/errors'
-require_relative 'aws-sdk-healthlake/resource'
-require_relative 'aws-sdk-healthlake/customizations'
+require_relative "aws-sdk-healthlake/types"
+require_relative "aws-sdk-healthlake/client_api"
+require_relative "aws-sdk-healthlake/client"
+require_relative "aws-sdk-healthlake/errors"
+require_relative "aws-sdk-healthlake/resource"
+require_relative "aws-sdk-healthlake/customizations"
 
 # This module provides support for Amazon HealthLake. This module is available in the
 # `aws-sdk-healthlake` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-healthlake/customizations'
 # @!group service
 module Aws::HealthLake
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

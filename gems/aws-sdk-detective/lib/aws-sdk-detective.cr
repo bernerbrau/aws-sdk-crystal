@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-detective/types'
-require_relative 'aws-sdk-detective/client_api'
-require_relative 'aws-sdk-detective/client'
-require_relative 'aws-sdk-detective/errors'
-require_relative 'aws-sdk-detective/resource'
-require_relative 'aws-sdk-detective/customizations'
+require_relative "aws-sdk-detective/types"
+require_relative "aws-sdk-detective/client_api"
+require_relative "aws-sdk-detective/client"
+require_relative "aws-sdk-detective/errors"
+require_relative "aws-sdk-detective/resource"
+require_relative "aws-sdk-detective/customizations"
 
 # This module provides support for Amazon Detective. This module is available in the
 # `aws-sdk-detective` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-detective/customizations'
 # @!group service
 module Aws::Detective
 
-  GEM_VERSION = '1.11.0'
+  GEM_VERSION = "1.11.0"
 
 end

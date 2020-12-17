@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mediapackage)
 
@@ -280,7 +280,7 @@ module Aws::MediaPackage
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -376,9 +376,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/ConfigureLogs AWS API Documentation
     #
-    # @overload configure_logs(params = {})
+    # @overload configure_logs(**params)
     # @param [Hash] params ({})
-    def configure_logs(params = {}, options = {})
+    def configure_logs(params = {}, **options)
       req = build_request(:configure_logs, params)
       req.send_request(options)
     end
@@ -429,9 +429,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/CreateChannel AWS API Documentation
     #
-    # @overload create_channel(params = {})
+    # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, options = {})
+    def create_channel(params = {}, **options)
       req = build_request(:create_channel, params)
       req.send_request(options)
     end
@@ -492,9 +492,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/CreateHarvestJob AWS API Documentation
     #
-    # @overload create_harvest_job(params = {})
+    # @overload create_harvest_job(**params)
     # @param [Hash] params ({})
-    def create_harvest_job(params = {}, options = {})
+    def create_harvest_job(params = {}, **options)
       req = build_request(:create_harvest_job, params)
       req.send_request(options)
     end
@@ -783,9 +783,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/CreateOriginEndpoint AWS API Documentation
     #
-    # @overload create_origin_endpoint(params = {})
+    # @overload create_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def create_origin_endpoint(params = {}, options = {})
+    def create_origin_endpoint(params = {}, **options)
       req = build_request(:create_origin_endpoint, params)
       req.send_request(options)
     end
@@ -804,9 +804,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/DeleteChannel AWS API Documentation
     #
-    # @overload delete_channel(params = {})
+    # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, options = {})
+    def delete_channel(params = {}, **options)
       req = build_request(:delete_channel, params)
       req.send_request(options)
     end
@@ -825,9 +825,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/DeleteOriginEndpoint AWS API Documentation
     #
-    # @overload delete_origin_endpoint(params = {})
+    # @overload delete_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_origin_endpoint(params = {}, options = {})
+    def delete_origin_endpoint(params = {}, **options)
       req = build_request(:delete_origin_endpoint, params)
       req.send_request(options)
     end
@@ -869,9 +869,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/DescribeChannel AWS API Documentation
     #
-    # @overload describe_channel(params = {})
+    # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, options = {})
+    def describe_channel(params = {}, **options)
       req = build_request(:describe_channel, params)
       req.send_request(options)
     end
@@ -914,9 +914,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/DescribeHarvestJob AWS API Documentation
     #
-    # @overload describe_harvest_job(params = {})
+    # @overload describe_harvest_job(**params)
     # @param [Hash] params ({})
-    def describe_harvest_job(params = {}, options = {})
+    def describe_harvest_job(params = {}, **options)
       req = build_request(:describe_harvest_job, params)
       req.send_request(options)
     end
@@ -1050,9 +1050,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/DescribeOriginEndpoint AWS API Documentation
     #
-    # @overload describe_origin_endpoint(params = {})
+    # @overload describe_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_origin_endpoint(params = {}, options = {})
+    def describe_origin_endpoint(params = {}, **options)
       req = build_request(:describe_origin_endpoint, params)
       req.send_request(options)
     end
@@ -1096,9 +1096,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/ListChannels AWS API Documentation
     #
-    # @overload list_channels(params = {})
+    # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, options = {})
+    def list_channels(params = {}, **options)
       req = build_request(:list_channels, params)
       req.send_request(options)
     end
@@ -1147,9 +1147,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/ListHarvestJobs AWS API Documentation
     #
-    # @overload list_harvest_jobs(params = {})
+    # @overload list_harvest_jobs(**params)
     # @param [Hash] params ({})
-    def list_harvest_jobs(params = {}, options = {})
+    def list_harvest_jobs(params = {}, **options)
       req = build_request(:list_harvest_jobs, params)
       req.send_request(options)
     end
@@ -1279,9 +1279,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/ListOriginEndpoints AWS API Documentation
     #
-    # @overload list_origin_endpoints(params = {})
+    # @overload list_origin_endpoints(**params)
     # @param [Hash] params ({})
-    def list_origin_endpoints(params = {}, options = {})
+    def list_origin_endpoints(params = {}, **options)
       req = build_request(:list_origin_endpoints, params)
       req.send_request(options)
     end
@@ -1305,9 +1305,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1351,9 +1351,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/RotateChannelCredentials AWS API Documentation
     #
-    # @overload rotate_channel_credentials(params = {})
+    # @overload rotate_channel_credentials(**params)
     # @param [Hash] params ({})
-    def rotate_channel_credentials(params = {}, options = {})
+    def rotate_channel_credentials(params = {}, **options)
       req = build_request(:rotate_channel_credentials, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/RotateIngestEndpointCredentials AWS API Documentation
     #
-    # @overload rotate_ingest_endpoint_credentials(params = {})
+    # @overload rotate_ingest_endpoint_credentials(**params)
     # @param [Hash] params ({})
-    def rotate_ingest_endpoint_credentials(params = {}, options = {})
+    def rotate_ingest_endpoint_credentials(params = {}, **options)
       req = build_request(:rotate_ingest_endpoint_credentials, params)
       req.send_request(options)
     end
@@ -1423,9 +1423,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1492,9 +1492,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/UpdateChannel AWS API Documentation
     #
-    # @overload update_channel(params = {})
+    # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, options = {})
+    def update_channel(params = {}, **options)
       req = build_request(:update_channel, params)
       req.send_request(options)
     end
@@ -1774,9 +1774,9 @@ module Aws::MediaPackage
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mediapackage-2017-10-12/UpdateOriginEndpoint AWS API Documentation
     #
-    # @overload update_origin_endpoint(params = {})
+    # @overload update_origin_endpoint(**params)
     # @param [Hash] params ({})
-    def update_origin_endpoint(params = {}, options = {})
+    def update_origin_endpoint(params = {}, **options)
       req = build_request(:update_origin_endpoint, params)
       req.send_request(options)
     end
@@ -1785,7 +1785,7 @@ module Aws::MediaPackage
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1793,15 +1793,15 @@ module Aws::MediaPackage
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mediapackage'
-      context[:gem_version] = '1.36.0'
+      context[:gem_name] = "aws-sdk-mediapackage"
+      context[:gem_version] = "1.36.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

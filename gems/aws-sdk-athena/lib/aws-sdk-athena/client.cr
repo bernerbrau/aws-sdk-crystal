@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:athena)
 
@@ -290,7 +290,7 @@ module Aws::Athena
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -378,9 +378,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetNamedQuery AWS API Documentation
     #
-    # @overload batch_get_named_query(params = {})
+    # @overload batch_get_named_query(**params)
     # @param [Hash] params ({})
-    def batch_get_named_query(params = {}, options = {})
+    def batch_get_named_query(params = {}, **options)
       req = build_request(:batch_get_named_query, params)
       req.send_request(options)
     end
@@ -437,9 +437,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetQueryExecution AWS API Documentation
     #
-    # @overload batch_get_query_execution(params = {})
+    # @overload batch_get_query_execution(**params)
     # @param [Hash] params ({})
-    def batch_get_query_execution(params = {}, options = {})
+    def batch_get_query_execution(params = {}, **options)
       req = build_request(:batch_get_query_execution, params)
       req.send_request(options)
     end
@@ -514,9 +514,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateDataCatalog AWS API Documentation
     #
-    # @overload create_data_catalog(params = {})
+    # @overload create_data_catalog(**params)
     # @param [Hash] params ({})
-    def create_data_catalog(params = {}, options = {})
+    def create_data_catalog(params = {}, **options)
       req = build_request(:create_data_catalog, params)
       req.send_request(options)
     end
@@ -582,9 +582,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateNamedQuery AWS API Documentation
     #
-    # @overload create_named_query(params = {})
+    # @overload create_named_query(**params)
     # @param [Hash] params ({})
-    def create_named_query(params = {}, options = {})
+    def create_named_query(params = {}, **options)
       req = build_request(:create_named_query, params)
       req.send_request(options)
     end
@@ -642,9 +642,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateWorkGroup AWS API Documentation
     #
-    # @overload create_work_group(params = {})
+    # @overload create_work_group(**params)
     # @param [Hash] params ({})
-    def create_work_group(params = {}, options = {})
+    def create_work_group(params = {}, **options)
       req = build_request(:create_work_group, params)
       req.send_request(options)
     end
@@ -664,9 +664,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteDataCatalog AWS API Documentation
     #
-    # @overload delete_data_catalog(params = {})
+    # @overload delete_data_catalog(**params)
     # @param [Hash] params ({})
-    def delete_data_catalog(params = {}, options = {})
+    def delete_data_catalog(params = {}, **options)
       req = build_request(:delete_data_catalog, params)
       req.send_request(options)
     end
@@ -697,9 +697,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteNamedQuery AWS API Documentation
     #
-    # @overload delete_named_query(params = {})
+    # @overload delete_named_query(**params)
     # @param [Hash] params ({})
-    def delete_named_query(params = {}, options = {})
+    def delete_named_query(params = {}, **options)
       req = build_request(:delete_named_query, params)
       req.send_request(options)
     end
@@ -725,9 +725,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteWorkGroup AWS API Documentation
     #
-    # @overload delete_work_group(params = {})
+    # @overload delete_work_group(**params)
     # @param [Hash] params ({})
-    def delete_work_group(params = {}, options = {})
+    def delete_work_group(params = {}, **options)
       req = build_request(:delete_work_group, params)
       req.send_request(options)
     end
@@ -757,9 +757,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetDataCatalog AWS API Documentation
     #
-    # @overload get_data_catalog(params = {})
+    # @overload get_data_catalog(**params)
     # @param [Hash] params ({})
-    def get_data_catalog(params = {}, options = {})
+    def get_data_catalog(params = {}, **options)
       req = build_request(:get_data_catalog, params)
       req.send_request(options)
     end
@@ -792,9 +792,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetDatabase AWS API Documentation
     #
-    # @overload get_database(params = {})
+    # @overload get_database(**params)
     # @param [Hash] params ({})
-    def get_database(params = {}, options = {})
+    def get_database(params = {}, **options)
       req = build_request(:get_database, params)
       req.send_request(options)
     end
@@ -826,9 +826,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetNamedQuery AWS API Documentation
     #
-    # @overload get_named_query(params = {})
+    # @overload get_named_query(**params)
     # @param [Hash] params ({})
-    def get_named_query(params = {}, options = {})
+    def get_named_query(params = {}, **options)
       req = build_request(:get_named_query, params)
       req.send_request(options)
     end
@@ -876,9 +876,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryExecution AWS API Documentation
     #
-    # @overload get_query_execution(params = {})
+    # @overload get_query_execution(**params)
     # @param [Hash] params ({})
-    def get_query_execution(params = {}, options = {})
+    def get_query_execution(params = {}, **options)
       req = build_request(:get_query_execution, params)
       req.send_request(options)
     end
@@ -952,9 +952,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryResults AWS API Documentation
     #
-    # @overload get_query_results(params = {})
+    # @overload get_query_results(**params)
     # @param [Hash] params ({})
-    def get_query_results(params = {}, options = {})
+    def get_query_results(params = {}, **options)
       req = build_request(:get_query_results, params)
       req.send_request(options)
     end
@@ -1002,9 +1002,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetTableMetadata AWS API Documentation
     #
-    # @overload get_table_metadata(params = {})
+    # @overload get_table_metadata(**params)
     # @param [Hash] params ({})
-    def get_table_metadata(params = {}, options = {})
+    def get_table_metadata(params = {}, **options)
       req = build_request(:get_table_metadata, params)
       req.send_request(options)
     end
@@ -1040,9 +1040,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetWorkGroup AWS API Documentation
     #
-    # @overload get_work_group(params = {})
+    # @overload get_work_group(**params)
     # @param [Hash] params ({})
-    def get_work_group(params = {}, options = {})
+    def get_work_group(params = {}, **options)
       req = build_request(:get_work_group, params)
       req.send_request(options)
     end
@@ -1081,9 +1081,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListDataCatalogs AWS API Documentation
     #
-    # @overload list_data_catalogs(params = {})
+    # @overload list_data_catalogs(**params)
     # @param [Hash] params ({})
-    def list_data_catalogs(params = {}, options = {})
+    def list_data_catalogs(params = {}, **options)
       req = build_request(:list_data_catalogs, params)
       req.send_request(options)
     end
@@ -1128,9 +1128,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListDatabases AWS API Documentation
     #
-    # @overload list_databases(params = {})
+    # @overload list_databases(**params)
     # @param [Hash] params ({})
-    def list_databases(params = {}, options = {})
+    def list_databases(params = {}, **options)
       req = build_request(:list_databases, params)
       req.send_request(options)
     end
@@ -1184,9 +1184,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListNamedQueries AWS API Documentation
     #
-    # @overload list_named_queries(params = {})
+    # @overload list_named_queries(**params)
     # @param [Hash] params ({})
-    def list_named_queries(params = {}, options = {})
+    def list_named_queries(params = {}, **options)
       req = build_request(:list_named_queries, params)
       req.send_request(options)
     end
@@ -1240,9 +1240,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListQueryExecutions AWS API Documentation
     #
-    # @overload list_query_executions(params = {})
+    # @overload list_query_executions(**params)
     # @param [Hash] params ({})
-    def list_query_executions(params = {}, options = {})
+    def list_query_executions(params = {}, **options)
       req = build_request(:list_query_executions, params)
       req.send_request(options)
     end
@@ -1308,9 +1308,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListTableMetadata AWS API Documentation
     #
-    # @overload list_table_metadata(params = {})
+    # @overload list_table_metadata(**params)
     # @param [Hash] params ({})
-    def list_table_metadata(params = {}, options = {})
+    def list_table_metadata(params = {}, **options)
       req = build_request(:list_table_metadata, params)
       req.send_request(options)
     end
@@ -1354,9 +1354,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1397,9 +1397,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListWorkGroups AWS API Documentation
     #
-    # @overload list_work_groups(params = {})
+    # @overload list_work_groups(**params)
     # @param [Hash] params ({})
-    def list_work_groups(params = {}, options = {})
+    def list_work_groups(params = {}, **options)
       req = build_request(:list_work_groups, params)
       req.send_request(options)
     end
@@ -1476,9 +1476,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StartQueryExecution AWS API Documentation
     #
-    # @overload start_query_execution(params = {})
+    # @overload start_query_execution(**params)
     # @param [Hash] params ({})
-    def start_query_execution(params = {}, options = {})
+    def start_query_execution(params = {}, **options)
       req = build_request(:start_query_execution, params)
       req.send_request(options)
     end
@@ -1509,9 +1509,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StopQueryExecution AWS API Documentation
     #
-    # @overload stop_query_execution(params = {})
+    # @overload stop_query_execution(**params)
     # @param [Hash] params ({})
-    def stop_query_execution(params = {}, options = {})
+    def stop_query_execution(params = {}, **options)
       req = build_request(:stop_query_execution, params)
       req.send_request(options)
     end
@@ -1558,9 +1558,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1585,9 +1585,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1651,9 +1651,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/UpdateDataCatalog AWS API Documentation
     #
-    # @overload update_data_catalog(params = {})
+    # @overload update_data_catalog(**params)
     # @param [Hash] params ({})
-    def update_data_catalog(params = {}, options = {})
+    def update_data_catalog(params = {}, **options)
       req = build_request(:update_data_catalog, params)
       req.send_request(options)
     end
@@ -1702,9 +1702,9 @@ module Aws::Athena
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/UpdateWorkGroup AWS API Documentation
     #
-    # @overload update_work_group(params = {})
+    # @overload update_work_group(**params)
     # @param [Hash] params ({})
-    def update_work_group(params = {}, options = {})
+    def update_work_group(params = {}, **options)
       req = build_request(:update_work_group, params)
       req.send_request(options)
     end
@@ -1713,7 +1713,7 @@ module Aws::Athena
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1721,15 +1721,15 @@ module Aws::Athena
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-athena'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-athena"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

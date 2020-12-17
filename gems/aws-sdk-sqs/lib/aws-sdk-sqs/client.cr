@@ -7,30 +7,30 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
-require 'aws-sdk-sqs/plugins/queue_urls.rb'
-require 'aws-sdk-sqs/plugins/md5s.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
+require "aws-sdk-sqs/plugins/queue_urls.rb"
+require "aws-sdk-sqs/plugins/md5s.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:sqs)
 
@@ -290,7 +290,7 @@ module Aws::SQS
     #     not match.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -434,9 +434,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/AddPermission AWS API Documentation
     #
-    # @overload add_permission(params = {})
+    # @overload add_permission(**params)
     # @param [Hash] params ({})
-    def add_permission(params = {}, options = {})
+    def add_permission(params = {}, **options)
       req = build_request(:add_permission, params)
       req.send_request(options)
     end
@@ -531,9 +531,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ChangeMessageVisibility AWS API Documentation
     #
-    # @overload change_message_visibility(params = {})
+    # @overload change_message_visibility(**params)
     # @param [Hash] params ({})
-    def change_message_visibility(params = {}, options = {})
+    def change_message_visibility(params = {}, **options)
       req = build_request(:change_message_visibility, params)
       req.send_request(options)
     end
@@ -596,9 +596,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ChangeMessageVisibilityBatch AWS API Documentation
     #
-    # @overload change_message_visibility_batch(params = {})
+    # @overload change_message_visibility_batch(**params)
     # @param [Hash] params ({})
-    def change_message_visibility_batch(params = {}, options = {})
+    def change_message_visibility_batch(params = {}, **options)
       req = build_request(:change_message_visibility_batch, params)
       req.send_request(options)
     end
@@ -866,9 +866,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/CreateQueue AWS API Documentation
     #
-    # @overload create_queue(params = {})
+    # @overload create_queue(**params)
     # @param [Hash] params ({})
-    def create_queue(params = {}, options = {})
+    def create_queue(params = {}, **options)
       req = build_request(:create_queue, params)
       req.send_request(options)
     end
@@ -917,9 +917,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/DeleteMessage AWS API Documentation
     #
-    # @overload delete_message(params = {})
+    # @overload delete_message(**params)
     # @param [Hash] params ({})
-    def delete_message(params = {}, options = {})
+    def delete_message(params = {}, **options)
       req = build_request(:delete_message, params)
       req.send_request(options)
     end
@@ -977,9 +977,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/DeleteMessageBatch AWS API Documentation
     #
-    # @overload delete_message_batch(params = {})
+    # @overload delete_message_batch(**params)
     # @param [Hash] params ({})
-    def delete_message_batch(params = {}, options = {})
+    def delete_message_batch(params = {}, **options)
       req = build_request(:delete_message_batch, params)
       req.send_request(options)
     end
@@ -1023,9 +1023,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/DeleteQueue AWS API Documentation
     #
-    # @overload delete_queue(params = {})
+    # @overload delete_queue(**params)
     # @param [Hash] params ({})
-    def delete_queue(params = {}, options = {})
+    def delete_queue(params = {}, **options)
       req = build_request(:delete_queue, params)
       req.send_request(options)
     end
@@ -1180,9 +1180,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/GetQueueAttributes AWS API Documentation
     #
-    # @overload get_queue_attributes(params = {})
+    # @overload get_queue_attributes(**params)
     # @param [Hash] params ({})
-    def get_queue_attributes(params = {}, options = {})
+    def get_queue_attributes(params = {}, **options)
       req = build_request(:get_queue_attributes, params)
       req.send_request(options)
     end
@@ -1227,9 +1227,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/GetQueueUrl AWS API Documentation
     #
-    # @overload get_queue_url(params = {})
+    # @overload get_queue_url(**params)
     # @param [Hash] params ({})
-    def get_queue_url(params = {}, options = {})
+    def get_queue_url(params = {}, **options)
       req = build_request(:get_queue_url, params)
       req.send_request(options)
     end
@@ -1290,9 +1290,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListDeadLetterSourceQueues AWS API Documentation
     #
-    # @overload list_dead_letter_source_queues(params = {})
+    # @overload list_dead_letter_source_queues(**params)
     # @param [Hash] params ({})
-    def list_dead_letter_source_queues(params = {}, options = {})
+    def list_dead_letter_source_queues(params = {}, **options)
       req = build_request(:list_dead_letter_source_queues, params)
       req.send_request(options)
     end
@@ -1332,9 +1332,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListQueueTags AWS API Documentation
     #
-    # @overload list_queue_tags(params = {})
+    # @overload list_queue_tags(**params)
     # @param [Hash] params ({})
-    def list_queue_tags(params = {}, options = {})
+    def list_queue_tags(params = {}, **options)
       req = build_request(:list_queue_tags, params)
       req.send_request(options)
     end
@@ -1399,9 +1399,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListQueues AWS API Documentation
     #
-    # @overload list_queues(params = {})
+    # @overload list_queues(**params)
     # @param [Hash] params ({})
-    def list_queues(params = {}, options = {})
+    def list_queues(params = {}, **options)
       req = build_request(:list_queues, params)
       req.send_request(options)
     end
@@ -1436,9 +1436,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/PurgeQueue AWS API Documentation
     #
-    # @overload purge_queue(params = {})
+    # @overload purge_queue(**params)
     # @param [Hash] params ({})
-    def purge_queue(params = {}, options = {})
+    def purge_queue(params = {}, **options)
       req = build_request(:purge_queue, params)
       req.send_request(options)
     end
@@ -1696,9 +1696,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ReceiveMessage AWS API Documentation
     #
-    # @overload receive_message(params = {})
+    # @overload receive_message(**params)
     # @param [Hash] params ({})
-    def receive_message(params = {}, options = {})
+    def receive_message(params = {}, **options)
       req = build_request(:receive_message, params)
       req.send_request(options)
     end
@@ -1742,9 +1742,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/RemovePermission AWS API Documentation
     #
-    # @overload remove_permission(params = {})
+    # @overload remove_permission(**params)
     # @param [Hash] params ({})
-    def remove_permission(params = {}, options = {})
+    def remove_permission(params = {}, **options)
       req = build_request(:remove_permission, params)
       req.send_request(options)
     end
@@ -1960,9 +1960,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SendMessage AWS API Documentation
     #
-    # @overload send_message(params = {})
+    # @overload send_message(**params)
     # @param [Hash] params ({})
-    def send_message(params = {}, options = {})
+    def send_message(params = {}, **options)
       req = build_request(:send_message, params)
       req.send_request(options)
     end
@@ -2067,9 +2067,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SendMessageBatch AWS API Documentation
     #
-    # @overload send_message_batch(params = {})
+    # @overload send_message_batch(**params)
     # @param [Hash] params ({})
-    def send_message_batch(params = {}, options = {})
+    def send_message_batch(params = {}, **options)
       req = build_request(:send_message_batch, params)
       req.send_request(options)
     end
@@ -2237,9 +2237,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SetQueueAttributes AWS API Documentation
     #
-    # @overload set_queue_attributes(params = {})
+    # @overload set_queue_attributes(**params)
     # @param [Hash] params ({})
-    def set_queue_attributes(params = {}, options = {})
+    def set_queue_attributes(params = {}, **options)
       req = build_request(:set_queue_attributes, params)
       req.send_request(options)
     end
@@ -2294,9 +2294,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/TagQueue AWS API Documentation
     #
-    # @overload tag_queue(params = {})
+    # @overload tag_queue(**params)
     # @param [Hash] params ({})
-    def tag_queue(params = {}, options = {})
+    def tag_queue(params = {}, **options)
       req = build_request(:tag_queue, params)
       req.send_request(options)
     end
@@ -2333,9 +2333,9 @@ module Aws::SQS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/UntagQueue AWS API Documentation
     #
-    # @overload untag_queue(params = {})
+    # @overload untag_queue(**params)
     # @param [Hash] params ({})
-    def untag_queue(params = {}, options = {})
+    def untag_queue(params = {}, **options)
       req = build_request(:untag_queue, params)
       req.send_request(options)
     end
@@ -2344,7 +2344,7 @@ module Aws::SQS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2352,15 +2352,15 @@ module Aws::SQS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-sqs'
-      context[:gem_version] = '1.34.0'
+      context[:gem_name] = "aws-sdk-sqs"
+      context[:gem_version] = "1.34.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

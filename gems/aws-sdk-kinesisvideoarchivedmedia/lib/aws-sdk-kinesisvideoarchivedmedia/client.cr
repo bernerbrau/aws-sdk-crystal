@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kinesisvideoarchivedmedia)
 
@@ -280,7 +280,7 @@ module Aws::KinesisVideoArchivedMedia
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -397,9 +397,9 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetClip AWS API Documentation
     #
-    # @overload get_clip(params = {})
+    # @overload get_clip(**params)
     # @param [Hash] params ({})
-    def get_clip(params = {}, options = {}, &block)
+    def get_clip(params = {}, **options, &block)
       req = build_request(:get_clip, params)
       req.send_request(options, &block)
     end
@@ -744,9 +744,9 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetDASHStreamingSessionURL AWS API Documentation
     #
-    # @overload get_dash_streaming_session_url(params = {})
+    # @overload get_dash_streaming_session_url(**params)
     # @param [Hash] params ({})
-    def get_dash_streaming_session_url(params = {}, options = {})
+    def get_dash_streaming_session_url(params = {}, **options)
       req = build_request(:get_dash_streaming_session_url, params)
       req.send_request(options)
     end
@@ -1159,9 +1159,9 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetHLSStreamingSessionURL AWS API Documentation
     #
-    # @overload get_hls_streaming_session_url(params = {})
+    # @overload get_hls_streaming_session_url(**params)
     # @param [Hash] params ({})
-    def get_hls_streaming_session_url(params = {}, options = {})
+    def get_hls_streaming_session_url(params = {}, **options)
       req = build_request(:get_hls_streaming_session_url, params)
       req.send_request(options)
     end
@@ -1237,9 +1237,9 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetMediaForFragmentList AWS API Documentation
     #
-    # @overload get_media_for_fragment_list(params = {})
+    # @overload get_media_for_fragment_list(**params)
     # @param [Hash] params ({})
-    def get_media_for_fragment_list(params = {}, options = {}, &block)
+    def get_media_for_fragment_list(params = {}, **options, &block)
       req = build_request(:get_media_for_fragment_list, params)
       req.send_request(options, &block)
     end
@@ -1336,9 +1336,9 @@ module Aws::KinesisVideoArchivedMedia
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/ListFragments AWS API Documentation
     #
-    # @overload list_fragments(params = {})
+    # @overload list_fragments(**params)
     # @param [Hash] params ({})
-    def list_fragments(params = {}, options = {})
+    def list_fragments(params = {}, **options)
       req = build_request(:list_fragments, params)
       req.send_request(options)
     end
@@ -1347,7 +1347,7 @@ module Aws::KinesisVideoArchivedMedia
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1355,15 +1355,15 @@ module Aws::KinesisVideoArchivedMedia
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kinesisvideoarchivedmedia'
-      context[:gem_version] = '1.29.0'
+      context[:gem_name] = "aws-sdk-kinesisvideoarchivedmedia"
+      context[:gem_version] = "1.29.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

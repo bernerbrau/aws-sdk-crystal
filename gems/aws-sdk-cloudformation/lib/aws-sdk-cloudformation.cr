@@ -8,20 +8,20 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-cloudformation/types'
-require_relative 'aws-sdk-cloudformation/client_api'
-require_relative 'aws-sdk-cloudformation/client'
-require_relative 'aws-sdk-cloudformation/errors'
-require_relative 'aws-sdk-cloudformation/waiters'
-require_relative 'aws-sdk-cloudformation/resource'
-require_relative 'aws-sdk-cloudformation/event'
-require_relative 'aws-sdk-cloudformation/stack'
-require_relative 'aws-sdk-cloudformation/stack_resource'
-require_relative 'aws-sdk-cloudformation/stack_resource_summary'
-require_relative 'aws-sdk-cloudformation/customizations'
+require_relative "aws-sdk-cloudformation/types"
+require_relative "aws-sdk-cloudformation/client_api"
+require_relative "aws-sdk-cloudformation/client"
+require_relative "aws-sdk-cloudformation/errors"
+require_relative "aws-sdk-cloudformation/waiters"
+require_relative "aws-sdk-cloudformation/resource"
+require_relative "aws-sdk-cloudformation/event"
+require_relative "aws-sdk-cloudformation/stack"
+require_relative "aws-sdk-cloudformation/stack_resource"
+require_relative "aws-sdk-cloudformation/stack_resource_summary"
+require_relative "aws-sdk-cloudformation/customizations"
 
 # This module provides support for AWS CloudFormation. This module is available in the
 # `aws-sdk-cloudformation` gem.
@@ -53,6 +53,6 @@ require_relative 'aws-sdk-cloudformation/customizations'
 # @!group service
 module Aws::CloudFormation
 
-  GEM_VERSION = '1.46.0'
+  GEM_VERSION = "1.46.0"
 
 end

@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::RDS
   # Waiters are utility methods that poll for a particular state to occur
@@ -137,7 +137,7 @@ module Aws::RDS
 
       # @option (see Client#describe_db_cluster_snapshots)
       # @return (see Client#describe_db_cluster_snapshots)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -204,7 +204,7 @@ module Aws::RDS
 
       # @option (see Client#describe_db_cluster_snapshots)
       # @return (see Client#describe_db_cluster_snapshots)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -272,7 +272,7 @@ module Aws::RDS
 
       # @option (see Client#describe_db_instances)
       # @return (see Client#describe_db_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -339,7 +339,7 @@ module Aws::RDS
 
       # @option (see Client#describe_db_instances)
       # @return (see Client#describe_db_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -407,7 +407,7 @@ module Aws::RDS
 
       # @option (see Client#describe_db_snapshots)
       # @return (see Client#describe_db_snapshots)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -474,7 +474,7 @@ module Aws::RDS
 
       # @option (see Client#describe_db_snapshots)
       # @return (see Client#describe_db_snapshots)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

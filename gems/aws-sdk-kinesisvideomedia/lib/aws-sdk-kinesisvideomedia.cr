@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-kinesisvideomedia/types'
-require_relative 'aws-sdk-kinesisvideomedia/client_api'
-require_relative 'aws-sdk-kinesisvideomedia/client'
-require_relative 'aws-sdk-kinesisvideomedia/errors'
-require_relative 'aws-sdk-kinesisvideomedia/resource'
-require_relative 'aws-sdk-kinesisvideomedia/customizations'
+require_relative "aws-sdk-kinesisvideomedia/types"
+require_relative "aws-sdk-kinesisvideomedia/client_api"
+require_relative "aws-sdk-kinesisvideomedia/client"
+require_relative "aws-sdk-kinesisvideomedia/errors"
+require_relative "aws-sdk-kinesisvideomedia/resource"
+require_relative "aws-sdk-kinesisvideomedia/customizations"
 
 # This module provides support for Amazon Kinesis Video Streams Media. This module is available in the
 # `aws-sdk-kinesisvideomedia` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-kinesisvideomedia/customizations'
 # @!group service
 module Aws::KinesisVideoMedia
 
-  GEM_VERSION = '1.26.0'
+  GEM_VERSION = "1.26.0"
 
 end

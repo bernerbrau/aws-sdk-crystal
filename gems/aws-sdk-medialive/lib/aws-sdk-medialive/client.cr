@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:medialive)
 
@@ -280,7 +280,7 @@ module Aws::MediaLive
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -342,9 +342,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/AcceptInputDeviceTransfer AWS API Documentation
     #
-    # @overload accept_input_device_transfer(params = {})
+    # @overload accept_input_device_transfer(**params)
     # @param [Hash] params ({})
-    def accept_input_device_transfer(params = {}, options = {})
+    def accept_input_device_transfer(params = {}, **options)
       req = build_request(:accept_input_device_transfer, params)
       req.send_request(options)
     end
@@ -387,9 +387,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/BatchDelete AWS API Documentation
     #
-    # @overload batch_delete(params = {})
+    # @overload batch_delete(**params)
     # @param [Hash] params ({})
-    def batch_delete(params = {}, options = {})
+    def batch_delete(params = {}, **options)
       req = build_request(:batch_delete, params)
       req.send_request(options)
     end
@@ -426,9 +426,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/BatchStart AWS API Documentation
     #
-    # @overload batch_start(params = {})
+    # @overload batch_start(**params)
     # @param [Hash] params ({})
-    def batch_start(params = {}, options = {})
+    def batch_start(params = {}, **options)
       req = build_request(:batch_start, params)
       req.send_request(options)
     end
@@ -465,9 +465,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/BatchStop AWS API Documentation
     #
-    # @overload batch_stop(params = {})
+    # @overload batch_stop(**params)
     # @param [Hash] params ({})
-    def batch_stop(params = {}, options = {})
+    def batch_stop(params = {}, **options)
       req = build_request(:batch_stop, params)
       req.send_request(options)
     end
@@ -725,9 +725,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/BatchUpdateSchedule AWS API Documentation
     #
-    # @overload batch_update_schedule(params = {})
+    # @overload batch_update_schedule(**params)
     # @param [Hash] params ({})
-    def batch_update_schedule(params = {}, options = {})
+    def batch_update_schedule(params = {}, **options)
       req = build_request(:batch_update_schedule, params)
       req.send_request(options)
     end
@@ -746,9 +746,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CancelInputDeviceTransfer AWS API Documentation
     #
-    # @overload cancel_input_device_transfer(params = {})
+    # @overload cancel_input_device_transfer(**params)
     # @param [Hash] params ({})
-    def cancel_input_device_transfer(params = {}, options = {})
+    def cancel_input_device_transfer(params = {}, **options)
       req = build_request(:cancel_input_device_transfer, params)
       req.send_request(options)
     end
@@ -2276,9 +2276,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateChannel AWS API Documentation
     #
-    # @overload create_channel(params = {})
+    # @overload create_channel(**params)
     # @param [Hash] params ({})
-    def create_channel(params = {}, options = {})
+    def create_channel(params = {}, **options)
       req = build_request(:create_channel, params)
       req.send_request(options)
     end
@@ -2390,9 +2390,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateInput AWS API Documentation
     #
-    # @overload create_input(params = {})
+    # @overload create_input(**params)
     # @param [Hash] params ({})
-    def create_input(params = {}, options = {})
+    def create_input(params = {}, **options)
       req = build_request(:create_input, params)
       req.send_request(options)
     end
@@ -2434,9 +2434,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateInputSecurityGroup AWS API Documentation
     #
-    # @overload create_input_security_group(params = {})
+    # @overload create_input_security_group(**params)
     # @param [Hash] params ({})
-    def create_input_security_group(params = {}, options = {})
+    def create_input_security_group(params = {}, **options)
       req = build_request(:create_input_security_group, params)
       req.send_request(options)
     end
@@ -2498,9 +2498,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateMultiplex AWS API Documentation
     #
-    # @overload create_multiplex(params = {})
+    # @overload create_multiplex(**params)
     # @param [Hash] params ({})
-    def create_multiplex(params = {}, options = {})
+    def create_multiplex(params = {}, **options)
       req = build_request(:create_multiplex, params)
       req.send_request(options)
     end
@@ -2581,9 +2581,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateMultiplexProgram AWS API Documentation
     #
-    # @overload create_multiplex_program(params = {})
+    # @overload create_multiplex_program(**params)
     # @param [Hash] params ({})
-    def create_multiplex_program(params = {}, options = {})
+    def create_multiplex_program(params = {}, **options)
       req = build_request(:create_multiplex_program, params)
       req.send_request(options)
     end
@@ -2607,9 +2607,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateTags AWS API Documentation
     #
-    # @overload create_tags(params = {})
+    # @overload create_tags(**params)
     # @param [Hash] params ({})
-    def create_tags(params = {}, options = {})
+    def create_tags(params = {}, **options)
       req = build_request(:create_tags, params)
       req.send_request(options)
     end
@@ -3228,9 +3228,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteChannel AWS API Documentation
     #
-    # @overload delete_channel(params = {})
+    # @overload delete_channel(**params)
     # @param [Hash] params ({})
-    def delete_channel(params = {}, options = {})
+    def delete_channel(params = {}, **options)
       req = build_request(:delete_channel, params)
       req.send_request(options)
     end
@@ -3249,9 +3249,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteInput AWS API Documentation
     #
-    # @overload delete_input(params = {})
+    # @overload delete_input(**params)
     # @param [Hash] params ({})
-    def delete_input(params = {}, options = {})
+    def delete_input(params = {}, **options)
       req = build_request(:delete_input, params)
       req.send_request(options)
     end
@@ -3270,9 +3270,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteInputSecurityGroup AWS API Documentation
     #
-    # @overload delete_input_security_group(params = {})
+    # @overload delete_input_security_group(**params)
     # @param [Hash] params ({})
-    def delete_input_security_group(params = {}, options = {})
+    def delete_input_security_group(params = {}, **options)
       req = build_request(:delete_input_security_group, params)
       req.send_request(options)
     end
@@ -3321,9 +3321,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteMultiplex AWS API Documentation
     #
-    # @overload delete_multiplex(params = {})
+    # @overload delete_multiplex(**params)
     # @param [Hash] params ({})
-    def delete_multiplex(params = {}, options = {})
+    def delete_multiplex(params = {}, **options)
       req = build_request(:delete_multiplex, params)
       req.send_request(options)
     end
@@ -3384,9 +3384,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteMultiplexProgram AWS API Documentation
     #
-    # @overload delete_multiplex_program(params = {})
+    # @overload delete_multiplex_program(**params)
     # @param [Hash] params ({})
-    def delete_multiplex_program(params = {}, options = {})
+    def delete_multiplex_program(params = {}, **options)
       req = build_request(:delete_multiplex_program, params)
       req.send_request(options)
     end
@@ -3453,9 +3453,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteReservation AWS API Documentation
     #
-    # @overload delete_reservation(params = {})
+    # @overload delete_reservation(**params)
     # @param [Hash] params ({})
-    def delete_reservation(params = {}, options = {})
+    def delete_reservation(params = {}, **options)
       req = build_request(:delete_reservation, params)
       req.send_request(options)
     end
@@ -3474,9 +3474,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteSchedule AWS API Documentation
     #
-    # @overload delete_schedule(params = {})
+    # @overload delete_schedule(**params)
     # @param [Hash] params ({})
-    def delete_schedule(params = {}, options = {})
+    def delete_schedule(params = {}, **options)
       req = build_request(:delete_schedule, params)
       req.send_request(options)
     end
@@ -3498,9 +3498,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteTags AWS API Documentation
     #
-    # @overload delete_tags(params = {})
+    # @overload delete_tags(**params)
     # @param [Hash] params ({})
-    def delete_tags(params = {}, options = {})
+    def delete_tags(params = {}, **options)
       req = build_request(:delete_tags, params)
       req.send_request(options)
     end
@@ -4127,9 +4127,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeChannel AWS API Documentation
     #
-    # @overload describe_channel(params = {})
+    # @overload describe_channel(**params)
     # @param [Hash] params ({})
-    def describe_channel(params = {}, options = {})
+    def describe_channel(params = {}, **options)
       req = build_request(:describe_channel, params)
       req.send_request(options)
     end
@@ -4202,9 +4202,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeInput AWS API Documentation
     #
-    # @overload describe_input(params = {})
+    # @overload describe_input(**params)
     # @param [Hash] params ({})
-    def describe_input(params = {}, options = {})
+    def describe_input(params = {}, **options)
       req = build_request(:describe_input, params)
       req.send_request(options)
     end
@@ -4270,9 +4270,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeInputDevice AWS API Documentation
     #
-    # @overload describe_input_device(params = {})
+    # @overload describe_input_device(**params)
     # @param [Hash] params ({})
-    def describe_input_device(params = {}, options = {})
+    def describe_input_device(params = {}, **options)
       req = build_request(:describe_input_device, params)
       req.send_request(options)
     end
@@ -4308,9 +4308,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeInputDeviceThumbnail AWS API Documentation
     #
-    # @overload describe_input_device_thumbnail(params = {})
+    # @overload describe_input_device_thumbnail(**params)
     # @param [Hash] params ({})
-    def describe_input_device_thumbnail(params = {}, options = {}, &block)
+    def describe_input_device_thumbnail(params = {}, **options, &block)
       req = build_request(:describe_input_device_thumbnail, params)
       req.send_request(options, &block)
     end
@@ -4348,9 +4348,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeInputSecurityGroup AWS API Documentation
     #
-    # @overload describe_input_security_group(params = {})
+    # @overload describe_input_security_group(**params)
     # @param [Hash] params ({})
-    def describe_input_security_group(params = {}, options = {})
+    def describe_input_security_group(params = {}, **options)
       req = build_request(:describe_input_security_group, params)
       req.send_request(options)
     end
@@ -4407,9 +4407,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeMultiplex AWS API Documentation
     #
-    # @overload describe_multiplex(params = {})
+    # @overload describe_multiplex(**params)
     # @param [Hash] params ({})
-    def describe_multiplex(params = {}, options = {})
+    def describe_multiplex(params = {}, **options)
       req = build_request(:describe_multiplex, params)
       req.send_request(options)
     end
@@ -4470,9 +4470,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeMultiplexProgram AWS API Documentation
     #
-    # @overload describe_multiplex_program(params = {})
+    # @overload describe_multiplex_program(**params)
     # @param [Hash] params ({})
-    def describe_multiplex_program(params = {}, options = {})
+    def describe_multiplex_program(params = {}, **options)
       req = build_request(:describe_multiplex_program, params)
       req.send_request(options)
     end
@@ -4524,9 +4524,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeOffering AWS API Documentation
     #
-    # @overload describe_offering(params = {})
+    # @overload describe_offering(**params)
     # @param [Hash] params ({})
-    def describe_offering(params = {}, options = {})
+    def describe_offering(params = {}, **options)
       req = build_request(:describe_offering, params)
       req.send_request(options)
     end
@@ -4593,9 +4593,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeReservation AWS API Documentation
     #
-    # @overload describe_reservation(params = {})
+    # @overload describe_reservation(**params)
     # @param [Hash] params ({})
-    def describe_reservation(params = {}, options = {})
+    def describe_reservation(params = {}, **options)
       req = build_request(:describe_reservation, params)
       req.send_request(options)
     end
@@ -4684,9 +4684,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DescribeSchedule AWS API Documentation
     #
-    # @overload describe_schedule(params = {})
+    # @overload describe_schedule(**params)
     # @param [Hash] params ({})
-    def describe_schedule(params = {}, options = {})
+    def describe_schedule(params = {}, **options)
       req = build_request(:describe_schedule, params)
       req.send_request(options)
     end
@@ -4792,9 +4792,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListChannels AWS API Documentation
     #
-    # @overload list_channels(params = {})
+    # @overload list_channels(**params)
     # @param [Hash] params ({})
-    def list_channels(params = {}, options = {})
+    def list_channels(params = {}, **options)
       req = build_request(:list_channels, params)
       req.send_request(options)
     end
@@ -4835,9 +4835,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListInputDeviceTransfers AWS API Documentation
     #
-    # @overload list_input_device_transfers(params = {})
+    # @overload list_input_device_transfers(**params)
     # @param [Hash] params ({})
-    def list_input_device_transfers(params = {}, options = {})
+    def list_input_device_transfers(params = {}, **options)
       req = build_request(:list_input_device_transfers, params)
       req.send_request(options)
     end
@@ -4900,9 +4900,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListInputDevices AWS API Documentation
     #
-    # @overload list_input_devices(params = {})
+    # @overload list_input_devices(**params)
     # @param [Hash] params ({})
-    def list_input_devices(params = {}, options = {})
+    def list_input_devices(params = {}, **options)
       req = build_request(:list_input_devices, params)
       req.send_request(options)
     end
@@ -4943,9 +4943,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListInputSecurityGroups AWS API Documentation
     #
-    # @overload list_input_security_groups(params = {})
+    # @overload list_input_security_groups(**params)
     # @param [Hash] params ({})
-    def list_input_security_groups(params = {}, options = {})
+    def list_input_security_groups(params = {}, **options)
       req = build_request(:list_input_security_groups, params)
       req.send_request(options)
     end
@@ -5005,9 +5005,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListInputs AWS API Documentation
     #
-    # @overload list_inputs(params = {})
+    # @overload list_inputs(**params)
     # @param [Hash] params ({})
-    def list_inputs(params = {}, options = {})
+    def list_inputs(params = {}, **options)
       req = build_request(:list_inputs, params)
       req.send_request(options)
     end
@@ -5044,9 +5044,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListMultiplexPrograms AWS API Documentation
     #
-    # @overload list_multiplex_programs(params = {})
+    # @overload list_multiplex_programs(**params)
     # @param [Hash] params ({})
-    def list_multiplex_programs(params = {}, options = {})
+    def list_multiplex_programs(params = {}, **options)
       req = build_request(:list_multiplex_programs, params)
       req.send_request(options)
     end
@@ -5089,9 +5089,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListMultiplexes AWS API Documentation
     #
-    # @overload list_multiplexes(params = {})
+    # @overload list_multiplexes(**params)
     # @param [Hash] params ({})
-    def list_multiplexes(params = {}, options = {})
+    def list_multiplexes(params = {}, **options)
       req = build_request(:list_multiplexes, params)
       req.send_request(options)
     end
@@ -5171,9 +5171,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListOfferings AWS API Documentation
     #
-    # @overload list_offerings(params = {})
+    # @overload list_offerings(**params)
     # @param [Hash] params ({})
-    def list_offerings(params = {}, options = {})
+    def list_offerings(params = {}, **options)
       req = build_request(:list_offerings, params)
       req.send_request(options)
     end
@@ -5255,9 +5255,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListReservations AWS API Documentation
     #
-    # @overload list_reservations(params = {})
+    # @overload list_reservations(**params)
     # @param [Hash] params ({})
-    def list_reservations(params = {}, options = {})
+    def list_reservations(params = {}, **options)
       req = build_request(:list_reservations, params)
       req.send_request(options)
     end
@@ -5283,9 +5283,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -5354,9 +5354,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/PurchaseOffering AWS API Documentation
     #
-    # @overload purchase_offering(params = {})
+    # @overload purchase_offering(**params)
     # @param [Hash] params ({})
-    def purchase_offering(params = {}, options = {})
+    def purchase_offering(params = {}, **options)
       req = build_request(:purchase_offering, params)
       req.send_request(options)
     end
@@ -5375,9 +5375,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/RejectInputDeviceTransfer AWS API Documentation
     #
-    # @overload reject_input_device_transfer(params = {})
+    # @overload reject_input_device_transfer(**params)
     # @param [Hash] params ({})
-    def reject_input_device_transfer(params = {}, options = {})
+    def reject_input_device_transfer(params = {}, **options)
       req = build_request(:reject_input_device_transfer, params)
       req.send_request(options)
     end
@@ -5996,9 +5996,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StartChannel AWS API Documentation
     #
-    # @overload start_channel(params = {})
+    # @overload start_channel(**params)
     # @param [Hash] params ({})
-    def start_channel(params = {}, options = {})
+    def start_channel(params = {}, **options)
       req = build_request(:start_channel, params)
       req.send_request(options)
     end
@@ -6048,9 +6048,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StartMultiplex AWS API Documentation
     #
-    # @overload start_multiplex(params = {})
+    # @overload start_multiplex(**params)
     # @param [Hash] params ({})
-    def start_multiplex(params = {}, options = {})
+    def start_multiplex(params = {}, **options)
       req = build_request(:start_multiplex, params)
       req.send_request(options)
     end
@@ -6669,9 +6669,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StopChannel AWS API Documentation
     #
-    # @overload stop_channel(params = {})
+    # @overload stop_channel(**params)
     # @param [Hash] params ({})
-    def stop_channel(params = {}, options = {})
+    def stop_channel(params = {}, **options)
       req = build_request(:stop_channel, params)
       req.send_request(options)
     end
@@ -6721,9 +6721,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StopMultiplex AWS API Documentation
     #
-    # @overload stop_multiplex(params = {})
+    # @overload stop_multiplex(**params)
     # @param [Hash] params ({})
-    def stop_multiplex(params = {}, options = {})
+    def stop_multiplex(params = {}, **options)
       req = build_request(:stop_multiplex, params)
       req.send_request(options)
     end
@@ -6749,9 +6749,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/TransferInputDevice AWS API Documentation
     #
-    # @overload transfer_input_device(params = {})
+    # @overload transfer_input_device(**params)
     # @param [Hash] params ({})
-    def transfer_input_device(params = {}, options = {})
+    def transfer_input_device(params = {}, **options)
       req = build_request(:transfer_input_device, params)
       req.send_request(options)
     end
@@ -8264,9 +8264,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateChannel AWS API Documentation
     #
-    # @overload update_channel(params = {})
+    # @overload update_channel(**params)
     # @param [Hash] params ({})
-    def update_channel(params = {}, options = {})
+    def update_channel(params = {}, **options)
       req = build_request(:update_channel, params)
       req.send_request(options)
     end
@@ -8899,9 +8899,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateChannelClass AWS API Documentation
     #
-    # @overload update_channel_class(params = {})
+    # @overload update_channel_class(**params)
     # @param [Hash] params ({})
-    def update_channel_class(params = {}, options = {})
+    def update_channel_class(params = {}, **options)
       req = build_request(:update_channel_class, params)
       req.send_request(options)
     end
@@ -8992,9 +8992,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateInput AWS API Documentation
     #
-    # @overload update_input(params = {})
+    # @overload update_input(**params)
     # @param [Hash] params ({})
-    def update_input(params = {}, options = {})
+    def update_input(params = {}, **options)
       req = build_request(:update_input, params)
       req.send_request(options)
     end
@@ -9077,9 +9077,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateInputDevice AWS API Documentation
     #
-    # @overload update_input_device(params = {})
+    # @overload update_input_device(**params)
     # @param [Hash] params ({})
-    def update_input_device(params = {}, options = {})
+    def update_input_device(params = {}, **options)
       req = build_request(:update_input_device, params)
       req.send_request(options)
     end
@@ -9124,9 +9124,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateInputSecurityGroup AWS API Documentation
     #
-    # @overload update_input_security_group(params = {})
+    # @overload update_input_security_group(**params)
     # @param [Hash] params ({})
-    def update_input_security_group(params = {}, options = {})
+    def update_input_security_group(params = {}, **options)
       req = build_request(:update_input_security_group, params)
       req.send_request(options)
     end
@@ -9178,9 +9178,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateMultiplex AWS API Documentation
     #
-    # @overload update_multiplex(params = {})
+    # @overload update_multiplex(**params)
     # @param [Hash] params ({})
-    def update_multiplex(params = {}, options = {})
+    def update_multiplex(params = {}, **options)
       req = build_request(:update_multiplex, params)
       req.send_request(options)
     end
@@ -9256,9 +9256,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateMultiplexProgram AWS API Documentation
     #
-    # @overload update_multiplex_program(params = {})
+    # @overload update_multiplex_program(**params)
     # @param [Hash] params ({})
-    def update_multiplex_program(params = {}, options = {})
+    def update_multiplex_program(params = {}, **options)
       req = build_request(:update_multiplex_program, params)
       req.send_request(options)
     end
@@ -9311,9 +9311,9 @@ module Aws::MediaLive
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateReservation AWS API Documentation
     #
-    # @overload update_reservation(params = {})
+    # @overload update_reservation(**params)
     # @param [Hash] params ({})
-    def update_reservation(params = {}, options = {})
+    def update_reservation(params = {}, **options)
       req = build_request(:update_reservation, params)
       req.send_request(options)
     end
@@ -9322,7 +9322,7 @@ module Aws::MediaLive
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -9330,8 +9330,8 @@ module Aws::MediaLive
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-medialive'
-      context[:gem_version] = '1.61.0'
+      context[:gem_name] = "aws-sdk-medialive"
+      context[:gem_version] = "1.61.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -9433,7 +9433,7 @@ module Aws::MediaLive
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -9449,7 +9449,7 @@ module Aws::MediaLive
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

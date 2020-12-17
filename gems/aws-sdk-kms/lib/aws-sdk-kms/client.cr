@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:kms)
 
@@ -290,7 +290,7 @@ module Aws::KMS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -400,9 +400,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CancelKeyDeletion AWS API Documentation
     #
-    # @overload cancel_key_deletion(params = {})
+    # @overload cancel_key_deletion(**params)
     # @param [Hash] params ({})
-    def cancel_key_deletion(params = {}, options = {})
+    def cancel_key_deletion(params = {}, **options)
       req = build_request(:cancel_key_deletion, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ConnectCustomKeyStore AWS API Documentation
     #
-    # @overload connect_custom_key_store(params = {})
+    # @overload connect_custom_key_store(**params)
     # @param [Hash] params ({})
-    def connect_custom_key_store(params = {}, options = {})
+    def connect_custom_key_store(params = {}, **options)
       req = build_request(:connect_custom_key_store, params)
       req.send_request(options)
     end
@@ -590,9 +590,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CreateAlias AWS API Documentation
     #
-    # @overload create_alias(params = {})
+    # @overload create_alias(**params)
     # @param [Hash] params ({})
-    def create_alias(params = {}, options = {})
+    def create_alias(params = {}, **options)
       req = build_request(:create_alias, params)
       req.send_request(options)
     end
@@ -685,9 +685,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CreateCustomKeyStore AWS API Documentation
     #
-    # @overload create_custom_key_store(params = {})
+    # @overload create_custom_key_store(**params)
     # @param [Hash] params ({})
-    def create_custom_key_store(params = {}, options = {})
+    def create_custom_key_store(params = {}, **options)
       req = build_request(:create_custom_key_store, params)
       req.send_request(options)
     end
@@ -894,9 +894,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CreateGrant AWS API Documentation
     #
-    # @overload create_grant(params = {})
+    # @overload create_grant(**params)
     # @param [Hash] params ({})
-    def create_grant(params = {}, options = {})
+    def create_grant(params = {}, **options)
       req = build_request(:create_grant, params)
       req.send_request(options)
     end
@@ -1269,9 +1269,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CreateKey AWS API Documentation
     #
-    # @overload create_key(params = {})
+    # @overload create_key(**params)
     # @param [Hash] params ({})
-    def create_key(params = {}, options = {})
+    def create_key(params = {}, **options)
       req = build_request(:create_key, params)
       req.send_request(options)
     end
@@ -1449,9 +1449,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Decrypt AWS API Documentation
     #
-    # @overload decrypt(params = {})
+    # @overload decrypt(**params)
     # @param [Hash] params ({})
-    def decrypt(params = {}, options = {})
+    def decrypt(params = {}, **options)
       req = build_request(:decrypt, params)
       req.send_request(options)
     end
@@ -1492,9 +1492,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DeleteAlias AWS API Documentation
     #
-    # @overload delete_alias(params = {})
+    # @overload delete_alias(**params)
     # @param [Hash] params ({})
-    def delete_alias(params = {}, options = {})
+    def delete_alias(params = {}, **options)
       req = build_request(:delete_alias, params)
       req.send_request(options)
     end
@@ -1552,9 +1552,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DeleteCustomKeyStore AWS API Documentation
     #
-    # @overload delete_custom_key_store(params = {})
+    # @overload delete_custom_key_store(**params)
     # @param [Hash] params ({})
-    def delete_custom_key_store(params = {}, options = {})
+    def delete_custom_key_store(params = {}, **options)
       req = build_request(:delete_custom_key_store, params)
       req.send_request(options)
     end
@@ -1615,9 +1615,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DeleteImportedKeyMaterial AWS API Documentation
     #
-    # @overload delete_imported_key_material(params = {})
+    # @overload delete_imported_key_material(**params)
     # @param [Hash] params ({})
-    def delete_imported_key_material(params = {}, options = {})
+    def delete_imported_key_material(params = {}, **options)
       req = build_request(:delete_imported_key_material, params)
       req.send_request(options)
     end
@@ -1715,9 +1715,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DescribeCustomKeyStores AWS API Documentation
     #
-    # @overload describe_custom_key_stores(params = {})
+    # @overload describe_custom_key_stores(**params)
     # @param [Hash] params ({})
-    def describe_custom_key_stores(params = {}, options = {})
+    def describe_custom_key_stores(params = {}, **options)
       req = build_request(:describe_custom_key_stores, params)
       req.send_request(options)
     end
@@ -1868,9 +1868,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DescribeKey AWS API Documentation
     #
-    # @overload describe_key(params = {})
+    # @overload describe_key(**params)
     # @param [Hash] params ({})
-    def describe_key(params = {}, options = {})
+    def describe_key(params = {}, **options)
       req = build_request(:describe_key, params)
       req.send_request(options)
     end
@@ -1925,9 +1925,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DisableKey AWS API Documentation
     #
-    # @overload disable_key(params = {})
+    # @overload disable_key(**params)
     # @param [Hash] params ({})
-    def disable_key(params = {}, options = {})
+    def disable_key(params = {}, **options)
       req = build_request(:disable_key, params)
       req.send_request(options)
     end
@@ -1990,9 +1990,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DisableKeyRotation AWS API Documentation
     #
-    # @overload disable_key_rotation(params = {})
+    # @overload disable_key_rotation(**params)
     # @param [Hash] params ({})
-    def disable_key_rotation(params = {}, options = {})
+    def disable_key_rotation(params = {}, **options)
       req = build_request(:disable_key_rotation, params)
       req.send_request(options)
     end
@@ -2043,9 +2043,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DisconnectCustomKeyStore AWS API Documentation
     #
-    # @overload disconnect_custom_key_store(params = {})
+    # @overload disconnect_custom_key_store(**params)
     # @param [Hash] params ({})
-    def disconnect_custom_key_store(params = {}, options = {})
+    def disconnect_custom_key_store(params = {}, **options)
       req = build_request(:disconnect_custom_key_store, params)
       req.send_request(options)
     end
@@ -2096,9 +2096,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/EnableKey AWS API Documentation
     #
-    # @overload enable_key(params = {})
+    # @overload enable_key(**params)
     # @param [Hash] params ({})
-    def enable_key(params = {}, options = {})
+    def enable_key(params = {}, **options)
       req = build_request(:enable_key, params)
       req.send_request(options)
     end
@@ -2159,9 +2159,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/EnableKeyRotation AWS API Documentation
     #
-    # @overload enable_key_rotation(params = {})
+    # @overload enable_key_rotation(**params)
     # @param [Hash] params ({})
-    def enable_key_rotation(params = {}, options = {})
+    def enable_key_rotation(params = {}, **options)
       req = build_request(:enable_key_rotation, params)
       req.send_request(options)
     end
@@ -2361,9 +2361,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Encrypt AWS API Documentation
     #
-    # @overload encrypt(params = {})
+    # @overload encrypt(**params)
     # @param [Hash] params ({})
-    def encrypt(params = {}, options = {})
+    def encrypt(params = {}, **options)
       req = build_request(:encrypt, params)
       req.send_request(options)
     end
@@ -2548,9 +2548,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKey AWS API Documentation
     #
-    # @overload generate_data_key(params = {})
+    # @overload generate_data_key(**params)
     # @param [Hash] params ({})
-    def generate_data_key(params = {}, options = {})
+    def generate_data_key(params = {}, **options)
       req = build_request(:generate_data_key, params)
       req.send_request(options)
     end
@@ -2692,9 +2692,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKeyPair AWS API Documentation
     #
-    # @overload generate_data_key_pair(params = {})
+    # @overload generate_data_key_pair(**params)
     # @param [Hash] params ({})
-    def generate_data_key_pair(params = {}, options = {})
+    def generate_data_key_pair(params = {}, **options)
       req = build_request(:generate_data_key_pair, params)
       req.send_request(options)
     end
@@ -2825,9 +2825,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKeyPairWithoutPlaintext AWS API Documentation
     #
-    # @overload generate_data_key_pair_without_plaintext(params = {})
+    # @overload generate_data_key_pair_without_plaintext(**params)
     # @param [Hash] params ({})
-    def generate_data_key_pair_without_plaintext(params = {}, options = {})
+    def generate_data_key_pair_without_plaintext(params = {}, **options)
       req = build_request(:generate_data_key_pair_without_plaintext, params)
       req.send_request(options)
     end
@@ -2984,9 +2984,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKeyWithoutPlaintext AWS API Documentation
     #
-    # @overload generate_data_key_without_plaintext(params = {})
+    # @overload generate_data_key_without_plaintext(**params)
     # @param [Hash] params ({})
-    def generate_data_key_without_plaintext(params = {}, options = {})
+    def generate_data_key_without_plaintext(params = {}, **options)
       req = build_request(:generate_data_key_without_plaintext, params)
       req.send_request(options)
     end
@@ -3049,9 +3049,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateRandom AWS API Documentation
     #
-    # @overload generate_random(params = {})
+    # @overload generate_random(**params)
     # @param [Hash] params ({})
-    def generate_random(params = {}, options = {})
+    def generate_random(params = {}, **options)
       req = build_request(:generate_random, params)
       req.send_request(options)
     end
@@ -3109,9 +3109,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GetKeyPolicy AWS API Documentation
     #
-    # @overload get_key_policy(params = {})
+    # @overload get_key_policy(**params)
     # @param [Hash] params ({})
-    def get_key_policy(params = {}, options = {})
+    def get_key_policy(params = {}, **options)
       req = build_request(:get_key_policy, params)
       req.send_request(options)
     end
@@ -3191,9 +3191,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GetKeyRotationStatus AWS API Documentation
     #
-    # @overload get_key_rotation_status(params = {})
+    # @overload get_key_rotation_status(**params)
     # @param [Hash] params ({})
-    def get_key_rotation_status(params = {}, options = {})
+    def get_key_rotation_status(params = {}, **options)
       req = build_request(:get_key_rotation_status, params)
       req.send_request(options)
     end
@@ -3302,9 +3302,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GetParametersForImport AWS API Documentation
     #
-    # @overload get_parameters_for_import(params = {})
+    # @overload get_parameters_for_import(**params)
     # @param [Hash] params ({})
-    def get_parameters_for_import(params = {}, options = {})
+    def get_parameters_for_import(params = {}, **options)
       req = build_request(:get_parameters_for_import, params)
       req.send_request(options)
     end
@@ -3422,9 +3422,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GetPublicKey AWS API Documentation
     #
-    # @overload get_public_key(params = {})
+    # @overload get_public_key(**params)
     # @param [Hash] params ({})
-    def get_public_key(params = {}, options = {})
+    def get_public_key(params = {}, **options)
       req = build_request(:get_public_key, params)
       req.send_request(options)
     end
@@ -3556,9 +3556,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ImportKeyMaterial AWS API Documentation
     #
-    # @overload import_key_material(params = {})
+    # @overload import_key_material(**params)
     # @param [Hash] params ({})
-    def import_key_material(params = {}, options = {})
+    def import_key_material(params = {}, **options)
       req = build_request(:import_key_material, params)
       req.send_request(options)
     end
@@ -3691,9 +3691,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ListAliases AWS API Documentation
     #
-    # @overload list_aliases(params = {})
+    # @overload list_aliases(**params)
     # @param [Hash] params ({})
-    def list_aliases(params = {}, options = {})
+    def list_aliases(params = {}, **options)
       req = build_request(:list_aliases, params)
       req.send_request(options)
     end
@@ -3848,9 +3848,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ListGrants AWS API Documentation
     #
-    # @overload list_grants(params = {})
+    # @overload list_grants(**params)
     # @param [Hash] params ({})
-    def list_grants(params = {}, options = {})
+    def list_grants(params = {}, **options)
       req = build_request(:list_grants, params)
       req.send_request(options)
     end
@@ -3933,9 +3933,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ListKeyPolicies AWS API Documentation
     #
-    # @overload list_key_policies(params = {})
+    # @overload list_key_policies(**params)
     # @param [Hash] params ({})
-    def list_key_policies(params = {}, options = {})
+    def list_key_policies(params = {}, **options)
       req = build_request(:list_key_policies, params)
       req.send_request(options)
     end
@@ -4025,9 +4025,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ListKeys AWS API Documentation
     #
-    # @overload list_keys(params = {})
+    # @overload list_keys(**params)
     # @param [Hash] params ({})
-    def list_keys(params = {}, options = {})
+    def list_keys(params = {}, **options)
       req = build_request(:list_keys, params)
       req.send_request(options)
     end
@@ -4119,9 +4119,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ListResourceTags AWS API Documentation
     #
-    # @overload list_resource_tags(params = {})
+    # @overload list_resource_tags(**params)
     # @param [Hash] params ({})
-    def list_resource_tags(params = {}, options = {})
+    def list_resource_tags(params = {}, **options)
       req = build_request(:list_resource_tags, params)
       req.send_request(options)
     end
@@ -4223,9 +4223,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ListRetirableGrants AWS API Documentation
     #
-    # @overload list_retirable_grants(params = {})
+    # @overload list_retirable_grants(**params)
     # @param [Hash] params ({})
-    def list_retirable_grants(params = {}, options = {})
+    def list_retirable_grants(params = {}, **options)
       req = build_request(:list_retirable_grants, params)
       req.send_request(options)
     end
@@ -4333,9 +4333,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/PutKeyPolicy AWS API Documentation
     #
-    # @overload put_key_policy(params = {})
+    # @overload put_key_policy(**params)
     # @param [Hash] params ({})
-    def put_key_policy(params = {}, options = {})
+    def put_key_policy(params = {}, **options)
       req = build_request(:put_key_policy, params)
       req.send_request(options)
     end
@@ -4601,9 +4601,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ReEncrypt AWS API Documentation
     #
-    # @overload re_encrypt(params = {})
+    # @overload re_encrypt(**params)
     # @param [Hash] params ({})
-    def re_encrypt(params = {}, options = {})
+    def re_encrypt(params = {}, **options)
       req = build_request(:re_encrypt, params)
       req.send_request(options)
     end
@@ -4666,9 +4666,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/RetireGrant AWS API Documentation
     #
-    # @overload retire_grant(params = {})
+    # @overload retire_grant(**params)
     # @param [Hash] params ({})
-    def retire_grant(params = {}, options = {})
+    def retire_grant(params = {}, **options)
       req = build_request(:retire_grant, params)
       req.send_request(options)
     end
@@ -4720,9 +4720,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/RevokeGrant AWS API Documentation
     #
-    # @overload revoke_grant(params = {})
+    # @overload revoke_grant(**params)
     # @param [Hash] params ({})
-    def revoke_grant(params = {}, options = {})
+    def revoke_grant(params = {}, **options)
       req = build_request(:revoke_grant, params)
       req.send_request(options)
     end
@@ -4821,9 +4821,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ScheduleKeyDeletion AWS API Documentation
     #
-    # @overload schedule_key_deletion(params = {})
+    # @overload schedule_key_deletion(**params)
     # @param [Hash] params ({})
-    def schedule_key_deletion(params = {}, options = {})
+    def schedule_key_deletion(params = {}, **options)
       req = build_request(:schedule_key_deletion, params)
       req.send_request(options)
     end
@@ -4953,9 +4953,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Sign AWS API Documentation
     #
-    # @overload sign(params = {})
+    # @overload sign(**params)
     # @param [Hash] params ({})
-    def sign(params = {}, options = {})
+    def sign(params = {}, **options)
       req = build_request(:sign, params)
       req.send_request(options)
     end
@@ -5031,9 +5031,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5094,9 +5094,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5182,9 +5182,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/UpdateAlias AWS API Documentation
     #
-    # @overload update_alias(params = {})
+    # @overload update_alias(**params)
     # @param [Hash] params ({})
-    def update_alias(params = {}, options = {})
+    def update_alias(params = {}, **options)
       req = build_request(:update_alias, params)
       req.send_request(options)
     end
@@ -5284,9 +5284,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/UpdateCustomKeyStore AWS API Documentation
     #
-    # @overload update_custom_key_store(params = {})
+    # @overload update_custom_key_store(**params)
     # @param [Hash] params ({})
-    def update_custom_key_store(params = {}, options = {})
+    def update_custom_key_store(params = {}, **options)
       req = build_request(:update_custom_key_store, params)
       req.send_request(options)
     end
@@ -5342,9 +5342,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/UpdateKeyDescription AWS API Documentation
     #
-    # @overload update_key_description(params = {})
+    # @overload update_key_description(**params)
     # @param [Hash] params ({})
-    def update_key_description(params = {}, options = {})
+    def update_key_description(params = {}, **options)
       req = build_request(:update_key_description, params)
       req.send_request(options)
     end
@@ -5474,9 +5474,9 @@ module Aws::KMS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Verify AWS API Documentation
     #
-    # @overload verify(params = {})
+    # @overload verify(**params)
     # @param [Hash] params ({})
-    def verify(params = {}, options = {})
+    def verify(params = {}, **options)
       req = build_request(:verify, params)
       req.send_request(options)
     end
@@ -5485,7 +5485,7 @@ module Aws::KMS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -5493,15 +5493,15 @@ module Aws::KMS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-kms'
-      context[:gem_version] = '1.39.0'
+      context[:gem_name] = "aws-sdk-kms"
+      context[:gem_version] = "1.39.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:groundstation)
 
@@ -280,7 +280,7 @@ module Aws::GroundStation
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -348,9 +348,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/CancelContact AWS API Documentation
     #
-    # @overload cancel_contact(params = {})
+    # @overload cancel_contact(**params)
     # @param [Hash] params ({})
-    def cancel_contact(params = {}, options = {})
+    def cancel_contact(params = {}, **options)
       req = build_request(:cancel_contact, params)
       req.send_request(options)
     end
@@ -450,9 +450,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/CreateConfig AWS API Documentation
     #
-    # @overload create_config(params = {})
+    # @overload create_config(**params)
     # @param [Hash] params ({})
-    def create_config(params = {}, options = {})
+    def create_config(params = {}, **options)
       req = build_request(:create_config, params)
       req.send_request(options)
     end
@@ -509,9 +509,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/CreateDataflowEndpointGroup AWS API Documentation
     #
-    # @overload create_dataflow_endpoint_group(params = {})
+    # @overload create_dataflow_endpoint_group(**params)
     # @param [Hash] params ({})
-    def create_dataflow_endpoint_group(params = {}, options = {})
+    def create_dataflow_endpoint_group(params = {}, **options)
       req = build_request(:create_dataflow_endpoint_group, params)
       req.send_request(options)
     end
@@ -573,9 +573,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/CreateMissionProfile AWS API Documentation
     #
-    # @overload create_mission_profile(params = {})
+    # @overload create_mission_profile(**params)
     # @param [Hash] params ({})
-    def create_mission_profile(params = {}, options = {})
+    def create_mission_profile(params = {}, **options)
       req = build_request(:create_mission_profile, params)
       req.send_request(options)
     end
@@ -609,9 +609,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/DeleteConfig AWS API Documentation
     #
-    # @overload delete_config(params = {})
+    # @overload delete_config(**params)
     # @param [Hash] params ({})
-    def delete_config(params = {}, options = {})
+    def delete_config(params = {}, **options)
       req = build_request(:delete_config, params)
       req.send_request(options)
     end
@@ -637,9 +637,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/DeleteDataflowEndpointGroup AWS API Documentation
     #
-    # @overload delete_dataflow_endpoint_group(params = {})
+    # @overload delete_dataflow_endpoint_group(**params)
     # @param [Hash] params ({})
-    def delete_dataflow_endpoint_group(params = {}, options = {})
+    def delete_dataflow_endpoint_group(params = {}, **options)
       req = build_request(:delete_dataflow_endpoint_group, params)
       req.send_request(options)
     end
@@ -665,9 +665,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/DeleteMissionProfile AWS API Documentation
     #
-    # @overload delete_mission_profile(params = {})
+    # @overload delete_mission_profile(**params)
     # @param [Hash] params ({})
-    def delete_mission_profile(params = {}, options = {})
+    def delete_mission_profile(params = {}, **options)
       req = build_request(:delete_mission_profile, params)
       req.send_request(options)
     end
@@ -750,9 +750,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/DescribeContact AWS API Documentation
     #
-    # @overload describe_contact(params = {})
+    # @overload describe_contact(**params)
     # @param [Hash] params ({})
-    def describe_contact(params = {}, options = {})
+    def describe_contact(params = {}, **options)
       req = build_request(:describe_contact, params)
       req.send_request(options)
     end
@@ -817,9 +817,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetConfig AWS API Documentation
     #
-    # @overload get_config(params = {})
+    # @overload get_config(**params)
     # @param [Hash] params ({})
-    def get_config(params = {}, options = {})
+    def get_config(params = {}, **options)
       req = build_request(:get_config, params)
       req.send_request(options)
     end
@@ -862,9 +862,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetDataflowEndpointGroup AWS API Documentation
     #
-    # @overload get_dataflow_endpoint_group(params = {})
+    # @overload get_dataflow_endpoint_group(**params)
     # @param [Hash] params ({})
-    def get_dataflow_endpoint_group(params = {}, options = {})
+    def get_dataflow_endpoint_group(params = {}, **options)
       req = build_request(:get_dataflow_endpoint_group, params)
       req.send_request(options)
     end
@@ -902,9 +902,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetMinuteUsage AWS API Documentation
     #
-    # @overload get_minute_usage(params = {})
+    # @overload get_minute_usage(**params)
     # @param [Hash] params ({})
-    def get_minute_usage(params = {}, options = {})
+    def get_minute_usage(params = {}, **options)
       req = build_request(:get_minute_usage, params)
       req.send_request(options)
     end
@@ -951,9 +951,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetMissionProfile AWS API Documentation
     #
-    # @overload get_mission_profile(params = {})
+    # @overload get_mission_profile(**params)
     # @param [Hash] params ({})
-    def get_mission_profile(params = {}, options = {})
+    def get_mission_profile(params = {}, **options)
       req = build_request(:get_mission_profile, params)
       req.send_request(options)
     end
@@ -986,9 +986,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetSatellite AWS API Documentation
     #
-    # @overload get_satellite(params = {})
+    # @overload get_satellite(**params)
     # @param [Hash] params ({})
-    def get_satellite(params = {}, options = {})
+    def get_satellite(params = {}, **options)
       req = build_request(:get_satellite, params)
       req.send_request(options)
     end
@@ -1027,9 +1027,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListConfigs AWS API Documentation
     #
-    # @overload list_configs(params = {})
+    # @overload list_configs(**params)
     # @param [Hash] params ({})
-    def list_configs(params = {}, options = {})
+    def list_configs(params = {}, **options)
       req = build_request(:list_configs, params)
       req.send_request(options)
     end
@@ -1106,9 +1106,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListContacts AWS API Documentation
     #
-    # @overload list_contacts(params = {})
+    # @overload list_contacts(**params)
     # @param [Hash] params ({})
-    def list_contacts(params = {}, options = {})
+    def list_contacts(params = {}, **options)
       req = build_request(:list_contacts, params)
       req.send_request(options)
     end
@@ -1146,9 +1146,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListDataflowEndpointGroups AWS API Documentation
     #
-    # @overload list_dataflow_endpoint_groups(params = {})
+    # @overload list_dataflow_endpoint_groups(**params)
     # @param [Hash] params ({})
-    def list_dataflow_endpoint_groups(params = {}, options = {})
+    def list_dataflow_endpoint_groups(params = {}, **options)
       req = build_request(:list_dataflow_endpoint_groups, params)
       req.send_request(options)
     end
@@ -1190,9 +1190,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListGroundStations AWS API Documentation
     #
-    # @overload list_ground_stations(params = {})
+    # @overload list_ground_stations(**params)
     # @param [Hash] params ({})
-    def list_ground_stations(params = {}, options = {})
+    def list_ground_stations(params = {}, **options)
       req = build_request(:list_ground_stations, params)
       req.send_request(options)
     end
@@ -1231,9 +1231,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListMissionProfiles AWS API Documentation
     #
-    # @overload list_mission_profiles(params = {})
+    # @overload list_mission_profiles(**params)
     # @param [Hash] params ({})
-    def list_mission_profiles(params = {}, options = {})
+    def list_mission_profiles(params = {}, **options)
       req = build_request(:list_mission_profiles, params)
       req.send_request(options)
     end
@@ -1273,9 +1273,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListSatellites AWS API Documentation
     #
-    # @overload list_satellites(params = {})
+    # @overload list_satellites(**params)
     # @param [Hash] params ({})
-    def list_satellites(params = {}, options = {})
+    def list_satellites(params = {}, **options)
       req = build_request(:list_satellites, params)
       req.send_request(options)
     end
@@ -1302,9 +1302,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -1352,9 +1352,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/ReserveContact AWS API Documentation
     #
-    # @overload reserve_contact(params = {})
+    # @overload reserve_contact(**params)
     # @param [Hash] params ({})
-    def reserve_contact(params = {}, options = {})
+    def reserve_contact(params = {}, **options)
       req = build_request(:reserve_contact, params)
       req.send_request(options)
     end
@@ -1380,9 +1380,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -1406,9 +1406,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -1511,9 +1511,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UpdateConfig AWS API Documentation
     #
-    # @overload update_config(params = {})
+    # @overload update_config(**params)
     # @param [Hash] params ({})
-    def update_config(params = {}, options = {})
+    def update_config(params = {}, **options)
       req = build_request(:update_config, params)
       req.send_request(options)
     end
@@ -1573,9 +1573,9 @@ module Aws::GroundStation
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UpdateMissionProfile AWS API Documentation
     #
-    # @overload update_mission_profile(params = {})
+    # @overload update_mission_profile(**params)
     # @param [Hash] params ({})
-    def update_mission_profile(params = {}, options = {})
+    def update_mission_profile(params = {}, **options)
       req = build_request(:update_mission_profile, params)
       req.send_request(options)
     end
@@ -1584,7 +1584,7 @@ module Aws::GroundStation
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1592,15 +1592,15 @@ module Aws::GroundStation
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-groundstation'
-      context[:gem_version] = '1.15.0'
+      context[:gem_name] = "aws-sdk-groundstation"
+      context[:gem_version] = "1.15.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

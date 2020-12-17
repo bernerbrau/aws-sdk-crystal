@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:fsx)
 
@@ -290,7 +290,7 @@ module Aws::FSx
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -410,9 +410,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/AssociateFileSystemAliases AWS API Documentation
     #
-    # @overload associate_file_system_aliases(params = {})
+    # @overload associate_file_system_aliases(**params)
     # @param [Hash] params ({})
-    def associate_file_system_aliases(params = {}, options = {})
+    def associate_file_system_aliases(params = {}, **options)
       req = build_request(:associate_file_system_aliases, params)
       req.send_request(options)
     end
@@ -449,9 +449,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CancelDataRepositoryTask AWS API Documentation
     #
-    # @overload cancel_data_repository_task(params = {})
+    # @overload cancel_data_repository_task(**params)
     # @param [Hash] params ({})
-    def cancel_data_repository_task(params = {}, options = {})
+    def cancel_data_repository_task(params = {}, **options)
       req = build_request(:cancel_data_repository_task, params)
       req.send_request(options)
     end
@@ -662,9 +662,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateBackup AWS API Documentation
     #
-    # @overload create_backup(params = {})
+    # @overload create_backup(**params)
     # @param [Hash] params ({})
-    def create_backup(params = {}, options = {})
+    def create_backup(params = {}, **options)
       req = build_request(:create_backup, params)
       req.send_request(options)
     end
@@ -776,9 +776,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateDataRepositoryTask AWS API Documentation
     #
-    # @overload create_data_repository_task(params = {})
+    # @overload create_data_repository_task(**params)
     # @param [Hash] params ({})
-    def create_data_repository_task(params = {}, options = {})
+    def create_data_repository_task(params = {}, **options)
       req = build_request(:create_data_repository_task, params)
       req.send_request(options)
     end
@@ -1106,9 +1106,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateFileSystem AWS API Documentation
     #
-    # @overload create_file_system(params = {})
+    # @overload create_file_system(**params)
     # @param [Hash] params ({})
-    def create_file_system(params = {}, options = {})
+    def create_file_system(params = {}, **options)
       req = build_request(:create_file_system, params)
       req.send_request(options)
     end
@@ -1387,9 +1387,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateFileSystemFromBackup AWS API Documentation
     #
-    # @overload create_file_system_from_backup(params = {})
+    # @overload create_file_system_from_backup(**params)
     # @param [Hash] params ({})
-    def create_file_system_from_backup(params = {}, options = {})
+    def create_file_system_from_backup(params = {}, **options)
       req = build_request(:create_file_system_from_backup, params)
       req.send_request(options)
     end
@@ -1448,9 +1448,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteBackup AWS API Documentation
     #
-    # @overload delete_backup(params = {})
+    # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, options = {})
+    def delete_backup(params = {}, **options)
       req = build_request(:delete_backup, params)
       req.send_request(options)
     end
@@ -1561,9 +1561,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteFileSystem AWS API Documentation
     #
-    # @overload delete_file_system(params = {})
+    # @overload delete_file_system(**params)
     # @param [Hash] params ({})
-    def delete_file_system(params = {}, options = {})
+    def delete_file_system(params = {}, **options)
       req = build_request(:delete_file_system, params)
       req.send_request(options)
     end
@@ -1754,9 +1754,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeBackups AWS API Documentation
     #
-    # @overload describe_backups(params = {})
+    # @overload describe_backups(**params)
     # @param [Hash] params ({})
-    def describe_backups(params = {}, options = {})
+    def describe_backups(params = {}, **options)
       req = build_request(:describe_backups, params)
       req.send_request(options)
     end
@@ -1845,9 +1845,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeDataRepositoryTasks AWS API Documentation
     #
-    # @overload describe_data_repository_tasks(params = {})
+    # @overload describe_data_repository_tasks(**params)
     # @param [Hash] params ({})
-    def describe_data_repository_tasks(params = {}, options = {})
+    def describe_data_repository_tasks(params = {}, **options)
       req = build_request(:describe_data_repository_tasks, params)
       req.send_request(options)
     end
@@ -1909,9 +1909,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeFileSystemAliases AWS API Documentation
     #
-    # @overload describe_file_system_aliases(params = {})
+    # @overload describe_file_system_aliases(**params)
     # @param [Hash] params ({})
-    def describe_file_system_aliases(params = {}, options = {})
+    def describe_file_system_aliases(params = {}, **options)
       req = build_request(:describe_file_system_aliases, params)
       req.send_request(options)
     end
@@ -2086,9 +2086,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeFileSystems AWS API Documentation
     #
-    # @overload describe_file_systems(params = {})
+    # @overload describe_file_systems(**params)
     # @param [Hash] params ({})
-    def describe_file_systems(params = {}, options = {})
+    def describe_file_systems(params = {}, **options)
       req = build_request(:describe_file_systems, params)
       req.send_request(options)
     end
@@ -2144,9 +2144,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DisassociateFileSystemAliases AWS API Documentation
     #
-    # @overload disassociate_file_system_aliases(params = {})
+    # @overload disassociate_file_system_aliases(**params)
     # @param [Hash] params ({})
-    def disassociate_file_system_aliases(params = {}, options = {})
+    def disassociate_file_system_aliases(params = {}, **options)
       req = build_request(:disassociate_file_system_aliases, params)
       req.send_request(options)
     end
@@ -2231,9 +2231,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2279,9 +2279,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2318,9 +2318,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2551,9 +2551,9 @@ module Aws::FSx
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateFileSystem AWS API Documentation
     #
-    # @overload update_file_system(params = {})
+    # @overload update_file_system(**params)
     # @param [Hash] params ({})
-    def update_file_system(params = {}, options = {})
+    def update_file_system(params = {}, **options)
       req = build_request(:update_file_system, params)
       req.send_request(options)
     end
@@ -2562,7 +2562,7 @@ module Aws::FSx
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2570,15 +2570,15 @@ module Aws::FSx
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-fsx'
-      context[:gem_version] = '1.33.0'
+      context[:gem_name] = "aws-sdk-fsx"
+      context[:gem_version] = "1.33.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

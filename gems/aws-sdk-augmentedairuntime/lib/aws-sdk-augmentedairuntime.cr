@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-augmentedairuntime/types'
-require_relative 'aws-sdk-augmentedairuntime/client_api'
-require_relative 'aws-sdk-augmentedairuntime/client'
-require_relative 'aws-sdk-augmentedairuntime/errors'
-require_relative 'aws-sdk-augmentedairuntime/resource'
-require_relative 'aws-sdk-augmentedairuntime/customizations'
+require_relative "aws-sdk-augmentedairuntime/types"
+require_relative "aws-sdk-augmentedairuntime/client_api"
+require_relative "aws-sdk-augmentedairuntime/client"
+require_relative "aws-sdk-augmentedairuntime/errors"
+require_relative "aws-sdk-augmentedairuntime/resource"
+require_relative "aws-sdk-augmentedairuntime/customizations"
 
 # This module provides support for Amazon Augmented AI Runtime. This module is available in the
 # `aws-sdk-augmentedairuntime` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-augmentedairuntime/customizations'
 # @!group service
 module Aws::AugmentedAIRuntime
 
-  GEM_VERSION = '1.10.0'
+  GEM_VERSION = "1.10.0"
 
 end

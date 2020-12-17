@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::IAM
   # Waiters are utility methods that poll for a particular state to occur
@@ -109,7 +109,7 @@ module Aws::IAM
 
       # @option (see Client#get_instance_profile)
       # @return (see Client#get_instance_profile)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -151,7 +151,7 @@ module Aws::IAM
 
       # @option (see Client#get_policy)
       # @return (see Client#get_policy)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -193,7 +193,7 @@ module Aws::IAM
 
       # @option (see Client#get_role)
       # @return (see Client#get_role)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -235,7 +235,7 @@ module Aws::IAM
 
       # @option (see Client#get_user)
       # @return (see Client#get_user)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

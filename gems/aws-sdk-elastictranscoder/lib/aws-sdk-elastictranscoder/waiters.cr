@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::ElasticTranscoder
   # Waiters are utility methods that poll for a particular state to occur
@@ -114,7 +114,7 @@ module Aws::ElasticTranscoder
 
       # @option (see Client#read_job)
       # @return (see Client#read_job)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

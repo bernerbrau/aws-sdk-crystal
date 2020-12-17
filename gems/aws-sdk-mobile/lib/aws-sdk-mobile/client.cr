@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:mobile)
 
@@ -280,7 +280,7 @@ module Aws::Mobile
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -377,9 +377,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/CreateProject AWS API Documentation
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -419,9 +419,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/DeleteProject AWS API Documentation
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -453,9 +453,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/DescribeBundle AWS API Documentation
     #
-    # @overload describe_bundle(params = {})
+    # @overload describe_bundle(**params)
     # @param [Hash] params ({})
-    def describe_bundle(params = {}, options = {})
+    def describe_bundle(params = {}, **options)
       req = build_request(:describe_bundle, params)
       req.send_request(options)
     end
@@ -500,9 +500,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/DescribeProject AWS API Documentation
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -538,9 +538,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/ExportBundle AWS API Documentation
     #
-    # @overload export_bundle(params = {})
+    # @overload export_bundle(**params)
     # @param [Hash] params ({})
-    def export_bundle(params = {}, options = {})
+    def export_bundle(params = {}, **options)
       req = build_request(:export_bundle, params)
       req.send_request(options)
     end
@@ -573,9 +573,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/ExportProject AWS API Documentation
     #
-    # @overload export_project(params = {})
+    # @overload export_project(**params)
     # @param [Hash] params ({})
-    def export_project(params = {}, options = {})
+    def export_project(params = {}, **options)
       req = build_request(:export_project, params)
       req.send_request(options)
     end
@@ -618,9 +618,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/ListBundles AWS API Documentation
     #
-    # @overload list_bundles(params = {})
+    # @overload list_bundles(**params)
     # @param [Hash] params ({})
-    def list_bundles(params = {}, options = {})
+    def list_bundles(params = {}, **options)
       req = build_request(:list_bundles, params)
       req.send_request(options)
     end
@@ -658,9 +658,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/ListProjects AWS API Documentation
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -705,9 +705,9 @@ module Aws::Mobile
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/mobile-2017-07-01/UpdateProject AWS API Documentation
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -716,7 +716,7 @@ module Aws::Mobile
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -724,15 +724,15 @@ module Aws::Mobile
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-mobile'
-      context[:gem_version] = '1.24.0'
+      context[:gem_name] = "aws-sdk-mobile"
+      context[:gem_version] = "1.24.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

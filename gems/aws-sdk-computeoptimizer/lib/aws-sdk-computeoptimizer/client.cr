@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:computeoptimizer)
 
@@ -290,7 +290,7 @@ module Aws::ComputeOptimizer
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -402,9 +402,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/DescribeRecommendationExportJobs AWS API Documentation
     #
-    # @overload describe_recommendation_export_jobs(params = {})
+    # @overload describe_recommendation_export_jobs(**params)
     # @param [Hash] params ({})
-    def describe_recommendation_export_jobs(params = {}, options = {})
+    def describe_recommendation_export_jobs(params = {}, **options)
       req = build_request(:describe_recommendation_export_jobs, params)
       req.send_request(options)
     end
@@ -525,9 +525,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ExportAutoScalingGroupRecommendations AWS API Documentation
     #
-    # @overload export_auto_scaling_group_recommendations(params = {})
+    # @overload export_auto_scaling_group_recommendations(**params)
     # @param [Hash] params ({})
-    def export_auto_scaling_group_recommendations(params = {}, options = {})
+    def export_auto_scaling_group_recommendations(params = {}, **options)
       req = build_request(:export_auto_scaling_group_recommendations, params)
       req.send_request(options)
     end
@@ -645,9 +645,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ExportEC2InstanceRecommendations AWS API Documentation
     #
-    # @overload export_ec2_instance_recommendations(params = {})
+    # @overload export_ec2_instance_recommendations(**params)
     # @param [Hash] params ({})
-    def export_ec2_instance_recommendations(params = {}, options = {})
+    def export_ec2_instance_recommendations(params = {}, **options)
       req = build_request(:export_ec2_instance_recommendations, params)
       req.send_request(options)
     end
@@ -749,9 +749,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetAutoScalingGroupRecommendations AWS API Documentation
     #
-    # @overload get_auto_scaling_group_recommendations(params = {})
+    # @overload get_auto_scaling_group_recommendations(**params)
     # @param [Hash] params ({})
-    def get_auto_scaling_group_recommendations(params = {}, options = {})
+    def get_auto_scaling_group_recommendations(params = {}, **options)
       req = build_request(:get_auto_scaling_group_recommendations, params)
       req.send_request(options)
     end
@@ -852,9 +852,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetEBSVolumeRecommendations AWS API Documentation
     #
-    # @overload get_ebs_volume_recommendations(params = {})
+    # @overload get_ebs_volume_recommendations(**params)
     # @param [Hash] params ({})
-    def get_ebs_volume_recommendations(params = {}, options = {})
+    def get_ebs_volume_recommendations(params = {}, **options)
       req = build_request(:get_ebs_volume_recommendations, params)
       req.send_request(options)
     end
@@ -952,9 +952,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetEC2InstanceRecommendations AWS API Documentation
     #
-    # @overload get_ec2_instance_recommendations(params = {})
+    # @overload get_ec2_instance_recommendations(**params)
     # @param [Hash] params ({})
-    def get_ec2_instance_recommendations(params = {}, options = {})
+    def get_ec2_instance_recommendations(params = {}, **options)
       req = build_request(:get_ec2_instance_recommendations, params)
       req.send_request(options)
     end
@@ -1018,9 +1018,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetEC2RecommendationProjectedMetrics AWS API Documentation
     #
-    # @overload get_ec2_recommendation_projected_metrics(params = {})
+    # @overload get_ec2_recommendation_projected_metrics(**params)
     # @param [Hash] params ({})
-    def get_ec2_recommendation_projected_metrics(params = {}, options = {})
+    def get_ec2_recommendation_projected_metrics(params = {}, **options)
       req = build_request(:get_ec2_recommendation_projected_metrics, params)
       req.send_request(options)
     end
@@ -1046,9 +1046,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetEnrollmentStatus AWS API Documentation
     #
-    # @overload get_enrollment_status(params = {})
+    # @overload get_enrollment_status(**params)
     # @param [Hash] params ({})
-    def get_enrollment_status(params = {}, options = {})
+    def get_enrollment_status(params = {}, **options)
       req = build_request(:get_enrollment_status, params)
       req.send_request(options)
     end
@@ -1105,9 +1105,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/GetRecommendationSummaries AWS API Documentation
     #
-    # @overload get_recommendation_summaries(params = {})
+    # @overload get_recommendation_summaries(**params)
     # @param [Hash] params ({})
-    def get_recommendation_summaries(params = {}, options = {})
+    def get_recommendation_summaries(params = {}, **options)
       req = build_request(:get_recommendation_summaries, params)
       req.send_request(options)
     end
@@ -1147,9 +1147,9 @@ module Aws::ComputeOptimizer
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/UpdateEnrollmentStatus AWS API Documentation
     #
-    # @overload update_enrollment_status(params = {})
+    # @overload update_enrollment_status(**params)
     # @param [Hash] params ({})
-    def update_enrollment_status(params = {}, options = {})
+    def update_enrollment_status(params = {}, **options)
       req = build_request(:update_enrollment_status, params)
       req.send_request(options)
     end
@@ -1158,7 +1158,7 @@ module Aws::ComputeOptimizer
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1166,15 +1166,15 @@ module Aws::ComputeOptimizer
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-computeoptimizer'
-      context[:gem_version] = '1.10.0'
+      context[:gem_name] = "aws-sdk-computeoptimizer"
+      context[:gem_version] = "1.10.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:budgets)
 
@@ -290,7 +290,7 @@ module Aws::Budgets
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -432,9 +432,9 @@ module Aws::Budgets
     #     ],
     #   })
     #
-    # @overload create_budget(params = {})
+    # @overload create_budget(**params)
     # @param [Hash] params ({})
-    def create_budget(params = {}, options = {})
+    def create_budget(params = {}, **options)
       req = build_request(:create_budget, params)
       req.send_request(options)
     end
@@ -522,9 +522,9 @@ module Aws::Budgets
     #   resp.budget_name #=> String
     #   resp.action_id #=> String
     #
-    # @overload create_budget_action(params = {})
+    # @overload create_budget_action(**params)
     # @param [Hash] params ({})
-    def create_budget_action(params = {}, options = {})
+    def create_budget_action(params = {}, **options)
       req = build_request(:create_budget_action, params)
       req.send_request(options)
     end
@@ -570,9 +570,9 @@ module Aws::Budgets
     #     ],
     #   })
     #
-    # @overload create_notification(params = {})
+    # @overload create_notification(**params)
     # @param [Hash] params ({})
-    def create_notification(params = {}, options = {})
+    def create_notification(params = {}, **options)
       req = build_request(:create_notification, params)
       req.send_request(options)
     end
@@ -614,9 +614,9 @@ module Aws::Budgets
     #     },
     #   })
     #
-    # @overload create_subscriber(params = {})
+    # @overload create_subscriber(**params)
     # @param [Hash] params ({})
-    def create_subscriber(params = {}, options = {})
+    def create_subscriber(params = {}, **options)
       req = build_request(:create_subscriber, params)
       req.send_request(options)
     end
@@ -642,9 +642,9 @@ module Aws::Budgets
     #     budget_name: "BudgetName", # required
     #   })
     #
-    # @overload delete_budget(params = {})
+    # @overload delete_budget(**params)
     # @param [Hash] params ({})
-    def delete_budget(params = {}, options = {})
+    def delete_budget(params = {}, **options)
       req = build_request(:delete_budget, params)
       req.send_request(options)
     end
@@ -707,9 +707,9 @@ module Aws::Budgets
     #   resp.action.subscribers[0].subscription_type #=> String, one of "SNS", "EMAIL"
     #   resp.action.subscribers[0].address #=> String
     #
-    # @overload delete_budget_action(params = {})
+    # @overload delete_budget_action(**params)
     # @param [Hash] params ({})
-    def delete_budget_action(params = {}, options = {})
+    def delete_budget_action(params = {}, **options)
       req = build_request(:delete_budget_action, params)
       req.send_request(options)
     end
@@ -745,9 +745,9 @@ module Aws::Budgets
     #     },
     #   })
     #
-    # @overload delete_notification(params = {})
+    # @overload delete_notification(**params)
     # @param [Hash] params ({})
-    def delete_notification(params = {}, options = {})
+    def delete_notification(params = {}, **options)
       req = build_request(:delete_notification, params)
       req.send_request(options)
     end
@@ -790,9 +790,9 @@ module Aws::Budgets
     #     },
     #   })
     #
-    # @overload delete_subscriber(params = {})
+    # @overload delete_subscriber(**params)
     # @param [Hash] params ({})
-    def delete_subscriber(params = {}, options = {})
+    def delete_subscriber(params = {}, **options)
       req = build_request(:delete_subscriber, params)
       req.send_request(options)
     end
@@ -856,9 +856,9 @@ module Aws::Budgets
     #   resp.budget.budget_type #=> String, one of "USAGE", "COST", "RI_UTILIZATION", "RI_COVERAGE", "SAVINGS_PLANS_UTILIZATION", "SAVINGS_PLANS_COVERAGE"
     #   resp.budget.last_updated_time #=> Time
     #
-    # @overload describe_budget(params = {})
+    # @overload describe_budget(**params)
     # @param [Hash] params ({})
-    def describe_budget(params = {}, options = {})
+    def describe_budget(params = {}, **options)
       req = build_request(:describe_budget, params)
       req.send_request(options)
     end
@@ -921,9 +921,9 @@ module Aws::Budgets
     #   resp.action.subscribers[0].subscription_type #=> String, one of "SNS", "EMAIL"
     #   resp.action.subscribers[0].address #=> String
     #
-    # @overload describe_budget_action(params = {})
+    # @overload describe_budget_action(**params)
     # @param [Hash] params ({})
-    def describe_budget_action(params = {}, options = {})
+    def describe_budget_action(params = {}, **options)
       req = build_request(:describe_budget_action, params)
       req.send_request(options)
     end
@@ -1009,9 +1009,9 @@ module Aws::Budgets
     #   resp.action_histories[0].action_history_details.action.subscribers[0].address #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_budget_action_histories(params = {})
+    # @overload describe_budget_action_histories(**params)
     # @param [Hash] params ({})
-    def describe_budget_action_histories(params = {}, options = {})
+    def describe_budget_action_histories(params = {}, **options)
       req = build_request(:describe_budget_action_histories, params)
       req.send_request(options)
     end
@@ -1074,9 +1074,9 @@ module Aws::Budgets
     #   resp.actions[0].subscribers[0].address #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_budget_actions_for_account(params = {})
+    # @overload describe_budget_actions_for_account(**params)
     # @param [Hash] params ({})
-    def describe_budget_actions_for_account(params = {}, options = {})
+    def describe_budget_actions_for_account(params = {}, **options)
       req = build_request(:describe_budget_actions_for_account, params)
       req.send_request(options)
     end
@@ -1144,9 +1144,9 @@ module Aws::Budgets
     #   resp.actions[0].subscribers[0].address #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_budget_actions_for_budget(params = {})
+    # @overload describe_budget_actions_for_budget(**params)
     # @param [Hash] params ({})
-    def describe_budget_actions_for_budget(params = {}, options = {})
+    def describe_budget_actions_for_budget(params = {}, **options)
       req = build_request(:describe_budget_actions_for_budget, params)
       req.send_request(options)
     end
@@ -1220,9 +1220,9 @@ module Aws::Budgets
     #   resp.budget_performance_history.budgeted_and_actual_amounts_list[0].time_period.end #=> Time
     #   resp.next_token #=> String
     #
-    # @overload describe_budget_performance_history(params = {})
+    # @overload describe_budget_performance_history(**params)
     # @param [Hash] params ({})
-    def describe_budget_performance_history(params = {}, options = {})
+    def describe_budget_performance_history(params = {}, **options)
       req = build_request(:describe_budget_performance_history, params)
       req.send_request(options)
     end
@@ -1297,9 +1297,9 @@ module Aws::Budgets
     #   resp.budgets[0].last_updated_time #=> Time
     #   resp.next_token #=> String
     #
-    # @overload describe_budgets(params = {})
+    # @overload describe_budgets(**params)
     # @param [Hash] params ({})
-    def describe_budgets(params = {}, options = {})
+    def describe_budgets(params = {}, **options)
       req = build_request(:describe_budgets, params)
       req.send_request(options)
     end
@@ -1347,9 +1347,9 @@ module Aws::Budgets
     #   resp.notifications[0].notification_state #=> String, one of "OK", "ALARM"
     #   resp.next_token #=> String
     #
-    # @overload describe_notifications_for_budget(params = {})
+    # @overload describe_notifications_for_budget(**params)
     # @param [Hash] params ({})
-    def describe_notifications_for_budget(params = {}, options = {})
+    def describe_notifications_for_budget(params = {}, **options)
       req = build_request(:describe_notifications_for_budget, params)
       req.send_request(options)
     end
@@ -1404,9 +1404,9 @@ module Aws::Budgets
     #   resp.subscribers[0].address #=> String
     #   resp.next_token #=> String
     #
-    # @overload describe_subscribers_for_notification(params = {})
+    # @overload describe_subscribers_for_notification(**params)
     # @param [Hash] params ({})
-    def describe_subscribers_for_notification(params = {}, options = {})
+    def describe_subscribers_for_notification(params = {}, **options)
       req = build_request(:describe_subscribers_for_notification, params)
       req.send_request(options)
     end
@@ -1450,9 +1450,9 @@ module Aws::Budgets
     #   resp.action_id #=> String
     #   resp.execution_type #=> String, one of "APPROVE_BUDGET_ACTION", "RETRY_BUDGET_ACTION", "REVERSE_BUDGET_ACTION", "RESET_BUDGET_ACTION"
     #
-    # @overload execute_budget_action(params = {})
+    # @overload execute_budget_action(**params)
     # @param [Hash] params ({})
-    def execute_budget_action(params = {}, options = {})
+    def execute_budget_action(params = {}, **options)
       req = build_request(:execute_budget_action, params)
       req.send_request(options)
     end
@@ -1532,9 +1532,9 @@ module Aws::Budgets
     #     },
     #   })
     #
-    # @overload update_budget(params = {})
+    # @overload update_budget(**params)
     # @param [Hash] params ({})
-    def update_budget(params = {}, options = {})
+    def update_budget(params = {}, **options)
       req = build_request(:update_budget, params)
       req.send_request(options)
     end
@@ -1673,9 +1673,9 @@ module Aws::Budgets
     #   resp.new_action.subscribers[0].subscription_type #=> String, one of "SNS", "EMAIL"
     #   resp.new_action.subscribers[0].address #=> String
     #
-    # @overload update_budget_action(params = {})
+    # @overload update_budget_action(**params)
     # @param [Hash] params ({})
-    def update_budget_action(params = {}, options = {})
+    def update_budget_action(params = {}, **options)
       req = build_request(:update_budget_action, params)
       req.send_request(options)
     end
@@ -1718,9 +1718,9 @@ module Aws::Budgets
     #     },
     #   })
     #
-    # @overload update_notification(params = {})
+    # @overload update_notification(**params)
     # @param [Hash] params ({})
-    def update_notification(params = {}, options = {})
+    def update_notification(params = {}, **options)
       req = build_request(:update_notification, params)
       req.send_request(options)
     end
@@ -1767,9 +1767,9 @@ module Aws::Budgets
     #     },
     #   })
     #
-    # @overload update_subscriber(params = {})
+    # @overload update_subscriber(**params)
     # @param [Hash] params ({})
-    def update_subscriber(params = {}, options = {})
+    def update_subscriber(params = {}, **options)
       req = build_request(:update_subscriber, params)
       req.send_request(options)
     end
@@ -1778,7 +1778,7 @@ module Aws::Budgets
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1786,15 +1786,15 @@ module Aws::Budgets
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-budgets'
-      context[:gem_version] = '1.36.0'
+      context[:gem_name] = "aws-sdk-budgets"
+      context[:gem_version] = "1.36.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

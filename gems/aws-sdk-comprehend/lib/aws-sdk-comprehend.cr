@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-comprehend/types'
-require_relative 'aws-sdk-comprehend/client_api'
-require_relative 'aws-sdk-comprehend/client'
-require_relative 'aws-sdk-comprehend/errors'
-require_relative 'aws-sdk-comprehend/resource'
-require_relative 'aws-sdk-comprehend/customizations'
+require_relative "aws-sdk-comprehend/types"
+require_relative "aws-sdk-comprehend/client_api"
+require_relative "aws-sdk-comprehend/client"
+require_relative "aws-sdk-comprehend/errors"
+require_relative "aws-sdk-comprehend/resource"
+require_relative "aws-sdk-comprehend/customizations"
 
 # This module provides support for Amazon Comprehend. This module is available in the
 # `aws-sdk-comprehend` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-comprehend/customizations'
 # @!group service
 module Aws::Comprehend
 
-  GEM_VERSION = '1.42.0'
+  GEM_VERSION = "1.42.0"
 
 end

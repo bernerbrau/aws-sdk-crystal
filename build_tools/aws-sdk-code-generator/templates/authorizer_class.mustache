@@ -17,7 +17,7 @@ module {{module_name}}
       class CustomAuthHandler < Seahorse::Client::Handler
 
         def call(context)
-          if context.operation['authtype'] == 'custom'
+          if context.operation["authtype"] == "custom"
             context.config.authorizer_token = generate_token(context)
           end
           @handler.call(context)

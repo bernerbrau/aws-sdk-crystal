@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::OpsWorks
   # Waiters are utility methods that poll for a particular state to occur
@@ -111,7 +111,7 @@ module Aws::OpsWorks
 
       # @option (see Client#describe_apps)
       # @return (see Client#describe_apps)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -156,7 +156,7 @@ module Aws::OpsWorks
 
       # @option (see Client#describe_deployments)
       # @return (see Client#describe_deployments)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -243,7 +243,7 @@ module Aws::OpsWorks
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -324,7 +324,7 @@ module Aws::OpsWorks
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -411,7 +411,7 @@ module Aws::OpsWorks
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -503,7 +503,7 @@ module Aws::OpsWorks
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

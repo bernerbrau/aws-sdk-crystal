@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codestarnotifications/types'
-require_relative 'aws-sdk-codestarnotifications/client_api'
-require_relative 'aws-sdk-codestarnotifications/client'
-require_relative 'aws-sdk-codestarnotifications/errors'
-require_relative 'aws-sdk-codestarnotifications/resource'
-require_relative 'aws-sdk-codestarnotifications/customizations'
+require_relative "aws-sdk-codestarnotifications/types"
+require_relative "aws-sdk-codestarnotifications/client_api"
+require_relative "aws-sdk-codestarnotifications/client"
+require_relative "aws-sdk-codestarnotifications/errors"
+require_relative "aws-sdk-codestarnotifications/resource"
+require_relative "aws-sdk-codestarnotifications/customizations"
 
 # This module provides support for AWS CodeStar Notifications. This module is available in the
 # `aws-sdk-codestarnotifications` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-codestarnotifications/customizations'
 # @!group service
 module Aws::CodeStarNotifications
 
-  GEM_VERSION = '1.8.0'
+  GEM_VERSION = "1.8.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:workdocs)
 
@@ -280,7 +280,7 @@ module Aws::WorkDocs
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -354,9 +354,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/AbortDocumentVersionUpload AWS API Documentation
     #
-    # @overload abort_document_version_upload(params = {})
+    # @overload abort_document_version_upload(**params)
     # @param [Hash] params ({})
-    def abort_document_version_upload(params = {}, options = {})
+    def abort_document_version_upload(params = {}, **options)
       req = build_request(:abort_document_version_upload, params)
       req.send_request(options)
     end
@@ -404,9 +404,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/ActivateUser AWS API Documentation
     #
-    # @overload activate_user(params = {})
+    # @overload activate_user(**params)
     # @param [Hash] params ({})
-    def activate_user(params = {}, options = {})
+    def activate_user(params = {}, **options)
       req = build_request(:activate_user, params)
       req.send_request(options)
     end
@@ -462,9 +462,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/AddResourcePermissions AWS API Documentation
     #
-    # @overload add_resource_permissions(params = {})
+    # @overload add_resource_permissions(**params)
     # @param [Hash] params ({})
-    def add_resource_permissions(params = {}, options = {})
+    def add_resource_permissions(params = {}, **options)
       req = build_request(:add_resource_permissions, params)
       req.send_request(options)
     end
@@ -547,9 +547,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/CreateComment AWS API Documentation
     #
-    # @overload create_comment(params = {})
+    # @overload create_comment(**params)
     # @param [Hash] params ({})
-    def create_comment(params = {}, options = {})
+    def create_comment(params = {}, **options)
       req = build_request(:create_comment, params)
       req.send_request(options)
     end
@@ -586,9 +586,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/CreateCustomMetadata AWS API Documentation
     #
-    # @overload create_custom_metadata(params = {})
+    # @overload create_custom_metadata(**params)
     # @param [Hash] params ({})
-    def create_custom_metadata(params = {}, options = {})
+    def create_custom_metadata(params = {}, **options)
       req = build_request(:create_custom_metadata, params)
       req.send_request(options)
     end
@@ -634,9 +634,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/CreateFolder AWS API Documentation
     #
-    # @overload create_folder(params = {})
+    # @overload create_folder(**params)
     # @param [Hash] params ({})
-    def create_folder(params = {}, options = {})
+    def create_folder(params = {}, **options)
       req = build_request(:create_folder, params)
       req.send_request(options)
     end
@@ -666,9 +666,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/CreateLabels AWS API Documentation
     #
-    # @overload create_labels(params = {})
+    # @overload create_labels(**params)
     # @param [Hash] params ({})
-    def create_labels(params = {}, options = {})
+    def create_labels(params = {}, **options)
       req = build_request(:create_labels, params)
       req.send_request(options)
     end
@@ -719,9 +719,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/CreateNotificationSubscription AWS API Documentation
     #
-    # @overload create_notification_subscription(params = {})
+    # @overload create_notification_subscription(**params)
     # @param [Hash] params ({})
-    def create_notification_subscription(params = {}, options = {})
+    def create_notification_subscription(params = {}, **options)
       req = build_request(:create_notification_subscription, params)
       req.send_request(options)
     end
@@ -801,9 +801,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -829,9 +829,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeactivateUser AWS API Documentation
     #
-    # @overload deactivate_user(params = {})
+    # @overload deactivate_user(**params)
     # @param [Hash] params ({})
-    def deactivate_user(params = {}, options = {})
+    def deactivate_user(params = {}, **options)
       req = build_request(:deactivate_user, params)
       req.send_request(options)
     end
@@ -864,9 +864,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteComment AWS API Documentation
     #
-    # @overload delete_comment(params = {})
+    # @overload delete_comment(**params)
     # @param [Hash] params ({})
-    def delete_comment(params = {}, options = {})
+    def delete_comment(params = {}, **options)
       req = build_request(:delete_comment, params)
       req.send_request(options)
     end
@@ -905,9 +905,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteCustomMetadata AWS API Documentation
     #
-    # @overload delete_custom_metadata(params = {})
+    # @overload delete_custom_metadata(**params)
     # @param [Hash] params ({})
-    def delete_custom_metadata(params = {}, options = {})
+    def delete_custom_metadata(params = {}, **options)
       req = build_request(:delete_custom_metadata, params)
       req.send_request(options)
     end
@@ -933,9 +933,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteDocument AWS API Documentation
     #
-    # @overload delete_document(params = {})
+    # @overload delete_document(**params)
     # @param [Hash] params ({})
-    def delete_document(params = {}, options = {})
+    def delete_document(params = {}, **options)
       req = build_request(:delete_document, params)
       req.send_request(options)
     end
@@ -960,9 +960,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteFolder AWS API Documentation
     #
-    # @overload delete_folder(params = {})
+    # @overload delete_folder(**params)
     # @param [Hash] params ({})
-    def delete_folder(params = {}, options = {})
+    def delete_folder(params = {}, **options)
       req = build_request(:delete_folder, params)
       req.send_request(options)
     end
@@ -987,9 +987,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteFolderContents AWS API Documentation
     #
-    # @overload delete_folder_contents(params = {})
+    # @overload delete_folder_contents(**params)
     # @param [Hash] params ({})
-    def delete_folder_contents(params = {}, options = {})
+    def delete_folder_contents(params = {}, **options)
       req = build_request(:delete_folder_contents, params)
       req.send_request(options)
     end
@@ -1022,9 +1022,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteLabels AWS API Documentation
     #
-    # @overload delete_labels(params = {})
+    # @overload delete_labels(**params)
     # @param [Hash] params ({})
-    def delete_labels(params = {}, options = {})
+    def delete_labels(params = {}, **options)
       req = build_request(:delete_labels, params)
       req.send_request(options)
     end
@@ -1048,9 +1048,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteNotificationSubscription AWS API Documentation
     #
-    # @overload delete_notification_subscription(params = {})
+    # @overload delete_notification_subscription(**params)
     # @param [Hash] params ({})
-    def delete_notification_subscription(params = {}, options = {})
+    def delete_notification_subscription(params = {}, **options)
       req = build_request(:delete_notification_subscription, params)
       req.send_request(options)
     end
@@ -1076,9 +1076,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -1215,9 +1215,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeActivities AWS API Documentation
     #
-    # @overload describe_activities(params = {})
+    # @overload describe_activities(**params)
     # @param [Hash] params ({})
-    def describe_activities(params = {}, options = {})
+    def describe_activities(params = {}, **options)
       req = build_request(:describe_activities, params)
       req.send_request(options)
     end
@@ -1288,9 +1288,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeComments AWS API Documentation
     #
-    # @overload describe_comments(params = {})
+    # @overload describe_comments(**params)
     # @param [Hash] params ({})
-    def describe_comments(params = {}, options = {})
+    def describe_comments(params = {}, **options)
       req = build_request(:describe_comments, params)
       req.send_request(options)
     end
@@ -1361,9 +1361,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeDocumentVersions AWS API Documentation
     #
-    # @overload describe_document_versions(params = {})
+    # @overload describe_document_versions(**params)
     # @param [Hash] params ({})
-    def describe_document_versions(params = {}, options = {})
+    def describe_document_versions(params = {}, **options)
       req = build_request(:describe_document_versions, params)
       req.send_request(options)
     end
@@ -1467,9 +1467,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeFolderContents AWS API Documentation
     #
-    # @overload describe_folder_contents(params = {})
+    # @overload describe_folder_contents(**params)
     # @param [Hash] params ({})
-    def describe_folder_contents(params = {}, options = {})
+    def describe_folder_contents(params = {}, **options)
       req = build_request(:describe_folder_contents, params)
       req.send_request(options)
     end
@@ -1518,9 +1518,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeGroups AWS API Documentation
     #
-    # @overload describe_groups(params = {})
+    # @overload describe_groups(**params)
     # @param [Hash] params ({})
-    def describe_groups(params = {}, options = {})
+    def describe_groups(params = {}, **options)
       req = build_request(:describe_groups, params)
       req.send_request(options)
     end
@@ -1560,9 +1560,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeNotificationSubscriptions AWS API Documentation
     #
-    # @overload describe_notification_subscriptions(params = {})
+    # @overload describe_notification_subscriptions(**params)
     # @param [Hash] params ({})
-    def describe_notification_subscriptions(params = {}, options = {})
+    def describe_notification_subscriptions(params = {}, **options)
       req = build_request(:describe_notification_subscriptions, params)
       req.send_request(options)
     end
@@ -1613,9 +1613,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeResourcePermissions AWS API Documentation
     #
-    # @overload describe_resource_permissions(params = {})
+    # @overload describe_resource_permissions(**params)
     # @param [Hash] params ({})
-    def describe_resource_permissions(params = {}, options = {})
+    def describe_resource_permissions(params = {}, **options)
       req = build_request(:describe_resource_permissions, params)
       req.send_request(options)
     end
@@ -1676,9 +1676,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeRootFolders AWS API Documentation
     #
-    # @overload describe_root_folders(params = {})
+    # @overload describe_root_folders(**params)
     # @param [Hash] params ({})
-    def describe_root_folders(params = {}, options = {})
+    def describe_root_folders(params = {}, **options)
       req = build_request(:describe_root_folders, params)
       req.send_request(options)
     end
@@ -1771,9 +1771,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/DescribeUsers AWS API Documentation
     #
-    # @overload describe_users(params = {})
+    # @overload describe_users(**params)
     # @param [Hash] params ({})
-    def describe_users(params = {}, options = {})
+    def describe_users(params = {}, **options)
       req = build_request(:describe_users, params)
       req.send_request(options)
     end
@@ -1826,9 +1826,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetCurrentUser AWS API Documentation
     #
-    # @overload get_current_user(params = {})
+    # @overload get_current_user(**params)
     # @param [Hash] params ({})
-    def get_current_user(params = {}, options = {})
+    def get_current_user(params = {}, **options)
       req = build_request(:get_current_user, params)
       req.send_request(options)
     end
@@ -1888,9 +1888,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetDocument AWS API Documentation
     #
-    # @overload get_document(params = {})
+    # @overload get_document(**params)
     # @param [Hash] params ({})
-    def get_document(params = {}, options = {})
+    def get_document(params = {}, **options)
       req = build_request(:get_document, params)
       req.send_request(options)
     end
@@ -1942,9 +1942,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetDocumentPath AWS API Documentation
     #
-    # @overload get_document_path(params = {})
+    # @overload get_document_path(**params)
     # @param [Hash] params ({})
-    def get_document_path(params = {}, options = {})
+    def get_document_path(params = {}, **options)
       req = build_request(:get_document_path, params)
       req.send_request(options)
     end
@@ -2005,9 +2005,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetDocumentVersion AWS API Documentation
     #
-    # @overload get_document_version(params = {})
+    # @overload get_document_version(**params)
     # @param [Hash] params ({})
-    def get_document_version(params = {}, options = {})
+    def get_document_version(params = {}, **options)
       req = build_request(:get_document_version, params)
       req.send_request(options)
     end
@@ -2056,9 +2056,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetFolder AWS API Documentation
     #
-    # @overload get_folder(params = {})
+    # @overload get_folder(**params)
     # @param [Hash] params ({})
-    def get_folder(params = {}, options = {})
+    def get_folder(params = {}, **options)
       req = build_request(:get_folder, params)
       req.send_request(options)
     end
@@ -2110,9 +2110,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetFolderPath AWS API Documentation
     #
-    # @overload get_folder_path(params = {})
+    # @overload get_folder_path(**params)
     # @param [Hash] params ({})
-    def get_folder_path(params = {}, options = {})
+    def get_folder_path(params = {}, **options)
       req = build_request(:get_folder_path, params)
       req.send_request(options)
     end
@@ -2197,9 +2197,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/GetResources AWS API Documentation
     #
-    # @overload get_resources(params = {})
+    # @overload get_resources(**params)
     # @param [Hash] params ({})
-    def get_resources(params = {}, options = {})
+    def get_resources(params = {}, **options)
       req = build_request(:get_resources, params)
       req.send_request(options)
     end
@@ -2288,9 +2288,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/InitiateDocumentVersionUpload AWS API Documentation
     #
-    # @overload initiate_document_version_upload(params = {})
+    # @overload initiate_document_version_upload(**params)
     # @param [Hash] params ({})
-    def initiate_document_version_upload(params = {}, options = {})
+    def initiate_document_version_upload(params = {}, **options)
       req = build_request(:initiate_document_version_upload, params)
       req.send_request(options)
     end
@@ -2315,9 +2315,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/RemoveAllResourcePermissions AWS API Documentation
     #
-    # @overload remove_all_resource_permissions(params = {})
+    # @overload remove_all_resource_permissions(**params)
     # @param [Hash] params ({})
-    def remove_all_resource_permissions(params = {}, options = {})
+    def remove_all_resource_permissions(params = {}, **options)
       req = build_request(:remove_all_resource_permissions, params)
       req.send_request(options)
     end
@@ -2351,9 +2351,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/RemoveResourcePermission AWS API Documentation
     #
-    # @overload remove_resource_permission(params = {})
+    # @overload remove_resource_permission(**params)
     # @param [Hash] params ({})
-    def remove_resource_permission(params = {}, options = {})
+    def remove_resource_permission(params = {}, **options)
       req = build_request(:remove_resource_permission, params)
       req.send_request(options)
     end
@@ -2392,9 +2392,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/UpdateDocument AWS API Documentation
     #
-    # @overload update_document(params = {})
+    # @overload update_document(**params)
     # @param [Hash] params ({})
-    def update_document(params = {}, options = {})
+    def update_document(params = {}, **options)
       req = build_request(:update_document, params)
       req.send_request(options)
     end
@@ -2432,9 +2432,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/UpdateDocumentVersion AWS API Documentation
     #
-    # @overload update_document_version(params = {})
+    # @overload update_document_version(**params)
     # @param [Hash] params ({})
-    def update_document_version(params = {}, options = {})
+    def update_document_version(params = {}, **options)
       req = build_request(:update_document_version, params)
       req.send_request(options)
     end
@@ -2474,9 +2474,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/UpdateFolder AWS API Documentation
     #
-    # @overload update_folder(params = {})
+    # @overload update_folder(**params)
     # @param [Hash] params ({})
-    def update_folder(params = {}, options = {})
+    def update_folder(params = {}, **options)
       req = build_request(:update_folder, params)
       req.send_request(options)
     end
@@ -2556,9 +2556,9 @@ module Aws::WorkDocs
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/UpdateUser AWS API Documentation
     #
-    # @overload update_user(params = {})
+    # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, options = {})
+    def update_user(params = {}, **options)
       req = build_request(:update_user, params)
       req.send_request(options)
     end
@@ -2567,7 +2567,7 @@ module Aws::WorkDocs
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2575,15 +2575,15 @@ module Aws::WorkDocs
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-workdocs'
-      context[:gem_version] = '1.28.0'
+      context[:gem_name] = "aws-sdk-workdocs"
+      context[:gem_version] = "1.28.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

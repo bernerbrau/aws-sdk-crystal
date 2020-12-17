@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:alexaforbusiness)
 
@@ -290,7 +290,7 @@ module Aws::AlexaForBusiness
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -354,9 +354,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ApproveSkill AWS API Documentation
     #
-    # @overload approve_skill(params = {})
+    # @overload approve_skill(**params)
     # @param [Hash] params ({})
-    def approve_skill(params = {}, options = {})
+    def approve_skill(params = {}, **options)
       req = build_request(:approve_skill, params)
       req.send_request(options)
     end
@@ -380,9 +380,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/AssociateContactWithAddressBook AWS API Documentation
     #
-    # @overload associate_contact_with_address_book(params = {})
+    # @overload associate_contact_with_address_book(**params)
     # @param [Hash] params ({})
-    def associate_contact_with_address_book(params = {}, options = {})
+    def associate_contact_with_address_book(params = {}, **options)
       req = build_request(:associate_contact_with_address_book, params)
       req.send_request(options)
     end
@@ -406,9 +406,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/AssociateDeviceWithNetworkProfile AWS API Documentation
     #
-    # @overload associate_device_with_network_profile(params = {})
+    # @overload associate_device_with_network_profile(**params)
     # @param [Hash] params ({})
-    def associate_device_with_network_profile(params = {}, options = {})
+    def associate_device_with_network_profile(params = {}, **options)
       req = build_request(:associate_device_with_network_profile, params)
       req.send_request(options)
     end
@@ -435,9 +435,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/AssociateDeviceWithRoom AWS API Documentation
     #
-    # @overload associate_device_with_room(params = {})
+    # @overload associate_device_with_room(**params)
     # @param [Hash] params ({})
-    def associate_device_with_room(params = {}, options = {})
+    def associate_device_with_room(params = {}, **options)
       req = build_request(:associate_device_with_room, params)
       req.send_request(options)
     end
@@ -462,9 +462,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/AssociateSkillGroupWithRoom AWS API Documentation
     #
-    # @overload associate_skill_group_with_room(params = {})
+    # @overload associate_skill_group_with_room(**params)
     # @param [Hash] params ({})
-    def associate_skill_group_with_room(params = {}, options = {})
+    def associate_skill_group_with_room(params = {}, **options)
       req = build_request(:associate_skill_group_with_room, params)
       req.send_request(options)
     end
@@ -488,9 +488,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/AssociateSkillWithSkillGroup AWS API Documentation
     #
-    # @overload associate_skill_with_skill_group(params = {})
+    # @overload associate_skill_with_skill_group(**params)
     # @param [Hash] params ({})
-    def associate_skill_with_skill_group(params = {}, options = {})
+    def associate_skill_with_skill_group(params = {}, **options)
       req = build_request(:associate_skill_with_skill_group, params)
       req.send_request(options)
     end
@@ -511,9 +511,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/AssociateSkillWithUsers AWS API Documentation
     #
-    # @overload associate_skill_with_users(params = {})
+    # @overload associate_skill_with_users(**params)
     # @param [Hash] params ({})
-    def associate_skill_with_users(params = {}, options = {})
+    def associate_skill_with_users(params = {}, **options)
       req = build_request(:associate_skill_with_users, params)
       req.send_request(options)
     end
@@ -551,9 +551,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateAddressBook AWS API Documentation
     #
-    # @overload create_address_book(params = {})
+    # @overload create_address_book(**params)
     # @param [Hash] params ({})
-    def create_address_book(params = {}, options = {})
+    def create_address_book(params = {}, **options)
       req = build_request(:create_address_book, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateBusinessReportSchedule AWS API Documentation
     #
-    # @overload create_business_report_schedule(params = {})
+    # @overload create_business_report_schedule(**params)
     # @param [Hash] params ({})
-    def create_business_report_schedule(params = {}, options = {})
+    def create_business_report_schedule(params = {}, **options)
       req = build_request(:create_business_report_schedule, params)
       req.send_request(options)
     end
@@ -685,9 +685,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateConferenceProvider AWS API Documentation
     #
-    # @overload create_conference_provider(params = {})
+    # @overload create_conference_provider(**params)
     # @param [Hash] params ({})
-    def create_conference_provider(params = {}, options = {})
+    def create_conference_provider(params = {}, **options)
       req = build_request(:create_conference_provider, params)
       req.send_request(options)
     end
@@ -756,9 +756,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateContact AWS API Documentation
     #
-    # @overload create_contact(params = {})
+    # @overload create_contact(**params)
     # @param [Hash] params ({})
-    def create_contact(params = {}, options = {})
+    def create_contact(params = {}, **options)
       req = build_request(:create_contact, params)
       req.send_request(options)
     end
@@ -796,9 +796,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateGatewayGroup AWS API Documentation
     #
-    # @overload create_gateway_group(params = {})
+    # @overload create_gateway_group(**params)
     # @param [Hash] params ({})
-    def create_gateway_group(params = {}, options = {})
+    def create_gateway_group(params = {}, **options)
       req = build_request(:create_gateway_group, params)
       req.send_request(options)
     end
@@ -872,9 +872,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateNetworkProfile AWS API Documentation
     #
-    # @overload create_network_profile(params = {})
+    # @overload create_network_profile(**params)
     # @param [Hash] params ({})
-    def create_network_profile(params = {}, options = {})
+    def create_network_profile(params = {}, **options)
       req = build_request(:create_network_profile, params)
       req.send_request(options)
     end
@@ -973,9 +973,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateProfile AWS API Documentation
     #
-    # @overload create_profile(params = {})
+    # @overload create_profile(**params)
     # @param [Hash] params ({})
-    def create_profile(params = {}, options = {})
+    def create_profile(params = {}, **options)
       req = build_request(:create_profile, params)
       req.send_request(options)
     end
@@ -1030,9 +1030,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateRoom AWS API Documentation
     #
-    # @overload create_room(params = {})
+    # @overload create_room(**params)
     # @param [Hash] params ({})
-    def create_room(params = {}, options = {})
+    def create_room(params = {}, **options)
       req = build_request(:create_room, params)
       req.send_request(options)
     end
@@ -1079,9 +1079,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateSkillGroup AWS API Documentation
     #
-    # @overload create_skill_group(params = {})
+    # @overload create_skill_group(**params)
     # @param [Hash] params ({})
-    def create_skill_group(params = {}, options = {})
+    def create_skill_group(params = {}, **options)
       req = build_request(:create_skill_group, params)
       req.send_request(options)
     end
@@ -1136,9 +1136,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/CreateUser AWS API Documentation
     #
-    # @overload create_user(params = {})
+    # @overload create_user(**params)
     # @param [Hash] params ({})
-    def create_user(params = {}, options = {})
+    def create_user(params = {}, **options)
       req = build_request(:create_user, params)
       req.send_request(options)
     end
@@ -1158,9 +1158,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteAddressBook AWS API Documentation
     #
-    # @overload delete_address_book(params = {})
+    # @overload delete_address_book(**params)
     # @param [Hash] params ({})
-    def delete_address_book(params = {}, options = {})
+    def delete_address_book(params = {}, **options)
       req = build_request(:delete_address_book, params)
       req.send_request(options)
     end
@@ -1181,9 +1181,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteBusinessReportSchedule AWS API Documentation
     #
-    # @overload delete_business_report_schedule(params = {})
+    # @overload delete_business_report_schedule(**params)
     # @param [Hash] params ({})
-    def delete_business_report_schedule(params = {}, options = {})
+    def delete_business_report_schedule(params = {}, **options)
       req = build_request(:delete_business_report_schedule, params)
       req.send_request(options)
     end
@@ -1203,9 +1203,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteConferenceProvider AWS API Documentation
     #
-    # @overload delete_conference_provider(params = {})
+    # @overload delete_conference_provider(**params)
     # @param [Hash] params ({})
-    def delete_conference_provider(params = {}, options = {})
+    def delete_conference_provider(params = {}, **options)
       req = build_request(:delete_conference_provider, params)
       req.send_request(options)
     end
@@ -1225,9 +1225,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteContact AWS API Documentation
     #
-    # @overload delete_contact(params = {})
+    # @overload delete_contact(**params)
     # @param [Hash] params ({})
-    def delete_contact(params = {}, options = {})
+    def delete_contact(params = {}, **options)
       req = build_request(:delete_contact, params)
       req.send_request(options)
     end
@@ -1247,9 +1247,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteDevice AWS API Documentation
     #
-    # @overload delete_device(params = {})
+    # @overload delete_device(**params)
     # @param [Hash] params ({})
-    def delete_device(params = {}, options = {})
+    def delete_device(params = {}, **options)
       req = build_request(:delete_device, params)
       req.send_request(options)
     end
@@ -1276,9 +1276,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteDeviceUsageData AWS API Documentation
     #
-    # @overload delete_device_usage_data(params = {})
+    # @overload delete_device_usage_data(**params)
     # @param [Hash] params ({})
-    def delete_device_usage_data(params = {}, options = {})
+    def delete_device_usage_data(params = {}, **options)
       req = build_request(:delete_device_usage_data, params)
       req.send_request(options)
     end
@@ -1298,9 +1298,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteGatewayGroup AWS API Documentation
     #
-    # @overload delete_gateway_group(params = {})
+    # @overload delete_gateway_group(**params)
     # @param [Hash] params ({})
-    def delete_gateway_group(params = {}, options = {})
+    def delete_gateway_group(params = {}, **options)
       req = build_request(:delete_gateway_group, params)
       req.send_request(options)
     end
@@ -1320,9 +1320,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteNetworkProfile AWS API Documentation
     #
-    # @overload delete_network_profile(params = {})
+    # @overload delete_network_profile(**params)
     # @param [Hash] params ({})
-    def delete_network_profile(params = {}, options = {})
+    def delete_network_profile(params = {}, **options)
       req = build_request(:delete_network_profile, params)
       req.send_request(options)
     end
@@ -1342,9 +1342,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteProfile AWS API Documentation
     #
-    # @overload delete_profile(params = {})
+    # @overload delete_profile(**params)
     # @param [Hash] params ({})
-    def delete_profile(params = {}, options = {})
+    def delete_profile(params = {}, **options)
       req = build_request(:delete_profile, params)
       req.send_request(options)
     end
@@ -1364,9 +1364,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteRoom AWS API Documentation
     #
-    # @overload delete_room(params = {})
+    # @overload delete_room(**params)
     # @param [Hash] params ({})
-    def delete_room(params = {}, options = {})
+    def delete_room(params = {}, **options)
       req = build_request(:delete_room, params)
       req.send_request(options)
     end
@@ -1397,9 +1397,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteRoomSkillParameter AWS API Documentation
     #
-    # @overload delete_room_skill_parameter(params = {})
+    # @overload delete_room_skill_parameter(**params)
     # @param [Hash] params ({})
-    def delete_room_skill_parameter(params = {}, options = {})
+    def delete_room_skill_parameter(params = {}, **options)
       req = build_request(:delete_room_skill_parameter, params)
       req.send_request(options)
     end
@@ -1423,9 +1423,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteSkillAuthorization AWS API Documentation
     #
-    # @overload delete_skill_authorization(params = {})
+    # @overload delete_skill_authorization(**params)
     # @param [Hash] params ({})
-    def delete_skill_authorization(params = {}, options = {})
+    def delete_skill_authorization(params = {}, **options)
       req = build_request(:delete_skill_authorization, params)
       req.send_request(options)
     end
@@ -1445,9 +1445,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteSkillGroup AWS API Documentation
     #
-    # @overload delete_skill_group(params = {})
+    # @overload delete_skill_group(**params)
     # @param [Hash] params ({})
-    def delete_skill_group(params = {}, options = {})
+    def delete_skill_group(params = {}, **options)
       req = build_request(:delete_skill_group, params)
       req.send_request(options)
     end
@@ -1471,9 +1471,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -1497,9 +1497,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DisassociateContactFromAddressBook AWS API Documentation
     #
-    # @overload disassociate_contact_from_address_book(params = {})
+    # @overload disassociate_contact_from_address_book(**params)
     # @param [Hash] params ({})
-    def disassociate_contact_from_address_book(params = {}, options = {})
+    def disassociate_contact_from_address_book(params = {}, **options)
       req = build_request(:disassociate_contact_from_address_book, params)
       req.send_request(options)
     end
@@ -1521,9 +1521,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DisassociateDeviceFromRoom AWS API Documentation
     #
-    # @overload disassociate_device_from_room(params = {})
+    # @overload disassociate_device_from_room(**params)
     # @param [Hash] params ({})
-    def disassociate_device_from_room(params = {}, options = {})
+    def disassociate_device_from_room(params = {}, **options)
       req = build_request(:disassociate_device_from_room, params)
       req.send_request(options)
     end
@@ -1547,9 +1547,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DisassociateSkillFromSkillGroup AWS API Documentation
     #
-    # @overload disassociate_skill_from_skill_group(params = {})
+    # @overload disassociate_skill_from_skill_group(**params)
     # @param [Hash] params ({})
-    def disassociate_skill_from_skill_group(params = {}, options = {})
+    def disassociate_skill_from_skill_group(params = {}, **options)
       req = build_request(:disassociate_skill_from_skill_group, params)
       req.send_request(options)
     end
@@ -1570,9 +1570,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DisassociateSkillFromUsers AWS API Documentation
     #
-    # @overload disassociate_skill_from_users(params = {})
+    # @overload disassociate_skill_from_users(**params)
     # @param [Hash] params ({})
-    def disassociate_skill_from_users(params = {}, options = {})
+    def disassociate_skill_from_users(params = {}, **options)
       req = build_request(:disassociate_skill_from_users, params)
       req.send_request(options)
     end
@@ -1598,9 +1598,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/DisassociateSkillGroupFromRoom AWS API Documentation
     #
-    # @overload disassociate_skill_group_from_room(params = {})
+    # @overload disassociate_skill_group_from_room(**params)
     # @param [Hash] params ({})
-    def disassociate_skill_group_from_room(params = {}, options = {})
+    def disassociate_skill_group_from_room(params = {}, **options)
       req = build_request(:disassociate_skill_group_from_room, params)
       req.send_request(options)
     end
@@ -1620,9 +1620,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ForgetSmartHomeAppliances AWS API Documentation
     #
-    # @overload forget_smart_home_appliances(params = {})
+    # @overload forget_smart_home_appliances(**params)
     # @param [Hash] params ({})
-    def forget_smart_home_appliances(params = {}, options = {})
+    def forget_smart_home_appliances(params = {}, **options)
       req = build_request(:forget_smart_home_appliances, params)
       req.send_request(options)
     end
@@ -1650,9 +1650,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetAddressBook AWS API Documentation
     #
-    # @overload get_address_book(params = {})
+    # @overload get_address_book(**params)
     # @param [Hash] params ({})
-    def get_address_book(params = {}, options = {})
+    def get_address_book(params = {}, **options)
       req = build_request(:get_address_book, params)
       req.send_request(options)
     end
@@ -1669,9 +1669,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetConferencePreference AWS API Documentation
     #
-    # @overload get_conference_preference(params = {})
+    # @overload get_conference_preference(**params)
     # @param [Hash] params ({})
-    def get_conference_preference(params = {}, options = {})
+    def get_conference_preference(params = {}, **options)
       req = build_request(:get_conference_preference, params)
       req.send_request(options)
     end
@@ -1706,9 +1706,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetConferenceProvider AWS API Documentation
     #
-    # @overload get_conference_provider(params = {})
+    # @overload get_conference_provider(**params)
     # @param [Hash] params ({})
-    def get_conference_provider(params = {}, options = {})
+    def get_conference_provider(params = {}, **options)
       req = build_request(:get_conference_provider, params)
       req.send_request(options)
     end
@@ -1744,9 +1744,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetContact AWS API Documentation
     #
-    # @overload get_contact(params = {})
+    # @overload get_contact(**params)
     # @param [Hash] params ({})
-    def get_contact(params = {}, options = {})
+    def get_contact(params = {}, **options)
       req = build_request(:get_contact, params)
       req.send_request(options)
     end
@@ -1787,9 +1787,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetDevice AWS API Documentation
     #
-    # @overload get_device(params = {})
+    # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, options = {})
+    def get_device(params = {}, **options)
       req = build_request(:get_device, params)
       req.send_request(options)
     end
@@ -1819,9 +1819,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetGateway AWS API Documentation
     #
-    # @overload get_gateway(params = {})
+    # @overload get_gateway(**params)
     # @param [Hash] params ({})
-    def get_gateway(params = {}, options = {})
+    def get_gateway(params = {}, **options)
       req = build_request(:get_gateway, params)
       req.send_request(options)
     end
@@ -1849,9 +1849,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetGatewayGroup AWS API Documentation
     #
-    # @overload get_gateway_group(params = {})
+    # @overload get_gateway_group(**params)
     # @param [Hash] params ({})
-    def get_gateway_group(params = {}, options = {})
+    def get_gateway_group(params = {}, **options)
       req = build_request(:get_gateway_group, params)
       req.send_request(options)
     end
@@ -1874,9 +1874,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetInvitationConfiguration AWS API Documentation
     #
-    # @overload get_invitation_configuration(params = {})
+    # @overload get_invitation_configuration(**params)
     # @param [Hash] params ({})
-    def get_invitation_configuration(params = {}, options = {})
+    def get_invitation_configuration(params = {}, **options)
       req = build_request(:get_invitation_configuration, params)
       req.send_request(options)
     end
@@ -1912,9 +1912,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetNetworkProfile AWS API Documentation
     #
-    # @overload get_network_profile(params = {})
+    # @overload get_network_profile(**params)
     # @param [Hash] params ({})
-    def get_network_profile(params = {}, options = {})
+    def get_network_profile(params = {}, **options)
       req = build_request(:get_network_profile, params)
       req.send_request(options)
     end
@@ -1961,9 +1961,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetProfile AWS API Documentation
     #
-    # @overload get_profile(params = {})
+    # @overload get_profile(**params)
     # @param [Hash] params ({})
-    def get_profile(params = {}, options = {})
+    def get_profile(params = {}, **options)
       req = build_request(:get_profile, params)
       req.send_request(options)
     end
@@ -1993,9 +1993,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetRoom AWS API Documentation
     #
-    # @overload get_room(params = {})
+    # @overload get_room(**params)
     # @param [Hash] params ({})
-    def get_room(params = {}, options = {})
+    def get_room(params = {}, **options)
       req = build_request(:get_room, params)
       req.send_request(options)
     end
@@ -2033,9 +2033,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetRoomSkillParameter AWS API Documentation
     #
-    # @overload get_room_skill_parameter(params = {})
+    # @overload get_room_skill_parameter(**params)
     # @param [Hash] params ({})
-    def get_room_skill_parameter(params = {}, options = {})
+    def get_room_skill_parameter(params = {}, **options)
       req = build_request(:get_room_skill_parameter, params)
       req.send_request(options)
     end
@@ -2063,9 +2063,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/GetSkillGroup AWS API Documentation
     #
-    # @overload get_skill_group(params = {})
+    # @overload get_skill_group(**params)
     # @param [Hash] params ({})
-    def get_skill_group(params = {}, options = {})
+    def get_skill_group(params = {}, **options)
       req = build_request(:get_skill_group, params)
       req.send_request(options)
     end
@@ -2116,9 +2116,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListBusinessReportSchedules AWS API Documentation
     #
-    # @overload list_business_report_schedules(params = {})
+    # @overload list_business_report_schedules(**params)
     # @param [Hash] params ({})
-    def list_business_report_schedules(params = {}, options = {})
+    def list_business_report_schedules(params = {}, **options)
       req = build_request(:list_business_report_schedules, params)
       req.send_request(options)
     end
@@ -2163,9 +2163,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListConferenceProviders AWS API Documentation
     #
-    # @overload list_conference_providers(params = {})
+    # @overload list_conference_providers(**params)
     # @param [Hash] params ({})
-    def list_conference_providers(params = {}, options = {})
+    def list_conference_providers(params = {}, **options)
       req = build_request(:list_conference_providers, params)
       req.send_request(options)
     end
@@ -2221,9 +2221,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListDeviceEvents AWS API Documentation
     #
-    # @overload list_device_events(params = {})
+    # @overload list_device_events(**params)
     # @param [Hash] params ({})
-    def list_device_events(params = {}, options = {})
+    def list_device_events(params = {}, **options)
       req = build_request(:list_device_events, params)
       req.send_request(options)
     end
@@ -2263,9 +2263,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListGatewayGroups AWS API Documentation
     #
-    # @overload list_gateway_groups(params = {})
+    # @overload list_gateway_groups(**params)
     # @param [Hash] params ({})
-    def list_gateway_groups(params = {}, options = {})
+    def list_gateway_groups(params = {}, **options)
       req = build_request(:list_gateway_groups, params)
       req.send_request(options)
     end
@@ -2311,9 +2311,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListGateways AWS API Documentation
     #
-    # @overload list_gateways(params = {})
+    # @overload list_gateways(**params)
     # @param [Hash] params ({})
-    def list_gateways(params = {}, options = {})
+    def list_gateways(params = {}, **options)
       req = build_request(:list_gateways, params)
       req.send_request(options)
     end
@@ -2370,9 +2370,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListSkills AWS API Documentation
     #
-    # @overload list_skills(params = {})
+    # @overload list_skills(**params)
     # @param [Hash] params ({})
-    def list_skills(params = {}, options = {})
+    def list_skills(params = {}, **options)
       req = build_request(:list_skills, params)
       req.send_request(options)
     end
@@ -2408,9 +2408,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListSkillsStoreCategories AWS API Documentation
     #
-    # @overload list_skills_store_categories(params = {})
+    # @overload list_skills_store_categories(**params)
     # @param [Hash] params ({})
-    def list_skills_store_categories(params = {}, options = {})
+    def list_skills_store_categories(params = {}, **options)
       req = build_request(:list_skills_store_categories, params)
       req.send_request(options)
     end
@@ -2474,9 +2474,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListSkillsStoreSkillsByCategory AWS API Documentation
     #
-    # @overload list_skills_store_skills_by_category(params = {})
+    # @overload list_skills_store_skills_by_category(**params)
     # @param [Hash] params ({})
-    def list_skills_store_skills_by_category(params = {}, options = {})
+    def list_skills_store_skills_by_category(params = {}, **options)
       req = build_request(:list_skills_store_skills_by_category, params)
       req.send_request(options)
     end
@@ -2517,9 +2517,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListSmartHomeAppliances AWS API Documentation
     #
-    # @overload list_smart_home_appliances(params = {})
+    # @overload list_smart_home_appliances(**params)
     # @param [Hash] params ({})
-    def list_smart_home_appliances(params = {}, options = {})
+    def list_smart_home_appliances(params = {}, **options)
       req = build_request(:list_smart_home_appliances, params)
       req.send_request(options)
     end
@@ -2565,9 +2565,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ListTags AWS API Documentation
     #
-    # @overload list_tags(params = {})
+    # @overload list_tags(**params)
     # @param [Hash] params ({})
-    def list_tags(params = {}, options = {})
+    def list_tags(params = {}, **options)
       req = build_request(:list_tags, params)
       req.send_request(options)
     end
@@ -2590,9 +2590,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/PutConferencePreference AWS API Documentation
     #
-    # @overload put_conference_preference(params = {})
+    # @overload put_conference_preference(**params)
     # @param [Hash] params ({})
-    def put_conference_preference(params = {}, options = {})
+    def put_conference_preference(params = {}, **options)
       req = build_request(:put_conference_preference, params)
       req.send_request(options)
     end
@@ -2623,9 +2623,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/PutInvitationConfiguration AWS API Documentation
     #
-    # @overload put_invitation_configuration(params = {})
+    # @overload put_invitation_configuration(**params)
     # @param [Hash] params ({})
-    def put_invitation_configuration(params = {}, options = {})
+    def put_invitation_configuration(params = {}, **options)
       req = build_request(:put_invitation_configuration, params)
       req.send_request(options)
     end
@@ -2659,9 +2659,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/PutRoomSkillParameter AWS API Documentation
     #
-    # @overload put_room_skill_parameter(params = {})
+    # @overload put_room_skill_parameter(**params)
     # @param [Hash] params ({})
-    def put_room_skill_parameter(params = {}, options = {})
+    def put_room_skill_parameter(params = {}, **options)
       req = build_request(:put_room_skill_parameter, params)
       req.send_request(options)
     end
@@ -2696,9 +2696,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/PutSkillAuthorization AWS API Documentation
     #
-    # @overload put_skill_authorization(params = {})
+    # @overload put_skill_authorization(**params)
     # @param [Hash] params ({})
-    def put_skill_authorization(params = {}, options = {})
+    def put_skill_authorization(params = {}, **options)
       req = build_request(:put_skill_authorization, params)
       req.send_request(options)
     end
@@ -2750,9 +2750,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/RegisterAVSDevice AWS API Documentation
     #
-    # @overload register_avs_device(params = {})
+    # @overload register_avs_device(**params)
     # @param [Hash] params ({})
-    def register_avs_device(params = {}, options = {})
+    def register_avs_device(params = {}, **options)
       req = build_request(:register_avs_device, params)
       req.send_request(options)
     end
@@ -2775,9 +2775,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/RejectSkill AWS API Documentation
     #
-    # @overload reject_skill(params = {})
+    # @overload reject_skill(**params)
     # @param [Hash] params ({})
-    def reject_skill(params = {}, options = {})
+    def reject_skill(params = {}, **options)
       req = build_request(:reject_skill, params)
       req.send_request(options)
     end
@@ -2814,9 +2814,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/ResolveRoom AWS API Documentation
     #
-    # @overload resolve_room(params = {})
+    # @overload resolve_room(**params)
     # @param [Hash] params ({})
-    def resolve_room(params = {}, options = {})
+    def resolve_room(params = {}, **options)
       req = build_request(:resolve_room, params)
       req.send_request(options)
     end
@@ -2841,9 +2841,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/RevokeInvitation AWS API Documentation
     #
-    # @overload revoke_invitation(params = {})
+    # @overload revoke_invitation(**params)
     # @param [Hash] params ({})
-    def revoke_invitation(params = {}, options = {})
+    def revoke_invitation(params = {}, **options)
       req = build_request(:revoke_invitation, params)
       req.send_request(options)
     end
@@ -2908,9 +2908,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchAddressBooks AWS API Documentation
     #
-    # @overload search_address_books(params = {})
+    # @overload search_address_books(**params)
     # @param [Hash] params ({})
-    def search_address_books(params = {}, options = {})
+    def search_address_books(params = {}, **options)
       req = build_request(:search_address_books, params)
       req.send_request(options)
     end
@@ -2984,9 +2984,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchContacts AWS API Documentation
     #
-    # @overload search_contacts(params = {})
+    # @overload search_contacts(**params)
     # @param [Hash] params ({})
-    def search_contacts(params = {}, options = {})
+    def search_contacts(params = {}, **options)
       req = build_request(:search_contacts, params)
       req.send_request(options)
     end
@@ -3071,9 +3071,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchDevices AWS API Documentation
     #
-    # @overload search_devices(params = {})
+    # @overload search_devices(**params)
     # @param [Hash] params ({})
-    def search_devices(params = {}, options = {})
+    def search_devices(params = {}, **options)
       req = build_request(:search_devices, params)
       req.send_request(options)
     end
@@ -3143,9 +3143,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchNetworkProfiles AWS API Documentation
     #
-    # @overload search_network_profiles(params = {})
+    # @overload search_network_profiles(**params)
     # @param [Hash] params ({})
-    def search_network_profiles(params = {}, options = {})
+    def search_network_profiles(params = {}, **options)
       req = build_request(:search_network_profiles, params)
       req.send_request(options)
     end
@@ -3217,9 +3217,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchProfiles AWS API Documentation
     #
-    # @overload search_profiles(params = {})
+    # @overload search_profiles(**params)
     # @param [Hash] params ({})
-    def search_profiles(params = {}, options = {})
+    def search_profiles(params = {}, **options)
       req = build_request(:search_profiles, params)
       req.send_request(options)
     end
@@ -3288,9 +3288,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchRooms AWS API Documentation
     #
-    # @overload search_rooms(params = {})
+    # @overload search_rooms(**params)
     # @param [Hash] params ({})
-    def search_rooms(params = {}, options = {})
+    def search_rooms(params = {}, **options)
       req = build_request(:search_rooms, params)
       req.send_request(options)
     end
@@ -3356,9 +3356,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchSkillGroups AWS API Documentation
     #
-    # @overload search_skill_groups(params = {})
+    # @overload search_skill_groups(**params)
     # @param [Hash] params ({})
-    def search_skill_groups(params = {}, options = {})
+    def search_skill_groups(params = {}, **options)
       req = build_request(:search_skill_groups, params)
       req.send_request(options)
     end
@@ -3429,9 +3429,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SearchUsers AWS API Documentation
     #
-    # @overload search_users(params = {})
+    # @overload search_users(**params)
     # @param [Hash] params ({})
-    def search_users(params = {}, options = {})
+    def search_users(params = {}, **options)
       req = build_request(:search_users, params)
       req.send_request(options)
     end
@@ -3503,9 +3503,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SendAnnouncement AWS API Documentation
     #
-    # @overload send_announcement(params = {})
+    # @overload send_announcement(**params)
     # @param [Hash] params ({})
-    def send_announcement(params = {}, options = {})
+    def send_announcement(params = {}, **options)
       req = build_request(:send_announcement, params)
       req.send_request(options)
     end
@@ -3527,9 +3527,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/SendInvitation AWS API Documentation
     #
-    # @overload send_invitation(params = {})
+    # @overload send_invitation(**params)
     # @param [Hash] params ({})
-    def send_invitation(params = {}, options = {})
+    def send_invitation(params = {}, **options)
       req = build_request(:send_invitation, params)
       req.send_request(options)
     end
@@ -3574,9 +3574,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/StartDeviceSync AWS API Documentation
     #
-    # @overload start_device_sync(params = {})
+    # @overload start_device_sync(**params)
     # @param [Hash] params ({})
-    def start_device_sync(params = {}, options = {})
+    def start_device_sync(params = {}, **options)
       req = build_request(:start_device_sync, params)
       req.send_request(options)
     end
@@ -3597,9 +3597,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/StartSmartHomeApplianceDiscovery AWS API Documentation
     #
-    # @overload start_smart_home_appliance_discovery(params = {})
+    # @overload start_smart_home_appliance_discovery(**params)
     # @param [Hash] params ({})
-    def start_smart_home_appliance_discovery(params = {}, options = {})
+    def start_smart_home_appliance_discovery(params = {}, **options)
       req = build_request(:start_smart_home_appliance_discovery, params)
       req.send_request(options)
     end
@@ -3629,9 +3629,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3656,9 +3656,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3686,9 +3686,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateAddressBook AWS API Documentation
     #
-    # @overload update_address_book(params = {})
+    # @overload update_address_book(**params)
     # @param [Hash] params ({})
-    def update_address_book(params = {}, options = {})
+    def update_address_book(params = {}, **options)
       req = build_request(:update_address_book, params)
       req.send_request(options)
     end
@@ -3732,9 +3732,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateBusinessReportSchedule AWS API Documentation
     #
-    # @overload update_business_report_schedule(params = {})
+    # @overload update_business_report_schedule(**params)
     # @param [Hash] params ({})
-    def update_business_report_schedule(params = {}, options = {})
+    def update_business_report_schedule(params = {}, **options)
       req = build_request(:update_business_report_schedule, params)
       req.send_request(options)
     end
@@ -3780,9 +3780,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateConferenceProvider AWS API Documentation
     #
-    # @overload update_conference_provider(params = {})
+    # @overload update_conference_provider(**params)
     # @param [Hash] params ({})
-    def update_conference_provider(params = {}, options = {})
+    def update_conference_provider(params = {}, **options)
       req = build_request(:update_conference_provider, params)
       req.send_request(options)
     end
@@ -3839,9 +3839,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateContact AWS API Documentation
     #
-    # @overload update_contact(params = {})
+    # @overload update_contact(**params)
     # @param [Hash] params ({})
-    def update_contact(params = {}, options = {})
+    def update_contact(params = {}, **options)
       req = build_request(:update_contact, params)
       req.send_request(options)
     end
@@ -3865,9 +3865,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateDevice AWS API Documentation
     #
-    # @overload update_device(params = {})
+    # @overload update_device(**params)
     # @param [Hash] params ({})
-    def update_device(params = {}, options = {})
+    def update_device(params = {}, **options)
       req = build_request(:update_device, params)
       req.send_request(options)
     end
@@ -3901,9 +3901,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateGateway AWS API Documentation
     #
-    # @overload update_gateway(params = {})
+    # @overload update_gateway(**params)
     # @param [Hash] params ({})
-    def update_gateway(params = {}, options = {})
+    def update_gateway(params = {}, **options)
       req = build_request(:update_gateway, params)
       req.send_request(options)
     end
@@ -3932,9 +3932,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateGatewayGroup AWS API Documentation
     #
-    # @overload update_gateway_group(params = {})
+    # @overload update_gateway_group(**params)
     # @param [Hash] params ({})
-    def update_gateway_group(params = {}, options = {})
+    def update_gateway_group(params = {}, **options)
       req = build_request(:update_gateway_group, params)
       req.send_request(options)
     end
@@ -3984,9 +3984,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateNetworkProfile AWS API Documentation
     #
-    # @overload update_network_profile(params = {})
+    # @overload update_network_profile(**params)
     # @param [Hash] params ({})
-    def update_network_profile(params = {}, options = {})
+    def update_network_profile(params = {}, **options)
       req = build_request(:update_network_profile, params)
       req.send_request(options)
     end
@@ -4071,9 +4071,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateProfile AWS API Documentation
     #
-    # @overload update_profile(params = {})
+    # @overload update_profile(**params)
     # @param [Hash] params ({})
-    def update_profile(params = {}, options = {})
+    def update_profile(params = {}, **options)
       req = build_request(:update_profile, params)
       req.send_request(options)
     end
@@ -4109,9 +4109,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateRoom AWS API Documentation
     #
-    # @overload update_room(params = {})
+    # @overload update_room(**params)
     # @param [Hash] params ({})
-    def update_room(params = {}, options = {})
+    def update_room(params = {}, **options)
       req = build_request(:update_room, params)
       req.send_request(options)
     end
@@ -4139,9 +4139,9 @@ module Aws::AlexaForBusiness
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/alexaforbusiness-2017-11-09/UpdateSkillGroup AWS API Documentation
     #
-    # @overload update_skill_group(params = {})
+    # @overload update_skill_group(**params)
     # @param [Hash] params ({})
-    def update_skill_group(params = {}, options = {})
+    def update_skill_group(params = {}, **options)
       req = build_request(:update_skill_group, params)
       req.send_request(options)
     end
@@ -4150,7 +4150,7 @@ module Aws::AlexaForBusiness
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4158,15 +4158,15 @@ module Aws::AlexaForBusiness
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-alexaforbusiness'
-      context[:gem_version] = '1.43.0'
+      context[:gem_name] = "aws-sdk-alexaforbusiness"
+      context[:gem_version] = "1.43.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

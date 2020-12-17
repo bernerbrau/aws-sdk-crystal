@@ -7,29 +7,29 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
-require 'aws-sdk-sts/plugins/sts_regional_endpoints.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
+require "aws-sdk-sts/plugins/sts_regional_endpoints.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:sts)
 
@@ -287,7 +287,7 @@ module Aws::STS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -776,9 +776,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/AssumeRole AWS API Documentation
     #
-    # @overload assume_role(params = {})
+    # @overload assume_role(**params)
     # @param [Hash] params ({})
-    def assume_role(params = {}, options = {})
+    def assume_role(params = {}, **options)
       req = build_request(:assume_role, params)
       req.send_request(options)
     end
@@ -1110,9 +1110,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/AssumeRoleWithSAML AWS API Documentation
     #
-    # @overload assume_role_with_saml(params = {})
+    # @overload assume_role_with_saml(**params)
     # @param [Hash] params ({})
-    def assume_role_with_saml(params = {}, options = {})
+    def assume_role_with_saml(params = {}, **options)
       req = build_request(:assume_role_with_saml, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/AssumeRoleWithWebIdentity AWS API Documentation
     #
-    # @overload assume_role_with_web_identity(params = {})
+    # @overload assume_role_with_web_identity(**params)
     # @param [Hash] params ({})
-    def assume_role_with_web_identity(params = {}, options = {})
+    def assume_role_with_web_identity(params = {}, **options)
       req = build_request(:assume_role_with_web_identity, params)
       req.send_request(options)
     end
@@ -1562,9 +1562,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/DecodeAuthorizationMessage AWS API Documentation
     #
-    # @overload decode_authorization_message(params = {})
+    # @overload decode_authorization_message(**params)
     # @param [Hash] params ({})
-    def decode_authorization_message(params = {}, options = {})
+    def decode_authorization_message(params = {}, **options)
       req = build_request(:decode_authorization_message, params)
       req.send_request(options)
     end
@@ -1622,9 +1622,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/GetAccessKeyInfo AWS API Documentation
     #
-    # @overload get_access_key_info(params = {})
+    # @overload get_access_key_info(**params)
     # @param [Hash] params ({})
-    def get_access_key_info(params = {}, options = {})
+    def get_access_key_info(params = {}, **options)
       req = build_request(:get_access_key_info, params)
       req.send_request(options)
     end
@@ -1706,9 +1706,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/GetCallerIdentity AWS API Documentation
     #
-    # @overload get_caller_identity(params = {})
+    # @overload get_caller_identity(**params)
     # @param [Hash] params ({})
-    def get_caller_identity(params = {}, options = {})
+    def get_caller_identity(params = {}, **options)
       req = build_request(:get_caller_identity, params)
       req.send_request(options)
     end
@@ -2039,9 +2039,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/GetFederationToken AWS API Documentation
     #
-    # @overload get_federation_token(params = {})
+    # @overload get_federation_token(**params)
     # @param [Hash] params ({})
-    def get_federation_token(params = {}, options = {})
+    def get_federation_token(params = {}, **options)
       req = build_request(:get_federation_token, params)
       req.send_request(options)
     end
@@ -2184,9 +2184,9 @@ module Aws::STS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/GetSessionToken AWS API Documentation
     #
-    # @overload get_session_token(params = {})
+    # @overload get_session_token(**params)
     # @param [Hash] params ({})
-    def get_session_token(params = {}, options = {})
+    def get_session_token(params = {}, **options)
       req = build_request(:get_session_token, params)
       req.send_request(options)
     end
@@ -2195,7 +2195,7 @@ module Aws::STS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2203,15 +2203,15 @@ module Aws::STS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-core'
-      context[:gem_version] = '3.110.0'
+      context[:gem_name] = "aws-sdk-core"
+      context[:gem_version] = "3.110.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,11 +8,11 @@
 Feature: Smoke tests for States
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @states @smoke
   Scenario: Call Aws::States::Client#list_activities and expect it to succeed
-  When I call the operation 'list_activities' with params:
+  When I call the operation "list_activities" with params:
     """
 {}
     """

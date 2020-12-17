@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:batch)
 
@@ -280,7 +280,7 @@ module Aws::Batch
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -366,9 +366,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CancelJob AWS API Documentation
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -632,9 +632,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CreateComputeEnvironment AWS API Documentation
     #
-    # @overload create_compute_environment(params = {})
+    # @overload create_compute_environment(**params)
     # @param [Hash] params ({})
-    def create_compute_environment(params = {}, options = {})
+    def create_compute_environment(params = {}, **options)
       req = build_request(:create_compute_environment, params)
       req.send_request(options)
     end
@@ -765,9 +765,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CreateJobQueue AWS API Documentation
     #
-    # @overload create_job_queue(params = {})
+    # @overload create_job_queue(**params)
     # @param [Hash] params ({})
-    def create_job_queue(params = {}, options = {})
+    def create_job_queue(params = {}, **options)
       req = build_request(:create_job_queue, params)
       req.send_request(options)
     end
@@ -809,9 +809,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeleteComputeEnvironment AWS API Documentation
     #
-    # @overload delete_compute_environment(params = {})
+    # @overload delete_compute_environment(**params)
     # @param [Hash] params ({})
-    def delete_compute_environment(params = {}, options = {})
+    def delete_compute_environment(params = {}, **options)
       req = build_request(:delete_compute_environment, params)
       req.send_request(options)
     end
@@ -850,9 +850,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeleteJobQueue AWS API Documentation
     #
-    # @overload delete_job_queue(params = {})
+    # @overload delete_job_queue(**params)
     # @param [Hash] params ({})
-    def delete_job_queue(params = {}, options = {})
+    def delete_job_queue(params = {}, **options)
       req = build_request(:delete_job_queue, params)
       req.send_request(options)
     end
@@ -887,9 +887,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeregisterJobDefinition AWS API Documentation
     #
-    # @overload deregister_job_definition(params = {})
+    # @overload deregister_job_definition(**params)
     # @param [Hash] params ({})
-    def deregister_job_definition(params = {}, options = {})
+    def deregister_job_definition(params = {}, **options)
       req = build_request(:deregister_job_definition, params)
       req.send_request(options)
     end
@@ -1035,9 +1035,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeComputeEnvironments AWS API Documentation
     #
-    # @overload describe_compute_environments(params = {})
+    # @overload describe_compute_environments(**params)
     # @param [Hash] params ({})
-    def describe_compute_environments(params = {}, options = {})
+    def describe_compute_environments(params = {}, **options)
       req = build_request(:describe_compute_environments, params)
       req.send_request(options)
     end
@@ -1271,9 +1271,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeJobDefinitions AWS API Documentation
     #
-    # @overload describe_job_definitions(params = {})
+    # @overload describe_job_definitions(**params)
     # @param [Hash] params ({})
-    def describe_job_definitions(params = {}, options = {})
+    def describe_job_definitions(params = {}, **options)
       req = build_request(:describe_job_definitions, params)
       req.send_request(options)
     end
@@ -1371,9 +1371,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeJobQueues AWS API Documentation
     #
-    # @overload describe_job_queues(params = {})
+    # @overload describe_job_queues(**params)
     # @param [Hash] params ({})
-    def describe_job_queues(params = {}, options = {})
+    def describe_job_queues(params = {}, **options)
       req = build_request(:describe_job_queues, params)
       req.send_request(options)
     end
@@ -1614,9 +1614,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeJobs AWS API Documentation
     #
-    # @overload describe_jobs(params = {})
+    # @overload describe_jobs(**params)
     # @param [Hash] params ({})
-    def describe_jobs(params = {}, options = {})
+    def describe_jobs(params = {}, **options)
       req = build_request(:describe_jobs, params)
       req.send_request(options)
     end
@@ -1753,9 +1753,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -1806,9 +1806,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2198,9 +2198,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/RegisterJobDefinition AWS API Documentation
     #
-    # @overload register_job_definition(params = {})
+    # @overload register_job_definition(**params)
     # @param [Hash] params ({})
-    def register_job_definition(params = {}, options = {})
+    def register_job_definition(params = {}, **options)
       req = build_request(:register_job_definition, params)
       req.send_request(options)
     end
@@ -2425,9 +2425,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/SubmitJob AWS API Documentation
     #
-    # @overload submit_job(params = {})
+    # @overload submit_job(**params)
     # @param [Hash] params ({})
-    def submit_job(params = {}, options = {})
+    def submit_job(params = {}, **options)
       req = build_request(:submit_job, params)
       req.send_request(options)
     end
@@ -2485,9 +2485,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2530,9 +2530,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/TerminateJob AWS API Documentation
     #
-    # @overload terminate_job(params = {})
+    # @overload terminate_job(**params)
     # @param [Hash] params ({})
-    def terminate_job(params = {}, options = {})
+    def terminate_job(params = {}, **options)
       req = build_request(:terminate_job, params)
       req.send_request(options)
     end
@@ -2575,9 +2575,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2657,9 +2657,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdateComputeEnvironment AWS API Documentation
     #
-    # @overload update_compute_environment(params = {})
+    # @overload update_compute_environment(**params)
     # @param [Hash] params ({})
-    def update_compute_environment(params = {}, options = {})
+    def update_compute_environment(params = {}, **options)
       req = build_request(:update_compute_environment, params)
       req.send_request(options)
     end
@@ -2733,9 +2733,9 @@ module Aws::Batch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdateJobQueue AWS API Documentation
     #
-    # @overload update_job_queue(params = {})
+    # @overload update_job_queue(**params)
     # @param [Hash] params ({})
-    def update_job_queue(params = {}, options = {})
+    def update_job_queue(params = {}, **options)
       req = build_request(:update_job_queue, params)
       req.send_request(options)
     end
@@ -2744,7 +2744,7 @@ module Aws::Batch
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2752,15 +2752,15 @@ module Aws::Batch
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-batch'
-      context[:gem_version] = '1.42.0'
+      context[:gem_name] = "aws-sdk-batch"
+      context[:gem_version] = "1.42.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:resourcegroups)
 
@@ -280,7 +280,7 @@ module Aws::ResourceGroups
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -422,9 +422,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/CreateGroup AWS API Documentation
     #
-    # @overload create_group(params = {})
+    # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, options = {})
+    def create_group(params = {}, **options)
       req = build_request(:create_group, params)
       req.send_request(options)
     end
@@ -458,9 +458,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/DeleteGroup AWS API Documentation
     #
-    # @overload delete_group(params = {})
+    # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, options = {})
+    def delete_group(params = {}, **options)
       req = build_request(:delete_group, params)
       req.send_request(options)
     end
@@ -492,9 +492,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/GetGroup AWS API Documentation
     #
-    # @overload get_group(params = {})
+    # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, options = {})
+    def get_group(params = {}, **options)
       req = build_request(:get_group, params)
       req.send_request(options)
     end
@@ -545,9 +545,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/GetGroupConfiguration AWS API Documentation
     #
-    # @overload get_group_configuration(params = {})
+    # @overload get_group_configuration(**params)
     # @param [Hash] params ({})
-    def get_group_configuration(params = {}, options = {})
+    def get_group_configuration(params = {}, **options)
       req = build_request(:get_group_configuration, params)
       req.send_request(options)
     end
@@ -580,9 +580,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/GetGroupQuery AWS API Documentation
     #
-    # @overload get_group_query(params = {})
+    # @overload get_group_query(**params)
     # @param [Hash] params ({})
-    def get_group_query(params = {}, options = {})
+    def get_group_query(params = {}, **options)
       req = build_request(:get_group_query, params)
       req.send_request(options)
     end
@@ -612,9 +612,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/GetTags AWS API Documentation
     #
-    # @overload get_tags(params = {})
+    # @overload get_tags(**params)
     # @param [Hash] params ({})
-    def get_tags(params = {}, options = {})
+    def get_tags(params = {}, **options)
       req = build_request(:get_tags, params)
       req.send_request(options)
     end
@@ -650,9 +650,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/GroupResources AWS API Documentation
     #
-    # @overload group_resources(params = {})
+    # @overload group_resources(**params)
     # @param [Hash] params ({})
-    def group_resources(params = {}, options = {})
+    def group_resources(params = {}, **options)
       req = build_request(:group_resources, params)
       req.send_request(options)
     end
@@ -750,9 +750,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/ListGroupResources AWS API Documentation
     #
-    # @overload list_group_resources(params = {})
+    # @overload list_group_resources(**params)
     # @param [Hash] params ({})
-    def list_group_resources(params = {}, options = {})
+    def list_group_resources(params = {}, **options)
       req = build_request(:list_group_resources, params)
       req.send_request(options)
     end
@@ -829,9 +829,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/ListGroups AWS API Documentation
     #
-    # @overload list_groups(params = {})
+    # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, options = {})
+    def list_groups(params = {}, **options)
       req = build_request(:list_groups, params)
       req.send_request(options)
     end
@@ -894,9 +894,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/SearchResources AWS API Documentation
     #
-    # @overload search_resources(params = {})
+    # @overload search_resources(**params)
     # @param [Hash] params ({})
-    def search_resources(params = {}, options = {})
+    def search_resources(params = {}, **options)
       req = build_request(:search_resources, params)
       req.send_request(options)
     end
@@ -939,9 +939,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/Tag AWS API Documentation
     #
-    # @overload tag(params = {})
+    # @overload tag(**params)
     # @param [Hash] params ({})
-    def tag(params = {}, options = {})
+    def tag(params = {}, **options)
       req = build_request(:tag, params)
       req.send_request(options)
     end
@@ -978,9 +978,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/UngroupResources AWS API Documentation
     #
-    # @overload ungroup_resources(params = {})
+    # @overload ungroup_resources(**params)
     # @param [Hash] params ({})
-    def ungroup_resources(params = {}, options = {})
+    def ungroup_resources(params = {}, **options)
       req = build_request(:ungroup_resources, params)
       req.send_request(options)
     end
@@ -1015,9 +1015,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/Untag AWS API Documentation
     #
-    # @overload untag(params = {})
+    # @overload untag(**params)
     # @param [Hash] params ({})
-    def untag(params = {}, options = {})
+    def untag(params = {}, **options)
       req = build_request(:untag, params)
       req.send_request(options)
     end
@@ -1056,9 +1056,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/UpdateGroup AWS API Documentation
     #
-    # @overload update_group(params = {})
+    # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, options = {})
+    def update_group(params = {}, **options)
       req = build_request(:update_group, params)
       req.send_request(options)
     end
@@ -1098,9 +1098,9 @@ module Aws::ResourceGroups
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/resource-groups-2017-11-27/UpdateGroupQuery AWS API Documentation
     #
-    # @overload update_group_query(params = {})
+    # @overload update_group_query(**params)
     # @param [Hash] params ({})
-    def update_group_query(params = {}, options = {})
+    def update_group_query(params = {}, **options)
       req = build_request(:update_group_query, params)
       req.send_request(options)
     end
@@ -1109,7 +1109,7 @@ module Aws::ResourceGroups
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1117,15 +1117,15 @@ module Aws::ResourceGroups
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-resourcegroups'
-      context[:gem_version] = '1.32.0'
+      context[:gem_name] = "aws-sdk-resourcegroups"
+      context[:gem_version] = "1.32.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

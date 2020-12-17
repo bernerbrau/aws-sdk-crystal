@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:ecs)
 
@@ -290,7 +290,7 @@ module Aws::ECS
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -432,9 +432,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CreateCapacityProvider AWS API Documentation
     #
-    # @overload create_capacity_provider(params = {})
+    # @overload create_capacity_provider(**params)
     # @param [Hash] params ({})
-    def create_capacity_provider(params = {}, options = {})
+    def create_capacity_provider(params = {}, **options)
       req = build_request(:create_capacity_provider, params)
       req.send_request(options)
     end
@@ -631,9 +631,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -1393,9 +1393,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CreateService AWS API Documentation
     #
-    # @overload create_service(params = {})
+    # @overload create_service(**params)
     # @param [Hash] params ({})
-    def create_service(params = {}, options = {})
+    def create_service(params = {}, **options)
       req = build_request(:create_service, params)
       req.send_request(options)
     end
@@ -1631,9 +1631,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CreateTaskSet AWS API Documentation
     #
-    # @overload create_task_set(params = {})
+    # @overload create_task_set(**params)
     # @param [Hash] params ({})
-    def create_task_set(params = {}, options = {})
+    def create_task_set(params = {}, **options)
       req = build_request(:create_task_set, params)
       req.send_request(options)
     end
@@ -1715,9 +1715,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeleteAccountSetting AWS API Documentation
     #
-    # @overload delete_account_setting(params = {})
+    # @overload delete_account_setting(**params)
     # @param [Hash] params ({})
-    def delete_account_setting(params = {}, options = {})
+    def delete_account_setting(params = {}, **options)
       req = build_request(:delete_account_setting, params)
       req.send_request(options)
     end
@@ -1763,9 +1763,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeleteAttributes AWS API Documentation
     #
-    # @overload delete_attributes(params = {})
+    # @overload delete_attributes(**params)
     # @param [Hash] params ({})
-    def delete_attributes(params = {}, options = {})
+    def delete_attributes(params = {}, **options)
       req = build_request(:delete_attributes, params)
       req.send_request(options)
     end
@@ -1823,9 +1823,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeleteCapacityProvider AWS API Documentation
     #
-    # @overload delete_capacity_provider(params = {})
+    # @overload delete_capacity_provider(**params)
     # @param [Hash] params ({})
-    def delete_capacity_provider(params = {}, options = {})
+    def delete_capacity_provider(params = {}, **options)
       req = build_request(:delete_capacity_provider, params)
       req.send_request(options)
     end
@@ -1912,9 +1912,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeleteCluster AWS API Documentation
     #
-    # @overload delete_cluster(params = {})
+    # @overload delete_cluster(**params)
     # @param [Hash] params ({})
-    def delete_cluster(params = {}, options = {})
+    def delete_cluster(params = {}, **options)
       req = build_request(:delete_cluster, params)
       req.send_request(options)
     end
@@ -2105,9 +2105,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeleteService AWS API Documentation
     #
-    # @overload delete_service(params = {})
+    # @overload delete_service(**params)
     # @param [Hash] params ({})
-    def delete_service(params = {}, options = {})
+    def delete_service(params = {}, **options)
       req = build_request(:delete_service, params)
       req.send_request(options)
     end
@@ -2196,9 +2196,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeleteTaskSet AWS API Documentation
     #
-    # @overload delete_task_set(params = {})
+    # @overload delete_task_set(**params)
     # @param [Hash] params ({})
-    def delete_task_set(params = {}, options = {})
+    def delete_task_set(params = {}, **options)
       req = build_request(:delete_task_set, params)
       req.send_request(options)
     end
@@ -2329,9 +2329,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeregisterContainerInstance AWS API Documentation
     #
-    # @overload deregister_container_instance(params = {})
+    # @overload deregister_container_instance(**params)
     # @param [Hash] params ({})
-    def deregister_container_instance(params = {}, options = {})
+    def deregister_container_instance(params = {}, **options)
       req = build_request(:deregister_container_instance, params)
       req.send_request(options)
     end
@@ -2528,9 +2528,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DeregisterTaskDefinition AWS API Documentation
     #
-    # @overload deregister_task_definition(params = {})
+    # @overload deregister_task_definition(**params)
     # @param [Hash] params ({})
-    def deregister_task_definition(params = {}, options = {})
+    def deregister_task_definition(params = {}, **options)
       req = build_request(:deregister_task_definition, params)
       req.send_request(options)
     end
@@ -2613,9 +2613,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeCapacityProviders AWS API Documentation
     #
-    # @overload describe_capacity_providers(params = {})
+    # @overload describe_capacity_providers(**params)
     # @param [Hash] params ({})
-    def describe_capacity_providers(params = {}, options = {})
+    def describe_capacity_providers(params = {}, **options)
       req = build_request(:describe_capacity_providers, params)
       req.send_request(options)
     end
@@ -2735,9 +2735,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeClusters AWS API Documentation
     #
-    # @overload describe_clusters(params = {})
+    # @overload describe_clusters(**params)
     # @param [Hash] params ({})
-    def describe_clusters(params = {}, options = {})
+    def describe_clusters(params = {}, **options)
       req = build_request(:describe_clusters, params)
       req.send_request(options)
     end
@@ -2919,9 +2919,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeContainerInstances AWS API Documentation
     #
-    # @overload describe_container_instances(params = {})
+    # @overload describe_container_instances(**params)
     # @param [Hash] params ({})
-    def describe_container_instances(params = {}, options = {})
+    def describe_container_instances(params = {}, **options)
       req = build_request(:describe_container_instances, params)
       req.send_request(options)
     end
@@ -3147,9 +3147,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeServices AWS API Documentation
     #
-    # @overload describe_services(params = {})
+    # @overload describe_services(**params)
     # @param [Hash] params ({})
-    def describe_services(params = {}, options = {})
+    def describe_services(params = {}, **options)
       req = build_request(:describe_services, params)
       req.send_request(options)
     end
@@ -3409,9 +3409,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeTaskDefinition AWS API Documentation
     #
-    # @overload describe_task_definition(params = {})
+    # @overload describe_task_definition(**params)
     # @param [Hash] params ({})
-    def describe_task_definition(params = {}, options = {})
+    def describe_task_definition(params = {}, **options)
       req = build_request(:describe_task_definition, params)
       req.send_request(options)
     end
@@ -3506,9 +3506,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeTaskSets AWS API Documentation
     #
-    # @overload describe_task_sets(params = {})
+    # @overload describe_task_sets(**params)
     # @param [Hash] params ({})
-    def describe_task_sets(params = {}, options = {})
+    def describe_task_sets(params = {}, **options)
       req = build_request(:describe_task_sets, params)
       req.send_request(options)
     end
@@ -3702,9 +3702,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DescribeTasks AWS API Documentation
     #
-    # @overload describe_tasks(params = {})
+    # @overload describe_tasks(**params)
     # @param [Hash] params ({})
-    def describe_tasks(params = {}, options = {})
+    def describe_tasks(params = {}, **options)
       req = build_request(:describe_tasks, params)
       req.send_request(options)
     end
@@ -3747,9 +3747,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/DiscoverPollEndpoint AWS API Documentation
     #
-    # @overload discover_poll_endpoint(params = {})
+    # @overload discover_poll_endpoint(**params)
     # @param [Hash] params ({})
-    def discover_poll_endpoint(params = {}, options = {})
+    def discover_poll_endpoint(params = {}, **options)
       req = build_request(:discover_poll_endpoint, params)
       req.send_request(options)
     end
@@ -3886,9 +3886,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListAccountSettings AWS API Documentation
     #
-    # @overload list_account_settings(params = {})
+    # @overload list_account_settings(**params)
     # @param [Hash] params ({})
-    def list_account_settings(params = {}, options = {})
+    def list_account_settings(params = {}, **options)
       req = build_request(:list_account_settings, params)
       req.send_request(options)
     end
@@ -3968,9 +3968,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListAttributes AWS API Documentation
     #
-    # @overload list_attributes(params = {})
+    # @overload list_attributes(**params)
     # @param [Hash] params ({})
-    def list_attributes(params = {}, options = {})
+    def list_attributes(params = {}, **options)
       req = build_request(:list_attributes, params)
       req.send_request(options)
     end
@@ -4037,9 +4037,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListClusters AWS API Documentation
     #
-    # @overload list_clusters(params = {})
+    # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, options = {})
+    def list_clusters(params = {}, **options)
       req = build_request(:list_clusters, params)
       req.send_request(options)
     end
@@ -4141,9 +4141,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListContainerInstances AWS API Documentation
     #
-    # @overload list_container_instances(params = {})
+    # @overload list_container_instances(**params)
     # @param [Hash] params ({})
-    def list_container_instances(params = {}, options = {})
+    def list_container_instances(params = {}, **options)
       req = build_request(:list_container_instances, params)
       req.send_request(options)
     end
@@ -4223,9 +4223,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListServices AWS API Documentation
     #
-    # @overload list_services(params = {})
+    # @overload list_services(**params)
     # @param [Hash] params ({})
-    def list_services(params = {}, options = {})
+    def list_services(params = {}, **options)
       req = build_request(:list_services, params)
       req.send_request(options)
     end
@@ -4274,9 +4274,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4389,9 +4389,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListTaskDefinitionFamilies AWS API Documentation
     #
-    # @overload list_task_definition_families(params = {})
+    # @overload list_task_definition_families(**params)
     # @param [Hash] params ({})
-    def list_task_definition_families(params = {}, options = {})
+    def list_task_definition_families(params = {}, **options)
       req = build_request(:list_task_definition_families, params)
       req.send_request(options)
     end
@@ -4509,9 +4509,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListTaskDefinitions AWS API Documentation
     #
-    # @overload list_task_definitions(params = {})
+    # @overload list_task_definitions(**params)
     # @param [Hash] params ({})
-    def list_task_definitions(params = {}, options = {})
+    def list_task_definitions(params = {}, **options)
       req = build_request(:list_task_definitions, params)
       req.send_request(options)
     end
@@ -4654,9 +4654,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListTasks AWS API Documentation
     #
-    # @overload list_tasks(params = {})
+    # @overload list_tasks(**params)
     # @param [Hash] params ({})
-    def list_tasks(params = {}, options = {})
+    def list_tasks(params = {}, **options)
       req = build_request(:list_tasks, params)
       req.send_request(options)
     end
@@ -4788,9 +4788,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/PutAccountSetting AWS API Documentation
     #
-    # @overload put_account_setting(params = {})
+    # @overload put_account_setting(**params)
     # @param [Hash] params ({})
-    def put_account_setting(params = {}, options = {})
+    def put_account_setting(params = {}, **options)
       req = build_request(:put_account_setting, params)
       req.send_request(options)
     end
@@ -4855,9 +4855,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/PutAccountSettingDefault AWS API Documentation
     #
-    # @overload put_account_setting_default(params = {})
+    # @overload put_account_setting_default(**params)
     # @param [Hash] params ({})
-    def put_account_setting_default(params = {}, options = {})
+    def put_account_setting_default(params = {}, **options)
       req = build_request(:put_account_setting_default, params)
       req.send_request(options)
     end
@@ -4910,9 +4910,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/PutAttributes AWS API Documentation
     #
-    # @overload put_attributes(params = {})
+    # @overload put_attributes(**params)
     # @param [Hash] params ({})
-    def put_attributes(params = {}, options = {})
+    def put_attributes(params = {}, **options)
       req = build_request(:put_attributes, params)
       req.send_request(options)
     end
@@ -5030,9 +5030,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/PutClusterCapacityProviders AWS API Documentation
     #
-    # @overload put_cluster_capacity_providers(params = {})
+    # @overload put_cluster_capacity_providers(**params)
     # @param [Hash] params ({})
-    def put_cluster_capacity_providers(params = {}, options = {})
+    def put_cluster_capacity_providers(params = {}, **options)
       req = build_request(:put_cluster_capacity_providers, params)
       req.send_request(options)
     end
@@ -5208,9 +5208,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/RegisterContainerInstance AWS API Documentation
     #
-    # @overload register_container_instance(params = {})
+    # @overload register_container_instance(**params)
     # @param [Hash] params ({})
-    def register_container_instance(params = {}, options = {})
+    def register_container_instance(params = {}, **options)
       req = build_request(:register_container_instance, params)
       req.send_request(options)
     end
@@ -5982,9 +5982,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/RegisterTaskDefinition AWS API Documentation
     #
-    # @overload register_task_definition(params = {})
+    # @overload register_task_definition(**params)
     # @param [Hash] params ({})
-    def register_task_definition(params = {}, options = {})
+    def register_task_definition(params = {}, **options)
       req = build_request(:register_task_definition, params)
       req.send_request(options)
     end
@@ -6427,9 +6427,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/RunTask AWS API Documentation
     #
-    # @overload run_task(params = {})
+    # @overload run_task(**params)
     # @param [Hash] params ({})
-    def run_task(params = {}, options = {})
+    def run_task(params = {}, **options)
       req = build_request(:run_task, params)
       req.send_request(options)
     end
@@ -6717,9 +6717,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/StartTask AWS API Documentation
     #
-    # @overload start_task(params = {})
+    # @overload start_task(**params)
     # @param [Hash] params ({})
-    def start_task(params = {}, options = {})
+    def start_task(params = {}, **options)
       req = build_request(:start_task, params)
       req.send_request(options)
     end
@@ -6870,9 +6870,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/StopTask AWS API Documentation
     #
-    # @overload stop_task(params = {})
+    # @overload stop_task(**params)
     # @param [Hash] params ({})
-    def stop_task(params = {}, options = {})
+    def stop_task(params = {}, **options)
       req = build_request(:stop_task, params)
       req.send_request(options)
     end
@@ -6913,9 +6913,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/SubmitAttachmentStateChanges AWS API Documentation
     #
-    # @overload submit_attachment_state_changes(params = {})
+    # @overload submit_attachment_state_changes(**params)
     # @param [Hash] params ({})
-    def submit_attachment_state_changes(params = {}, options = {})
+    def submit_attachment_state_changes(params = {}, **options)
       req = build_request(:submit_attachment_state_changes, params)
       req.send_request(options)
     end
@@ -6982,9 +6982,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/SubmitContainerStateChange AWS API Documentation
     #
-    # @overload submit_container_state_change(params = {})
+    # @overload submit_container_state_change(**params)
     # @param [Hash] params ({})
-    def submit_container_state_change(params = {}, options = {})
+    def submit_container_state_change(params = {}, **options)
       req = build_request(:submit_container_state_change, params)
       req.send_request(options)
     end
@@ -7070,9 +7070,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/SubmitTaskStateChange AWS API Documentation
     #
-    # @overload submit_task_state_change(params = {})
+    # @overload submit_task_state_change(**params)
     # @param [Hash] params ({})
-    def submit_task_state_change(params = {}, options = {})
+    def submit_task_state_change(params = {}, **options)
       req = build_request(:submit_task_state_change, params)
       req.send_request(options)
     end
@@ -7150,9 +7150,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -7195,9 +7195,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -7251,9 +7251,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateCapacityProvider AWS API Documentation
     #
-    # @overload update_capacity_provider(params = {})
+    # @overload update_capacity_provider(**params)
     # @param [Hash] params ({})
-    def update_capacity_provider(params = {}, options = {})
+    def update_capacity_provider(params = {}, **options)
       req = build_request(:update_capacity_provider, params)
       req.send_request(options)
     end
@@ -7320,9 +7320,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateClusterSettings AWS API Documentation
     #
-    # @overload update_cluster_settings(params = {})
+    # @overload update_cluster_settings(**params)
     # @param [Hash] params ({})
-    def update_cluster_settings(params = {}, options = {})
+    def update_cluster_settings(params = {}, **options)
       req = build_request(:update_cluster_settings, params)
       req.send_request(options)
     end
@@ -7415,9 +7415,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateContainerAgent AWS API Documentation
     #
-    # @overload update_container_agent(params = {})
+    # @overload update_container_agent(**params)
     # @param [Hash] params ({})
-    def update_container_agent(params = {}, options = {})
+    def update_container_agent(params = {}, **options)
       req = build_request(:update_container_agent, params)
       req.send_request(options)
     end
@@ -7562,9 +7562,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateContainerInstancesState AWS API Documentation
     #
-    # @overload update_container_instances_state(params = {})
+    # @overload update_container_instances_state(**params)
     # @param [Hash] params ({})
-    def update_container_instances_state(params = {}, options = {})
+    def update_container_instances_state(params = {}, **options)
       req = build_request(:update_container_instances_state, params)
       req.send_request(options)
     end
@@ -7999,9 +7999,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateService AWS API Documentation
     #
-    # @overload update_service(params = {})
+    # @overload update_service(**params)
     # @param [Hash] params ({})
-    def update_service(params = {}, options = {})
+    def update_service(params = {}, **options)
       req = build_request(:update_service, params)
       req.send_request(options)
     end
@@ -8087,9 +8087,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateServicePrimaryTaskSet AWS API Documentation
     #
-    # @overload update_service_primary_task_set(params = {})
+    # @overload update_service_primary_task_set(**params)
     # @param [Hash] params ({})
-    def update_service_primary_task_set(params = {}, options = {})
+    def update_service_primary_task_set(params = {}, **options)
       req = build_request(:update_service_primary_task_set, params)
       req.send_request(options)
     end
@@ -8181,9 +8181,9 @@ module Aws::ECS
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateTaskSet AWS API Documentation
     #
-    # @overload update_task_set(params = {})
+    # @overload update_task_set(**params)
     # @param [Hash] params ({})
-    def update_task_set(params = {}, options = {})
+    def update_task_set(params = {}, **options)
       req = build_request(:update_task_set, params)
       req.send_request(options)
     end
@@ -8192,7 +8192,7 @@ module Aws::ECS
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -8200,8 +8200,8 @@ module Aws::ECS
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-ecs'
-      context[:gem_version] = '1.72.0'
+      context[:gem_name] = "aws-sdk-ecs"
+      context[:gem_version] = "1.72.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -8296,7 +8296,7 @@ module Aws::ECS
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -8312,7 +8312,7 @@ module Aws::ECS
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

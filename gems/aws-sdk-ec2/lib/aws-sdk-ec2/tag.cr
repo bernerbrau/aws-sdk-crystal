@@ -13,12 +13,12 @@ module Aws::EC2
 
     extend Aws::Deprecations
 
-    # @overload def initialize(resource_id, key, value, options = {})
+    # @overload def initialize(resource_id, key, value, **options)
     #   @param [String] resource_id
     #   @param [String] key
     #   @param [String] value
     #   @option options [Client] :client
-    # @overload def initialize(options = {})
+    # @overload def initialize(**options)
     #   @option options [required, String] :resource_id
     #   @option options [required, String] :key
     #   @option options [required, String] :value
@@ -120,7 +120,7 @@ module Aws::EC2
     # ## Example
     #
     #     instance.wait_until(max_attempts:10, delay:5) do |instance|
-    #       instance.state.name == 'running'
+    #       instance.state.name == "running"
     #     end
     #
     # ## Configuration
@@ -180,7 +180,7 @@ module Aws::EC2
     # @option options [Proc] :before_wait (nil) Callback
     # invoked before each wait
     # @return [Resource] if the waiter was successful
-    def wait_until(options = {}, &block)
+    def wait_until(**options, &block)
       self_copy = self.dup
       attempts = 0
       options[:max_attempts] = 10 unless options.key?(:max_attempts)

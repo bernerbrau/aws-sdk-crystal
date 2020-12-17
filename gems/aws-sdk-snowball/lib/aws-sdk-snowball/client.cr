@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:snowball)
 
@@ -290,7 +290,7 @@ module Aws::Snowball
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -364,9 +364,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CancelCluster AWS API Documentation
     #
-    # @overload cancel_cluster(params = {})
+    # @overload cancel_cluster(**params)
     # @param [Hash] params ({})
-    def cancel_cluster(params = {}, options = {})
+    def cancel_cluster(params = {}, **options)
       req = build_request(:cancel_cluster, params)
       req.send_request(options)
     end
@@ -399,9 +399,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CancelJob AWS API Documentation
     #
-    # @overload cancel_job(params = {})
+    # @overload cancel_job(**params)
     # @param [Hash] params ({})
-    def cancel_job(params = {}, options = {})
+    def cancel_job(params = {}, **options)
       req = build_request(:cancel_job, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateAddress AWS API Documentation
     #
-    # @overload create_address(params = {})
+    # @overload create_address(**params)
     # @param [Hash] params ({})
-    def create_address(params = {}, options = {})
+    def create_address(params = {}, **options)
       req = build_request(:create_address, params)
       req.send_request(options)
     end
@@ -663,9 +663,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateCluster AWS API Documentation
     #
-    # @overload create_cluster(params = {})
+    # @overload create_cluster(**params)
     # @param [Hash] params ({})
-    def create_cluster(params = {}, options = {})
+    def create_cluster(params = {}, **options)
       req = build_request(:create_cluster, params)
       req.send_request(options)
     end
@@ -884,9 +884,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateJob AWS API Documentation
     #
-    # @overload create_job(params = {})
+    # @overload create_job(**params)
     # @param [Hash] params ({})
-    def create_job(params = {}, options = {})
+    def create_job(params = {}, **options)
       req = build_request(:create_job, params)
       req.send_request(options)
     end
@@ -921,9 +921,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateReturnShippingLabel AWS API Documentation
     #
-    # @overload create_return_shipping_label(params = {})
+    # @overload create_return_shipping_label(**params)
     # @param [Hash] params ({})
-    def create_return_shipping_label(params = {}, options = {})
+    def create_return_shipping_label(params = {}, **options)
       req = build_request(:create_return_shipping_label, params)
       req.send_request(options)
     end
@@ -987,9 +987,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/DescribeAddress AWS API Documentation
     #
-    # @overload describe_address(params = {})
+    # @overload describe_address(**params)
     # @param [Hash] params ({})
-    def describe_address(params = {}, options = {})
+    def describe_address(params = {}, **options)
       req = build_request(:describe_address, params)
       req.send_request(options)
     end
@@ -1068,9 +1068,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/DescribeAddresses AWS API Documentation
     #
-    # @overload describe_addresses(params = {})
+    # @overload describe_addresses(**params)
     # @param [Hash] params ({})
-    def describe_addresses(params = {}, options = {})
+    def describe_addresses(params = {}, **options)
       req = build_request(:describe_addresses, params)
       req.send_request(options)
     end
@@ -1162,9 +1162,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/DescribeCluster AWS API Documentation
     #
-    # @overload describe_cluster(params = {})
+    # @overload describe_cluster(**params)
     # @param [Hash] params ({})
-    def describe_cluster(params = {}, options = {})
+    def describe_cluster(params = {}, **options)
       req = build_request(:describe_cluster, params)
       req.send_request(options)
     end
@@ -1317,9 +1317,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/DescribeJob AWS API Documentation
     #
-    # @overload describe_job(params = {})
+    # @overload describe_job(**params)
     # @param [Hash] params ({})
-    def describe_job(params = {}, options = {})
+    def describe_job(params = {}, **options)
       req = build_request(:describe_job, params)
       req.send_request(options)
     end
@@ -1349,9 +1349,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/DescribeReturnShippingLabel AWS API Documentation
     #
-    # @overload describe_return_shipping_label(params = {})
+    # @overload describe_return_shipping_label(**params)
     # @param [Hash] params ({})
-    def describe_return_shipping_label(params = {}, options = {})
+    def describe_return_shipping_label(params = {}, **options)
       req = build_request(:describe_return_shipping_label, params)
       req.send_request(options)
     end
@@ -1419,9 +1419,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/GetJobManifest AWS API Documentation
     #
-    # @overload get_job_manifest(params = {})
+    # @overload get_job_manifest(**params)
     # @param [Hash] params ({})
-    def get_job_manifest(params = {}, options = {})
+    def get_job_manifest(params = {}, **options)
       req = build_request(:get_job_manifest, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/GetJobUnlockCode AWS API Documentation
     #
-    # @overload get_job_unlock_code(params = {})
+    # @overload get_job_unlock_code(**params)
     # @param [Hash] params ({})
-    def get_job_unlock_code(params = {}, options = {})
+    def get_job_unlock_code(params = {}, **options)
       req = build_request(:get_job_unlock_code, params)
       req.send_request(options)
     end
@@ -1525,9 +1525,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/GetSnowballUsage AWS API Documentation
     #
-    # @overload get_snowball_usage(params = {})
+    # @overload get_snowball_usage(**params)
     # @param [Hash] params ({})
-    def get_snowball_usage(params = {}, options = {})
+    def get_snowball_usage(params = {}, **options)
       req = build_request(:get_snowball_usage, params)
       req.send_request(options)
     end
@@ -1555,9 +1555,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/GetSoftwareUpdates AWS API Documentation
     #
-    # @overload get_software_updates(params = {})
+    # @overload get_software_updates(**params)
     # @param [Hash] params ({})
-    def get_software_updates(params = {}, options = {})
+    def get_software_updates(params = {}, **options)
       req = build_request(:get_software_updates, params)
       req.send_request(options)
     end
@@ -1666,9 +1666,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListClusterJobs AWS API Documentation
     #
-    # @overload list_cluster_jobs(params = {})
+    # @overload list_cluster_jobs(**params)
     # @param [Hash] params ({})
-    def list_cluster_jobs(params = {}, options = {})
+    def list_cluster_jobs(params = {}, **options)
       req = build_request(:list_cluster_jobs, params)
       req.send_request(options)
     end
@@ -1729,9 +1729,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListClusters AWS API Documentation
     #
-    # @overload list_clusters(params = {})
+    # @overload list_clusters(**params)
     # @param [Hash] params ({})
-    def list_clusters(params = {}, options = {})
+    def list_clusters(params = {}, **options)
       req = build_request(:list_clusters, params)
       req.send_request(options)
     end
@@ -1773,9 +1773,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListCompatibleImages AWS API Documentation
     #
-    # @overload list_compatible_images(params = {})
+    # @overload list_compatible_images(**params)
     # @param [Hash] params ({})
-    def list_compatible_images(params = {}, options = {})
+    def list_compatible_images(params = {}, **options)
       req = build_request(:list_compatible_images, params)
       req.send_request(options)
     end
@@ -1848,9 +1848,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListJobs AWS API Documentation
     #
-    # @overload list_jobs(params = {})
+    # @overload list_jobs(**params)
     # @param [Hash] params ({})
-    def list_jobs(params = {}, options = {})
+    def list_jobs(params = {}, **options)
       req = build_request(:list_jobs, params)
       req.send_request(options)
     end
@@ -1954,9 +1954,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/UpdateCluster AWS API Documentation
     #
-    # @overload update_cluster(params = {})
+    # @overload update_cluster(**params)
     # @param [Hash] params ({})
-    def update_cluster(params = {}, options = {})
+    def update_cluster(params = {}, **options)
       req = build_request(:update_cluster, params)
       req.send_request(options)
     end
@@ -2065,9 +2065,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/UpdateJob AWS API Documentation
     #
-    # @overload update_job(params = {})
+    # @overload update_job(**params)
     # @param [Hash] params ({})
-    def update_job(params = {}, options = {})
+    def update_job(params = {}, **options)
       req = build_request(:update_job, params)
       req.send_request(options)
     end
@@ -2097,9 +2097,9 @@ module Aws::Snowball
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/UpdateJobShipmentState AWS API Documentation
     #
-    # @overload update_job_shipment_state(params = {})
+    # @overload update_job_shipment_state(**params)
     # @param [Hash] params ({})
-    def update_job_shipment_state(params = {}, options = {})
+    def update_job_shipment_state(params = {}, **options)
       req = build_request(:update_job_shipment_state, params)
       req.send_request(options)
     end
@@ -2108,7 +2108,7 @@ module Aws::Snowball
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2116,15 +2116,15 @@ module Aws::Snowball
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-snowball'
-      context[:gem_version] = '1.35.0'
+      context[:gem_name] = "aws-sdk-snowball"
+      context[:gem_version] = "1.35.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

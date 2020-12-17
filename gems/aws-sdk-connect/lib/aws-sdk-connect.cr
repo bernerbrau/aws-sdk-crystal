@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-connect/types'
-require_relative 'aws-sdk-connect/client_api'
-require_relative 'aws-sdk-connect/client'
-require_relative 'aws-sdk-connect/errors'
-require_relative 'aws-sdk-connect/resource'
-require_relative 'aws-sdk-connect/customizations'
+require_relative "aws-sdk-connect/types"
+require_relative "aws-sdk-connect/client_api"
+require_relative "aws-sdk-connect/client"
+require_relative "aws-sdk-connect/errors"
+require_relative "aws-sdk-connect/resource"
+require_relative "aws-sdk-connect/customizations"
 
 # This module provides support for Amazon Connect Service. This module is available in the
 # `aws-sdk-connect` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-connect/customizations'
 # @!group service
 module Aws::Connect
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-appstream/types'
-require_relative 'aws-sdk-appstream/client_api'
-require_relative 'aws-sdk-appstream/client'
-require_relative 'aws-sdk-appstream/errors'
-require_relative 'aws-sdk-appstream/waiters'
-require_relative 'aws-sdk-appstream/resource'
-require_relative 'aws-sdk-appstream/customizations'
+require_relative "aws-sdk-appstream/types"
+require_relative "aws-sdk-appstream/client_api"
+require_relative "aws-sdk-appstream/client"
+require_relative "aws-sdk-appstream/errors"
+require_relative "aws-sdk-appstream/waiters"
+require_relative "aws-sdk-appstream/resource"
+require_relative "aws-sdk-appstream/customizations"
 
 # This module provides support for Amazon AppStream. This module is available in the
 # `aws-sdk-appstream` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-appstream/customizations'
 # @!group service
 module Aws::AppStream
 
-  GEM_VERSION = '1.48.0'
+  GEM_VERSION = "1.48.0"
 
 end

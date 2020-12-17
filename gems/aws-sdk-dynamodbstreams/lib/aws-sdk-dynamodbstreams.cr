@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-dynamodbstreams/types'
-require_relative 'aws-sdk-dynamodbstreams/client_api'
-require_relative 'aws-sdk-dynamodbstreams/client'
-require_relative 'aws-sdk-dynamodbstreams/errors'
-require_relative 'aws-sdk-dynamodbstreams/resource'
-require_relative 'aws-sdk-dynamodbstreams/customizations'
+require_relative "aws-sdk-dynamodbstreams/types"
+require_relative "aws-sdk-dynamodbstreams/client_api"
+require_relative "aws-sdk-dynamodbstreams/client"
+require_relative "aws-sdk-dynamodbstreams/errors"
+require_relative "aws-sdk-dynamodbstreams/resource"
+require_relative "aws-sdk-dynamodbstreams/customizations"
 
 # This module provides support for Amazon DynamoDB Streams. This module is available in the
 # `aws-sdk-dynamodbstreams` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-dynamodbstreams/customizations'
 # @!group service
 module Aws::DynamoDBStreams
 
-  GEM_VERSION = '1.26.0'
+  GEM_VERSION = "1.26.0"
 
 end

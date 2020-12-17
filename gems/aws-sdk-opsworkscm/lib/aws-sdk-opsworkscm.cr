@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-opsworkscm/types'
-require_relative 'aws-sdk-opsworkscm/client_api'
-require_relative 'aws-sdk-opsworkscm/client'
-require_relative 'aws-sdk-opsworkscm/errors'
-require_relative 'aws-sdk-opsworkscm/waiters'
-require_relative 'aws-sdk-opsworkscm/resource'
-require_relative 'aws-sdk-opsworkscm/customizations'
+require_relative "aws-sdk-opsworkscm/types"
+require_relative "aws-sdk-opsworkscm/client_api"
+require_relative "aws-sdk-opsworkscm/client"
+require_relative "aws-sdk-opsworkscm/errors"
+require_relative "aws-sdk-opsworkscm/waiters"
+require_relative "aws-sdk-opsworkscm/resource"
+require_relative "aws-sdk-opsworkscm/customizations"
 
 # This module provides support for AWS OpsWorks CM. This module is available in the
 # `aws-sdk-opsworkscm` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-opsworkscm/customizations'
 # @!group service
 module Aws::OpsWorksCM
 
-  GEM_VERSION = '1.40.0'
+  GEM_VERSION = "1.40.0"
 
 end

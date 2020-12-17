@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:managedblockchain)
 
@@ -280,7 +280,7 @@ module Aws::ManagedBlockchain
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -386,9 +386,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/CreateMember AWS API Documentation
     #
-    # @overload create_member(params = {})
+    # @overload create_member(**params)
     # @param [Hash] params ({})
-    def create_member(params = {}, options = {})
+    def create_member(params = {}, **options)
       req = build_request(:create_member, params)
       req.send_request(options)
     end
@@ -481,9 +481,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/CreateNetwork AWS API Documentation
     #
-    # @overload create_network(params = {})
+    # @overload create_network(**params)
     # @param [Hash] params ({})
-    def create_network(params = {}, options = {})
+    def create_network(params = {}, **options)
       req = build_request(:create_network, params)
       req.send_request(options)
     end
@@ -546,9 +546,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/CreateNode AWS API Documentation
     #
-    # @overload create_node(params = {})
+    # @overload create_node(**params)
     # @param [Hash] params ({})
-    def create_node(params = {}, options = {})
+    def create_node(params = {}, **options)
       req = build_request(:create_node, params)
       req.send_request(options)
     end
@@ -616,9 +616,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/CreateProposal AWS API Documentation
     #
-    # @overload create_proposal(params = {})
+    # @overload create_proposal(**params)
     # @param [Hash] params ({})
-    def create_proposal(params = {}, options = {})
+    def create_proposal(params = {}, **options)
       req = build_request(:create_proposal, params)
       req.send_request(options)
     end
@@ -649,9 +649,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/DeleteMember AWS API Documentation
     #
-    # @overload delete_member(params = {})
+    # @overload delete_member(**params)
     # @param [Hash] params ({})
-    def delete_member(params = {}, options = {})
+    def delete_member(params = {}, **options)
       req = build_request(:delete_member, params)
       req.send_request(options)
     end
@@ -680,9 +680,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/DeleteNode AWS API Documentation
     #
-    # @overload delete_node(params = {})
+    # @overload delete_node(**params)
     # @param [Hash] params ({})
-    def delete_node(params = {}, options = {})
+    def delete_node(params = {}, **options)
       req = build_request(:delete_node, params)
       req.send_request(options)
     end
@@ -720,9 +720,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/GetMember AWS API Documentation
     #
-    # @overload get_member(params = {})
+    # @overload get_member(**params)
     # @param [Hash] params ({})
-    def get_member(params = {}, options = {})
+    def get_member(params = {}, **options)
       req = build_request(:get_member, params)
       req.send_request(options)
     end
@@ -760,9 +760,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/GetNetwork AWS API Documentation
     #
-    # @overload get_network(params = {})
+    # @overload get_network(**params)
     # @param [Hash] params ({})
-    def get_network(params = {}, options = {})
+    def get_network(params = {}, **options)
       req = build_request(:get_network, params)
       req.send_request(options)
     end
@@ -807,9 +807,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/GetNode AWS API Documentation
     #
-    # @overload get_node(params = {})
+    # @overload get_node(**params)
     # @param [Hash] params ({})
-    def get_node(params = {}, options = {})
+    def get_node(params = {}, **options)
       req = build_request(:get_node, params)
       req.send_request(options)
     end
@@ -853,9 +853,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/GetProposal AWS API Documentation
     #
-    # @overload get_proposal(params = {})
+    # @overload get_proposal(**params)
     # @param [Hash] params ({})
-    def get_proposal(params = {}, options = {})
+    def get_proposal(params = {}, **options)
       req = build_request(:get_proposal, params)
       req.send_request(options)
     end
@@ -901,9 +901,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/ListInvitations AWS API Documentation
     #
-    # @overload list_invitations(params = {})
+    # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, options = {})
+    def list_invitations(params = {}, **options)
       req = build_request(:list_invitations, params)
       req.send_request(options)
     end
@@ -964,9 +964,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/ListMembers AWS API Documentation
     #
-    # @overload list_members(params = {})
+    # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, options = {})
+    def list_members(params = {}, **options)
       req = build_request(:list_members, params)
       req.send_request(options)
     end
@@ -1023,9 +1023,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/ListNetworks AWS API Documentation
     #
-    # @overload list_networks(params = {})
+    # @overload list_networks(**params)
     # @param [Hash] params ({})
-    def list_networks(params = {}, options = {})
+    def list_networks(params = {}, **options)
       req = build_request(:list_networks, params)
       req.send_request(options)
     end
@@ -1078,9 +1078,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/ListNodes AWS API Documentation
     #
-    # @overload list_nodes(params = {})
+    # @overload list_nodes(**params)
     # @param [Hash] params ({})
-    def list_nodes(params = {}, options = {})
+    def list_nodes(params = {}, **options)
       req = build_request(:list_nodes, params)
       req.send_request(options)
     end
@@ -1128,9 +1128,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/ListProposalVotes AWS API Documentation
     #
-    # @overload list_proposal_votes(params = {})
+    # @overload list_proposal_votes(**params)
     # @param [Hash] params ({})
-    def list_proposal_votes(params = {}, options = {})
+    def list_proposal_votes(params = {}, **options)
       req = build_request(:list_proposal_votes, params)
       req.send_request(options)
     end
@@ -1176,9 +1176,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/ListProposals AWS API Documentation
     #
-    # @overload list_proposals(params = {})
+    # @overload list_proposals(**params)
     # @param [Hash] params ({})
-    def list_proposals(params = {}, options = {})
+    def list_proposals(params = {}, **options)
       req = build_request(:list_proposals, params)
       req.send_request(options)
     end
@@ -1200,9 +1200,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/RejectInvitation AWS API Documentation
     #
-    # @overload reject_invitation(params = {})
+    # @overload reject_invitation(**params)
     # @param [Hash] params ({})
-    def reject_invitation(params = {}, options = {})
+    def reject_invitation(params = {}, **options)
       req = build_request(:reject_invitation, params)
       req.send_request(options)
     end
@@ -1239,9 +1239,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/UpdateMember AWS API Documentation
     #
-    # @overload update_member(params = {})
+    # @overload update_member(**params)
     # @param [Hash] params ({})
-    def update_member(params = {}, options = {})
+    def update_member(params = {}, **options)
       req = build_request(:update_member, params)
       req.send_request(options)
     end
@@ -1287,9 +1287,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/UpdateNode AWS API Documentation
     #
-    # @overload update_node(params = {})
+    # @overload update_node(**params)
     # @param [Hash] params ({})
-    def update_node(params = {}, options = {})
+    def update_node(params = {}, **options)
       req = build_request(:update_node, params)
       req.send_request(options)
     end
@@ -1323,9 +1323,9 @@ module Aws::ManagedBlockchain
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-2018-09-24/VoteOnProposal AWS API Documentation
     #
-    # @overload vote_on_proposal(params = {})
+    # @overload vote_on_proposal(**params)
     # @param [Hash] params ({})
-    def vote_on_proposal(params = {}, options = {})
+    def vote_on_proposal(params = {}, **options)
       req = build_request(:vote_on_proposal, params)
       req.send_request(options)
     end
@@ -1334,7 +1334,7 @@ module Aws::ManagedBlockchain
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -1342,15 +1342,15 @@ module Aws::ManagedBlockchain
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-managedblockchain'
-      context[:gem_version] = '1.17.0'
+      context[:gem_name] = "aws-sdk-managedblockchain"
+      context[:gem_version] = "1.17.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

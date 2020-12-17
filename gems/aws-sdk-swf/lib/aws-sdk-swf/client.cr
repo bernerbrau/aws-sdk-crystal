@@ -7,29 +7,29 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
-require 'aws-sdk-swf/plugins/read_timeouts.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
+require "aws-sdk-swf/plugins/read_timeouts.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:swf)
 
@@ -292,7 +292,7 @@ module Aws::SWF
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -480,9 +480,9 @@ module Aws::SWF
     #   resp.count #=> Integer
     #   resp.truncated #=> Boolean
     #
-    # @overload count_closed_workflow_executions(params = {})
+    # @overload count_closed_workflow_executions(**params)
     # @param [Hash] params ({})
-    def count_closed_workflow_executions(params = {}, options = {})
+    def count_closed_workflow_executions(params = {}, **options)
       req = build_request(:count_closed_workflow_executions, params)
       req.send_request(options)
     end
@@ -592,9 +592,9 @@ module Aws::SWF
     #   resp.count #=> Integer
     #   resp.truncated #=> Boolean
     #
-    # @overload count_open_workflow_executions(params = {})
+    # @overload count_open_workflow_executions(**params)
     # @param [Hash] params ({})
-    def count_open_workflow_executions(params = {}, options = {})
+    def count_open_workflow_executions(params = {}, **options)
       req = build_request(:count_open_workflow_executions, params)
       req.send_request(options)
     end
@@ -655,9 +655,9 @@ module Aws::SWF
     #   resp.count #=> Integer
     #   resp.truncated #=> Boolean
     #
-    # @overload count_pending_activity_tasks(params = {})
+    # @overload count_pending_activity_tasks(**params)
     # @param [Hash] params ({})
-    def count_pending_activity_tasks(params = {}, options = {})
+    def count_pending_activity_tasks(params = {}, **options)
       req = build_request(:count_pending_activity_tasks, params)
       req.send_request(options)
     end
@@ -718,9 +718,9 @@ module Aws::SWF
     #   resp.count #=> Integer
     #   resp.truncated #=> Boolean
     #
-    # @overload count_pending_decision_tasks(params = {})
+    # @overload count_pending_decision_tasks(**params)
     # @param [Hash] params ({})
-    def count_pending_decision_tasks(params = {}, options = {})
+    def count_pending_decision_tasks(params = {}, **options)
       req = build_request(:count_pending_decision_tasks, params)
       req.send_request(options)
     end
@@ -784,9 +784,9 @@ module Aws::SWF
     #     },
     #   })
     #
-    # @overload deprecate_activity_type(params = {})
+    # @overload deprecate_activity_type(**params)
     # @param [Hash] params ({})
-    def deprecate_activity_type(params = {}, options = {})
+    def deprecate_activity_type(params = {}, **options)
       req = build_request(:deprecate_activity_type, params)
       req.send_request(options)
     end
@@ -838,9 +838,9 @@ module Aws::SWF
     #     name: "DomainName", # required
     #   })
     #
-    # @overload deprecate_domain(params = {})
+    # @overload deprecate_domain(**params)
     # @param [Hash] params ({})
-    def deprecate_domain(params = {}, options = {})
+    def deprecate_domain(params = {}, **options)
       req = build_request(:deprecate_domain, params)
       req.send_request(options)
     end
@@ -905,9 +905,9 @@ module Aws::SWF
     #     },
     #   })
     #
-    # @overload deprecate_workflow_type(params = {})
+    # @overload deprecate_workflow_type(**params)
     # @param [Hash] params ({})
-    def deprecate_workflow_type(params = {}, options = {})
+    def deprecate_workflow_type(params = {}, **options)
       req = build_request(:deprecate_workflow_type, params)
       req.send_request(options)
     end
@@ -985,9 +985,9 @@ module Aws::SWF
     #   resp.configuration.default_task_schedule_to_start_timeout #=> String
     #   resp.configuration.default_task_schedule_to_close_timeout #=> String
     #
-    # @overload describe_activity_type(params = {})
+    # @overload describe_activity_type(**params)
     # @param [Hash] params ({})
-    def describe_activity_type(params = {}, options = {})
+    def describe_activity_type(params = {}, **options)
       req = build_request(:describe_activity_type, params)
       req.send_request(options)
     end
@@ -1041,9 +1041,9 @@ module Aws::SWF
     #   resp.domain_info.arn #=> String
     #   resp.configuration.workflow_execution_retention_period_in_days #=> String
     #
-    # @overload describe_domain(params = {})
+    # @overload describe_domain(**params)
     # @param [Hash] params ({})
-    def describe_domain(params = {}, options = {})
+    def describe_domain(params = {}, **options)
       req = build_request(:describe_domain, params)
       req.send_request(options)
     end
@@ -1133,9 +1133,9 @@ module Aws::SWF
     #   resp.latest_activity_task_timestamp #=> Time
     #   resp.latest_execution_context #=> String
     #
-    # @overload describe_workflow_execution(params = {})
+    # @overload describe_workflow_execution(**params)
     # @param [Hash] params ({})
-    def describe_workflow_execution(params = {}, options = {})
+    def describe_workflow_execution(params = {}, **options)
       req = build_request(:describe_workflow_execution, params)
       req.send_request(options)
     end
@@ -1211,9 +1211,9 @@ module Aws::SWF
     #   resp.configuration.default_child_policy #=> String, one of "TERMINATE", "REQUEST_CANCEL", "ABANDON"
     #   resp.configuration.default_lambda_role #=> String
     #
-    # @overload describe_workflow_type(params = {})
+    # @overload describe_workflow_type(**params)
     # @param [Hash] params ({})
-    def describe_workflow_type(params = {}, options = {})
+    def describe_workflow_type(params = {}, **options)
       req = build_request(:describe_workflow_type, params)
       req.send_request(options)
     end
@@ -1548,9 +1548,9 @@ module Aws::SWF
     #   resp.events[0].start_lambda_function_failed_event_attributes.message #=> String
     #   resp.next_page_token #=> String
     #
-    # @overload get_workflow_execution_history(params = {})
+    # @overload get_workflow_execution_history(**params)
     # @param [Hash] params ({})
-    def get_workflow_execution_history(params = {}, options = {})
+    def get_workflow_execution_history(params = {}, **options)
       req = build_request(:get_workflow_execution_history, params)
       req.send_request(options)
     end
@@ -1646,9 +1646,9 @@ module Aws::SWF
     #   resp.type_infos[0].deprecation_date #=> Time
     #   resp.next_page_token #=> String
     #
-    # @overload list_activity_types(params = {})
+    # @overload list_activity_types(**params)
     # @param [Hash] params ({})
-    def list_activity_types(params = {}, options = {})
+    def list_activity_types(params = {}, **options)
       req = build_request(:list_activity_types, params)
       req.send_request(options)
     end
@@ -1838,9 +1838,9 @@ module Aws::SWF
     #   resp.execution_infos[0].cancel_requested #=> Boolean
     #   resp.next_page_token #=> String
     #
-    # @overload list_closed_workflow_executions(params = {})
+    # @overload list_closed_workflow_executions(**params)
     # @param [Hash] params ({})
-    def list_closed_workflow_executions(params = {}, options = {})
+    def list_closed_workflow_executions(params = {}, **options)
       req = build_request(:list_closed_workflow_executions, params)
       req.send_request(options)
     end
@@ -1929,9 +1929,9 @@ module Aws::SWF
     #   resp.domain_infos[0].arn #=> String
     #   resp.next_page_token #=> String
     #
-    # @overload list_domains(params = {})
+    # @overload list_domains(**params)
     # @param [Hash] params ({})
-    def list_domains(params = {}, options = {})
+    def list_domains(params = {}, **options)
       req = build_request(:list_domains, params)
       req.send_request(options)
     end
@@ -2083,9 +2083,9 @@ module Aws::SWF
     #   resp.execution_infos[0].cancel_requested #=> Boolean
     #   resp.next_page_token #=> String
     #
-    # @overload list_open_workflow_executions(params = {})
+    # @overload list_open_workflow_executions(**params)
     # @param [Hash] params ({})
-    def list_open_workflow_executions(params = {}, options = {})
+    def list_open_workflow_executions(params = {}, **options)
       req = build_request(:list_open_workflow_executions, params)
       req.send_request(options)
     end
@@ -2111,9 +2111,9 @@ module Aws::SWF
     #   resp.tags[0].key #=> String
     #   resp.tags[0].value #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2206,9 +2206,9 @@ module Aws::SWF
     #   resp.type_infos[0].deprecation_date #=> Time
     #   resp.next_page_token #=> String
     #
-    # @overload list_workflow_types(params = {})
+    # @overload list_workflow_types(**params)
     # @param [Hash] params ({})
-    def list_workflow_types(params = {}, options = {})
+    def list_workflow_types(params = {}, **options)
       req = build_request(:list_workflow_types, params)
       req.send_request(options)
     end
@@ -2300,9 +2300,9 @@ module Aws::SWF
     #   resp.activity_type.version #=> String
     #   resp.input #=> String
     #
-    # @overload poll_for_activity_task(params = {})
+    # @overload poll_for_activity_task(**params)
     # @param [Hash] params ({})
-    def poll_for_activity_task(params = {}, options = {})
+    def poll_for_activity_task(params = {}, **options)
       req = build_request(:poll_for_activity_task, params)
       req.send_request(options)
     end
@@ -2689,9 +2689,9 @@ module Aws::SWF
     #   resp.next_page_token #=> String
     #   resp.previous_started_event_id #=> Integer
     #
-    # @overload poll_for_decision_task(params = {})
+    # @overload poll_for_decision_task(**params)
     # @param [Hash] params ({})
-    def poll_for_decision_task(params = {}, options = {})
+    def poll_for_decision_task(params = {}, **options)
       req = build_request(:poll_for_decision_task, params)
       req.send_request(options)
     end
@@ -2782,9 +2782,9 @@ module Aws::SWF
     #
     #   resp.cancel_requested #=> Boolean
     #
-    # @overload record_activity_task_heartbeat(params = {})
+    # @overload record_activity_task_heartbeat(**params)
     # @param [Hash] params ({})
-    def record_activity_task_heartbeat(params = {}, options = {})
+    def record_activity_task_heartbeat(params = {}, **options)
       req = build_request(:record_activity_task_heartbeat, params)
       req.send_request(options)
     end
@@ -2933,9 +2933,9 @@ module Aws::SWF
     #     default_task_schedule_to_close_timeout: "DurationInSecondsOptional",
     #   })
     #
-    # @overload register_activity_type(params = {})
+    # @overload register_activity_type(**params)
     # @param [Hash] params ({})
-    def register_activity_type(params = {}, options = {})
+    def register_activity_type(params = {}, **options)
       req = build_request(:register_activity_type, params)
       req.send_request(options)
     end
@@ -3019,9 +3019,9 @@ module Aws::SWF
     #     ],
     #   })
     #
-    # @overload register_domain(params = {})
+    # @overload register_domain(**params)
     # @param [Hash] params ({})
-    def register_domain(params = {}, options = {})
+    def register_domain(params = {}, **options)
       req = build_request(:register_domain, params)
       req.send_request(options)
     end
@@ -3193,9 +3193,9 @@ module Aws::SWF
     #     default_lambda_role: "Arn",
     #   })
     #
-    # @overload register_workflow_type(params = {})
+    # @overload register_workflow_type(**params)
     # @param [Hash] params ({})
-    def register_workflow_type(params = {}, options = {})
+    def register_workflow_type(params = {}, **options)
       req = build_request(:register_workflow_type, params)
       req.send_request(options)
     end
@@ -3261,9 +3261,9 @@ module Aws::SWF
     #     run_id: "WorkflowRunIdOptional",
     #   })
     #
-    # @overload request_cancel_workflow_execution(params = {})
+    # @overload request_cancel_workflow_execution(**params)
     # @param [Hash] params ({})
-    def request_cancel_workflow_execution(params = {}, options = {})
+    def request_cancel_workflow_execution(params = {}, **options)
       req = build_request(:request_cancel_workflow_execution, params)
       req.send_request(options)
     end
@@ -3330,9 +3330,9 @@ module Aws::SWF
     #     details: "Data",
     #   })
     #
-    # @overload respond_activity_task_canceled(params = {})
+    # @overload respond_activity_task_canceled(**params)
     # @param [Hash] params ({})
-    def respond_activity_task_canceled(params = {}, options = {})
+    def respond_activity_task_canceled(params = {}, **options)
       req = build_request(:respond_activity_task_canceled, params)
       req.send_request(options)
     end
@@ -3400,9 +3400,9 @@ module Aws::SWF
     #     result: "Data",
     #   })
     #
-    # @overload respond_activity_task_completed(params = {})
+    # @overload respond_activity_task_completed(**params)
     # @param [Hash] params ({})
-    def respond_activity_task_completed(params = {}, options = {})
+    def respond_activity_task_completed(params = {}, **options)
       req = build_request(:respond_activity_task_completed, params)
       req.send_request(options)
     end
@@ -3467,9 +3467,9 @@ module Aws::SWF
     #     details: "Data",
     #   })
     #
-    # @overload respond_activity_task_failed(params = {})
+    # @overload respond_activity_task_failed(**params)
     # @param [Hash] params ({})
-    def respond_activity_task_failed(params = {}, options = {})
+    def respond_activity_task_failed(params = {}, **options)
       req = build_request(:respond_activity_task_failed, params)
       req.send_request(options)
     end
@@ -3621,9 +3621,9 @@ module Aws::SWF
     #     execution_context: "Data",
     #   })
     #
-    # @overload respond_decision_task_completed(params = {})
+    # @overload respond_decision_task_completed(**params)
     # @param [Hash] params ({})
-    def respond_decision_task_completed(params = {}, options = {})
+    def respond_decision_task_completed(params = {}, **options)
       req = build_request(:respond_decision_task_completed, params)
       req.send_request(options)
     end
@@ -3698,9 +3698,9 @@ module Aws::SWF
     #     input: "Data",
     #   })
     #
-    # @overload signal_workflow_execution(params = {})
+    # @overload signal_workflow_execution(**params)
     # @param [Hash] params ({})
-    def signal_workflow_execution(params = {}, options = {})
+    def signal_workflow_execution(params = {}, **options)
       req = build_request(:signal_workflow_execution, params)
       req.send_request(options)
     end
@@ -3922,9 +3922,9 @@ module Aws::SWF
     #
     #   resp.run_id #=> String
     #
-    # @overload start_workflow_execution(params = {})
+    # @overload start_workflow_execution(**params)
     # @param [Hash] params ({})
-    def start_workflow_execution(params = {}, options = {})
+    def start_workflow_execution(params = {}, **options)
       req = build_request(:start_workflow_execution, params)
       req.send_request(options)
     end
@@ -3958,9 +3958,9 @@ module Aws::SWF
     #     ],
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -4063,9 +4063,9 @@ module Aws::SWF
     #     child_policy: "TERMINATE", # accepts TERMINATE, REQUEST_CANCEL, ABANDON
     #   })
     #
-    # @overload terminate_workflow_execution(params = {})
+    # @overload terminate_workflow_execution(**params)
     # @param [Hash] params ({})
-    def terminate_workflow_execution(params = {}, options = {})
+    def terminate_workflow_execution(params = {}, **options)
       req = build_request(:terminate_workflow_execution, params)
       req.send_request(options)
     end
@@ -4128,9 +4128,9 @@ module Aws::SWF
     #     },
     #   })
     #
-    # @overload undeprecate_activity_type(params = {})
+    # @overload undeprecate_activity_type(**params)
     # @param [Hash] params ({})
-    def undeprecate_activity_type(params = {}, options = {})
+    def undeprecate_activity_type(params = {}, **options)
       req = build_request(:undeprecate_activity_type, params)
       req.send_request(options)
     end
@@ -4179,9 +4179,9 @@ module Aws::SWF
     #     name: "DomainName", # required
     #   })
     #
-    # @overload undeprecate_domain(params = {})
+    # @overload undeprecate_domain(**params)
     # @param [Hash] params ({})
-    def undeprecate_domain(params = {}, options = {})
+    def undeprecate_domain(params = {}, **options)
       req = build_request(:undeprecate_domain, params)
       req.send_request(options)
     end
@@ -4244,9 +4244,9 @@ module Aws::SWF
     #     },
     #   })
     #
-    # @overload undeprecate_workflow_type(params = {})
+    # @overload undeprecate_workflow_type(**params)
     # @param [Hash] params ({})
-    def undeprecate_workflow_type(params = {}, options = {})
+    def undeprecate_workflow_type(params = {}, **options)
       req = build_request(:undeprecate_workflow_type, params)
       req.send_request(options)
     end
@@ -4268,9 +4268,9 @@ module Aws::SWF
     #     tag_keys: ["ResourceTagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -4279,7 +4279,7 @@ module Aws::SWF
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4287,15 +4287,15 @@ module Aws::SWF
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-swf'
-      context[:gem_version] = '1.25.0'
+      context[:gem_name] = "aws-sdk-swf"
+      context[:gem_version] = "1.25.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

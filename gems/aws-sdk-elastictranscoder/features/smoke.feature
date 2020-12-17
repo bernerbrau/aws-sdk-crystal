@@ -8,11 +8,11 @@
 Feature: Smoke tests for ElasticTranscoder
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @elastictranscoder @smoke
   Scenario: Call Aws::ElasticTranscoder::Client#list_presets and expect it to succeed
-  When I call the operation 'list_presets' with params:
+  When I call the operation "list_presets" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @elastictranscoder @smoke
   Scenario: Call Aws::Aws::ElasticTranscoder::Client#read_job and expect it to fail
-  When I call the operation 'read_job' with params:
+  When I call the operation "read_job" with params:
     """
 {"id":"fake_job"}
     """

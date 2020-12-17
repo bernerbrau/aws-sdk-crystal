@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-codeguruprofiler/types'
-require_relative 'aws-sdk-codeguruprofiler/client_api'
-require_relative 'aws-sdk-codeguruprofiler/client'
-require_relative 'aws-sdk-codeguruprofiler/errors'
-require_relative 'aws-sdk-codeguruprofiler/resource'
-require_relative 'aws-sdk-codeguruprofiler/customizations'
+require_relative "aws-sdk-codeguruprofiler/types"
+require_relative "aws-sdk-codeguruprofiler/client_api"
+require_relative "aws-sdk-codeguruprofiler/client"
+require_relative "aws-sdk-codeguruprofiler/errors"
+require_relative "aws-sdk-codeguruprofiler/resource"
+require_relative "aws-sdk-codeguruprofiler/customizations"
 
 # This module provides support for Amazon CodeGuru Profiler. This module is available in the
 # `aws-sdk-codeguruprofiler` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-codeguruprofiler/customizations'
 # @!group service
 module Aws::CodeGuruProfiler
 
-  GEM_VERSION = '1.12.0'
+  GEM_VERSION = "1.12.0"
 
 end

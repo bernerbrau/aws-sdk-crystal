@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-accessanalyzer/types'
-require_relative 'aws-sdk-accessanalyzer/client_api'
-require_relative 'aws-sdk-accessanalyzer/client'
-require_relative 'aws-sdk-accessanalyzer/errors'
-require_relative 'aws-sdk-accessanalyzer/resource'
-require_relative 'aws-sdk-accessanalyzer/customizations'
+require_relative "aws-sdk-accessanalyzer/types"
+require_relative "aws-sdk-accessanalyzer/client_api"
+require_relative "aws-sdk-accessanalyzer/client"
+require_relative "aws-sdk-accessanalyzer/errors"
+require_relative "aws-sdk-accessanalyzer/resource"
+require_relative "aws-sdk-accessanalyzer/customizations"
 
 # This module provides support for Access Analyzer. This module is available in the
 # `aws-sdk-accessanalyzer` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-accessanalyzer/customizations'
 # @!group service
 module Aws::AccessAnalyzer
 
-  GEM_VERSION = '1.14.0'
+  GEM_VERSION = "1.14.0"
 
 end

@@ -467,7 +467,7 @@ module Aws::CognitoIdentity
         o.name = "GetCredentialsForIdentity"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: GetCredentialsForIdentityInput)
         o.output = Shapes::ShapeRef.new(shape: GetCredentialsForIdentityResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidParameterException)
@@ -484,7 +484,7 @@ module Aws::CognitoIdentity
         o.name = "GetId"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: GetIdInput)
         o.output = Shapes::ShapeRef.new(shape: GetIdResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidParameterException)
@@ -515,7 +515,7 @@ module Aws::CognitoIdentity
         o.name = "GetOpenIdToken"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: GetOpenIdTokenInput)
         o.output = Shapes::ShapeRef.new(shape: GetOpenIdTokenResponse)
         o.errors << Shapes::ShapeRef.new(shape: InvalidParameterException)
@@ -661,7 +661,7 @@ module Aws::CognitoIdentity
         o.name = "UnlinkIdentity"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: UnlinkIdentityInput)
         o.output = Shapes::ShapeRef.new(shape: Shapes::StructureShape.new(struct_class: Aws::EmptyStructure))
         o.errors << Shapes::ShapeRef.new(shape: InvalidParameterException)

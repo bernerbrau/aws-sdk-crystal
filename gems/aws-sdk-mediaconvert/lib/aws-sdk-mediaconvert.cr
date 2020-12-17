@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-mediaconvert/types'
-require_relative 'aws-sdk-mediaconvert/client_api'
-require_relative 'aws-sdk-mediaconvert/client'
-require_relative 'aws-sdk-mediaconvert/errors'
-require_relative 'aws-sdk-mediaconvert/resource'
-require_relative 'aws-sdk-mediaconvert/customizations'
+require_relative "aws-sdk-mediaconvert/types"
+require_relative "aws-sdk-mediaconvert/client_api"
+require_relative "aws-sdk-mediaconvert/client"
+require_relative "aws-sdk-mediaconvert/errors"
+require_relative "aws-sdk-mediaconvert/resource"
+require_relative "aws-sdk-mediaconvert/customizations"
 
 # This module provides support for AWS Elemental MediaConvert. This module is available in the
 # `aws-sdk-mediaconvert` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-mediaconvert/customizations'
 # @!group service
 module Aws::MediaConvert
 
-  GEM_VERSION = '1.60.0'
+  GEM_VERSION = "1.60.0"
 
 end

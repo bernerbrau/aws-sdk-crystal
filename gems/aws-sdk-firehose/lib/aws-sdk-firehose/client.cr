@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:firehose)
 
@@ -290,7 +290,7 @@ module Aws::Firehose
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -896,9 +896,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/CreateDeliveryStream AWS API Documentation
     #
-    # @overload create_delivery_stream(params = {})
+    # @overload create_delivery_stream(**params)
     # @param [Hash] params ({})
-    def create_delivery_stream(params = {}, options = {})
+    def create_delivery_stream(params = {}, **options)
       req = build_request(:create_delivery_stream, params)
       req.send_request(options)
     end
@@ -948,9 +948,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/DeleteDeliveryStream AWS API Documentation
     #
-    # @overload delete_delivery_stream(params = {})
+    # @overload delete_delivery_stream(**params)
     # @param [Hash] params ({})
-    def delete_delivery_stream(params = {}, options = {})
+    def delete_delivery_stream(params = {}, **options)
       req = build_request(:delete_delivery_stream, params)
       req.send_request(options)
     end
@@ -1226,9 +1226,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/DescribeDeliveryStream AWS API Documentation
     #
-    # @overload describe_delivery_stream(params = {})
+    # @overload describe_delivery_stream(**params)
     # @param [Hash] params ({})
-    def describe_delivery_stream(params = {}, options = {})
+    def describe_delivery_stream(params = {}, **options)
       req = build_request(:describe_delivery_stream, params)
       req.send_request(options)
     end
@@ -1287,9 +1287,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/ListDeliveryStreams AWS API Documentation
     #
-    # @overload list_delivery_streams(params = {})
+    # @overload list_delivery_streams(**params)
     # @param [Hash] params ({})
-    def list_delivery_streams(params = {}, options = {})
+    def list_delivery_streams(params = {}, **options)
       req = build_request(:list_delivery_streams, params)
       req.send_request(options)
     end
@@ -1333,9 +1333,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/ListTagsForDeliveryStream AWS API Documentation
     #
-    # @overload list_tags_for_delivery_stream(params = {})
+    # @overload list_tags_for_delivery_stream(**params)
     # @param [Hash] params ({})
-    def list_tags_for_delivery_stream(params = {}, options = {})
+    def list_tags_for_delivery_stream(params = {}, **options)
       req = build_request(:list_tags_for_delivery_stream, params)
       req.send_request(options)
     end
@@ -1413,9 +1413,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/PutRecord AWS API Documentation
     #
-    # @overload put_record(params = {})
+    # @overload put_record(**params)
     # @param [Hash] params ({})
-    def put_record(params = {}, options = {})
+    def put_record(params = {}, **options)
       req = build_request(:put_record, params)
       req.send_request(options)
     end
@@ -1526,9 +1526,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/PutRecordBatch AWS API Documentation
     #
-    # @overload put_record_batch(params = {})
+    # @overload put_record_batch(**params)
     # @param [Hash] params ({})
-    def put_record_batch(params = {}, options = {})
+    def put_record_batch(params = {}, **options)
       req = build_request(:put_record_batch, params)
       req.send_request(options)
     end
@@ -1604,9 +1604,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/StartDeliveryStreamEncryption AWS API Documentation
     #
-    # @overload start_delivery_stream_encryption(params = {})
+    # @overload start_delivery_stream_encryption(**params)
     # @param [Hash] params ({})
-    def start_delivery_stream_encryption(params = {}, options = {})
+    def start_delivery_stream_encryption(params = {}, **options)
       req = build_request(:start_delivery_stream_encryption, params)
       req.send_request(options)
     end
@@ -1653,9 +1653,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/StopDeliveryStreamEncryption AWS API Documentation
     #
-    # @overload stop_delivery_stream_encryption(params = {})
+    # @overload stop_delivery_stream_encryption(**params)
     # @param [Hash] params ({})
-    def stop_delivery_stream_encryption(params = {}, options = {})
+    def stop_delivery_stream_encryption(params = {}, **options)
       req = build_request(:stop_delivery_stream_encryption, params)
       req.send_request(options)
     end
@@ -1700,9 +1700,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/TagDeliveryStream AWS API Documentation
     #
-    # @overload tag_delivery_stream(params = {})
+    # @overload tag_delivery_stream(**params)
     # @param [Hash] params ({})
-    def tag_delivery_stream(params = {}, options = {})
+    def tag_delivery_stream(params = {}, **options)
       req = build_request(:tag_delivery_stream, params)
       req.send_request(options)
     end
@@ -1734,9 +1734,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/UntagDeliveryStream AWS API Documentation
     #
-    # @overload untag_delivery_stream(params = {})
+    # @overload untag_delivery_stream(**params)
     # @param [Hash] params ({})
-    def untag_delivery_stream(params = {}, options = {})
+    def untag_delivery_stream(params = {}, **options)
       req = build_request(:untag_delivery_stream, params)
       req.send_request(options)
     end
@@ -2203,9 +2203,9 @@ module Aws::Firehose
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/UpdateDestination AWS API Documentation
     #
-    # @overload update_destination(params = {})
+    # @overload update_destination(**params)
     # @param [Hash] params ({})
-    def update_destination(params = {}, options = {})
+    def update_destination(params = {}, **options)
       req = build_request(:update_destination, params)
       req.send_request(options)
     end
@@ -2214,7 +2214,7 @@ module Aws::Firehose
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2222,15 +2222,15 @@ module Aws::Firehose
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-firehose'
-      context[:gem_version] = '1.35.0'
+      context[:gem_name] = "aws-sdk-firehose"
+      context[:gem_version] = "1.35.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

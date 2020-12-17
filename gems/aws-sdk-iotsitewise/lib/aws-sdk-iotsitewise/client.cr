@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotsitewise)
 
@@ -280,7 +280,7 @@ module Aws::IoTSiteWise
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -370,9 +370,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload associate_assets(params = {})
+    # @overload associate_assets(**params)
     # @param [Hash] params ({})
-    def associate_assets(params = {}, options = {})
+    def associate_assets(params = {}, **options)
       req = build_request(:associate_assets, params)
       req.send_request(options)
     end
@@ -413,9 +413,9 @@ module Aws::IoTSiteWise
     #   resp.errors[0].code #=> String, one of "INTERNAL_FAILURE"
     #   resp.errors[0].message #=> String
     #
-    # @overload batch_associate_project_assets(params = {})
+    # @overload batch_associate_project_assets(**params)
     # @param [Hash] params ({})
-    def batch_associate_project_assets(params = {}, options = {})
+    def batch_associate_project_assets(params = {}, **options)
       req = build_request(:batch_associate_project_assets, params)
       req.send_request(options)
     end
@@ -456,9 +456,9 @@ module Aws::IoTSiteWise
     #   resp.errors[0].code #=> String, one of "INTERNAL_FAILURE"
     #   resp.errors[0].message #=> String
     #
-    # @overload batch_disassociate_project_assets(params = {})
+    # @overload batch_disassociate_project_assets(**params)
     # @param [Hash] params ({})
-    def batch_disassociate_project_assets(params = {}, options = {})
+    def batch_disassociate_project_assets(params = {}, **options)
       req = build_request(:batch_disassociate_project_assets, params)
       req.send_request(options)
     end
@@ -545,9 +545,9 @@ module Aws::IoTSiteWise
     #   resp.error_entries[0].errors[0].timestamps[0].time_in_seconds #=> Integer
     #   resp.error_entries[0].errors[0].timestamps[0].offset_in_nanos #=> Integer
     #
-    # @overload batch_put_asset_property_value(params = {})
+    # @overload batch_put_asset_property_value(**params)
     # @param [Hash] params ({})
-    def batch_put_asset_property_value(params = {}, options = {})
+    def batch_put_asset_property_value(params = {}, **options)
       req = build_request(:batch_put_asset_property_value, params)
       req.send_request(options)
     end
@@ -624,9 +624,9 @@ module Aws::IoTSiteWise
     #   resp.access_policy_id #=> String
     #   resp.access_policy_arn #=> String
     #
-    # @overload create_access_policy(params = {})
+    # @overload create_access_policy(**params)
     # @param [Hash] params ({})
-    def create_access_policy(params = {}, options = {})
+    def create_access_policy(params = {}, **options)
       req = build_request(:create_access_policy, params)
       req.send_request(options)
     end
@@ -686,9 +686,9 @@ module Aws::IoTSiteWise
     #   resp.asset_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.asset_status.error.message #=> String
     #
-    # @overload create_asset(params = {})
+    # @overload create_asset(**params)
     # @param [Hash] params ({})
-    def create_asset(params = {}, options = {})
+    def create_asset(params = {}, **options)
       req = build_request(:create_asset, params)
       req.send_request(options)
     end
@@ -886,9 +886,9 @@ module Aws::IoTSiteWise
     #   resp.asset_model_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.asset_model_status.error.message #=> String
     #
-    # @overload create_asset_model(params = {})
+    # @overload create_asset_model(**params)
     # @param [Hash] params ({})
-    def create_asset_model(params = {}, options = {})
+    def create_asset_model(params = {}, **options)
       req = build_request(:create_asset_model, params)
       req.send_request(options)
     end
@@ -953,9 +953,9 @@ module Aws::IoTSiteWise
     #   resp.dashboard_id #=> String
     #   resp.dashboard_arn #=> String
     #
-    # @overload create_dashboard(params = {})
+    # @overload create_dashboard(**params)
     # @param [Hash] params ({})
-    def create_dashboard(params = {}, options = {})
+    def create_dashboard(params = {}, **options)
       req = build_request(:create_dashboard, params)
       req.send_request(options)
     end
@@ -1009,9 +1009,9 @@ module Aws::IoTSiteWise
     #   resp.gateway_id #=> String
     #   resp.gateway_arn #=> String
     #
-    # @overload create_gateway(params = {})
+    # @overload create_gateway(**params)
     # @param [Hash] params ({})
-    def create_gateway(params = {}, options = {})
+    def create_gateway(params = {}, **options)
       req = build_request(:create_gateway, params)
       req.send_request(options)
     end
@@ -1130,9 +1130,9 @@ module Aws::IoTSiteWise
     #   resp.portal_status.error.message #=> String
     #   resp.sso_application_id #=> String
     #
-    # @overload create_portal(params = {})
+    # @overload create_portal(**params)
     # @param [Hash] params ({})
-    def create_portal(params = {}, options = {})
+    def create_portal(params = {}, **options)
       req = build_request(:create_portal, params)
       req.send_request(options)
     end
@@ -1187,9 +1187,9 @@ module Aws::IoTSiteWise
     #   resp.project_id #=> String
     #   resp.project_arn #=> String
     #
-    # @overload create_project(params = {})
+    # @overload create_project(**params)
     # @param [Hash] params ({})
-    def create_project(params = {}, options = {})
+    def create_project(params = {}, **options)
       req = build_request(:create_project, params)
       req.send_request(options)
     end
@@ -1218,9 +1218,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload delete_access_policy(params = {})
+    # @overload delete_access_policy(**params)
     # @param [Hash] params ({})
-    def delete_access_policy(params = {}, options = {})
+    def delete_access_policy(params = {}, **options)
       req = build_request(:delete_access_policy, params)
       req.send_request(options)
     end
@@ -1267,9 +1267,9 @@ module Aws::IoTSiteWise
     #   resp.asset_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.asset_status.error.message #=> String
     #
-    # @overload delete_asset(params = {})
+    # @overload delete_asset(**params)
     # @param [Hash] params ({})
-    def delete_asset(params = {}, options = {})
+    def delete_asset(params = {}, **options)
       req = build_request(:delete_asset, params)
       req.send_request(options)
     end
@@ -1313,9 +1313,9 @@ module Aws::IoTSiteWise
     #   resp.asset_model_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.asset_model_status.error.message #=> String
     #
-    # @overload delete_asset_model(params = {})
+    # @overload delete_asset_model(**params)
     # @param [Hash] params ({})
-    def delete_asset_model(params = {}, options = {})
+    def delete_asset_model(params = {}, **options)
       req = build_request(:delete_asset_model, params)
       req.send_request(options)
     end
@@ -1342,9 +1342,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload delete_dashboard(params = {})
+    # @overload delete_dashboard(**params)
     # @param [Hash] params ({})
-    def delete_dashboard(params = {}, options = {})
+    def delete_dashboard(params = {}, **options)
       req = build_request(:delete_dashboard, params)
       req.send_request(options)
     end
@@ -1363,9 +1363,9 @@ module Aws::IoTSiteWise
     #     gateway_id: "ID", # required
     #   })
     #
-    # @overload delete_gateway(params = {})
+    # @overload delete_gateway(**params)
     # @param [Hash] params ({})
-    def delete_gateway(params = {}, options = {})
+    def delete_gateway(params = {}, **options)
       req = build_request(:delete_gateway, params)
       req.send_request(options)
     end
@@ -1400,9 +1400,9 @@ module Aws::IoTSiteWise
     #   resp.portal_status.error.code #=> String, one of "INTERNAL_FAILURE", "VALIDATION_ERROR", "LIMIT_EXCEEDED"
     #   resp.portal_status.error.message #=> String
     #
-    # @overload delete_portal(params = {})
+    # @overload delete_portal(**params)
     # @param [Hash] params ({})
-    def delete_portal(params = {}, options = {})
+    def delete_portal(params = {}, **options)
       req = build_request(:delete_portal, params)
       req.send_request(options)
     end
@@ -1429,9 +1429,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload delete_project(params = {})
+    # @overload delete_project(**params)
     # @param [Hash] params ({})
-    def delete_project(params = {}, options = {})
+    def delete_project(params = {}, **options)
       req = build_request(:delete_project, params)
       req.send_request(options)
     end
@@ -1471,9 +1471,9 @@ module Aws::IoTSiteWise
     #   resp.access_policy_creation_date #=> Time
     #   resp.access_policy_last_update_date #=> Time
     #
-    # @overload describe_access_policy(params = {})
+    # @overload describe_access_policy(**params)
     # @param [Hash] params ({})
-    def describe_access_policy(params = {}, options = {})
+    def describe_access_policy(params = {}, **options)
       req = build_request(:describe_access_policy, params)
       req.send_request(options)
     end
@@ -1545,9 +1545,9 @@ module Aws::IoTSiteWise
     #   * asset_active
     #   * asset_not_exists
     #
-    # @overload describe_asset(params = {})
+    # @overload describe_asset(**params)
     # @param [Hash] params ({})
-    def describe_asset(params = {}, options = {})
+    def describe_asset(params = {}, **options)
       req = build_request(:describe_asset, params)
       req.send_request(options)
     end
@@ -1638,9 +1638,9 @@ module Aws::IoTSiteWise
     #   * asset_model_active
     #   * asset_model_not_exists
     #
-    # @overload describe_asset_model(params = {})
+    # @overload describe_asset_model(**params)
     # @param [Hash] params ({})
-    def describe_asset_model(params = {}, options = {})
+    def describe_asset_model(params = {}, **options)
       req = build_request(:describe_asset_model, params)
       req.send_request(options)
     end
@@ -1728,9 +1728,9 @@ module Aws::IoTSiteWise
     #   resp.composite_model.asset_property.type.metric.variables[0].value.hierarchy_id #=> String
     #   resp.composite_model.asset_property.type.metric.window.tumbling.interval #=> String
     #
-    # @overload describe_asset_property(params = {})
+    # @overload describe_asset_property(**params)
     # @param [Hash] params ({})
-    def describe_asset_property(params = {}, options = {})
+    def describe_asset_property(params = {}, **options)
       req = build_request(:describe_asset_property, params)
       req.send_request(options)
     end
@@ -1768,9 +1768,9 @@ module Aws::IoTSiteWise
     #   resp.dashboard_creation_date #=> Time
     #   resp.dashboard_last_update_date #=> Time
     #
-    # @overload describe_dashboard(params = {})
+    # @overload describe_dashboard(**params)
     # @param [Hash] params ({})
-    def describe_dashboard(params = {}, options = {})
+    def describe_dashboard(params = {}, **options)
       req = build_request(:describe_dashboard, params)
       req.send_request(options)
     end
@@ -1798,9 +1798,9 @@ module Aws::IoTSiteWise
     #   resp.configuration_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.configuration_status.error.message #=> String
     #
-    # @overload describe_default_encryption_configuration(params = {})
+    # @overload describe_default_encryption_configuration(**params)
     # @param [Hash] params ({})
-    def describe_default_encryption_configuration(params = {}, options = {})
+    def describe_default_encryption_configuration(params = {}, **options)
       req = build_request(:describe_default_encryption_configuration, params)
       req.send_request(options)
     end
@@ -1838,9 +1838,9 @@ module Aws::IoTSiteWise
     #   resp.creation_date #=> Time
     #   resp.last_update_date #=> Time
     #
-    # @overload describe_gateway(params = {})
+    # @overload describe_gateway(**params)
     # @param [Hash] params ({})
-    def describe_gateway(params = {}, options = {})
+    def describe_gateway(params = {}, **options)
       req = build_request(:describe_gateway, params)
       req.send_request(options)
     end
@@ -1888,9 +1888,9 @@ module Aws::IoTSiteWise
     #   resp.capability_configuration #=> String
     #   resp.capability_sync_status #=> String, one of "IN_SYNC", "OUT_OF_SYNC", "SYNC_FAILED"
     #
-    # @overload describe_gateway_capability_configuration(params = {})
+    # @overload describe_gateway_capability_configuration(**params)
     # @param [Hash] params ({})
-    def describe_gateway_capability_configuration(params = {}, options = {})
+    def describe_gateway_capability_configuration(params = {}, **options)
       req = build_request(:describe_gateway_capability_configuration, params)
       req.send_request(options)
     end
@@ -1905,9 +1905,9 @@ module Aws::IoTSiteWise
     #
     #   resp.logging_options.level #=> String, one of "ERROR", "INFO", "OFF"
     #
-    # @overload describe_logging_options(params = {})
+    # @overload describe_logging_options(**params)
     # @param [Hash] params ({})
-    def describe_logging_options(params = {}, options = {})
+    def describe_logging_options(params = {}, **options)
       req = build_request(:describe_logging_options, params)
       req.send_request(options)
     end
@@ -1964,9 +1964,9 @@ module Aws::IoTSiteWise
     #   * portal_active
     #   * portal_not_exists
     #
-    # @overload describe_portal(params = {})
+    # @overload describe_portal(**params)
     # @param [Hash] params ({})
-    def describe_portal(params = {}, options = {})
+    def describe_portal(params = {}, **options)
       req = build_request(:describe_portal, params)
       req.send_request(options)
     end
@@ -2002,9 +2002,9 @@ module Aws::IoTSiteWise
     #   resp.project_creation_date #=> Time
     #   resp.project_last_update_date #=> Time
     #
-    # @overload describe_project(params = {})
+    # @overload describe_project(**params)
     # @param [Hash] params ({})
-    def describe_project(params = {}, options = {})
+    def describe_project(params = {}, **options)
       req = build_request(:describe_project, params)
       req.send_request(options)
     end
@@ -2048,9 +2048,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload disassociate_assets(params = {})
+    # @overload disassociate_assets(**params)
     # @param [Hash] params ({})
-    def disassociate_assets(params = {}, options = {})
+    def disassociate_assets(params = {}, **options)
       req = build_request(:disassociate_assets, params)
       req.send_request(options)
     end
@@ -2154,9 +2154,9 @@ module Aws::IoTSiteWise
     #   resp.aggregated_values[0].value.standard_deviation #=> Float
     #   resp.next_token #=> String
     #
-    # @overload get_asset_property_aggregates(params = {})
+    # @overload get_asset_property_aggregates(**params)
     # @param [Hash] params ({})
-    def get_asset_property_aggregates(params = {}, options = {})
+    def get_asset_property_aggregates(params = {}, **options)
       req = build_request(:get_asset_property_aggregates, params)
       req.send_request(options)
     end
@@ -2216,9 +2216,9 @@ module Aws::IoTSiteWise
     #   resp.property_value.timestamp.offset_in_nanos #=> Integer
     #   resp.property_value.quality #=> String, one of "GOOD", "BAD", "UNCERTAIN"
     #
-    # @overload get_asset_property_value(params = {})
+    # @overload get_asset_property_value(**params)
     # @param [Hash] params ({})
-    def get_asset_property_value(params = {}, options = {})
+    def get_asset_property_value(params = {}, **options)
       req = build_request(:get_asset_property_value, params)
       req.send_request(options)
     end
@@ -2314,9 +2314,9 @@ module Aws::IoTSiteWise
     #   resp.asset_property_value_history[0].quality #=> String, one of "GOOD", "BAD", "UNCERTAIN"
     #   resp.next_token #=> String
     #
-    # @overload get_asset_property_value_history(params = {})
+    # @overload get_asset_property_value_history(**params)
     # @param [Hash] params ({})
-    def get_asset_property_value_history(params = {}, options = {})
+    def get_asset_property_value_history(params = {}, **options)
       req = build_request(:get_asset_property_value_history, params)
       req.send_request(options)
     end
@@ -2391,9 +2391,9 @@ module Aws::IoTSiteWise
     #   resp.access_policy_summaries[0].last_update_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_access_policies(params = {})
+    # @overload list_access_policies(**params)
     # @param [Hash] params ({})
-    def list_access_policies(params = {}, options = {})
+    def list_access_policies(params = {}, **options)
       req = build_request(:list_access_policies, params)
       req.send_request(options)
     end
@@ -2436,9 +2436,9 @@ module Aws::IoTSiteWise
     #   resp.asset_model_summaries[0].status.error.message #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_asset_models(params = {})
+    # @overload list_asset_models(**params)
     # @param [Hash] params ({})
-    def list_asset_models(params = {}, options = {})
+    def list_asset_models(params = {}, **options)
       req = build_request(:list_asset_models, params)
       req.send_request(options)
     end
@@ -2491,9 +2491,9 @@ module Aws::IoTSiteWise
     #   resp.asset_relationship_summaries[0].relationship_type #=> String, one of "HIERARCHY"
     #   resp.next_token #=> String
     #
-    # @overload list_asset_relationships(params = {})
+    # @overload list_asset_relationships(**params)
     # @param [Hash] params ({})
-    def list_asset_relationships(params = {}, options = {})
+    def list_asset_relationships(params = {}, **options)
       req = build_request(:list_asset_relationships, params)
       req.send_request(options)
     end
@@ -2572,9 +2572,9 @@ module Aws::IoTSiteWise
     #   resp.asset_summaries[0].hierarchies[0].name #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_assets(params = {})
+    # @overload list_assets(**params)
     # @param [Hash] params ({})
-    def list_assets(params = {}, options = {})
+    def list_assets(params = {}, **options)
       req = build_request(:list_assets, params)
       req.send_request(options)
     end
@@ -2660,9 +2660,9 @@ module Aws::IoTSiteWise
     #   resp.asset_summaries[0].hierarchies[0].name #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_associated_assets(params = {})
+    # @overload list_associated_assets(**params)
     # @param [Hash] params ({})
-    def list_associated_assets(params = {}, options = {})
+    def list_associated_assets(params = {}, **options)
       req = build_request(:list_associated_assets, params)
       req.send_request(options)
     end
@@ -2706,9 +2706,9 @@ module Aws::IoTSiteWise
     #   resp.dashboard_summaries[0].last_update_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_dashboards(params = {})
+    # @overload list_dashboards(**params)
     # @param [Hash] params ({})
-    def list_dashboards(params = {}, options = {})
+    def list_dashboards(params = {}, **options)
       req = build_request(:list_dashboards, params)
       req.send_request(options)
     end
@@ -2749,9 +2749,9 @@ module Aws::IoTSiteWise
     #   resp.gateway_summaries[0].last_update_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_gateways(params = {})
+    # @overload list_gateways(**params)
     # @param [Hash] params ({})
-    def list_gateways(params = {}, options = {})
+    def list_gateways(params = {}, **options)
       req = build_request(:list_gateways, params)
       req.send_request(options)
     end
@@ -2795,9 +2795,9 @@ module Aws::IoTSiteWise
     #   resp.portal_summaries[0].status.error.message #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_portals(params = {})
+    # @overload list_portals(**params)
     # @param [Hash] params ({})
-    def list_portals(params = {}, options = {})
+    def list_portals(params = {}, **options)
       req = build_request(:list_portals, params)
       req.send_request(options)
     end
@@ -2837,9 +2837,9 @@ module Aws::IoTSiteWise
     #   resp.asset_ids[0] #=> String
     #   resp.next_token #=> String
     #
-    # @overload list_project_assets(params = {})
+    # @overload list_project_assets(**params)
     # @param [Hash] params ({})
-    def list_project_assets(params = {}, options = {})
+    def list_project_assets(params = {}, **options)
       req = build_request(:list_project_assets, params)
       req.send_request(options)
     end
@@ -2883,9 +2883,9 @@ module Aws::IoTSiteWise
     #   resp.project_summaries[0].last_update_date #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_projects(params = {})
+    # @overload list_projects(**params)
     # @param [Hash] params ({})
-    def list_projects(params = {}, options = {})
+    def list_projects(params = {}, **options)
       req = build_request(:list_projects, params)
       req.send_request(options)
     end
@@ -2914,9 +2914,9 @@ module Aws::IoTSiteWise
     #   resp.tags #=> Hash
     #   resp.tags["TagKey"] #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2958,9 +2958,9 @@ module Aws::IoTSiteWise
     #   resp.configuration_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.configuration_status.error.message #=> String
     #
-    # @overload put_default_encryption_configuration(params = {})
+    # @overload put_default_encryption_configuration(**params)
     # @param [Hash] params ({})
-    def put_default_encryption_configuration(params = {}, options = {})
+    def put_default_encryption_configuration(params = {}, **options)
       req = build_request(:put_default_encryption_configuration, params)
       req.send_request(options)
     end
@@ -2980,9 +2980,9 @@ module Aws::IoTSiteWise
     #     },
     #   })
     #
-    # @overload put_logging_options(params = {})
+    # @overload put_logging_options(**params)
     # @param [Hash] params ({})
-    def put_logging_options(params = {}, options = {})
+    def put_logging_options(params = {}, **options)
       req = build_request(:put_logging_options, params)
       req.send_request(options)
     end
@@ -3017,9 +3017,9 @@ module Aws::IoTSiteWise
     #     },
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3045,9 +3045,9 @@ module Aws::IoTSiteWise
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3107,9 +3107,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload update_access_policy(params = {})
+    # @overload update_access_policy(**params)
     # @param [Hash] params ({})
-    def update_access_policy(params = {}, options = {})
+    def update_access_policy(params = {}, **options)
       req = build_request(:update_access_policy, params)
       req.send_request(options)
     end
@@ -3153,9 +3153,9 @@ module Aws::IoTSiteWise
     #   resp.asset_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.asset_status.error.message #=> String
     #
-    # @overload update_asset(params = {})
+    # @overload update_asset(**params)
     # @param [Hash] params ({})
-    def update_asset(params = {}, options = {})
+    def update_asset(params = {}, **options)
       req = build_request(:update_asset, params)
       req.send_request(options)
     end
@@ -3357,9 +3357,9 @@ module Aws::IoTSiteWise
     #   resp.asset_model_status.error.code #=> String, one of "VALIDATION_ERROR", "INTERNAL_FAILURE"
     #   resp.asset_model_status.error.message #=> String
     #
-    # @overload update_asset_model(params = {})
+    # @overload update_asset_model(**params)
     # @param [Hash] params ({})
-    def update_asset_model(params = {}, options = {})
+    def update_asset_model(params = {}, **options)
       req = build_request(:update_asset_model, params)
       req.send_request(options)
     end
@@ -3429,9 +3429,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload update_asset_property(params = {})
+    # @overload update_asset_property(**params)
     # @param [Hash] params ({})
-    def update_asset_property(params = {}, options = {})
+    def update_asset_property(params = {}, **options)
       req = build_request(:update_asset_property, params)
       req.send_request(options)
     end
@@ -3476,9 +3476,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload update_dashboard(params = {})
+    # @overload update_dashboard(**params)
     # @param [Hash] params ({})
-    def update_dashboard(params = {}, options = {})
+    def update_dashboard(params = {}, **options)
       req = build_request(:update_dashboard, params)
       req.send_request(options)
     end
@@ -3500,9 +3500,9 @@ module Aws::IoTSiteWise
     #     gateway_name: "Name", # required
     #   })
     #
-    # @overload update_gateway(params = {})
+    # @overload update_gateway(**params)
     # @param [Hash] params ({})
-    def update_gateway(params = {}, options = {})
+    def update_gateway(params = {}, **options)
       req = build_request(:update_gateway, params)
       req.send_request(options)
     end
@@ -3556,9 +3556,9 @@ module Aws::IoTSiteWise
     #   resp.capability_namespace #=> String
     #   resp.capability_sync_status #=> String, one of "IN_SYNC", "OUT_OF_SYNC", "SYNC_FAILED"
     #
-    # @overload update_gateway_capability_configuration(params = {})
+    # @overload update_gateway_capability_configuration(**params)
     # @param [Hash] params ({})
-    def update_gateway_capability_configuration(params = {}, options = {})
+    def update_gateway_capability_configuration(params = {}, **options)
       req = build_request(:update_gateway_capability_configuration, params)
       req.send_request(options)
     end
@@ -3632,9 +3632,9 @@ module Aws::IoTSiteWise
     #   resp.portal_status.error.code #=> String, one of "INTERNAL_FAILURE", "VALIDATION_ERROR", "LIMIT_EXCEEDED"
     #   resp.portal_status.error.message #=> String
     #
-    # @overload update_portal(params = {})
+    # @overload update_portal(**params)
     # @param [Hash] params ({})
-    def update_portal(params = {}, options = {})
+    def update_portal(params = {}, **options)
       req = build_request(:update_portal, params)
       req.send_request(options)
     end
@@ -3669,9 +3669,9 @@ module Aws::IoTSiteWise
     #     client_token: "ClientToken",
     #   })
     #
-    # @overload update_project(params = {})
+    # @overload update_project(**params)
     # @param [Hash] params ({})
-    def update_project(params = {}, options = {})
+    def update_project(params = {}, **options)
       req = build_request(:update_project, params)
       req.send_request(options)
     end
@@ -3680,7 +3680,7 @@ module Aws::IoTSiteWise
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3688,8 +3688,8 @@ module Aws::IoTSiteWise
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotsitewise'
-      context[:gem_version] = '1.16.0'
+      context[:gem_name] = "aws-sdk-iotsitewise"
+      context[:gem_version] = "1.16.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3786,7 +3786,7 @@ module Aws::IoTSiteWise
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3802,7 +3802,7 @@ module Aws::IoTSiteWise
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

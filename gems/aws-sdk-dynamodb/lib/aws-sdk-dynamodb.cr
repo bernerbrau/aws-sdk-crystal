@@ -8,17 +8,17 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-dynamodb/types'
-require_relative 'aws-sdk-dynamodb/client_api'
-require_relative 'aws-sdk-dynamodb/client'
-require_relative 'aws-sdk-dynamodb/errors'
-require_relative 'aws-sdk-dynamodb/waiters'
-require_relative 'aws-sdk-dynamodb/resource'
-require_relative 'aws-sdk-dynamodb/table'
-require_relative 'aws-sdk-dynamodb/customizations'
+require_relative "aws-sdk-dynamodb/types"
+require_relative "aws-sdk-dynamodb/client_api"
+require_relative "aws-sdk-dynamodb/client"
+require_relative "aws-sdk-dynamodb/errors"
+require_relative "aws-sdk-dynamodb/waiters"
+require_relative "aws-sdk-dynamodb/resource"
+require_relative "aws-sdk-dynamodb/table"
+require_relative "aws-sdk-dynamodb/customizations"
 
 # This module provides support for Amazon DynamoDB. This module is available in the
 # `aws-sdk-dynamodb` gem.
@@ -50,6 +50,6 @@ require_relative 'aws-sdk-dynamodb/customizations'
 # @!group service
 module Aws::DynamoDB
 
-  GEM_VERSION = '1.58.0'
+  GEM_VERSION = "1.58.0"
 
 end

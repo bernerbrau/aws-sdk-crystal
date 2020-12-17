@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-acm/types'
-require_relative 'aws-sdk-acm/client_api'
-require_relative 'aws-sdk-acm/client'
-require_relative 'aws-sdk-acm/errors'
-require_relative 'aws-sdk-acm/waiters'
-require_relative 'aws-sdk-acm/resource'
-require_relative 'aws-sdk-acm/customizations'
+require_relative "aws-sdk-acm/types"
+require_relative "aws-sdk-acm/client_api"
+require_relative "aws-sdk-acm/client"
+require_relative "aws-sdk-acm/errors"
+require_relative "aws-sdk-acm/waiters"
+require_relative "aws-sdk-acm/resource"
+require_relative "aws-sdk-acm/customizations"
 
 # This module provides support for AWS Certificate Manager. This module is available in the
 # `aws-sdk-acm` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-acm/customizations'
 # @!group service
 module Aws::ACM
 
-  GEM_VERSION = '1.38.0'
+  GEM_VERSION = "1.38.0"
 
 end

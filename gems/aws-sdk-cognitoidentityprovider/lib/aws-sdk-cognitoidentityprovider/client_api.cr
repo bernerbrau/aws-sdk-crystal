@@ -2443,7 +2443,7 @@ module Aws::CognitoIdentityProvider
         o.name = "ChangePassword"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ChangePasswordRequest)
         o.output = Shapes::ShapeRef.new(shape: ChangePasswordResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2482,7 +2482,7 @@ module Aws::CognitoIdentityProvider
         o.name = "ConfirmForgotPassword"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ConfirmForgotPasswordRequest)
         o.output = Shapes::ShapeRef.new(shape: ConfirmForgotPasswordResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2506,7 +2506,7 @@ module Aws::CognitoIdentityProvider
         o.name = "ConfirmSignUp"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ConfirmSignUpRequest)
         o.output = Shapes::ShapeRef.new(shape: ConfirmSignUpResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2674,7 +2674,7 @@ module Aws::CognitoIdentityProvider
         o.name = "DeleteUser"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: DeleteUserRequest)
         o.output = Shapes::ShapeRef.new(shape: Shapes::StructureShape.new(struct_class: Aws::EmptyStructure))
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2691,7 +2691,7 @@ module Aws::CognitoIdentityProvider
         o.name = "DeleteUserAttributes"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: DeleteUserAttributesRequest)
         o.output = Shapes::ShapeRef.new(shape: DeleteUserAttributesResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2856,7 +2856,7 @@ module Aws::CognitoIdentityProvider
         o.name = "ForgotPassword"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ForgotPasswordRequest)
         o.output = Shapes::ShapeRef.new(shape: ForgotPasswordResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2960,7 +2960,7 @@ module Aws::CognitoIdentityProvider
         o.name = "GetUser"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: GetUserRequest)
         o.output = Shapes::ShapeRef.new(shape: GetUserResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -2977,7 +2977,7 @@ module Aws::CognitoIdentityProvider
         o.name = "GetUserAttributeVerificationCode"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: GetUserAttributeVerificationCodeRequest)
         o.output = Shapes::ShapeRef.new(shape: GetUserAttributeVerificationCodeResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3030,7 +3030,7 @@ module Aws::CognitoIdentityProvider
         o.name = "InitiateAuth"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: InitiateAuthRequest)
         o.output = Shapes::ShapeRef.new(shape: InitiateAuthResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3228,7 +3228,7 @@ module Aws::CognitoIdentityProvider
         o.name = "ResendConfirmationCode"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: ResendConfirmationCodeRequest)
         o.output = Shapes::ShapeRef.new(shape: ResendConfirmationCodeResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3251,7 +3251,7 @@ module Aws::CognitoIdentityProvider
         o.name = "RespondToAuthChallenge"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: RespondToAuthChallengeRequest)
         o.output = Shapes::ShapeRef.new(shape: RespondToAuthChallengeResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3339,7 +3339,7 @@ module Aws::CognitoIdentityProvider
         o.name = "SetUserSettings"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: SetUserSettingsRequest)
         o.output = Shapes::ShapeRef.new(shape: SetUserSettingsResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3355,7 +3355,7 @@ module Aws::CognitoIdentityProvider
         o.name = "SignUp"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: SignUpRequest)
         o.output = Shapes::ShapeRef.new(shape: SignUpResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3504,7 +3504,7 @@ module Aws::CognitoIdentityProvider
         o.name = "UpdateUserAttributes"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: UpdateUserAttributesRequest)
         o.output = Shapes::ShapeRef.new(shape: UpdateUserAttributesResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)
@@ -3600,7 +3600,7 @@ module Aws::CognitoIdentityProvider
         o.name = "VerifyUserAttribute"
         o.http_method = "POST"
         o.http_request_uri = "/"
-        o['authtype'] = "none"
+        o["authtype"] = "none"
         o.input = Shapes::ShapeRef.new(shape: VerifyUserAttributeRequest)
         o.output = Shapes::ShapeRef.new(shape: VerifyUserAttributeResponse)
         o.errors << Shapes::ShapeRef.new(shape: ResourceNotFoundException)

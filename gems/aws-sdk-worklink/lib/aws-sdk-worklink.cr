@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-worklink/types'
-require_relative 'aws-sdk-worklink/client_api'
-require_relative 'aws-sdk-worklink/client'
-require_relative 'aws-sdk-worklink/errors'
-require_relative 'aws-sdk-worklink/resource'
-require_relative 'aws-sdk-worklink/customizations'
+require_relative "aws-sdk-worklink/types"
+require_relative "aws-sdk-worklink/client_api"
+require_relative "aws-sdk-worklink/client"
+require_relative "aws-sdk-worklink/errors"
+require_relative "aws-sdk-worklink/resource"
+require_relative "aws-sdk-worklink/customizations"
 
 # This module provides support for Amazon WorkLink. This module is available in the
 # `aws-sdk-worklink` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-worklink/customizations'
 # @!group service
 module Aws::WorkLink
 
-  GEM_VERSION = '1.21.0'
+  GEM_VERSION = "1.21.0"
 
 end

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:iotsecuretunneling)
 
@@ -290,7 +290,7 @@ module Aws::IoTSecureTunneling
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -357,9 +357,9 @@ module Aws::IoTSecureTunneling
     #     delete: false,
     #   })
     #
-    # @overload close_tunnel(params = {})
+    # @overload close_tunnel(**params)
     # @param [Hash] params ({})
-    def close_tunnel(params = {}, options = {})
+    def close_tunnel(params = {}, **options)
       req = build_request(:close_tunnel, params)
       req.send_request(options)
     end
@@ -399,9 +399,9 @@ module Aws::IoTSecureTunneling
     #   resp.tunnel.created_at #=> Time
     #   resp.tunnel.last_updated_at #=> Time
     #
-    # @overload describe_tunnel(params = {})
+    # @overload describe_tunnel(**params)
     # @param [Hash] params ({})
-    def describe_tunnel(params = {}, options = {})
+    def describe_tunnel(params = {}, **options)
       req = build_request(:describe_tunnel, params)
       req.send_request(options)
     end
@@ -427,9 +427,9 @@ module Aws::IoTSecureTunneling
     #   resp.tags[0].key #=> String
     #   resp.tags[0].value #=> String
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -473,9 +473,9 @@ module Aws::IoTSecureTunneling
     #   resp.tunnel_summaries[0].last_updated_at #=> Time
     #   resp.next_token #=> String
     #
-    # @overload list_tunnels(params = {})
+    # @overload list_tunnels(**params)
     # @param [Hash] params ({})
-    def list_tunnels(params = {}, options = {})
+    def list_tunnels(params = {}, **options)
       req = build_request(:list_tunnels, params)
       req.send_request(options)
     end
@@ -528,9 +528,9 @@ module Aws::IoTSecureTunneling
     #   resp.source_access_token #=> String
     #   resp.destination_access_token #=> String
     #
-    # @overload open_tunnel(params = {})
+    # @overload open_tunnel(**params)
     # @param [Hash] params ({})
-    def open_tunnel(params = {}, options = {})
+    def open_tunnel(params = {}, **options)
       req = build_request(:open_tunnel, params)
       req.send_request(options)
     end
@@ -557,9 +557,9 @@ module Aws::IoTSecureTunneling
     #     ],
     #   })
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -581,9 +581,9 @@ module Aws::IoTSecureTunneling
     #     tag_keys: ["TagKey"], # required
     #   })
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -592,7 +592,7 @@ module Aws::IoTSecureTunneling
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -600,15 +600,15 @@ module Aws::IoTSecureTunneling
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-iotsecuretunneling'
-      context[:gem_version] = '1.9.0'
+      context[:gem_name] = "aws-sdk-iotsecuretunneling"
+      context[:gem_version] = "1.9.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

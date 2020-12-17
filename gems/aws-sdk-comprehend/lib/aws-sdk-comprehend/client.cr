@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:comprehend)
 
@@ -290,7 +290,7 @@ module Aws::Comprehend
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -376,9 +376,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/BatchDetectDominantLanguage AWS API Documentation
     #
-    # @overload batch_detect_dominant_language(params = {})
+    # @overload batch_detect_dominant_language(**params)
     # @param [Hash] params ({})
-    def batch_detect_dominant_language(params = {}, options = {})
+    def batch_detect_dominant_language(params = {}, **options)
       req = build_request(:batch_detect_dominant_language, params)
       req.send_request(options)
     end
@@ -426,9 +426,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/BatchDetectEntities AWS API Documentation
     #
-    # @overload batch_detect_entities(params = {})
+    # @overload batch_detect_entities(**params)
     # @param [Hash] params ({})
-    def batch_detect_entities(params = {}, options = {})
+    def batch_detect_entities(params = {}, **options)
       req = build_request(:batch_detect_entities, params)
       req.send_request(options)
     end
@@ -473,9 +473,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/BatchDetectKeyPhrases AWS API Documentation
     #
-    # @overload batch_detect_key_phrases(params = {})
+    # @overload batch_detect_key_phrases(**params)
     # @param [Hash] params ({})
-    def batch_detect_key_phrases(params = {}, options = {})
+    def batch_detect_key_phrases(params = {}, **options)
       req = build_request(:batch_detect_key_phrases, params)
       req.send_request(options)
     end
@@ -522,9 +522,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/BatchDetectSentiment AWS API Documentation
     #
-    # @overload batch_detect_sentiment(params = {})
+    # @overload batch_detect_sentiment(**params)
     # @param [Hash] params ({})
-    def batch_detect_sentiment(params = {}, options = {})
+    def batch_detect_sentiment(params = {}, **options)
       req = build_request(:batch_detect_sentiment, params)
       req.send_request(options)
     end
@@ -574,9 +574,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/BatchDetectSyntax AWS API Documentation
     #
-    # @overload batch_detect_syntax(params = {})
+    # @overload batch_detect_syntax(**params)
     # @param [Hash] params ({})
-    def batch_detect_syntax(params = {}, options = {})
+    def batch_detect_syntax(params = {}, **options)
       req = build_request(:batch_detect_syntax, params)
       req.send_request(options)
     end
@@ -614,9 +614,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ClassifyDocument AWS API Documentation
     #
-    # @overload classify_document(params = {})
+    # @overload classify_document(**params)
     # @param [Hash] params ({})
-    def classify_document(params = {}, options = {})
+    def classify_document(params = {}, **options)
       req = build_request(:classify_document, params)
       req.send_request(options)
     end
@@ -736,9 +736,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/CreateDocumentClassifier AWS API Documentation
     #
-    # @overload create_document_classifier(params = {})
+    # @overload create_document_classifier(**params)
     # @param [Hash] params ({})
-    def create_document_classifier(params = {}, options = {})
+    def create_document_classifier(params = {}, **options)
       req = build_request(:create_document_classifier, params)
       req.send_request(options)
     end
@@ -798,9 +798,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/CreateEndpoint AWS API Documentation
     #
-    # @overload create_endpoint(params = {})
+    # @overload create_endpoint(**params)
     # @param [Hash] params ({})
-    def create_endpoint(params = {}, options = {})
+    def create_endpoint(params = {}, **options)
       req = build_request(:create_endpoint, params)
       req.send_request(options)
     end
@@ -917,9 +917,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/CreateEntityRecognizer AWS API Documentation
     #
-    # @overload create_entity_recognizer(params = {})
+    # @overload create_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def create_entity_recognizer(params = {}, options = {})
+    def create_entity_recognizer(params = {}, **options)
       req = build_request(:create_entity_recognizer, params)
       req.send_request(options)
     end
@@ -949,9 +949,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DeleteDocumentClassifier AWS API Documentation
     #
-    # @overload delete_document_classifier(params = {})
+    # @overload delete_document_classifier(**params)
     # @param [Hash] params ({})
-    def delete_document_classifier(params = {}, options = {})
+    def delete_document_classifier(params = {}, **options)
       req = build_request(:delete_document_classifier, params)
       req.send_request(options)
     end
@@ -973,9 +973,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DeleteEndpoint AWS API Documentation
     #
-    # @overload delete_endpoint(params = {})
+    # @overload delete_endpoint(**params)
     # @param [Hash] params ({})
-    def delete_endpoint(params = {}, options = {})
+    def delete_endpoint(params = {}, **options)
       req = build_request(:delete_endpoint, params)
       req.send_request(options)
     end
@@ -1004,9 +1004,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DeleteEntityRecognizer AWS API Documentation
     #
-    # @overload delete_entity_recognizer(params = {})
+    # @overload delete_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def delete_entity_recognizer(params = {}, options = {})
+    def delete_entity_recognizer(params = {}, **options)
       req = build_request(:delete_entity_recognizer, params)
       req.send_request(options)
     end
@@ -1050,9 +1050,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeDocumentClassificationJob AWS API Documentation
     #
-    # @overload describe_document_classification_job(params = {})
+    # @overload describe_document_classification_job(**params)
     # @param [Hash] params ({})
-    def describe_document_classification_job(params = {}, options = {})
+    def describe_document_classification_job(params = {}, **options)
       req = build_request(:describe_document_classification_job, params)
       req.send_request(options)
     end
@@ -1113,9 +1113,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeDocumentClassifier AWS API Documentation
     #
-    # @overload describe_document_classifier(params = {})
+    # @overload describe_document_classifier(**params)
     # @param [Hash] params ({})
-    def describe_document_classifier(params = {}, options = {})
+    def describe_document_classifier(params = {}, **options)
       req = build_request(:describe_document_classifier, params)
       req.send_request(options)
     end
@@ -1158,9 +1158,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeDominantLanguageDetectionJob AWS API Documentation
     #
-    # @overload describe_dominant_language_detection_job(params = {})
+    # @overload describe_dominant_language_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_dominant_language_detection_job(params = {}, options = {})
+    def describe_dominant_language_detection_job(params = {}, **options)
       req = build_request(:describe_dominant_language_detection_job, params)
       req.send_request(options)
     end
@@ -1194,9 +1194,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeEndpoint AWS API Documentation
     #
-    # @overload describe_endpoint(params = {})
+    # @overload describe_endpoint(**params)
     # @param [Hash] params ({})
-    def describe_endpoint(params = {}, options = {})
+    def describe_endpoint(params = {}, **options)
       req = build_request(:describe_endpoint, params)
       req.send_request(options)
     end
@@ -1241,9 +1241,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeEntitiesDetectionJob AWS API Documentation
     #
-    # @overload describe_entities_detection_job(params = {})
+    # @overload describe_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_entities_detection_job(params = {}, options = {})
+    def describe_entities_detection_job(params = {}, **options)
       req = build_request(:describe_entities_detection_job, params)
       req.send_request(options)
     end
@@ -1305,9 +1305,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeEntityRecognizer AWS API Documentation
     #
-    # @overload describe_entity_recognizer(params = {})
+    # @overload describe_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def describe_entity_recognizer(params = {}, options = {})
+    def describe_entity_recognizer(params = {}, **options)
       req = build_request(:describe_entity_recognizer, params)
       req.send_request(options)
     end
@@ -1346,9 +1346,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeEventsDetectionJob AWS API Documentation
     #
-    # @overload describe_events_detection_job(params = {})
+    # @overload describe_events_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_events_detection_job(params = {}, options = {})
+    def describe_events_detection_job(params = {}, **options)
       req = build_request(:describe_events_detection_job, params)
       req.send_request(options)
     end
@@ -1392,9 +1392,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeKeyPhrasesDetectionJob AWS API Documentation
     #
-    # @overload describe_key_phrases_detection_job(params = {})
+    # @overload describe_key_phrases_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_key_phrases_detection_job(params = {}, options = {})
+    def describe_key_phrases_detection_job(params = {}, **options)
       req = build_request(:describe_key_phrases_detection_job, params)
       req.send_request(options)
     end
@@ -1438,9 +1438,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribePiiEntitiesDetectionJob AWS API Documentation
     #
-    # @overload describe_pii_entities_detection_job(params = {})
+    # @overload describe_pii_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_pii_entities_detection_job(params = {}, options = {})
+    def describe_pii_entities_detection_job(params = {}, **options)
       req = build_request(:describe_pii_entities_detection_job, params)
       req.send_request(options)
     end
@@ -1484,9 +1484,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeSentimentDetectionJob AWS API Documentation
     #
-    # @overload describe_sentiment_detection_job(params = {})
+    # @overload describe_sentiment_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_sentiment_detection_job(params = {}, options = {})
+    def describe_sentiment_detection_job(params = {}, **options)
       req = build_request(:describe_sentiment_detection_job, params)
       req.send_request(options)
     end
@@ -1529,9 +1529,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeTopicsDetectionJob AWS API Documentation
     #
-    # @overload describe_topics_detection_job(params = {})
+    # @overload describe_topics_detection_job(**params)
     # @param [Hash] params ({})
-    def describe_topics_detection_job(params = {}, options = {})
+    def describe_topics_detection_job(params = {}, **options)
       req = build_request(:describe_topics_detection_job, params)
       req.send_request(options)
     end
@@ -1566,9 +1566,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectDominantLanguage AWS API Documentation
     #
-    # @overload detect_dominant_language(params = {})
+    # @overload detect_dominant_language(**params)
     # @param [Hash] params ({})
-    def detect_dominant_language(params = {}, options = {})
+    def detect_dominant_language(params = {}, **options)
       req = build_request(:detect_dominant_language, params)
       req.send_request(options)
     end
@@ -1622,9 +1622,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectEntities AWS API Documentation
     #
-    # @overload detect_entities(params = {})
+    # @overload detect_entities(**params)
     # @param [Hash] params ({})
-    def detect_entities(params = {}, options = {})
+    def detect_entities(params = {}, **options)
       req = build_request(:detect_entities, params)
       req.send_request(options)
     end
@@ -1661,9 +1661,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectKeyPhrases AWS API Documentation
     #
-    # @overload detect_key_phrases(params = {})
+    # @overload detect_key_phrases(**params)
     # @param [Hash] params ({})
-    def detect_key_phrases(params = {}, options = {})
+    def detect_key_phrases(params = {}, **options)
       req = build_request(:detect_key_phrases, params)
       req.send_request(options)
     end
@@ -1699,9 +1699,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectPiiEntities AWS API Documentation
     #
-    # @overload detect_pii_entities(params = {})
+    # @overload detect_pii_entities(**params)
     # @param [Hash] params ({})
-    def detect_pii_entities(params = {}, options = {})
+    def detect_pii_entities(params = {}, **options)
       req = build_request(:detect_pii_entities, params)
       req.send_request(options)
     end
@@ -1740,9 +1740,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectSentiment AWS API Documentation
     #
-    # @overload detect_sentiment(params = {})
+    # @overload detect_sentiment(**params)
     # @param [Hash] params ({})
-    def detect_sentiment(params = {}, options = {})
+    def detect_sentiment(params = {}, **options)
       req = build_request(:detect_sentiment, params)
       req.send_request(options)
     end
@@ -1783,9 +1783,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectSyntax AWS API Documentation
     #
-    # @overload detect_syntax(params = {})
+    # @overload detect_syntax(**params)
     # @param [Hash] params ({})
-    def detect_syntax(params = {}, options = {})
+    def detect_syntax(params = {}, **options)
       req = build_request(:detect_syntax, params)
       req.send_request(options)
     end
@@ -1849,9 +1849,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDocumentClassificationJobs AWS API Documentation
     #
-    # @overload list_document_classification_jobs(params = {})
+    # @overload list_document_classification_jobs(**params)
     # @param [Hash] params ({})
-    def list_document_classification_jobs(params = {}, options = {})
+    def list_document_classification_jobs(params = {}, **options)
       req = build_request(:list_document_classification_jobs, params)
       req.send_request(options)
     end
@@ -1931,9 +1931,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDocumentClassifiers AWS API Documentation
     #
-    # @overload list_document_classifiers(params = {})
+    # @overload list_document_classifiers(**params)
     # @param [Hash] params ({})
-    def list_document_classifiers(params = {}, options = {})
+    def list_document_classifiers(params = {}, **options)
       req = build_request(:list_document_classifiers, params)
       req.send_request(options)
     end
@@ -1996,9 +1996,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDominantLanguageDetectionJobs AWS API Documentation
     #
-    # @overload list_dominant_language_detection_jobs(params = {})
+    # @overload list_dominant_language_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_dominant_language_detection_jobs(params = {}, options = {})
+    def list_dominant_language_detection_jobs(params = {}, **options)
       req = build_request(:list_dominant_language_detection_jobs, params)
       req.send_request(options)
     end
@@ -2050,9 +2050,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEndpoints AWS API Documentation
     #
-    # @overload list_endpoints(params = {})
+    # @overload list_endpoints(**params)
     # @param [Hash] params ({})
-    def list_endpoints(params = {}, options = {})
+    def list_endpoints(params = {}, **options)
       req = build_request(:list_endpoints, params)
       req.send_request(options)
     end
@@ -2116,9 +2116,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEntitiesDetectionJobs AWS API Documentation
     #
-    # @overload list_entities_detection_jobs(params = {})
+    # @overload list_entities_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_entities_detection_jobs(params = {}, options = {})
+    def list_entities_detection_jobs(params = {}, **options)
       req = build_request(:list_entities_detection_jobs, params)
       req.send_request(options)
     end
@@ -2205,9 +2205,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEntityRecognizers AWS API Documentation
     #
-    # @overload list_entity_recognizers(params = {})
+    # @overload list_entity_recognizers(**params)
     # @param [Hash] params ({})
-    def list_entity_recognizers(params = {}, options = {})
+    def list_entity_recognizers(params = {}, **options)
       req = build_request(:list_entity_recognizers, params)
       req.send_request(options)
     end
@@ -2266,9 +2266,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEventsDetectionJobs AWS API Documentation
     #
-    # @overload list_events_detection_jobs(params = {})
+    # @overload list_events_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_events_detection_jobs(params = {}, options = {})
+    def list_events_detection_jobs(params = {}, **options)
       req = build_request(:list_events_detection_jobs, params)
       req.send_request(options)
     end
@@ -2331,9 +2331,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListKeyPhrasesDetectionJobs AWS API Documentation
     #
-    # @overload list_key_phrases_detection_jobs(params = {})
+    # @overload list_key_phrases_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_key_phrases_detection_jobs(params = {}, options = {})
+    def list_key_phrases_detection_jobs(params = {}, **options)
       req = build_request(:list_key_phrases_detection_jobs, params)
       req.send_request(options)
     end
@@ -2393,9 +2393,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListPiiEntitiesDetectionJobs AWS API Documentation
     #
-    # @overload list_pii_entities_detection_jobs(params = {})
+    # @overload list_pii_entities_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_pii_entities_detection_jobs(params = {}, options = {})
+    def list_pii_entities_detection_jobs(params = {}, **options)
       req = build_request(:list_pii_entities_detection_jobs, params)
       req.send_request(options)
     end
@@ -2458,9 +2458,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListSentimentDetectionJobs AWS API Documentation
     #
-    # @overload list_sentiment_detection_jobs(params = {})
+    # @overload list_sentiment_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_sentiment_detection_jobs(params = {}, options = {})
+    def list_sentiment_detection_jobs(params = {}, **options)
       req = build_request(:list_sentiment_detection_jobs, params)
       req.send_request(options)
     end
@@ -2491,9 +2491,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2556,9 +2556,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListTopicsDetectionJobs AWS API Documentation
     #
-    # @overload list_topics_detection_jobs(params = {})
+    # @overload list_topics_detection_jobs(**params)
     # @param [Hash] params ({})
-    def list_topics_detection_jobs(params = {}, options = {})
+    def list_topics_detection_jobs(params = {}, **options)
       req = build_request(:list_topics_detection_jobs, params)
       req.send_request(options)
     end
@@ -2645,9 +2645,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartDocumentClassificationJob AWS API Documentation
     #
-    # @overload start_document_classification_job(params = {})
+    # @overload start_document_classification_job(**params)
     # @param [Hash] params ({})
-    def start_document_classification_job(params = {}, options = {})
+    def start_document_classification_job(params = {}, **options)
       req = build_request(:start_document_classification_job, params)
       req.send_request(options)
     end
@@ -2735,9 +2735,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartDominantLanguageDetectionJob AWS API Documentation
     #
-    # @overload start_dominant_language_detection_job(params = {})
+    # @overload start_dominant_language_detection_job(**params)
     # @param [Hash] params ({})
-    def start_dominant_language_detection_job(params = {}, options = {})
+    def start_dominant_language_detection_job(params = {}, **options)
       req = build_request(:start_dominant_language_detection_job, params)
       req.send_request(options)
     end
@@ -2842,9 +2842,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartEntitiesDetectionJob AWS API Documentation
     #
-    # @overload start_entities_detection_job(params = {})
+    # @overload start_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def start_entities_detection_job(params = {}, options = {})
+    def start_entities_detection_job(params = {}, **options)
       req = build_request(:start_entities_detection_job, params)
       req.send_request(options)
     end
@@ -2909,9 +2909,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartEventsDetectionJob AWS API Documentation
     #
-    # @overload start_events_detection_job(params = {})
+    # @overload start_events_detection_job(**params)
     # @param [Hash] params ({})
-    def start_events_detection_job(params = {}, options = {})
+    def start_events_detection_job(params = {}, **options)
       req = build_request(:start_events_detection_job, params)
       req.send_request(options)
     end
@@ -3004,9 +3004,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartKeyPhrasesDetectionJob AWS API Documentation
     #
-    # @overload start_key_phrases_detection_job(params = {})
+    # @overload start_key_phrases_detection_job(**params)
     # @param [Hash] params ({})
-    def start_key_phrases_detection_job(params = {}, options = {})
+    def start_key_phrases_detection_job(params = {}, **options)
       req = build_request(:start_key_phrases_detection_job, params)
       req.send_request(options)
     end
@@ -3085,9 +3085,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartPiiEntitiesDetectionJob AWS API Documentation
     #
-    # @overload start_pii_entities_detection_job(params = {})
+    # @overload start_pii_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def start_pii_entities_detection_job(params = {}, options = {})
+    def start_pii_entities_detection_job(params = {}, **options)
       req = build_request(:start_pii_entities_detection_job, params)
       req.send_request(options)
     end
@@ -3180,9 +3180,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartSentimentDetectionJob AWS API Documentation
     #
-    # @overload start_sentiment_detection_job(params = {})
+    # @overload start_sentiment_detection_job(**params)
     # @param [Hash] params ({})
-    def start_sentiment_detection_job(params = {}, options = {})
+    def start_sentiment_detection_job(params = {}, **options)
       req = build_request(:start_sentiment_detection_job, params)
       req.send_request(options)
     end
@@ -3276,9 +3276,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartTopicsDetectionJob AWS API Documentation
     #
-    # @overload start_topics_detection_job(params = {})
+    # @overload start_topics_detection_job(**params)
     # @param [Hash] params ({})
-    def start_topics_detection_job(params = {}, options = {})
+    def start_topics_detection_job(params = {}, **options)
       req = build_request(:start_topics_detection_job, params)
       req.send_request(options)
     end
@@ -3318,9 +3318,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopDominantLanguageDetectionJob AWS API Documentation
     #
-    # @overload stop_dominant_language_detection_job(params = {})
+    # @overload stop_dominant_language_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_dominant_language_detection_job(params = {}, options = {})
+    def stop_dominant_language_detection_job(params = {}, **options)
       req = build_request(:stop_dominant_language_detection_job, params)
       req.send_request(options)
     end
@@ -3360,9 +3360,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopEntitiesDetectionJob AWS API Documentation
     #
-    # @overload stop_entities_detection_job(params = {})
+    # @overload stop_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_entities_detection_job(params = {}, options = {})
+    def stop_entities_detection_job(params = {}, **options)
       req = build_request(:stop_entities_detection_job, params)
       req.send_request(options)
     end
@@ -3390,9 +3390,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopEventsDetectionJob AWS API Documentation
     #
-    # @overload stop_events_detection_job(params = {})
+    # @overload stop_events_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_events_detection_job(params = {}, options = {})
+    def stop_events_detection_job(params = {}, **options)
       req = build_request(:stop_events_detection_job, params)
       req.send_request(options)
     end
@@ -3432,9 +3432,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopKeyPhrasesDetectionJob AWS API Documentation
     #
-    # @overload stop_key_phrases_detection_job(params = {})
+    # @overload stop_key_phrases_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_key_phrases_detection_job(params = {}, options = {})
+    def stop_key_phrases_detection_job(params = {}, **options)
       req = build_request(:stop_key_phrases_detection_job, params)
       req.send_request(options)
     end
@@ -3462,9 +3462,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopPiiEntitiesDetectionJob AWS API Documentation
     #
-    # @overload stop_pii_entities_detection_job(params = {})
+    # @overload stop_pii_entities_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_pii_entities_detection_job(params = {}, options = {})
+    def stop_pii_entities_detection_job(params = {}, **options)
       req = build_request(:stop_pii_entities_detection_job, params)
       req.send_request(options)
     end
@@ -3504,9 +3504,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopSentimentDetectionJob AWS API Documentation
     #
-    # @overload stop_sentiment_detection_job(params = {})
+    # @overload stop_sentiment_detection_job(**params)
     # @param [Hash] params ({})
-    def stop_sentiment_detection_job(params = {}, options = {})
+    def stop_sentiment_detection_job(params = {}, **options)
       req = build_request(:stop_sentiment_detection_job, params)
       req.send_request(options)
     end
@@ -3534,9 +3534,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopTrainingDocumentClassifier AWS API Documentation
     #
-    # @overload stop_training_document_classifier(params = {})
+    # @overload stop_training_document_classifier(**params)
     # @param [Hash] params ({})
-    def stop_training_document_classifier(params = {}, options = {})
+    def stop_training_document_classifier(params = {}, **options)
       req = build_request(:stop_training_document_classifier, params)
       req.send_request(options)
     end
@@ -3564,9 +3564,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopTrainingEntityRecognizer AWS API Documentation
     #
-    # @overload stop_training_entity_recognizer(params = {})
+    # @overload stop_training_entity_recognizer(**params)
     # @param [Hash] params ({})
-    def stop_training_entity_recognizer(params = {}, options = {})
+    def stop_training_entity_recognizer(params = {}, **options)
       req = build_request(:stop_training_entity_recognizer, params)
       req.send_request(options)
     end
@@ -3601,9 +3601,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3632,9 +3632,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3660,9 +3660,9 @@ module Aws::Comprehend
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/UpdateEndpoint AWS API Documentation
     #
-    # @overload update_endpoint(params = {})
+    # @overload update_endpoint(**params)
     # @param [Hash] params ({})
-    def update_endpoint(params = {}, options = {})
+    def update_endpoint(params = {}, **options)
       req = build_request(:update_endpoint, params)
       req.send_request(options)
     end
@@ -3671,7 +3671,7 @@ module Aws::Comprehend
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3679,15 +3679,15 @@ module Aws::Comprehend
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-comprehend'
-      context[:gem_version] = '1.42.0'
+      context[:gem_name] = "aws-sdk-comprehend"
+      context[:gem_version] = "1.42.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:imagebuilder)
 
@@ -280,7 +280,7 @@ module Aws::Imagebuilder
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -361,9 +361,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CancelImageCreation AWS API Documentation
     #
-    # @overload cancel_image_creation(params = {})
+    # @overload cancel_image_creation(**params)
     # @param [Hash] params ({})
-    def cancel_image_creation(params = {}, options = {})
+    def cancel_image_creation(params = {}, **options)
       req = build_request(:cancel_image_creation, params)
       req.send_request(options)
     end
@@ -450,9 +450,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CreateComponent AWS API Documentation
     #
-    # @overload create_component(params = {})
+    # @overload create_component(**params)
     # @param [Hash] params ({})
-    def create_component(params = {}, options = {})
+    def create_component(params = {}, **options)
       req = build_request(:create_component, params)
       req.send_request(options)
     end
@@ -522,9 +522,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CreateDistributionConfiguration AWS API Documentation
     #
-    # @overload create_distribution_configuration(params = {})
+    # @overload create_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def create_distribution_configuration(params = {}, options = {})
+    def create_distribution_configuration(params = {}, **options)
       req = build_request(:create_distribution_configuration, params)
       req.send_request(options)
     end
@@ -595,9 +595,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CreateImage AWS API Documentation
     #
-    # @overload create_image(params = {})
+    # @overload create_image(**params)
     # @param [Hash] params ({})
-    def create_image(params = {}, options = {})
+    def create_image(params = {}, **options)
       req = build_request(:create_image, params)
       req.send_request(options)
     end
@@ -686,9 +686,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CreateImagePipeline AWS API Documentation
     #
-    # @overload create_image_pipeline(params = {})
+    # @overload create_image_pipeline(**params)
     # @param [Hash] params ({})
-    def create_image_pipeline(params = {}, options = {})
+    def create_image_pipeline(params = {}, **options)
       req = build_request(:create_image_pipeline, params)
       req.send_request(options)
     end
@@ -782,9 +782,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CreateImageRecipe AWS API Documentation
     #
-    # @overload create_image_recipe(params = {})
+    # @overload create_image_recipe(**params)
     # @param [Hash] params ({})
-    def create_image_recipe(params = {}, options = {})
+    def create_image_recipe(params = {}, **options)
       req = build_request(:create_image_recipe, params)
       req.send_request(options)
     end
@@ -885,9 +885,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/CreateInfrastructureConfiguration AWS API Documentation
     #
-    # @overload create_infrastructure_configuration(params = {})
+    # @overload create_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def create_infrastructure_configuration(params = {}, options = {})
+    def create_infrastructure_configuration(params = {}, **options)
       req = build_request(:create_infrastructure_configuration, params)
       req.send_request(options)
     end
@@ -916,9 +916,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/DeleteComponent AWS API Documentation
     #
-    # @overload delete_component(params = {})
+    # @overload delete_component(**params)
     # @param [Hash] params ({})
-    def delete_component(params = {}, options = {})
+    def delete_component(params = {}, **options)
       req = build_request(:delete_component, params)
       req.send_request(options)
     end
@@ -947,9 +947,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/DeleteDistributionConfiguration AWS API Documentation
     #
-    # @overload delete_distribution_configuration(params = {})
+    # @overload delete_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def delete_distribution_configuration(params = {}, options = {})
+    def delete_distribution_configuration(params = {}, **options)
       req = build_request(:delete_distribution_configuration, params)
       req.send_request(options)
     end
@@ -977,9 +977,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/DeleteImage AWS API Documentation
     #
-    # @overload delete_image(params = {})
+    # @overload delete_image(**params)
     # @param [Hash] params ({})
-    def delete_image(params = {}, options = {})
+    def delete_image(params = {}, **options)
       req = build_request(:delete_image, params)
       req.send_request(options)
     end
@@ -1007,9 +1007,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/DeleteImagePipeline AWS API Documentation
     #
-    # @overload delete_image_pipeline(params = {})
+    # @overload delete_image_pipeline(**params)
     # @param [Hash] params ({})
-    def delete_image_pipeline(params = {}, options = {})
+    def delete_image_pipeline(params = {}, **options)
       req = build_request(:delete_image_pipeline, params)
       req.send_request(options)
     end
@@ -1037,9 +1037,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/DeleteImageRecipe AWS API Documentation
     #
-    # @overload delete_image_recipe(params = {})
+    # @overload delete_image_recipe(**params)
     # @param [Hash] params ({})
-    def delete_image_recipe(params = {}, options = {})
+    def delete_image_recipe(params = {}, **options)
       req = build_request(:delete_image_recipe, params)
       req.send_request(options)
     end
@@ -1068,9 +1068,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/DeleteInfrastructureConfiguration AWS API Documentation
     #
-    # @overload delete_infrastructure_configuration(params = {})
+    # @overload delete_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def delete_infrastructure_configuration(params = {}, options = {})
+    def delete_infrastructure_configuration(params = {}, **options)
       req = build_request(:delete_infrastructure_configuration, params)
       req.send_request(options)
     end
@@ -1114,9 +1114,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetComponent AWS API Documentation
     #
-    # @overload get_component(params = {})
+    # @overload get_component(**params)
     # @param [Hash] params ({})
-    def get_component(params = {}, options = {})
+    def get_component(params = {}, **options)
       req = build_request(:get_component, params)
       req.send_request(options)
     end
@@ -1145,9 +1145,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetComponentPolicy AWS API Documentation
     #
-    # @overload get_component_policy(params = {})
+    # @overload get_component_policy(**params)
     # @param [Hash] params ({})
-    def get_component_policy(params = {}, options = {})
+    def get_component_policy(params = {}, **options)
       req = build_request(:get_component_policy, params)
       req.send_request(options)
     end
@@ -1198,9 +1198,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetDistributionConfiguration AWS API Documentation
     #
-    # @overload get_distribution_configuration(params = {})
+    # @overload get_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def get_distribution_configuration(params = {}, options = {})
+    def get_distribution_configuration(params = {}, **options)
       req = build_request(:get_distribution_configuration, params)
       req.send_request(options)
     end
@@ -1317,9 +1317,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetImage AWS API Documentation
     #
-    # @overload get_image(params = {})
+    # @overload get_image(**params)
     # @param [Hash] params ({})
-    def get_image(params = {}, options = {})
+    def get_image(params = {}, **options)
       req = build_request(:get_image, params)
       req.send_request(options)
     end
@@ -1366,9 +1366,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetImagePipeline AWS API Documentation
     #
-    # @overload get_image_pipeline(params = {})
+    # @overload get_image_pipeline(**params)
     # @param [Hash] params ({})
-    def get_image_pipeline(params = {}, options = {})
+    def get_image_pipeline(params = {}, **options)
       req = build_request(:get_image_pipeline, params)
       req.send_request(options)
     end
@@ -1397,9 +1397,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetImagePolicy AWS API Documentation
     #
-    # @overload get_image_policy(params = {})
+    # @overload get_image_policy(**params)
     # @param [Hash] params ({})
-    def get_image_policy(params = {}, options = {})
+    def get_image_policy(params = {}, **options)
       req = build_request(:get_image_policy, params)
       req.send_request(options)
     end
@@ -1451,9 +1451,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetImageRecipe AWS API Documentation
     #
-    # @overload get_image_recipe(params = {})
+    # @overload get_image_recipe(**params)
     # @param [Hash] params ({})
-    def get_image_recipe(params = {}, options = {})
+    def get_image_recipe(params = {}, **options)
       req = build_request(:get_image_recipe, params)
       req.send_request(options)
     end
@@ -1482,9 +1482,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetImageRecipePolicy AWS API Documentation
     #
-    # @overload get_image_recipe_policy(params = {})
+    # @overload get_image_recipe_policy(**params)
     # @param [Hash] params ({})
-    def get_image_recipe_policy(params = {}, options = {})
+    def get_image_recipe_policy(params = {}, **options)
       req = build_request(:get_image_recipe_policy, params)
       req.send_request(options)
     end
@@ -1532,9 +1532,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetInfrastructureConfiguration AWS API Documentation
     #
-    # @overload get_infrastructure_configuration(params = {})
+    # @overload get_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def get_infrastructure_configuration(params = {}, options = {})
+    def get_infrastructure_configuration(params = {}, **options)
       req = build_request(:get_infrastructure_configuration, params)
       req.send_request(options)
     end
@@ -1623,9 +1623,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ImportComponent AWS API Documentation
     #
-    # @overload import_component(params = {})
+    # @overload import_component(**params)
     # @param [Hash] params ({})
-    def import_component(params = {}, options = {})
+    def import_component(params = {}, **options)
       req = build_request(:import_component, params)
       req.send_request(options)
     end
@@ -1681,9 +1681,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListComponentBuildVersions AWS API Documentation
     #
-    # @overload list_component_build_versions(params = {})
+    # @overload list_component_build_versions(**params)
     # @param [Hash] params ({})
-    def list_component_build_versions(params = {}, options = {})
+    def list_component_build_versions(params = {}, **options)
       req = build_request(:list_component_build_versions, params)
       req.send_request(options)
     end
@@ -1748,9 +1748,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListComponents AWS API Documentation
     #
-    # @overload list_components(params = {})
+    # @overload list_components(**params)
     # @param [Hash] params ({})
-    def list_components(params = {}, options = {})
+    def list_components(params = {}, **options)
       req = build_request(:list_components, params)
       req.send_request(options)
     end
@@ -1807,9 +1807,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListDistributionConfigurations AWS API Documentation
     #
-    # @overload list_distribution_configurations(params = {})
+    # @overload list_distribution_configurations(**params)
     # @param [Hash] params ({})
-    def list_distribution_configurations(params = {}, options = {})
+    def list_distribution_configurations(params = {}, **options)
       req = build_request(:list_distribution_configurations, params)
       req.send_request(options)
     end
@@ -1879,9 +1879,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImageBuildVersions AWS API Documentation
     #
-    # @overload list_image_build_versions(params = {})
+    # @overload list_image_build_versions(**params)
     # @param [Hash] params ({})
-    def list_image_build_versions(params = {}, options = {})
+    def list_image_build_versions(params = {}, **options)
       req = build_request(:list_image_build_versions, params)
       req.send_request(options)
     end
@@ -1951,9 +1951,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImagePipelineImages AWS API Documentation
     #
-    # @overload list_image_pipeline_images(params = {})
+    # @overload list_image_pipeline_images(**params)
     # @param [Hash] params ({})
-    def list_image_pipeline_images(params = {}, options = {})
+    def list_image_pipeline_images(params = {}, **options)
       req = build_request(:list_image_pipeline_images, params)
       req.send_request(options)
     end
@@ -2018,9 +2018,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImagePipelines AWS API Documentation
     #
-    # @overload list_image_pipelines(params = {})
+    # @overload list_image_pipelines(**params)
     # @param [Hash] params ({})
-    def list_image_pipelines(params = {}, options = {})
+    def list_image_pipelines(params = {}, **options)
       req = build_request(:list_image_pipelines, params)
       req.send_request(options)
     end
@@ -2082,9 +2082,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImageRecipes AWS API Documentation
     #
-    # @overload list_image_recipes(params = {})
+    # @overload list_image_recipes(**params)
     # @param [Hash] params ({})
-    def list_image_recipes(params = {}, options = {})
+    def list_image_recipes(params = {}, **options)
       req = build_request(:list_image_recipes, params)
       req.send_request(options)
     end
@@ -2145,9 +2145,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImages AWS API Documentation
     #
-    # @overload list_images(params = {})
+    # @overload list_images(**params)
     # @param [Hash] params ({})
-    def list_images(params = {}, options = {})
+    def list_images(params = {}, **options)
       req = build_request(:list_images, params)
       req.send_request(options)
     end
@@ -2202,9 +2202,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListInfrastructureConfigurations AWS API Documentation
     #
-    # @overload list_infrastructure_configurations(params = {})
+    # @overload list_infrastructure_configurations(**params)
     # @param [Hash] params ({})
-    def list_infrastructure_configurations(params = {}, options = {})
+    def list_infrastructure_configurations(params = {}, **options)
       req = build_request(:list_infrastructure_configurations, params)
       req.send_request(options)
     end
@@ -2232,9 +2232,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2276,9 +2276,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/PutComponentPolicy AWS API Documentation
     #
-    # @overload put_component_policy(params = {})
+    # @overload put_component_policy(**params)
     # @param [Hash] params ({})
-    def put_component_policy(params = {}, options = {})
+    def put_component_policy(params = {}, **options)
       req = build_request(:put_component_policy, params)
       req.send_request(options)
     end
@@ -2320,9 +2320,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/PutImagePolicy AWS API Documentation
     #
-    # @overload put_image_policy(params = {})
+    # @overload put_image_policy(**params)
     # @param [Hash] params ({})
-    def put_image_policy(params = {}, options = {})
+    def put_image_policy(params = {}, **options)
       req = build_request(:put_image_policy, params)
       req.send_request(options)
     end
@@ -2365,9 +2365,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/PutImageRecipePolicy AWS API Documentation
     #
-    # @overload put_image_recipe_policy(params = {})
+    # @overload put_image_recipe_policy(**params)
     # @param [Hash] params ({})
-    def put_image_recipe_policy(params = {}, options = {})
+    def put_image_recipe_policy(params = {}, **options)
       req = build_request(:put_image_recipe_policy, params)
       req.send_request(options)
     end
@@ -2405,9 +2405,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/StartImagePipelineExecution AWS API Documentation
     #
-    # @overload start_image_pipeline_execution(params = {})
+    # @overload start_image_pipeline_execution(**params)
     # @param [Hash] params ({})
-    def start_image_pipeline_execution(params = {}, options = {})
+    def start_image_pipeline_execution(params = {}, **options)
       req = build_request(:start_image_pipeline_execution, params)
       req.send_request(options)
     end
@@ -2433,9 +2433,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2459,9 +2459,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2526,9 +2526,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/UpdateDistributionConfiguration AWS API Documentation
     #
-    # @overload update_distribution_configuration(params = {})
+    # @overload update_distribution_configuration(**params)
     # @param [Hash] params ({})
-    def update_distribution_configuration(params = {}, options = {})
+    def update_distribution_configuration(params = {}, **options)
       req = build_request(:update_distribution_configuration, params)
       req.send_request(options)
     end
@@ -2612,9 +2612,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/UpdateImagePipeline AWS API Documentation
     #
-    # @overload update_image_pipeline(params = {})
+    # @overload update_image_pipeline(**params)
     # @param [Hash] params ({})
-    def update_image_pipeline(params = {}, options = {})
+    def update_image_pipeline(params = {}, **options)
       req = build_request(:update_image_pipeline, params)
       req.send_request(options)
     end
@@ -2709,9 +2709,9 @@ module Aws::Imagebuilder
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/UpdateInfrastructureConfiguration AWS API Documentation
     #
-    # @overload update_infrastructure_configuration(params = {})
+    # @overload update_infrastructure_configuration(**params)
     # @param [Hash] params ({})
-    def update_infrastructure_configuration(params = {}, options = {})
+    def update_infrastructure_configuration(params = {}, **options)
       req = build_request(:update_infrastructure_configuration, params)
       req.send_request(options)
     end
@@ -2720,7 +2720,7 @@ module Aws::Imagebuilder
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2728,15 +2728,15 @@ module Aws::Imagebuilder
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-imagebuilder'
-      context[:gem_version] = '1.16.0'
+      context[:gem_name] = "aws-sdk-imagebuilder"
+      context[:gem_version] = "1.16.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

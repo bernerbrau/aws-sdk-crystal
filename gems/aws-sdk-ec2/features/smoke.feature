@@ -8,11 +8,11 @@
 Feature: Smoke tests for EC2
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @ec2 @smoke
   Scenario: Call Aws::EC2::Client#describe_regions and expect it to succeed
-  When I call the operation 'describe_regions' with params:
+  When I call the operation "describe_regions" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @ec2 @smoke
   Scenario: Call Aws::Aws::EC2::Client#describe_instances and expect it to fail
-  When I call the operation 'describe_instances' with params:
+  When I call the operation "describe_instances" with params:
     """
 {"instance_ids":["i-12345678"]}
     """

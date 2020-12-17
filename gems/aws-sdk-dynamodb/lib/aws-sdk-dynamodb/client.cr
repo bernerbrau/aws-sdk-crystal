@@ -7,31 +7,31 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
-require 'aws-sdk-dynamodb/plugins/extended_retries.rb'
-require 'aws-sdk-dynamodb/plugins/simple_attributes.rb'
-require 'aws-sdk-dynamodb/plugins/crc32_validation.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
+require "aws-sdk-dynamodb/plugins/extended_retries.rb"
+require "aws-sdk-dynamodb/plugins/simple_attributes.rb"
+require "aws-sdk-dynamodb/plugins/crc32_validation.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:dynamodb)
 
@@ -309,7 +309,7 @@ module Aws::DynamoDB
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -389,9 +389,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/BatchExecuteStatement AWS API Documentation
     #
-    # @overload batch_execute_statement(params = {})
+    # @overload batch_execute_statement(**params)
     # @param [Hash] params ({})
-    def batch_execute_statement(params = {}, options = {})
+    def batch_execute_statement(params = {}, **options)
       req = build_request(:batch_execute_statement, params)
       req.send_request(options)
     end
@@ -672,9 +672,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/BatchGetItem AWS API Documentation
     #
-    # @overload batch_get_item(params = {})
+    # @overload batch_get_item(**params)
     # @param [Hash] params ({})
-    def batch_get_item(params = {}, options = {})
+    def batch_get_item(params = {}, **options)
       req = build_request(:batch_get_item, params)
       req.send_request(options)
     end
@@ -923,9 +923,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/BatchWriteItem AWS API Documentation
     #
-    # @overload batch_write_item(params = {})
+    # @overload batch_write_item(**params)
     # @param [Hash] params ({})
-    def batch_write_item(params = {}, options = {})
+    def batch_write_item(params = {}, **options)
       req = build_request(:batch_write_item, params)
       req.send_request(options)
     end
@@ -992,9 +992,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/CreateBackup AWS API Documentation
     #
-    # @overload create_backup(params = {})
+    # @overload create_backup(**params)
     # @param [Hash] params ({})
-    def create_backup(params = {}, options = {})
+    def create_backup(params = {}, **options)
       req = build_request(:create_backup, params)
       req.send_request(options)
     end
@@ -1092,9 +1092,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/CreateGlobalTable AWS API Documentation
     #
-    # @overload create_global_table(params = {})
+    # @overload create_global_table(**params)
     # @param [Hash] params ({})
-    def create_global_table(params = {}, options = {})
+    def create_global_table(params = {}, **options)
       req = build_request(:create_global_table, params)
       req.send_request(options)
     end
@@ -1544,9 +1544,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/CreateTable AWS API Documentation
     #
-    # @overload create_table(params = {})
+    # @overload create_table(**params)
     # @param [Hash] params ({})
-    def create_table(params = {}, options = {})
+    def create_table(params = {}, **options)
       req = build_request(:create_table, params)
       req.send_request(options)
     end
@@ -1618,9 +1618,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DeleteBackup AWS API Documentation
     #
-    # @overload delete_backup(params = {})
+    # @overload delete_backup(**params)
     # @param [Hash] params ({})
-    def delete_backup(params = {}, options = {})
+    def delete_backup(params = {}, **options)
       req = build_request(:delete_backup, params)
       req.send_request(options)
     end
@@ -1891,9 +1891,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DeleteItem AWS API Documentation
     #
-    # @overload delete_item(params = {})
+    # @overload delete_item(**params)
     # @param [Hash] params ({})
-    def delete_item(params = {}, options = {})
+    def delete_item(params = {}, **options)
       req = build_request(:delete_item, params)
       req.send_request(options)
     end
@@ -2039,9 +2039,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DeleteTable AWS API Documentation
     #
-    # @overload delete_table(params = {})
+    # @overload delete_table(**params)
     # @param [Hash] params ({})
-    def delete_table(params = {}, options = {})
+    def delete_table(params = {}, **options)
       req = build_request(:delete_table, params)
       req.send_request(options)
     end
@@ -2114,9 +2114,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeBackup AWS API Documentation
     #
-    # @overload describe_backup(params = {})
+    # @overload describe_backup(**params)
     # @param [Hash] params ({})
-    def describe_backup(params = {}, options = {})
+    def describe_backup(params = {}, **options)
       req = build_request(:describe_backup, params)
       req.send_request(options)
     end
@@ -2160,9 +2160,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeContinuousBackups AWS API Documentation
     #
-    # @overload describe_continuous_backups(params = {})
+    # @overload describe_continuous_backups(**params)
     # @param [Hash] params ({})
-    def describe_continuous_backups(params = {}, options = {})
+    def describe_continuous_backups(params = {}, **options)
       req = build_request(:describe_continuous_backups, params)
       req.send_request(options)
     end
@@ -2205,9 +2205,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeContributorInsights AWS API Documentation
     #
-    # @overload describe_contributor_insights(params = {})
+    # @overload describe_contributor_insights(**params)
     # @param [Hash] params ({})
-    def describe_contributor_insights(params = {}, options = {})
+    def describe_contributor_insights(params = {}, **options)
       req = build_request(:describe_contributor_insights, params)
       req.send_request(options)
     end
@@ -2226,9 +2226,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeEndpoints AWS API Documentation
     #
-    # @overload describe_endpoints(params = {})
+    # @overload describe_endpoints(**params)
     # @param [Hash] params ({})
-    def describe_endpoints(params = {}, options = {})
+    def describe_endpoints(params = {}, **options)
       req = build_request(:describe_endpoints, params)
       req.send_request(options)
     end
@@ -2272,9 +2272,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeExport AWS API Documentation
     #
-    # @overload describe_export(params = {})
+    # @overload describe_export(**params)
     # @param [Hash] params ({})
-    def describe_export(params = {}, options = {})
+    def describe_export(params = {}, **options)
       req = build_request(:describe_export, params)
       req.send_request(options)
     end
@@ -2326,9 +2326,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeGlobalTable AWS API Documentation
     #
-    # @overload describe_global_table(params = {})
+    # @overload describe_global_table(**params)
     # @param [Hash] params ({})
-    def describe_global_table(params = {}, options = {})
+    def describe_global_table(params = {}, **options)
       req = build_request(:describe_global_table, params)
       req.send_request(options)
     end
@@ -2416,9 +2416,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeGlobalTableSettings AWS API Documentation
     #
-    # @overload describe_global_table_settings(params = {})
+    # @overload describe_global_table_settings(**params)
     # @param [Hash] params ({})
-    def describe_global_table_settings(params = {}, options = {})
+    def describe_global_table_settings(params = {}, **options)
       req = build_request(:describe_global_table_settings, params)
       req.send_request(options)
     end
@@ -2449,9 +2449,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeKinesisStreamingDestination AWS API Documentation
     #
-    # @overload describe_kinesis_streaming_destination(params = {})
+    # @overload describe_kinesis_streaming_destination(**params)
     # @param [Hash] params ({})
-    def describe_kinesis_streaming_destination(params = {}, options = {})
+    def describe_kinesis_streaming_destination(params = {}, **options)
       req = build_request(:describe_kinesis_streaming_destination, params)
       req.send_request(options)
     end
@@ -2558,9 +2558,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeLimits AWS API Documentation
     #
-    # @overload describe_limits(params = {})
+    # @overload describe_limits(**params)
     # @param [Hash] params ({})
-    def describe_limits(params = {}, options = {})
+    def describe_limits(params = {}, **options)
       req = build_request(:describe_limits, params)
       req.send_request(options)
     end
@@ -2723,9 +2723,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeTable AWS API Documentation
     #
-    # @overload describe_table(params = {})
+    # @overload describe_table(**params)
     # @param [Hash] params ({})
-    def describe_table(params = {}, options = {})
+    def describe_table(params = {}, **options)
       req = build_request(:describe_table, params)
       req.send_request(options)
     end
@@ -2808,9 +2808,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeTableReplicaAutoScaling AWS API Documentation
     #
-    # @overload describe_table_replica_auto_scaling(params = {})
+    # @overload describe_table_replica_auto_scaling(**params)
     # @param [Hash] params ({})
-    def describe_table_replica_auto_scaling(params = {}, options = {})
+    def describe_table_replica_auto_scaling(params = {}, **options)
       req = build_request(:describe_table_replica_auto_scaling, params)
       req.send_request(options)
     end
@@ -2838,9 +2838,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeTimeToLive AWS API Documentation
     #
-    # @overload describe_time_to_live(params = {})
+    # @overload describe_time_to_live(**params)
     # @param [Hash] params ({})
-    def describe_time_to_live(params = {}, options = {})
+    def describe_time_to_live(params = {}, **options)
       req = build_request(:describe_time_to_live, params)
       req.send_request(options)
     end
@@ -2875,9 +2875,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DisableKinesisStreamingDestination AWS API Documentation
     #
-    # @overload disable_kinesis_streaming_destination(params = {})
+    # @overload disable_kinesis_streaming_destination(**params)
     # @param [Hash] params ({})
-    def disable_kinesis_streaming_destination(params = {}, options = {})
+    def disable_kinesis_streaming_destination(params = {}, **options)
       req = build_request(:disable_kinesis_streaming_destination, params)
       req.send_request(options)
     end
@@ -2915,9 +2915,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/EnableKinesisStreamingDestination AWS API Documentation
     #
-    # @overload enable_kinesis_streaming_destination(params = {})
+    # @overload enable_kinesis_streaming_destination(**params)
     # @param [Hash] params ({})
-    def enable_kinesis_streaming_destination(params = {}, options = {})
+    def enable_kinesis_streaming_destination(params = {}, **options)
       req = build_request(:enable_kinesis_streaming_destination, params)
       req.send_request(options)
     end
@@ -2963,9 +2963,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ExecuteStatement AWS API Documentation
     #
-    # @overload execute_statement(params = {})
+    # @overload execute_statement(**params)
     # @param [Hash] params ({})
-    def execute_statement(params = {}, options = {})
+    def execute_statement(params = {}, **options)
       req = build_request(:execute_statement, params)
       req.send_request(options)
     end
@@ -3007,9 +3007,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ExecuteTransaction AWS API Documentation
     #
-    # @overload execute_transaction(params = {})
+    # @overload execute_transaction(**params)
     # @param [Hash] params ({})
-    def execute_transaction(params = {}, options = {})
+    def execute_transaction(params = {}, **options)
       req = build_request(:execute_transaction, params)
       req.send_request(options)
     end
@@ -3112,9 +3112,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ExportTableToPointInTime AWS API Documentation
     #
-    # @overload export_table_to_point_in_time(params = {})
+    # @overload export_table_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def export_table_to_point_in_time(params = {}, options = {})
+    def export_table_to_point_in_time(params = {}, **options)
       req = build_request(:export_table_to_point_in_time, params)
       req.send_request(options)
     end
@@ -3307,9 +3307,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/GetItem AWS API Documentation
     #
-    # @overload get_item(params = {})
+    # @overload get_item(**params)
     # @param [Hash] params ({})
-    def get_item(params = {}, options = {})
+    def get_item(params = {}, **options)
       req = build_request(:get_item, params)
       req.send_request(options)
     end
@@ -3390,9 +3390,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListBackups AWS API Documentation
     #
-    # @overload list_backups(params = {})
+    # @overload list_backups(**params)
     # @param [Hash] params ({})
-    def list_backups(params = {}, options = {})
+    def list_backups(params = {}, **options)
       req = build_request(:list_backups, params)
       req.send_request(options)
     end
@@ -3434,9 +3434,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListContributorInsights AWS API Documentation
     #
-    # @overload list_contributor_insights(params = {})
+    # @overload list_contributor_insights(**params)
     # @param [Hash] params ({})
-    def list_contributor_insights(params = {}, options = {})
+    def list_contributor_insights(params = {}, **options)
       req = build_request(:list_contributor_insights, params)
       req.send_request(options)
     end
@@ -3478,9 +3478,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListExports AWS API Documentation
     #
-    # @overload list_exports(params = {})
+    # @overload list_exports(**params)
     # @param [Hash] params ({})
-    def list_exports(params = {}, options = {})
+    def list_exports(params = {}, **options)
       req = build_request(:list_exports, params)
       req.send_request(options)
     end
@@ -3535,9 +3535,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListGlobalTables AWS API Documentation
     #
-    # @overload list_global_tables(params = {})
+    # @overload list_global_tables(**params)
     # @param [Hash] params ({})
-    def list_global_tables(params = {}, options = {})
+    def list_global_tables(params = {}, **options)
       req = build_request(:list_global_tables, params)
       req.send_request(options)
     end
@@ -3595,9 +3595,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListTables AWS API Documentation
     #
-    # @overload list_tables(params = {})
+    # @overload list_tables(**params)
     # @param [Hash] params ({})
-    def list_tables(params = {}, options = {})
+    def list_tables(params = {}, **options)
       req = build_request(:list_tables, params)
       req.send_request(options)
     end
@@ -3642,9 +3642,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListTagsOfResource AWS API Documentation
     #
-    # @overload list_tags_of_resource(params = {})
+    # @overload list_tags_of_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_of_resource(params = {}, options = {})
+    def list_tags_of_resource(params = {}, **options)
       req = build_request(:list_tags_of_resource, params)
       req.send_request(options)
     end
@@ -3988,9 +3988,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/PutItem AWS API Documentation
     #
-    # @overload put_item(params = {})
+    # @overload put_item(**params)
     # @param [Hash] params ({})
-    def put_item(params = {}, options = {})
+    def put_item(params = {}, **options)
       req = build_request(:put_item, params)
       req.send_request(options)
     end
@@ -4522,9 +4522,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/Query AWS API Documentation
     #
-    # @overload query(params = {})
+    # @overload query(**params)
     # @param [Hash] params ({})
-    def query(params = {}, options = {})
+    def query(params = {}, **options)
       req = build_request(:query, params)
       req.send_request(options)
     end
@@ -4711,9 +4711,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/RestoreTableFromBackup AWS API Documentation
     #
-    # @overload restore_table_from_backup(params = {})
+    # @overload restore_table_from_backup(**params)
     # @param [Hash] params ({})
-    def restore_table_from_backup(params = {}, options = {})
+    def restore_table_from_backup(params = {}, **options)
       req = build_request(:restore_table_from_backup, params)
       req.send_request(options)
     end
@@ -4934,9 +4934,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/RestoreTableToPointInTime AWS API Documentation
     #
-    # @overload restore_table_to_point_in_time(params = {})
+    # @overload restore_table_to_point_in_time(**params)
     # @param [Hash] params ({})
-    def restore_table_to_point_in_time(params = {}, options = {})
+    def restore_table_to_point_in_time(params = {}, **options)
       req = build_request(:restore_table_to_point_in_time, params)
       req.send_request(options)
     end
@@ -5376,9 +5376,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/Scan AWS API Documentation
     #
-    # @overload scan(params = {})
+    # @overload scan(**params)
     # @param [Hash] params ({})
-    def scan(params = {}, options = {})
+    def scan(params = {}, **options)
       req = build_request(:scan, params)
       req.send_request(options)
     end
@@ -5418,9 +5418,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5506,9 +5506,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/TransactGetItems AWS API Documentation
     #
-    # @overload transact_get_items(params = {})
+    # @overload transact_get_items(**params)
     # @param [Hash] params ({})
-    def transact_get_items(params = {}, options = {})
+    def transact_get_items(params = {}, **options)
       req = build_request(:transact_get_items, params)
       req.send_request(options)
     end
@@ -5728,9 +5728,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/TransactWriteItems AWS API Documentation
     #
-    # @overload transact_write_items(params = {})
+    # @overload transact_write_items(**params)
     # @param [Hash] params ({})
-    def transact_write_items(params = {}, options = {})
+    def transact_write_items(params = {}, **options)
       req = build_request(:transact_write_items, params)
       req.send_request(options)
     end
@@ -5764,9 +5764,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5814,9 +5814,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateContinuousBackups AWS API Documentation
     #
-    # @overload update_continuous_backups(params = {})
+    # @overload update_continuous_backups(**params)
     # @param [Hash] params ({})
-    def update_continuous_backups(params = {}, options = {})
+    def update_continuous_backups(params = {}, **options)
       req = build_request(:update_continuous_backups, params)
       req.send_request(options)
     end
@@ -5855,9 +5855,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateContributorInsights AWS API Documentation
     #
-    # @overload update_contributor_insights(params = {})
+    # @overload update_contributor_insights(**params)
     # @param [Hash] params ({})
-    def update_contributor_insights(params = {}, options = {})
+    def update_contributor_insights(params = {}, **options)
       req = build_request(:update_contributor_insights, params)
       req.send_request(options)
     end
@@ -5932,9 +5932,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateGlobalTable AWS API Documentation
     #
-    # @overload update_global_table(params = {})
+    # @overload update_global_table(**params)
     # @param [Hash] params ({})
-    def update_global_table(params = {}, options = {})
+    def update_global_table(params = {}, **options)
       req = build_request(:update_global_table, params)
       req.send_request(options)
     end
@@ -6127,9 +6127,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateGlobalTableSettings AWS API Documentation
     #
-    # @overload update_global_table_settings(params = {})
+    # @overload update_global_table_settings(**params)
     # @param [Hash] params ({})
-    def update_global_table_settings(params = {}, options = {})
+    def update_global_table_settings(params = {}, **options)
       req = build_request(:update_global_table_settings, params)
       req.send_request(options)
     end
@@ -6521,9 +6521,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateItem AWS API Documentation
     #
-    # @overload update_item(params = {})
+    # @overload update_item(**params)
     # @param [Hash] params ({})
-    def update_item(params = {}, options = {})
+    def update_item(params = {}, **options)
       req = build_request(:update_item, params)
       req.send_request(options)
     end
@@ -6858,9 +6858,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateTable AWS API Documentation
     #
-    # @overload update_table(params = {})
+    # @overload update_table(**params)
     # @param [Hash] params ({})
-    def update_table(params = {}, options = {})
+    def update_table(params = {}, **options)
       req = build_request(:update_table, params)
       req.send_request(options)
     end
@@ -7029,9 +7029,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateTableReplicaAutoScaling AWS API Documentation
     #
-    # @overload update_table_replica_auto_scaling(params = {})
+    # @overload update_table_replica_auto_scaling(**params)
     # @param [Hash] params ({})
-    def update_table_replica_auto_scaling(params = {}, options = {})
+    def update_table_replica_auto_scaling(params = {}, **options)
       req = build_request(:update_table_replica_auto_scaling, params)
       req.send_request(options)
     end
@@ -7101,9 +7101,9 @@ module Aws::DynamoDB
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateTimeToLive AWS API Documentation
     #
-    # @overload update_time_to_live(params = {})
+    # @overload update_time_to_live(**params)
     # @param [Hash] params ({})
-    def update_time_to_live(params = {}, options = {})
+    def update_time_to_live(params = {}, **options)
       req = build_request(:update_time_to_live, params)
       req.send_request(options)
     end
@@ -7112,7 +7112,7 @@ module Aws::DynamoDB
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -7120,8 +7120,8 @@ module Aws::DynamoDB
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-dynamodb'
-      context[:gem_version] = '1.58.0'
+      context[:gem_name] = "aws-sdk-dynamodb"
+      context[:gem_version] = "1.58.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -7214,7 +7214,7 @@ module Aws::DynamoDB
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -7230,7 +7230,7 @@ module Aws::DynamoDB
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

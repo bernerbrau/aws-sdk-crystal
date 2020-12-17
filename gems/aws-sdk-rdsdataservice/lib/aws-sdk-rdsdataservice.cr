@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-rdsdataservice/types'
-require_relative 'aws-sdk-rdsdataservice/client_api'
-require_relative 'aws-sdk-rdsdataservice/client'
-require_relative 'aws-sdk-rdsdataservice/errors'
-require_relative 'aws-sdk-rdsdataservice/resource'
-require_relative 'aws-sdk-rdsdataservice/customizations'
+require_relative "aws-sdk-rdsdataservice/types"
+require_relative "aws-sdk-rdsdataservice/client_api"
+require_relative "aws-sdk-rdsdataservice/client"
+require_relative "aws-sdk-rdsdataservice/errors"
+require_relative "aws-sdk-rdsdataservice/resource"
+require_relative "aws-sdk-rdsdataservice/customizations"
 
 # This module provides support for AWS RDS DataService. This module is available in the
 # `aws-sdk-rdsdataservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-rdsdataservice/customizations'
 # @!group service
 module Aws::RDSDataService
 
-  GEM_VERSION = '1.23.0'
+  GEM_VERSION = "1.23.0"
 
 end

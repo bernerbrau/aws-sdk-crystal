@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:directconnect)
 
@@ -290,7 +290,7 @@ module Aws::DirectConnect
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -397,9 +397,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AcceptDirectConnectGatewayAssociationProposal AWS API Documentation
     #
-    # @overload accept_direct_connect_gateway_association_proposal(params = {})
+    # @overload accept_direct_connect_gateway_association_proposal(**params)
     # @param [Hash] params ({})
-    def accept_direct_connect_gateway_association_proposal(params = {}, options = {})
+    def accept_direct_connect_gateway_association_proposal(params = {}, **options)
       req = build_request(:accept_direct_connect_gateway_association_proposal, params)
       req.send_request(options)
     end
@@ -490,9 +490,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AllocateConnectionOnInterconnect AWS API Documentation
     #
-    # @overload allocate_connection_on_interconnect(params = {})
+    # @overload allocate_connection_on_interconnect(**params)
     # @param [Hash] params ({})
-    def allocate_connection_on_interconnect(params = {}, options = {})
+    def allocate_connection_on_interconnect(params = {}, **options)
       req = build_request(:allocate_connection_on_interconnect, params)
       req.send_request(options)
     end
@@ -592,9 +592,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AllocateHostedConnection AWS API Documentation
     #
-    # @overload allocate_hosted_connection(params = {})
+    # @overload allocate_hosted_connection(**params)
     # @param [Hash] params ({})
-    def allocate_hosted_connection(params = {}, options = {})
+    def allocate_hosted_connection(params = {}, **options)
       req = build_request(:allocate_hosted_connection, params)
       req.send_request(options)
     end
@@ -708,9 +708,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AllocatePrivateVirtualInterface AWS API Documentation
     #
-    # @overload allocate_private_virtual_interface(params = {})
+    # @overload allocate_private_virtual_interface(**params)
     # @param [Hash] params ({})
-    def allocate_private_virtual_interface(params = {}, options = {})
+    def allocate_private_virtual_interface(params = {}, **options)
       req = build_request(:allocate_private_virtual_interface, params)
       req.send_request(options)
     end
@@ -836,9 +836,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AllocatePublicVirtualInterface AWS API Documentation
     #
-    # @overload allocate_public_virtual_interface(params = {})
+    # @overload allocate_public_virtual_interface(**params)
     # @param [Hash] params ({})
-    def allocate_public_virtual_interface(params = {}, options = {})
+    def allocate_public_virtual_interface(params = {}, **options)
       req = build_request(:allocate_public_virtual_interface, params)
       req.send_request(options)
     end
@@ -933,9 +933,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AllocateTransitVirtualInterface AWS API Documentation
     #
-    # @overload allocate_transit_virtual_interface(params = {})
+    # @overload allocate_transit_virtual_interface(**params)
     # @param [Hash] params ({})
-    def allocate_transit_virtual_interface(params = {}, options = {})
+    def allocate_transit_virtual_interface(params = {}, **options)
       req = build_request(:allocate_transit_virtual_interface, params)
       req.send_request(options)
     end
@@ -1017,9 +1017,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AssociateConnectionWithLag AWS API Documentation
     #
-    # @overload associate_connection_with_lag(params = {})
+    # @overload associate_connection_with_lag(**params)
     # @param [Hash] params ({})
-    def associate_connection_with_lag(params = {}, options = {})
+    def associate_connection_with_lag(params = {}, **options)
       req = build_request(:associate_connection_with_lag, params)
       req.send_request(options)
     end
@@ -1091,9 +1091,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AssociateHostedConnection AWS API Documentation
     #
-    # @overload associate_hosted_connection(params = {})
+    # @overload associate_hosted_connection(**params)
     # @param [Hash] params ({})
-    def associate_hosted_connection(params = {}, options = {})
+    def associate_hosted_connection(params = {}, **options)
       req = build_request(:associate_hosted_connection, params)
       req.send_request(options)
     end
@@ -1195,9 +1195,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/AssociateVirtualInterface AWS API Documentation
     #
-    # @overload associate_virtual_interface(params = {})
+    # @overload associate_virtual_interface(**params)
     # @param [Hash] params ({})
-    def associate_virtual_interface(params = {}, options = {})
+    def associate_virtual_interface(params = {}, **options)
       req = build_request(:associate_virtual_interface, params)
       req.send_request(options)
     end
@@ -1228,9 +1228,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ConfirmConnection AWS API Documentation
     #
-    # @overload confirm_connection(params = {})
+    # @overload confirm_connection(**params)
     # @param [Hash] params ({})
-    def confirm_connection(params = {}, options = {})
+    def confirm_connection(params = {}, **options)
       req = build_request(:confirm_connection, params)
       req.send_request(options)
     end
@@ -1270,9 +1270,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ConfirmPrivateVirtualInterface AWS API Documentation
     #
-    # @overload confirm_private_virtual_interface(params = {})
+    # @overload confirm_private_virtual_interface(**params)
     # @param [Hash] params ({})
-    def confirm_private_virtual_interface(params = {}, options = {})
+    def confirm_private_virtual_interface(params = {}, **options)
       req = build_request(:confirm_private_virtual_interface, params)
       req.send_request(options)
     end
@@ -1302,9 +1302,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ConfirmPublicVirtualInterface AWS API Documentation
     #
-    # @overload confirm_public_virtual_interface(params = {})
+    # @overload confirm_public_virtual_interface(**params)
     # @param [Hash] params ({})
-    def confirm_public_virtual_interface(params = {}, options = {})
+    def confirm_public_virtual_interface(params = {}, **options)
       req = build_request(:confirm_public_virtual_interface, params)
       req.send_request(options)
     end
@@ -1339,9 +1339,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ConfirmTransitVirtualInterface AWS API Documentation
     #
-    # @overload confirm_transit_virtual_interface(params = {})
+    # @overload confirm_transit_virtual_interface(**params)
     # @param [Hash] params ({})
-    def confirm_transit_virtual_interface(params = {}, options = {})
+    def confirm_transit_virtual_interface(params = {}, **options)
       req = build_request(:confirm_transit_virtual_interface, params)
       req.send_request(options)
     end
@@ -1427,9 +1427,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateBGPPeer AWS API Documentation
     #
-    # @overload create_bgp_peer(params = {})
+    # @overload create_bgp_peer(**params)
     # @param [Hash] params ({})
-    def create_bgp_peer(params = {}, options = {})
+    def create_bgp_peer(params = {}, **options)
       req = build_request(:create_bgp_peer, params)
       req.send_request(options)
     end
@@ -1529,9 +1529,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateConnection AWS API Documentation
     #
-    # @overload create_connection(params = {})
+    # @overload create_connection(**params)
     # @param [Hash] params ({})
-    def create_connection(params = {}, options = {})
+    def create_connection(params = {}, **options)
       req = build_request(:create_connection, params)
       req.send_request(options)
     end
@@ -1576,9 +1576,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateDirectConnectGateway AWS API Documentation
     #
-    # @overload create_direct_connect_gateway(params = {})
+    # @overload create_direct_connect_gateway(**params)
     # @param [Hash] params ({})
-    def create_direct_connect_gateway(params = {}, options = {})
+    def create_direct_connect_gateway(params = {}, **options)
       req = build_request(:create_direct_connect_gateway, params)
       req.send_request(options)
     end
@@ -1645,9 +1645,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateDirectConnectGatewayAssociation AWS API Documentation
     #
-    # @overload create_direct_connect_gateway_association(params = {})
+    # @overload create_direct_connect_gateway_association(**params)
     # @param [Hash] params ({})
-    def create_direct_connect_gateway_association(params = {}, options = {})
+    def create_direct_connect_gateway_association(params = {}, **options)
       req = build_request(:create_direct_connect_gateway_association, params)
       req.send_request(options)
     end
@@ -1713,9 +1713,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateDirectConnectGatewayAssociationProposal AWS API Documentation
     #
-    # @overload create_direct_connect_gateway_association_proposal(params = {})
+    # @overload create_direct_connect_gateway_association_proposal(**params)
     # @param [Hash] params ({})
-    def create_direct_connect_gateway_association_proposal(params = {}, options = {})
+    def create_direct_connect_gateway_association_proposal(params = {}, **options)
       req = build_request(:create_direct_connect_gateway_association_proposal, params)
       req.send_request(options)
     end
@@ -1820,9 +1820,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateInterconnect AWS API Documentation
     #
-    # @overload create_interconnect(params = {})
+    # @overload create_interconnect(**params)
     # @param [Hash] params ({})
-    def create_interconnect(params = {}, options = {})
+    def create_interconnect(params = {}, **options)
       req = build_request(:create_interconnect, params)
       req.send_request(options)
     end
@@ -1968,9 +1968,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateLag AWS API Documentation
     #
-    # @overload create_lag(params = {})
+    # @overload create_lag(**params)
     # @param [Hash] params ({})
-    def create_lag(params = {}, options = {})
+    def create_lag(params = {}, **options)
       req = build_request(:create_lag, params)
       req.send_request(options)
     end
@@ -2091,9 +2091,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreatePrivateVirtualInterface AWS API Documentation
     #
-    # @overload create_private_virtual_interface(params = {})
+    # @overload create_private_virtual_interface(**params)
     # @param [Hash] params ({})
-    def create_private_virtual_interface(params = {}, options = {})
+    def create_private_virtual_interface(params = {}, **options)
       req = build_request(:create_private_virtual_interface, params)
       req.send_request(options)
     end
@@ -2206,9 +2206,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreatePublicVirtualInterface AWS API Documentation
     #
-    # @overload create_public_virtual_interface(params = {})
+    # @overload create_public_virtual_interface(**params)
     # @param [Hash] params ({})
-    def create_public_virtual_interface(params = {}, options = {})
+    def create_public_virtual_interface(params = {}, **options)
       req = build_request(:create_public_virtual_interface, params)
       req.send_request(options)
     end
@@ -2308,9 +2308,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/CreateTransitVirtualInterface AWS API Documentation
     #
-    # @overload create_transit_virtual_interface(params = {})
+    # @overload create_transit_virtual_interface(**params)
     # @param [Hash] params ({})
-    def create_transit_virtual_interface(params = {}, options = {})
+    def create_transit_virtual_interface(params = {}, **options)
       req = build_request(:create_transit_virtual_interface, params)
       req.send_request(options)
     end
@@ -2387,9 +2387,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteBGPPeer AWS API Documentation
     #
-    # @overload delete_bgp_peer(params = {})
+    # @overload delete_bgp_peer(**params)
     # @param [Hash] params ({})
-    def delete_bgp_peer(params = {}, options = {})
+    def delete_bgp_peer(params = {}, **options)
       req = build_request(:delete_bgp_peer, params)
       req.send_request(options)
     end
@@ -2454,9 +2454,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteConnection AWS API Documentation
     #
-    # @overload delete_connection(params = {})
+    # @overload delete_connection(**params)
     # @param [Hash] params ({})
-    def delete_connection(params = {}, options = {})
+    def delete_connection(params = {}, **options)
       req = build_request(:delete_connection, params)
       req.send_request(options)
     end
@@ -2490,9 +2490,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteDirectConnectGateway AWS API Documentation
     #
-    # @overload delete_direct_connect_gateway(params = {})
+    # @overload delete_direct_connect_gateway(**params)
     # @param [Hash] params ({})
-    def delete_direct_connect_gateway(params = {}, options = {})
+    def delete_direct_connect_gateway(params = {}, **options)
       req = build_request(:delete_direct_connect_gateway, params)
       req.send_request(options)
     end
@@ -2545,9 +2545,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteDirectConnectGatewayAssociation AWS API Documentation
     #
-    # @overload delete_direct_connect_gateway_association(params = {})
+    # @overload delete_direct_connect_gateway_association(**params)
     # @param [Hash] params ({})
-    def delete_direct_connect_gateway_association(params = {}, options = {})
+    def delete_direct_connect_gateway_association(params = {}, **options)
       req = build_request(:delete_direct_connect_gateway_association, params)
       req.send_request(options)
     end
@@ -2585,9 +2585,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteDirectConnectGatewayAssociationProposal AWS API Documentation
     #
-    # @overload delete_direct_connect_gateway_association_proposal(params = {})
+    # @overload delete_direct_connect_gateway_association_proposal(**params)
     # @param [Hash] params ({})
-    def delete_direct_connect_gateway_association_proposal(params = {}, options = {})
+    def delete_direct_connect_gateway_association_proposal(params = {}, **options)
       req = build_request(:delete_direct_connect_gateway_association_proposal, params)
       req.send_request(options)
     end
@@ -2617,9 +2617,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteInterconnect AWS API Documentation
     #
-    # @overload delete_interconnect(params = {})
+    # @overload delete_interconnect(**params)
     # @param [Hash] params ({})
-    def delete_interconnect(params = {}, options = {})
+    def delete_interconnect(params = {}, **options)
       req = build_request(:delete_interconnect, params)
       req.send_request(options)
     end
@@ -2699,9 +2699,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteLag AWS API Documentation
     #
-    # @overload delete_lag(params = {})
+    # @overload delete_lag(**params)
     # @param [Hash] params ({})
-    def delete_lag(params = {}, options = {})
+    def delete_lag(params = {}, **options)
       req = build_request(:delete_lag, params)
       req.send_request(options)
     end
@@ -2727,9 +2727,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DeleteVirtualInterface AWS API Documentation
     #
-    # @overload delete_virtual_interface(params = {})
+    # @overload delete_virtual_interface(**params)
     # @param [Hash] params ({})
-    def delete_virtual_interface(params = {}, options = {})
+    def delete_virtual_interface(params = {}, **options)
       req = build_request(:delete_virtual_interface, params)
       req.send_request(options)
     end
@@ -2780,9 +2780,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeConnectionLoa AWS API Documentation
     #
-    # @overload describe_connection_loa(params = {})
+    # @overload describe_connection_loa(**params)
     # @param [Hash] params ({})
-    def describe_connection_loa(params = {}, options = {})
+    def describe_connection_loa(params = {}, **options)
       req = build_request(:describe_connection_loa, params)
       req.send_request(options)
     end
@@ -2827,9 +2827,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeConnections AWS API Documentation
     #
-    # @overload describe_connections(params = {})
+    # @overload describe_connections(**params)
     # @param [Hash] params ({})
-    def describe_connections(params = {}, options = {})
+    def describe_connections(params = {}, **options)
       req = build_request(:describe_connections, params)
       req.send_request(options)
     end
@@ -2881,9 +2881,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeConnectionsOnInterconnect AWS API Documentation
     #
-    # @overload describe_connections_on_interconnect(params = {})
+    # @overload describe_connections_on_interconnect(**params)
     # @param [Hash] params ({})
-    def describe_connections_on_interconnect(params = {}, options = {})
+    def describe_connections_on_interconnect(params = {}, **options)
       req = build_request(:describe_connections_on_interconnect, params)
       req.send_request(options)
     end
@@ -2946,9 +2946,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeDirectConnectGatewayAssociationProposals AWS API Documentation
     #
-    # @overload describe_direct_connect_gateway_association_proposals(params = {})
+    # @overload describe_direct_connect_gateway_association_proposals(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateway_association_proposals(params = {}, options = {})
+    def describe_direct_connect_gateway_association_proposals(params = {}, **options)
       req = build_request(:describe_direct_connect_gateway_association_proposals, params)
       req.send_request(options)
     end
@@ -3023,9 +3023,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeDirectConnectGatewayAssociations AWS API Documentation
     #
-    # @overload describe_direct_connect_gateway_associations(params = {})
+    # @overload describe_direct_connect_gateway_associations(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateway_associations(params = {}, options = {})
+    def describe_direct_connect_gateway_associations(params = {}, **options)
       req = build_request(:describe_direct_connect_gateway_associations, params)
       req.send_request(options)
     end
@@ -3084,9 +3084,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeDirectConnectGatewayAttachments AWS API Documentation
     #
-    # @overload describe_direct_connect_gateway_attachments(params = {})
+    # @overload describe_direct_connect_gateway_attachments(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateway_attachments(params = {}, options = {})
+    def describe_direct_connect_gateway_attachments(params = {}, **options)
       req = build_request(:describe_direct_connect_gateway_attachments, params)
       req.send_request(options)
     end
@@ -3134,9 +3134,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeDirectConnectGateways AWS API Documentation
     #
-    # @overload describe_direct_connect_gateways(params = {})
+    # @overload describe_direct_connect_gateways(**params)
     # @param [Hash] params ({})
-    def describe_direct_connect_gateways(params = {}, options = {})
+    def describe_direct_connect_gateways(params = {}, **options)
       req = build_request(:describe_direct_connect_gateways, params)
       req.send_request(options)
     end
@@ -3186,9 +3186,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeHostedConnections AWS API Documentation
     #
-    # @overload describe_hosted_connections(params = {})
+    # @overload describe_hosted_connections(**params)
     # @param [Hash] params ({})
-    def describe_hosted_connections(params = {}, options = {})
+    def describe_hosted_connections(params = {}, **options)
       req = build_request(:describe_hosted_connections, params)
       req.send_request(options)
     end
@@ -3239,9 +3239,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeInterconnectLoa AWS API Documentation
     #
-    # @overload describe_interconnect_loa(params = {})
+    # @overload describe_interconnect_loa(**params)
     # @param [Hash] params ({})
-    def describe_interconnect_loa(params = {}, options = {})
+    def describe_interconnect_loa(params = {}, **options)
       req = build_request(:describe_interconnect_loa, params)
       req.send_request(options)
     end
@@ -3284,9 +3284,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeInterconnects AWS API Documentation
     #
-    # @overload describe_interconnects(params = {})
+    # @overload describe_interconnects(**params)
     # @param [Hash] params ({})
-    def describe_interconnects(params = {}, options = {})
+    def describe_interconnects(params = {}, **options)
       req = build_request(:describe_interconnects, params)
       req.send_request(options)
     end
@@ -3350,9 +3350,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeLags AWS API Documentation
     #
-    # @overload describe_lags(params = {})
+    # @overload describe_lags(**params)
     # @param [Hash] params ({})
-    def describe_lags(params = {}, options = {})
+    def describe_lags(params = {}, **options)
       req = build_request(:describe_lags, params)
       req.send_request(options)
     end
@@ -3403,9 +3403,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeLoa AWS API Documentation
     #
-    # @overload describe_loa(params = {})
+    # @overload describe_loa(**params)
     # @param [Hash] params ({})
-    def describe_loa(params = {}, options = {})
+    def describe_loa(params = {}, **options)
       req = build_request(:describe_loa, params)
       req.send_request(options)
     end
@@ -3431,9 +3431,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeLocations AWS API Documentation
     #
-    # @overload describe_locations(params = {})
+    # @overload describe_locations(**params)
     # @param [Hash] params ({})
-    def describe_locations(params = {}, options = {})
+    def describe_locations(params = {}, **options)
       req = build_request(:describe_locations, params)
       req.send_request(options)
     end
@@ -3464,9 +3464,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -3488,9 +3488,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeVirtualGateways AWS API Documentation
     #
-    # @overload describe_virtual_gateways(params = {})
+    # @overload describe_virtual_gateways(**params)
     # @param [Hash] params ({})
-    def describe_virtual_gateways(params = {}, options = {})
+    def describe_virtual_gateways(params = {}, **options)
       req = build_request(:describe_virtual_gateways, params)
       req.send_request(options)
     end
@@ -3563,9 +3563,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DescribeVirtualInterfaces AWS API Documentation
     #
-    # @overload describe_virtual_interfaces(params = {})
+    # @overload describe_virtual_interfaces(**params)
     # @param [Hash] params ({})
-    def describe_virtual_interfaces(params = {}, options = {})
+    def describe_virtual_interfaces(params = {}, **options)
       req = build_request(:describe_virtual_interfaces, params)
       req.send_request(options)
     end
@@ -3641,9 +3641,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/DisassociateConnectionFromLag AWS API Documentation
     #
-    # @overload disassociate_connection_from_lag(params = {})
+    # @overload disassociate_connection_from_lag(**params)
     # @param [Hash] params ({})
-    def disassociate_connection_from_lag(params = {}, options = {})
+    def disassociate_connection_from_lag(params = {}, **options)
       req = build_request(:disassociate_connection_from_lag, params)
       req.send_request(options)
     end
@@ -3706,9 +3706,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/ListVirtualInterfaceTestHistory AWS API Documentation
     #
-    # @overload list_virtual_interface_test_history(params = {})
+    # @overload list_virtual_interface_test_history(**params)
     # @param [Hash] params ({})
-    def list_virtual_interface_test_history(params = {}, options = {})
+    def list_virtual_interface_test_history(params = {}, **options)
       req = build_request(:list_virtual_interface_test_history, params)
       req.send_request(options)
     end
@@ -3772,9 +3772,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/StartBgpFailoverTest AWS API Documentation
     #
-    # @overload start_bgp_failover_test(params = {})
+    # @overload start_bgp_failover_test(**params)
     # @param [Hash] params ({})
-    def start_bgp_failover_test(params = {}, options = {})
+    def start_bgp_failover_test(params = {}, **options)
       req = build_request(:start_bgp_failover_test, params)
       req.send_request(options)
     end
@@ -3808,9 +3808,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/StopBgpFailoverTest AWS API Documentation
     #
-    # @overload stop_bgp_failover_test(params = {})
+    # @overload stop_bgp_failover_test(**params)
     # @param [Hash] params ({})
-    def stop_bgp_failover_test(params = {}, options = {})
+    def stop_bgp_failover_test(params = {}, **options)
       req = build_request(:stop_bgp_failover_test, params)
       req.send_request(options)
     end
@@ -3844,9 +3844,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3871,9 +3871,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3932,9 +3932,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/UpdateDirectConnectGatewayAssociation AWS API Documentation
     #
-    # @overload update_direct_connect_gateway_association(params = {})
+    # @overload update_direct_connect_gateway_association(**params)
     # @param [Hash] params ({})
-    def update_direct_connect_gateway_association(params = {}, options = {})
+    def update_direct_connect_gateway_association(params = {}, **options)
       req = build_request(:update_direct_connect_gateway_association, params)
       req.send_request(options)
     end
@@ -4037,9 +4037,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/UpdateLag AWS API Documentation
     #
-    # @overload update_lag(params = {})
+    # @overload update_lag(**params)
     # @param [Hash] params ({})
-    def update_lag(params = {}, options = {})
+    def update_lag(params = {}, **options)
       req = build_request(:update_lag, params)
       req.send_request(options)
     end
@@ -4138,9 +4138,9 @@ module Aws::DirectConnect
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/directconnect-2012-10-25/UpdateVirtualInterfaceAttributes AWS API Documentation
     #
-    # @overload update_virtual_interface_attributes(params = {})
+    # @overload update_virtual_interface_attributes(**params)
     # @param [Hash] params ({})
-    def update_virtual_interface_attributes(params = {}, options = {})
+    def update_virtual_interface_attributes(params = {}, **options)
       req = build_request(:update_virtual_interface_attributes, params)
       req.send_request(options)
     end
@@ -4149,7 +4149,7 @@ module Aws::DirectConnect
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4157,15 +4157,15 @@ module Aws::DirectConnect
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-directconnect'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-directconnect"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:codedeploy)
 
@@ -290,7 +290,7 @@ module Aws::CodeDeploy
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -364,9 +364,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/AddTagsToOnPremisesInstances AWS API Documentation
     #
-    # @overload add_tags_to_on_premises_instances(params = {})
+    # @overload add_tags_to_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def add_tags_to_on_premises_instances(params = {}, options = {})
+    def add_tags_to_on_premises_instances(params = {}, **options)
       req = build_request(:add_tags_to_on_premises_instances, params)
       req.send_request(options)
     end
@@ -445,9 +445,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetApplicationRevisions AWS API Documentation
     #
-    # @overload batch_get_application_revisions(params = {})
+    # @overload batch_get_application_revisions(**params)
     # @param [Hash] params ({})
-    def batch_get_application_revisions(params = {}, options = {})
+    def batch_get_application_revisions(params = {}, **options)
       req = build_request(:batch_get_application_revisions, params)
       req.send_request(options)
     end
@@ -481,9 +481,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetApplications AWS API Documentation
     #
-    # @overload batch_get_applications(params = {})
+    # @overload batch_get_applications(**params)
     # @param [Hash] params ({})
-    def batch_get_applications(params = {}, options = {})
+    def batch_get_applications(params = {}, **options)
       req = build_request(:batch_get_applications, params)
       req.send_request(options)
     end
@@ -596,9 +596,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetDeploymentGroups AWS API Documentation
     #
-    # @overload batch_get_deployment_groups(params = {})
+    # @overload batch_get_deployment_groups(**params)
     # @param [Hash] params ({})
-    def batch_get_deployment_groups(params = {}, options = {})
+    def batch_get_deployment_groups(params = {}, **options)
       req = build_request(:batch_get_deployment_groups, params)
       req.send_request(options)
     end
@@ -654,9 +654,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetDeploymentInstances AWS API Documentation
     #
-    # @overload batch_get_deployment_instances(params = {})
+    # @overload batch_get_deployment_instances(**params)
     # @param [Hash] params ({})
-    def batch_get_deployment_instances(params = {}, options = {})
+    def batch_get_deployment_instances(params = {}, **options)
       req = build_request(:batch_get_deployment_instances, params)
       req.send_request(options)
     end
@@ -793,9 +793,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetDeploymentTargets AWS API Documentation
     #
-    # @overload batch_get_deployment_targets(params = {})
+    # @overload batch_get_deployment_targets(**params)
     # @param [Hash] params ({})
-    def batch_get_deployment_targets(params = {}, options = {})
+    def batch_get_deployment_targets(params = {}, **options)
       req = build_request(:batch_get_deployment_targets, params)
       req.send_request(options)
     end
@@ -909,9 +909,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetDeployments AWS API Documentation
     #
-    # @overload batch_get_deployments(params = {})
+    # @overload batch_get_deployments(**params)
     # @param [Hash] params ({})
-    def batch_get_deployments(params = {}, options = {})
+    def batch_get_deployments(params = {}, **options)
       req = build_request(:batch_get_deployments, params)
       req.send_request(options)
     end
@@ -948,9 +948,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/BatchGetOnPremisesInstances AWS API Documentation
     #
-    # @overload batch_get_on_premises_instances(params = {})
+    # @overload batch_get_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def batch_get_on_premises_instances(params = {}, options = {})
+    def batch_get_on_premises_instances(params = {}, **options)
       req = build_request(:batch_get_on_premises_instances, params)
       req.send_request(options)
     end
@@ -983,9 +983,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ContinueDeployment AWS API Documentation
     #
-    # @overload continue_deployment(params = {})
+    # @overload continue_deployment(**params)
     # @param [Hash] params ({})
-    def continue_deployment(params = {}, options = {})
+    def continue_deployment(params = {}, **options)
       req = build_request(:continue_deployment, params)
       req.send_request(options)
     end
@@ -1028,9 +1028,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/CreateApplication AWS API Documentation
     #
-    # @overload create_application(params = {})
+    # @overload create_application(**params)
     # @param [Hash] params ({})
-    def create_application(params = {}, options = {})
+    def create_application(params = {}, **options)
       req = build_request(:create_application, params)
       req.send_request(options)
     end
@@ -1186,9 +1186,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/CreateDeployment AWS API Documentation
     #
-    # @overload create_deployment(params = {})
+    # @overload create_deployment(**params)
     # @param [Hash] params ({})
-    def create_deployment(params = {}, options = {})
+    def create_deployment(params = {}, **options)
       req = build_request(:create_deployment, params)
       req.send_request(options)
     end
@@ -1258,9 +1258,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/CreateDeploymentConfig AWS API Documentation
     #
-    # @overload create_deployment_config(params = {})
+    # @overload create_deployment_config(**params)
     # @param [Hash] params ({})
-    def create_deployment_config(params = {}, options = {})
+    def create_deployment_config(params = {}, **options)
       req = build_request(:create_deployment_config, params)
       req.send_request(options)
     end
@@ -1493,9 +1493,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/CreateDeploymentGroup AWS API Documentation
     #
-    # @overload create_deployment_group(params = {})
+    # @overload create_deployment_group(**params)
     # @param [Hash] params ({})
-    def create_deployment_group(params = {}, options = {})
+    def create_deployment_group(params = {}, **options)
       req = build_request(:create_deployment_group, params)
       req.send_request(options)
     end
@@ -1516,9 +1516,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/DeleteApplication AWS API Documentation
     #
-    # @overload delete_application(params = {})
+    # @overload delete_application(**params)
     # @param [Hash] params ({})
-    def delete_application(params = {}, options = {})
+    def delete_application(params = {}, **options)
       req = build_request(:delete_application, params)
       req.send_request(options)
     end
@@ -1544,9 +1544,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/DeleteDeploymentConfig AWS API Documentation
     #
-    # @overload delete_deployment_config(params = {})
+    # @overload delete_deployment_config(**params)
     # @param [Hash] params ({})
-    def delete_deployment_config(params = {}, options = {})
+    def delete_deployment_config(params = {}, **options)
       req = build_request(:delete_deployment_config, params)
       req.send_request(options)
     end
@@ -1579,9 +1579,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/DeleteDeploymentGroup AWS API Documentation
     #
-    # @overload delete_deployment_group(params = {})
+    # @overload delete_deployment_group(**params)
     # @param [Hash] params ({})
-    def delete_deployment_group(params = {}, options = {})
+    def delete_deployment_group(params = {}, **options)
       req = build_request(:delete_deployment_group, params)
       req.send_request(options)
     end
@@ -1607,9 +1607,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/DeleteGitHubAccountToken AWS API Documentation
     #
-    # @overload delete_git_hub_account_token(params = {})
+    # @overload delete_git_hub_account_token(**params)
     # @param [Hash] params ({})
-    def delete_git_hub_account_token(params = {}, options = {})
+    def delete_git_hub_account_token(params = {}, **options)
       req = build_request(:delete_git_hub_account_token, params)
       req.send_request(options)
     end
@@ -1630,9 +1630,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/DeleteResourcesByExternalId AWS API Documentation
     #
-    # @overload delete_resources_by_external_id(params = {})
+    # @overload delete_resources_by_external_id(**params)
     # @param [Hash] params ({})
-    def delete_resources_by_external_id(params = {}, options = {})
+    def delete_resources_by_external_id(params = {}, **options)
       req = build_request(:delete_resources_by_external_id, params)
       req.send_request(options)
     end
@@ -1652,9 +1652,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/DeregisterOnPremisesInstance AWS API Documentation
     #
-    # @overload deregister_on_premises_instance(params = {})
+    # @overload deregister_on_premises_instance(**params)
     # @param [Hash] params ({})
-    def deregister_on_premises_instance(params = {}, options = {})
+    def deregister_on_premises_instance(params = {}, **options)
       req = build_request(:deregister_on_premises_instance, params)
       req.send_request(options)
     end
@@ -1686,9 +1686,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetApplication AWS API Documentation
     #
-    # @overload get_application(params = {})
+    # @overload get_application(**params)
     # @param [Hash] params ({})
-    def get_application(params = {}, options = {})
+    def get_application(params = {}, **options)
       req = build_request(:get_application, params)
       req.send_request(options)
     end
@@ -1760,9 +1760,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetApplicationRevision AWS API Documentation
     #
-    # @overload get_application_revision(params = {})
+    # @overload get_application_revision(**params)
     # @param [Hash] params ({})
-    def get_application_revision(params = {}, options = {})
+    def get_application_revision(params = {}, **options)
       req = build_request(:get_application_revision, params)
       req.send_request(options)
     end
@@ -1886,9 +1886,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetDeployment AWS API Documentation
     #
-    # @overload get_deployment(params = {})
+    # @overload get_deployment(**params)
     # @param [Hash] params ({})
-    def get_deployment(params = {}, options = {})
+    def get_deployment(params = {}, **options)
       req = build_request(:get_deployment, params)
       req.send_request(options)
     end
@@ -1925,9 +1925,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetDeploymentConfig AWS API Documentation
     #
-    # @overload get_deployment_config(params = {})
+    # @overload get_deployment_config(**params)
     # @param [Hash] params ({})
-    def get_deployment_config(params = {}, options = {})
+    def get_deployment_config(params = {}, **options)
       req = build_request(:get_deployment_config, params)
       req.send_request(options)
     end
@@ -2037,9 +2037,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetDeploymentGroup AWS API Documentation
     #
-    # @overload get_deployment_group(params = {})
+    # @overload get_deployment_group(**params)
     # @param [Hash] params ({})
-    def get_deployment_group(params = {}, options = {})
+    def get_deployment_group(params = {}, **options)
       req = build_request(:get_deployment_group, params)
       req.send_request(options)
     end
@@ -2082,9 +2082,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetDeploymentInstance AWS API Documentation
     #
-    # @overload get_deployment_instance(params = {})
+    # @overload get_deployment_instance(**params)
     # @param [Hash] params ({})
-    def get_deployment_instance(params = {}, options = {})
+    def get_deployment_instance(params = {}, **options)
       req = build_request(:get_deployment_instance, params)
       req.send_request(options)
     end
@@ -2186,9 +2186,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetDeploymentTarget AWS API Documentation
     #
-    # @overload get_deployment_target(params = {})
+    # @overload get_deployment_target(**params)
     # @param [Hash] params ({})
-    def get_deployment_target(params = {}, options = {})
+    def get_deployment_target(params = {}, **options)
       req = build_request(:get_deployment_target, params)
       req.send_request(options)
     end
@@ -2222,9 +2222,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/GetOnPremisesInstance AWS API Documentation
     #
-    # @overload get_on_premises_instance(params = {})
+    # @overload get_on_premises_instance(**params)
     # @param [Hash] params ({})
-    def get_on_premises_instance(params = {}, options = {})
+    def get_on_premises_instance(params = {}, **options)
       req = build_request(:get_on_premises_instance, params)
       req.send_request(options)
     end
@@ -2325,9 +2325,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListApplicationRevisions AWS API Documentation
     #
-    # @overload list_application_revisions(params = {})
+    # @overload list_application_revisions(**params)
     # @param [Hash] params ({})
-    def list_application_revisions(params = {}, options = {})
+    def list_application_revisions(params = {}, **options)
       req = build_request(:list_application_revisions, params)
       req.send_request(options)
     end
@@ -2359,9 +2359,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListApplications AWS API Documentation
     #
-    # @overload list_applications(params = {})
+    # @overload list_applications(**params)
     # @param [Hash] params ({})
-    def list_applications(params = {}, options = {})
+    def list_applications(params = {}, **options)
       req = build_request(:list_applications, params)
       req.send_request(options)
     end
@@ -2394,9 +2394,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListDeploymentConfigs AWS API Documentation
     #
-    # @overload list_deployment_configs(params = {})
+    # @overload list_deployment_configs(**params)
     # @param [Hash] params ({})
-    def list_deployment_configs(params = {}, options = {})
+    def list_deployment_configs(params = {}, **options)
       req = build_request(:list_deployment_configs, params)
       req.send_request(options)
     end
@@ -2437,9 +2437,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListDeploymentGroups AWS API Documentation
     #
-    # @overload list_deployment_groups(params = {})
+    # @overload list_deployment_groups(**params)
     # @param [Hash] params ({})
-    def list_deployment_groups(params = {}, options = {})
+    def list_deployment_groups(params = {}, **options)
       req = build_request(:list_deployment_groups, params)
       req.send_request(options)
     end
@@ -2509,9 +2509,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListDeploymentInstances AWS API Documentation
     #
-    # @overload list_deployment_instances(params = {})
+    # @overload list_deployment_instances(**params)
     # @param [Hash] params ({})
-    def list_deployment_instances(params = {}, options = {})
+    def list_deployment_instances(params = {}, **options)
       req = build_request(:list_deployment_instances, params)
       req.send_request(options)
     end
@@ -2559,9 +2559,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListDeploymentTargets AWS API Documentation
     #
-    # @overload list_deployment_targets(params = {})
+    # @overload list_deployment_targets(**params)
     # @param [Hash] params ({})
-    def list_deployment_targets(params = {}, options = {})
+    def list_deployment_targets(params = {}, **options)
       req = build_request(:list_deployment_targets, params)
       req.send_request(options)
     end
@@ -2645,9 +2645,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListDeployments AWS API Documentation
     #
-    # @overload list_deployments(params = {})
+    # @overload list_deployments(**params)
     # @param [Hash] params ({})
-    def list_deployments(params = {}, options = {})
+    def list_deployments(params = {}, **options)
       req = build_request(:list_deployments, params)
       req.send_request(options)
     end
@@ -2677,9 +2677,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListGitHubAccountTokenNames AWS API Documentation
     #
-    # @overload list_git_hub_account_token_names(params = {})
+    # @overload list_git_hub_account_token_names(**params)
     # @param [Hash] params ({})
-    def list_git_hub_account_token_names(params = {}, options = {})
+    def list_git_hub_account_token_names(params = {}, **options)
       req = build_request(:list_git_hub_account_token_names, params)
       req.send_request(options)
     end
@@ -2736,9 +2736,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListOnPremisesInstances AWS API Documentation
     #
-    # @overload list_on_premises_instances(params = {})
+    # @overload list_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def list_on_premises_instances(params = {}, options = {})
+    def list_on_premises_instances(params = {}, **options)
       req = build_request(:list_on_premises_instances, params)
       req.send_request(options)
     end
@@ -2777,9 +2777,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2832,9 +2832,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/PutLifecycleEventHookExecutionStatus AWS API Documentation
     #
-    # @overload put_lifecycle_event_hook_execution_status(params = {})
+    # @overload put_lifecycle_event_hook_execution_status(**params)
     # @param [Hash] params ({})
-    def put_lifecycle_event_hook_execution_status(params = {}, options = {})
+    def put_lifecycle_event_hook_execution_status(params = {}, **options)
       req = build_request(:put_lifecycle_event_hook_execution_status, params)
       req.send_request(options)
     end
@@ -2886,9 +2886,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/RegisterApplicationRevision AWS API Documentation
     #
-    # @overload register_application_revision(params = {})
+    # @overload register_application_revision(**params)
     # @param [Hash] params ({})
-    def register_application_revision(params = {}, options = {})
+    def register_application_revision(params = {}, **options)
       req = build_request(:register_application_revision, params)
       req.send_request(options)
     end
@@ -2921,9 +2921,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/RegisterOnPremisesInstance AWS API Documentation
     #
-    # @overload register_on_premises_instance(params = {})
+    # @overload register_on_premises_instance(**params)
     # @param [Hash] params ({})
-    def register_on_premises_instance(params = {}, options = {})
+    def register_on_premises_instance(params = {}, **options)
       req = build_request(:register_on_premises_instance, params)
       req.send_request(options)
     end
@@ -2952,9 +2952,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/RemoveTagsFromOnPremisesInstances AWS API Documentation
     #
-    # @overload remove_tags_from_on_premises_instances(params = {})
+    # @overload remove_tags_from_on_premises_instances(**params)
     # @param [Hash] params ({})
-    def remove_tags_from_on_premises_instances(params = {}, options = {})
+    def remove_tags_from_on_premises_instances(params = {}, **options)
       req = build_request(:remove_tags_from_on_premises_instances, params)
       req.send_request(options)
     end
@@ -2977,9 +2977,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/SkipWaitTimeForInstanceTermination AWS API Documentation
     #
-    # @overload skip_wait_time_for_instance_termination(params = {})
+    # @overload skip_wait_time_for_instance_termination(**params)
     # @param [Hash] params ({})
-    def skip_wait_time_for_instance_termination(params = {}, options = {})
+    def skip_wait_time_for_instance_termination(params = {}, **options)
       req = build_request(:skip_wait_time_for_instance_termination, params)
       req.send_request(options)
     end
@@ -3013,9 +3013,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/StopDeployment AWS API Documentation
     #
-    # @overload stop_deployment(params = {})
+    # @overload stop_deployment(**params)
     # @param [Hash] params ({})
-    def stop_deployment(params = {}, options = {})
+    def stop_deployment(params = {}, **options)
       req = build_request(:stop_deployment, params)
       req.send_request(options)
     end
@@ -3047,9 +3047,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3078,9 +3078,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3104,9 +3104,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/UpdateApplication AWS API Documentation
     #
-    # @overload update_application(params = {})
+    # @overload update_application(**params)
     # @param [Hash] params ({})
-    def update_application(params = {}, options = {})
+    def update_application(params = {}, **options)
       req = build_request(:update_application, params)
       req.send_request(options)
     end
@@ -3320,9 +3320,9 @@ module Aws::CodeDeploy
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/UpdateDeploymentGroup AWS API Documentation
     #
-    # @overload update_deployment_group(params = {})
+    # @overload update_deployment_group(**params)
     # @param [Hash] params ({})
-    def update_deployment_group(params = {}, options = {})
+    def update_deployment_group(params = {}, **options)
       req = build_request(:update_deployment_group, params)
       req.send_request(options)
     end
@@ -3331,7 +3331,7 @@ module Aws::CodeDeploy
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3339,8 +3339,8 @@ module Aws::CodeDeploy
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-codedeploy'
-      context[:gem_version] = '1.37.0'
+      context[:gem_name] = "aws-sdk-codedeploy"
+      context[:gem_version] = "1.37.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3432,7 +3432,7 @@ module Aws::CodeDeploy
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3448,7 +3448,7 @@ module Aws::CodeDeploy
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

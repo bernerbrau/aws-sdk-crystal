@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:guardduty)
 
@@ -280,7 +280,7 @@ module Aws::GuardDuty
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -353,9 +353,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/AcceptInvitation AWS API Documentation
     #
-    # @overload accept_invitation(params = {})
+    # @overload accept_invitation(**params)
     # @param [Hash] params ({})
-    def accept_invitation(params = {}, options = {})
+    def accept_invitation(params = {}, **options)
       req = build_request(:accept_invitation, params)
       req.send_request(options)
     end
@@ -386,9 +386,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ArchiveFindings AWS API Documentation
     #
-    # @overload archive_findings(params = {})
+    # @overload archive_findings(**params)
     # @param [Hash] params ({})
-    def archive_findings(params = {}, options = {})
+    def archive_findings(params = {}, **options)
       req = build_request(:archive_findings, params)
       req.send_request(options)
     end
@@ -443,9 +443,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateDetector AWS API Documentation
     #
-    # @overload create_detector(params = {})
+    # @overload create_detector(**params)
     # @param [Hash] params ({})
-    def create_detector(params = {}, options = {})
+    def create_detector(params = {}, **options)
       req = build_request(:create_detector, params)
       req.send_request(options)
     end
@@ -641,9 +641,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateFilter AWS API Documentation
     #
-    # @overload create_filter(params = {})
+    # @overload create_filter(**params)
     # @param [Hash] params ({})
-    def create_filter(params = {}, options = {})
+    def create_filter(params = {}, **options)
       req = build_request(:create_filter, params)
       req.send_request(options)
     end
@@ -709,9 +709,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateIPSet AWS API Documentation
     #
-    # @overload create_ip_set(params = {})
+    # @overload create_ip_set(**params)
     # @param [Hash] params ({})
-    def create_ip_set(params = {}, options = {})
+    def create_ip_set(params = {}, **options)
       req = build_request(:create_ip_set, params)
       req.send_request(options)
     end
@@ -767,9 +767,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateMembers AWS API Documentation
     #
-    # @overload create_members(params = {})
+    # @overload create_members(**params)
     # @param [Hash] params ({})
-    def create_members(params = {}, options = {})
+    def create_members(params = {}, **options)
       req = build_request(:create_members, params)
       req.send_request(options)
     end
@@ -817,9 +817,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreatePublishingDestination AWS API Documentation
     #
-    # @overload create_publishing_destination(params = {})
+    # @overload create_publishing_destination(**params)
     # @param [Hash] params ({})
-    def create_publishing_destination(params = {}, options = {})
+    def create_publishing_destination(params = {}, **options)
       req = build_request(:create_publishing_destination, params)
       req.send_request(options)
     end
@@ -845,9 +845,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateSampleFindings AWS API Documentation
     #
-    # @overload create_sample_findings(params = {})
+    # @overload create_sample_findings(**params)
     # @param [Hash] params ({})
-    def create_sample_findings(params = {}, options = {})
+    def create_sample_findings(params = {}, **options)
       req = build_request(:create_sample_findings, params)
       req.send_request(options)
     end
@@ -910,9 +910,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/CreateThreatIntelSet AWS API Documentation
     #
-    # @overload create_threat_intel_set(params = {})
+    # @overload create_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def create_threat_intel_set(params = {}, options = {})
+    def create_threat_intel_set(params = {}, **options)
       req = build_request(:create_threat_intel_set, params)
       req.send_request(options)
     end
@@ -942,9 +942,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeclineInvitations AWS API Documentation
     #
-    # @overload decline_invitations(params = {})
+    # @overload decline_invitations(**params)
     # @param [Hash] params ({})
-    def decline_invitations(params = {}, options = {})
+    def decline_invitations(params = {}, **options)
       req = build_request(:decline_invitations, params)
       req.send_request(options)
     end
@@ -965,9 +965,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteDetector AWS API Documentation
     #
-    # @overload delete_detector(params = {})
+    # @overload delete_detector(**params)
     # @param [Hash] params ({})
-    def delete_detector(params = {}, options = {})
+    def delete_detector(params = {}, **options)
       req = build_request(:delete_detector, params)
       req.send_request(options)
     end
@@ -991,9 +991,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteFilter AWS API Documentation
     #
-    # @overload delete_filter(params = {})
+    # @overload delete_filter(**params)
     # @param [Hash] params ({})
-    def delete_filter(params = {}, options = {})
+    def delete_filter(params = {}, **options)
       req = build_request(:delete_filter, params)
       req.send_request(options)
     end
@@ -1018,9 +1018,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteIPSet AWS API Documentation
     #
-    # @overload delete_ip_set(params = {})
+    # @overload delete_ip_set(**params)
     # @param [Hash] params ({})
-    def delete_ip_set(params = {}, options = {})
+    def delete_ip_set(params = {}, **options)
       req = build_request(:delete_ip_set, params)
       req.send_request(options)
     end
@@ -1050,9 +1050,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteInvitations AWS API Documentation
     #
-    # @overload delete_invitations(params = {})
+    # @overload delete_invitations(**params)
     # @param [Hash] params ({})
-    def delete_invitations(params = {}, options = {})
+    def delete_invitations(params = {}, **options)
       req = build_request(:delete_invitations, params)
       req.send_request(options)
     end
@@ -1087,9 +1087,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteMembers AWS API Documentation
     #
-    # @overload delete_members(params = {})
+    # @overload delete_members(**params)
     # @param [Hash] params ({})
-    def delete_members(params = {}, options = {})
+    def delete_members(params = {}, **options)
       req = build_request(:delete_members, params)
       req.send_request(options)
     end
@@ -1114,9 +1114,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeletePublishingDestination AWS API Documentation
     #
-    # @overload delete_publishing_destination(params = {})
+    # @overload delete_publishing_destination(**params)
     # @param [Hash] params ({})
-    def delete_publishing_destination(params = {}, options = {})
+    def delete_publishing_destination(params = {}, **options)
       req = build_request(:delete_publishing_destination, params)
       req.send_request(options)
     end
@@ -1141,9 +1141,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DeleteThreatIntelSet AWS API Documentation
     #
-    # @overload delete_threat_intel_set(params = {})
+    # @overload delete_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def delete_threat_intel_set(params = {}, options = {})
+    def delete_threat_intel_set(params = {}, **options)
       req = build_request(:delete_threat_intel_set, params)
       req.send_request(options)
     end
@@ -1175,9 +1175,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DescribeOrganizationConfiguration AWS API Documentation
     #
-    # @overload describe_organization_configuration(params = {})
+    # @overload describe_organization_configuration(**params)
     # @param [Hash] params ({})
-    def describe_organization_configuration(params = {}, options = {})
+    def describe_organization_configuration(params = {}, **options)
       req = build_request(:describe_organization_configuration, params)
       req.send_request(options)
     end
@@ -1218,9 +1218,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DescribePublishingDestination AWS API Documentation
     #
-    # @overload describe_publishing_destination(params = {})
+    # @overload describe_publishing_destination(**params)
     # @param [Hash] params ({})
-    def describe_publishing_destination(params = {}, options = {})
+    def describe_publishing_destination(params = {}, **options)
       req = build_request(:describe_publishing_destination, params)
       req.send_request(options)
     end
@@ -1242,9 +1242,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisableOrganizationAdminAccount AWS API Documentation
     #
-    # @overload disable_organization_admin_account(params = {})
+    # @overload disable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def disable_organization_admin_account(params = {}, options = {})
+    def disable_organization_admin_account(params = {}, **options)
       req = build_request(:disable_organization_admin_account, params)
       req.send_request(options)
     end
@@ -1265,9 +1265,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisassociateFromMasterAccount AWS API Documentation
     #
-    # @overload disassociate_from_master_account(params = {})
+    # @overload disassociate_from_master_account(**params)
     # @param [Hash] params ({})
-    def disassociate_from_master_account(params = {}, options = {})
+    def disassociate_from_master_account(params = {}, **options)
       req = build_request(:disassociate_from_master_account, params)
       req.send_request(options)
     end
@@ -1302,9 +1302,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisassociateMembers AWS API Documentation
     #
-    # @overload disassociate_members(params = {})
+    # @overload disassociate_members(**params)
     # @param [Hash] params ({})
-    def disassociate_members(params = {}, options = {})
+    def disassociate_members(params = {}, **options)
       req = build_request(:disassociate_members, params)
       req.send_request(options)
     end
@@ -1326,9 +1326,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/EnableOrganizationAdminAccount AWS API Documentation
     #
-    # @overload enable_organization_admin_account(params = {})
+    # @overload enable_organization_admin_account(**params)
     # @param [Hash] params ({})
-    def enable_organization_admin_account(params = {}, options = {})
+    def enable_organization_admin_account(params = {}, **options)
       req = build_request(:enable_organization_admin_account, params)
       req.send_request(options)
     end
@@ -1370,9 +1370,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetDetector AWS API Documentation
     #
-    # @overload get_detector(params = {})
+    # @overload get_detector(**params)
     # @param [Hash] params ({})
-    def get_detector(params = {}, options = {})
+    def get_detector(params = {}, **options)
       req = build_request(:get_detector, params)
       req.send_request(options)
     end
@@ -1429,9 +1429,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetFilter AWS API Documentation
     #
-    # @overload get_filter(params = {})
+    # @overload get_filter(**params)
     # @param [Hash] params ({})
-    def get_filter(params = {}, options = {})
+    def get_filter(params = {}, **options)
       req = build_request(:get_filter, params)
       req.send_request(options)
     end
@@ -1606,9 +1606,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetFindings AWS API Documentation
     #
-    # @overload get_findings(params = {})
+    # @overload get_findings(**params)
     # @param [Hash] params ({})
-    def get_findings(params = {}, options = {})
+    def get_findings(params = {}, **options)
       req = build_request(:get_findings, params)
       req.send_request(options)
     end
@@ -1662,9 +1662,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetFindingsStatistics AWS API Documentation
     #
-    # @overload get_findings_statistics(params = {})
+    # @overload get_findings_statistics(**params)
     # @param [Hash] params ({})
-    def get_findings_statistics(params = {}, options = {})
+    def get_findings_statistics(params = {}, **options)
       req = build_request(:get_findings_statistics, params)
       req.send_request(options)
     end
@@ -1703,9 +1703,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetIPSet AWS API Documentation
     #
-    # @overload get_ip_set(params = {})
+    # @overload get_ip_set(**params)
     # @param [Hash] params ({})
-    def get_ip_set(params = {}, options = {})
+    def get_ip_set(params = {}, **options)
       req = build_request(:get_ip_set, params)
       req.send_request(options)
     end
@@ -1724,9 +1724,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetInvitationsCount AWS API Documentation
     #
-    # @overload get_invitations_count(params = {})
+    # @overload get_invitations_count(**params)
     # @param [Hash] params ({})
-    def get_invitations_count(params = {}, options = {})
+    def get_invitations_count(params = {}, **options)
       req = build_request(:get_invitations_count, params)
       req.send_request(options)
     end
@@ -1756,9 +1756,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMasterAccount AWS API Documentation
     #
-    # @overload get_master_account(params = {})
+    # @overload get_master_account(**params)
     # @param [Hash] params ({})
-    def get_master_account(params = {}, options = {})
+    def get_master_account(params = {}, **options)
       req = build_request(:get_master_account, params)
       req.send_request(options)
     end
@@ -1798,9 +1798,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMemberDetectors AWS API Documentation
     #
-    # @overload get_member_detectors(params = {})
+    # @overload get_member_detectors(**params)
     # @param [Hash] params ({})
-    def get_member_detectors(params = {}, options = {})
+    def get_member_detectors(params = {}, **options)
       req = build_request(:get_member_detectors, params)
       req.send_request(options)
     end
@@ -1844,9 +1844,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMembers AWS API Documentation
     #
-    # @overload get_members(params = {})
+    # @overload get_members(**params)
     # @param [Hash] params ({})
-    def get_members(params = {}, options = {})
+    def get_members(params = {}, **options)
       req = build_request(:get_members, params)
       req.send_request(options)
     end
@@ -1887,9 +1887,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetThreatIntelSet AWS API Documentation
     #
-    # @overload get_threat_intel_set(params = {})
+    # @overload get_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def get_threat_intel_set(params = {}, options = {})
+    def get_threat_intel_set(params = {}, **options)
       req = build_request(:get_threat_intel_set, params)
       req.send_request(options)
     end
@@ -1973,9 +1973,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetUsageStatistics AWS API Documentation
     #
-    # @overload get_usage_statistics(params = {})
+    # @overload get_usage_statistics(**params)
     # @param [Hash] params ({})
-    def get_usage_statistics(params = {}, options = {})
+    def get_usage_statistics(params = {}, **options)
       req = build_request(:get_usage_statistics, params)
       req.send_request(options)
     end
@@ -2023,9 +2023,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/InviteMembers AWS API Documentation
     #
-    # @overload invite_members(params = {})
+    # @overload invite_members(**params)
     # @param [Hash] params ({})
-    def invite_members(params = {}, options = {})
+    def invite_members(params = {}, **options)
       req = build_request(:invite_members, params)
       req.send_request(options)
     end
@@ -2067,9 +2067,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListDetectors AWS API Documentation
     #
-    # @overload list_detectors(params = {})
+    # @overload list_detectors(**params)
     # @param [Hash] params ({})
-    def list_detectors(params = {}, options = {})
+    def list_detectors(params = {}, **options)
       req = build_request(:list_detectors, params)
       req.send_request(options)
     end
@@ -2114,9 +2114,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListFilters AWS API Documentation
     #
-    # @overload list_filters(params = {})
+    # @overload list_filters(**params)
     # @param [Hash] params ({})
-    def list_filters(params = {}, options = {})
+    def list_filters(params = {}, **options)
       req = build_request(:list_filters, params)
       req.send_request(options)
     end
@@ -2296,9 +2296,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListFindings AWS API Documentation
     #
-    # @overload list_findings(params = {})
+    # @overload list_findings(**params)
     # @param [Hash] params ({})
-    def list_findings(params = {}, options = {})
+    def list_findings(params = {}, **options)
       req = build_request(:list_findings, params)
       req.send_request(options)
     end
@@ -2345,9 +2345,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListIPSets AWS API Documentation
     #
-    # @overload list_ip_sets(params = {})
+    # @overload list_ip_sets(**params)
     # @param [Hash] params ({})
-    def list_ip_sets(params = {}, options = {})
+    def list_ip_sets(params = {}, **options)
       req = build_request(:list_ip_sets, params)
       req.send_request(options)
     end
@@ -2392,9 +2392,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListInvitations AWS API Documentation
     #
-    # @overload list_invitations(params = {})
+    # @overload list_invitations(**params)
     # @param [Hash] params ({})
-    def list_invitations(params = {}, options = {})
+    def list_invitations(params = {}, **options)
       req = build_request(:list_invitations, params)
       req.send_request(options)
     end
@@ -2452,9 +2452,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListMembers AWS API Documentation
     #
-    # @overload list_members(params = {})
+    # @overload list_members(**params)
     # @param [Hash] params ({})
-    def list_members(params = {}, options = {})
+    def list_members(params = {}, **options)
       req = build_request(:list_members, params)
       req.send_request(options)
     end
@@ -2494,9 +2494,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListOrganizationAdminAccounts AWS API Documentation
     #
-    # @overload list_organization_admin_accounts(params = {})
+    # @overload list_organization_admin_accounts(**params)
     # @param [Hash] params ({})
-    def list_organization_admin_accounts(params = {}, options = {})
+    def list_organization_admin_accounts(params = {}, **options)
       req = build_request(:list_organization_admin_accounts, params)
       req.send_request(options)
     end
@@ -2542,9 +2542,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListPublishingDestinations AWS API Documentation
     #
-    # @overload list_publishing_destinations(params = {})
+    # @overload list_publishing_destinations(**params)
     # @param [Hash] params ({})
-    def list_publishing_destinations(params = {}, options = {})
+    def list_publishing_destinations(params = {}, **options)
       req = build_request(:list_publishing_destinations, params)
       req.send_request(options)
     end
@@ -2574,9 +2574,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2625,9 +2625,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListThreatIntelSets AWS API Documentation
     #
-    # @overload list_threat_intel_sets(params = {})
+    # @overload list_threat_intel_sets(**params)
     # @param [Hash] params ({})
-    def list_threat_intel_sets(params = {}, options = {})
+    def list_threat_intel_sets(params = {}, **options)
       req = build_request(:list_threat_intel_sets, params)
       req.send_request(options)
     end
@@ -2663,9 +2663,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/StartMonitoringMembers AWS API Documentation
     #
-    # @overload start_monitoring_members(params = {})
+    # @overload start_monitoring_members(**params)
     # @param [Hash] params ({})
-    def start_monitoring_members(params = {}, options = {})
+    def start_monitoring_members(params = {}, **options)
       req = build_request(:start_monitoring_members, params)
       req.send_request(options)
     end
@@ -2700,9 +2700,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/StopMonitoringMembers AWS API Documentation
     #
-    # @overload stop_monitoring_members(params = {})
+    # @overload stop_monitoring_members(**params)
     # @param [Hash] params ({})
-    def stop_monitoring_members(params = {}, options = {})
+    def stop_monitoring_members(params = {}, **options)
       req = build_request(:stop_monitoring_members, params)
       req.send_request(options)
     end
@@ -2729,9 +2729,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2755,9 +2755,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UnarchiveFindings AWS API Documentation
     #
-    # @overload unarchive_findings(params = {})
+    # @overload unarchive_findings(**params)
     # @param [Hash] params ({})
-    def unarchive_findings(params = {}, options = {})
+    def unarchive_findings(params = {}, **options)
       req = build_request(:unarchive_findings, params)
       req.send_request(options)
     end
@@ -2781,9 +2781,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2820,9 +2820,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateDetector AWS API Documentation
     #
-    # @overload update_detector(params = {})
+    # @overload update_detector(**params)
     # @param [Hash] params ({})
-    def update_detector(params = {}, options = {})
+    def update_detector(params = {}, **options)
       req = build_request(:update_detector, params)
       req.send_request(options)
     end
@@ -2890,9 +2890,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateFilter AWS API Documentation
     #
-    # @overload update_filter(params = {})
+    # @overload update_filter(**params)
     # @param [Hash] params ({})
-    def update_filter(params = {}, options = {})
+    def update_filter(params = {}, **options)
       req = build_request(:update_filter, params)
       req.send_request(options)
     end
@@ -2925,9 +2925,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateFindingsFeedback AWS API Documentation
     #
-    # @overload update_findings_feedback(params = {})
+    # @overload update_findings_feedback(**params)
     # @param [Hash] params ({})
-    def update_findings_feedback(params = {}, options = {})
+    def update_findings_feedback(params = {}, **options)
       req = build_request(:update_findings_feedback, params)
       req.send_request(options)
     end
@@ -2966,9 +2966,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateIPSet AWS API Documentation
     #
-    # @overload update_ip_set(params = {})
+    # @overload update_ip_set(**params)
     # @param [Hash] params ({})
-    def update_ip_set(params = {}, options = {})
+    def update_ip_set(params = {}, **options)
       req = build_request(:update_ip_set, params)
       req.send_request(options)
     end
@@ -3008,9 +3008,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMemberDetectors AWS API Documentation
     #
-    # @overload update_member_detectors(params = {})
+    # @overload update_member_detectors(**params)
     # @param [Hash] params ({})
-    def update_member_detectors(params = {}, options = {})
+    def update_member_detectors(params = {}, **options)
       req = build_request(:update_member_detectors, params)
       req.send_request(options)
     end
@@ -3043,9 +3043,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateOrganizationConfiguration AWS API Documentation
     #
-    # @overload update_organization_configuration(params = {})
+    # @overload update_organization_configuration(**params)
     # @param [Hash] params ({})
-    def update_organization_configuration(params = {}, options = {})
+    def update_organization_configuration(params = {}, **options)
       req = build_request(:update_organization_configuration, params)
       req.send_request(options)
     end
@@ -3079,9 +3079,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdatePublishingDestination AWS API Documentation
     #
-    # @overload update_publishing_destination(params = {})
+    # @overload update_publishing_destination(**params)
     # @param [Hash] params ({})
-    def update_publishing_destination(params = {}, options = {})
+    def update_publishing_destination(params = {}, **options)
       req = build_request(:update_publishing_destination, params)
       req.send_request(options)
     end
@@ -3121,9 +3121,9 @@ module Aws::GuardDuty
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateThreatIntelSet AWS API Documentation
     #
-    # @overload update_threat_intel_set(params = {})
+    # @overload update_threat_intel_set(**params)
     # @param [Hash] params ({})
-    def update_threat_intel_set(params = {}, options = {})
+    def update_threat_intel_set(params = {}, **options)
       req = build_request(:update_threat_intel_set, params)
       req.send_request(options)
     end
@@ -3132,7 +3132,7 @@ module Aws::GuardDuty
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -3140,15 +3140,15 @@ module Aws::GuardDuty
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-guardduty'
-      context[:gem_version] = '1.43.0'
+      context[:gem_name] = "aws-sdk-guardduty"
+      context[:gem_version] = "1.43.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sigv4'
-require 'aws-sdk-core'
+require "aws-sigv4"
+require "aws-sdk-core"
 
-require_relative 'aws-sdk-s3control/types'
-require_relative 'aws-sdk-s3control/client_api'
-require_relative 'aws-sdk-s3control/client'
-require_relative 'aws-sdk-s3control/errors'
-require_relative 'aws-sdk-s3control/resource'
-require_relative 'aws-sdk-s3control/customizations'
+require_relative "aws-sdk-s3control/types"
+require_relative "aws-sdk-s3control/client_api"
+require_relative "aws-sdk-s3control/client"
+require_relative "aws-sdk-s3control/errors"
+require_relative "aws-sdk-s3control/resource"
+require_relative "aws-sdk-s3control/customizations"
 
 # This module provides support for AWS S3 Control. This module is available in the
 # `aws-sdk-s3control` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-s3control/customizations'
 # @!group service
 module Aws::S3Control
 
-  GEM_VERSION = '1.25.0'
+  GEM_VERSION = "1.25.0"
 
 end

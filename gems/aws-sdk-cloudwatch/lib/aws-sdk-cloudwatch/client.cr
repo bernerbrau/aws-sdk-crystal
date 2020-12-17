@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cloudwatch)
 
@@ -280,7 +280,7 @@ module Aws::CloudWatch
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -366,9 +366,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteAlarms AWS API Documentation
     #
-    # @overload delete_alarms(params = {})
+    # @overload delete_alarms(**params)
     # @param [Hash] params ({})
-    def delete_alarms(params = {}, options = {})
+    def delete_alarms(params = {}, **options)
       req = build_request(:delete_alarms, params)
       req.send_request(options)
     end
@@ -406,9 +406,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteAnomalyDetector AWS API Documentation
     #
-    # @overload delete_anomaly_detector(params = {})
+    # @overload delete_anomaly_detector(**params)
     # @param [Hash] params ({})
-    def delete_anomaly_detector(params = {}, options = {})
+    def delete_anomaly_detector(params = {}, **options)
       req = build_request(:delete_anomaly_detector, params)
       req.send_request(options)
     end
@@ -430,9 +430,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteDashboards AWS API Documentation
     #
-    # @overload delete_dashboards(params = {})
+    # @overload delete_dashboards(**params)
     # @param [Hash] params ({})
-    def delete_dashboards(params = {}, options = {})
+    def delete_dashboards(params = {}, **options)
       req = build_request(:delete_dashboards, params)
       req.send_request(options)
     end
@@ -471,9 +471,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteInsightRules AWS API Documentation
     #
-    # @overload delete_insight_rules(params = {})
+    # @overload delete_insight_rules(**params)
     # @param [Hash] params ({})
-    def delete_insight_rules(params = {}, options = {})
+    def delete_insight_rules(params = {}, **options)
       req = build_request(:delete_insight_rules, params)
       req.send_request(options)
     end
@@ -549,9 +549,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAlarmHistory AWS API Documentation
     #
-    # @overload describe_alarm_history(params = {})
+    # @overload describe_alarm_history(**params)
     # @param [Hash] params ({})
-    def describe_alarm_history(params = {}, options = {})
+    def describe_alarm_history(params = {}, **options)
       req = build_request(:describe_alarm_history, params)
       req.send_request(options)
     end
@@ -729,9 +729,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAlarms AWS API Documentation
     #
-    # @overload describe_alarms(params = {})
+    # @overload describe_alarms(**params)
     # @param [Hash] params ({})
-    def describe_alarms(params = {}, options = {})
+    def describe_alarms(params = {}, **options)
       req = build_request(:describe_alarms, params)
       req.send_request(options)
     end
@@ -841,9 +841,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAlarmsForMetric AWS API Documentation
     #
-    # @overload describe_alarms_for_metric(params = {})
+    # @overload describe_alarms_for_metric(**params)
     # @param [Hash] params ({})
-    def describe_alarms_for_metric(params = {}, options = {})
+    def describe_alarms_for_metric(params = {}, **options)
       req = build_request(:describe_alarms_for_metric, params)
       req.send_request(options)
     end
@@ -918,9 +918,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAnomalyDetectors AWS API Documentation
     #
-    # @overload describe_anomaly_detectors(params = {})
+    # @overload describe_anomaly_detectors(**params)
     # @param [Hash] params ({})
-    def describe_anomaly_detectors(params = {}, options = {})
+    def describe_anomaly_detectors(params = {}, **options)
       req = build_request(:describe_anomaly_detectors, params)
       req.send_request(options)
     end
@@ -967,9 +967,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeInsightRules AWS API Documentation
     #
-    # @overload describe_insight_rules(params = {})
+    # @overload describe_insight_rules(**params)
     # @param [Hash] params ({})
-    def describe_insight_rules(params = {}, options = {})
+    def describe_insight_rules(params = {}, **options)
       req = build_request(:describe_insight_rules, params)
       req.send_request(options)
     end
@@ -991,9 +991,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DisableAlarmActions AWS API Documentation
     #
-    # @overload disable_alarm_actions(params = {})
+    # @overload disable_alarm_actions(**params)
     # @param [Hash] params ({})
-    def disable_alarm_actions(params = {}, options = {})
+    def disable_alarm_actions(params = {}, **options)
       req = build_request(:disable_alarm_actions, params)
       req.send_request(options)
     end
@@ -1029,9 +1029,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DisableInsightRules AWS API Documentation
     #
-    # @overload disable_insight_rules(params = {})
+    # @overload disable_insight_rules(**params)
     # @param [Hash] params ({})
-    def disable_insight_rules(params = {}, options = {})
+    def disable_insight_rules(params = {}, **options)
       req = build_request(:disable_insight_rules, params)
       req.send_request(options)
     end
@@ -1051,9 +1051,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/EnableAlarmActions AWS API Documentation
     #
-    # @overload enable_alarm_actions(params = {})
+    # @overload enable_alarm_actions(**params)
     # @param [Hash] params ({})
-    def enable_alarm_actions(params = {}, options = {})
+    def enable_alarm_actions(params = {}, **options)
       req = build_request(:enable_alarm_actions, params)
       req.send_request(options)
     end
@@ -1089,9 +1089,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/EnableInsightRules AWS API Documentation
     #
-    # @overload enable_insight_rules(params = {})
+    # @overload enable_insight_rules(**params)
     # @param [Hash] params ({})
-    def enable_insight_rules(params = {}, options = {})
+    def enable_insight_rules(params = {}, **options)
       req = build_request(:enable_insight_rules, params)
       req.send_request(options)
     end
@@ -1125,9 +1125,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/GetDashboard AWS API Documentation
     #
-    # @overload get_dashboard(params = {})
+    # @overload get_dashboard(**params)
     # @param [Hash] params ({})
-    def get_dashboard(params = {}, options = {})
+    def get_dashboard(params = {}, **options)
       req = build_request(:get_dashboard, params)
       req.send_request(options)
     end
@@ -1269,9 +1269,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/GetInsightRuleReport AWS API Documentation
     #
-    # @overload get_insight_rule_report(params = {})
+    # @overload get_insight_rule_report(**params)
     # @param [Hash] params ({})
-    def get_insight_rule_report(params = {}, options = {})
+    def get_insight_rule_report(params = {}, **options)
       req = build_request(:get_insight_rule_report, params)
       req.send_request(options)
     end
@@ -1457,9 +1457,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/GetMetricData AWS API Documentation
     #
-    # @overload get_metric_data(params = {})
+    # @overload get_metric_data(**params)
     # @param [Hash] params ({})
-    def get_metric_data(params = {}, options = {})
+    def get_metric_data(params = {}, **options)
       req = build_request(:get_metric_data, params)
       req.send_request(options)
     end
@@ -1671,9 +1671,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/GetMetricStatistics AWS API Documentation
     #
-    # @overload get_metric_statistics(params = {})
+    # @overload get_metric_statistics(**params)
     # @param [Hash] params ({})
-    def get_metric_statistics(params = {}, options = {})
+    def get_metric_statistics(params = {}, **options)
       req = build_request(:get_metric_statistics, params)
       req.send_request(options)
     end
@@ -1763,9 +1763,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/GetMetricWidgetImage AWS API Documentation
     #
-    # @overload get_metric_widget_image(params = {})
+    # @overload get_metric_widget_image(**params)
     # @param [Hash] params ({})
-    def get_metric_widget_image(params = {}, options = {})
+    def get_metric_widget_image(params = {}, **options)
       req = build_request(:get_metric_widget_image, params)
       req.send_request(options)
     end
@@ -1814,9 +1814,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListDashboards AWS API Documentation
     #
-    # @overload list_dashboards(params = {})
+    # @overload list_dashboards(**params)
     # @param [Hash] params ({})
-    def list_dashboards(params = {}, options = {})
+    def list_dashboards(params = {}, **options)
       req = build_request(:list_dashboards, params)
       req.send_request(options)
     end
@@ -1901,9 +1901,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListMetrics AWS API Documentation
     #
-    # @overload list_metrics(params = {})
+    # @overload list_metrics(**params)
     # @param [Hash] params ({})
-    def list_metrics(params = {}, options = {})
+    def list_metrics(params = {}, **options)
       req = build_request(:list_metrics, params)
       req.send_request(options)
     end
@@ -1945,9 +1945,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -2009,9 +2009,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutAnomalyDetector AWS API Documentation
     #
-    # @overload put_anomaly_detector(params = {})
+    # @overload put_anomaly_detector(**params)
     # @param [Hash] params ({})
-    def put_anomaly_detector(params = {}, options = {})
+    def put_anomaly_detector(params = {}, **options)
       req = build_request(:put_anomaly_detector, params)
       req.send_request(options)
     end
@@ -2186,9 +2186,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutCompositeAlarm AWS API Documentation
     #
-    # @overload put_composite_alarm(params = {})
+    # @overload put_composite_alarm(**params)
     # @param [Hash] params ({})
-    def put_composite_alarm(params = {}, options = {})
+    def put_composite_alarm(params = {}, **options)
       req = build_request(:put_composite_alarm, params)
       req.send_request(options)
     end
@@ -2252,9 +2252,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutDashboard AWS API Documentation
     #
-    # @overload put_dashboard(params = {})
+    # @overload put_dashboard(**params)
     # @param [Hash] params ({})
-    def put_dashboard(params = {}, options = {})
+    def put_dashboard(params = {}, **options)
       req = build_request(:put_dashboard, params)
       req.send_request(options)
     end
@@ -2324,9 +2324,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutInsightRule AWS API Documentation
     #
-    # @overload put_insight_rule(params = {})
+    # @overload put_insight_rule(**params)
     # @param [Hash] params ({})
-    def put_insight_rule(params = {}, options = {})
+    def put_insight_rule(params = {}, **options)
       req = build_request(:put_insight_rule, params)
       req.send_request(options)
     end
@@ -2690,9 +2690,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutMetricAlarm AWS API Documentation
     #
-    # @overload put_metric_alarm(params = {})
+    # @overload put_metric_alarm(**params)
     # @param [Hash] params ({})
-    def put_metric_alarm(params = {}, options = {})
+    def put_metric_alarm(params = {}, **options)
       req = build_request(:put_metric_alarm, params)
       req.send_request(options)
     end
@@ -2797,9 +2797,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutMetricData AWS API Documentation
     #
-    # @overload put_metric_data(params = {})
+    # @overload put_metric_data(**params)
     # @param [Hash] params ({})
-    def put_metric_data(params = {}, options = {})
+    def put_metric_data(params = {}, **options)
       req = build_request(:put_metric_data, params)
       req.send_request(options)
     end
@@ -2861,9 +2861,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/SetAlarmState AWS API Documentation
     #
-    # @overload set_alarm_state(params = {})
+    # @overload set_alarm_state(**params)
     # @param [Hash] params ({})
-    def set_alarm_state(params = {}, options = {})
+    def set_alarm_state(params = {}, **options)
       req = build_request(:set_alarm_state, params)
       req.send_request(options)
     end
@@ -2922,9 +2922,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -2961,9 +2961,9 @@ module Aws::CloudWatch
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -2972,7 +2972,7 @@ module Aws::CloudWatch
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -2980,8 +2980,8 @@ module Aws::CloudWatch
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cloudwatch'
-      context[:gem_version] = '1.47.0'
+      context[:gem_name] = "aws-sdk-cloudwatch"
+      context[:gem_version] = "1.47.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -3074,7 +3074,7 @@ module Aws::CloudWatch
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -3090,7 +3090,7 @@ module Aws::CloudWatch
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::MediaLive
   # Waiters are utility methods that poll for a particular state to occur
@@ -130,7 +130,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_channel)
       # @return (see Client#describe_channel)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -180,7 +180,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_channel)
       # @return (see Client#describe_channel)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -230,7 +230,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_channel)
       # @return (see Client#describe_channel)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -280,7 +280,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_channel)
       # @return (see Client#describe_channel)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -330,7 +330,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_input)
       # @return (see Client#describe_input)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -380,7 +380,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_input)
       # @return (see Client#describe_input)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -436,7 +436,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_input)
       # @return (see Client#describe_input)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -492,7 +492,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_multiplex)
       # @return (see Client#describe_multiplex)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -542,7 +542,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_multiplex)
       # @return (see Client#describe_multiplex)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -592,7 +592,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_multiplex)
       # @return (see Client#describe_multiplex)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -642,7 +642,7 @@ module Aws::MediaLive
 
       # @option (see Client#describe_multiplex)
       # @return (see Client#describe_multiplex)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

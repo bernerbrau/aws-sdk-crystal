@@ -14,7 +14,7 @@ module {{module_name}}
 
       {{#event_entries}}
       {{param_hash}}
-      def signal_{{name}}_event(params = {})
+      def signal_{{name}}_event(**params)
         @event_emitter.emit(:{{name}}, params)
       end
 

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-workmail/types'
-require_relative 'aws-sdk-workmail/client_api'
-require_relative 'aws-sdk-workmail/client'
-require_relative 'aws-sdk-workmail/errors'
-require_relative 'aws-sdk-workmail/resource'
-require_relative 'aws-sdk-workmail/customizations'
+require_relative "aws-sdk-workmail/types"
+require_relative "aws-sdk-workmail/client_api"
+require_relative "aws-sdk-workmail/client"
+require_relative "aws-sdk-workmail/errors"
+require_relative "aws-sdk-workmail/resource"
+require_relative "aws-sdk-workmail/customizations"
 
 # This module provides support for Amazon WorkMail. This module is available in the
 # `aws-sdk-workmail` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-workmail/customizations'
 # @!group service
 module Aws::WorkMail
 
-  GEM_VERSION = '1.33.0'
+  GEM_VERSION = "1.33.0"
 
 end

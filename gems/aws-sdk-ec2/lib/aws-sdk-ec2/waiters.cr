@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::EC2
   # Waiters are utility methods that poll for a particular state to occur
@@ -139,7 +139,7 @@ module Aws::EC2
 
       # @option (see Client#describe_bundle_tasks)
       # @return (see Client#describe_bundle_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -175,7 +175,7 @@ module Aws::EC2
 
       # @option (see Client#describe_conversion_tasks)
       # @return (see Client#describe_conversion_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -225,7 +225,7 @@ module Aws::EC2
 
       # @option (see Client#describe_conversion_tasks)
       # @return (see Client#describe_conversion_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -261,7 +261,7 @@ module Aws::EC2
 
       # @option (see Client#describe_conversion_tasks)
       # @return (see Client#describe_conversion_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -311,7 +311,7 @@ module Aws::EC2
 
       # @option (see Client#describe_customer_gateways)
       # @return (see Client#describe_customer_gateways)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -347,7 +347,7 @@ module Aws::EC2
 
       # @option (see Client#describe_export_tasks)
       # @return (see Client#describe_export_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -383,7 +383,7 @@ module Aws::EC2
 
       # @option (see Client#describe_export_tasks)
       # @return (see Client#describe_export_tasks)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -427,7 +427,7 @@ module Aws::EC2
 
       # @option (see Client#describe_images)
       # @return (see Client#describe_images)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -470,7 +470,7 @@ module Aws::EC2
 
       # @option (see Client#describe_images)
       # @return (see Client#describe_images)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -513,7 +513,7 @@ module Aws::EC2
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -574,7 +574,7 @@ module Aws::EC2
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -617,7 +617,7 @@ module Aws::EC2
 
       # @option (see Client#describe_instance_status)
       # @return (see Client#describe_instance_status)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -667,7 +667,7 @@ module Aws::EC2
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -717,7 +717,7 @@ module Aws::EC2
 
       # @option (see Client#describe_instances)
       # @return (see Client#describe_instances)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -760,7 +760,7 @@ module Aws::EC2
 
       # @option (see Client#describe_key_pairs)
       # @return (see Client#describe_key_pairs)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -821,7 +821,7 @@ module Aws::EC2
 
       # @option (see Client#describe_nat_gateways)
       # @return (see Client#describe_nat_gateways)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -864,7 +864,7 @@ module Aws::EC2
 
       # @option (see Client#describe_network_interfaces)
       # @return (see Client#describe_network_interfaces)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -900,7 +900,7 @@ module Aws::EC2
 
       # @option (see Client#get_password_data)
       # @return (see Client#get_password_data)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -943,7 +943,7 @@ module Aws::EC2
 
       # @option (see Client#describe_security_groups)
       # @return (see Client#describe_security_groups)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -979,7 +979,7 @@ module Aws::EC2
 
       # @option (see Client#describe_snapshots)
       # @return (see Client#describe_snapshots)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1052,7 +1052,7 @@ module Aws::EC2
 
       # @option (see Client#describe_spot_instance_requests)
       # @return (see Client#describe_spot_instance_requests)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1088,7 +1088,7 @@ module Aws::EC2
 
       # @option (see Client#describe_subnets)
       # @return (see Client#describe_subnets)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1124,7 +1124,7 @@ module Aws::EC2
 
       # @option (see Client#describe_instance_status)
       # @return (see Client#describe_instance_status)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1168,7 +1168,7 @@ module Aws::EC2
 
       # @option (see Client#describe_volumes)
       # @return (see Client#describe_volumes)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1211,7 +1211,7 @@ module Aws::EC2
 
       # @option (see Client#describe_volumes)
       # @return (see Client#describe_volumes)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1255,7 +1255,7 @@ module Aws::EC2
 
       # @option (see Client#describe_volumes)
       # @return (see Client#describe_volumes)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1291,7 +1291,7 @@ module Aws::EC2
 
       # @option (see Client#describe_vpcs)
       # @return (see Client#describe_vpcs)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1333,7 +1333,7 @@ module Aws::EC2
 
       # @option (see Client#describe_vpcs)
       # @return (see Client#describe_vpcs)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1376,7 +1376,7 @@ module Aws::EC2
 
       # @option (see Client#describe_vpc_peering_connections)
       # @return (see Client#describe_vpc_peering_connections)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1418,7 +1418,7 @@ module Aws::EC2
 
       # @option (see Client#describe_vpc_peering_connections)
       # @return (see Client#describe_vpc_peering_connections)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1468,7 +1468,7 @@ module Aws::EC2
 
       # @option (see Client#describe_vpn_connections)
       # @return (see Client#describe_vpn_connections)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -1512,7 +1512,7 @@ module Aws::EC2
 
       # @option (see Client#describe_vpn_connections)
       # @return (see Client#describe_vpn_connections)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

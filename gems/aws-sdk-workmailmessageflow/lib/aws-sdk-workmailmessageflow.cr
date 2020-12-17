@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-workmailmessageflow/types'
-require_relative 'aws-sdk-workmailmessageflow/client_api'
-require_relative 'aws-sdk-workmailmessageflow/client'
-require_relative 'aws-sdk-workmailmessageflow/errors'
-require_relative 'aws-sdk-workmailmessageflow/resource'
-require_relative 'aws-sdk-workmailmessageflow/customizations'
+require_relative "aws-sdk-workmailmessageflow/types"
+require_relative "aws-sdk-workmailmessageflow/client_api"
+require_relative "aws-sdk-workmailmessageflow/client"
+require_relative "aws-sdk-workmailmessageflow/errors"
+require_relative "aws-sdk-workmailmessageflow/resource"
+require_relative "aws-sdk-workmailmessageflow/customizations"
 
 # This module provides support for Amazon WorkMail Message Flow. This module is available in the
 # `aws-sdk-workmailmessageflow` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-workmailmessageflow/customizations'
 # @!group service
 module Aws::WorkMailMessageFlow
 
-  GEM_VERSION = '1.9.0'
+  GEM_VERSION = "1.9.0"
 
 end

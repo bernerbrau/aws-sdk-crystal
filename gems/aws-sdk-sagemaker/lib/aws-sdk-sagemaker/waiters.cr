@@ -7,7 +7,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module Aws::SageMaker
   # Waiters are utility methods that poll for a particular state to occur
@@ -114,7 +114,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_endpoint)
       # @return (see Client#describe_endpoint)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -163,7 +163,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_endpoint)
       # @return (see Client#describe_endpoint)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -206,7 +206,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_notebook_instance)
       # @return (see Client#describe_notebook_instance)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -250,7 +250,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_notebook_instance)
       # @return (see Client#describe_notebook_instance)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -294,7 +294,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_notebook_instance)
       # @return (see Client#describe_notebook_instance)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -349,7 +349,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_processing_job)
       # @return (see Client#describe_processing_job)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -404,7 +404,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_training_job)
       # @return (see Client#describe_training_job)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 
@@ -459,7 +459,7 @@ module Aws::SageMaker
 
       # @option (see Client#describe_transform_job)
       # @return (see Client#describe_transform_job)
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

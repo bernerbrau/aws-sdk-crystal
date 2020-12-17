@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-applicationdiscoveryservice/types'
-require_relative 'aws-sdk-applicationdiscoveryservice/client_api'
-require_relative 'aws-sdk-applicationdiscoveryservice/client'
-require_relative 'aws-sdk-applicationdiscoveryservice/errors'
-require_relative 'aws-sdk-applicationdiscoveryservice/resource'
-require_relative 'aws-sdk-applicationdiscoveryservice/customizations'
+require_relative "aws-sdk-applicationdiscoveryservice/types"
+require_relative "aws-sdk-applicationdiscoveryservice/client_api"
+require_relative "aws-sdk-applicationdiscoveryservice/client"
+require_relative "aws-sdk-applicationdiscoveryservice/errors"
+require_relative "aws-sdk-applicationdiscoveryservice/resource"
+require_relative "aws-sdk-applicationdiscoveryservice/customizations"
 
 # This module provides support for AWS Application Discovery Service. This module is available in the
 # `aws-sdk-applicationdiscoveryservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-applicationdiscoveryservice/customizations'
 # @!group service
 module Aws::ApplicationDiscoveryService
 
-  GEM_VERSION = '1.33.0'
+  GEM_VERSION = "1.33.0"
 
 end

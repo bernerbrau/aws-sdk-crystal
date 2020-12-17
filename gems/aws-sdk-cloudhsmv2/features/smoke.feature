@@ -8,11 +8,11 @@
 Feature: Smoke tests for CloudHSMV2
 
 Background:
-  Given I create a client in region 'us-west-2'
+  Given I create a client in region "us-west-2"
 
   @cloudhsmv2 @smoke
   Scenario: Call Aws::CloudHSMV2::Client#describe_clusters and expect it to succeed
-  When I call the operation 'describe_clusters' with params:
+  When I call the operation "describe_clusters" with params:
     """
 {}
     """
@@ -20,7 +20,7 @@ Background:
 
   @cloudhsmv2 @smoke
   Scenario: Call Aws::Aws::CloudHSMV2::Client#list_tags and expect it to fail
-  When I call the operation 'list_tags' with params:
+  When I call the operation "list_tags" with params:
     """
 {"resource_id":"bogus-arn"}
     """

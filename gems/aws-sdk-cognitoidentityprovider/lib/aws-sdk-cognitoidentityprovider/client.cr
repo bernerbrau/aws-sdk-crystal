@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/json_rpc.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/json_rpc.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:cognitoidentityprovider)
 
@@ -290,7 +290,7 @@ module Aws::CognitoIdentityProvider
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -373,9 +373,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AddCustomAttributes AWS API Documentation
     #
-    # @overload add_custom_attributes(params = {})
+    # @overload add_custom_attributes(**params)
     # @param [Hash] params ({})
-    def add_custom_attributes(params = {}, options = {})
+    def add_custom_attributes(params = {}, **options)
       req = build_request(:add_custom_attributes, params)
       req.send_request(options)
     end
@@ -405,9 +405,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminAddUserToGroup AWS API Documentation
     #
-    # @overload admin_add_user_to_group(params = {})
+    # @overload admin_add_user_to_group(**params)
     # @param [Hash] params ({})
-    def admin_add_user_to_group(params = {}, options = {})
+    def admin_add_user_to_group(params = {}, **options)
       req = build_request(:admin_add_user_to_group, params)
       req.send_request(options)
     end
@@ -474,9 +474,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminConfirmSignUp AWS API Documentation
     #
-    # @overload admin_confirm_sign_up(params = {})
+    # @overload admin_confirm_sign_up(**params)
     # @param [Hash] params ({})
-    def admin_confirm_sign_up(params = {}, options = {})
+    def admin_confirm_sign_up(params = {}, **options)
       req = build_request(:admin_confirm_sign_up, params)
       req.send_request(options)
     end
@@ -683,9 +683,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminCreateUser AWS API Documentation
     #
-    # @overload admin_create_user(params = {})
+    # @overload admin_create_user(**params)
     # @param [Hash] params ({})
-    def admin_create_user(params = {}, options = {})
+    def admin_create_user(params = {}, **options)
       req = build_request(:admin_create_user, params)
       req.send_request(options)
     end
@@ -711,9 +711,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminDeleteUser AWS API Documentation
     #
-    # @overload admin_delete_user(params = {})
+    # @overload admin_delete_user(**params)
     # @param [Hash] params ({})
-    def admin_delete_user(params = {}, options = {})
+    def admin_delete_user(params = {}, **options)
       req = build_request(:admin_delete_user, params)
       req.send_request(options)
     end
@@ -750,9 +750,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminDeleteUserAttributes AWS API Documentation
     #
-    # @overload admin_delete_user_attributes(params = {})
+    # @overload admin_delete_user_attributes(**params)
     # @param [Hash] params ({})
-    def admin_delete_user_attributes(params = {}, options = {})
+    def admin_delete_user_attributes(params = {}, **options)
       req = build_request(:admin_delete_user_attributes, params)
       req.send_request(options)
     end
@@ -817,9 +817,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminDisableProviderForUser AWS API Documentation
     #
-    # @overload admin_disable_provider_for_user(params = {})
+    # @overload admin_disable_provider_for_user(**params)
     # @param [Hash] params ({})
-    def admin_disable_provider_for_user(params = {}, options = {})
+    def admin_disable_provider_for_user(params = {}, **options)
       req = build_request(:admin_disable_provider_for_user, params)
       req.send_request(options)
     end
@@ -845,9 +845,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminDisableUser AWS API Documentation
     #
-    # @overload admin_disable_user(params = {})
+    # @overload admin_disable_user(**params)
     # @param [Hash] params ({})
-    def admin_disable_user(params = {}, options = {})
+    def admin_disable_user(params = {}, **options)
       req = build_request(:admin_disable_user, params)
       req.send_request(options)
     end
@@ -873,9 +873,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminEnableUser AWS API Documentation
     #
-    # @overload admin_enable_user(params = {})
+    # @overload admin_enable_user(**params)
     # @param [Hash] params ({})
-    def admin_enable_user(params = {}, options = {})
+    def admin_enable_user(params = {}, **options)
       req = build_request(:admin_enable_user, params)
       req.send_request(options)
     end
@@ -905,9 +905,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminForgetDevice AWS API Documentation
     #
-    # @overload admin_forget_device(params = {})
+    # @overload admin_forget_device(**params)
     # @param [Hash] params ({})
-    def admin_forget_device(params = {}, options = {})
+    def admin_forget_device(params = {}, **options)
       req = build_request(:admin_forget_device, params)
       req.send_request(options)
     end
@@ -949,9 +949,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminGetDevice AWS API Documentation
     #
-    # @overload admin_get_device(params = {})
+    # @overload admin_get_device(**params)
     # @param [Hash] params ({})
-    def admin_get_device(params = {}, options = {})
+    def admin_get_device(params = {}, **options)
       req = build_request(:admin_get_device, params)
       req.send_request(options)
     end
@@ -1006,9 +1006,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminGetUser AWS API Documentation
     #
-    # @overload admin_get_user(params = {})
+    # @overload admin_get_user(**params)
     # @param [Hash] params ({})
-    def admin_get_user(params = {}, options = {})
+    def admin_get_user(params = {}, **options)
       req = build_request(:admin_get_user, params)
       req.send_request(options)
     end
@@ -1207,9 +1207,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminInitiateAuth AWS API Documentation
     #
-    # @overload admin_initiate_auth(params = {})
+    # @overload admin_initiate_auth(**params)
     # @param [Hash] params ({})
-    def admin_initiate_auth(params = {}, options = {})
+    def admin_initiate_auth(params = {}, **options)
       req = build_request(:admin_initiate_auth, params)
       req.send_request(options)
     end
@@ -1304,9 +1304,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminLinkProviderForUser AWS API Documentation
     #
-    # @overload admin_link_provider_for_user(params = {})
+    # @overload admin_link_provider_for_user(**params)
     # @param [Hash] params ({})
-    def admin_link_provider_for_user(params = {}, options = {})
+    def admin_link_provider_for_user(params = {}, **options)
       req = build_request(:admin_link_provider_for_user, params)
       req.send_request(options)
     end
@@ -1355,9 +1355,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminListDevices AWS API Documentation
     #
-    # @overload admin_list_devices(params = {})
+    # @overload admin_list_devices(**params)
     # @param [Hash] params ({})
-    def admin_list_devices(params = {}, options = {})
+    def admin_list_devices(params = {}, **options)
       req = build_request(:admin_list_devices, params)
       req.send_request(options)
     end
@@ -1410,9 +1410,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminListGroupsForUser AWS API Documentation
     #
-    # @overload admin_list_groups_for_user(params = {})
+    # @overload admin_list_groups_for_user(**params)
     # @param [Hash] params ({})
-    def admin_list_groups_for_user(params = {}, options = {})
+    def admin_list_groups_for_user(params = {}, **options)
       req = build_request(:admin_list_groups_for_user, params)
       req.send_request(options)
     end
@@ -1473,9 +1473,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminListUserAuthEvents AWS API Documentation
     #
-    # @overload admin_list_user_auth_events(params = {})
+    # @overload admin_list_user_auth_events(**params)
     # @param [Hash] params ({})
-    def admin_list_user_auth_events(params = {}, options = {})
+    def admin_list_user_auth_events(params = {}, **options)
       req = build_request(:admin_list_user_auth_events, params)
       req.send_request(options)
     end
@@ -1505,9 +1505,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminRemoveUserFromGroup AWS API Documentation
     #
-    # @overload admin_remove_user_from_group(params = {})
+    # @overload admin_remove_user_from_group(**params)
     # @param [Hash] params ({})
-    def admin_remove_user_from_group(params = {}, options = {})
+    def admin_remove_user_from_group(params = {}, **options)
       req = build_request(:admin_remove_user_from_group, params)
       req.send_request(options)
     end
@@ -1587,9 +1587,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminResetUserPassword AWS API Documentation
     #
-    # @overload admin_reset_user_password(params = {})
+    # @overload admin_reset_user_password(**params)
     # @param [Hash] params ({})
-    def admin_reset_user_password(params = {}, options = {})
+    def admin_reset_user_password(params = {}, **options)
       req = build_request(:admin_reset_user_password, params)
       req.send_request(options)
     end
@@ -1746,9 +1746,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminRespondToAuthChallenge AWS API Documentation
     #
-    # @overload admin_respond_to_auth_challenge(params = {})
+    # @overload admin_respond_to_auth_challenge(**params)
     # @param [Hash] params ({})
-    def admin_respond_to_auth_challenge(params = {}, options = {})
+    def admin_respond_to_auth_challenge(params = {}, **options)
       req = build_request(:admin_respond_to_auth_challenge, params)
       req.send_request(options)
     end
@@ -1791,9 +1791,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminSetUserMFAPreference AWS API Documentation
     #
-    # @overload admin_set_user_mfa_preference(params = {})
+    # @overload admin_set_user_mfa_preference(**params)
     # @param [Hash] params ({})
-    def admin_set_user_mfa_preference(params = {}, options = {})
+    def admin_set_user_mfa_preference(params = {}, **options)
       req = build_request(:admin_set_user_mfa_preference, params)
       req.send_request(options)
     end
@@ -1838,9 +1838,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminSetUserPassword AWS API Documentation
     #
-    # @overload admin_set_user_password(params = {})
+    # @overload admin_set_user_password(**params)
     # @param [Hash] params ({})
-    def admin_set_user_password(params = {}, options = {})
+    def admin_set_user_password(params = {}, **options)
       req = build_request(:admin_set_user_password, params)
       req.send_request(options)
     end
@@ -1882,9 +1882,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminSetUserSettings AWS API Documentation
     #
-    # @overload admin_set_user_settings(params = {})
+    # @overload admin_set_user_settings(**params)
     # @param [Hash] params ({})
-    def admin_set_user_settings(params = {}, options = {})
+    def admin_set_user_settings(params = {}, **options)
       req = build_request(:admin_set_user_settings, params)
       req.send_request(options)
     end
@@ -1919,9 +1919,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminUpdateAuthEventFeedback AWS API Documentation
     #
-    # @overload admin_update_auth_event_feedback(params = {})
+    # @overload admin_update_auth_event_feedback(**params)
     # @param [Hash] params ({})
-    def admin_update_auth_event_feedback(params = {}, options = {})
+    def admin_update_auth_event_feedback(params = {}, **options)
       req = build_request(:admin_update_auth_event_feedback, params)
       req.send_request(options)
     end
@@ -1955,9 +1955,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminUpdateDeviceStatus AWS API Documentation
     #
-    # @overload admin_update_device_status(params = {})
+    # @overload admin_update_device_status(**params)
     # @param [Hash] params ({})
-    def admin_update_device_status(params = {}, options = {})
+    def admin_update_device_status(params = {}, **options)
       req = build_request(:admin_update_device_status, params)
       req.send_request(options)
     end
@@ -2044,9 +2044,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminUpdateUserAttributes AWS API Documentation
     #
-    # @overload admin_update_user_attributes(params = {})
+    # @overload admin_update_user_attributes(**params)
     # @param [Hash] params ({})
-    def admin_update_user_attributes(params = {}, options = {})
+    def admin_update_user_attributes(params = {}, **options)
       req = build_request(:admin_update_user_attributes, params)
       req.send_request(options)
     end
@@ -2075,9 +2075,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AdminUserGlobalSignOut AWS API Documentation
     #
-    # @overload admin_user_global_sign_out(params = {})
+    # @overload admin_user_global_sign_out(**params)
     # @param [Hash] params ({})
-    def admin_user_global_sign_out(params = {}, options = {})
+    def admin_user_global_sign_out(params = {}, **options)
       req = build_request(:admin_user_global_sign_out, params)
       req.send_request(options)
     end
@@ -2113,9 +2113,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/AssociateSoftwareToken AWS API Documentation
     #
-    # @overload associate_software_token(params = {})
+    # @overload associate_software_token(**params)
     # @param [Hash] params ({})
-    def associate_software_token(params = {}, options = {})
+    def associate_software_token(params = {}, **options)
       req = build_request(:associate_software_token, params)
       req.send_request(options)
     end
@@ -2143,9 +2143,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ChangePassword AWS API Documentation
     #
-    # @overload change_password(params = {})
+    # @overload change_password(**params)
     # @param [Hash] params ({})
-    def change_password(params = {}, options = {})
+    def change_password(params = {}, **options)
       req = build_request(:change_password, params)
       req.send_request(options)
     end
@@ -2187,9 +2187,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ConfirmDevice AWS API Documentation
     #
-    # @overload confirm_device(params = {})
+    # @overload confirm_device(**params)
     # @param [Hash] params ({})
-    def confirm_device(params = {}, options = {})
+    def confirm_device(params = {}, **options)
       req = build_request(:confirm_device, params)
       req.send_request(options)
     end
@@ -2291,9 +2291,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ConfirmForgotPassword AWS API Documentation
     #
-    # @overload confirm_forgot_password(params = {})
+    # @overload confirm_forgot_password(**params)
     # @param [Hash] params ({})
-    def confirm_forgot_password(params = {}, options = {})
+    def confirm_forgot_password(params = {}, **options)
       req = build_request(:confirm_forgot_password, params)
       req.send_request(options)
     end
@@ -2395,9 +2395,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ConfirmSignUp AWS API Documentation
     #
-    # @overload confirm_sign_up(params = {})
+    # @overload confirm_sign_up(**params)
     # @param [Hash] params ({})
-    def confirm_sign_up(params = {}, options = {})
+    def confirm_sign_up(params = {}, **options)
       req = build_request(:confirm_sign_up, params)
       req.send_request(options)
     end
@@ -2463,9 +2463,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateGroup AWS API Documentation
     #
-    # @overload create_group(params = {})
+    # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, options = {})
+    def create_group(params = {}, **options)
       req = build_request(:create_group, params)
       req.send_request(options)
     end
@@ -2587,9 +2587,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateIdentityProvider AWS API Documentation
     #
-    # @overload create_identity_provider(params = {})
+    # @overload create_identity_provider(**params)
     # @param [Hash] params ({})
-    def create_identity_provider(params = {}, options = {})
+    def create_identity_provider(params = {}, **options)
       req = build_request(:create_identity_provider, params)
       req.send_request(options)
     end
@@ -2641,9 +2641,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateResourceServer AWS API Documentation
     #
-    # @overload create_resource_server(params = {})
+    # @overload create_resource_server(**params)
     # @param [Hash] params ({})
-    def create_resource_server(params = {}, options = {})
+    def create_resource_server(params = {}, **options)
       req = build_request(:create_resource_server, params)
       req.send_request(options)
     end
@@ -2691,9 +2691,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateUserImportJob AWS API Documentation
     #
-    # @overload create_user_import_job(params = {})
+    # @overload create_user_import_job(**params)
     # @param [Hash] params ({})
-    def create_user_import_job(params = {}, options = {})
+    def create_user_import_job(params = {}, **options)
       req = build_request(:create_user_import_job, params)
       req.send_request(options)
     end
@@ -3017,9 +3017,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateUserPool AWS API Documentation
     #
-    # @overload create_user_pool(params = {})
+    # @overload create_user_pool(**params)
     # @param [Hash] params ({})
-    def create_user_pool(params = {}, options = {})
+    def create_user_pool(params = {}, **options)
       req = build_request(:create_user_pool, params)
       req.send_request(options)
     end
@@ -3289,9 +3289,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateUserPoolClient AWS API Documentation
     #
-    # @overload create_user_pool_client(params = {})
+    # @overload create_user_pool_client(**params)
     # @param [Hash] params ({})
-    def create_user_pool_client(params = {}, options = {})
+    def create_user_pool_client(params = {}, **options)
       req = build_request(:create_user_pool_client, params)
       req.send_request(options)
     end
@@ -3339,9 +3339,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/CreateUserPoolDomain AWS API Documentation
     #
-    # @overload create_user_pool_domain(params = {})
+    # @overload create_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def create_user_pool_domain(params = {}, options = {})
+    def create_user_pool_domain(params = {}, **options)
       req = build_request(:create_user_pool_domain, params)
       req.send_request(options)
     end
@@ -3367,9 +3367,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteGroup AWS API Documentation
     #
-    # @overload delete_group(params = {})
+    # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, options = {})
+    def delete_group(params = {}, **options)
       req = build_request(:delete_group, params)
       req.send_request(options)
     end
@@ -3393,9 +3393,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteIdentityProvider AWS API Documentation
     #
-    # @overload delete_identity_provider(params = {})
+    # @overload delete_identity_provider(**params)
     # @param [Hash] params ({})
-    def delete_identity_provider(params = {}, options = {})
+    def delete_identity_provider(params = {}, **options)
       req = build_request(:delete_identity_provider, params)
       req.send_request(options)
     end
@@ -3419,9 +3419,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteResourceServer AWS API Documentation
     #
-    # @overload delete_resource_server(params = {})
+    # @overload delete_resource_server(**params)
     # @param [Hash] params ({})
-    def delete_resource_server(params = {}, options = {})
+    def delete_resource_server(params = {}, **options)
       req = build_request(:delete_resource_server, params)
       req.send_request(options)
     end
@@ -3441,9 +3441,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -3471,9 +3471,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteUserAttributes AWS API Documentation
     #
-    # @overload delete_user_attributes(params = {})
+    # @overload delete_user_attributes(**params)
     # @param [Hash] params ({})
-    def delete_user_attributes(params = {}, options = {})
+    def delete_user_attributes(params = {}, **options)
       req = build_request(:delete_user_attributes, params)
       req.send_request(options)
     end
@@ -3493,9 +3493,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteUserPool AWS API Documentation
     #
-    # @overload delete_user_pool(params = {})
+    # @overload delete_user_pool(**params)
     # @param [Hash] params ({})
-    def delete_user_pool(params = {}, options = {})
+    def delete_user_pool(params = {}, **options)
       req = build_request(:delete_user_pool, params)
       req.send_request(options)
     end
@@ -3520,9 +3520,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteUserPoolClient AWS API Documentation
     #
-    # @overload delete_user_pool_client(params = {})
+    # @overload delete_user_pool_client(**params)
     # @param [Hash] params ({})
-    def delete_user_pool_client(params = {}, options = {})
+    def delete_user_pool_client(params = {}, **options)
       req = build_request(:delete_user_pool_client, params)
       req.send_request(options)
     end
@@ -3546,9 +3546,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DeleteUserPoolDomain AWS API Documentation
     #
-    # @overload delete_user_pool_domain(params = {})
+    # @overload delete_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def delete_user_pool_domain(params = {}, options = {})
+    def delete_user_pool_domain(params = {}, **options)
       req = build_request(:delete_user_pool_domain, params)
       req.send_request(options)
     end
@@ -3588,9 +3588,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeIdentityProvider AWS API Documentation
     #
-    # @overload describe_identity_provider(params = {})
+    # @overload describe_identity_provider(**params)
     # @param [Hash] params ({})
-    def describe_identity_provider(params = {}, options = {})
+    def describe_identity_provider(params = {}, **options)
       req = build_request(:describe_identity_provider, params)
       req.send_request(options)
     end
@@ -3625,9 +3625,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeResourceServer AWS API Documentation
     #
-    # @overload describe_resource_server(params = {})
+    # @overload describe_resource_server(**params)
     # @param [Hash] params ({})
-    def describe_resource_server(params = {}, options = {})
+    def describe_resource_server(params = {}, **options)
       req = build_request(:describe_resource_server, params)
       req.send_request(options)
     end
@@ -3684,9 +3684,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeRiskConfiguration AWS API Documentation
     #
-    # @overload describe_risk_configuration(params = {})
+    # @overload describe_risk_configuration(**params)
     # @param [Hash] params ({})
-    def describe_risk_configuration(params = {}, options = {})
+    def describe_risk_configuration(params = {}, **options)
       req = build_request(:describe_risk_configuration, params)
       req.send_request(options)
     end
@@ -3729,9 +3729,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeUserImportJob AWS API Documentation
     #
-    # @overload describe_user_import_job(params = {})
+    # @overload describe_user_import_job(**params)
     # @param [Hash] params ({})
-    def describe_user_import_job(params = {}, options = {})
+    def describe_user_import_job(params = {}, **options)
       req = build_request(:describe_user_import_job, params)
       req.send_request(options)
     end
@@ -3837,9 +3837,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeUserPool AWS API Documentation
     #
-    # @overload describe_user_pool(params = {})
+    # @overload describe_user_pool(**params)
     # @param [Hash] params ({})
-    def describe_user_pool(params = {}, options = {})
+    def describe_user_pool(params = {}, **options)
       req = build_request(:describe_user_pool, params)
       req.send_request(options)
     end
@@ -3905,9 +3905,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeUserPoolClient AWS API Documentation
     #
-    # @overload describe_user_pool_client(params = {})
+    # @overload describe_user_pool_client(**params)
     # @param [Hash] params ({})
-    def describe_user_pool_client(params = {}, options = {})
+    def describe_user_pool_client(params = {}, **options)
       req = build_request(:describe_user_pool_client, params)
       req.send_request(options)
     end
@@ -3940,9 +3940,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/DescribeUserPoolDomain AWS API Documentation
     #
-    # @overload describe_user_pool_domain(params = {})
+    # @overload describe_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def describe_user_pool_domain(params = {}, options = {})
+    def describe_user_pool_domain(params = {}, **options)
       req = build_request(:describe_user_pool_domain, params)
       req.send_request(options)
     end
@@ -3966,9 +3966,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ForgetDevice AWS API Documentation
     #
-    # @overload forget_device(params = {})
+    # @overload forget_device(**params)
     # @param [Hash] params ({})
-    def forget_device(params = {}, options = {})
+    def forget_device(params = {}, **options)
       req = build_request(:forget_device, params)
       req.send_request(options)
     end
@@ -4076,9 +4076,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ForgotPassword AWS API Documentation
     #
-    # @overload forgot_password(params = {})
+    # @overload forgot_password(**params)
     # @param [Hash] params ({})
-    def forgot_password(params = {}, options = {})
+    def forgot_password(params = {}, **options)
       req = build_request(:forgot_password, params)
       req.send_request(options)
     end
@@ -4109,9 +4109,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetCSVHeader AWS API Documentation
     #
-    # @overload get_csv_header(params = {})
+    # @overload get_csv_header(**params)
     # @param [Hash] params ({})
-    def get_csv_header(params = {}, options = {})
+    def get_csv_header(params = {}, **options)
       req = build_request(:get_csv_header, params)
       req.send_request(options)
     end
@@ -4147,9 +4147,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetDevice AWS API Documentation
     #
-    # @overload get_device(params = {})
+    # @overload get_device(**params)
     # @param [Hash] params ({})
-    def get_device(params = {}, options = {})
+    def get_device(params = {}, **options)
       req = build_request(:get_device, params)
       req.send_request(options)
     end
@@ -4187,9 +4187,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetGroup AWS API Documentation
     #
-    # @overload get_group(params = {})
+    # @overload get_group(**params)
     # @param [Hash] params ({})
-    def get_group(params = {}, options = {})
+    def get_group(params = {}, **options)
       req = build_request(:get_group, params)
       req.send_request(options)
     end
@@ -4229,9 +4229,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetIdentityProviderByIdentifier AWS API Documentation
     #
-    # @overload get_identity_provider_by_identifier(params = {})
+    # @overload get_identity_provider_by_identifier(**params)
     # @param [Hash] params ({})
-    def get_identity_provider_by_identifier(params = {}, options = {})
+    def get_identity_provider_by_identifier(params = {}, **options)
       req = build_request(:get_identity_provider_by_identifier, params)
       req.send_request(options)
     end
@@ -4257,9 +4257,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetSigningCertificate AWS API Documentation
     #
-    # @overload get_signing_certificate(params = {})
+    # @overload get_signing_certificate(**params)
     # @param [Hash] params ({})
-    def get_signing_certificate(params = {}, options = {})
+    def get_signing_certificate(params = {}, **options)
       req = build_request(:get_signing_certificate, params)
       req.send_request(options)
     end
@@ -4299,9 +4299,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetUICustomization AWS API Documentation
     #
-    # @overload get_ui_customization(params = {})
+    # @overload get_ui_customization(**params)
     # @param [Hash] params ({})
-    def get_ui_customization(params = {}, options = {})
+    def get_ui_customization(params = {}, **options)
       req = build_request(:get_ui_customization, params)
       req.send_request(options)
     end
@@ -4341,9 +4341,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetUser AWS API Documentation
     #
-    # @overload get_user(params = {})
+    # @overload get_user(**params)
     # @param [Hash] params ({})
-    def get_user(params = {}, options = {})
+    def get_user(params = {}, **options)
       req = build_request(:get_user, params)
       req.send_request(options)
     end
@@ -4419,9 +4419,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetUserAttributeVerificationCode AWS API Documentation
     #
-    # @overload get_user_attribute_verification_code(params = {})
+    # @overload get_user_attribute_verification_code(**params)
     # @param [Hash] params ({})
-    def get_user_attribute_verification_code(params = {}, options = {})
+    def get_user_attribute_verification_code(params = {}, **options)
       req = build_request(:get_user_attribute_verification_code, params)
       req.send_request(options)
     end
@@ -4453,9 +4453,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GetUserPoolMfaConfig AWS API Documentation
     #
-    # @overload get_user_pool_mfa_config(params = {})
+    # @overload get_user_pool_mfa_config(**params)
     # @param [Hash] params ({})
-    def get_user_pool_mfa_config(params = {}, options = {})
+    def get_user_pool_mfa_config(params = {}, **options)
       req = build_request(:get_user_pool_mfa_config, params)
       req.send_request(options)
     end
@@ -4478,9 +4478,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/GlobalSignOut AWS API Documentation
     #
-    # @overload global_sign_out(params = {})
+    # @overload global_sign_out(**params)
     # @param [Hash] params ({})
-    def global_sign_out(params = {}, options = {})
+    def global_sign_out(params = {}, **options)
       req = build_request(:global_sign_out, params)
       req.send_request(options)
     end
@@ -4658,9 +4658,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/InitiateAuth AWS API Documentation
     #
-    # @overload initiate_auth(params = {})
+    # @overload initiate_auth(**params)
     # @param [Hash] params ({})
-    def initiate_auth(params = {}, options = {})
+    def initiate_auth(params = {}, **options)
       req = build_request(:initiate_auth, params)
       req.send_request(options)
     end
@@ -4703,9 +4703,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListDevices AWS API Documentation
     #
-    # @overload list_devices(params = {})
+    # @overload list_devices(**params)
     # @param [Hash] params ({})
-    def list_devices(params = {}, options = {})
+    def list_devices(params = {}, **options)
       req = build_request(:list_devices, params)
       req.send_request(options)
     end
@@ -4754,9 +4754,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListGroups AWS API Documentation
     #
-    # @overload list_groups(params = {})
+    # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, options = {})
+    def list_groups(params = {}, **options)
       req = build_request(:list_groups, params)
       req.send_request(options)
     end
@@ -4798,9 +4798,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListIdentityProviders AWS API Documentation
     #
-    # @overload list_identity_providers(params = {})
+    # @overload list_identity_providers(**params)
     # @param [Hash] params ({})
-    def list_identity_providers(params = {}, options = {})
+    def list_identity_providers(params = {}, **options)
       req = build_request(:list_identity_providers, params)
       req.send_request(options)
     end
@@ -4844,9 +4844,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListResourceServers AWS API Documentation
     #
-    # @overload list_resource_servers(params = {})
+    # @overload list_resource_servers(**params)
     # @param [Hash] params ({})
-    def list_resource_servers(params = {}, options = {})
+    def list_resource_servers(params = {}, **options)
       req = build_request(:list_resource_servers, params)
       req.send_request(options)
     end
@@ -4880,9 +4880,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4934,9 +4934,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListUserImportJobs AWS API Documentation
     #
-    # @overload list_user_import_jobs(params = {})
+    # @overload list_user_import_jobs(**params)
     # @param [Hash] params ({})
-    def list_user_import_jobs(params = {}, options = {})
+    def list_user_import_jobs(params = {}, **options)
       req = build_request(:list_user_import_jobs, params)
       req.send_request(options)
     end
@@ -4981,9 +4981,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListUserPoolClients AWS API Documentation
     #
-    # @overload list_user_pool_clients(params = {})
+    # @overload list_user_pool_clients(**params)
     # @param [Hash] params ({})
-    def list_user_pool_clients(params = {}, options = {})
+    def list_user_pool_clients(params = {}, **options)
       req = build_request(:list_user_pool_clients, params)
       req.send_request(options)
     end
@@ -5040,9 +5040,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListUserPools AWS API Documentation
     #
-    # @overload list_user_pools(params = {})
+    # @overload list_user_pools(**params)
     # @param [Hash] params ({})
-    def list_user_pools(params = {}, options = {})
+    def list_user_pools(params = {}, **options)
       req = build_request(:list_user_pools, params)
       req.send_request(options)
     end
@@ -5154,9 +5154,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -5213,9 +5213,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ListUsersInGroup AWS API Documentation
     #
-    # @overload list_users_in_group(params = {})
+    # @overload list_users_in_group(**params)
     # @param [Hash] params ({})
-    def list_users_in_group(params = {}, options = {})
+    def list_users_in_group(params = {}, **options)
       req = build_request(:list_users_in_group, params)
       req.send_request(options)
     end
@@ -5311,9 +5311,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/ResendConfirmationCode AWS API Documentation
     #
-    # @overload resend_confirmation_code(params = {})
+    # @overload resend_confirmation_code(**params)
     # @param [Hash] params ({})
-    def resend_confirmation_code(params = {}, options = {})
+    def resend_confirmation_code(params = {}, **options)
       req = build_request(:resend_confirmation_code, params)
       req.send_request(options)
     end
@@ -5458,9 +5458,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/RespondToAuthChallenge AWS API Documentation
     #
-    # @overload respond_to_auth_challenge(params = {})
+    # @overload respond_to_auth_challenge(**params)
     # @param [Hash] params ({})
-    def respond_to_auth_challenge(params = {}, options = {})
+    def respond_to_auth_challenge(params = {}, **options)
       req = build_request(:respond_to_auth_challenge, params)
       req.send_request(options)
     end
@@ -5583,9 +5583,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/SetRiskConfiguration AWS API Documentation
     #
-    # @overload set_risk_configuration(params = {})
+    # @overload set_risk_configuration(**params)
     # @param [Hash] params ({})
-    def set_risk_configuration(params = {}, options = {})
+    def set_risk_configuration(params = {}, **options)
       req = build_request(:set_risk_configuration, params)
       req.send_request(options)
     end
@@ -5643,9 +5643,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/SetUICustomization AWS API Documentation
     #
-    # @overload set_ui_customization(params = {})
+    # @overload set_ui_customization(**params)
     # @param [Hash] params ({})
-    def set_ui_customization(params = {}, options = {})
+    def set_ui_customization(params = {}, **options)
       req = build_request(:set_ui_customization, params)
       req.send_request(options)
     end
@@ -5689,9 +5689,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/SetUserMFAPreference AWS API Documentation
     #
-    # @overload set_user_mfa_preference(params = {})
+    # @overload set_user_mfa_preference(**params)
     # @param [Hash] params ({})
-    def set_user_mfa_preference(params = {}, options = {})
+    def set_user_mfa_preference(params = {}, **options)
       req = build_request(:set_user_mfa_preference, params)
       req.send_request(options)
     end
@@ -5750,9 +5750,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/SetUserPoolMfaConfig AWS API Documentation
     #
-    # @overload set_user_pool_mfa_config(params = {})
+    # @overload set_user_pool_mfa_config(**params)
     # @param [Hash] params ({})
-    def set_user_pool_mfa_config(params = {}, options = {})
+    def set_user_pool_mfa_config(params = {}, **options)
       req = build_request(:set_user_pool_mfa_config, params)
       req.send_request(options)
     end
@@ -5788,9 +5788,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/SetUserSettings AWS API Documentation
     #
-    # @overload set_user_settings(params = {})
+    # @overload set_user_settings(**params)
     # @param [Hash] params ({})
-    def set_user_settings(params = {}, options = {})
+    def set_user_settings(params = {}, **options)
       req = build_request(:set_user_settings, params)
       req.send_request(options)
     end
@@ -5914,9 +5914,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/SignUp AWS API Documentation
     #
-    # @overload sign_up(params = {})
+    # @overload sign_up(**params)
     # @param [Hash] params ({})
-    def sign_up(params = {}, options = {})
+    def sign_up(params = {}, **options)
       req = build_request(:sign_up, params)
       req.send_request(options)
     end
@@ -5959,9 +5959,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/StartUserImportJob AWS API Documentation
     #
-    # @overload start_user_import_job(params = {})
+    # @overload start_user_import_job(**params)
     # @param [Hash] params ({})
-    def start_user_import_job(params = {}, options = {})
+    def start_user_import_job(params = {}, **options)
       req = build_request(:start_user_import_job, params)
       req.send_request(options)
     end
@@ -6004,9 +6004,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/StopUserImportJob AWS API Documentation
     #
-    # @overload stop_user_import_job(params = {})
+    # @overload stop_user_import_job(**params)
     # @param [Hash] params ({})
-    def stop_user_import_job(params = {}, options = {})
+    def stop_user_import_job(params = {}, **options)
       req = build_request(:stop_user_import_job, params)
       req.send_request(options)
     end
@@ -6050,9 +6050,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -6078,9 +6078,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -6119,9 +6119,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateAuthEventFeedback AWS API Documentation
     #
-    # @overload update_auth_event_feedback(params = {})
+    # @overload update_auth_event_feedback(**params)
     # @param [Hash] params ({})
-    def update_auth_event_feedback(params = {}, options = {})
+    def update_auth_event_feedback(params = {}, **options)
       req = build_request(:update_auth_event_feedback, params)
       req.send_request(options)
     end
@@ -6149,9 +6149,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateDeviceStatus AWS API Documentation
     #
-    # @overload update_device_status(params = {})
+    # @overload update_device_status(**params)
     # @param [Hash] params ({})
-    def update_device_status(params = {}, options = {})
+    def update_device_status(params = {}, **options)
       req = build_request(:update_device_status, params)
       req.send_request(options)
     end
@@ -6210,9 +6210,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateGroup AWS API Documentation
     #
-    # @overload update_group(params = {})
+    # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, options = {})
+    def update_group(params = {}, **options)
       req = build_request(:update_group, params)
       req.send_request(options)
     end
@@ -6269,9 +6269,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateIdentityProvider AWS API Documentation
     #
-    # @overload update_identity_provider(params = {})
+    # @overload update_identity_provider(**params)
     # @param [Hash] params ({})
-    def update_identity_provider(params = {}, options = {})
+    def update_identity_provider(params = {}, **options)
       req = build_request(:update_identity_provider, params)
       req.send_request(options)
     end
@@ -6323,9 +6323,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateResourceServer AWS API Documentation
     #
-    # @overload update_resource_server(params = {})
+    # @overload update_resource_server(**params)
     # @param [Hash] params ({})
-    def update_resource_server(params = {}, options = {})
+    def update_resource_server(params = {}, **options)
       req = build_request(:update_resource_server, params)
       req.send_request(options)
     end
@@ -6407,9 +6407,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateUserAttributes AWS API Documentation
     #
-    # @overload update_user_attributes(params = {})
+    # @overload update_user_attributes(**params)
     # @param [Hash] params ({})
-    def update_user_attributes(params = {}, options = {})
+    def update_user_attributes(params = {}, **options)
       req = build_request(:update_user_attributes, params)
       req.send_request(options)
     end
@@ -6589,9 +6589,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateUserPool AWS API Documentation
     #
-    # @overload update_user_pool(params = {})
+    # @overload update_user_pool(**params)
     # @param [Hash] params ({})
-    def update_user_pool(params = {}, options = {})
+    def update_user_pool(params = {}, **options)
       req = build_request(:update_user_pool, params)
       req.send_request(options)
     end
@@ -6853,9 +6853,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateUserPoolClient AWS API Documentation
     #
-    # @overload update_user_pool_client(params = {})
+    # @overload update_user_pool_client(**params)
     # @param [Hash] params ({})
-    def update_user_pool_client(params = {}, options = {})
+    def update_user_pool_client(params = {}, **options)
       req = build_request(:update_user_pool_client, params)
       req.send_request(options)
     end
@@ -6932,9 +6932,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/UpdateUserPoolDomain AWS API Documentation
     #
-    # @overload update_user_pool_domain(params = {})
+    # @overload update_user_pool_domain(**params)
     # @param [Hash] params ({})
-    def update_user_pool_domain(params = {}, options = {})
+    def update_user_pool_domain(params = {}, **options)
       req = build_request(:update_user_pool_domain, params)
       req.send_request(options)
     end
@@ -6982,9 +6982,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/VerifySoftwareToken AWS API Documentation
     #
-    # @overload verify_software_token(params = {})
+    # @overload verify_software_token(**params)
     # @param [Hash] params ({})
-    def verify_software_token(params = {}, options = {})
+    def verify_software_token(params = {}, **options)
       req = build_request(:verify_software_token, params)
       req.send_request(options)
     end
@@ -7012,9 +7012,9 @@ module Aws::CognitoIdentityProvider
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/VerifyUserAttribute AWS API Documentation
     #
-    # @overload verify_user_attribute(params = {})
+    # @overload verify_user_attribute(**params)
     # @param [Hash] params ({})
-    def verify_user_attribute(params = {}, options = {})
+    def verify_user_attribute(params = {}, **options)
       req = build_request(:verify_user_attribute, params)
       req.send_request(options)
     end
@@ -7023,7 +7023,7 @@ module Aws::CognitoIdentityProvider
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -7031,15 +7031,15 @@ module Aws::CognitoIdentityProvider
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-cognitoidentityprovider'
-      context[:gem_version] = '1.48.0'
+      context[:gem_name] = "aws-sdk-cognitoidentityprovider"
+      context[:gem_version] = "1.48.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

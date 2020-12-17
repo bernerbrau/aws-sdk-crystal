@@ -3,7 +3,7 @@
 {{#generated_src_warning}}
 {{generated_src_warning}}
 {{/generated_src_warning}}
-require 'aws-sdk-core/waiters'
+require "aws-sdk-core/waiters"
 
 module {{module_name}}
   {{#waiters?}}
@@ -99,7 +99,7 @@ module {{module_name}}
 
       # @option (see Client#{{client_method}})
       # @return (see Client#{{client_method}})
-      def wait(params = {})
+      def wait(**params)
         @waiter.wait(client: @client, params: params)
       end
 

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-iotwireless/types'
-require_relative 'aws-sdk-iotwireless/client_api'
-require_relative 'aws-sdk-iotwireless/client'
-require_relative 'aws-sdk-iotwireless/errors'
-require_relative 'aws-sdk-iotwireless/resource'
-require_relative 'aws-sdk-iotwireless/customizations'
+require_relative "aws-sdk-iotwireless/types"
+require_relative "aws-sdk-iotwireless/client_api"
+require_relative "aws-sdk-iotwireless/client"
+require_relative "aws-sdk-iotwireless/errors"
+require_relative "aws-sdk-iotwireless/resource"
+require_relative "aws-sdk-iotwireless/customizations"
 
 # This module provides support for AWS IoT Wireless. This module is available in the
 # `aws-sdk-iotwireless` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-iotwireless/customizations'
 # @!group service
 module Aws::IoTWireless
 
-  GEM_VERSION = '1.0.0'
+  GEM_VERSION = "1.0.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-personalizeruntime/types'
-require_relative 'aws-sdk-personalizeruntime/client_api'
-require_relative 'aws-sdk-personalizeruntime/client'
-require_relative 'aws-sdk-personalizeruntime/errors'
-require_relative 'aws-sdk-personalizeruntime/resource'
-require_relative 'aws-sdk-personalizeruntime/customizations'
+require_relative "aws-sdk-personalizeruntime/types"
+require_relative "aws-sdk-personalizeruntime/client_api"
+require_relative "aws-sdk-personalizeruntime/client"
+require_relative "aws-sdk-personalizeruntime/errors"
+require_relative "aws-sdk-personalizeruntime/resource"
+require_relative "aws-sdk-personalizeruntime/customizations"
 
 # This module provides support for Amazon Personalize Runtime. This module is available in the
 # `aws-sdk-personalizeruntime` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-personalizeruntime/customizations'
 # @!group service
 module Aws::PersonalizeRuntime
 
-  GEM_VERSION = '1.19.0'
+  GEM_VERSION = "1.19.0"
 
 end

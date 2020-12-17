@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:clouddirectory)
 
@@ -280,7 +280,7 @@ module Aws::CloudDirectory
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -377,9 +377,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/AddFacetToObject AWS API Documentation
     #
-    # @overload add_facet_to_object(params = {})
+    # @overload add_facet_to_object(**params)
     # @param [Hash] params ({})
-    def add_facet_to_object(params = {}, options = {})
+    def add_facet_to_object(params = {}, **options)
       req = build_request(:add_facet_to_object, params)
       req.send_request(options)
     end
@@ -415,9 +415,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ApplySchema AWS API Documentation
     #
-    # @overload apply_schema(params = {})
+    # @overload apply_schema(**params)
     # @param [Hash] params ({})
-    def apply_schema(params = {}, options = {})
+    def apply_schema(params = {}, **options)
       req = build_request(:apply_schema, params)
       req.send_request(options)
     end
@@ -465,9 +465,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/AttachObject AWS API Documentation
     #
-    # @overload attach_object(params = {})
+    # @overload attach_object(**params)
     # @param [Hash] params ({})
-    def attach_object(params = {}, options = {})
+    def attach_object(params = {}, **options)
       req = build_request(:attach_object, params)
       req.send_request(options)
     end
@@ -502,9 +502,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/AttachPolicy AWS API Documentation
     #
-    # @overload attach_policy(params = {})
+    # @overload attach_policy(**params)
     # @param [Hash] params ({})
-    def attach_policy(params = {}, options = {})
+    def attach_policy(params = {}, **options)
       req = build_request(:attach_policy, params)
       req.send_request(options)
     end
@@ -543,9 +543,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/AttachToIndex AWS API Documentation
     #
-    # @overload attach_to_index(params = {})
+    # @overload attach_to_index(**params)
     # @param [Hash] params ({})
-    def attach_to_index(params = {}, options = {})
+    def attach_to_index(params = {}, **options)
       req = build_request(:attach_to_index, params)
       req.send_request(options)
     end
@@ -622,9 +622,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/AttachTypedLink AWS API Documentation
     #
-    # @overload attach_typed_link(params = {})
+    # @overload attach_typed_link(**params)
     # @param [Hash] params ({})
-    def attach_typed_link(params = {}, options = {})
+    def attach_typed_link(params = {}, **options)
       req = build_request(:attach_typed_link, params)
       req.send_request(options)
     end
@@ -977,9 +977,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/BatchRead AWS API Documentation
     #
-    # @overload batch_read(params = {})
+    # @overload batch_read(**params)
     # @param [Hash] params ({})
-    def batch_read(params = {}, options = {})
+    def batch_read(params = {}, **options)
       req = build_request(:batch_read, params)
       req.send_request(options)
     end
@@ -1282,9 +1282,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/BatchWrite AWS API Documentation
     #
-    # @overload batch_write(params = {})
+    # @overload batch_write(**params)
     # @param [Hash] params ({})
-    def batch_write(params = {}, options = {})
+    def batch_write(params = {}, **options)
       req = build_request(:batch_write, params)
       req.send_request(options)
     end
@@ -1330,9 +1330,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/CreateDirectory AWS API Documentation
     #
-    # @overload create_directory(params = {})
+    # @overload create_directory(**params)
     # @param [Hash] params ({})
-    def create_directory(params = {}, options = {})
+    def create_directory(params = {}, **options)
       req = build_request(:create_directory, params)
       req.send_request(options)
     end
@@ -1426,9 +1426,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/CreateFacet AWS API Documentation
     #
-    # @overload create_facet(params = {})
+    # @overload create_facet(**params)
     # @param [Hash] params ({})
-    def create_facet(params = {}, options = {})
+    def create_facet(params = {}, **options)
       req = build_request(:create_facet, params)
       req.send_request(options)
     end
@@ -1485,9 +1485,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/CreateIndex AWS API Documentation
     #
-    # @overload create_index(params = {})
+    # @overload create_index(**params)
     # @param [Hash] params ({})
-    def create_index(params = {}, options = {})
+    def create_index(params = {}, **options)
       req = build_request(:create_index, params)
       req.send_request(options)
     end
@@ -1559,9 +1559,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/CreateObject AWS API Documentation
     #
-    # @overload create_object(params = {})
+    # @overload create_object(**params)
     # @param [Hash] params ({})
-    def create_object(params = {}, options = {})
+    def create_object(params = {}, **options)
       req = build_request(:create_object, params)
       req.send_request(options)
     end
@@ -1601,9 +1601,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/CreateSchema AWS API Documentation
     #
-    # @overload create_schema(params = {})
+    # @overload create_schema(**params)
     # @param [Hash] params ({})
-    def create_schema(params = {}, options = {})
+    def create_schema(params = {}, **options)
       req = build_request(:create_schema, params)
       req.send_request(options)
     end
@@ -1658,9 +1658,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/CreateTypedLinkFacet AWS API Documentation
     #
-    # @overload create_typed_link_facet(params = {})
+    # @overload create_typed_link_facet(**params)
     # @param [Hash] params ({})
-    def create_typed_link_facet(params = {}, options = {})
+    def create_typed_link_facet(params = {}, **options)
       req = build_request(:create_typed_link_facet, params)
       req.send_request(options)
     end
@@ -1688,9 +1688,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DeleteDirectory AWS API Documentation
     #
-    # @overload delete_directory(params = {})
+    # @overload delete_directory(**params)
     # @param [Hash] params ({})
-    def delete_directory(params = {}, options = {})
+    def delete_directory(params = {}, **options)
       req = build_request(:delete_directory, params)
       req.send_request(options)
     end
@@ -1717,9 +1717,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DeleteFacet AWS API Documentation
     #
-    # @overload delete_facet(params = {})
+    # @overload delete_facet(**params)
     # @param [Hash] params ({})
-    def delete_facet(params = {}, options = {})
+    def delete_facet(params = {}, **options)
       req = build_request(:delete_facet, params)
       req.send_request(options)
     end
@@ -1753,9 +1753,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DeleteObject AWS API Documentation
     #
-    # @overload delete_object(params = {})
+    # @overload delete_object(**params)
     # @param [Hash] params ({})
-    def delete_object(params = {}, options = {})
+    def delete_object(params = {}, **options)
       req = build_request(:delete_object, params)
       req.send_request(options)
     end
@@ -1783,9 +1783,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DeleteSchema AWS API Documentation
     #
-    # @overload delete_schema(params = {})
+    # @overload delete_schema(**params)
     # @param [Hash] params ({})
-    def delete_schema(params = {}, options = {})
+    def delete_schema(params = {}, **options)
       req = build_request(:delete_schema, params)
       req.send_request(options)
     end
@@ -1814,9 +1814,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DeleteTypedLinkFacet AWS API Documentation
     #
-    # @overload delete_typed_link_facet(params = {})
+    # @overload delete_typed_link_facet(**params)
     # @param [Hash] params ({})
-    def delete_typed_link_facet(params = {}, options = {})
+    def delete_typed_link_facet(params = {}, **options)
       req = build_request(:delete_typed_link_facet, params)
       req.send_request(options)
     end
@@ -1855,9 +1855,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DetachFromIndex AWS API Documentation
     #
-    # @overload detach_from_index(params = {})
+    # @overload detach_from_index(**params)
     # @param [Hash] params ({})
-    def detach_from_index(params = {}, options = {})
+    def detach_from_index(params = {}, **options)
       req = build_request(:detach_from_index, params)
       req.send_request(options)
     end
@@ -1896,9 +1896,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DetachObject AWS API Documentation
     #
-    # @overload detach_object(params = {})
+    # @overload detach_object(**params)
     # @param [Hash] params ({})
-    def detach_object(params = {}, options = {})
+    def detach_object(params = {}, **options)
       req = build_request(:detach_object, params)
       req.send_request(options)
     end
@@ -1932,9 +1932,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DetachPolicy AWS API Documentation
     #
-    # @overload detach_policy(params = {})
+    # @overload detach_policy(**params)
     # @param [Hash] params ({})
-    def detach_policy(params = {}, options = {})
+    def detach_policy(params = {}, **options)
       req = build_request(:detach_policy, params)
       req.send_request(options)
     end
@@ -1987,9 +1987,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DetachTypedLink AWS API Documentation
     #
-    # @overload detach_typed_link(params = {})
+    # @overload detach_typed_link(**params)
     # @param [Hash] params ({})
-    def detach_typed_link(params = {}, options = {})
+    def detach_typed_link(params = {}, **options)
       req = build_request(:detach_typed_link, params)
       req.send_request(options)
     end
@@ -2017,9 +2017,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/DisableDirectory AWS API Documentation
     #
-    # @overload disable_directory(params = {})
+    # @overload disable_directory(**params)
     # @param [Hash] params ({})
-    def disable_directory(params = {}, options = {})
+    def disable_directory(params = {}, **options)
       req = build_request(:disable_directory, params)
       req.send_request(options)
     end
@@ -2046,9 +2046,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/EnableDirectory AWS API Documentation
     #
-    # @overload enable_directory(params = {})
+    # @overload enable_directory(**params)
     # @param [Hash] params ({})
-    def enable_directory(params = {}, options = {})
+    def enable_directory(params = {}, **options)
       req = build_request(:enable_directory, params)
       req.send_request(options)
     end
@@ -2075,9 +2075,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetAppliedSchemaVersion AWS API Documentation
     #
-    # @overload get_applied_schema_version(params = {})
+    # @overload get_applied_schema_version(**params)
     # @param [Hash] params ({})
-    def get_applied_schema_version(params = {}, options = {})
+    def get_applied_schema_version(params = {}, **options)
       req = build_request(:get_applied_schema_version, params)
       req.send_request(options)
     end
@@ -2106,9 +2106,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetDirectory AWS API Documentation
     #
-    # @overload get_directory(params = {})
+    # @overload get_directory(**params)
     # @param [Hash] params ({})
-    def get_directory(params = {}, options = {})
+    def get_directory(params = {}, **options)
       req = build_request(:get_directory, params)
       req.send_request(options)
     end
@@ -2143,9 +2143,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetFacet AWS API Documentation
     #
-    # @overload get_facet(params = {})
+    # @overload get_facet(**params)
     # @param [Hash] params ({})
-    def get_facet(params = {}, options = {})
+    def get_facet(params = {}, **options)
       req = build_request(:get_facet, params)
       req.send_request(options)
     end
@@ -2221,9 +2221,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetLinkAttributes AWS API Documentation
     #
-    # @overload get_link_attributes(params = {})
+    # @overload get_link_attributes(**params)
     # @param [Hash] params ({})
-    def get_link_attributes(params = {}, options = {})
+    def get_link_attributes(params = {}, **options)
       req = build_request(:get_link_attributes, params)
       req.send_request(options)
     end
@@ -2283,9 +2283,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetObjectAttributes AWS API Documentation
     #
-    # @overload get_object_attributes(params = {})
+    # @overload get_object_attributes(**params)
     # @param [Hash] params ({})
-    def get_object_attributes(params = {}, options = {})
+    def get_object_attributes(params = {}, **options)
       req = build_request(:get_object_attributes, params)
       req.send_request(options)
     end
@@ -2325,9 +2325,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetObjectInformation AWS API Documentation
     #
-    # @overload get_object_information(params = {})
+    # @overload get_object_information(**params)
     # @param [Hash] params ({})
-    def get_object_information(params = {}, options = {})
+    def get_object_information(params = {}, **options)
       req = build_request(:get_object_information, params)
       req.send_request(options)
     end
@@ -2360,9 +2360,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetSchemaAsJson AWS API Documentation
     #
-    # @overload get_schema_as_json(params = {})
+    # @overload get_schema_as_json(**params)
     # @param [Hash] params ({})
-    def get_schema_as_json(params = {}, options = {})
+    def get_schema_as_json(params = {}, **options)
       req = build_request(:get_schema_as_json, params)
       req.send_request(options)
     end
@@ -2399,9 +2399,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/GetTypedLinkFacetInformation AWS API Documentation
     #
-    # @overload get_typed_link_facet_information(params = {})
+    # @overload get_typed_link_facet_information(**params)
     # @param [Hash] params ({})
-    def get_typed_link_facet_information(params = {}, options = {})
+    def get_typed_link_facet_information(params = {}, **options)
       req = build_request(:get_typed_link_facet_information, params)
       req.send_request(options)
     end
@@ -2446,9 +2446,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListAppliedSchemaArns AWS API Documentation
     #
-    # @overload list_applied_schema_arns(params = {})
+    # @overload list_applied_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_applied_schema_arns(params = {}, options = {})
+    def list_applied_schema_arns(params = {}, **options)
       req = build_request(:list_applied_schema_arns, params)
       req.send_request(options)
     end
@@ -2506,9 +2506,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListAttachedIndices AWS API Documentation
     #
-    # @overload list_attached_indices(params = {})
+    # @overload list_attached_indices(**params)
     # @param [Hash] params ({})
-    def list_attached_indices(params = {}, options = {})
+    def list_attached_indices(params = {}, **options)
       req = build_request(:list_attached_indices, params)
       req.send_request(options)
     end
@@ -2544,9 +2544,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListDevelopmentSchemaArns AWS API Documentation
     #
-    # @overload list_development_schema_arns(params = {})
+    # @overload list_development_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_development_schema_arns(params = {}, options = {})
+    def list_development_schema_arns(params = {}, **options)
       req = build_request(:list_development_schema_arns, params)
       req.send_request(options)
     end
@@ -2589,9 +2589,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListDirectories AWS API Documentation
     #
-    # @overload list_directories(params = {})
+    # @overload list_directories(**params)
     # @param [Hash] params ({})
-    def list_directories(params = {}, options = {})
+    def list_directories(params = {}, **options)
       req = build_request(:list_directories, params)
       req.send_request(options)
     end
@@ -2648,9 +2648,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListFacetAttributes AWS API Documentation
     #
-    # @overload list_facet_attributes(params = {})
+    # @overload list_facet_attributes(**params)
     # @param [Hash] params ({})
-    def list_facet_attributes(params = {}, options = {})
+    def list_facet_attributes(params = {}, **options)
       req = build_request(:list_facet_attributes, params)
       req.send_request(options)
     end
@@ -2689,9 +2689,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListFacetNames AWS API Documentation
     #
-    # @overload list_facet_names(params = {})
+    # @overload list_facet_names(**params)
     # @param [Hash] params ({})
-    def list_facet_names(params = {}, options = {})
+    def list_facet_names(params = {}, **options)
       req = build_request(:list_facet_names, params)
       req.send_request(options)
     end
@@ -2793,9 +2793,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListIncomingTypedLinks AWS API Documentation
     #
-    # @overload list_incoming_typed_links(params = {})
+    # @overload list_incoming_typed_links(**params)
     # @param [Hash] params ({})
-    def list_incoming_typed_links(params = {}, options = {})
+    def list_incoming_typed_links(params = {}, **options)
       req = build_request(:list_incoming_typed_links, params)
       req.send_request(options)
     end
@@ -2889,9 +2889,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListIndex AWS API Documentation
     #
-    # @overload list_index(params = {})
+    # @overload list_index(**params)
     # @param [Hash] params ({})
-    def list_index(params = {}, options = {})
+    def list_index(params = {}, **options)
       req = build_request(:list_index, params)
       req.send_request(options)
     end
@@ -2933,9 +2933,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListManagedSchemaArns AWS API Documentation
     #
-    # @overload list_managed_schema_arns(params = {})
+    # @overload list_managed_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_managed_schema_arns(params = {}, options = {})
+    def list_managed_schema_arns(params = {}, **options)
       req = build_request(:list_managed_schema_arns, params)
       req.send_request(options)
     end
@@ -3004,9 +3004,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListObjectAttributes AWS API Documentation
     #
-    # @overload list_object_attributes(params = {})
+    # @overload list_object_attributes(**params)
     # @param [Hash] params ({})
-    def list_object_attributes(params = {}, options = {})
+    def list_object_attributes(params = {}, **options)
       req = build_request(:list_object_attributes, params)
       req.send_request(options)
     end
@@ -3061,9 +3061,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListObjectChildren AWS API Documentation
     #
-    # @overload list_object_children(params = {})
+    # @overload list_object_children(**params)
     # @param [Hash] params ({})
-    def list_object_children(params = {}, options = {})
+    def list_object_children(params = {}, **options)
       req = build_request(:list_object_children, params)
       req.send_request(options)
     end
@@ -3126,9 +3126,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListObjectParentPaths AWS API Documentation
     #
-    # @overload list_object_parent_paths(params = {})
+    # @overload list_object_parent_paths(**params)
     # @param [Hash] params ({})
-    def list_object_parent_paths(params = {}, options = {})
+    def list_object_parent_paths(params = {}, **options)
       req = build_request(:list_object_parent_paths, params)
       req.send_request(options)
     end
@@ -3192,9 +3192,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListObjectParents AWS API Documentation
     #
-    # @overload list_object_parents(params = {})
+    # @overload list_object_parents(**params)
     # @param [Hash] params ({})
-    def list_object_parents(params = {}, options = {})
+    def list_object_parents(params = {}, **options)
       req = build_request(:list_object_parents, params)
       req.send_request(options)
     end
@@ -3248,9 +3248,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListObjectPolicies AWS API Documentation
     #
-    # @overload list_object_policies(params = {})
+    # @overload list_object_policies(**params)
     # @param [Hash] params ({})
-    def list_object_policies(params = {}, options = {})
+    def list_object_policies(params = {}, **options)
       req = build_request(:list_object_policies, params)
       req.send_request(options)
     end
@@ -3353,9 +3353,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListOutgoingTypedLinks AWS API Documentation
     #
-    # @overload list_outgoing_typed_links(params = {})
+    # @overload list_outgoing_typed_links(**params)
     # @param [Hash] params ({})
-    def list_outgoing_typed_links(params = {}, options = {})
+    def list_outgoing_typed_links(params = {}, **options)
       req = build_request(:list_outgoing_typed_links, params)
       req.send_request(options)
     end
@@ -3409,9 +3409,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListPolicyAttachments AWS API Documentation
     #
-    # @overload list_policy_attachments(params = {})
+    # @overload list_policy_attachments(**params)
     # @param [Hash] params ({})
-    def list_policy_attachments(params = {}, options = {})
+    def list_policy_attachments(params = {}, **options)
       req = build_request(:list_policy_attachments, params)
       req.send_request(options)
     end
@@ -3453,9 +3453,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListPublishedSchemaArns AWS API Documentation
     #
-    # @overload list_published_schema_arns(params = {})
+    # @overload list_published_schema_arns(**params)
     # @param [Hash] params ({})
-    def list_published_schema_arns(params = {}, options = {})
+    def list_published_schema_arns(params = {}, **options)
       req = build_request(:list_published_schema_arns, params)
       req.send_request(options)
     end
@@ -3501,9 +3501,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -3564,9 +3564,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListTypedLinkFacetAttributes AWS API Documentation
     #
-    # @overload list_typed_link_facet_attributes(params = {})
+    # @overload list_typed_link_facet_attributes(**params)
     # @param [Hash] params ({})
-    def list_typed_link_facet_attributes(params = {}, options = {})
+    def list_typed_link_facet_attributes(params = {}, **options)
       req = build_request(:list_typed_link_facet_attributes, params)
       req.send_request(options)
     end
@@ -3611,9 +3611,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/ListTypedLinkFacetNames AWS API Documentation
     #
-    # @overload list_typed_link_facet_names(params = {})
+    # @overload list_typed_link_facet_names(**params)
     # @param [Hash] params ({})
-    def list_typed_link_facet_names(params = {}, options = {})
+    def list_typed_link_facet_names(params = {}, **options)
       req = build_request(:list_typed_link_facet_names, params)
       req.send_request(options)
     end
@@ -3674,9 +3674,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/LookupPolicy AWS API Documentation
     #
-    # @overload lookup_policy(params = {})
+    # @overload lookup_policy(**params)
     # @param [Hash] params ({})
-    def lookup_policy(params = {}, options = {})
+    def lookup_policy(params = {}, **options)
       req = build_request(:lookup_policy, params)
       req.send_request(options)
     end
@@ -3720,9 +3720,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/PublishSchema AWS API Documentation
     #
-    # @overload publish_schema(params = {})
+    # @overload publish_schema(**params)
     # @param [Hash] params ({})
-    def publish_schema(params = {}, options = {})
+    def publish_schema(params = {}, **options)
       req = build_request(:publish_schema, params)
       req.send_request(options)
     end
@@ -3757,9 +3757,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/PutSchemaFromJson AWS API Documentation
     #
-    # @overload put_schema_from_json(params = {})
+    # @overload put_schema_from_json(**params)
     # @param [Hash] params ({})
-    def put_schema_from_json(params = {}, options = {})
+    def put_schema_from_json(params = {}, **options)
       req = build_request(:put_schema_from_json, params)
       req.send_request(options)
     end
@@ -3792,9 +3792,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/RemoveFacetFromObject AWS API Documentation
     #
-    # @overload remove_facet_from_object(params = {})
+    # @overload remove_facet_from_object(**params)
     # @param [Hash] params ({})
-    def remove_facet_from_object(params = {}, options = {})
+    def remove_facet_from_object(params = {}, **options)
       req = build_request(:remove_facet_from_object, params)
       req.send_request(options)
     end
@@ -3824,9 +3824,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -3851,9 +3851,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -3926,9 +3926,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpdateFacet AWS API Documentation
     #
-    # @overload update_facet(params = {})
+    # @overload update_facet(**params)
     # @param [Hash] params ({})
-    def update_facet(params = {}, options = {})
+    def update_facet(params = {}, **options)
       req = build_request(:update_facet, params)
       req.send_request(options)
     end
@@ -4005,9 +4005,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpdateLinkAttributes AWS API Documentation
     #
-    # @overload update_link_attributes(params = {})
+    # @overload update_link_attributes(**params)
     # @param [Hash] params ({})
-    def update_link_attributes(params = {}, options = {})
+    def update_link_attributes(params = {}, **options)
       req = build_request(:update_link_attributes, params)
       req.send_request(options)
     end
@@ -4062,9 +4062,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpdateObjectAttributes AWS API Documentation
     #
-    # @overload update_object_attributes(params = {})
+    # @overload update_object_attributes(**params)
     # @param [Hash] params ({})
-    def update_object_attributes(params = {}, options = {})
+    def update_object_attributes(params = {}, **options)
       req = build_request(:update_object_attributes, params)
       req.send_request(options)
     end
@@ -4096,9 +4096,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpdateSchema AWS API Documentation
     #
-    # @overload update_schema(params = {})
+    # @overload update_schema(**params)
     # @param [Hash] params ({})
-    def update_schema(params = {}, options = {})
+    def update_schema(params = {}, **options)
       req = build_request(:update_schema, params)
       req.send_request(options)
     end
@@ -4172,9 +4172,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpdateTypedLinkFacet AWS API Documentation
     #
-    # @overload update_typed_link_facet(params = {})
+    # @overload update_typed_link_facet(**params)
     # @param [Hash] params ({})
-    def update_typed_link_facet(params = {}, options = {})
+    def update_typed_link_facet(params = {}, **options)
       req = build_request(:update_typed_link_facet, params)
       req.send_request(options)
     end
@@ -4220,9 +4220,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpgradeAppliedSchema AWS API Documentation
     #
-    # @overload upgrade_applied_schema(params = {})
+    # @overload upgrade_applied_schema(**params)
     # @param [Hash] params ({})
-    def upgrade_applied_schema(params = {}, options = {})
+    def upgrade_applied_schema(params = {}, **options)
       req = build_request(:upgrade_applied_schema, params)
       req.send_request(options)
     end
@@ -4267,9 +4267,9 @@ module Aws::CloudDirectory
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/clouddirectory-2017-01-11/UpgradePublishedSchema AWS API Documentation
     #
-    # @overload upgrade_published_schema(params = {})
+    # @overload upgrade_published_schema(**params)
     # @param [Hash] params ({})
-    def upgrade_published_schema(params = {}, options = {})
+    def upgrade_published_schema(params = {}, **options)
       req = build_request(:upgrade_published_schema, params)
       req.send_request(options)
     end
@@ -4278,7 +4278,7 @@ module Aws::CloudDirectory
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4286,15 +4286,15 @@ module Aws::CloudDirectory
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-clouddirectory'
-      context[:gem_version] = '1.29.0'
+      context[:gem_name] = "aws-sdk-clouddirectory"
+      context[:gem_version] = "1.29.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self

@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/query.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/query.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:elasticloadbalancingv2)
 
@@ -280,7 +280,7 @@ module Aws::ElasticLoadBalancingV2
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -373,9 +373,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/AddListenerCertificates AWS API Documentation
     #
-    # @overload add_listener_certificates(params = {})
+    # @overload add_listener_certificates(**params)
     # @param [Hash] params ({})
-    def add_listener_certificates(params = {}, options = {})
+    def add_listener_certificates(params = {}, **options)
       req = build_request(:add_listener_certificates, params)
       req.send_request(options)
     end
@@ -431,9 +431,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/AddTags AWS API Documentation
     #
-    # @overload add_tags(params = {})
+    # @overload add_tags(**params)
     # @param [Hash] params ({})
-    def add_tags(params = {}, options = {})
+    def add_tags(params = {}, **options)
       req = build_request(:add_tags, params)
       req.send_request(options)
     end
@@ -747,9 +747,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateListener AWS API Documentation
     #
-    # @overload create_listener(params = {})
+    # @overload create_listener(**params)
     # @param [Hash] params ({})
-    def create_listener(params = {}, options = {})
+    def create_listener(params = {}, **options)
       req = build_request(:create_listener, params)
       req.send_request(options)
     end
@@ -1016,9 +1016,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateLoadBalancer AWS API Documentation
     #
-    # @overload create_load_balancer(params = {})
+    # @overload create_load_balancer(**params)
     # @param [Hash] params ({})
-    def create_load_balancer(params = {}, options = {})
+    def create_load_balancer(params = {}, **options)
       req = build_request(:create_load_balancer, params)
       req.send_request(options)
     end
@@ -1277,9 +1277,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateRule AWS API Documentation
     #
-    # @overload create_rule(params = {})
+    # @overload create_rule(**params)
     # @param [Hash] params ({})
-    def create_rule(params = {}, options = {})
+    def create_rule(params = {}, **options)
       req = build_request(:create_rule, params)
       req.send_request(options)
     end
@@ -1516,9 +1516,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateTargetGroup AWS API Documentation
     #
-    # @overload create_target_group(params = {})
+    # @overload create_target_group(**params)
     # @param [Hash] params ({})
-    def create_target_group(params = {}, options = {})
+    def create_target_group(params = {}, **options)
       req = build_request(:create_target_group, params)
       req.send_request(options)
     end
@@ -1550,9 +1550,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteListener AWS API Documentation
     #
-    # @overload delete_listener(params = {})
+    # @overload delete_listener(**params)
     # @param [Hash] params ({})
-    def delete_listener(params = {}, options = {})
+    def delete_listener(params = {}, **options)
       req = build_request(:delete_listener, params)
       req.send_request(options)
     end
@@ -1592,9 +1592,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteLoadBalancer AWS API Documentation
     #
-    # @overload delete_load_balancer(params = {})
+    # @overload delete_load_balancer(**params)
     # @param [Hash] params ({})
-    def delete_load_balancer(params = {}, options = {})
+    def delete_load_balancer(params = {}, **options)
       req = build_request(:delete_load_balancer, params)
       req.send_request(options)
     end
@@ -1625,9 +1625,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteRule AWS API Documentation
     #
-    # @overload delete_rule(params = {})
+    # @overload delete_rule(**params)
     # @param [Hash] params ({})
-    def delete_rule(params = {}, options = {})
+    def delete_rule(params = {}, **options)
       req = build_request(:delete_rule, params)
       req.send_request(options)
     end
@@ -1662,9 +1662,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteTargetGroup AWS API Documentation
     #
-    # @overload delete_target_group(params = {})
+    # @overload delete_target_group(**params)
     # @param [Hash] params ({})
-    def delete_target_group(params = {}, options = {})
+    def delete_target_group(params = {}, **options)
       req = build_request(:delete_target_group, params)
       req.send_request(options)
     end
@@ -1712,9 +1712,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeregisterTargets AWS API Documentation
     #
-    # @overload deregister_targets(params = {})
+    # @overload deregister_targets(**params)
     # @param [Hash] params ({})
-    def deregister_targets(params = {}, options = {})
+    def deregister_targets(params = {}, **options)
       req = build_request(:deregister_targets, params)
       req.send_request(options)
     end
@@ -1764,9 +1764,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeAccountLimits AWS API Documentation
     #
-    # @overload describe_account_limits(params = {})
+    # @overload describe_account_limits(**params)
     # @param [Hash] params ({})
-    def describe_account_limits(params = {}, options = {})
+    def describe_account_limits(params = {}, **options)
       req = build_request(:describe_account_limits, params)
       req.send_request(options)
     end
@@ -1819,9 +1819,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeListenerCertificates AWS API Documentation
     #
-    # @overload describe_listener_certificates(params = {})
+    # @overload describe_listener_certificates(**params)
     # @param [Hash] params ({})
-    def describe_listener_certificates(params = {}, options = {})
+    def describe_listener_certificates(params = {}, **options)
       req = build_request(:describe_listener_certificates, params)
       req.send_request(options)
     end
@@ -1946,9 +1946,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeListeners AWS API Documentation
     #
-    # @overload describe_listeners(params = {})
+    # @overload describe_listeners(**params)
     # @param [Hash] params ({})
-    def describe_listeners(params = {}, options = {})
+    def describe_listeners(params = {}, **options)
       req = build_request(:describe_listeners, params)
       req.send_request(options)
     end
@@ -2027,9 +2027,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeLoadBalancerAttributes AWS API Documentation
     #
-    # @overload describe_load_balancer_attributes(params = {})
+    # @overload describe_load_balancer_attributes(**params)
     # @param [Hash] params ({})
-    def describe_load_balancer_attributes(params = {}, options = {})
+    def describe_load_balancer_attributes(params = {}, **options)
       req = build_request(:describe_load_balancer_attributes, params)
       req.send_request(options)
     end
@@ -2146,9 +2146,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeLoadBalancers AWS API Documentation
     #
-    # @overload describe_load_balancers(params = {})
+    # @overload describe_load_balancers(**params)
     # @param [Hash] params ({})
-    def describe_load_balancers(params = {}, options = {})
+    def describe_load_balancers(params = {}, **options)
       req = build_request(:describe_load_balancers, params)
       req.send_request(options)
     end
@@ -2287,9 +2287,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeRules AWS API Documentation
     #
-    # @overload describe_rules(params = {})
+    # @overload describe_rules(**params)
     # @param [Hash] params ({})
-    def describe_rules(params = {}, options = {})
+    def describe_rules(params = {}, **options)
       req = build_request(:describe_rules, params)
       req.send_request(options)
     end
@@ -2445,9 +2445,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeSSLPolicies AWS API Documentation
     #
-    # @overload describe_ssl_policies(params = {})
+    # @overload describe_ssl_policies(**params)
     # @param [Hash] params ({})
-    def describe_ssl_policies(params = {}, options = {})
+    def describe_ssl_policies(params = {}, **options)
       req = build_request(:describe_ssl_policies, params)
       req.send_request(options)
     end
@@ -2511,9 +2511,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTags AWS API Documentation
     #
-    # @overload describe_tags(params = {})
+    # @overload describe_tags(**params)
     # @param [Hash] params ({})
-    def describe_tags(params = {}, options = {})
+    def describe_tags(params = {}, **options)
       req = build_request(:describe_tags, params)
       req.send_request(options)
     end
@@ -2587,9 +2587,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTargetGroupAttributes AWS API Documentation
     #
-    # @overload describe_target_group_attributes(params = {})
+    # @overload describe_target_group_attributes(**params)
     # @param [Hash] params ({})
-    def describe_target_group_attributes(params = {}, options = {})
+    def describe_target_group_attributes(params = {}, **options)
       req = build_request(:describe_target_group_attributes, params)
       req.send_request(options)
     end
@@ -2696,9 +2696,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTargetGroups AWS API Documentation
     #
-    # @overload describe_target_groups(params = {})
+    # @overload describe_target_groups(**params)
     # @param [Hash] params ({})
-    def describe_target_groups(params = {}, options = {})
+    def describe_target_groups(params = {}, **options)
       req = build_request(:describe_target_groups, params)
       req.send_request(options)
     end
@@ -2814,9 +2814,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTargetHealth AWS API Documentation
     #
-    # @overload describe_target_health(params = {})
+    # @overload describe_target_health(**params)
     # @param [Hash] params ({})
-    def describe_target_health(params = {}, options = {})
+    def describe_target_health(params = {}, **options)
       req = build_request(:describe_target_health, params)
       req.send_request(options)
     end
@@ -3098,9 +3098,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyListener AWS API Documentation
     #
-    # @overload modify_listener(params = {})
+    # @overload modify_listener(**params)
     # @param [Hash] params ({})
-    def modify_listener(params = {}, options = {})
+    def modify_listener(params = {}, **options)
       req = build_request(:modify_listener, params)
       req.send_request(options)
     end
@@ -3272,9 +3272,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyLoadBalancerAttributes AWS API Documentation
     #
-    # @overload modify_load_balancer_attributes(params = {})
+    # @overload modify_load_balancer_attributes(**params)
     # @param [Hash] params ({})
-    def modify_load_balancer_attributes(params = {}, options = {})
+    def modify_load_balancer_attributes(params = {}, **options)
       req = build_request(:modify_load_balancer_attributes, params)
       req.send_request(options)
     end
@@ -3505,9 +3505,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyRule AWS API Documentation
     #
-    # @overload modify_rule(params = {})
+    # @overload modify_rule(**params)
     # @param [Hash] params ({})
-    def modify_rule(params = {}, options = {})
+    def modify_rule(params = {}, **options)
       req = build_request(:modify_rule, params)
       req.send_request(options)
     end
@@ -3657,9 +3657,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyTargetGroup AWS API Documentation
     #
-    # @overload modify_target_group(params = {})
+    # @overload modify_target_group(**params)
     # @param [Hash] params ({})
-    def modify_target_group(params = {}, options = {})
+    def modify_target_group(params = {}, **options)
       req = build_request(:modify_target_group, params)
       req.send_request(options)
     end
@@ -3733,9 +3733,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyTargetGroupAttributes AWS API Documentation
     #
-    # @overload modify_target_group_attributes(params = {})
+    # @overload modify_target_group_attributes(**params)
     # @param [Hash] params ({})
-    def modify_target_group_attributes(params = {}, options = {})
+    def modify_target_group_attributes(params = {}, **options)
       req = build_request(:modify_target_group_attributes, params)
       req.send_request(options)
     end
@@ -3815,9 +3815,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/RegisterTargets AWS API Documentation
     #
-    # @overload register_targets(params = {})
+    # @overload register_targets(**params)
     # @param [Hash] params ({})
-    def register_targets(params = {}, options = {})
+    def register_targets(params = {}, **options)
       req = build_request(:register_targets, params)
       req.send_request(options)
     end
@@ -3849,9 +3849,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/RemoveListenerCertificates AWS API Documentation
     #
-    # @overload remove_listener_certificates(params = {})
+    # @overload remove_listener_certificates(**params)
     # @param [Hash] params ({})
-    def remove_listener_certificates(params = {}, options = {})
+    def remove_listener_certificates(params = {}, **options)
       req = build_request(:remove_listener_certificates, params)
       req.send_request(options)
     end
@@ -3893,9 +3893,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/RemoveTags AWS API Documentation
     #
-    # @overload remove_tags(params = {})
+    # @overload remove_tags(**params)
     # @param [Hash] params ({})
-    def remove_tags(params = {}, options = {})
+    def remove_tags(params = {}, **options)
       req = build_request(:remove_tags, params)
       req.send_request(options)
     end
@@ -3929,9 +3929,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/SetIpAddressType AWS API Documentation
     #
-    # @overload set_ip_address_type(params = {})
+    # @overload set_ip_address_type(**params)
     # @param [Hash] params ({})
-    def set_ip_address_type(params = {}, options = {})
+    def set_ip_address_type(params = {}, **options)
       req = build_request(:set_ip_address_type, params)
       req.send_request(options)
     end
@@ -4066,9 +4066,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/SetRulePriorities AWS API Documentation
     #
-    # @overload set_rule_priorities(params = {})
+    # @overload set_rule_priorities(**params)
     # @param [Hash] params ({})
-    def set_rule_priorities(params = {}, options = {})
+    def set_rule_priorities(params = {}, **options)
       req = build_request(:set_rule_priorities, params)
       req.send_request(options)
     end
@@ -4123,9 +4123,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/SetSecurityGroups AWS API Documentation
     #
-    # @overload set_security_groups(params = {})
+    # @overload set_security_groups(**params)
     # @param [Hash] params ({})
-    def set_security_groups(params = {}, options = {})
+    def set_security_groups(params = {}, **options)
       req = build_request(:set_security_groups, params)
       req.send_request(options)
     end
@@ -4249,9 +4249,9 @@ module Aws::ElasticLoadBalancingV2
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/SetSubnets AWS API Documentation
     #
-    # @overload set_subnets(params = {})
+    # @overload set_subnets(**params)
     # @param [Hash] params ({})
-    def set_subnets(params = {}, options = {})
+    def set_subnets(params = {}, **options)
       req = build_request(:set_subnets, params)
       req.send_request(options)
     end
@@ -4260,7 +4260,7 @@ module Aws::ElasticLoadBalancingV2
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -4268,8 +4268,8 @@ module Aws::ElasticLoadBalancingV2
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-elasticloadbalancingv2'
-      context[:gem_version] = '1.56.0'
+      context[:gem_name] = "aws-sdk-elasticloadbalancingv2"
+      context[:gem_version] = "1.56.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
@@ -4365,7 +4365,7 @@ module Aws::ElasticLoadBalancingV2
     # @option options [Integer] :delay
     # @option options [Proc] :before_attempt
     # @option options [Proc] :before_wait
-    def wait_until(waiter_name, params = {}, options = {})
+    def wait_until(waiter_name, params = {}, **options)
       w = waiter(waiter_name, options)
       yield(w.waiter) if block_given? # deprecated
       w.wait(params)
@@ -4381,7 +4381,7 @@ module Aws::ElasticLoadBalancingV2
 
     # @param [Symbol] waiter_name
     # @param [Hash] options ({})
-    def waiter(waiter_name, options = {})
+    def waiter(waiter_name, **options)
       waiter_class = waiters[waiter_name]
       if waiter_class
         waiter_class.new(options.merge(client: self))

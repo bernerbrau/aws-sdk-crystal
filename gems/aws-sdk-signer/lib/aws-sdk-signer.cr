@@ -8,16 +8,16 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-signer/types'
-require_relative 'aws-sdk-signer/client_api'
-require_relative 'aws-sdk-signer/client'
-require_relative 'aws-sdk-signer/errors'
-require_relative 'aws-sdk-signer/waiters'
-require_relative 'aws-sdk-signer/resource'
-require_relative 'aws-sdk-signer/customizations'
+require_relative "aws-sdk-signer/types"
+require_relative "aws-sdk-signer/client_api"
+require_relative "aws-sdk-signer/client"
+require_relative "aws-sdk-signer/errors"
+require_relative "aws-sdk-signer/waiters"
+require_relative "aws-sdk-signer/resource"
+require_relative "aws-sdk-signer/customizations"
 
 # This module provides support for AWS Signer. This module is available in the
 # `aws-sdk-signer` gem.
@@ -49,6 +49,6 @@ require_relative 'aws-sdk-signer/customizations'
 # @!group service
 module Aws::Signer
 
-  GEM_VERSION = '1.27.0'
+  GEM_VERSION = "1.27.0"
 
 end

@@ -8,15 +8,15 @@
 # WARNING ABOUT GENERATED CODE
 
 
-require 'aws-sdk-core'
-require 'aws-sigv4'
+require "aws-sdk-core"
+require "aws-sigv4"
 
-require_relative 'aws-sdk-directoryservice/types'
-require_relative 'aws-sdk-directoryservice/client_api'
-require_relative 'aws-sdk-directoryservice/client'
-require_relative 'aws-sdk-directoryservice/errors'
-require_relative 'aws-sdk-directoryservice/resource'
-require_relative 'aws-sdk-directoryservice/customizations'
+require_relative "aws-sdk-directoryservice/types"
+require_relative "aws-sdk-directoryservice/client_api"
+require_relative "aws-sdk-directoryservice/client"
+require_relative "aws-sdk-directoryservice/errors"
+require_relative "aws-sdk-directoryservice/resource"
+require_relative "aws-sdk-directoryservice/customizations"
 
 # This module provides support for AWS Directory Service. This module is available in the
 # `aws-sdk-directoryservice` gem.
@@ -48,6 +48,6 @@ require_relative 'aws-sdk-directoryservice/customizations'
 # @!group service
 module Aws::DirectoryService
 
-  GEM_VERSION = '1.37.0'
+  GEM_VERSION = "1.37.0"
 
 end

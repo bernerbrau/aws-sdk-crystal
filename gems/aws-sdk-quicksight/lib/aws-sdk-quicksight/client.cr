@@ -7,28 +7,28 @@
 #
 # WARNING ABOUT GENERATED CODE
 
-require 'seahorse/client/plugins/content_length.rb'
-require 'aws-sdk-core/plugins/credentials_configuration.rb'
-require 'aws-sdk-core/plugins/logging.rb'
-require 'aws-sdk-core/plugins/param_converter.rb'
-require 'aws-sdk-core/plugins/param_validator.rb'
-require 'aws-sdk-core/plugins/user_agent.rb'
-require 'aws-sdk-core/plugins/helpful_socket_errors.rb'
-require 'aws-sdk-core/plugins/retry_errors.rb'
-require 'aws-sdk-core/plugins/global_configuration.rb'
-require 'aws-sdk-core/plugins/regional_endpoint.rb'
-require 'aws-sdk-core/plugins/endpoint_discovery.rb'
-require 'aws-sdk-core/plugins/endpoint_pattern.rb'
-require 'aws-sdk-core/plugins/response_paging.rb'
-require 'aws-sdk-core/plugins/stub_responses.rb'
-require 'aws-sdk-core/plugins/idempotency_token.rb'
-require 'aws-sdk-core/plugins/jsonvalue_converter.rb'
-require 'aws-sdk-core/plugins/client_metrics_plugin.rb'
-require 'aws-sdk-core/plugins/client_metrics_send_plugin.rb'
-require 'aws-sdk-core/plugins/transfer_encoding.rb'
-require 'aws-sdk-core/plugins/http_checksum.rb'
-require 'aws-sdk-core/plugins/signature_v4.rb'
-require 'aws-sdk-core/plugins/protocols/rest_json.rb'
+require "seahorse/client/plugins/content_length.rb"
+require "aws-sdk-core/plugins/credentials_configuration.rb"
+require "aws-sdk-core/plugins/logging.rb"
+require "aws-sdk-core/plugins/param_converter.rb"
+require "aws-sdk-core/plugins/param_validator.rb"
+require "aws-sdk-core/plugins/user_agent.rb"
+require "aws-sdk-core/plugins/helpful_socket_errors.rb"
+require "aws-sdk-core/plugins/retry_errors.rb"
+require "aws-sdk-core/plugins/global_configuration.rb"
+require "aws-sdk-core/plugins/regional_endpoint.rb"
+require "aws-sdk-core/plugins/endpoint_discovery.rb"
+require "aws-sdk-core/plugins/endpoint_pattern.rb"
+require "aws-sdk-core/plugins/response_paging.rb"
+require "aws-sdk-core/plugins/stub_responses.rb"
+require "aws-sdk-core/plugins/idempotency_token.rb"
+require "aws-sdk-core/plugins/jsonvalue_converter.rb"
+require "aws-sdk-core/plugins/client_metrics_plugin.rb"
+require "aws-sdk-core/plugins/client_metrics_send_plugin.rb"
+require "aws-sdk-core/plugins/transfer_encoding.rb"
+require "aws-sdk-core/plugins/http_checksum.rb"
+require "aws-sdk-core/plugins/signature_v4.rb"
+require "aws-sdk-core/plugins/protocols/rest_json.rb"
 
 Aws::Plugins::GlobalConfiguration.add_identifier(:quicksight)
 
@@ -280,7 +280,7 @@ module Aws::QuickSight
     #     sending the request.
     #
     #   @option options [URI::HTTP,String] :http_proxy A proxy to send
-    #     requests through.  Formatted like 'http://proxy.com:123'.
+    #     requests through.  Formatted like "http://proxy.com:123".
     #
     #   @option options [Float] :http_open_timeout (15) The number of
     #     seconds to wait when opening a HTTP session before raising a
@@ -362,9 +362,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CancelIngestion AWS API Documentation
     #
-    # @overload cancel_ingestion(params = {})
+    # @overload cancel_ingestion(**params)
     # @param [Hash] params ({})
-    def cancel_ingestion(params = {}, options = {})
+    def cancel_ingestion(params = {}, **options)
       req = build_request(:cancel_ingestion, params)
       req.send_request(options)
     end
@@ -453,9 +453,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateAccountCustomization AWS API Documentation
     #
-    # @overload create_account_customization(params = {})
+    # @overload create_account_customization(**params)
     # @param [Hash] params ({})
-    def create_account_customization(params = {}, options = {})
+    def create_account_customization(params = {}, **options)
       req = build_request(:create_account_customization, params)
       req.send_request(options)
     end
@@ -577,9 +577,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateAnalysis AWS API Documentation
     #
-    # @overload create_analysis(params = {})
+    # @overload create_analysis(**params)
     # @param [Hash] params ({})
-    def create_analysis(params = {}, options = {})
+    def create_analysis(params = {}, **options)
       req = build_request(:create_analysis, params)
       req.send_request(options)
     end
@@ -750,9 +750,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateDashboard AWS API Documentation
     #
-    # @overload create_dashboard(params = {})
+    # @overload create_dashboard(**params)
     # @param [Hash] params ({})
-    def create_dashboard(params = {}, options = {})
+    def create_dashboard(params = {}, **options)
       req = build_request(:create_dashboard, params)
       req.send_request(options)
     end
@@ -961,9 +961,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateDataSet AWS API Documentation
     #
-    # @overload create_data_set(params = {})
+    # @overload create_data_set(**params)
     # @param [Hash] params ({})
-    def create_data_set(params = {}, options = {})
+    def create_data_set(params = {}, **options)
       req = build_request(:create_data_set, params)
       req.send_request(options)
     end
@@ -1246,9 +1246,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateDataSource AWS API Documentation
     #
-    # @overload create_data_source(params = {})
+    # @overload create_data_source(**params)
     # @param [Hash] params ({})
-    def create_data_source(params = {}, options = {})
+    def create_data_source(params = {}, **options)
       req = build_request(:create_data_source, params)
       req.send_request(options)
     end
@@ -1301,9 +1301,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateGroup AWS API Documentation
     #
-    # @overload create_group(params = {})
+    # @overload create_group(**params)
     # @param [Hash] params ({})
-    def create_group(params = {}, options = {})
+    def create_group(params = {}, **options)
       req = build_request(:create_group, params)
       req.send_request(options)
     end
@@ -1348,9 +1348,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateGroupMembership AWS API Documentation
     #
-    # @overload create_group_membership(params = {})
+    # @overload create_group_membership(**params)
     # @param [Hash] params ({})
-    def create_group_membership(params = {}, options = {})
+    def create_group_membership(params = {}, **options)
       req = build_request(:create_group_membership, params)
       req.send_request(options)
     end
@@ -1429,9 +1429,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateIAMPolicyAssignment AWS API Documentation
     #
-    # @overload create_iam_policy_assignment(params = {})
+    # @overload create_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def create_iam_policy_assignment(params = {}, options = {})
+    def create_iam_policy_assignment(params = {}, **options)
       req = build_request(:create_iam_policy_assignment, params)
       req.send_request(options)
     end
@@ -1483,9 +1483,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateIngestion AWS API Documentation
     #
-    # @overload create_ingestion(params = {})
+    # @overload create_ingestion(**params)
     # @param [Hash] params ({})
-    def create_ingestion(params = {}, options = {})
+    def create_ingestion(params = {}, **options)
       req = build_request(:create_ingestion, params)
       req.send_request(options)
     end
@@ -1553,9 +1553,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateNamespace AWS API Documentation
     #
-    # @overload create_namespace(params = {})
+    # @overload create_namespace(**params)
     # @param [Hash] params ({})
-    def create_namespace(params = {}, options = {})
+    def create_namespace(params = {}, **options)
       req = build_request(:create_namespace, params)
       req.send_request(options)
     end
@@ -1667,9 +1667,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateTemplate AWS API Documentation
     #
-    # @overload create_template(params = {})
+    # @overload create_template(**params)
     # @param [Hash] params ({})
-    def create_template(params = {}, options = {})
+    def create_template(params = {}, **options)
       req = build_request(:create_template, params)
       req.send_request(options)
     end
@@ -1716,9 +1716,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateTemplateAlias AWS API Documentation
     #
-    # @overload create_template_alias(params = {})
+    # @overload create_template_alias(**params)
     # @param [Hash] params ({})
-    def create_template_alias(params = {}, options = {})
+    def create_template_alias(params = {}, **options)
       req = build_request(:create_template_alias, params)
       req.send_request(options)
     end
@@ -1847,9 +1847,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateTheme AWS API Documentation
     #
-    # @overload create_theme(params = {})
+    # @overload create_theme(**params)
     # @param [Hash] params ({})
-    def create_theme(params = {}, options = {})
+    def create_theme(params = {}, **options)
       req = build_request(:create_theme, params)
       req.send_request(options)
     end
@@ -1896,9 +1896,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/CreateThemeAlias AWS API Documentation
     #
-    # @overload create_theme_alias(params = {})
+    # @overload create_theme_alias(**params)
     # @param [Hash] params ({})
-    def create_theme_alias(params = {}, options = {})
+    def create_theme_alias(params = {}, **options)
       req = build_request(:create_theme_alias, params)
       req.send_request(options)
     end
@@ -1933,9 +1933,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteAccountCustomization AWS API Documentation
     #
-    # @overload delete_account_customization(params = {})
+    # @overload delete_account_customization(**params)
     # @param [Hash] params ({})
-    def delete_account_customization(params = {}, options = {})
+    def delete_account_customization(params = {}, **options)
       req = build_request(:delete_account_customization, params)
       req.send_request(options)
     end
@@ -2001,9 +2001,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteAnalysis AWS API Documentation
     #
-    # @overload delete_analysis(params = {})
+    # @overload delete_analysis(**params)
     # @param [Hash] params ({})
-    def delete_analysis(params = {}, options = {})
+    def delete_analysis(params = {}, **options)
       req = build_request(:delete_analysis, params)
       req.send_request(options)
     end
@@ -2045,9 +2045,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteDashboard AWS API Documentation
     #
-    # @overload delete_dashboard(params = {})
+    # @overload delete_dashboard(**params)
     # @param [Hash] params ({})
-    def delete_dashboard(params = {}, options = {})
+    def delete_dashboard(params = {}, **options)
       req = build_request(:delete_dashboard, params)
       req.send_request(options)
     end
@@ -2084,9 +2084,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteDataSet AWS API Documentation
     #
-    # @overload delete_data_set(params = {})
+    # @overload delete_data_set(**params)
     # @param [Hash] params ({})
-    def delete_data_set(params = {}, options = {})
+    def delete_data_set(params = {}, **options)
       req = build_request(:delete_data_set, params)
       req.send_request(options)
     end
@@ -2124,9 +2124,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteDataSource AWS API Documentation
     #
-    # @overload delete_data_source(params = {})
+    # @overload delete_data_source(**params)
     # @param [Hash] params ({})
-    def delete_data_source(params = {}, options = {})
+    def delete_data_source(params = {}, **options)
       req = build_request(:delete_data_source, params)
       req.send_request(options)
     end
@@ -2164,9 +2164,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteGroup AWS API Documentation
     #
-    # @overload delete_group(params = {})
+    # @overload delete_group(**params)
     # @param [Hash] params ({})
-    def delete_group(params = {}, options = {})
+    def delete_group(params = {}, **options)
       req = build_request(:delete_group, params)
       req.send_request(options)
     end
@@ -2210,9 +2210,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteGroupMembership AWS API Documentation
     #
-    # @overload delete_group_membership(params = {})
+    # @overload delete_group_membership(**params)
     # @param [Hash] params ({})
-    def delete_group_membership(params = {}, options = {})
+    def delete_group_membership(params = {}, **options)
       req = build_request(:delete_group_membership, params)
       req.send_request(options)
     end
@@ -2250,9 +2250,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteIAMPolicyAssignment AWS API Documentation
     #
-    # @overload delete_iam_policy_assignment(params = {})
+    # @overload delete_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def delete_iam_policy_assignment(params = {}, options = {})
+    def delete_iam_policy_assignment(params = {}, **options)
       req = build_request(:delete_iam_policy_assignment, params)
       req.send_request(options)
     end
@@ -2289,9 +2289,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteNamespace AWS API Documentation
     #
-    # @overload delete_namespace(params = {})
+    # @overload delete_namespace(**params)
     # @param [Hash] params ({})
-    def delete_namespace(params = {}, options = {})
+    def delete_namespace(params = {}, **options)
       req = build_request(:delete_namespace, params)
       req.send_request(options)
     end
@@ -2334,9 +2334,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteTemplate AWS API Documentation
     #
-    # @overload delete_template(params = {})
+    # @overload delete_template(**params)
     # @param [Hash] params ({})
-    def delete_template(params = {}, options = {})
+    def delete_template(params = {}, **options)
       req = build_request(:delete_template, params)
       req.send_request(options)
     end
@@ -2383,9 +2383,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteTemplateAlias AWS API Documentation
     #
-    # @overload delete_template_alias(params = {})
+    # @overload delete_template_alias(**params)
     # @param [Hash] params ({})
-    def delete_template_alias(params = {}, options = {})
+    def delete_template_alias(params = {}, **options)
       req = build_request(:delete_template_alias, params)
       req.send_request(options)
     end
@@ -2429,9 +2429,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteTheme AWS API Documentation
     #
-    # @overload delete_theme(params = {})
+    # @overload delete_theme(**params)
     # @param [Hash] params ({})
-    def delete_theme(params = {}, options = {})
+    def delete_theme(params = {}, **options)
       req = build_request(:delete_theme, params)
       req.send_request(options)
     end
@@ -2475,9 +2475,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteThemeAlias AWS API Documentation
     #
-    # @overload delete_theme_alias(params = {})
+    # @overload delete_theme_alias(**params)
     # @param [Hash] params ({})
-    def delete_theme_alias(params = {}, options = {})
+    def delete_theme_alias(params = {}, **options)
       req = build_request(:delete_theme_alias, params)
       req.send_request(options)
     end
@@ -2517,9 +2517,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteUser AWS API Documentation
     #
-    # @overload delete_user(params = {})
+    # @overload delete_user(**params)
     # @param [Hash] params ({})
-    def delete_user(params = {}, options = {})
+    def delete_user(params = {}, **options)
       req = build_request(:delete_user, params)
       req.send_request(options)
     end
@@ -2556,9 +2556,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteUserByPrincipalId AWS API Documentation
     #
-    # @overload delete_user_by_principal_id(params = {})
+    # @overload delete_user_by_principal_id(**params)
     # @param [Hash] params ({})
-    def delete_user_by_principal_id(params = {}, options = {})
+    def delete_user_by_principal_id(params = {}, **options)
       req = build_request(:delete_user_by_principal_id, params)
       req.send_request(options)
     end
@@ -2661,9 +2661,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAccountCustomization AWS API Documentation
     #
-    # @overload describe_account_customization(params = {})
+    # @overload describe_account_customization(**params)
     # @param [Hash] params ({})
-    def describe_account_customization(params = {}, options = {})
+    def describe_account_customization(params = {}, **options)
       req = build_request(:describe_account_customization, params)
       req.send_request(options)
     end
@@ -2698,9 +2698,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAccountSettings AWS API Documentation
     #
-    # @overload describe_account_settings(params = {})
+    # @overload describe_account_settings(**params)
     # @param [Hash] params ({})
-    def describe_account_settings(params = {}, options = {})
+    def describe_account_settings(params = {}, **options)
       req = build_request(:describe_account_settings, params)
       req.send_request(options)
     end
@@ -2750,9 +2750,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAnalysis AWS API Documentation
     #
-    # @overload describe_analysis(params = {})
+    # @overload describe_analysis(**params)
     # @param [Hash] params ({})
-    def describe_analysis(params = {}, options = {})
+    def describe_analysis(params = {}, **options)
       req = build_request(:describe_analysis, params)
       req.send_request(options)
     end
@@ -2796,9 +2796,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAnalysisPermissions AWS API Documentation
     #
-    # @overload describe_analysis_permissions(params = {})
+    # @overload describe_analysis_permissions(**params)
     # @param [Hash] params ({})
-    def describe_analysis_permissions(params = {}, options = {})
+    def describe_analysis_permissions(params = {}, **options)
       req = build_request(:describe_analysis_permissions, params)
       req.send_request(options)
     end
@@ -2862,9 +2862,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboard AWS API Documentation
     #
-    # @overload describe_dashboard(params = {})
+    # @overload describe_dashboard(**params)
     # @param [Hash] params ({})
-    def describe_dashboard(params = {}, options = {})
+    def describe_dashboard(params = {}, **options)
       req = build_request(:describe_dashboard, params)
       req.send_request(options)
     end
@@ -2906,9 +2906,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardPermissions AWS API Documentation
     #
-    # @overload describe_dashboard_permissions(params = {})
+    # @overload describe_dashboard_permissions(**params)
     # @param [Hash] params ({})
-    def describe_dashboard_permissions(params = {}, options = {})
+    def describe_dashboard_permissions(params = {}, **options)
       req = build_request(:describe_dashboard_permissions, params)
       req.send_request(options)
     end
@@ -3015,9 +3015,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDataSet AWS API Documentation
     #
-    # @overload describe_data_set(params = {})
+    # @overload describe_data_set(**params)
     # @param [Hash] params ({})
-    def describe_data_set(params = {}, options = {})
+    def describe_data_set(params = {}, **options)
       req = build_request(:describe_data_set, params)
       req.send_request(options)
     end
@@ -3062,9 +3062,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDataSetPermissions AWS API Documentation
     #
-    # @overload describe_data_set_permissions(params = {})
+    # @overload describe_data_set_permissions(**params)
     # @param [Hash] params ({})
-    def describe_data_set_permissions(params = {}, options = {})
+    def describe_data_set_permissions(params = {}, **options)
       req = build_request(:describe_data_set_permissions, params)
       req.send_request(options)
     end
@@ -3204,9 +3204,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDataSource AWS API Documentation
     #
-    # @overload describe_data_source(params = {})
+    # @overload describe_data_source(**params)
     # @param [Hash] params ({})
-    def describe_data_source(params = {}, options = {})
+    def describe_data_source(params = {}, **options)
       req = build_request(:describe_data_source, params)
       req.send_request(options)
     end
@@ -3248,9 +3248,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDataSourcePermissions AWS API Documentation
     #
-    # @overload describe_data_source_permissions(params = {})
+    # @overload describe_data_source_permissions(**params)
     # @param [Hash] params ({})
-    def describe_data_source_permissions(params = {}, options = {})
+    def describe_data_source_permissions(params = {}, **options)
       req = build_request(:describe_data_source_permissions, params)
       req.send_request(options)
     end
@@ -3294,9 +3294,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeGroup AWS API Documentation
     #
-    # @overload describe_group(params = {})
+    # @overload describe_group(**params)
     # @param [Hash] params ({})
-    def describe_group(params = {}, options = {})
+    def describe_group(params = {}, **options)
       req = build_request(:describe_group, params)
       req.send_request(options)
     end
@@ -3343,9 +3343,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeIAMPolicyAssignment AWS API Documentation
     #
-    # @overload describe_iam_policy_assignment(params = {})
+    # @overload describe_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def describe_iam_policy_assignment(params = {}, options = {})
+    def describe_iam_policy_assignment(params = {}, **options)
       req = build_request(:describe_iam_policy_assignment, params)
       req.send_request(options)
     end
@@ -3396,9 +3396,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeIngestion AWS API Documentation
     #
-    # @overload describe_ingestion(params = {})
+    # @overload describe_ingestion(**params)
     # @param [Hash] params ({})
-    def describe_ingestion(params = {}, options = {})
+    def describe_ingestion(params = {}, **options)
       req = build_request(:describe_ingestion, params)
       req.send_request(options)
     end
@@ -3439,9 +3439,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeNamespace AWS API Documentation
     #
-    # @overload describe_namespace(params = {})
+    # @overload describe_namespace(**params)
     # @param [Hash] params ({})
-    def describe_namespace(params = {}, options = {})
+    def describe_namespace(params = {}, **options)
       req = build_request(:describe_namespace, params)
       req.send_request(options)
     end
@@ -3516,9 +3516,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeTemplate AWS API Documentation
     #
-    # @overload describe_template(params = {})
+    # @overload describe_template(**params)
     # @param [Hash] params ({})
-    def describe_template(params = {}, options = {})
+    def describe_template(params = {}, **options)
       req = build_request(:describe_template, params)
       req.send_request(options)
     end
@@ -3563,9 +3563,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeTemplateAlias AWS API Documentation
     #
-    # @overload describe_template_alias(params = {})
+    # @overload describe_template_alias(**params)
     # @param [Hash] params ({})
-    def describe_template_alias(params = {}, options = {})
+    def describe_template_alias(params = {}, **options)
       req = build_request(:describe_template_alias, params)
       req.send_request(options)
     end
@@ -3607,9 +3607,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeTemplatePermissions AWS API Documentation
     #
-    # @overload describe_template_permissions(params = {})
+    # @overload describe_template_permissions(**params)
     # @param [Hash] params ({})
-    def describe_template_permissions(params = {}, options = {})
+    def describe_template_permissions(params = {}, **options)
       req = build_request(:describe_template_permissions, params)
       req.send_request(options)
     end
@@ -3696,9 +3696,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeTheme AWS API Documentation
     #
-    # @overload describe_theme(params = {})
+    # @overload describe_theme(**params)
     # @param [Hash] params ({})
-    def describe_theme(params = {}, options = {})
+    def describe_theme(params = {}, **options)
       req = build_request(:describe_theme, params)
       req.send_request(options)
     end
@@ -3739,9 +3739,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeThemeAlias AWS API Documentation
     #
-    # @overload describe_theme_alias(params = {})
+    # @overload describe_theme_alias(**params)
     # @param [Hash] params ({})
-    def describe_theme_alias(params = {}, options = {})
+    def describe_theme_alias(params = {}, **options)
       req = build_request(:describe_theme_alias, params)
       req.send_request(options)
     end
@@ -3783,9 +3783,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeThemePermissions AWS API Documentation
     #
-    # @overload describe_theme_permissions(params = {})
+    # @overload describe_theme_permissions(**params)
     # @param [Hash] params ({})
-    def describe_theme_permissions(params = {}, options = {})
+    def describe_theme_permissions(params = {}, **options)
       req = build_request(:describe_theme_permissions, params)
       req.send_request(options)
     end
@@ -3831,9 +3831,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeUser AWS API Documentation
     #
-    # @overload describe_user(params = {})
+    # @overload describe_user(**params)
     # @param [Hash] params ({})
-    def describe_user(params = {}, options = {})
+    def describe_user(params = {}, **options)
       req = build_request(:describe_user, params)
       req.send_request(options)
     end
@@ -3955,9 +3955,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/GetDashboardEmbedUrl AWS API Documentation
     #
-    # @overload get_dashboard_embed_url(params = {})
+    # @overload get_dashboard_embed_url(**params)
     # @param [Hash] params ({})
-    def get_dashboard_embed_url(params = {}, options = {})
+    def get_dashboard_embed_url(params = {}, **options)
       req = build_request(:get_dashboard_embed_url, params)
       req.send_request(options)
     end
@@ -4049,9 +4049,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/GetSessionEmbedUrl AWS API Documentation
     #
-    # @overload get_session_embed_url(params = {})
+    # @overload get_session_embed_url(**params)
     # @param [Hash] params ({})
-    def get_session_embed_url(params = {}, options = {})
+    def get_session_embed_url(params = {}, **options)
       req = build_request(:get_session_embed_url, params)
       req.send_request(options)
     end
@@ -4100,9 +4100,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAnalyses AWS API Documentation
     #
-    # @overload list_analyses(params = {})
+    # @overload list_analyses(**params)
     # @param [Hash] params ({})
-    def list_analyses(params = {}, options = {})
+    def list_analyses(params = {}, **options)
       req = build_request(:list_analyses, params)
       req.send_request(options)
     end
@@ -4157,9 +4157,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListDashboardVersions AWS API Documentation
     #
-    # @overload list_dashboard_versions(params = {})
+    # @overload list_dashboard_versions(**params)
     # @param [Hash] params ({})
-    def list_dashboard_versions(params = {}, options = {})
+    def list_dashboard_versions(params = {}, **options)
       req = build_request(:list_dashboard_versions, params)
       req.send_request(options)
     end
@@ -4210,9 +4210,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListDashboards AWS API Documentation
     #
-    # @overload list_dashboards(params = {})
+    # @overload list_dashboards(**params)
     # @param [Hash] params ({})
-    def list_dashboards(params = {}, options = {})
+    def list_dashboards(params = {}, **options)
       req = build_request(:list_dashboards, params)
       req.send_request(options)
     end
@@ -4269,9 +4269,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListDataSets AWS API Documentation
     #
-    # @overload list_data_sets(params = {})
+    # @overload list_data_sets(**params)
     # @param [Hash] params ({})
-    def list_data_sets(params = {}, options = {})
+    def list_data_sets(params = {}, **options)
       req = build_request(:list_data_sets, params)
       req.send_request(options)
     end
@@ -4421,9 +4421,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListDataSources AWS API Documentation
     #
-    # @overload list_data_sources(params = {})
+    # @overload list_data_sources(**params)
     # @param [Hash] params ({})
-    def list_data_sources(params = {}, options = {})
+    def list_data_sources(params = {}, **options)
       req = build_request(:list_data_sources, params)
       req.send_request(options)
     end
@@ -4475,9 +4475,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListGroupMemberships AWS API Documentation
     #
-    # @overload list_group_memberships(params = {})
+    # @overload list_group_memberships(**params)
     # @param [Hash] params ({})
-    def list_group_memberships(params = {}, options = {})
+    def list_group_memberships(params = {}, **options)
       req = build_request(:list_group_memberships, params)
       req.send_request(options)
     end
@@ -4527,9 +4527,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListGroups AWS API Documentation
     #
-    # @overload list_groups(params = {})
+    # @overload list_groups(**params)
     # @param [Hash] params ({})
-    def list_groups(params = {}, options = {})
+    def list_groups(params = {}, **options)
       req = build_request(:list_groups, params)
       req.send_request(options)
     end
@@ -4580,9 +4580,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIAMPolicyAssignments AWS API Documentation
     #
-    # @overload list_iam_policy_assignments(params = {})
+    # @overload list_iam_policy_assignments(**params)
     # @param [Hash] params ({})
-    def list_iam_policy_assignments(params = {}, options = {})
+    def list_iam_policy_assignments(params = {}, **options)
       req = build_request(:list_iam_policy_assignments, params)
       req.send_request(options)
     end
@@ -4635,9 +4635,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIAMPolicyAssignmentsForUser AWS API Documentation
     #
-    # @overload list_iam_policy_assignments_for_user(params = {})
+    # @overload list_iam_policy_assignments_for_user(**params)
     # @param [Hash] params ({})
-    def list_iam_policy_assignments_for_user(params = {}, options = {})
+    def list_iam_policy_assignments_for_user(params = {}, **options)
       req = build_request(:list_iam_policy_assignments_for_user, params)
       req.send_request(options)
     end
@@ -4698,9 +4698,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIngestions AWS API Documentation
     #
-    # @overload list_ingestions(params = {})
+    # @overload list_ingestions(**params)
     # @param [Hash] params ({})
-    def list_ingestions(params = {}, options = {})
+    def list_ingestions(params = {}, **options)
       req = build_request(:list_ingestions, params)
       req.send_request(options)
     end
@@ -4750,9 +4750,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListNamespaces AWS API Documentation
     #
-    # @overload list_namespaces(params = {})
+    # @overload list_namespaces(**params)
     # @param [Hash] params ({})
-    def list_namespaces(params = {}, options = {})
+    def list_namespaces(params = {}, **options)
       req = build_request(:list_namespaces, params)
       req.send_request(options)
     end
@@ -4785,9 +4785,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTagsForResource AWS API Documentation
     #
-    # @overload list_tags_for_resource(params = {})
+    # @overload list_tags_for_resource(**params)
     # @param [Hash] params ({})
-    def list_tags_for_resource(params = {}, options = {})
+    def list_tags_for_resource(params = {}, **options)
       req = build_request(:list_tags_for_resource, params)
       req.send_request(options)
     end
@@ -4838,9 +4838,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTemplateAliases AWS API Documentation
     #
-    # @overload list_template_aliases(params = {})
+    # @overload list_template_aliases(**params)
     # @param [Hash] params ({})
-    def list_template_aliases(params = {}, options = {})
+    def list_template_aliases(params = {}, **options)
       req = build_request(:list_template_aliases, params)
       req.send_request(options)
     end
@@ -4894,9 +4894,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTemplateVersions AWS API Documentation
     #
-    # @overload list_template_versions(params = {})
+    # @overload list_template_versions(**params)
     # @param [Hash] params ({})
-    def list_template_versions(params = {}, options = {})
+    def list_template_versions(params = {}, **options)
       req = build_request(:list_template_versions, params)
       req.send_request(options)
     end
@@ -4946,9 +4946,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTemplates AWS API Documentation
     #
-    # @overload list_templates(params = {})
+    # @overload list_templates(**params)
     # @param [Hash] params ({})
-    def list_templates(params = {}, options = {})
+    def list_templates(params = {}, **options)
       req = build_request(:list_templates, params)
       req.send_request(options)
     end
@@ -4997,9 +4997,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListThemeAliases AWS API Documentation
     #
-    # @overload list_theme_aliases(params = {})
+    # @overload list_theme_aliases(**params)
     # @param [Hash] params ({})
-    def list_theme_aliases(params = {}, options = {})
+    def list_theme_aliases(params = {}, **options)
       req = build_request(:list_theme_aliases, params)
       req.send_request(options)
     end
@@ -5050,9 +5050,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListThemeVersions AWS API Documentation
     #
-    # @overload list_theme_versions(params = {})
+    # @overload list_theme_versions(**params)
     # @param [Hash] params ({})
-    def list_theme_versions(params = {}, options = {})
+    def list_theme_versions(params = {}, **options)
       req = build_request(:list_theme_versions, params)
       req.send_request(options)
     end
@@ -5113,9 +5113,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListThemes AWS API Documentation
     #
-    # @overload list_themes(params = {})
+    # @overload list_themes(**params)
     # @param [Hash] params ({})
-    def list_themes(params = {}, options = {})
+    def list_themes(params = {}, **options)
       req = build_request(:list_themes, params)
       req.send_request(options)
     end
@@ -5170,9 +5170,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListUserGroups AWS API Documentation
     #
-    # @overload list_user_groups(params = {})
+    # @overload list_user_groups(**params)
     # @param [Hash] params ({})
-    def list_user_groups(params = {}, options = {})
+    def list_user_groups(params = {}, **options)
       req = build_request(:list_user_groups, params)
       req.send_request(options)
     end
@@ -5226,9 +5226,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListUsers AWS API Documentation
     #
-    # @overload list_users(params = {})
+    # @overload list_users(**params)
     # @param [Hash] params ({})
-    def list_users(params = {}, options = {})
+    def list_users(params = {}, **options)
       req = build_request(:list_users, params)
       req.send_request(options)
     end
@@ -5362,9 +5362,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/RegisterUser AWS API Documentation
     #
-    # @overload register_user(params = {})
+    # @overload register_user(**params)
     # @param [Hash] params ({})
-    def register_user(params = {}, options = {})
+    def register_user(params = {}, **options)
       req = build_request(:register_user, params)
       req.send_request(options)
     end
@@ -5400,9 +5400,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/RestoreAnalysis AWS API Documentation
     #
-    # @overload restore_analysis(params = {})
+    # @overload restore_analysis(**params)
     # @param [Hash] params ({})
-    def restore_analysis(params = {}, options = {})
+    def restore_analysis(params = {}, **options)
       req = build_request(:restore_analysis, params)
       req.send_request(options)
     end
@@ -5462,9 +5462,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchAnalyses AWS API Documentation
     #
-    # @overload search_analyses(params = {})
+    # @overload search_analyses(**params)
     # @param [Hash] params ({})
-    def search_analyses(params = {}, options = {})
+    def search_analyses(params = {}, **options)
       req = build_request(:search_analyses, params)
       req.send_request(options)
     end
@@ -5528,9 +5528,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchDashboards AWS API Documentation
     #
-    # @overload search_dashboards(params = {})
+    # @overload search_dashboards(**params)
     # @param [Hash] params ({})
-    def search_dashboards(params = {}, options = {})
+    def search_dashboards(params = {}, **options)
       req = build_request(:search_dashboards, params)
       req.send_request(options)
     end
@@ -5591,9 +5591,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/TagResource AWS API Documentation
     #
-    # @overload tag_resource(params = {})
+    # @overload tag_resource(**params)
     # @param [Hash] params ({})
-    def tag_resource(params = {}, options = {})
+    def tag_resource(params = {}, **options)
       req = build_request(:tag_resource, params)
       req.send_request(options)
     end
@@ -5626,9 +5626,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UntagResource AWS API Documentation
     #
-    # @overload untag_resource(params = {})
+    # @overload untag_resource(**params)
     # @param [Hash] params ({})
-    def untag_resource(params = {}, options = {})
+    def untag_resource(params = {}, **options)
       req = build_request(:untag_resource, params)
       req.send_request(options)
     end
@@ -5683,9 +5683,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateAccountCustomization AWS API Documentation
     #
-    # @overload update_account_customization(params = {})
+    # @overload update_account_customization(**params)
     # @param [Hash] params ({})
-    def update_account_customization(params = {}, options = {})
+    def update_account_customization(params = {}, **options)
       req = build_request(:update_account_customization, params)
       req.send_request(options)
     end
@@ -5726,9 +5726,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateAccountSettings AWS API Documentation
     #
-    # @overload update_account_settings(params = {})
+    # @overload update_account_settings(**params)
     # @param [Hash] params ({})
-    def update_account_settings(params = {}, options = {})
+    def update_account_settings(params = {}, **options)
       req = build_request(:update_account_settings, params)
       req.send_request(options)
     end
@@ -5826,9 +5826,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateAnalysis AWS API Documentation
     #
-    # @overload update_analysis(params = {})
+    # @overload update_analysis(**params)
     # @param [Hash] params ({})
-    def update_analysis(params = {}, options = {})
+    def update_analysis(params = {}, **options)
       req = build_request(:update_analysis, params)
       req.send_request(options)
     end
@@ -5892,9 +5892,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateAnalysisPermissions AWS API Documentation
     #
-    # @overload update_analysis_permissions(params = {})
+    # @overload update_analysis_permissions(**params)
     # @param [Hash] params ({})
-    def update_analysis_permissions(params = {}, options = {})
+    def update_analysis_permissions(params = {}, **options)
       req = build_request(:update_analysis_permissions, params)
       req.send_request(options)
     end
@@ -6036,9 +6036,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDashboard AWS API Documentation
     #
-    # @overload update_dashboard(params = {})
+    # @overload update_dashboard(**params)
     # @param [Hash] params ({})
-    def update_dashboard(params = {}, options = {})
+    def update_dashboard(params = {}, **options)
       req = build_request(:update_dashboard, params)
       req.send_request(options)
     end
@@ -6098,9 +6098,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDashboardPermissions AWS API Documentation
     #
-    # @overload update_dashboard_permissions(params = {})
+    # @overload update_dashboard_permissions(**params)
     # @param [Hash] params ({})
-    def update_dashboard_permissions(params = {}, options = {})
+    def update_dashboard_permissions(params = {}, **options)
       req = build_request(:update_dashboard_permissions, params)
       req.send_request(options)
     end
@@ -6141,9 +6141,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDashboardPublishedVersion AWS API Documentation
     #
-    # @overload update_dashboard_published_version(params = {})
+    # @overload update_dashboard_published_version(**params)
     # @param [Hash] params ({})
-    def update_dashboard_published_version(params = {}, options = {})
+    def update_dashboard_published_version(params = {}, **options)
       req = build_request(:update_dashboard_published_version, params)
       req.send_request(options)
     end
@@ -6332,9 +6332,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDataSet AWS API Documentation
     #
-    # @overload update_data_set(params = {})
+    # @overload update_data_set(**params)
     # @param [Hash] params ({})
-    def update_data_set(params = {}, options = {})
+    def update_data_set(params = {}, **options)
       req = build_request(:update_data_set, params)
       req.send_request(options)
     end
@@ -6392,9 +6392,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDataSetPermissions AWS API Documentation
     #
-    # @overload update_data_set_permissions(params = {})
+    # @overload update_data_set_permissions(**params)
     # @param [Hash] params ({})
-    def update_data_set_permissions(params = {}, options = {})
+    def update_data_set_permissions(params = {}, **options)
       req = build_request(:update_data_set_permissions, params)
       req.send_request(options)
     end
@@ -6651,9 +6651,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDataSource AWS API Documentation
     #
-    # @overload update_data_source(params = {})
+    # @overload update_data_source(**params)
     # @param [Hash] params ({})
-    def update_data_source(params = {}, options = {})
+    def update_data_source(params = {}, **options)
       req = build_request(:update_data_source, params)
       req.send_request(options)
     end
@@ -6710,9 +6710,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateDataSourcePermissions AWS API Documentation
     #
-    # @overload update_data_source_permissions(params = {})
+    # @overload update_data_source_permissions(**params)
     # @param [Hash] params ({})
-    def update_data_source_permissions(params = {}, options = {})
+    def update_data_source_permissions(params = {}, **options)
       req = build_request(:update_data_source_permissions, params)
       req.send_request(options)
     end
@@ -6759,9 +6759,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateGroup AWS API Documentation
     #
-    # @overload update_group(params = {})
+    # @overload update_group(**params)
     # @param [Hash] params ({})
-    def update_group(params = {}, options = {})
+    def update_group(params = {}, **options)
       req = build_request(:update_group, params)
       req.send_request(options)
     end
@@ -6837,9 +6837,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIAMPolicyAssignment AWS API Documentation
     #
-    # @overload update_iam_policy_assignment(params = {})
+    # @overload update_iam_policy_assignment(**params)
     # @param [Hash] params ({})
-    def update_iam_policy_assignment(params = {}, options = {})
+    def update_iam_policy_assignment(params = {}, **options)
       req = build_request(:update_iam_policy_assignment, params)
       req.send_request(options)
     end
@@ -6921,9 +6921,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateTemplate AWS API Documentation
     #
-    # @overload update_template(params = {})
+    # @overload update_template(**params)
     # @param [Hash] params ({})
-    def update_template(params = {}, options = {})
+    def update_template(params = {}, **options)
       req = build_request(:update_template, params)
       req.send_request(options)
     end
@@ -6972,9 +6972,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateTemplateAlias AWS API Documentation
     #
-    # @overload update_template_alias(params = {})
+    # @overload update_template_alias(**params)
     # @param [Hash] params ({})
-    def update_template_alias(params = {}, options = {})
+    def update_template_alias(params = {}, **options)
       req = build_request(:update_template_alias, params)
       req.send_request(options)
     end
@@ -7033,9 +7033,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateTemplatePermissions AWS API Documentation
     #
-    # @overload update_template_permissions(params = {})
+    # @overload update_template_permissions(**params)
     # @param [Hash] params ({})
-    def update_template_permissions(params = {}, options = {})
+    def update_template_permissions(params = {}, **options)
       req = build_request(:update_template_permissions, params)
       req.send_request(options)
     end
@@ -7136,9 +7136,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateTheme AWS API Documentation
     #
-    # @overload update_theme(params = {})
+    # @overload update_theme(**params)
     # @param [Hash] params ({})
-    def update_theme(params = {}, options = {})
+    def update_theme(params = {}, **options)
       req = build_request(:update_theme, params)
       req.send_request(options)
     end
@@ -7183,9 +7183,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateThemeAlias AWS API Documentation
     #
-    # @overload update_theme_alias(params = {})
+    # @overload update_theme_alias(**params)
     # @param [Hash] params ({})
-    def update_theme_alias(params = {}, options = {})
+    def update_theme_alias(params = {}, **options)
       req = build_request(:update_theme_alias, params)
       req.send_request(options)
     end
@@ -7286,9 +7286,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateThemePermissions AWS API Documentation
     #
-    # @overload update_theme_permissions(params = {})
+    # @overload update_theme_permissions(**params)
     # @param [Hash] params ({})
-    def update_theme_permissions(params = {}, options = {})
+    def update_theme_permissions(params = {}, **options)
       req = build_request(:update_theme_permissions, params)
       req.send_request(options)
     end
@@ -7392,9 +7392,9 @@ module Aws::QuickSight
     #
     # @see http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateUser AWS API Documentation
     #
-    # @overload update_user(params = {})
+    # @overload update_user(**params)
     # @param [Hash] params ({})
-    def update_user(params = {}, options = {})
+    def update_user(params = {}, **options)
       req = build_request(:update_user, params)
       req.send_request(options)
     end
@@ -7403,7 +7403,7 @@ module Aws::QuickSight
 
     # @param params ({})
     # @api private
-    def build_request(operation_name, params = {})
+    def build_request(operation_name, **params)
       handlers = @handlers.for(operation_name)
       context = Seahorse::Client::RequestContext.new(
         operation_name: operation_name,
@@ -7411,15 +7411,15 @@ module Aws::QuickSight
         client: self,
         params: params,
         config: config)
-      context[:gem_name] = 'aws-sdk-quicksight'
-      context[:gem_version] = '1.39.0'
+      context[:gem_name] = "aws-sdk-quicksight"
+      context[:gem_version] = "1.39.0"
       Seahorse::Client::Request.new(handlers, context)
     end
 
     # @api private
     # @deprecated
     def waiter_names
-      []
+      [] of String
     end
 
     class << self
