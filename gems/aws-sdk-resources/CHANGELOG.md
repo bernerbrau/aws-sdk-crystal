@@ -271,7 +271,7 @@ Unreleased Changes
 3.54.1 (2019-09-27)
 ------------------
 
-* Issue - Fix aws-v3.rb to correctly load source code changes for core gems.
+* Issue - Fix aws-v3.cr to correctly load source code changes for core gems.
 
 3.54.0 (2019-09-12)
 ------------------
@@ -625,7 +625,7 @@ Unreleased Changes
 3.0.1 (2017-08-30)
 ------------------
 
-* Issue - Rename `aws.rb` executable to `aws-v3.rb` to avoid breaking automation scripts where V2 and V3 exist on the same machine across projects.
+* Issue - Rename `aws.cr` executable to `aws-v3.cr` to avoid breaking automation scripts where V2 and V3 exist on the same machine across projects.
 
 3.0.0 (2017-08-29)
 ------------------
@@ -633,7 +633,7 @@ Unreleased Changes
 3.0.0.rc5 (2017-08-18)
 ------------------
 
-* Issue - Update 'aws-sdk-resources' gem at `aws.rb`
+* Issue - Update 'aws-sdk-resources' gem at `aws.cr`
 
 3.0.0.rc4 (2017-08-14)
 ------------------

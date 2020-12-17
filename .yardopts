@@ -5,5 +5,5 @@
 --markup-provider rdiscount
 --hide-api private
 --plugin sitemap
---exclude \/client_api.rb$
-gems/**/lib/**/*.rb
+--exclude \/client_api.cr$
+gems/**/lib/**/*.cr

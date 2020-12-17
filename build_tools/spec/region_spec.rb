@@ -11,15 +11,15 @@ end
 def whitelist
   {
     'core' => {
-      'errors.rb' => 'SKIP_FILE',
-      'signature_v4.rb' => 37,
-      'stub_responses.rb' => 21
+      'errors.cr' => 'SKIP_FILE',
+      'signature_v4.cr' => 37,
+      'stub_responses.cr' => 21
     },
     's3' => {
-      'location_constraint.rb' => 14,
-      'bucket.rb' => 150,
-      'presigned_post.rb' => 623,
-      'iad_regional_endpoint.rb' => 'SKIP_FILE'
+      'location_constraint.cr' => 14,
+      'bucket.cr' => 150,
+      'presigned_post.cr' => 623,
+      'iad_regional_endpoint.cr' => 'SKIP_FILE'
     }
   }
 end

@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'Apache-2.0'
   spec.email         = ['trevrowe@amazon.com']
   spec.require_paths = ['lib']
-  spec.files         = Dir['lib/**/*.rb']
+  spec.files         = Dir['lib/**/*.cr']
 
   spec.metadata = {
     'source_code_uri' => 'https://github.com/aws/aws-sdk-ruby/tree/master/gems/aws-sdk-sns',

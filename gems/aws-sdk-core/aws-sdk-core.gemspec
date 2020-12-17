@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'Apache-2.0'
   spec.require_paths = ['lib']
   spec.files         = ['ca-bundle.crt', 'VERSION']
-  spec.files         += Dir['lib/**/*.rb']
+  spec.files         += Dir['lib/**/*.cr']
 
   spec.add_dependency('jmespath', '~> 1.0')
   spec.add_dependency('aws-partitions', '~> 1', '>= 1.239.0') # necessary for STS & S3 regional

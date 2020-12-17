@@ -18,11 +18,11 @@ client = {{module_name}}::Client.new
 puts client.operation_names
 ```
 
-For each operation usage example, see `lib/client.rb` documentation block per operation
+For each operation usage example, see `lib/client.cr` documentation block per operation
 
 ## Authorizer
 
-For operations used custom authorizer, you can provide your own authorizer token logic at `lib/plugins/authorizer.rb` under method `generate_token`. For more information, please see [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html).
+For operations used custom authorizer, you can provide your own authorizer token logic at `lib/plugins/authorizer.cr` under method `generate_token`. For more information, please see [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html).
 
 ## AWS Credentials
 

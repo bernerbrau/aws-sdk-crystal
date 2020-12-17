@@ -20,7 +20,7 @@ task 'update-aws-sdk-dependencies' do
 
   # update the module autoloads
   BuildTools.replace_lines(
-    filename: "#{$GEMS_DIR}/aws-sdk-resources/lib/aws-sdk-resources.rb",
+    filename: "#{$GEMS_DIR}/aws-sdk-resources/lib/aws-sdk-resources.cr",
     start: /# service gems/,
     stop: /# end service gems/,
     new_lines: BuildTools::Services.map { |service|

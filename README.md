@@ -225,10 +225,10 @@ obj.delete
 ## REPL - AWS Interactive Console
 
 The `aws-sdk` gem ships with a REPL that provides a simple way to test
-the Ruby SDK. You can access the REPL by running `aws-v3.rb` from the command line.
+the Ruby SDK. You can access the REPL by running `aws-v3.cr` from the command line.
 
 ```ruby
-$ aws-v3.rb
+$ aws-v3.cr
 [1] pry(Aws)> ec2.describe_instances.reservations.first.instances.first
 [Aws::EC2::Client 200 0.216615 0 retries] describe_instances()
 <struct
@@ -241,7 +241,7 @@ $ aws-v3.rb
 You can enable HTTP wire logging by setting the verbose flag:
 
 ```
-$ aws-v3.rb -v
+$ aws-v3.cr -v
 ```
 
 In the REPL, every service class has a helper that returns a new client object.

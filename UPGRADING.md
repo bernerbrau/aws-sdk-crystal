@@ -14,7 +14,7 @@
   `aws-sdk-core` previously to use Amazon S3, replace it instead with `aws-sdk-s3`.
   If you want to load every AWS service gem, use the `aws-sdk` gem.
 
-* Moved the `aws.rb` REPL from the `aws-sdk-core` gem into the `aws-sdk`
+* Moved the `aws.cr` REPL from the `aws-sdk-core` gem into the `aws-sdk`
   gem.
 
 * `Aws.eager_autoload!` is deprecated as all autoload statements have been replaced

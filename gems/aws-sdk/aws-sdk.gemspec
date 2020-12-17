@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/aws/aws-sdk-ruby'
   spec.license       = 'Apache-2.0'
   spec.email         = ['trevrowe@amazon.com']
-  spec.files         = Dir['lib/**/*.rb']
+  spec.files         = Dir['lib/**/*.cr']
 
   # gem dependency
   spec.add_dependency('aws-sdk-resources', '~> 3')

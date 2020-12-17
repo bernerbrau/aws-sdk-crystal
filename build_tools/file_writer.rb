@@ -30,8 +30,8 @@ module BuildTools
 
     def skip?(path)
       path == "#{@directory}/VERSION" ||
-      path == "#{@directory}/features/step_definitions.rb" ||
-      path.match(/^#{@directory}\/lib\/aws-sdk-\w+\/customizations\.rb$/)
+      path == "#{@directory}/features/step_definitions.cr" ||
+      path.match(/^#{@directory}\/lib\/aws-sdk-\w+\/customizations\.cr$/)
     end
 
     def skip(path)

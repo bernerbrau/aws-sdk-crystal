@@ -9,7 +9,7 @@ require 'rspec/core/rake_task'
 desc 'Executes every spec file, one at a time.'
 task 'test:spec:each' do
   failures = []
-  Dir.glob('**/spec/**/*_spec.rb').each do |spec_file|
+  Dir.glob('**/spec/**/*_spec.cr').each do |spec_file|
     sh("bundle exec rspec #{spec_file}") do |ok, _|
       failures << spec_file unless ok
     end

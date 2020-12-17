@@ -16,12 +16,12 @@ module AwsSdkCodeGenerator
     def each(&block)
       Enumerator.new do |y|
         y.yield("#{@service.gem_name}.gemspec", gemspec_file)
-        y.yield('features/env.rb', features_env_file)
-        y.yield('features/step_definitions.rb', features_step_definitions_file)
-        y.yield('spec/spec_helper.rb', spec_helper_file)
+        y.yield('features/env.cr', features_env_file)
+        y.yield('features/step_definitions.cr', features_step_definitions_file)
+        y.yield('spec/spec_helper.cr', spec_helper_file)
         if @service.smoke_tests
           y.yield('features/smoke.feature', smoke_file)
-          y.yield('features/smoke_step_definitions.rb', smoke_step_definitions_file)
+          y.yield('features/smoke_step_definitions.cr', smoke_step_definitions_file)
         end
         y.yield('VERSION', version_file)
         code = CodeBuilder.new(@options)

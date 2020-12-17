@@ -5,7 +5,7 @@ module BuildTools
   # @return [Hash]
   def self.load_client_examples(svc_identifier)
     dir = File.expand_path("../../doc-src/examples/#{svc_identifier}", __FILE__)
-    files = Dir.glob("#{dir}/client/**/*.rb").sort
+    files = Dir.glob("#{dir}/client/**/*.cr").sort
     files.inject({}) do |examples, path|
       parts = path.split('/')
       operation = parts[-2]

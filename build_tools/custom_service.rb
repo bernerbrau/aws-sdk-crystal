@@ -78,7 +78,7 @@ module BuildTools
       parts = parts.map { |part| AwsSdkCodeGenerator::Underscore.underscore(part) }
       parts.shift # Shift off service module then append gem path
 
-      (["#{@output_dir}/#{@gem_name}/lib/#{@gem_name}"] + parts).join('/') + '.rb'
+      (["#{@output_dir}/#{@gem_name}/lib/#{@gem_name}"] + parts).join('/') + '.cr'
     end
 
     def validate(svc_name)

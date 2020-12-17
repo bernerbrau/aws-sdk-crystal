@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/aws/aws-sdk-ruby'
   spec.license       = 'Apache-2.0'
   spec.email         = ['trevrowe@amazon.com']
-  spec.files         = Dir['lib/**/*.rb']
+  spec.files         = Dir['lib/**/*.cr']
   spec.bindir        = 'bin'
-  spec.executables   << 'aws-v3.rb'
+  spec.executables   << 'aws-v3.cr'
 
   # service gems
   spec.add_dependency('aws-sdk-acm', '~> 1')

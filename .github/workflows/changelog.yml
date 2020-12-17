@@ -1,7 +1,7 @@
 on:
   pull_request:
     paths:
-      - 'gems/aws-sdk-core/**/*.rb'
+      - 'gems/aws-sdk-core/**/*.cr'
 
 jobs:
   changelog_comment_pr:

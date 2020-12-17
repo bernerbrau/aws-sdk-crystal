@@ -10,7 +10,7 @@ task 'update-partition-service-list' do
   end
   lines << "          }\n"
   BuildTools.replace_lines(
-    filename: "#{$GEMS_DIR}/aws-partitions/lib/aws-partitions.rb",
+    filename: "#{$GEMS_DIR}/aws-partitions/lib/aws-partitions.cr",
     start: /# service ids/,
     stop: /# end service ids/,
     new_lines: lines

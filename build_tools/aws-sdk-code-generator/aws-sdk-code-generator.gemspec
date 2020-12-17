@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'Apache-2.0'
   spec.email         = ['trevrowe@amazon.com']
   spec.require_paths = ['lib']
-  spec.files = Dir['lib/**/*.rb'] + Dir['templates/**/*.mustache']
+  spec.files = Dir['lib/**/*.cr'] + Dir['templates/**/*.mustache']
 
   spec.add_dependency('kramdown')
   spec.add_dependency('mustache')
